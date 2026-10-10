@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "freeterraforged",
+  "version": "${version}",
+  "name": "FreeTerraForged",
+  "description": "FreeTerraForged is a community-driven fork of ReTerraForged for modern Minecraft, providing highly customizable Overworld terrain generation and continuing the TerraForged lineage.",
+  "authors": [
+	"dags",
+	"Won-Ton",
+	"racoonman2",
+    "psiber",
+    "squinch"
+  ],
+  "credits":"The wider TerraForged community, in all its past and present iterations.",
+  "contact": {
+    "repo": "https://github.com/etcodehome/freeterraforged/",
+    "issues": "https://github.com/etcodehome/freeterraforged/issues"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "etcodehome.freeterraforged.fabric.FTFFabric"
+    ],
+    "client": [
+      "etcodehome.freeterraforged.fabric.FTFFabricClient"
+    ],
+    "fabric-datagen": [
+      "etcodehome.freeterraforged.fabric.FTFFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.14",
+    "fabric": ">=0.86.1",
+    "minecraft": ">=1.21.1"
+  },
+  "breaks": {
+    "biolith": "<3.0.14",
+    "reterraforged": "*"
+  },
+  "mixins": [
+    "freeterraforged-common.mixins.json",
+    "freeterraforged-fabric.mixins.json"
+  ],
+  "icon": "logo.png"
+}

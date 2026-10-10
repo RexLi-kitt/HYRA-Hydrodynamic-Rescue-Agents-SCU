@@ -1,0 +1,94 @@
+plugins {
+    id "architectury-plugin" version "3.4.164"
+    id "dev.architectury.loom" version "1.11.445" apply false
+}
+
+architectury {
+    minecraft = rootProject.minecraft_version
+}
+
+subprojects {
+
+    // Skips Mercury source remapping to prevent Eclipse JDT AbortCompilation crashes
+    tasks.matching { it.name == "remapSourcesJar" }.configureEach {
+        enabled = false
+    }
+
+    apply plugin: "dev.architectury.loom"
+
+    loom {
+        silentMojangMappingsLicense()
+    }
+
+    dependencies {
+        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+        mappings loom.officialMojangMappings()
+    }
+}
+
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+    apply plugin: "maven-publish"
+
+    archivesBaseName = rootProject.archives_base_name
+    version = rootProject.mod_version
+    group = rootProject.maven_group
+
+    repositories {
+        maven { url "https://maven.shedaniel.me" }
+        maven { url 'https://maven.minecraftforge.net/' }
+        maven { url "https://maven.architectury.dev/" }
+        maven { url "https://maven.fabricmc.net/" }
+        gradlePluginPortal()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        options.release = 21
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+        withSourcesJar()
+    }
+}
+def reproductionRoot = rootProject
+// Export adapter: adds an entry point without editing upstream generation sources.
+project(":fabric") {
+    afterEvaluate {
+        sourceSets.main.java.srcDir(reproductionRoot.file("adapter/src/main/java"))
+        sourceSets.main.resources.srcDir(reproductionRoot.file("adapter/src/main/resources"))
+        dependencies {
+            testImplementation "net.fabricmc:fabric-loader-junit:${rootProject.fabric_loader_version}"
+            testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"
+        }
+        tasks.named("test") { useJUnitPlatform() }
+        tasks.named("processResources") {
+            inputs.dir(reproductionRoot.file("adapter/src/main/java"))
+            doLast {
+                def metadata = new File(destinationDir, "fabric.mod.json")
+                def json = new groovy.json.JsonSlurper().parse(metadata)
+                json.entrypoints["fabric-datagen"] += "reproduction.ReproductionDataGenerator"
+                json.mixins += "reproduction.mixins.json"
+                metadata.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(json))
+            }
+        }
+        loom {
+            runs {
+                exportTerrain {
+                    server()
+                    name "Export original terrain"
+                    vmArg "-Dfabric-api.datagen"
+                    vmArg "-Dfabric-api.datagen.modid=freeterraforged"
+                    vmArg "-Dfabric-api.datagen.output-dir=" + reproductionRoot.file("generated/datagen").absolutePath
+                    vmArg "-Dreproduction.request=" + reproductionRoot.file(reproductionRoot.findProperty("reproductionRequest") ?: "request.json").absolutePath
+                    vmArg "-Djava.awt.headless=true"
+                    runDir "../../run/export"
+                }
+            }
+        }
+    }
+}

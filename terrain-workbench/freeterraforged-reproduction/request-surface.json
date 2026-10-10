@@ -1,0 +1,20 @@
+{
+  "seed": "42",
+  "preset": "ftf-default",
+  "natural_surface": true,
+  "generate_structures": false,
+  "origin_x": 384,
+  "origin_z": -640,
+  "nx": 256,
+  "nz": 256,
+  "step_blocks": 2,
+  "output": "../natural-surface-grid/raw",
+  "export_datapack": true,
+  "surface": {
+    "origin_x": 384,
+    "origin_z": -640,
+    "nx": 256,
+    "nz": 256,
+    "step_blocks": 2
+  }
+}

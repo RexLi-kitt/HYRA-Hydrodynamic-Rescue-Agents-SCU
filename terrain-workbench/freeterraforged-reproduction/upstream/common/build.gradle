@@ -1,0 +1,52 @@
+architectury {
+    common("fabric", "neoforge")
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/freeterraforged.accesswidener")
+}
+
+dependencies {
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+    modImplementation "com.github.glitchfiend:TerraBlender-neoforge:${rootProject.minecraft_version}-${rootProject.terrablender_version}"
+	compileOnly "com.electronwill.night-config:toml:3.6.7"
+	modCompileOnly "maven.modrinth:biolith:3.0.14-neoforge"
+    modApi "dev.architectury:architectury:${rootProject.architectury_version}"
+	testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"
+}
+
+repositories {
+    maven { url "https://api.modrinth.com/maven" }
+}
+
+test {
+	useJUnitPlatform()
+}
+
+remapJar {
+    archiveClassifier.set("${rootProject.minecraft_version}")
+}
+
+subprojects {
+    afterEvaluate {
+        if (plugins.hasPlugin("architectury-plugin")) {
+            loom {
+                runConfigs.configureEach {
+                    // Forces Log4j to output DEBUG level messages
+                    systemProperty "log4j2.debug", "true"
+                    systemProperty "fabric.development", "true"
+
+                    // Standard fix to prevent Loom from swallowing terminal colors/output
+                    vmArg "-Dterminal.jline=false"
+                    vmArg "-Dlog4j.skipJansi=true"
+                }
+            }
+        }
+    }
+}
+
+processResources {
+    filesMatching("pack.mcmeta") {
+        expand project.properties
+    }
+}

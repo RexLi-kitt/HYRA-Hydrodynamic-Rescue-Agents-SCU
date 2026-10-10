@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>地形实验台</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand"><span class="mark">≈</span><div><h1>地形实验台</h1><p>调整地形，观察河网</p></div></div><span class="source">FreeTerraForged · 自然地形</span></header>
+<main>
+<aside>
+  <form id="controls">
+    <input type="hidden" id="main_bank_width" name="main_bank_width" value="28"><input type="hidden" id="branch_bank_width" name="branch_bank_width" value="20"><input type="hidden" id="branch_depth" name="branch_depth" value="5">
+    <div class="preset-row"><button type="button" id="rich" class="preset active">水系丰富</button><button type="button" id="original" class="preset">原始参数</button></div>
+    <div class="seed-row"><label for="seed">地图种子</label><div class="seed-input"><input id="seed" name="seed" value="42" inputmode="numeric"><button type="button" id="randomSeed" aria-label="随机种子">↻</button></div></div>
+    <h2>地形</h2>
+    <label class="slider">地形起伏 <output for="vertical_scale"></output><input id="vertical_scale" name="vertical_scale" type="range" min="0.25" max="2" step="0.05" value="0.8"></label>
+    <label class="slider">大陆尺度 <output for="continent_scale"></output><input id="continent_scale" name="continent_scale" type="range" min="500" max="6000" step="100" value="1200"></label>
+    <h2>水系</h2>
+    <label class="slider">主河数量 <output for="river_count"></output><input id="river_count" name="river_count" type="range" min="0" max="30" step="1" value="30"></label>
+    <label class="slider">主河河床宽度 <output for="main_width"></output><input id="main_width" name="main_width" type="range" min="1" max="20" step="1" value="12"></label>
+    <label class="slider">支流河床宽度 <output for="branch_width"></output><input id="branch_width" name="branch_width" type="range" min="1" max="20" step="1" value="8"></label>
+    <label class="slider">湖泊概率 <output for="lake_chance"></output><input id="lake_chance" name="lake_chance" type="range" min="0" max="1" step="0.05" value="0.8"></label>
+    <label class="slider">湿地概率 <output for="wetland_chance"></output><input id="wetland_chance" name="wetland_chance" type="range" min="0" max="1" step="0.05" value="0.85"></label>
+    <details><summary>地图范围与更多参数</summary>
+      <div class="pair"><label>起点 X<input id="origin_x" name="origin_x" type="number" value="512" min="-30000000" max="30000000"></label><label>起点 Z<input id="origin_z" name="origin_z" type="number" value="1536" min="-30000000" max="30000000"></label></div>
+      <label class="field">地图边长<select id="span" name="span"><option value="512">512 方块单位</option><option value="1024" selected>1024 方块单位</option><option value="2048">2048 方块单位</option><option value="4096">4096 方块单位</option></select></label>
+      <label class="slider">河床深度 <output for="river_depth"></output><input id="river_depth" name="river_depth" type="range" min="1" max="10" step="1" value="7"></label>
+      <label class="slider">地貌区域尺度 <output for="region_size"></output><input id="region_size" name="region_size" type="range" min="200" max="2400" step="100" value="800"></label>
+      <label class="slider">平原权重 <output for="plains_weight"></output><input id="plains_weight" name="plains_weight" type="range" min="0" max="10" step="0.5" value="2"></label>
+      <label class="slider">丘陵权重 <output for="hills_weight"></output><input id="hills_weight" name="hills_weight" type="range" min="0" max="10" step="0.5" value="2"></label>
+      <label class="slider">山地权重 <output for="mountains_weight"></output><input id="mountains_weight" name="mountains_weight" type="range" min="0" max="10" step="0.5" value="2.5"></label>
+      <label class="slider">群系尺度 <output for="biome_size"></output><input id="biome_size" name="biome_size" type="range" min="100" max="1000" step="25" value="225"></label>
+      <label class="slider">温度偏置 <output for="temperature_bias"></output><input id="temperature_bias" name="temperature_bias" type="range" min="-1" max="1" step="0.05" value="0.05"></label>
+      <label class="slider">湿度偏置 <output for="moisture_bias"></output><input id="moisture_bias" name="moisture_bias" type="range" min="-1" max="1" step="0.05" value="0"></label>
+      <label class="slider">湖泊沿河分布范围 <output for="lake_distance"></output><input id="lake_distance" name="lake_distance" type="range" min="0" max="1" step="0.05" value="0.35"></label>
+    </details>
+    <div class="generate-area"><select id="mode" name="mode" aria-label="生成方式"><option value="quick">快速预览地形</option><option value="surface">完整地表与群系</option></select><button id="generate" class="primary" type="submit">生成地图</button><p id="modeHelp">快速预览只生成地形与河网。</p></div>
+  </form>
+</aside>
+<section class="workspace">
+  <div class="map-bar"><div><h2 id="mapTitle">水系丰富的地图</h2><p id="mapInfo">正在读取地图…</p></div><button id="exportPng" type="button">图片预览</button></div>
+  <nav aria-label="地图图层" class="layers"><button class="active" data-layer="height" aria-pressed="true">地形高程</button><button data-layer="water" aria-pressed="false">水系</button><button data-layer="material" aria-pressed="false">地表类型</button><button data-layer="biome" aria-pressed="false">群系</button></nav>
+  <div class="map-wrap"><canvas id="map" width="768" height="768" tabindex="0" role="img" aria-label="二维地形网格图，可点击网格查看其高程、方块与群系">二维地图</canvas><div id="loading" class="loading" hidden><span class="spinner"></span><p id="phase">正在生成…</p><progress id="progress" max="100" value="0"></progress><span id="elapsed"></span></div></div>
+  <div id="legend" class="legend"></div>
+  <div class="detail" id="cellDetail" aria-live="polite">移动鼠标或点击网格，查看高程和地表信息。</div>
+  <p id="status" class="status" role="status">建筑、火山与蘑菇岛生成已关闭。</p>
+</section>
+</main>
+<dialog id="imagePreview"><div class="preview-title"><h2 id="imageTitle">当前地图</h2><button id="closePreview" type="button" aria-label="关闭图片预览">×</button></div><img id="previewImage" alt="当前地图图层"><p>可右键图片另存为。</p></dialog>
+<script src="app.js"></script>
+</body></html>

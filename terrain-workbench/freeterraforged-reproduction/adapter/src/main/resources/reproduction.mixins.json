@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "reproduction.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DataGenerationExit",
+    "SimulationTerrainCeiling"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

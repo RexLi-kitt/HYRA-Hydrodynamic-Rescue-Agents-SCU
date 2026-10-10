@@ -1,0 +1,11 @@
+# Local runtime and generated worlds
+__pycache__/
+*.py[cod]
+.DS_Store
+.gradle/
+**/build/
+**/run/
+**/generated/
+**/.runtime/
+terrain-workbench/terrain-lab/current.json
+terrain-workbench/terrain-lab/exports/

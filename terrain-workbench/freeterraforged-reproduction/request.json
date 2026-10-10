@@ -1,0 +1,11 @@
+{
+  "seed": "42",
+  "preset": "ftf-default",
+  "origin_x": -512,
+  "origin_z": -512,
+  "nx": 128,
+  "nz": 128,
+  "step_blocks": 8,
+  "output": "generated/default-grid",
+  "export_datapack": true
+}

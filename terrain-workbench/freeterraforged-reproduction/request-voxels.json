@@ -1,0 +1,17 @@
+{
+  "seed": "42",
+  "preset": "ftf-default",
+  "origin_x": -129,
+  "origin_z": -129,
+  "nx": 9,
+  "nz": 9,
+  "step_blocks": 33,
+  "output": "generated/voxel-validation",
+  "export_datapack": true,
+  "voxels": {
+    "origin_x": -16,
+    "origin_z": -16,
+    "nx": 32,
+    "nz": 32
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "upstream_revision": "c5d322f5e44539ca6d3a6059c5de440af9abcfe6",
+  "pipeline": "Actual ServerLevel FULL chunks, original FreeTerraForged generation",
+  "original_generator_context_initialized": true,
+  "structures_enabled": false,
+  "seed": "42",
+  "shape": [
+    256,
+    256
+  ],
+  "axis_order": [
+    "z",
+    "x"
+  ],
+  "origin_blocks": [
+    512,
+    1536
+  ],
+  "step_blocks": 4,
+  "ground_height_definition": "Top face y+1 of first motion-blocking terrain block below vegetation, fluid, snow layers and ice; includes ground snow blocks. Not canopy height.",
+  "water_surface_definition": "Highest actual water fluid top above this ground; NaN on dry cells. Generated initial water, not a flood simulation.",
+  "cover_flags": {
+    "other_vegetation": 2,
+    "tree": 1,
+    "snow_layer_or_powder": 4,
+    "ice": 8
+  },
+  "block_ids": {
+    "minecraft:orange_terracotta": 0,
+    "minecraft:red_sand": 1,
+    "minecraft:sand": 2,
+    "minecraft:terracotta": 3,
+    "minecraft:smooth_sandstone": 4,
+    "minecraft:yellow_terracotta": 5,
+    "minecraft:white_terracotta": 6,
+    "minecraft:red_terracotta": 7,
+    "minecraft:sandstone": 8,
+    "minecraft:dirt": 9,
+    "minecraft:light_gray_terracotta": 10,
+    "minecraft:grass_block": 11,
+    "minecraft:diorite": 12,
+    "minecraft:clay": 13,
+    "minecraft:gravel": 14,
+    "minecraft:granite": 15,
+    "minecraft:tuff": 16,
+    "minecraft:andesite": 17,
+    "minecraft:stone": 18,
+    "minecraft:mud": 19,
+    "minecraft:coal_ore": 20,
+    "minecraft:gold_ore": 21,
+    "minecraft:iron_ore": 22,
+    "minecraft:red_sandstone": 23,
+    "minecraft:copper_ore": 24
+  },
+  "biome_ids": {
+    "minecraft:badlands": 0,
+    "minecraft:desert": 1,
+    "minecraft:river": 2,
+    "minecraft:mangrove_swamp": 3,
+    "minecraft:dripstone_caves": 4
+  },
+  "fields": {
+    "ground_height": {
+      "file": "ground_height.i32",
+      "dtype": "\u003ci4"
+    },
+    "ground_block_id": {
+      "file": "ground_block_id.i32",
+      "dtype": "\u003ci4"
+    },
+    "biome_id": {
+      "file": "biome_id.i32",
+      "dtype": "\u003ci4"
+    },
+    "water_surface": {
+      "file": "water_surface.f32",
+      "dtype": "\u003cf4"
+    },
+    "water_depth": {
+      "file": "water_depth.f32",
+      "dtype": "\u003cf4"
+    },
+    "cover_flags": {
+      "file": "cover_flags.i32",
+      "dtype": "\u003ci4"
+    },
+    "visible_height": {
+      "file": "visible_height.i32",
+      "dtype": "\u003ci4"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "seed": "42",
+  "origin_x": 512,
+  "origin_z": 1536,
+  "span": 1024,
+  "vertical_scale": 0.8,
+  "continent_scale": 1200,
+  "region_size": 800,
+  "river_count": 30,
+  "main_width": 12,
+  "branch_width": 8,
+  "river_depth": 7,
+  "main_bank_width": 28,
+  "branch_bank_width": 20,
+  "branch_depth": 5,
+  "lake_chance": 0.8,
+  "wetland_chance": 0.85,
+  "lake_distance": 0.35,
+  "biome_size": 225,
+  "moisture_bias": 0.0,
+  "temperature_bias": 0.05,
+  "mode": "surface"
+}

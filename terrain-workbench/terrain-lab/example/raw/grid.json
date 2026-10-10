@@ -1,0 +1,72 @@
+{
+  "upstream_revision": "c5d322f5e44539ca6d3a6059c5de440af9abcfe6",
+  "export_scope": "Compact display example: required original Cell fields and actual native surface; runtime exports retain all Cell fields.",
+  "pipeline": "GeneratorContext -> TileGenerator.generate -> WorldFilters.apply(true)",
+  "seed": "42",
+  "shape": [
+    256,
+    256
+  ],
+  "axis_order": [
+    "z",
+    "x"
+  ],
+  "origin_blocks": [
+    512,
+    1536
+  ],
+  "step_blocks": 4,
+  "tile_size_factor": 3,
+  "tile_width_blocks": 128,
+  "tile_border_chunks": 1,
+  "terrain_scale_factor": 256,
+  "sea_level_blocks": 63,
+  "world_height_blocks": 384,
+  "world_depth_blocks": 64,
+  "fields": {
+    "height": {
+      "file": "height.f32",
+      "dtype": "<f4"
+    },
+    "terrain": {
+      "file": "terrain.i32",
+      "dtype": "<i4",
+      "values": {
+        "3": "coast",
+        "5": "river",
+        "6": "wetland",
+        "7": "flats",
+        "10": "hills",
+        "13": "mountains_3",
+        "21": "flats-hills",
+        "22": "flats-plateau"
+      }
+    },
+    "riverZone": {
+      "file": "riverZone.i32",
+      "dtype": "<i4",
+      "values": {
+        "0": "Riverbed",
+        "1": "Banks",
+        "2": "ValleyFloor",
+        "3": "ValleyFadeout"
+      }
+    },
+    "riverMask": {
+      "file": "riverMask.f32",
+      "dtype": "<f4"
+    },
+    "riverWaterLevel": {
+      "file": "riverWaterLevel.f32",
+      "dtype": "<f4"
+    },
+    "temperature": {
+      "file": "temperature.f32",
+      "dtype": "<f4"
+    },
+    "moisture": {
+      "file": "moisture.f32",
+      "dtype": "<f4"
+    }
+  }
+}
