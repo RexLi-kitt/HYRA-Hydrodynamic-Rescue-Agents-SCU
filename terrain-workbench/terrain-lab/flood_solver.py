@@ -11,16 +11,36 @@ DRY = 1e-8
 
 
 class FloodSolver:
-    def __init__(self, bed, depth, dx, *, boundary='open', manning=0.035):
+    def __init__(self, bed, depth, dx, *, boundary='open', manning=0.035,
+                 sea_level=None, sea_edges=None):
         self.bed = np.asarray(bed, dtype=np.float64).copy()
         self.h = np.asarray(depth, dtype=np.float64).copy()
         if (self.bed.ndim != 2 or min(self.bed.shape) < 2 or self.h.shape != self.bed.shape
                 or not np.isfinite(self.bed).all() or not np.isfinite(self.h).all()
                 or (self.h < 0).any() or not np.isfinite(dx) or dx <= 0):
             raise ValueError('Invalid terrain, depth or grid spacing')
-        if boundary not in ('open', 'closed') or not np.isfinite(manning) or manning < 0:
+        if boundary not in ('ocean', 'open', 'closed') or not np.isfinite(manning) or manning < 0:
             raise ValueError('Invalid boundary or Manning coefficient')
         self.dx, self.boundary, self.manning = float(dx), boundary, float(manning)
+        nz, nx = self.h.shape
+        self.sea_edges = {name: np.zeros(n, dtype=bool) for name, n in
+                          (('west', nz), ('east', nz), ('north', nx), ('south', nx))}
+        self.sea_level = None
+        self.sea_wave_speed = 0.0
+        if boundary == 'ocean':
+            if sea_level is None or not np.isfinite(sea_level) or not isinstance(sea_edges, dict):
+                raise ValueError('Ocean boundary requires a finite sea level and edge masks')
+            self.sea_level = float(sea_level)
+            for name, mask in self.sea_edges.items():
+                supplied = np.asarray(sea_edges.get(name, mask), dtype=bool)
+                if supplied.shape != mask.shape:
+                    raise ValueError('Invalid ocean edge mask')
+                self.sea_edges[name] = supplied.copy()
+            edge_beds = (self.bed[:, 0], self.bed[:, -1], self.bed[0, :], self.bed[-1, :])
+            for mask, edge_bed in zip(self.sea_edges.values(), edge_beds):
+                depth_at_sea = np.maximum(0, self.sea_level-edge_bed[mask])
+                if depth_at_sea.size:
+                    self.sea_wave_speed = max(self.sea_wave_speed, float(np.sqrt(G*depth_at_sea).max()))
         self.mx = np.zeros_like(self.h)
         self.mz = np.zeros_like(self.h)
         self.initial = self.h.copy()
@@ -29,7 +49,7 @@ class FloodSolver:
         self.steps = 0
         self.balance = dict(initial_m3=float(self.h.sum() * dx**2), rainfall_m3=0.0,
                             inflow_m3=0.0, infiltration_m3=0.0, outflow_m3=0.0,
-                            numerical_adjustment_m3=0.0)
+                            sea_inflow_m3=0.0, sea_outflow_m3=0.0, numerical_adjustment_m3=0.0)
 
     def velocity(self):
         wet = self.h > DRY
@@ -45,12 +65,23 @@ class FloodSolver:
             prospective[source] += inflow * limit / self.dx**2
         wave = np.sqrt(G * prospective)
         speed = float(np.max(np.abs(u) + wave) + np.max(np.abs(v) + wave))
+        # A dry initial map can still receive deep water from the external sea.
+        speed = max(speed, 2*self.sea_wave_speed)
         return min(limit, 0.45 * self.dx / max(speed, 1e-9))
 
     def _flux(self, axis):
         pads = ((0, 0), (1, 1)) if axis == 1 else ((1, 1), (0, 0))
         h, b, mx, mz = [np.pad(a, pads, mode='edge') for a in (self.h, self.bed, self.mx, self.mz)]
         normal = mx if axis == 1 else mz
+        edge_names = ('west', 'east') if axis == 1 else ('north', 'south')
+        if self.boundary == 'ocean':
+            # Ghost cells represent a calm external reservoir at the map's sea level.
+            # Only ocean faces receive a stage boundary; inland water is never reset.
+            for edge, name in zip((0, -1), edge_names):
+                s = (slice(None), edge) if axis == 1 else (edge, slice(None))
+                mask = self.sea_edges[name]
+                h[s][mask] = np.maximum(0, self.sea_level-b[s][mask])
+                mx[s][mask] = 0; mz[s][mask] = 0
         if self.boundary == 'closed':
             if axis == 1:
                 normal[:, 0] *= -1; normal[:, -1] *= -1
@@ -75,16 +106,17 @@ class FloodSolver:
         pressure = .25*G*(dl**2 + dr**2)
         if axis == 1: fx += pressure
         else: fz += pressure
-        if self.boundary == 'open':
+        if self.boundary in ('open', 'ocean'):
             # Transmissive outflow only. A boundary is not an infinite water source.
-            for edge, sign in ((0, -1), (-1, 1)):
+            for edge, sign, name in zip((0, -1), (-1, 1), edge_names):
                 s = (slice(None), edge) if axis == 1 else (edge, slice(None))
                 q = sign * np.maximum(0, sign*normal[s])
                 ue = np.divide(mx[s], h[s], out=np.zeros_like(q), where=h[s] > DRY)
                 ve = np.divide(mz[s], h[s], out=np.zeros_like(q), where=h[s] > DRY)
-                mass[s] = q
-                fx[s] = q*ue + (.5*G*h[s]**2 if axis == 1 else 0)
-                fz[s] = q*ve + (.5*G*h[s]**2 if axis == 0 else 0)
+                ordinary = ~self.sea_edges[name]
+                mass[s][ordinary] = q[ordinary]
+                fx[s][ordinary] = (q*ue + (.5*G*h[s]**2 if axis == 1 else 0))[ordinary]
+                fz[s][ordinary] = (q*ve + (.5*G*h[s]**2 if axis == 0 else 0))[ordinary]
         return mass, fx, fz, .5*G*(hl**2-dl**2), .5*G*(hr**2-dr**2)
 
     def step(self, dt, *, rain=0.0, infiltration=0.0, inflow=0.0, source=None):
@@ -109,7 +141,11 @@ class FloodSolver:
         self.h -= f*(ax[:, 1:]-ax[:, :-1] + az[1:, :]-az[:-1, :])
         self.mx -= f*(bx[:, 1:]+lx[:, 1:] - bx[:, :-1]-rx[:, :-1] + bz[1:, :]-bz[:-1, :])
         self.mz -= f*(cx[:, 1:]-cx[:, :-1] + cz[1:, :]+lz[1:, :] - cz[:-1, :]-rz[:-1, :])
-        self.balance['outflow_m3'] += float(dt*self.dx*(ax[:, -1].sum()-ax[:, 0].sum()+az[-1, :].sum()-az[0, :].sum()))
+        for name, outward in zip(self.sea_edges, (-ax[:, 0], ax[:, -1], -az[0, :], az[-1, :])):
+            sea = self.sea_edges[name]
+            self.balance['outflow_m3'] += float(dt*self.dx*outward[~sea].sum())
+            self.balance['sea_inflow_m3'] += float(dt*self.dx*np.maximum(0, -outward[sea]).sum())
+            self.balance['sea_outflow_m3'] += float(dt*self.dx*np.maximum(0, outward[sea]).sum())
         if not all(np.isfinite(a).all() for a in (self.h, self.mx, self.mz)) or self.h.min() < -1e-7:
             raise RuntimeError('水动力计算不稳定，请检查网格与场景参数')
         adjustment = float(-np.minimum(self.h, 0).sum()*area)
@@ -139,7 +175,8 @@ class FloodSolver:
         u, v = self.velocity()
         current = float(self.h.sum()*self.dx**2)
         b = self.balance
-        expected = b['initial_m3'] + b['rainfall_m3'] + b['inflow_m3'] - b['infiltration_m3'] - b['outflow_m3']
+        expected = (b['initial_m3'] + b['rainfall_m3'] + b['inflow_m3'] + b['sea_inflow_m3']
+                    - b['infiltration_m3'] - b['outflow_m3'] - b['sea_outflow_m3'])
         return dict(time_s=self.time, steps=self.steps, max_depth_m=float(self.h.max()),
                     max_speed_m_s=float(np.hypot(u, v).max()),
                     wet_area_m2=int((self.h >= .01).sum())*self.dx**2,

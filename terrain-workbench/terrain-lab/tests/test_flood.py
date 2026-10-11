@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import sys
+import tempfile
 import unittest
 import numpy as np
 
@@ -13,6 +14,58 @@ import server
 
 
 class PhysicsTests(unittest.TestCase):
+    def test_sea_at_rest_with_sloping_bed_and_dry_coast(self):
+        z, x = np.mgrid[:10, :14]
+        bed = 10000 + .1*x + .03*z
+        depth = np.maximum(10001-bed, 0)
+        edges = dict(west=np.ones(10, bool), north=np.ones(14, bool))
+        sim = FloodSolver(bed, depth, 2, boundary='ocean', sea_level=10001, sea_edges=edges)
+        sim.advance(30)
+        np.testing.assert_allclose(sim.h, depth, atol=1e-12)
+        np.testing.assert_allclose(sim.velocity(), 0, atol=1e-11)
+        self.assertAlmostEqual(sim.balance['sea_inflow_m3'], 0, places=9)
+        self.assertAlmostEqual(sim.balance['sea_outflow_m3'], 0, places=9)
+
+    def test_sea_can_supply_dry_map_and_receive_excess_water(self):
+        bed = np.full((6, 8), -2.0)
+        edges = dict(west=np.ones(6, bool), east=np.ones(6, bool),
+                     north=np.ones(8, bool), south=np.ones(8, bool))
+        for initial, direction in ((0, 'sea_inflow_m3'), (3, 'sea_outflow_m3')):
+            sim = FloodSolver(bed, np.full_like(bed, initial), 1, boundary='ocean',
+                              sea_level=0, sea_edges=edges)
+            self.assertLess(sim.timestep(), .06)
+            sim.advance(20)
+            self.assertGreater(sim.balance[direction], 0)
+            self.assertLess(abs(sim.h.mean()-2), abs(initial-2)*.05)
+            self.assertGreaterEqual(sim.h.min(), 0)
+            self.assertLess(abs(sim.summary()['balance']['residual_m3']), 1e-9)
+
+    def test_sea_does_not_reset_inland_lake_or_open_unmarked_faces(self):
+        bed = np.full((8, 12), 5.0)
+        bed[:, :4] = -2; bed[2:6, 7:10] = 1
+        depth = np.maximum(-bed, 0); depth[2:6, 7:10] = 2
+        sim = FloodSolver(bed, depth, 2, boundary='ocean', sea_level=0,
+                          sea_edges=dict(west=np.ones(8, bool)))
+        sim.advance(30)
+        np.testing.assert_allclose(sim.h, depth, atol=1e-12)
+        # With no marked sea faces the mode is exactly the old outflow boundary.
+        a = FloodSolver(np.zeros((6, 8)), np.ones((6, 8)), 1, boundary='open')
+        b = FloodSolver(a.bed, a.h, 1, boundary='ocean', sea_level=10, sea_edges={})
+        a.mx.fill(1); b.mx.fill(1)
+        a.advance(3); b.advance(3)
+        np.testing.assert_allclose(a.h, b.h, atol=1e-12)
+        self.assertEqual(b.balance['sea_inflow_m3'], 0)
+
+    def test_sea_exchange_and_forcing_have_a_closed_mass_budget(self):
+        bed = np.zeros((8, 10)); depth = np.ones_like(bed)
+        sim = FloodSolver(bed, depth, 2, boundary='ocean', sea_level=1,
+                          sea_edges=dict(east=np.ones(8, bool)))
+        sim.advance(15, rain=.001, rain_until=4, infiltration=.0005, inflow=2, source=(4, 5))
+        self.assertGreater(sim.balance['sea_outflow_m3'], 0)
+        self.assertGreater(sim.balance['outflow_m3'], 0)
+        self.assertAlmostEqual(sim.balance['inflow_m3'], 30)
+        self.assertLess(abs(sim.summary()['balance']['residual_m3']), 1e-9)
+
     def test_lake_at_rest_with_dry_shore_and_large_elevation_offset(self):
         z, x = np.mgrid[:12, :16]
         bed = 10000 + .08*x + .1*z
@@ -70,6 +123,39 @@ class PhysicsTests(unittest.TestCase):
 
 
 class AdapterTests(unittest.TestCase):
+    def test_coarse_sea_faces_use_actual_map_edge_and_convert_stage(self):
+        # Ocean inside a coarse corner must not open its north face; a lake
+        # below sea level must not be mistaken for an external ocean either.
+        with tempfile.TemporaryDirectory(dir=ROOT / '.runtime') as folder:
+            root = Path(folder); shape = [128, 128]
+            types = np.ones(shape, dtype='<i4')
+            types[3, 0] = 0; types[3, 3] = 0; types[20:24, 20:24] = 0
+            arrays = dict(height=np.full(shape, -2, dtype='<f4'), terrain=types,
+                          riverWaterLevel=np.zeros(shape, dtype='<f4'))
+            fields = {}
+            for name, a in arrays.items():
+                a.tofile(root / name)
+                fields[name] = dict(url='/'+name, dtype=a.dtype.str)
+            terrain = dict(shape=shape, fields=fields, full=False, scale=1, sea_level=0,
+                           terrain_ids={'0':'ocean', '1':'lake'}, step=1, origin=[0,0],
+                           id='test', config=dict(seed='test'))
+            config = flood_run.settings(dict(resolution=32, metres_per_block=2,
+                                            source_x=0, source_z=0), shape)
+            sim, meta = flood_run.prepare(root, terrain, config)
+            self.assertEqual(meta['boundary_conditions']['sea_face_count'], 1)
+            self.assertTrue(sim.sea_edges['west'][0])
+            self.assertFalse(sim.sea_edges['north'].any())
+            self.assertEqual(sim.sea_level, 0)
+            self.assertEqual(sim.h[0,0], 4)
+            self.assertEqual(sim.dx, 8)
+            # Full export uses actual ground and water but keeps ocean identity.
+            terrain['full'] = True; terrain['sea_level'] = 3
+            fields['ground_height'] = fields['height']
+            fields['water_surface'] = fields['riverWaterLevel']
+            sim, meta = flood_run.prepare(root, terrain, config)
+            self.assertEqual(sim.sea_level, 6)
+            self.assertEqual(meta['boundary_conditions']['sea_face_count'], 1)
+
     def test_example_coarsening_preserves_volume_and_si_conversion(self):
         terrain = server.describe('example/raw')
         full, _ = flood_run.prepare(ROOT, terrain, flood_run.settings(dict(resolution=256), terrain['shape']))

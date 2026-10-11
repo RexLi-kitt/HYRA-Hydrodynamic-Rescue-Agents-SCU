@@ -11,7 +11,8 @@
   <label class="field">指定位置来水（立方米 / 秒）<input id="inflow" type="number" min="0" max="10000" step="0.1" value="0" required></label>
   <p class="hint">点击地图指定来水位置；来水量为 0 时关闭。</p>
   <div class="pair"><label>来水网格 X<input id="sourceX" type="number" min="0" max="255" value="128" required></label><label>来水网格 Z<input id="sourceZ" type="number" min="0" max="255" value="128" required></label></div>
-  <label class="field">地图边界<select id="boundary"><option value="open">自由出流（仅排水）</option><option value="closed">封闭（不排水）</option></select></label>
+  <label class="field">地图边界<select id="boundary"><option value="ocean">海平面（自动识别海岸）</option><option value="open">自由出流（仅排水，海水会减少）</option><option value="closed">封闭（不排水）</option></select></label>
+  <p class="hint" id="boundaryHint">海岸与外海双向交换水量，海平面取自当前地图。</p>
   <label class="field">计算网格<select id="resolution"><option value="32">32 × 32 · 快速检查</option><option value="64">64 × 64 · 快速模拟</option><option value="128" selected>128 × 128 · 标准</option><option value="256">256 × 256 · 原始网格</option></select></label>
   <details><summary>单位与地表参数</summary>
     <label class="field">每方块对应米数<input id="unit" type="number" min="0.1" max="100" step="0.1" value="1" required><small>合成场景的长度设定，同时换算高程和间距。</small></label>
@@ -32,5 +33,5 @@
   <div class="exports"><button id="saveFrame" type="button" disabled>导出当前时刻 JSON ↓</button><button id="saveArchive" type="button" disabled>下载完整过程 ↓</button><button id="savePng" type="button" disabled>保存图片 ↓</button></div>
   <p class="status" id="floodStatus" role="status">降雨与指定来水进入计算网格；水深达到 0.01 米计为淹没。</p>
   <details class="balance"><summary>水量收支与场景说明</summary><p id="scenarioInfo">尚未计算。默认 1 方块＝1 米，是合成场景设定。</p><dl id="waterBudget"></dl><p>速度方向：X 向右、Z 向下。初始水体由生成器提供，可能在计算开始后重新调整。粗网格会平均地形与水深，狭窄河道的表现会随分辨率变化。</p></details>
-</section></main><script src="flood.js"></script>
+</section></main><script src="flood.js?v=2"></script>
 </body></html>

@@ -7,6 +7,13 @@
  const cache = new Map();
  const format = (n, digits=1) => Number(n).toLocaleString('zh-CN',{maximumFractionDigits:digits});
  const clock = s => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+ function boundaryHint() {
+  if(!terrain)return;
+  const level=terrain.sea_level*(Number($('unit').value)||1);
+  $('boundaryHint').textContent=$('boundary').value==='ocean'
+   ? `海岸边缘与外海双向交换，外海水位 ${format(level,2)} 米；其余边缘自由出流。无海岸时按自由出流计算。关闭初始水体后，海岸仍会接收海水。`
+   : $('boundary').value==='open'?'所有边缘只排水，不补水；海洋也会随排水减少。':'所有边缘封闭，水无法流出地图。';
+ }
  const status = (s,error=false) => {$('floodStatus').textContent=s;$('floodStatus').classList.toggle('error',error);};
  async function json(url, options) {const r=await fetch(url,options),j=await r.json();if(!r.ok)throw new Error(j.error||'读取失败');return j;}
  async function floats(url, length) {const r=await fetch(url);if(!r.ok)throw new Error('地图字段读取失败');const b=await r.arrayBuffer();if(b.byteLength!==length*4)throw new Error('地图数据不完整');return new Float32Array(b);}
@@ -53,7 +60,7 @@
    $('sourceX').max=nx-1;$('sourceZ').max=nz-1;$('sourceX').value=Math.floor(nx/2);$('sourceZ').value=Math.floor(nz/2);
    selected={x:Math.floor(nx/2),z:Math.floor(nz/2)};
    $('mapInfo').textContent=`种子 ${m.config.seed} · ${nx} × ${nz} 原始网格 · ${m.full?'实际地面高程':'连续地形预览'} · 间距 ${m.step} 方块`;
-   makePreview();$('computeStatus').textContent='地图已就绪，设置场景后计算。';status('点击地图选择来水位置；初始水体之外新增的淹没会单独统计。');
+   boundaryHint();makePreview();$('computeStatus').textContent='地图已就绪，设置场景后计算。';status('点击地图选择来水位置；初始水体之外新增的淹没会单独统计。');
   } catch(e){status(e.message,true);$('computeStatus').textContent='读取失败，请重试。';}
   finally{$('refresh').disabled=false;$('simulate').disabled=!terrain;}
  }
@@ -66,8 +73,8 @@
   $('timeline').value=index;$('timeLabel').textContent=clock(info.time_s);$('timeStat').textContent=clock(info.time_s);
   $('depthStat').textContent=format(info.max_depth_m);$('areaStat').textContent=format(info.newly_flooded_area_m2,0);
   $('balanceStat').textContent=Number(info.balance.residual_m3).toExponential(2);
-  const labels={initial_m3:'初始水量',rainfall_m3:'累计降雨',inflow_m3:'累计来水',infiltration_m3:'累计入渗',outflow_m3:'累计排水',current_m3:'当前水量',residual_m3:'水量收支误差'};
-  $('waterBudget').replaceChildren(...Object.entries(labels).map(([k,label])=>{const item=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=`${format(info.balance[k],4)} m³`;item.append(dt,dd);return item;}));
+  const labels={initial_m3:'初始水量',rainfall_m3:'累计降雨',inflow_m3:'累计指定来水',sea_inflow_m3:'外海补水',sea_outflow_m3:'排入外海',infiltration_m3:'累计入渗',outflow_m3:'其他边缘排水',current_m3:'当前水量',residual_m3:'水量收支误差'};
+  $('waterBudget').replaceChildren(...Object.entries(labels).map(([k,label])=>{const item=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=`${format(info.balance[k]??0,4)} m³`;item.append(dt,dd);return item;}));
   draw();
  }
  async function accept(result) {
@@ -77,7 +84,9 @@
   $('timeline').max=meta.frames.length-1;$('timeline').disabled=false;
   for(const id of ['play','resetFlood','saveFrame','savePng'])$(id).disabled=false;
   $('saveArchive').disabled=!meta.archive_url;
-  const c=meta.config;$('scenarioInfo').textContent=`本次结果：${meta.shape[1]} × ${meta.shape[0]} 计算网格 · 间距 ${meta.dx_m} 米 · 1 方块＝${c.metres_per_block} 米 · 降雨 ${c.rain_mm_h} mm/h，持续 ${format(c.rain_duration_s/60)} 分 · 来水 ${c.inflow_m3_s} m³/s · ${c.boundary==='open'?'自由出流':'封闭边界'} · ${meta.terrain_source==='actual_ground'?'实际地面':'连续地形预览'}。`;
+  const c=meta.config,bc=meta.boundary_conditions;
+  const boundary=c.boundary==='ocean'?`海平面 ${format(bc.sea_level_m,2)} 米 · ${bc.sea_face_count} 个海岸边界面${bc.sea_face_count?'':'（无海岸，使用自由出流）'}`:c.boundary==='open'?'自由出流':'封闭边界';
+  $('scenarioInfo').textContent=`本次结果：${meta.shape[1]} × ${meta.shape[0]} 计算网格 · 间距 ${meta.dx_m} 米 · 1 方块＝${c.metres_per_block} 米 · 降雨 ${c.rain_mm_h} mm/h，持续 ${format(c.rain_duration_s/60)} 分 · 来水 ${c.inflow_m3_s} m³/s · ${boundary} · ${meta.terrain_source==='actual_ground'?'实际地面':'连续地形预览'}。`;
   if(follow||isNew)await show(meta.frames.length-1);
  }
  async function simulate(event) {
@@ -131,7 +140,7 @@
  canvas.onclick=e=>{const r=canvas.getBoundingClientRect();if(terrain)select(Math.floor((e.clientX-r.left)/r.width*terrain.shape[1]),Math.floor((e.clientY-r.top)/r.height*terrain.shape[0]));};
  canvas.onkeydown=e=>{const d={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];if(d&&selected){e.preventDefault();select(selected.x+d[0],selected.z+d[1]);}};
  form.onsubmit=simulate;
- form.oninput=()=>{if(preview)makePreview();else{draw();status('参数已修改；现有结果仍对应上一次计算，重新计算后应用。');}};
+ form.oninput=()=>{boundaryHint();if(preview)makePreview();else{draw();status('参数已修改；现有结果仍对应上一次计算，重新计算后应用。');}};
  $('refresh').onclick=load;$('arrows').onchange=draw;
  $('cancel').onclick=async()=>{if(!job)return;try{await json(`/api/flood-jobs/${job}/cancel`,{method:'POST'});$('cancel').disabled=true;$('computeStatus').textContent='正在停止计算…';}catch(e){status(e.message,true);}};
  document.querySelectorAll('[data-layer]').forEach(b=>b.onclick=()=>{layer=b.dataset.layer;document.querySelectorAll('[data-layer]').forEach(a=>{const active=a===b;a.classList.toggle('active',active);a.setAttribute('aria-pressed',String(active));});draw();});

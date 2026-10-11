@@ -8,7 +8,7 @@ import zipfile
 DEFAULTS = dict(metres_per_block=1.0, resolution=128, duration_s=600.0,
                 rain_mm_h=80.0, rain_duration_s=600.0, infiltration_mm_h=0.0,
                 inflow_m3_s=0.0, source_x=128, source_z=128,
-                manning=0.035, boundary='open', initial_water=True, frames=31)
+                manning=0.035, boundary='ocean', initial_water=True, frames=31)
 
 
 def settings(data, shape):
@@ -30,7 +30,7 @@ def settings(data, shape):
     if config['resolution'] not in (32, 64, 128, 256): raise ValueError('请选择计算分辨率')
     if config['rain_duration_s'] > config['duration_s']: raise ValueError('降雨持续时间不能超过模拟时间')
     config['boundary'] = data.get('boundary', config['boundary'])
-    if config['boundary'] not in ('open', 'closed'): raise ValueError('请选择边界方式')
+    if config['boundary'] not in ('ocean', 'open', 'closed'): raise ValueError('请选择边界方式')
     config['initial_water'] = data.get('initial_water', True)
     if not isinstance(config['initial_water'], bool): raise ValueError('初始水体参数格式不正确')
     return config
@@ -52,13 +52,16 @@ def prepare(root, terrain, config):
     full = terrain['full']
     bed = read('ground_height') if full else read('height')*terrain['scale']
     if not np.isfinite(bed).all(): raise ValueError('地图包含无效高程')
+    types = read('terrain').astype(int)
+    ocean = np.zeros_like(bed, dtype=bool)
+    for code, name in terrain['terrain_ids'].items():
+        if 'ocean' in name: ocean |= types == int(code)
     if config['initial_water']:
         if full:
             water = read('water_surface')
             if np.isinf(water).any(): raise ValueError('地图包含无效水面')
             depth = np.maximum(0, np.where(np.isfinite(water), water-bed, 0))
         else:
-            types = read('terrain').astype(int)
             water = read('riverWaterLevel')*terrain['scale']
             depth = np.zeros_like(bed)
             for code, name in terrain['terrain_ids'].items():
@@ -76,7 +79,14 @@ def prepare(root, terrain, config):
     unit = config['metres_per_block']
     bed, depth = coarsen(bed)*unit, coarsen(depth)*unit
     dx = terrain['step']*factor*unit
-    solver = FloodSolver(bed, depth, dx, boundary=config['boundary'], manning=config['manning'])
+    # Group actual outer faces, not whole coarse cells: an ocean pixel inside a
+    # coastal cell must not accidentally open that cell's land-facing boundary.
+    sea_edges = {name: a.reshape(-1, factor).any(axis=1) for name, a in
+                 (('west', ocean[:, 0]), ('east', ocean[:, -1]),
+                  ('north', ocean[0, :]), ('south', ocean[-1, :]))}
+    sea_level = terrain['sea_level']*unit
+    solver = FloodSolver(bed, depth, dx, boundary=config['boundary'], manning=config['manning'],
+                         sea_level=sea_level, sea_edges=sea_edges)
     meta = dict(schema='hyra-flood-v1', solver='2D SWE / first-order Rusanov / hydrostatic reconstruction',
                 shape=list(bed.shape), axis_order=['z', 'x'], dx_m=dx, coarsening_factor=factor,
                 origin_blocks=[v+(factor-1)*terrain['step']/2 for v in terrain['origin']],
@@ -85,6 +95,10 @@ def prepare(root, terrain, config):
                 units=dict(bed='m', depth='m', u='m/s', v='m/s', maximum_depth='m', time='s'),
                 frame_fields=['depth', 'u', 'v', 'maximum_depth'], frame_dtype='<f4',
                 wet_threshold_m=.01, frames=[])
+    meta['boundary_conditions'] = dict(mode=config['boundary'], sea_level_m=sea_level,
+        sea_edges={name: mask.tolist() for name, mask in solver.sea_edges.items()},
+        sea_face_count=sum(int(mask.sum()) for mask in solver.sea_edges.values()),
+        other_edges='closed' if config['boundary'] == 'closed' else 'outflow_only')
     return solver, meta
 
 
@@ -112,7 +126,9 @@ def run(root, jobid, terrain, config, update, cancelled):
     # The complete archive remains usable without the running web server.
     (folder / 'metadata.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding='utf-8')
     np.savez_compressed(folder / 'final-state.npz', bed=solver.bed, depth=solver.h,
-                        u=u, v=v, maximum_depth=solver.maximum, initial_depth=solver.initial)
+                        u=u, v=v, maximum_depth=solver.maximum, initial_depth=solver.initial,
+                        sea_level_m=meta['boundary_conditions']['sea_level_m'],
+                        **{'sea_edge_'+name: mask for name, mask in solver.sea_edges.items()})
     archive = folder / 'flood-result.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
         for path in sorted(folder.iterdir()):
