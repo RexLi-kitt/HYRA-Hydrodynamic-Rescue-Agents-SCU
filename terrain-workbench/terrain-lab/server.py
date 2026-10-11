@@ -13,6 +13,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 import flood_run
+import generation_process
 
 ROOT = Path(__file__).resolve().parent
 GENERATOR = ROOT.parent / 'freeterraforged-reproduction'
@@ -127,27 +128,53 @@ def generate(jobid, config):
         request['surface'] = {key: request[key] for key in ('origin_x', 'origin_z', 'nx', 'nz', 'step_blocks')}
     path = directory / 'request.json'; path.write_text(json.dumps(request, indent=2))
     job = JOBS[jobid]
-    job.update(state='running', progress=0, message='正在准备地形生成器…')
+    job.update(state='running', progress=0, progress_known=False, stage='dependencies',
+               message='正在检查 Java 21 与首次构建依赖…', log_url=f'/generated/{jobid}/generation.log', log_tail='')
+    pending = ''
+    def report(chunk, elapsed, idle):
+        nonlocal pending
+        job['elapsed_s'] = round(elapsed)
+        if not chunk:
+            if idle >= 15 and job['stage'] == 'dependencies':
+                job['message'] = f'正在准备首次构建依赖（{round(idle)} 秒无新输出）；源码转换可能持续数分钟，可取消或查看记录'
+            return
+        job['log_tail'] = (job['log_tail'] + chunk)[-6000:]
+        pending = (pending + chunk)[-16000:]
+        for line in pending.splitlines():
+            if 'Uncaught exception in thread "main"' in line or 'Exception in thread "main"' in line:
+                raise RuntimeError('生成器启动异常，已停止本次任务；请查看生成记录中的具体错误')
+            tile = re.search(r'Original terrain tiles: (\d+)/(\d+)', line)
+            surface = re.search(r'Original surface rows: (\d+)/(\d+)', line)
+            if 'HYRA_STAGE:' in line:
+                job.update(message=line.split('HYRA_STAGE:', 1)[1].strip(), progress_known=False)
+            if 'Downloading ' in line:
+                job.update(stage='dependencies', progress_known=False, message='首次启动正在下载构建工具与依赖，尚未开始生成地形…')
+            if '> Task ' in line and not tile and not surface:
+                job.update(stage='dependencies', progress_known=False, message='正在首次构建地形生成器；完成后开始生成地图…')
+            if ':remapping sources' in line:
+                job.update(stage='dependencies', progress_known=False, message='正在首次转换生成器依赖源码，可能需要数分钟…')
+            if tile:
+                job.update(stage='terrain', progress_known=True, progress=round(100*int(tile[1])/int(tile[2])), message='正在生成地形与河网…')
+            if 'Preparing start region' in line:
+                job.update(stage='surface', progress_known=False, progress=0, message='正在生成实际地表…')
+            if surface:
+                job.update(stage='surface', progress_known=True, progress=round(100*int(surface[1])/int(surface[2])), message='正在读取地面方块与群系…')
+        pending = pending.rsplit('\n', 1)[-1]
     try:
-        with (directory / 'generation.log').open('w') as log:
-            process = subprocess.Popen([sys.executable, str(GENERATOR / 'run.py'), 'export', '--request', str(path)],
-                cwd=GENERATOR, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
-            for line in process.stdout:
-                log.write(line); log.flush()
-                tile = re.search(r'Original terrain tiles: (\d+)/(\d+)', line)
-                surface = re.search(r'Original surface rows: (\d+)/(\d+)', line)
-                if tile:
-                    job.update(progress=round(100 * int(tile[1]) / int(tile[2])), message='正在生成地形与河网…')
-                if 'Preparing start region' in line:
-                    job.update(progress=0, message='正在生成实际地表…')
-                if surface:
-                    job.update(progress=round(100 * int(surface[1]) / int(surface[2])), message='正在读取地面方块与群系…')
-            code = process.wait()
-        if code: raise RuntimeError('生成失败；请查看该次生成记录')
+        code = generation_process.run([sys.executable, '-u', str(GENERATOR / 'run.py'), 'export', '--request', str(path)],
+            GENERATOR, directory / 'generation.log', report, lambda: job.get('cancel_requested', False))
+        if code:
+            diagnostic = next((s.strip() for s in job['log_tail'].splitlines() if '生成新地图需要' in s or '--java-home' in s), None)
+            raise RuntimeError(diagnostic or '地形生成失败；请打开生成记录查看具体构建或下载错误')
+        if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
         result = describe(f'generated/{jobid}/raw')
         if config['mode'] == 'surface' and not result['full']: raise RuntimeError('地表生成尚未完成')
-        job.update(state='done', progress=100, message='生成完成', result=result)
-        (ROOT / 'current.json').write_text(json.dumps({'directory': result['id']}))
+        pointer = ROOT / 'current.json.tmp'
+        pointer.write_text(json.dumps({'directory': result['id']}))
+        pointer.replace(ROOT / 'current.json')
+        job.update(state='done', progress=100, progress_known=True, message='生成完成', result=result)
+    except InterruptedError as error:
+        job.update(state='cancelled', message=str(error), progress_known=False)
     except Exception as error:
         job.update(state='failed', message=str(error), progress=0)
 
@@ -180,6 +207,14 @@ class Handler(SimpleHTTPRequestHandler):
         if origin and urlparse(origin).netloc != self.headers.get('Host'):
             return self.json({'error': '请从本地页面生成'}, 403)
         try:
+            if self.path.startswith('/api/jobs/') and self.path.endswith('/cancel'):
+                jobid = self.path.split('/')[-2]
+                with LOCK:
+                    job = JOBS.get(jobid)
+                    if job is None: return self.json({'error': '未找到这次生成'}, 404)
+                    if job['state'] in ('queued', 'running'):
+                        job.update(cancel_requested=True, message='正在停止生成…')
+                return self.json({'id': jobid})
             if self.path.startswith('/api/flood-jobs/') and self.path.endswith('/cancel'):
                 jobid = self.path.split('/')[-2]
                 with LOCK:

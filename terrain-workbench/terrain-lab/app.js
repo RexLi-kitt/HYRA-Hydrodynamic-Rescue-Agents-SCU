@@ -1,7 +1,7 @@
 'use strict';
 const $ = id => document.getElementById(id);
 const form = $('controls'), canvas = $('map'), ctx = canvas.getContext('2d');
-let map = null, arrays = {}, layer = 'height', defaults = null, busy = false;
+let map = null, arrays = {}, layer = 'height', defaults = null, busy = false, generationJob = null;
 const materialLabels = ['草本地表','土壤','砂质地表','砂砾','黏土','岩石'];
 const materialColors = ['#6b9e58','#9b7049','#e1cd94','#a0a397','#9baeb7','#697b80'];
 const biomeStyles = {
@@ -128,19 +128,30 @@ function inspectCell(event) {
 async function generate(event) {
  event.preventDefault();if(busy)return;
  const config=getConfig();
- busy=true;const start=Date.now();$('loading').hidden=false;$('progress').value=0;$('phase').textContent='正在准备生成…';
+ notify('正在生成新地图，可取消或查看生成记录。');
+ busy=true;const start=Date.now();$('loading').hidden=false;$('progress').removeAttribute('value');$('phase').textContent='正在检查生成环境…';$('elapsed').textContent='';$('cancelGenerate').disabled=true;$('generationLog').hidden=true;$('lastGenerationLog').hidden=true;
  for(const el of form.querySelectorAll('button,input,select'))el.disabled=true;
  const timer=setInterval(()=>{$('elapsed').textContent=`已等待 ${Math.floor((Date.now()-start)/1000)} 秒`},1000);
  try {
   const job=await json('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(config)});
-  while(true){const state=await json(`/api/jobs/${job.id}`);$('phase').textContent=state.message;$('progress').value=state.progress;
+  generationJob=job.id;$('cancelGenerate').disabled=false;
+  const logUrl=`/generated/${job.id}/generation.log`;
+  for(const id of ['generationLog','lastGenerationLog']){$(id).href=logUrl;$(id).hidden=false;}
+  while(true){const state=await json(`/api/jobs/${job.id}`);$('phase').textContent=state.message;
+   if(state.progress_known)$('progress').value=state.progress;else $('progress').removeAttribute('value');
+   if(state.state==='cancelled'){notify(state.message);break;}
    if(state.state==='failed')throw new Error(state.message);
    if(state.state==='done'){await loadMap(state.result);notify(`生成完成。${map.full ? '当前可查看实际方块与群系。' : '切换“完整地表与群系”生成后可查看地表类型。'}`);break;}
    await new Promise(resolve=>setTimeout(resolve,1500));
   }
  }catch(error){notify(error.message,true);}
- finally{busy=false;clearInterval(timer);$('loading').hidden=true;for(const el of form.querySelectorAll('button,input,select'))el.disabled=false;}
+ finally{busy=false;generationJob=null;clearInterval(timer);$('loading').hidden=true;for(const el of form.querySelectorAll('button,input,select'))el.disabled=false;}
 }
+$('cancelGenerate').addEventListener('click',async()=>{
+ if(!generationJob)return;$('cancelGenerate').disabled=true;
+ try{await json(`/api/jobs/${generationJob}/cancel`,{method:'POST'});$('phase').textContent='正在停止生成…';}
+ catch(error){notify(error.message,true);$('cancelGenerate').disabled=false;}
+});
 form.addEventListener('submit',generate);
 form.addEventListener('input',()=>{updateLabels();document.querySelectorAll('.preset').forEach(b=>b.classList.remove('active'));notify('参数已修改，点击“生成地图”应用。');});
 $('mode').addEventListener('change',updateLabels);

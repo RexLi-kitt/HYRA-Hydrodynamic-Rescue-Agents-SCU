@@ -90,5 +90,19 @@ project(":fabric") {
                 }
             }
         }
+        tasks.named('runExportTerrain') {
+            if (System.getProperty('os.name').startsWith('Windows')) {
+                // Loom falls back to Gradle's manifest JAR for non-ASCII paths;
+                // Fabric then misses real game/library entries in java.class.path.
+                useArgFile.set(true)
+                jvmArguments.set(providers.provider {
+                    def arguments = new File(temporaryDir, 'export-classpath.args')
+                    def fullPath = internalClasspath.asPath.replace('\\', '/').replace('"', '\\"')
+                    // Java's Windows launcher reads @files in native encoding.
+                    arguments.setText('-classpath\n"' + fullPath + '"\n', System.getProperty('native.encoding', 'UTF-8'))
+                    return ['@' + arguments.absolutePath] + internalJvmArgs.get()
+                })
+            }
+        }
     }
 }
