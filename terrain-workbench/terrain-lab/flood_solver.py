@@ -47,9 +47,30 @@ class FloodSolver:
         self.maximum = self.h.copy()
         self.time = 0.0
         self.steps = 0
+        self.baseflow_rate = np.zeros_like(self.h)
+        self.baseflow_m3_s = 0.0
         self.balance = dict(initial_m3=float(self.h.sum() * dx**2), rainfall_m3=0.0,
-                            inflow_m3=0.0, infiltration_m3=0.0, outflow_m3=0.0,
+                            inflow_m3=0.0, baseflow_m3=0.0, infiltration_m3=0.0, outflow_m3=0.0,
                             sea_inflow_m3=0.0, sea_outflow_m3=0.0, numerical_adjustment_m3=0.0)
+
+    def set_baseflow(self, sources):
+        rate = np.zeros_like(self.h)
+        for source in sources:
+            z, x, q = source['z'], source['x'], source['discharge_m3_s']
+            if (not isinstance(z, (int, np.integer)) or not isinstance(x, (int, np.integer))
+                    or not 0 <= z < self.h.shape[0] or not 0 <= x < self.h.shape[1]
+                    or not np.isfinite(q) or q < 0):
+                raise ValueError('Invalid river baseflow source')
+            rate[z, x] += q/self.dx**2
+        self.baseflow_rate = rate
+        self.baseflow_m3_s = float(rate.sum()*self.dx**2)
+
+    def start_scenario(self):
+        """Use the warmed state as t=0 without losing momentum or source rates."""
+        self.initial = self.h.copy(); self.maximum = self.h.copy()
+        self.time = 0.0; self.steps = 0
+        for name in self.balance: self.balance[name] = 0.0
+        self.balance['initial_m3'] = float(self.h.sum()*self.dx**2)
 
     def velocity(self):
         wet = self.h > DRY
@@ -59,7 +80,7 @@ class FloodSolver:
     def timestep(self, limit=1.0, rain=0.0, inflow=0.0, source=None):
         u, v = self.velocity()
         # Include this step's potential source water in the wave-speed bound.
-        prospective = self.h + rain * limit
+        prospective = self.h + (rain+self.baseflow_rate) * limit
         if source is not None:
             prospective = prospective.copy()
             prospective[source] += inflow * limit / self.dx**2
@@ -128,6 +149,8 @@ class FloodSolver:
         area = self.dx**2
         self.h += rain*dt
         self.balance['rainfall_m3'] += rain*dt*self.h.size*area
+        self.h += self.baseflow_rate*dt
+        self.balance['baseflow_m3'] += self.baseflow_m3_s*dt
         if inflow:
             self.h[source] += inflow*dt/area
             self.balance['inflow_m3'] += inflow*dt
@@ -175,7 +198,7 @@ class FloodSolver:
         u, v = self.velocity()
         current = float(self.h.sum()*self.dx**2)
         b = self.balance
-        expected = (b['initial_m3'] + b['rainfall_m3'] + b['inflow_m3'] + b['sea_inflow_m3']
+        expected = (b['initial_m3'] + b['rainfall_m3'] + b['inflow_m3'] + b['baseflow_m3'] + b['sea_inflow_m3']
                     - b['infiltration_m3'] - b['outflow_m3'] - b['sea_outflow_m3'])
         return dict(time_s=self.time, steps=self.steps, max_depth_m=float(self.h.max()),
                     max_speed_m_s=float(np.hypot(u, v).max()),

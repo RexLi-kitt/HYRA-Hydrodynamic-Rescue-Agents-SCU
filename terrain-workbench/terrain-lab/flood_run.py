@@ -8,7 +8,8 @@ import zipfile
 DEFAULTS = dict(metres_per_block=1.0, resolution=128, duration_s=600.0,
                 rain_mm_h=80.0, rain_duration_s=600.0, infiltration_mm_h=0.0,
                 inflow_m3_s=0.0, source_x=128, source_z=128,
-                manning=0.035, boundary='ocean', initial_water=True, frames=31)
+                manning=0.035, boundary='ocean', initial_water=True, frames=31,
+                baseflow=True, baseflow_m3_s=5.0, warmup_s=600.0)
 
 
 def settings(data, shape):
@@ -17,7 +18,7 @@ def settings(data, shape):
     specs = dict(metres_per_block=(.1, 100), duration_s=(1, 3600), rain_mm_h=(0, 1000),
                  rain_duration_s=(0, 3600), infiltration_mm_h=(0, 500), inflow_m3_s=(0, 10000),
                  manning=(.01, .2), source_x=(0, shape[1]-1), source_z=(0, shape[0]-1),
-                 resolution=(32, 256), frames=(2, 61))
+                 resolution=(32, 256), frames=(2, 61), baseflow_m3_s=(0, 10000), warmup_s=(0, 3600))
     for name, (low, high) in specs.items():
         try: value = float(data.get(name, config[name]))
         except (ValueError, TypeError): raise ValueError(f'{name} 需要是数值')
@@ -33,6 +34,8 @@ def settings(data, shape):
     if config['boundary'] not in ('ocean', 'open', 'closed'): raise ValueError('请选择边界方式')
     config['initial_water'] = data.get('initial_water', True)
     if not isinstance(config['initial_water'], bool): raise ValueError('初始水体参数格式不正确')
+    config['baseflow'] = data.get('baseflow', True)
+    if not isinstance(config['baseflow'], bool): raise ValueError('基流参数格式不正确')
     return config
 
 
@@ -54,8 +57,12 @@ def prepare(root, terrain, config):
     if not np.isfinite(bed).all(): raise ValueError('地图包含无效高程')
     types = read('terrain').astype(int)
     ocean = np.zeros_like(bed, dtype=bool)
+    river = np.zeros_like(bed, dtype=bool)
     for code, name in terrain['terrain_ids'].items():
         if 'ocean' in name: ocean |= types == int(code)
+        if name == 'river': river |= types == int(code)
+    river_water = read('water_surface') if full else read('riverWaterLevel')*terrain['scale']
+    native_bed = bed.copy()
     if config['initial_water']:
         if full:
             water = read('water_surface')
@@ -87,6 +94,10 @@ def prepare(root, terrain, config):
     sea_level = terrain['sea_level']*unit
     solver = FloodSolver(bed, depth, dx, boundary=config['boundary'], manning=config['manning'],
                          sea_level=sea_level, sea_edges=sea_edges)
+    from river_baseflow import plan
+    groups, sources = plan(river, river_water, native_bed, factor,
+                           config['baseflow_m3_s'] if config['baseflow'] else 0)
+    solver.set_baseflow(sources)
     meta = dict(schema='hyra-flood-v1', solver='2D SWE / first-order Rusanov / hydrostatic reconstruction',
                 shape=list(bed.shape), axis_order=['z', 'x'], dx_m=dx, coarsening_factor=factor,
                 origin_blocks=[v+(factor-1)*terrain['step']/2 for v in terrain['origin']],
@@ -99,12 +110,25 @@ def prepare(root, terrain, config):
         sea_edges={name: mask.tolist() for name, mask in solver.sea_edges.items()},
         sea_face_count=sum(int(mask.sum()) for mask in solver.sea_edges.values()),
         other_edges='closed' if config['boundary'] == 'closed' else 'outflow_only')
+    meta['river_baseflow'] = dict(enabled=config['baseflow'], requested_m3_s=config['baseflow_m3_s'],
+        actual_m3_s=solver.baseflow_m3_s, river_native_cells=int(river.sum()),
+        reach_count=len(groups), groups=groups, sources=sources,
+        method='highest native water surface per connected river reach; area-weighted synthetic discharge')
     return solver, meta
 
 
 def run(root, jobid, terrain, config, update, cancelled):
     import numpy as np
     solver, meta = prepare(root, terrain, config)
+    generated_initial = solver.h.copy()
+    if solver.baseflow_m3_s > 0 and config['warmup_s'] > 0:
+        from river_baseflow import spin_up
+        meta['initial_conditions'] = spin_up(solver, config['warmup_s'],
+            config['infiltration_mm_h']/3600000, update, cancelled)
+        solver.start_scenario()
+    else:
+        meta['initial_conditions'] = dict(duration_s=0, converged=False,
+            reason='no_active_baseflow' if solver.baseflow_m3_s == 0 else 'warmup_disabled')
     folder = root / 'generated' / jobid / 'flood'
     folder.mkdir(parents=True, exist_ok=True)
     url = f'/generated/{jobid}/flood/'
@@ -127,6 +151,7 @@ def run(root, jobid, terrain, config, update, cancelled):
     (folder / 'metadata.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding='utf-8')
     np.savez_compressed(folder / 'final-state.npz', bed=solver.bed, depth=solver.h,
                         u=u, v=v, maximum_depth=solver.maximum, initial_depth=solver.initial,
+                        generated_initial_depth=generated_initial, baseflow_rate_m_s=solver.baseflow_rate,
                         sea_level_m=meta['boundary_conditions']['sea_level_m'],
                         **{'sea_edge_'+name: mask for name, mask in solver.sea_edges.items()})
     archive = folder / 'flood-result.zip'

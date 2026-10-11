@@ -1,11 +1,16 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HYRA · 动态洪水工作台</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="flood.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HYRA · 动态洪水工作台</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="flood.css?v=3"></head>
 <body>
 <header><div class="brand"><span class="mark">≈</span><div><h1>动态洪水工作台</h1><p>从降雨与来水，观察洪水演化</p></div></div><nav class="map-actions"><a class="elevation-link" href="/">地形生成</a><a class="elevation-link" href="elevation.html">高程可视化</a></nav></header>
 <main>
 <aside><form id="floodControls">
   <h2>洪水场景</h2>
+  <details open><summary>河流日常来水</summary>
+    <label class="check"><input id="baseflow" type="checkbox" checked> 持续补给河流基流</label>
+    <div class="pair"><label>日常总来水（m³/s）<input id="baseflowRate" type="number" min="0" max="10000" step="0.1" value="5" required></label><label>基流预热上限（分）<input id="warmup" type="number" min="0" max="60" step="1" value="10" required></label></div>
+    <p class="hint" id="baseflowHint">自动识别河流上游，先用日常来水预热，再开始降雨和指定来水。总流量是可修改的合成场景设定。</p>
+  </details>
   <label class="field">降雨强度（毫米 / 小时）<input id="rain" type="number" min="0" max="1000" step="1" value="80" required></label>
   <div class="pair"><label>降雨时长（分）<input id="rainDuration" type="number" min="0" max="60" step="0.1" value="10" required></label><label>模拟时长（分）<input id="duration" type="number" min="0.1" max="60" step="0.1" value="10" required></label></div>
   <label class="field">指定位置来水（立方米 / 秒）<input id="inflow" type="number" min="0" max="10000" step="0.1" value="0" required></label>
@@ -25,13 +30,14 @@
 <section class="workspace">
   <div class="map-bar"><div><h2>水在地形上的演化</h2><p id="mapInfo">正在读取当前地图…</p></div><button id="refresh" type="button">读取最新地图 ↻</button></div>
   <div class="flood-stats"><div><span>当前时间</span><strong id="timeStat">0:00</strong></div><div><span>最大水深 / 米</span><strong id="depthStat">—</strong></div><div><span>新增淹没 / 平方米</span><strong id="areaStat">—</strong></div><div><span>水量收支误差 / 立方米</span><strong id="balanceStat">—</strong></div></div>
-  <nav class="layers" aria-label="洪水图层"><button class="active" data-layer="depth" aria-pressed="true">当前水深</button><button data-layer="speed" aria-pressed="false">流速</button><button data-layer="maximum" aria-pressed="false">累计最大水深</button><label class="check"><input id="arrows" type="checkbox" checked> 流向</label></nav>
-  <div class="map-wrap"><canvas id="floodMap" width="768" height="768" tabindex="0" role="img" aria-label="动态洪水地图，点击选择来水位置，方向键移动选中网格">二维洪水地图</canvas></div>
+  <nav class="layers" aria-label="洪水图层"><button class="active" data-layer="depth" aria-pressed="true">当前水深</button><button data-layer="speed" aria-pressed="false">流速</button><button data-layer="maximum" aria-pressed="false">累计最大水深</button></nav>
+  <div class="flow-controls"><label class="check"><input id="arrows" type="checkbox" checked> 流向箭头</label><label class="check"><input id="speedLabels" type="checkbox" checked> 流速数值</label><label>箭头疏密 <select id="arrowDensity"><option value="12">稀疏</option><option value="18" selected>标准</option><option value="28">密集</option></select></label><span>悬停查看任意网格的水深与流速</span></div>
+  <div class="map-wrap"><canvas id="floodMap" width="768" height="768" tabindex="0" role="img" aria-label="动态洪水地图，点击选择来水位置，方向键移动选中网格">二维洪水地图</canvas><output id="flowTooltip" class="flow-tooltip" hidden></output></div>
   <div class="legend" id="floodLegend"></div>
   <p class="detail" id="cellDetail" aria-live="polite">点击地图查点并指定来水位置。</p>
   <div class="playback"><button id="play" type="button" disabled>播放 ▶</button><button id="resetFlood" type="button" disabled>回到初始状态</button><label for="timeline">时间 <output id="timeLabel">0:00</output></label><input id="timeline" type="range" min="0" max="0" value="0" disabled aria-label="模拟时间进度"></div>
   <div class="exports"><button id="saveFrame" type="button" disabled>导出当前时刻 JSON ↓</button><button id="saveArchive" type="button" disabled>下载完整过程 ↓</button><button id="savePng" type="button" disabled>保存图片 ↓</button></div>
   <p class="status" id="floodStatus" role="status">降雨与指定来水进入计算网格；水深达到 0.01 米计为淹没。</p>
-  <details class="balance"><summary>水量收支与场景说明</summary><p id="scenarioInfo">尚未计算。默认 1 方块＝1 米，是合成场景设定。</p><dl id="waterBudget"></dl><p>速度方向：X 向右、Z 向下。初始水体由生成器提供，可能在计算开始后重新调整。粗网格会平均地形与水深，狭窄河道的表现会随分辨率变化。</p></details>
-</section></main><script src="flood.js?v=2"></script>
+  <details class="balance"><summary>水量收支与场景说明</summary><p id="scenarioInfo">尚未计算。默认 1 方块＝1 米，是合成场景设定。</p><dl id="waterBudget"></dl><p>速度方向：X 向右、Z 向下。启用基流后，洪水的时间零点与新增淹没均以预热后的状态为准；预热是否稳定会单独记录。粗网格会平均地形与水深，狭窄河道的表现会随分辨率变化。</p></details>
+</section></main><script src="flood.js?v=4"></script>
 </body></html>
