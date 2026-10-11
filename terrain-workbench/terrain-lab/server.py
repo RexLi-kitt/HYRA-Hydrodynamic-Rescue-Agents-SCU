@@ -12,6 +12,7 @@ import uuid
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
+import flood_run
 
 ROOT = Path(__file__).resolve().parent
 GENERATOR = ROOT.parent / 'freeterraforged-reproduction'
@@ -35,6 +36,29 @@ SPECS = {
 }
 LOCK = threading.Lock()
 JOBS = {}
+FLOOD_JOBS = {}
+
+def current_terrain():
+    pointer = ROOT / 'current.json'
+    directory = json.loads(pointer.read_text())['directory'] if pointer.is_file() else 'example/raw'
+    return describe(directory)
+
+def simulate_flood(jobid, terrain, config):
+    def update(**values):
+        with LOCK: FLOOD_JOBS[jobid].update(values)
+    def cancelled():
+        with LOCK: return FLOOD_JOBS[jobid].get('cancel_requested', False)
+    try:
+        update(state='running', message='正在准备洪水计算网格…')
+        result = flood_run.run(ROOT, jobid, terrain, config, update, cancelled)
+        if cancelled(): raise InterruptedError('模拟已取消')
+        update(state='done', progress=100, message='洪水模拟完成', result=result)
+    except InterruptedError:
+        update(state='cancelled', message='模拟已取消')
+    except ImportError:
+        update(state='failed', message='洪水模拟需要 NumPy，请先安装 terrain-workbench/requirements.txt')
+    except Exception as error:
+        update(state='failed', message=str(error))
 
 def settings(data):
     result = dict(DEFAULTS)
@@ -137,26 +161,54 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         try:
-            if path == '/api/config': return self.json({'defaults': DEFAULTS})
+            if path == '/api/config': return self.json({'defaults': DEFAULTS, 'flood_defaults': flood_run.DEFAULTS})
             if path == '/api/current':
-                pointer = ROOT / 'current.json'
-                directory = json.loads(pointer.read_text())['directory'] if pointer.is_file() else 'example/raw'
-                return self.json(describe(directory))
+                return self.json(current_terrain())
+            if path.startswith('/api/flood-jobs/'):
+                with LOCK:
+                    job = FLOOD_JOBS.get(path.rsplit('/', 1)[1])
+                    snapshot = dict(job) if job else None
+                return self.json(snapshot if snapshot else {'error': '未找到这次洪水模拟'}, 200 if snapshot else 404)
             if path.startswith('/api/jobs/'):
                 job = JOBS.get(path.rsplit('/', 1)[1])
                 return self.json(job if job else {'error': '未找到这次生成'}, 200 if job else 404)
             return super().do_GET()
         except Exception as error: return self.json({'error': str(error)}, 500)
     def do_POST(self):
-        if self.path != '/api/generate': return self.json({'error': '未找到操作'}, 404)
         # Only same-origin/local requests may trigger the desktop generator.
         origin = self.headers.get('Origin')
         if origin and urlparse(origin).netloc != self.headers.get('Host'):
             return self.json({'error': '请从本地页面生成'}, 403)
         try:
+            if self.path.startswith('/api/flood-jobs/') and self.path.endswith('/cancel'):
+                jobid = self.path.split('/')[-2]
+                with LOCK:
+                    job = FLOOD_JOBS.get(jobid)
+                    if job is None: return self.json({'error': '未找到这次洪水模拟'}, 404)
+                    if job['state'] in ('queued', 'running'):
+                        job.update(cancel_requested=True, message='正在停止计算…')
+                return self.json({'id': jobid})
+            if self.path not in ('/api/generate', '/api/flood'):
+                return self.json({'error': '未找到操作'}, 404)
             length = int(self.headers.get('Content-Length', 0))
             if not 0 < length <= 16384: raise ValueError('参数过长或为空')
-            config = settings(json.loads(self.rfile.read(length)))
+            data = json.loads(self.rfile.read(length))
+            if self.path == '/api/flood':
+                terrain = current_terrain()
+                # Bind the submitted scenario to the map actually shown in the browser.
+                if not isinstance(data, dict) or data.get('terrain_id') != terrain['id']:
+                    return self.json({'error': '当前地图已更新，请读取最新地图后再模拟'}, 409)
+                config = flood_run.settings(data, terrain['shape'])
+                with LOCK:
+                    if any(v['state'] in ('queued', 'running') for v in FLOOD_JOBS.values()):
+                        return self.json({'error': '已有洪水模拟正在计算，请等待或取消'}, 409)
+                    # Keep bounded in-memory status; exported files are preserved.
+                    if len(FLOOD_JOBS) >= 10: FLOOD_JOBS.pop(next(iter(FLOOD_JOBS)))
+                    jobid = 'flood-' + uuid.uuid4().hex[:12]
+                    FLOOD_JOBS[jobid] = dict(id=jobid, state='queued', progress=0, message='正在开始模拟…')
+                threading.Thread(target=simulate_flood, args=(jobid, terrain, config), daemon=True).start()
+                return self.json({'id': jobid}, 202)
+            config = settings(data)
             with LOCK:
                 active = next((v for v in JOBS.values() if v['state'] in ('queued', 'running')), None)
                 if active: return self.json({'error': '已有地图正在生成，请等待完成'}, 409)
@@ -166,6 +218,8 @@ class Handler(SimpleHTTPRequestHandler):
             return self.json({'id': jobid}, 202)
         except (ValueError, TypeError, json.JSONDecodeError) as error:
             return self.json({'error': str(error)}, 400)
+        except Exception as error:
+            return self.json({'error': str(error)}, 500)
     def log_message(self, format, *args):
         if '/api/jobs/' not in self.path: super().log_message(format, *args)
 

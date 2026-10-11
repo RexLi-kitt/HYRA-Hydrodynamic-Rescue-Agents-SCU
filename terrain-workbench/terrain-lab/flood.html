@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HYRA · 动态洪水工作台</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="flood.css"></head>
+<body>
+<header><div class="brand"><span class="mark">≈</span><div><h1>动态洪水工作台</h1><p>从降雨与来水，观察洪水演化</p></div></div><nav class="map-actions"><a class="elevation-link" href="/">地形生成</a><a class="elevation-link" href="elevation.html">高程可视化</a></nav></header>
+<main>
+<aside><form id="floodControls">
+  <h2>洪水场景</h2>
+  <label class="field">降雨强度（毫米 / 小时）<input id="rain" type="number" min="0" max="1000" step="1" value="80" required></label>
+  <div class="pair"><label>降雨时长（分）<input id="rainDuration" type="number" min="0" max="60" step="0.1" value="10" required></label><label>模拟时长（分）<input id="duration" type="number" min="0.1" max="60" step="0.1" value="10" required></label></div>
+  <label class="field">指定位置来水（立方米 / 秒）<input id="inflow" type="number" min="0" max="10000" step="0.1" value="0" required></label>
+  <p class="hint">点击地图指定来水位置；来水量为 0 时关闭。</p>
+  <div class="pair"><label>来水网格 X<input id="sourceX" type="number" min="0" max="255" value="128" required></label><label>来水网格 Z<input id="sourceZ" type="number" min="0" max="255" value="128" required></label></div>
+  <label class="field">地图边界<select id="boundary"><option value="open">自由出流（仅排水）</option><option value="closed">封闭（不排水）</option></select></label>
+  <label class="field">计算网格<select id="resolution"><option value="32">32 × 32 · 快速检查</option><option value="64">64 × 64 · 快速模拟</option><option value="128" selected>128 × 128 · 标准</option><option value="256">256 × 256 · 原始网格</option></select></label>
+  <details><summary>单位与地表参数</summary>
+    <label class="field">每方块对应米数<input id="unit" type="number" min="0.1" max="100" step="0.1" value="1" required><small>合成场景的长度设定，同时换算高程和间距。</small></label>
+    <label class="field">地表糙率（Manning n）<input id="manning" type="number" min="0.01" max="0.2" step="0.005" value="0.035" required></label>
+    <label class="field">入渗率（毫米 / 小时）<input id="infiltration" type="number" min="0" max="500" value="0" required></label>
+    <label class="check"><input id="initialWater" type="checkbox" checked> 保留生成器的初始水体</label>
+  </details>
+  <div class="generate-area"><button class="primary" id="simulate" type="submit" disabled>计算洪水过程</button><button id="cancel" type="button" hidden>取消计算</button><progress id="floodProgress" max="100" value="0" hidden></progress><p id="computeStatus" role="status">正在读取地图…</p></div>
+</form></aside>
+<section class="workspace">
+  <div class="map-bar"><div><h2>水在地形上的演化</h2><p id="mapInfo">正在读取当前地图…</p></div><button id="refresh" type="button">读取最新地图 ↻</button></div>
+  <div class="flood-stats"><div><span>当前时间</span><strong id="timeStat">0:00</strong></div><div><span>最大水深 / 米</span><strong id="depthStat">—</strong></div><div><span>新增淹没 / 平方米</span><strong id="areaStat">—</strong></div><div><span>水量收支误差 / 立方米</span><strong id="balanceStat">—</strong></div></div>
+  <nav class="layers" aria-label="洪水图层"><button class="active" data-layer="depth" aria-pressed="true">当前水深</button><button data-layer="speed" aria-pressed="false">流速</button><button data-layer="maximum" aria-pressed="false">累计最大水深</button><label class="check"><input id="arrows" type="checkbox" checked> 流向</label></nav>
+  <div class="map-wrap"><canvas id="floodMap" width="768" height="768" tabindex="0" role="img" aria-label="动态洪水地图，点击选择来水位置，方向键移动选中网格">二维洪水地图</canvas></div>
+  <div class="legend" id="floodLegend"></div>
+  <p class="detail" id="cellDetail" aria-live="polite">点击地图查点并指定来水位置。</p>
+  <div class="playback"><button id="play" type="button" disabled>播放 ▶</button><button id="resetFlood" type="button" disabled>回到初始状态</button><label for="timeline">时间 <output id="timeLabel">0:00</output></label><input id="timeline" type="range" min="0" max="0" value="0" disabled aria-label="模拟时间进度"></div>
+  <div class="exports"><button id="saveFrame" type="button" disabled>导出当前时刻 JSON ↓</button><button id="saveArchive" type="button" disabled>下载完整过程 ↓</button><button id="savePng" type="button" disabled>保存图片 ↓</button></div>
+  <p class="status" id="floodStatus" role="status">降雨与指定来水进入计算网格；水深达到 0.01 米计为淹没。</p>
+  <details class="balance"><summary>水量收支与场景说明</summary><p id="scenarioInfo">尚未计算。默认 1 方块＝1 米，是合成场景设定。</p><dl id="waterBudget"></dl><p>速度方向：X 向右、Z 向下。初始水体由生成器提供，可能在计算开始后重新调整。粗网格会平均地形与水深，狭窄河道的表现会随分辨率变化。</p></details>
+</section></main><script src="flood.js"></script>
+</body></html>
