@@ -142,6 +142,7 @@ def describe(relative):
     try:
         import river_inlets
         result['river_inlets']=river_inlets.annotate(ROOT,result)
+        result['fields']['terrain']=result['river_inlets']['terrain_field']
     except ImportError:
         result['river_inlets']=dict(crossings=[],message='安装 NumPy 后可识别河道入口')
     return result

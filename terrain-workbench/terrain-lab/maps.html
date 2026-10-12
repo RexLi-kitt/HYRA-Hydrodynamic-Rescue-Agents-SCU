@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HYRA · 多层地图与洪水</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="maps.css?v=3"></head><body>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HYRA · 多层地图与洪水</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="maps.css?v=4"></head><body>
 <header><div class="brand"><span class="mark">▦</span><div><h1>多层地图与洪水</h1><p>在同一张地图上查看地形、地物与洪水演化</p></div></div><nav class="map-actions"><a class="elevation-link" href="/">地形生成</a><a class="elevation-link" href="elevation.html">高程可视化</a></nav></header>
 <main><aside>
 <h2>地图与洪水场景</h2><p id="terrainInfo">正在读取当前地图…</p>
@@ -15,13 +15,13 @@
 <div class="pair"><label>日常总来水（m³/s）<input id="mapBaseflowRate" type="number" min="0" max="10000" step="0.1" value="5"></label><label>基流预热（秒）<input id="mapWarmup" type="number" min="0" max="3600" value="600"></label></div>
 <details id="inflowPanel" open><summary>外源洪水／上游来水</summary>
 <p id="riverInletInfo" class="hint">正在识别河流入图处…</p>
-<label class="field">河流边界交点<select id="riverInlet"><option value="">没有河道交点，可手动选点</option></select></label><button id="addRiverInflow" disabled>将该河口设为来水点</button>
+<fieldset class="river-candidates"><legend>河流边界交点（可多选）</legend><div id="riverCandidates"></div></fieldset><button id="addRiverInflow" disabled>添加选中的河口</button>
 <div class="pair"><label>来水流量（m³/s）<input id="mapInflow" type="number" min="0" max="10000" step="1" value="50"></label><label>开始（秒）<input id="inflowStart" type="number" min="0" max="3600" value="0"></label></div>
 <label class="field">结束（秒）<input id="inflowEnd" type="number" min="0.1" max="3600" value="120"></label>
 <details><summary>自定义上游流量过程</summary><label class="check"><input id="customInflowCurve" type="checkbox"> 使用下方时间—流量过程</label><label class="field">[秒, m³/s]（分段常量）<textarea id="inflowCurve" rows="3">[[0,10],[30,100],[90,30],[120,0]]</textarea></label></details>
 <button id="pickInflow" aria-pressed="false">在地图上选择入水点</button><div class="pair"><label>原始格 X<input id="sourceX" type="number" min="0" value="128"></label><label>原始格 Z<input id="sourceZ" type="number" min="0" value="128"></label></div><button id="addManualInflow">添加手动强制来水点</button>
 <p class="hint">没有河流也可在任意非建筑格来水。河口方向按地形推断，外源洪水需主动启用；与日常基流分别计算。编辑后应用地图或重新模拟。</p>
-<div id="externalInflowList" class="inlet-list"></div>
+<p id="externalInflowCount" class="hint" aria-live="polite">尚未配置外源来水点</p><div id="externalInflowList" class="inlet-list"></div>
 </details>
 <div class="map-run-actions"><button id="createMap" disabled>应用地图／查看初始状态</button><button id="runMap" class="primary" disabled>开始洪水模拟</button><button id="cancelMap" disabled>取消计算</button></div>
 <p class="hint">设置一次总时长，自动计算完整洪水过程；所有地图层同步播放。修改参数后重新模拟会从零时刻开始。</p>
@@ -48,4 +48,4 @@
 <p class="legend">深灰：建筑 · 黑线：阻水边 · 青色：排水口 · 绿色：变化水源 · 紫色入箭头：外源来水 · 灰色：未启用河口 · 金色：所选格。水深低于0.01米按干地显示。</p>
 <p class="detail" id="mapCellDetail" aria-live="polite">点击地图查看该位置的各层数据。</p>
 <details><summary>水量收支与场景信息</summary><p id="mapBalance">尚未开始洪水计算。</p><p id="scenarioInfo"></p></details>
-</section></main><script type="module" src="maps.js?v=9"></script></body></html>
+</section></main><script type="module" src="maps.js?v=10"></script></body></html>

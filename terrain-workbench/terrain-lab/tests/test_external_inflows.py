@@ -15,6 +15,28 @@ def world(factor=1):
 
 
 class RiverDetectionTests(unittest.TestCase):
+    def test_sea_connected_river_override_excludes_channel_banks_and_isolated_water(self):
+        types=np.zeros((8,12),np.int32);types[:,0]=2;types[2:5,1:5]=5
+        types[6,8:10]=5;types[0,8:10]=5
+        bed=np.full(types.shape,60.);water=np.full(types.shape,62.);zones=np.full(types.shape,4)
+        zones[2,3:5]=1 # Banks below sea level remain valid river cells.
+        zones[0,8:10]=0 # Riverbed also remains river.
+        corrected,changed=river_inlets.water_types(types,bed,water,zones,
+            {'2':'ocean','5':'river'},{'0':'Riverbed','1':'Banks','4':'None'},63)
+        self.assertEqual(corrected[3,3],2);self.assertEqual(corrected[2,3],5)
+        self.assertEqual(corrected[6,8],5);self.assertEqual(corrected[0,8],5)
+        self.assertEqual(types[3,3],5);self.assertGreater(changed.sum(),0)
+        ports=river_inlets.detect(corrected==5,bed,water)
+        self.assertEqual([(p['x'],p['z']) for p in ports],[(8,0)])
+
+    def test_sea_override_requires_zone_provenance_and_sea_stage(self):
+        types=np.array([[2,5],[2,5]]);bed=np.zeros((2,2));water=np.array([[2,5],[2,5]])
+        args=({'2':'ocean','5':'river'},{'4':'None'},2)
+        corrected,changed=river_inlets.water_types(types,bed,water,np.full((2,2),4),*args)
+        self.assertFalse(changed.any());self.assertTrue(np.array_equal(corrected,types))
+        corrected,changed=river_inlets.water_types(types,bed,water,None,*args)
+        self.assertFalse(changed.any())
+
     def test_upstream_inlet_and_downstream_outlet_follow_native_slope(self):
         zz,xx=np.indices((12,16));river=np.zeros((12,16),bool);river[5:7,:]=True
         bed=8-.1*xx;ports=river_inlets.detect(river,bed,bed+.2)
@@ -46,6 +68,17 @@ class RiverDetectionTests(unittest.TestCase):
 
 
 class ExternalFlowTests(unittest.TestCase):
+    def test_two_uncertain_river_crossings_can_both_supply_water(self):
+        w=world();ports=[dict(id='river-a',kind='river',role='uncertain',x=0,z=3,native_cells=[[3,0]]),
+                        dict(id='river-b',kind='river',role='uncertain',x=11,z=5,native_cells=[[5,11]])]
+        river_inlets.configure(w,ports,[dict(id=p['id'],kind='river',hydrograph=[[0,q],[1,0]])
+            for p,q in zip(ports,[3,7])],[8,12])
+        w.advance_to(1);summary=w.solver.summary()
+        self.assertEqual(len(w.external_inflows),2)
+        self.assertAlmostEqual(summary['external_inflow_by_id_m3']['river-a'],3)
+        self.assertAlmostEqual(summary['external_inflow_by_id_m3']['river-b'],7)
+        self.assertAlmostEqual(summary['balance']['external_inflow_m3'],10)
+
     def test_multiple_points_and_event_times_close_volume_budget(self):
         w=world();settings=[dict(id='manual-a',kind='manual',x=2,z=3,enabled=True,
             hydrograph=[[0,10],[.5,0],[1,4],[2,0]]),

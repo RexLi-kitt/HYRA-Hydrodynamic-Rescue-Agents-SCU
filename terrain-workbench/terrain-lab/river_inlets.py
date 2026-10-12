@@ -8,7 +8,31 @@ from pathlib import Path
 import hashlib,json,math,re,uuid
 import numpy as np
 
-SCHEMA='hyra-river-inlets-v1'
+SCHEMA='hyra-river-inlets-v2'
+
+def water_types(types,bed,water,zones,terrain_ids,zone_ids,sea_level):
+    """Recover sea cells overwritten by the generator's river influence.
+
+    Only submerged, sea-connected river tags with explicit RiverZone.None
+    qualify. Riverbed/banks/valley cells remain rivers even below sea level.
+    """
+    types=np.asarray(types);corrected=types.copy()
+    ocean=np.isin(types,[int(k) for k,v in terrain_ids.items() if 'ocean' in v])
+    river=np.isin(types,[int(k) for k,v in terrain_ids.items() if v=='river'])
+    none=[int(k) for k,v in zone_ids.items() if v=='None']
+    sea_code=next((int(k) for k,v in terrain_ids.items() if v=='ocean'),None)
+    if zones is None or not none or sea_code is None:return corrected,np.zeros_like(ocean)
+    eligible=river&np.isin(zones,none)&(bed<sea_level)&np.isfinite(water)&(water>bed)&(water<=sea_level+.01)
+    # Propagate only from actual ocean cells; an isolated low river/lake is not sea.
+    connected=ocean.copy();queue=deque(map(tuple,np.argwhere(ocean)))
+    nz,nx=types.shape
+    while queue:
+        z,x=queue.popleft()
+        for zz,xx in ((z-1,x),(z+1,x),(z,x-1),(z,x+1)):
+            if 0<=zz<nz and 0<=xx<nx and eligible[zz,xx] and not connected[zz,xx]:
+                connected[zz,xx]=True;queue.append((zz,xx))
+    changed=connected&eligible;corrected[changed]=sea_code
+    return corrected,changed
 
 def detect(river,bed,water,origin=(0,0),step=1):
     river=np.asarray(river,bool);bed=np.asarray(bed,float);water=np.asarray(water,float)
@@ -67,23 +91,32 @@ def annotate(root,terrain):
     root=Path(root);fields=terrain['fields'];shape=terrain['shape']
     names=['terrain','ground_height' if terrain['full'] else 'height',
            'water_surface' if terrain['full'] else 'riverWaterLevel']
+    if 'riverZone' in fields:names.append('riverZone')
     paths=[root/fields[n]['url'].lstrip('/') for n in names]
     signature=dict(schema=SCHEMA,shape=shape,origin=terrain['origin'],step=terrain['step'],
-        full=terrain['full'],files=[dict(name=n,size=p.stat().st_size,mtime_ns=p.stat().st_mtime_ns) for n,p in zip(names,paths)])
+        full=terrain['full'],sea_level=terrain['sea_level'],zone_ids=fields.get('riverZone',{}).get('values',{}),
+        files=[dict(name=n,size=p.stat().st_size,mtime_ns=p.stat().st_mtime_ns) for n,p in zip(names,paths)])
     folder=(root/terrain['id']).resolve()
     if root.resolve() not in folder.parents:raise ValueError('入口标注目录不正确')
     target=folder/'river-inlets.json'
     if target.is_file():
         try:
             cached=json.loads(target.read_text(encoding='utf-8'))
-            if cached.get('signature')==signature:return cached
+            if cached.get('signature')==signature and (folder/'hydrology-terrain.i32').is_file():return cached
         except (ValueError,OSError):pass
     def read(n,p):return np.fromfile(p,dtype=fields[n]['dtype']).reshape(shape)
-    types,bed,water=[read(n,p) for n,p in zip(names,paths)]
+    arrays=[read(n,p) for n,p in zip(names,paths)];types,bed,water=arrays[:3]
     if not terrain['full']:bed=bed*terrain['scale'];water=water*terrain['scale']
+    types,changed=water_types(types,bed,water,arrays[3] if len(arrays)>3 else None,
+        terrain['terrain_ids'],fields.get('riverZone',{}).get('values',{}),terrain['sea_level'])
+    corrected=folder/'hydrology-terrain.i32';native_tmp=corrected.with_suffix('.i32.'+uuid.uuid4().hex+'.tmp')
+    types.astype('<i4').tofile(native_tmp);native_tmp.replace(corrected)
     river=np.isin(types,[int(k) for k,v in terrain['terrain_ids'].items() if v=='river'])
     points=detect(river,bed,water,terrain['origin'],terrain['step'])
     data=dict(schema=SCHEMA,signature=signature,river_cells=int(river.sum()),crossings=points,
+        sea_reclassified_cells=int(changed.sum()),
+        terrain_field=dict(url=f'/{terrain["id"]}/hydrology-terrain.i32',dtype='<i4',
+            values=terrain['terrain_ids'],file='hydrology-terrain.i32'),
         direction_method='native river boundary intersection; local inward stage/bed gradient; uncalibrated prior',
         message='已标注河道边界交点，流向为地形推断，可手动确认' if points else
             '河流未穿过地图边界，可手动设置入水点' if river.any() else '当前地图没有河流，可手动设置入水点')

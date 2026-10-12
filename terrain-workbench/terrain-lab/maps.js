@@ -4,6 +4,7 @@ const $=id=>document.getElementById(id),ids=['baseMap','depthMap','speedMap','ma
 const fmt=(v,n=2)=>Number(v).toLocaleString('zh-CN',{maximumFractionDigits:n});
 let terrain,scene,process={state:'ready',frames:[]},patches=[],selected={x:0,z:0},imported=null;
 let externalDraft=[],pickInflow=false,inflowDirty=false;
+const selectedRiverIds=new Set();
 let busy=false,playing=false,time=0,display,baseImage,terrainMin=0,terrainMax=1,epoch=0,pollTimer,seekVersion=0,seeking=false;
 const cache=new Map(),pending=new Map();let lastDraw=0;
 const fields={mapResolution:'resolution',mapUnit:'metres_per_block',mapDuration:'duration_s',
@@ -16,7 +17,8 @@ function active(){return ['queued','running'].includes(process.state);}
 function controls(){
  for(const id of ['createMap','runMap','importMapConfig','addRiverInflow','addManualInflow','pickInflow'])$(id).disabled=busy||active()||!terrain;
  $('runMap').textContent=scene&&process.state!=='ready'?'重新模拟洪水':'开始洪水模拟';
- $('addRiverInflow').disabled=busy||active()||!$('riverInlet').value;
+ $('addRiverInflow').disabled=busy||active()||!selectedRiverIds.size;
+ for(const el of $('riverCandidates').querySelectorAll('input'))el.disabled=busy||active();
  for(const el of $('externalInflowList').querySelectorAll('button,input'))el.disabled=busy||active();
  $('cancelMap').disabled=busy||!active()||process.cancel_requested;
  $('playMap').textContent=playing?'暂停播放':time>=available()&&available()>0?'重播':'播放';
@@ -114,11 +116,15 @@ function crossings(){return $('mapSource').value==='demo'?[]:(scene?.M_forcing?.
 function inletCurve(){return validateCurve($('customInflowCurve').checked?JSON.parse($('inflowCurve').value):windowCurve(Number($('inflowStart').value),Number($('inflowEnd').value),Number($('mapInflow').value)));}
 function normalizeInflows(values){if(!Array.isArray(values)||values.length>32)throw Error('外源点列表最多32项');return values.map(p=>({...p,kind:p.kind??'manual',enabled:p.enabled??true,hydrograph:validateCurve(p.hydrograph??[[0,50],[120,0]])}));}
 function inletControls(){
- const points=crossings(),old=$('riverInlet').value;$('riverInlet').replaceChildren();
- if(!points.length){const o=document.createElement('option');o.value='';o.textContent='没有河道边界交点，可手动选点';$('riverInlet').append(o);}
- else for(const p of points){const o=document.createElement('option');o.value=p.id;o.textContent=portLabel(p);$('riverInlet').append(o);}
- if(points.some(p=>p.id===old))$('riverInlet').value=old;else if(points.some(p=>p.role==='inlet'))$('riverInlet').value=points.find(p=>p.role==='inlet').id;
- $('riverInletInfo').textContent=`识别到 ${points.filter(p=>p.role==='inlet').length} 个入口、${points.filter(p=>p.role==='outlet').length} 个出口、${points.filter(p=>p.role==='uncertain').length} 个待确认交点。${points.length?'方向为地形推断，选择河口后设置上游来水。':'可在地图上自行标注入水点。'}`;
+ const points=crossings();for(const id of selectedRiverIds)if(!points.some(p=>p.id===id))selectedRiverIds.delete(id);
+ $('riverCandidates').replaceChildren(...points.map(p=>{
+  const label=document.createElement('label');label.className='check';const check=document.createElement('input');check.type='checkbox';check.checked=selectedRiverIds.has(p.id);
+  check.setAttribute('aria-label',`选择河口 ${p.id}`);check.onchange=()=>{if(check.checked)selectedRiverIds.add(p.id);else selectedRiverIds.delete(p.id);controls();};
+  label.append(check,document.createTextNode(portLabel(p)+(externalDraft.some(v=>v.id===p.id)?' · 已添加':'')));return label;
+ }));
+ if(!points.length)$('riverCandidates').textContent='没有河道边界交点，可手动选点';
+ $('riverInletInfo').textContent=`识别到 ${points.filter(p=>p.role==='inlet').length} 个入口、${points.filter(p=>p.role==='outlet').length} 个出口、${points.filter(p=>p.role==='uncertain').length} 个待确认交点。${points.length?'可同时勾选多个交点，再添加；待确认交点也可作为来水点。':'可在地图上自行标注入水点。'}`;
+ $('externalInflowCount').textContent=`已配置 ${externalDraft.length} 个外源来水点，启用 ${externalDraft.filter(p=>p.enabled).length} 个${inflowDirty?'（草稿，需应用或重新模拟）':''}。最多32个。`;
  $('externalInflowList').replaceChildren(...externalDraft.map(p=>{
   const row=document.createElement('div');row.className='inlet-row';const label=document.createElement('label'),check=document.createElement('input');check.type='checkbox';check.checked=p.enabled;check.setAttribute('aria-label',`启用入水点 ${p.id}`);
   check.onchange=()=>{p.enabled=check.checked;forcingEdited();};label.append(check,document.createTextNode(p.kind==='river'?portLabel(points.find(v=>v.id===p.id)||p):`手动入水点 ${p.id} · (${p.x},${p.z})`));
@@ -145,8 +151,15 @@ function externalMarkers(ctx){
   ctx.restore();
  }
 }
-$('riverInlet').onchange=controls;
-$('addRiverInflow').onclick=()=>{const p=crossings().find(p=>p.id===$('riverInlet').value);if(p)addExternal({id:p.id,kind:'river'});};
+$('addRiverInflow').onclick=()=>{
+ if(active()||busy)return;
+ try{
+  const points=crossings().filter(p=>selectedRiverIds.has(p.id)),curve=inletCurve();
+  if(externalDraft.length+points.filter(p=>!externalDraft.some(e=>e.id===p.id)).length>32)throw Error('最多32个外源来水点');
+  for(const p of points){const entry={id:p.id,kind:'river',enabled:true,hydrograph:curve.map(v=>[...v])},existing=externalDraft.find(e=>e.id===p.id);if(existing)Object.assign(existing,entry);else externalDraft.push(entry);}
+  selectedRiverIds.clear();forcingEdited();
+ }catch(e){status(e.message,true);}
+};
 $('addManualInflow').onclick=()=>{let n=1;while(externalDraft.some(p=>p.id===`manual-${n}`))n++;addExternal({id:`manual-${n}`,kind:'manual',x:Number($('sourceX').value),z:Number($('sourceZ').value)});};
 $('pickInflow').onclick=()=>{pickInflow=!pickInflow;$('pickInflow').setAttribute('aria-pressed',String(pickInflow));status(pickInflow?'点击任意地图选择强制来水位置，然后添加入水点。':'已退出入水选点。');};
 function rgbHeight(z){const t=(z-terrainMin)/Math.max(.01,terrainMax-terrainMin);return [112+116*t,152+74*t,117+74*t];}
