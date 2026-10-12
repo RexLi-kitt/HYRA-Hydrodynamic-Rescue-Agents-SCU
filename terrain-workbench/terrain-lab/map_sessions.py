@@ -47,7 +47,11 @@ def create(root,terrain,data):
         if h.shape!=solver.h.shape or not np.isfinite(h).all() or (h<0).any():raise ValueError('初始水深数组需要同网格、非负且有限')
         solver.h=h.copy()
     config['frames']=frames
-    return MapWorld(solver,meta,layers)
+    world=MapWorld(solver,meta,layers)
+    import river_inlets
+    crossings=terrain.get('river_inlets',{}).get('crossings',[]) if mode=='current' else []
+    river_inlets.configure(world,crossings,data.get('external_inflows',[]),terrain['shape'] if mode=='current' else [32,32])
+    return world
 
 
 def run(root,session_id,world,update,cancelled):
@@ -56,10 +60,10 @@ def run(root,session_id,world,update,cancelled):
     if s.time!=0:raise ValueError('请重新建立场景后开始模拟')
     if s.baseflow_m3_s>0 and c['warmup_s']>0:
         from river_baseflow import spin_up
-        schedule=s.source_schedule;s.source_schedule=[]
+        schedule=s.source_schedule;external=s.external_schedule;s.source_schedule=[];s.external_schedule=[];s.external_rate.fill(0)
         try:
             meta['initial_conditions']=spin_up(s,c['warmup_s'],c['infiltration_mm_h']/3600000,update,cancelled)
-        finally:s.source_schedule=schedule
+        finally:s.source_schedule=schedule;s.external_schedule=external;s.external_rate=s._external_rate(0)
         s.start_scenario();s.qx.fill(0);s.qy.fill(0)
     else:
         meta['initial_conditions']=dict(duration_s=0,converged=False,
@@ -96,7 +100,8 @@ def save_process(root,session_id,world,frames):
         data=io.BytesIO();np.savez_compressed(data,**world.arrays());archive.writestr('layers.npz',data.getvalue())
         archive.writestr('process.json',json.dumps(dict(grid=world.grid(),config=c,frames=frames,
             frame_fields=['depth','u','v','maximum_depth'],frame_dtype='<f4',
-            initial_conditions=meta.get('initial_conditions',{})),ensure_ascii=False,allow_nan=False))
+            initial_conditions=meta.get('initial_conditions',{}),external_inflows=world.external_inflows,
+            river_crossings=world.river_crossings),ensure_ascii=False,allow_nan=False))
         for f in frames:archive.write(folder/Path(f['url']).name,Path(f['url']).name)
     tmp.replace(folder/'map-result.zip')
     return f'/generated/{session_id}/maps/map-result.zip'

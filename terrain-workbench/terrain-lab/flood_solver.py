@@ -58,10 +58,13 @@ class FloodSolver:
         self.qy = np.zeros((nz+1,nx))
         self.source_rate = np.zeros_like(self.h)
         self.source_schedule = []
+        self.external_schedule = []
+        self.external_rate = np.zeros_like(self.h)
+        self.external_volume_by_id = {}
         self.balance = dict(initial_m3=float(self.h.sum() * dx**2), rainfall_m3=0.0,
                             inflow_m3=0.0, baseflow_m3=0.0, infiltration_m3=0.0, outflow_m3=0.0,
                             sea_inflow_m3=0.0, sea_outflow_m3=0.0, drainage_m3=0.0,
-                            scheduled_inflow_m3=0.0, numerical_adjustment_m3=0.0)
+                            scheduled_inflow_m3=0.0, external_inflow_m3=0.0, numerical_adjustment_m3=0.0)
 
     def set_environment(self, *, solid=None, wall_x=None, wall_y=None, drain_capacity=None):
         for name,value in (('solid',solid),('wall_x',wall_x),('wall_y',wall_y),('drain_capacity',drain_capacity)):
@@ -98,6 +101,26 @@ class FloodSolver:
                 for z,x in cells: rate[z,x]+=each
         return rate
 
+    def set_external_inflows(self,entries):
+        self.external_schedule=[e for e in entries if e['enabled']]
+        self.external_volume_by_id={e['id']:0. for e in entries}
+        self.external_rate=self._external_rate(self.time)
+
+    def _external_rate(self,time):
+        rate=np.zeros_like(self.h)
+        for entry in self.external_schedule:
+            q=self.external_discharge(entry,time)
+            for cell in entry['cells']:rate[cell['z'],cell['x']]+=q*cell['weight']/self.dx**2
+        return rate
+
+    @staticmethod
+    def external_discharge(entry,time):
+        q=0.
+        for t,value in entry['hydrograph']:
+            if t>time+1e-10:break
+            q=value
+        return q
+
     def set_baseflow(self, sources):
         rate = np.zeros_like(self.h)
         for source in sources:
@@ -116,6 +139,7 @@ class FloodSolver:
         self.time = 0.0; self.steps = 0
         for name in self.balance: self.balance[name] = 0.0
         self.balance['initial_m3'] = float(self.h.sum()*self.dx**2)
+        for key in self.external_volume_by_id:self.external_volume_by_id[key]=0.
 
     def velocity(self):
         wet = self.h > DRY
@@ -125,7 +149,7 @@ class FloodSolver:
     def timestep(self, limit=1.0, rain=0.0, inflow=0.0, source=None):
         u, v = self.velocity()
         # Include this step's potential source water in the wave-speed bound.
-        prospective = self.h + (rain*(~self.solid)+self.baseflow_rate+self.source_rate) * limit
+        prospective = self.h + (rain*(~self.solid)+self.baseflow_rate+self.source_rate+self.external_rate) * limit
         if source is not None:
             prospective = prospective.copy()
             prospective[source] += inflow * limit / self.dx**2
@@ -207,6 +231,10 @@ class FloodSolver:
         self.balance['baseflow_m3'] += self.baseflow_m3_s*dt
         self.h += self.source_rate*dt
         self.balance['scheduled_inflow_m3'] += float(self.source_rate.sum()*dt*area)
+        self.h += self.external_rate*dt
+        self.balance['external_inflow_m3'] += float(self.external_rate.sum()*dt*area)
+        for entry in self.external_schedule:
+            self.external_volume_by_id[entry['id']]+=self.external_discharge(entry,self.time)*dt
         if inflow:
             self.h[source] += inflow*dt/area
             self.balance['inflow_m3'] += inflow*dt
@@ -252,7 +280,8 @@ class FloodSolver:
             limit = min(1.0, end-self.time)
             if raining: limit = min(limit, rain_until-self.time)
             self.source_rate=self._scheduled_rate(self.time)
-            for entry in self.source_schedule:
+            self.external_rate=self._external_rate(self.time)
+            for entry in self.source_schedule+self.external_schedule:
                 for t,_ in entry['hydrograph']:
                     if t>self.time+1e-10: limit=min(limit,t-self.time);break
             dt = self.timestep(limit, raining, inflow, source)
@@ -265,10 +294,11 @@ class FloodSolver:
         current = float(self.h.sum()*self.dx**2)
         b = self.balance
         expected = (b['initial_m3'] + b['rainfall_m3'] + b['inflow_m3'] + b['baseflow_m3'] + b['sea_inflow_m3']
-                    + b['scheduled_inflow_m3'] - b['drainage_m3']
+                    + b['scheduled_inflow_m3'] + b['external_inflow_m3'] - b['drainage_m3']
                     - b['infiltration_m3'] - b['outflow_m3'] - b['sea_outflow_m3'])
         return dict(time_s=self.time, steps=self.steps, max_depth_m=float(self.h.max()),
                     max_speed_m_s=float(np.hypot(u, v).max()),
                     wet_area_m2=int((self.h >= .01).sum())*self.dx**2,
                     newly_flooded_area_m2=int(((self.initial < .01) & (self.h >= .01)).sum())*self.dx**2,
+                    external_inflow_by_id_m3=dict(self.external_volume_by_id),
                     balance=dict(b, current_m3=current, residual_m3=current-expected))

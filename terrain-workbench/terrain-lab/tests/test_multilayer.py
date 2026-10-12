@@ -99,7 +99,7 @@ class MapProcessTests(unittest.TestCase):
             self.assertIsNone(z.testzip());arrays=np.load(io.BytesIO(z.read('layers.npz')))
             self.assertEqual(arrays['M_water.qx'].shape,(8,13))
             self.assertEqual(arrays['M_water.qy'].shape,(9,12))
-            self.assertTrue(all(k.startswith(('M_base.','M_water.')) for k in arrays.files))
+            self.assertTrue(all(k.startswith(('M_base.','M_water.','M_forcing.')) for k in arrays.files))
 
     def test_current_generated_map_has_common_grid_and_no_agent_defaults(self):
         terrain=server.describe('example/raw')

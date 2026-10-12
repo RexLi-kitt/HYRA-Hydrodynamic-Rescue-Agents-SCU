@@ -93,6 +93,7 @@ class MapWorld:
         if self.config['inflow_m3_s'] and self.base.solid[source]:
             raise ValueError('指定洪水来水不能放在建筑格内')
         self.generated_initial=solver.h.copy()
+        self.external_inflows=[];self.river_crossings=[]
 
     def advance_to(self,end,cancelled=lambda:False):
         if not isinstance(end,(int,float)) or not math.isfinite(end) or end<self.solver.time:
@@ -113,10 +114,19 @@ class MapWorld:
                     volume=self.solver.h*self.base.dx**2,qx=self.solver.qx,qy=self.solver.qy,
                     summary=self.solver.summary())
 
+    def forcing(self):
+        count=np.zeros(self.base.shape,np.int32)
+        for entry in self.external_inflows:
+            if entry['enabled']:
+                for cell in entry['cells']:count[cell['z'],cell['x']]+=1
+        return dict(external_inflows=self.external_inflows,river_crossings=self.river_crossings,
+                    inlet_count=count,external_rate_m_s=self.solver._external_rate(self.solver.time),
+                    accumulated_m3=self.solver.external_volume_by_id)
+
     def snapshot(self):
         return json_safe(dict(schema='hyra-multilayer-v2',time_s=self.solver.time,grid=self.grid(),
             provenance=self.meta.get('terrain_source'),config=self.config,scenario_metadata=self.meta,
-            source_hydrographs=self.base.hydrographs,M_base=self.base.snapshot(),M_water=self.water()))
+            source_hydrographs=self.base.hydrographs,M_base=self.base.snapshot(),M_water=self.water(),M_forcing=self.forcing()))
 
     def arrays(self):
         result={'M_base.'+k:v for k,v in self.base.snapshot().items()}
@@ -124,6 +134,7 @@ class MapWorld:
         result.update({'M_water.'+k:v for k,v in dict(mx=self.solver.mx,mz=self.solver.mz,
             initial_depth=self.solver.initial,generated_initial_depth=self.generated_initial,
             baseflow_rate=self.solver.baseflow_rate).items()})
+        result.update({'M_forcing.'+k:v for k,v in self.forcing().items() if isinstance(v,np.ndarray)})
         return result
 
     def export_zip(self):
@@ -143,6 +154,10 @@ DATA_DICTIONARY=dict(schema='hyra-multilayer-v2',axis_order=['z','x'],
     M_water=dict(h='depth, m',u='cell +x velocity, m/s',v='cell +z velocity, m/s',
         maximum_depth='maximum depth since flood t=0, m',volume='per-cell volume, m3',
         qx='[nz,nx+1] last transported face flux, m2/s',qy='[nz+1,nx] last transported face flux, m2/s'),
+    M_forcing=dict(external_inflows='stable id, native position, normalized coarse cells, enabled flag and [s,m3/s] curve',
+        river_crossings='native river/edge crossings; inferred inlet/outlet/uncertain; no discharge enabled automatically',
+        inlet_count='count of enabled external points mapped to each cell',external_rate_m_s='instantaneous external water depth source rate, m/s',
+        accumulated_m3='per-point supplied volume since flood t=0; independent of daily baseflow'),
     source_hydrographs='source_id -> strictly increasing [simulation s,total m3/s], piecewise constant',
     frames=dict(fields=['depth','u','v','maximum_depth'],dtype='<f4',order='[field,z,x]',
         interpolation='linear interpolation for display only; exported frames are calculated states'),

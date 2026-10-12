@@ -53,6 +53,8 @@ python3 -m unittest discover -s tests
 node tests/test_map_playback.mjs
 ```
 
+外源洪水可选择生成时标注的河流入口，或在没有河流的位置手动强制来水。支持多个点独立流量过程、开始／结束时刻和启停；日常基流与外源洪水分别统计。交点方向是原始地形／水面的局部推断，待确认交点不自动注水。入口元数据和 `M_forcing` 保存稳定编号、坐标、映射权重及每点累计量，场景可导出、再次导入与修改，用于后续强化学习的外源条件设置。具体操作和接口见 [多层地图说明](terrain-lab/MULTILAYER.md#外源洪水与上游来水)。
+
 ## 生成新地图
 
 安装 Java 21，并设置 `JAVA_HOME`，或者保证系统能找到 Java 21。首次生成需要联网下载 Gradle、Minecraft、Fabric 等构建依赖。
