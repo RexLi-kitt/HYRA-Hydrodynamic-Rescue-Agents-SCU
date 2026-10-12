@@ -28,6 +28,8 @@ python3 terrain-lab/launcher.py
 
 ## 动态洪水
 
+完整的地图与观测结构可从 `terrain-lab/maps.html` 进入，[多层地图说明](terrain-lab/MULTILAYER.md)包含固定环境、真实／已知水情、探索与人员位置、更新规则、编辑、导出和执行接口。
+
 安装洪水计算依赖后，运行同一个页面服务，点击地图右上角的“动态洪水”，或打开 <http://127.0.0.1:8766/flood.html>：
 
 ```bash

@@ -38,6 +38,10 @@ SPECS = {
 LOCK = threading.Lock()
 JOBS = {}
 FLOOD_JOBS = {}
+MAP_SESSIONS = {}
+
+def map_reply(session_id,entry):
+    return dict(id=session_id,archive_url=f'/generated/{session_id}/maps/map-result.zip',**entry['world'].snapshot())
 
 def current_terrain():
     pointer = ROOT / 'current.json'
@@ -191,6 +195,20 @@ class Handler(SimpleHTTPRequestHandler):
             if path == '/api/config': return self.json({'defaults': DEFAULTS, 'flood_defaults': flood_run.DEFAULTS})
             if path == '/api/current':
                 return self.json(current_terrain())
+            if path=='/api/maps/schema':
+                from multilayer import DATA_DICTIONARY
+                return self.json(DATA_DICTIONARY)
+            if path.startswith('/api/maps/'):
+                parts=path.strip('/').split('/');sid=parts[2]
+                with LOCK:entry=MAP_SESSIONS.get(sid)
+                if entry is None:return self.json({'error':'未找到这次多层场景'},404)
+                with entry['lock']:
+                    if len(parts)==5 and parts[3]=='agent':
+                        from urllib.parse import parse_qs
+                        factor=int(parse_qs(urlparse(self.path).query).get('pool',['1'])[0])
+                        return self.json(entry['world'].policy_view(parts[4],factor))
+                    if len(parts)==3:return self.json(map_reply(sid,entry))
+                return self.json({'error':'未找到地图操作'},404)
             if path.startswith('/api/flood-jobs/'):
                 with LOCK:
                     job = FLOOD_JOBS.get(path.rsplit('/', 1)[1])
@@ -200,6 +218,7 @@ class Handler(SimpleHTTPRequestHandler):
                 job = JOBS.get(path.rsplit('/', 1)[1])
                 return self.json(job if job else {'error': '未找到这次生成'}, 200 if job else 404)
             return super().do_GET()
+        except (ValueError,KeyError) as error: return self.json({'error': str(error)}, 400)
         except Exception as error: return self.json({'error': str(error)}, 500)
     def do_POST(self):
         # Only same-origin/local requests may trigger the desktop generator.
@@ -207,6 +226,34 @@ class Handler(SimpleHTTPRequestHandler):
         if origin and urlparse(origin).netloc != self.headers.get('Host'):
             return self.json({'error': '请从本地页面生成'}, 403)
         try:
+            if self.path=='/api/maps' or self.path.startswith('/api/maps/'):
+                length=int(self.headers.get('Content-Length',0))
+                if not 0<length<=8*1024*1024:raise ValueError('地图数据过长或为空')
+                data=json.loads(self.rfile.read(length))
+                if not isinstance(data,dict):raise ValueError('地图操作参数需要是对象')
+                import map_sessions
+                if self.path=='/api/maps':
+                    world=map_sessions.create(ROOT,current_terrain(),data)
+                    sid='maps-'+uuid.uuid4().hex[:12];entry=dict(world=world,lock=threading.Lock())
+                    map_sessions.persist(ROOT,sid,world)
+                    with LOCK:
+                        if len(MAP_SESSIONS)>=3:MAP_SESSIONS.pop(next(iter(MAP_SESSIONS)))
+                        MAP_SESSIONS[sid]=entry
+                    return self.json(map_reply(sid,entry),201)
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=4:return self.json({'error':'未找到地图操作'},404)
+                sid,action=parts[2:]
+                with LOCK:entry=MAP_SESSIONS.get(sid)
+                if entry is None:return self.json({'error':'未找到这次多层场景'},404)
+                with entry['lock']:
+                    w=entry['world'];name=data.get('agent','uav-1')
+                    if action=='advance':w.advance(data.get('seconds',10))
+                    elif action=='observe':w.observe(name,data.get('valid',True))
+                    elif action=='move':w.move(name,data.get('x'),data.get('z'))
+                    elif action=='share':w.share(name,data.get('target','team'))
+                    else:return self.json({'error':'未找到地图操作'},404)
+                    map_sessions.persist(ROOT,sid,w)
+                    return self.json(map_reply(sid,entry))
             if self.path.startswith('/api/jobs/') and self.path.endswith('/cancel'):
                 jobid = self.path.split('/')[-2]
                 with LOCK:
@@ -251,7 +298,7 @@ class Handler(SimpleHTTPRequestHandler):
                 JOBS[jobid] = dict(id=jobid, state='queued', progress=0, message='正在开始生成…')
             threading.Thread(target=generate, args=(jobid, config), daemon=True).start()
             return self.json({'id': jobid}, 202)
-        except (ValueError, TypeError, json.JSONDecodeError) as error:
+        except (ValueError, TypeError, KeyError, json.JSONDecodeError) as error:
             return self.json({'error': str(error)}, 400)
         except Exception as error:
             return self.json({'error': str(error)}, 500)

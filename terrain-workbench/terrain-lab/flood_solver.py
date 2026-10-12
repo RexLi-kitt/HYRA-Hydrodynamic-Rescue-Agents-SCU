@@ -19,9 +19,10 @@ class FloodSolver:
                 or not np.isfinite(self.bed).all() or not np.isfinite(self.h).all()
                 or (self.h < 0).any() or not np.isfinite(dx) or dx <= 0):
             raise ValueError('Invalid terrain, depth or grid spacing')
-        if boundary not in ('ocean', 'open', 'closed') or not np.isfinite(manning) or manning < 0:
+        n = np.broadcast_to(np.asarray(manning, dtype=np.float64), self.h.shape)
+        if boundary not in ('ocean', 'open', 'closed') or not np.isfinite(n).all() or (n < 0).any():
             raise ValueError('Invalid boundary or Manning coefficient')
-        self.dx, self.boundary, self.manning = float(dx), boundary, float(manning)
+        self.dx, self.boundary, self.manning = float(dx), boundary, n.copy()
         nz, nx = self.h.shape
         self.sea_edges = {name: np.zeros(n, dtype=bool) for name, n in
                           (('west', nz), ('east', nz), ('north', nx), ('south', nx))}
@@ -49,9 +50,53 @@ class FloodSolver:
         self.steps = 0
         self.baseflow_rate = np.zeros_like(self.h)
         self.baseflow_m3_s = 0.0
+        self.solid = np.zeros_like(self.h, dtype=bool)
+        self.wall_x = np.zeros((nz,nx+1),dtype=bool)
+        self.wall_y = np.zeros((nz+1,nx),dtype=bool)
+        self.drain_capacity = np.zeros_like(self.h)
+        self.qx = np.zeros((nz,nx+1))
+        self.qy = np.zeros((nz+1,nx))
+        self.source_rate = np.zeros_like(self.h)
+        self.source_schedule = []
         self.balance = dict(initial_m3=float(self.h.sum() * dx**2), rainfall_m3=0.0,
                             inflow_m3=0.0, baseflow_m3=0.0, infiltration_m3=0.0, outflow_m3=0.0,
-                            sea_inflow_m3=0.0, sea_outflow_m3=0.0, numerical_adjustment_m3=0.0)
+                            sea_inflow_m3=0.0, sea_outflow_m3=0.0, drainage_m3=0.0,
+                            scheduled_inflow_m3=0.0, numerical_adjustment_m3=0.0)
+
+    def set_environment(self, *, solid=None, wall_x=None, wall_y=None, drain_capacity=None):
+        for name,value in (('solid',solid),('wall_x',wall_x),('wall_y',wall_y),('drain_capacity',drain_capacity)):
+            if value is None: continue
+            a = np.asarray(value,dtype=bool if name!='drain_capacity' else float)
+            if a.shape!=getattr(self,name).shape or (name=='drain_capacity' and
+                    (not np.isfinite(a).all() or (a<0).any())): raise ValueError('Invalid environment layer')
+            setattr(self,name,a.copy())
+        if np.any(self.solid & (self.baseflow_rate>0)):
+            raise ValueError('River sources cannot be inside a solid cell')
+        self.h[self.solid]=0; self.mx[self.solid]=0; self.mz[self.solid]=0
+        self.initial=self.h.copy(); self.maximum=self.h.copy()
+        self.balance['initial_m3']=float(self.h.sum()*self.dx**2)
+        if self.boundary=='ocean':
+            self.sea_wave_speed=0.0
+            for name,b,solid in (('west',self.bed[:,0],self.solid[:,0]),('east',self.bed[:,-1],self.solid[:,-1]),
+                                ('north',self.bed[0,:],self.solid[0,:]),('south',self.bed[-1,:],self.solid[-1,:])):
+                h=np.maximum(0,self.sea_level-b[self.sea_edges[name]&~solid])
+                if h.size:self.sea_wave_speed=max(self.sea_wave_speed,float(np.sqrt(G*h).max()))
+
+    def set_source_schedule(self, schedule):
+        # Each event is a piecewise-constant hydrograph shared by source_id cells.
+        self.source_schedule = schedule
+
+    def _scheduled_rate(self, time):
+        rate = np.zeros_like(self.h)
+        for source in self.source_schedule:
+            points=source['hydrograph']; q=0.0
+            for t,value in points:
+                if t>time+1e-10: break
+                q=value
+            if q:
+                cells=source['cells']; each=q/(len(cells)*self.dx**2)
+                for z,x in cells: rate[z,x]+=each
+        return rate
 
     def set_baseflow(self, sources):
         rate = np.zeros_like(self.h)
@@ -80,7 +125,7 @@ class FloodSolver:
     def timestep(self, limit=1.0, rain=0.0, inflow=0.0, source=None):
         u, v = self.velocity()
         # Include this step's potential source water in the wave-speed bound.
-        prospective = self.h + (rain+self.baseflow_rate) * limit
+        prospective = self.h + (rain*(~self.solid)+self.baseflow_rate+self.source_rate) * limit
         if source is not None:
             prospective = prospective.copy()
             prospective[source] += inflow * limit / self.dx**2
@@ -138,7 +183,15 @@ class FloodSolver:
                 mass[s][ordinary] = q[ordinary]
                 fx[s][ordinary] = (q*ue + (.5*G*h[s]**2 if axis == 1 else 0))[ordinary]
                 fz[s][ordinary] = (q*ve + (.5*G*h[s]**2 if axis == 0 else 0))[ordinary]
-        return mass, fx, fz, .5*G*(hl**2-dl**2), .5*G*(hr**2-dr**2)
+        # Reflect each side of a blocked face separately: equal/opposite water
+        # exchange is zero, while each fluid cell retains its own pressure force.
+        cells=np.pad(self.solid,pads,mode='edge')
+        blocked=(self.wall_x if axis==1 else self.wall_y) | cells[left] | cells[right]
+        mass[blocked]=0; fx[blocked]=0; fz[blocked]=0
+        corr_l=.5*G*(hl**2-dl**2); corr_r=.5*G*(hr**2-dr**2)
+        corr_l[blocked]=.5*G*hl[blocked]**2
+        corr_r[blocked]=.5*G*hr[blocked]**2
+        return mass, fx, fz, corr_l, corr_r
 
     def step(self, dt, *, rain=0.0, infiltration=0.0, inflow=0.0, source=None):
         if not all(np.isfinite(v) and v >= 0 for v in (dt, rain, infiltration, inflow)) or dt == 0:
@@ -146,11 +199,14 @@ class FloodSolver:
         if inflow and (source is None or len(source) != 2 or not
                        all(isinstance(v, (int, np.integer)) and 0 <= v < n for v, n in zip(source, self.h.shape))):
             raise ValueError('Inflow requires a valid source cell')
+        if inflow and self.solid[source]:raise ValueError('Inflow cannot be inside a solid cell')
         area = self.dx**2
-        self.h += rain*dt
-        self.balance['rainfall_m3'] += rain*dt*self.h.size*area
+        self.h += rain*dt*(~self.solid)
+        self.balance['rainfall_m3'] += rain*dt*int((~self.solid).sum())*area
         self.h += self.baseflow_rate*dt
         self.balance['baseflow_m3'] += self.baseflow_m3_s*dt
+        self.h += self.source_rate*dt
+        self.balance['scheduled_inflow_m3'] += float(self.source_rate.sum()*dt*area)
         if inflow:
             self.h[source] += inflow*dt/area
             self.balance['inflow_m3'] += inflow*dt
@@ -158,8 +214,13 @@ class FloodSolver:
         retained = np.divide(self.h-removed, self.h, out=np.zeros_like(self.h), where=self.h > 0)
         self.mx *= retained; self.mz *= retained; self.h -= removed
         self.balance['infiltration_m3'] += float(removed.sum()*area)
+        drained=np.minimum(self.h,self.drain_capacity*dt/area)
+        retained=np.divide(self.h-drained,self.h,out=np.zeros_like(self.h),where=self.h>0)
+        self.mx*=retained; self.mz*=retained; self.h-=drained
+        self.balance['drainage_m3']+=float(drained.sum()*area)
         ax, bx, cx, lx, rx = self._flux(1)
         az, bz, cz, lz, rz = self._flux(0)
+        self.qx=ax.copy(); self.qy=az.copy()
         f = dt/self.dx
         self.h -= f*(ax[:, 1:]-ax[:, :-1] + az[1:, :]-az[:-1, :])
         self.mx -= f*(bx[:, 1:]+lx[:, 1:] - bx[:, :-1]-rx[:, :-1] + bz[1:, :]-bz[:-1, :])
@@ -178,6 +239,7 @@ class FloodSolver:
         self.mx[~wet] = 0; self.mz[~wet] = 0
         drag = 1 + dt*G*self.manning**2*np.hypot(self.mx, self.mz)/np.maximum(self.h, DRY)**(7/3)
         self.mx /= drag; self.mz /= drag
+        self.mx[self.solid]=0; self.mz[self.solid]=0; self.h[self.solid]=0
         np.maximum(self.maximum, self.h, out=self.maximum)
         self.time += dt
         self.steps += 1
@@ -189,6 +251,10 @@ class FloodSolver:
             raining = rain if self.time < rain_until - 1e-10 else 0.0
             limit = min(1.0, end-self.time)
             if raining: limit = min(limit, rain_until-self.time)
+            self.source_rate=self._scheduled_rate(self.time)
+            for entry in self.source_schedule:
+                for t,_ in entry['hydrograph']:
+                    if t>self.time+1e-10: limit=min(limit,t-self.time);break
             dt = self.timestep(limit, raining, inflow, source)
             if dt < 1e-9 or self.steps >= 500000:
                 raise RuntimeError('场景需要过多计算步，请缩短时间或降低计算分辨率')
@@ -199,6 +265,7 @@ class FloodSolver:
         current = float(self.h.sum()*self.dx**2)
         b = self.balance
         expected = (b['initial_m3'] + b['rainfall_m3'] + b['inflow_m3'] + b['baseflow_m3'] + b['sea_inflow_m3']
+                    + b['scheduled_inflow_m3'] - b['drainage_m3']
                     - b['infiltration_m3'] - b['outflow_m3'] - b['sea_outflow_m3'])
         return dict(time_s=self.time, steps=self.steps, max_depth_m=float(self.h.max()),
                     max_speed_m_s=float(np.hypot(u, v).max()),
