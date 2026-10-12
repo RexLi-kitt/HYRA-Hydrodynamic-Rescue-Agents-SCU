@@ -9,38 +9,34 @@ from multilayer import MapWorld, DATA_DICTIONARY
 
 def create(root,terrain,data):
     if not isinstance(data,dict):raise ValueError('场景需要是对象')
+    if 'agents' in data or 'legacy_exploration' in data:raise ValueError('地图工作台已移除无人机与探索体系，请使用地图场景配置')
     mode=data.get('mode','current')
+    incoming=dict(data.get('flood',{}));frames=incoming.pop('frames',121)
+    if isinstance(frames,bool) or not isinstance(frames,int) or not 2<=frames<=241:raise ValueError('过程帧数需要在2到241之间')
     if mode=='demo':
         nz=nx=32;zz,xx=np.indices((nz,nx));bed=.035*xx+.01*zz
         depth=np.zeros_like(bed);depth[10:22,:6]=.25
         config=flood_run.settings(dict(resolution=32,source_x=2,source_z=16,rain_mm_h=60,
             rain_duration_s=300,duration_s=600,baseflow=False,warmup_s=0,boundary='closed'),[32,32])
-        config.update({k:v for k,v in flood_run.settings(dict(config,**data.get('flood',{})),[32,32]).items()})
+        config.update({k:v for k,v in flood_run.settings(dict(config,**incoming),[32,32]).items()})
         config['resolution']=32;unit=config['metres_per_block']
+        if not config['initial_water']:depth.fill(0)
         solver=FloodSolver(bed*unit,depth*unit,5*unit,boundary=config['boundary'],manning=config['manning'],sea_level=0,sea_edges={})
         meta=dict(shape=[32,32],dx_m=5*unit,origin_blocks=[0,0],coarsening_factor=1,config=config,
                   terrain_source='synthetic_multilayer_demo',terrain_id='multilayer-demo')
         default=dict(patches=[dict(kind='building',x=13,z=10,width=4,height=8),
             dict(kind='wall_x',x=22,z=8,height=7),dict(kind='wall_x',x=22,z=18,height=7),
             dict(kind='roughness',x=8,z=20,width=7,height=7,value=.08),
-            dict(kind='no_fly',x=20,z=3,width=5,height=4),
             dict(kind='drain',x=27,z=16,width=2,height=2,value=.5),
-            dict(kind='person',x=20,z=14,value=1),dict(kind='person',x=25,z=22,value=2),
             dict(kind='source',x=2,z=16,width=2,height=2,value=0)],hydrographs={'0':[[0,8],[120,3],[300,0]]})
-        # Explicit synthetic demonstration field; actual generated maps do not
-        # invent a signal field or population. This is not a GMRF estimator.
-        default['signal_field']=(np.exp(-((xx-20)**2+(zz-14)**2)/18)
-                                 +.6*np.exp(-((xx-25)**2+(zz-22)**2)/18)).tolist()
         # Caller-supplied arrays take precedence, patches extend the demonstration.
         layers=dict(default,**data.get('layers',{}))
         if 'patches' in data.get('layers',{}):layers['patches']=default['patches']+data['layers']['patches']
-        agents=data.get('agents',[dict(id='uav-1',x=7,z=16,radius=4),dict(id='uav-2',x=26,z=22,radius=4)])
     elif mode=='current':
         if data.get('terrain_id')!=terrain['id']:raise ValueError('地图已更新，请重新读取地图')
-        config=flood_run.settings({'warmup_s':0,**data.get('flood',{})},terrain['shape'])
-        if config['warmup_s']!=0:raise ValueError('实时多层场景从初始状态开始；可先关闭降雨推进基流预热')
+        config=flood_run.settings({'warmup_s':0,**incoming},terrain['shape'])
         solver,meta=flood_run.prepare(root,terrain,config)
-        layers=dict(data.get('layers',{}));agents=data.get('agents')
+        layers=dict(data.get('layers',{}))
         raw=terrain['fields']['terrain'];types=np.fromfile(root/raw['url'].lstrip('/'),dtype=raw['dtype']).reshape(terrain['shape'])
         f=meta['coarsening_factor'];nz,nx=meta['shape'];tiles=types.reshape(nz,f,nx,f).transpose(0,2,1,3).reshape(nz,nx,f*f)
         ids=np.unique(types);votes=np.stack([(tiles==i).sum(axis=-1) for i in ids])
@@ -50,10 +46,57 @@ def create(root,terrain,data):
         h=np.asarray(data['initial_depth'],float)
         if h.shape!=solver.h.shape or not np.isfinite(h).all() or (h<0).any():raise ValueError('初始水深数组需要同网格、非负且有限')
         solver.h=h.copy()
-    return MapWorld(solver,meta,layers,agents,legacy=data.get('legacy_exploration'))
+    config['frames']=frames
+    return MapWorld(solver,meta,layers)
 
 
-def persist(root,session_id,world):
+def run(root,session_id,world,update,cancelled):
+    """Compute a whole scenario in a worker; publish immutable frame files."""
+    s=world.solver;c=world.config;meta=world.meta
+    if s.time!=0:raise ValueError('请重新建立场景后开始模拟')
+    if s.baseflow_m3_s>0 and c['warmup_s']>0:
+        from river_baseflow import spin_up
+        schedule=s.source_schedule;s.source_schedule=[]
+        try:
+            meta['initial_conditions']=spin_up(s,c['warmup_s'],c['infiltration_mm_h']/3600000,update,cancelled)
+        finally:s.source_schedule=schedule
+        s.start_scenario();s.qx.fill(0);s.qy.fill(0)
+    else:
+        meta['initial_conditions']=dict(duration_s=0,converged=False,
+            reason='no_active_baseflow' if s.baseflow_m3_s==0 else 'warmup_disabled')
     folder=root/'generated'/session_id/'maps';folder.mkdir(parents=True,exist_ok=True)
-    tmp=folder/'map-result.zip.tmp';tmp.write_bytes(world.export_zip());tmp.replace(folder/'map-result.zip')
+    url=f'/generated/{session_id}/maps/'
+    frames=[]
+    for i,end in enumerate(np.linspace(0,c['duration_s'],c['frames'])):
+        if cancelled():raise InterruptedError('模拟已取消，已计算时段仍可播放')
+        world.advance_to(float(end),cancelled)
+        u,v=s.velocity();name=f'frame-{i:03d}.f32'
+        tmp=folder/(name+'.tmp')
+        np.stack((s.h,u,v,s.maximum)).astype('<f4').tofile(tmp);tmp.replace(folder/name)
+        frames.append(dict(index=i,url=url+name,**s.summary()))
+        update(state='running',progress=round(i/(c['frames']-1)*100,1),
+            message=f'已计算 {end:.1f} / {c["duration_s"]:.0f} 秒',
+            frames=list(frames),initial_conditions=meta['initial_conditions'])
+    if cancelled():raise InterruptedError('模拟已取消，已计算时段仍可播放')
+    update(message='正在保存完整地图与洪水过程…')
+    save_process(root,session_id,world,frames)
+    return dict(frames=frames,archive_url=url+'map-result.zip')
+
+
+def save_process(root,session_id,world,frames):
+    import zipfile
+    folder=root/'generated'/session_id/'maps';folder.mkdir(parents=True,exist_ok=True)
+    c=world.config;meta=world.meta
+    # ZIP stores physical layers, calculated frames and final shared face fluxes.
+    tmp=folder/'map-result.zip.tmp'
+    with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr('map_model.json',json.dumps(world.snapshot(),ensure_ascii=False,allow_nan=False))
+        archive.writestr('data_dictionary.json',json.dumps(DATA_DICTIONARY,ensure_ascii=False,indent=2))
+        import io
+        data=io.BytesIO();np.savez_compressed(data,**world.arrays());archive.writestr('layers.npz',data.getvalue())
+        archive.writestr('process.json',json.dumps(dict(grid=world.grid(),config=c,frames=frames,
+            frame_fields=['depth','u','v','maximum_depth'],frame_dtype='<f4',
+            initial_conditions=meta.get('initial_conditions',{})),ensure_ascii=False,allow_nan=False))
+        for f in frames:archive.write(folder/Path(f['url']).name,Path(f['url']).name)
+    tmp.replace(folder/'map-result.zip')
     return f'/generated/{session_id}/maps/map-result.zip'

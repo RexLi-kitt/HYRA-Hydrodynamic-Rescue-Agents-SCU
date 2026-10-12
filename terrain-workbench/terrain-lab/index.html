@@ -38,7 +38,7 @@
   </form>
 </aside>
 <section class="workspace">
-  <div class="map-bar"><div><h2 id="mapTitle">水系丰富的地图</h2><p id="mapInfo">正在读取地图…</p></div><div class="map-actions"><a class="elevation-link" href="maps.html">多层地图与观测 ↗</a><a class="elevation-link" href="flood.html">动态洪水 ↗</a><a class="elevation-link" href="elevation.html">高程可视化 ↗</a><button id="exportPng" type="button">图片预览</button></div></div>
+  <div class="map-bar"><div><h2 id="mapTitle">水系丰富的地图</h2><p id="mapInfo">正在读取地图…</p></div><div class="map-actions"><a class="elevation-link" href="maps.html">多层地图与洪水 ↗</a><a class="elevation-link" href="elevation.html">高程可视化 ↗</a><button id="exportPng" type="button">图片预览</button></div></div>
   <nav aria-label="地图图层" class="layers"><button class="active" data-layer="height" aria-pressed="true">地形高程</button><button data-layer="water" aria-pressed="false">水系</button><button data-layer="material" aria-pressed="false">地表类型</button><button data-layer="biome" aria-pressed="false">群系</button></nav>
   <div class="map-wrap"><canvas id="map" width="768" height="768" tabindex="0" role="img" aria-label="二维地形网格图，可点击网格查看其高程、方块与群系">二维地图</canvas><div id="loading" class="loading" hidden><span class="spinner"></span><p id="phase">正在生成…</p><progress id="progress" max="100" value="0"></progress><span id="elapsed"></span><div class="generation-actions"><button id="cancelGenerate" type="button">取消生成</button><a id="generationLog" target="_blank" rel="noopener" hidden>查看生成记录 ↗</a></div></div></div>
   <div id="legend" class="legend"></div>

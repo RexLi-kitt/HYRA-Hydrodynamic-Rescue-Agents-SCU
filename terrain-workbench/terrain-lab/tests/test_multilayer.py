@@ -1,5 +1,4 @@
-"""PPT acceptance: shared faces, buildings, drainage, observation isolation and export."""
-import copy
+"""PPT acceptance: physical maps, continuous process, warm-up and export."""
 import io
 import json
 from pathlib import Path
@@ -10,7 +9,7 @@ import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from flood_solver import FloodSolver
-from multilayer import BaseMap,Knowledge,MapWorld
+from multilayer import BaseMap,MapWorld
 import flood_run
 import map_sessions
 import server
@@ -21,8 +20,7 @@ def world(shape=(8,12),layers=None,depth=None):
     c=flood_run.settings(dict(resolution=32,source_x=0,source_z=0,rain_mm_h=0,
         rain_duration_s=0,baseflow=False,warmup_s=0),shape)
     s=FloodSolver(b,h,2,boundary='closed')
-    return MapWorld(s,dict(config=c,shape=list(shape),coarsening_factor=1,origin_blocks=[0,0]),layers,
-        [dict(id='uav-1',x=1,z=2,radius=1),dict(id='uav-2',x=9,z=5,radius=1)])
+    return MapWorld(s,dict(config=c,shape=list(shape),coarsening_factor=1,origin_blocks=[0,0]),layers)
 
 
 class HydraulicLayersTests(unittest.TestCase):
@@ -56,7 +54,7 @@ class HydraulicLayersTests(unittest.TestCase):
     def test_hydrograph_event_alignment_and_bounded_drainage_close_budget(self):
         layers=dict(patches=[dict(kind='source',x=1,z=2,value=3),dict(kind='drain',x=1,z=2,value=100)],
                     hydrographs={'3':[[0,10],[.5,0],[1,4]]})
-        w=world(layers=layers);w.advance(2)
+        w=world(layers=layers);w.advance_to(2)
         b=w.solver.summary()['balance']
         self.assertAlmostEqual(b['scheduled_inflow_m3'],9,places=9)
         self.assertAlmostEqual(b['drainage_m3'],9,places=9)
@@ -75,15 +73,12 @@ class HydraulicLayersTests(unittest.TestCase):
             dict(patches=[dict(kind='source',x=0,z=0,value=0)],hydrographs={'0':[[0,-1]]})):
             with self.assertRaises(ValueError):BaseMap(np.zeros((8,12)),2,config)
 
-    def test_imported_elevation_signal_and_initial_water_are_used(self):
+    def test_imported_elevation_and_initial_water_are_used(self):
         data=dict(mode='demo',initial_depth=np.full((32,32),.3).tolist(),
-            layers=dict(z=np.ones((32,32)).tolist(),signal_field=np.zeros((32,32)).tolist()))
+            layers=dict(z=np.ones((32,32)).tolist()))
         w=map_sessions.create(ROOT,server.describe('example/raw'),data)
         np.testing.assert_array_equal(w.solver.bed,1)
         self.assertAlmostEqual(w.solver.h[2,7],.3)
-        w.observe('uav-1');k=w.knowledge['uav-1']
-        self.assertTrue(k.signal_valid[16,7]);self.assertEqual(k.signal_field[16,7],0)
-        self.assertFalse(k.signal_valid[0,0])
 
     def test_invalid_inflow_into_building_does_not_mutate_the_state(self):
         s=FloodSolver(np.zeros((4,4)),np.zeros((4,4)),2,boundary='closed')
@@ -93,99 +88,107 @@ class HydraulicLayersTests(unittest.TestCase):
         self.assertEqual(s.summary(),before)
 
 
-class ObservationTests(unittest.TestCase):
-    def test_truth_advances_without_updating_known_water_until_reobserved(self):
-        w=world(depth=np.full((8,12),.2));w.config['rain_mm_h']=360;w.config['rain_duration_s']=100
-        self.assertEqual(w.observe('uav-1'),5)
-        k=w.knowledge['uav-1'];old=k.water_last.copy();before=w.solver.h.copy();w.advance(10)
-        self.assertGreater(w.solver.h[2,1],before[2,1])
-        np.testing.assert_equal(k.water_last,old)
-        self.assertEqual(k.age(10)[2,1],10)
-        w.observe('uav-1');self.assertEqual(k.t_water[2,1],10)
-        self.assertEqual(k.age(10)[2,1],0)
-        self.assertEqual(k.water_last[2,1],w.solver.h[2,1])
-
-    def test_known_dry_and_unknown_are_distinct_and_policy_has_no_truth(self):
-        w=world(layers=dict(patches=[dict(kind='person',x=11,z=7,value=1)]));w.observe('uav-1')
-        view=w.policy_view('uav-1');obs=view['M_obs']
-        self.assertEqual(obs['water_last'][2][1],0)
-        self.assertTrue(obs['water_valid'][2][1])
-        self.assertIsNone(obs['water_last'][7][11])
-        self.assertFalse(obs['water_valid'][7][11])
-        self.assertNotIn('M_water',view);self.assertNotIn('M_ref',view);self.assertNotIn('M_base',view)
-        self.assertEqual(view['channels']['person_seen'][7][11],0)
-        self.assertFalse(view['channels']['person_valid'][7][11])
-        self.assertTrue(all(np.isfinite(a).all() for a in view['channels'].values()))
-
-    def test_water_and_person_can_coexist_and_positions_only_include_discovered_people(self):
-        w=world(layers=dict(patches=[dict(kind='person',x=1,z=2,value=1)]),depth=np.full((8,12),.5))
-        self.assertEqual(w.snapshot()['M_pos']['discovered_persons'],[])
-        w.observe('uav-1');self.assertEqual(w.knowledge['uav-1'].water_last[2,1],.5)
-        self.assertEqual(w.knowledge['uav-1'].person_last[2,1],1)
-        self.assertEqual(len(w.policy_view('uav-1')['M_pos']['discovered_persons']),1)
-        self.assertEqual(w.policy_view('uav-2')['M_pos']['discovered_persons'],[])
-        w.share('uav-1','uav-2');self.assertEqual(len(w.policy_view('uav-2')['M_pos']['discovered_persons']),1)
-
-    def test_invalid_or_occluded_observation_retains_old_record(self):
-        w=world();w.observe('uav-1');k=w.knowledge['uav-1'];before=k.water_last.copy()
-        w.advance(10);w.observe('uav-1',False)
-        np.testing.assert_equal(k.water_last,before);self.assertEqual(k.t_water[2,1],0)
-        w.base.solid[2,1]=True;w.observe('uav-1')
-        self.assertEqual(k.t_water[2,1],0);self.assertEqual(k.t_terrain[2,1],10)
-
-    def test_old_shared_data_cannot_overwrite_new_and_future_data_is_rejected(self):
-        w=world(depth=np.ones((8,12))*.2);w.observe('uav-1');old=copy.deepcopy(w.knowledge['uav-1'])
-        w.advance(10);w.observe('uav-1');w.share('uav-1');new=w.team.water_last.copy()
-        self.assertEqual(w.team.merge(old,10),0);np.testing.assert_equal(w.team.water_last,new)
-        future=copy.deepcopy(old);future.t_water[future.water_valid]=20
-        with self.assertRaises(ValueError):w.team.merge(future,10)
-        np.testing.assert_equal(w.team.water_last,new)
-
-    def test_no_fly_path_and_time_reversal_are_rejected(self):
-        w=world(layers=dict(patches=[dict(kind='no_fly',x=4,z=2)]))
-        with self.assertRaises(ValueError):w.move('uav-1',7,2)
-        self.assertEqual(w.agents['uav-1']['x'],1)
-        for dt in (-1,0,float('nan')):
-            with self.assertRaises(ValueError):w.advance(dt)
-        corner=world(layers=dict(patches=[dict(kind='no_fly',x=2,z=2)]))
-        with self.assertRaises(ValueError):corner.move('uav-1',4,5)
-
-    def test_pooling_excludes_unknown_and_exploration_history_is_retained(self):
-        k=Knowledge((2,2));k.water_last[0,:]=[.4,1];k.water_valid[0,:]=True;k.t_water[0,:]=0
-        pooled=k.pool_water(2,10);self.assertAlmostEqual(pooled['water_last'][0,0],.7)
-        self.assertEqual(pooled['known_fraction'][0,0],.5)
-        original=np.zeros((9,8,12));original[0,3,3]=1;original[4]=.3
-        w=world();w.team=Knowledge((8,12),original);w.observe('uav-1');w.share('uav-1')
-        self.assertTrue(w.team.explored_ever[3,3]);np.testing.assert_array_equal(w.team.legacy_channels,original)
-
-    def test_original_terrain_and_signal_estimates_can_be_imported_without_fabricating_water(self):
-        terrain=np.ones((8,12))*7;signal=np.zeros((8,12));legacy=np.zeros((9,8,12));legacy[1,4,4]=1
-        k=Knowledge((8,12),dict(legacy_channels=legacy,terrain_field=terrain,signal_field=signal))
-        self.assertTrue(k.explored_ever[4,4]);self.assertTrue(k.terrain_valid.all());self.assertTrue(k.signal_valid.all())
-        np.testing.assert_array_equal(k.terrain_field,terrain);np.testing.assert_array_equal(k.signal_field,signal)
-        self.assertFalse(k.water_valid.any());self.assertTrue(np.isnan(k.water_last).all())
-
-    def test_archive_has_all_map_groups_shared_faces_and_unknown_nan_masks(self):
-        w=world();w.observe('uav-1');w.advance(10);w.share('uav-1')
+class MapProcessTests(unittest.TestCase):
+    def test_map_snapshot_and_archive_contain_only_physical_layers(self):
+        w=world();w.advance_to(75)
+        state=w.snapshot()
+        self.assertEqual(state['time_s'],75)
+        for key in ('agents','team','M_obs','M_exp','M_pos'):self.assertNotIn(key,state)
+        self.assertFalse(hasattr(w,'observe'));self.assertFalse(hasattr(w,'move'))
         with zipfile.ZipFile(io.BytesIO(w.export_zip())) as z:
-            self.assertIsNone(z.testzip());state=json.loads(z.read('map_model.json'))
-            self.assertEqual(state['team']['information_age'][2][1],10)
-            self.assertIsNone(state['team']['M_obs']['water_last'][7][11])
-            arrays=np.load(io.BytesIO(z.read('layers.npz')),allow_pickle=False)
-            for prefix in ('M_base','M_ref','M_water','team','agents.uav-1'):
-                self.assertTrue(any(n.startswith(prefix+'.') for n in arrays.files))
+            self.assertIsNone(z.testzip());arrays=np.load(io.BytesIO(z.read('layers.npz')))
             self.assertEqual(arrays['M_water.qx'].shape,(8,13))
             self.assertEqual(arrays['M_water.qy'].shape,(9,12))
-            self.assertTrue(np.isnan(arrays['team.M_obs.water_last'][7,11]))
-            self.assertIn('source_hydrographs',state)
+            self.assertTrue(all(k.startswith(('M_base.','M_water.')) for k in arrays.files))
 
-    def test_current_generated_map_uses_common_coarse_grid_for_every_layer(self):
+    def test_current_generated_map_has_common_grid_and_no_agent_defaults(self):
         terrain=server.describe('example/raw')
         w=map_sessions.create(ROOT,terrain,dict(mode='current',terrain_id=terrain['id'],
             flood=dict(resolution=32,baseflow=False,warmup_s=0)))
         self.assertEqual(w.base.shape,(32,32));self.assertEqual(w.base.dx,32)
         self.assertEqual(w.base.terrain_class.shape,(32,32))
-        self.assertEqual(w.knowledge['uav-1'].water_valid.shape,(32,32))
+        self.assertNotIn('agents',w.snapshot())
+
+    def test_removed_agent_config_and_reversed_time_are_rejected(self):
+        terrain=server.describe('example/raw')
+        with self.assertRaises(ValueError):map_sessions.create(ROOT,terrain,dict(mode='demo',agents=[]))
+        w=world();w.advance_to(2)
+        for end in (-1,0,float('nan')):
+            with self.assertRaises(ValueError):w.advance_to(end)
+
+    def test_full_process_frames_use_edited_physics_and_have_complete_archive(self):
+        import tempfile
+        w=world(layers=dict(patches=[dict(kind='source',x=1,z=2,value=3)],hydrographs={'3':[[0,2],[1,0]]}))
+        w.config.update(duration_s=2,frames=5)
+        updates=[]
+        with tempfile.TemporaryDirectory(dir=ROOT/'.runtime/test-temp') as tmp:
+            result=map_sessions.run(Path(tmp),'test',w,lambda **v:updates.append(v),lambda:False)
+            self.assertEqual([f['time_s'] for f in result['frames']],[0,.5,1,1.5,2])
+            self.assertAlmostEqual(w.solver.summary()['balance']['scheduled_inflow_m3'],2)
+            for f in result['frames']:
+                data=np.fromfile(Path(tmp)/f['url'].lstrip('/'),dtype='<f4').reshape(4,8,12)
+                self.assertTrue(np.isfinite(data).all());self.assertGreaterEqual(data[0].min(),0)
+            self.assertTrue(np.all(data[3]>=data[0]-1e-6))
+            with zipfile.ZipFile(Path(tmp)/result['archive_url'].lstrip('/')) as z:
+                self.assertIsNone(z.testzip());self.assertIn('process.json',z.namelist())
+                self.assertEqual(len(json.loads(z.read('process.json'))['frames']),5)
+                self.assertEqual(len([n for n in z.namelist() if n.endswith('.f32')]),5)
+                self.assertNotIn('agents',json.loads(z.read('map_model.json')))
+
+    def test_cancelled_process_keeps_completed_frames_and_can_export(self):
+        import tempfile
+        w=world();w.config.update(duration_s=4,frames=5)
+        updates=[];cancelled=False
+        def update(**values):
+            nonlocal cancelled
+            updates.append(values)
+            if len(values.get('frames',[]))>=2:cancelled=True
+        with tempfile.TemporaryDirectory(dir=ROOT/'.runtime/test-temp') as tmp:
+            with self.assertRaises(InterruptedError):
+                map_sessions.run(Path(tmp),'cancel-test',w,update,lambda:cancelled)
+            frames=updates[-1]['frames'];self.assertEqual(len(frames),2)
+            url=map_sessions.save_process(Path(tmp),'cancel-test',w,frames)
+            with zipfile.ZipFile(Path(tmp)/url.lstrip('/')) as z:
+                self.assertEqual(len(json.loads(z.read('process.json'))['frames']),2)
+                self.assertIsNone(z.testzip())
+
+    def test_warmup_excludes_flood_hydrographs_and_resets_scenario_clock(self):
+        import tempfile
+        w=world(layers=dict(patches=[dict(kind='source',x=1,z=2,value=0)],hydrographs={'0':[[0,2]]}))
+        w.solver.set_baseflow([dict(x=1,z=2,discharge_m3_s=.1)])
+        w.config.update(warmup_s=1,duration_s=1,frames=3)
+        with tempfile.TemporaryDirectory(dir=ROOT/'.runtime/test-temp') as tmp:
+            result=map_sessions.run(Path(tmp),'warm-test',w,lambda **v:None,lambda:False)
+        initial=w.meta['initial_conditions']
+        self.assertAlmostEqual(initial['balance']['baseflow_m3'],.1)
+        self.assertEqual(initial['balance']['scheduled_inflow_m3'],0)
+        self.assertEqual(result['frames'][0]['time_s'],0)
+        self.assertAlmostEqual(result['frames'][0]['balance']['initial_m3'],.1)
+        self.assertAlmostEqual(result['frames'][-1]['balance']['scheduled_inflow_m3'],2)
+        self.assertAlmostEqual(result['frames'][-1]['balance']['baseflow_m3'],.1)
+
+    def test_concurrent_run_returns_existing_process_for_ui_recovery(self):
+        import threading
+        from unittest.mock import patch
+        active=dict(process=dict(state='running'),lock=threading.Lock())
+        ready=dict(process=dict(state='ready'),lock=threading.Lock())
+        h=object.__new__(server.Handler);h.path='/api/maps/second/run'
+        h.headers={'Content-Length':'2'};h.rfile=io.BytesIO(b'{}');reply=[]
+        h.json=lambda data,status=200:reply.append((data,status))
+        with patch.dict(server.MAP_SESSIONS,{'first':active,'second':ready},clear=True):
+            h.do_POST()
+        self.assertEqual(reply[0][1],409)
+        self.assertEqual(reply[0][0]['process_id'],'first')
+        self.assertEqual(ready['process']['state'],'ready')
+
+    def test_no_initial_water_and_frame_validation(self):
+        t=server.describe('example/raw')
+        w=map_sessions.create(ROOT,t,dict(mode='demo',flood=dict(initial_water=False)))
+        self.assertEqual(w.solver.h.sum(),0)
+        for frames in (1,242,True,4.5):
+            with self.assertRaises(ValueError):map_sessions.create(ROOT,t,dict(mode='demo',flood=dict(frames=frames)))
 
 
-if __name__=='__main__':unittest.main()
+if __name__=='__main__':
+    (ROOT/'.runtime/test-temp').mkdir(parents=True,exist_ok=True)
+    unittest.main()
