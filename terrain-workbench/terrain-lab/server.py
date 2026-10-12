@@ -12,6 +12,8 @@ import uuid
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
+import flood_run
+import generation_process
 
 ROOT = Path(__file__).resolve().parent
 GENERATOR = ROOT.parent / 'freeterraforged-reproduction'
@@ -35,6 +37,33 @@ SPECS = {
 }
 LOCK = threading.Lock()
 JOBS = {}
+FLOOD_JOBS = {}
+MAP_SESSIONS = {}
+
+def map_reply(session_id,entry):
+    return dict(id=session_id,archive_url=f'/generated/{session_id}/maps/map-result.zip',**entry['world'].snapshot())
+
+def current_terrain():
+    pointer = ROOT / 'current.json'
+    directory = json.loads(pointer.read_text())['directory'] if pointer.is_file() else 'example/raw'
+    return describe(directory)
+
+def simulate_flood(jobid, terrain, config):
+    def update(**values):
+        with LOCK: FLOOD_JOBS[jobid].update(values)
+    def cancelled():
+        with LOCK: return FLOOD_JOBS[jobid].get('cancel_requested', False)
+    try:
+        update(state='running', message='正在准备洪水计算网格…')
+        result = flood_run.run(ROOT, jobid, terrain, config, update, cancelled)
+        if cancelled(): raise InterruptedError('模拟已取消')
+        update(state='done', progress=100, message='洪水模拟完成', result=result)
+    except InterruptedError:
+        update(state='cancelled', message='模拟已取消')
+    except ImportError:
+        update(state='failed', message='洪水模拟需要 NumPy，请先安装 terrain-workbench/requirements.txt')
+    except Exception as error:
+        update(state='failed', message=str(error))
 
 def settings(data):
     result = dict(DEFAULTS)
@@ -103,27 +132,53 @@ def generate(jobid, config):
         request['surface'] = {key: request[key] for key in ('origin_x', 'origin_z', 'nx', 'nz', 'step_blocks')}
     path = directory / 'request.json'; path.write_text(json.dumps(request, indent=2))
     job = JOBS[jobid]
-    job.update(state='running', progress=0, message='正在准备地形生成器…')
+    job.update(state='running', progress=0, progress_known=False, stage='dependencies',
+               message='正在检查 Java 21 与首次构建依赖…', log_url=f'/generated/{jobid}/generation.log', log_tail='')
+    pending = ''
+    def report(chunk, elapsed, idle):
+        nonlocal pending
+        job['elapsed_s'] = round(elapsed)
+        if not chunk:
+            if idle >= 15 and job['stage'] == 'dependencies':
+                job['message'] = f'正在准备首次构建依赖（{round(idle)} 秒无新输出）；源码转换可能持续数分钟，可取消或查看记录'
+            return
+        job['log_tail'] = (job['log_tail'] + chunk)[-6000:]
+        pending = (pending + chunk)[-16000:]
+        for line in pending.splitlines():
+            if 'Uncaught exception in thread "main"' in line or 'Exception in thread "main"' in line:
+                raise RuntimeError('生成器启动异常，已停止本次任务；请查看生成记录中的具体错误')
+            tile = re.search(r'Original terrain tiles: (\d+)/(\d+)', line)
+            surface = re.search(r'Original surface rows: (\d+)/(\d+)', line)
+            if 'HYRA_STAGE:' in line:
+                job.update(message=line.split('HYRA_STAGE:', 1)[1].strip(), progress_known=False)
+            if 'Downloading ' in line:
+                job.update(stage='dependencies', progress_known=False, message='首次启动正在下载构建工具与依赖，尚未开始生成地形…')
+            if '> Task ' in line and not tile and not surface:
+                job.update(stage='dependencies', progress_known=False, message='正在首次构建地形生成器；完成后开始生成地图…')
+            if ':remapping sources' in line:
+                job.update(stage='dependencies', progress_known=False, message='正在首次转换生成器依赖源码，可能需要数分钟…')
+            if tile:
+                job.update(stage='terrain', progress_known=True, progress=round(100*int(tile[1])/int(tile[2])), message='正在生成地形与河网…')
+            if 'Preparing start region' in line:
+                job.update(stage='surface', progress_known=False, progress=0, message='正在生成实际地表…')
+            if surface:
+                job.update(stage='surface', progress_known=True, progress=round(100*int(surface[1])/int(surface[2])), message='正在读取地面方块与群系…')
+        pending = pending.rsplit('\n', 1)[-1]
     try:
-        with (directory / 'generation.log').open('w') as log:
-            process = subprocess.Popen([sys.executable, str(GENERATOR / 'run.py'), 'export', '--request', str(path)],
-                cwd=GENERATOR, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
-            for line in process.stdout:
-                log.write(line); log.flush()
-                tile = re.search(r'Original terrain tiles: (\d+)/(\d+)', line)
-                surface = re.search(r'Original surface rows: (\d+)/(\d+)', line)
-                if tile:
-                    job.update(progress=round(100 * int(tile[1]) / int(tile[2])), message='正在生成地形与河网…')
-                if 'Preparing start region' in line:
-                    job.update(progress=0, message='正在生成实际地表…')
-                if surface:
-                    job.update(progress=round(100 * int(surface[1]) / int(surface[2])), message='正在读取地面方块与群系…')
-            code = process.wait()
-        if code: raise RuntimeError('生成失败；请查看该次生成记录')
+        code = generation_process.run([sys.executable, '-u', str(GENERATOR / 'run.py'), 'export', '--request', str(path)],
+            GENERATOR, directory / 'generation.log', report, lambda: job.get('cancel_requested', False))
+        if code:
+            diagnostic = next((s.strip() for s in job['log_tail'].splitlines() if '生成新地图需要' in s or '--java-home' in s), None)
+            raise RuntimeError(diagnostic or '地形生成失败；请打开生成记录查看具体构建或下载错误')
+        if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
         result = describe(f'generated/{jobid}/raw')
         if config['mode'] == 'surface' and not result['full']: raise RuntimeError('地表生成尚未完成')
-        job.update(state='done', progress=100, message='生成完成', result=result)
-        (ROOT / 'current.json').write_text(json.dumps({'directory': result['id']}))
+        pointer = ROOT / 'current.json.tmp'
+        pointer.write_text(json.dumps({'directory': result['id']}))
+        pointer.replace(ROOT / 'current.json')
+        job.update(state='done', progress=100, progress_known=True, message='生成完成', result=result)
+    except InterruptedError as error:
+        job.update(state='cancelled', message=str(error), progress_known=False)
     except Exception as error:
         job.update(state='failed', message=str(error), progress=0)
 
@@ -137,26 +192,105 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         try:
-            if path == '/api/config': return self.json({'defaults': DEFAULTS})
+            if path == '/api/config': return self.json({'defaults': DEFAULTS, 'flood_defaults': flood_run.DEFAULTS})
             if path == '/api/current':
-                pointer = ROOT / 'current.json'
-                directory = json.loads(pointer.read_text())['directory'] if pointer.is_file() else 'example/raw'
-                return self.json(describe(directory))
+                return self.json(current_terrain())
+            if path=='/api/maps/schema':
+                from multilayer import DATA_DICTIONARY
+                return self.json(DATA_DICTIONARY)
+            if path.startswith('/api/maps/'):
+                parts=path.strip('/').split('/');sid=parts[2]
+                with LOCK:entry=MAP_SESSIONS.get(sid)
+                if entry is None:return self.json({'error':'未找到这次多层场景'},404)
+                with entry['lock']:
+                    if len(parts)==5 and parts[3]=='agent':
+                        from urllib.parse import parse_qs
+                        factor=int(parse_qs(urlparse(self.path).query).get('pool',['1'])[0])
+                        return self.json(entry['world'].policy_view(parts[4],factor))
+                    if len(parts)==3:return self.json(map_reply(sid,entry))
+                return self.json({'error':'未找到地图操作'},404)
+            if path.startswith('/api/flood-jobs/'):
+                with LOCK:
+                    job = FLOOD_JOBS.get(path.rsplit('/', 1)[1])
+                    snapshot = dict(job) if job else None
+                return self.json(snapshot if snapshot else {'error': '未找到这次洪水模拟'}, 200 if snapshot else 404)
             if path.startswith('/api/jobs/'):
                 job = JOBS.get(path.rsplit('/', 1)[1])
                 return self.json(job if job else {'error': '未找到这次生成'}, 200 if job else 404)
             return super().do_GET()
+        except (ValueError,KeyError) as error: return self.json({'error': str(error)}, 400)
         except Exception as error: return self.json({'error': str(error)}, 500)
     def do_POST(self):
-        if self.path != '/api/generate': return self.json({'error': '未找到操作'}, 404)
         # Only same-origin/local requests may trigger the desktop generator.
         origin = self.headers.get('Origin')
         if origin and urlparse(origin).netloc != self.headers.get('Host'):
             return self.json({'error': '请从本地页面生成'}, 403)
         try:
+            if self.path=='/api/maps' or self.path.startswith('/api/maps/'):
+                length=int(self.headers.get('Content-Length',0))
+                if not 0<length<=8*1024*1024:raise ValueError('地图数据过长或为空')
+                data=json.loads(self.rfile.read(length))
+                if not isinstance(data,dict):raise ValueError('地图操作参数需要是对象')
+                import map_sessions
+                if self.path=='/api/maps':
+                    world=map_sessions.create(ROOT,current_terrain(),data)
+                    sid='maps-'+uuid.uuid4().hex[:12];entry=dict(world=world,lock=threading.Lock())
+                    map_sessions.persist(ROOT,sid,world)
+                    with LOCK:
+                        if len(MAP_SESSIONS)>=3:MAP_SESSIONS.pop(next(iter(MAP_SESSIONS)))
+                        MAP_SESSIONS[sid]=entry
+                    return self.json(map_reply(sid,entry),201)
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=4:return self.json({'error':'未找到地图操作'},404)
+                sid,action=parts[2:]
+                with LOCK:entry=MAP_SESSIONS.get(sid)
+                if entry is None:return self.json({'error':'未找到这次多层场景'},404)
+                with entry['lock']:
+                    w=entry['world'];name=data.get('agent','uav-1')
+                    if action=='advance':w.advance(data.get('seconds',10))
+                    elif action=='observe':w.observe(name,data.get('valid',True))
+                    elif action=='move':w.move(name,data.get('x'),data.get('z'))
+                    elif action=='share':w.share(name,data.get('target','team'))
+                    else:return self.json({'error':'未找到地图操作'},404)
+                    map_sessions.persist(ROOT,sid,w)
+                    return self.json(map_reply(sid,entry))
+            if self.path.startswith('/api/jobs/') and self.path.endswith('/cancel'):
+                jobid = self.path.split('/')[-2]
+                with LOCK:
+                    job = JOBS.get(jobid)
+                    if job is None: return self.json({'error': '未找到这次生成'}, 404)
+                    if job['state'] in ('queued', 'running'):
+                        job.update(cancel_requested=True, message='正在停止生成…')
+                return self.json({'id': jobid})
+            if self.path.startswith('/api/flood-jobs/') and self.path.endswith('/cancel'):
+                jobid = self.path.split('/')[-2]
+                with LOCK:
+                    job = FLOOD_JOBS.get(jobid)
+                    if job is None: return self.json({'error': '未找到这次洪水模拟'}, 404)
+                    if job['state'] in ('queued', 'running'):
+                        job.update(cancel_requested=True, message='正在停止计算…')
+                return self.json({'id': jobid})
+            if self.path not in ('/api/generate', '/api/flood'):
+                return self.json({'error': '未找到操作'}, 404)
             length = int(self.headers.get('Content-Length', 0))
             if not 0 < length <= 16384: raise ValueError('参数过长或为空')
-            config = settings(json.loads(self.rfile.read(length)))
+            data = json.loads(self.rfile.read(length))
+            if self.path == '/api/flood':
+                terrain = current_terrain()
+                # Bind the submitted scenario to the map actually shown in the browser.
+                if not isinstance(data, dict) or data.get('terrain_id') != terrain['id']:
+                    return self.json({'error': '当前地图已更新，请读取最新地图后再模拟'}, 409)
+                config = flood_run.settings(data, terrain['shape'])
+                with LOCK:
+                    if any(v['state'] in ('queued', 'running') for v in FLOOD_JOBS.values()):
+                        return self.json({'error': '已有洪水模拟正在计算，请等待或取消'}, 409)
+                    # Keep bounded in-memory status; exported files are preserved.
+                    if len(FLOOD_JOBS) >= 10: FLOOD_JOBS.pop(next(iter(FLOOD_JOBS)))
+                    jobid = 'flood-' + uuid.uuid4().hex[:12]
+                    FLOOD_JOBS[jobid] = dict(id=jobid, state='queued', progress=0, message='正在开始模拟…')
+                threading.Thread(target=simulate_flood, args=(jobid, terrain, config), daemon=True).start()
+                return self.json({'id': jobid}, 202)
+            config = settings(data)
             with LOCK:
                 active = next((v for v in JOBS.values() if v['state'] in ('queued', 'running')), None)
                 if active: return self.json({'error': '已有地图正在生成，请等待完成'}, 409)
@@ -164,8 +298,10 @@ class Handler(SimpleHTTPRequestHandler):
                 JOBS[jobid] = dict(id=jobid, state='queued', progress=0, message='正在开始生成…')
             threading.Thread(target=generate, args=(jobid, config), daemon=True).start()
             return self.json({'id': jobid}, 202)
-        except (ValueError, TypeError, json.JSONDecodeError) as error:
+        except (ValueError, TypeError, KeyError, json.JSONDecodeError) as error:
             return self.json({'error': str(error)}, 400)
+        except Exception as error:
+            return self.json({'error': str(error)}, 500)
     def log_message(self, format, *args):
         if '/api/jobs/' not in self.path: super().log_message(format, *args)
 
