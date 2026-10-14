@@ -106,6 +106,8 @@ def prepare(root, terrain, config):
                 units=dict(bed='m', depth='m', u='m/s', v='m/s', maximum_depth='m', time='s'),
                 frame_fields=['depth', 'u', 'v', 'maximum_depth'], frame_dtype='<f4',
                 wet_threshold_m=.01, frames=[])
+    meta['terrain_mode'] = terrain['config'].get('terrain_mode', 'custom')
+    if 'terrain_profile' in terrain: meta['terrain_profile'] = terrain['terrain_profile']
     meta['boundary_conditions'] = dict(mode=config['boundary'], sea_level_m=sea_level,
         sea_edges={name: mask.tolist() for name, mask in solver.sea_edges.items()},
         sea_face_count=sum(int(mask.sum()) for mask in solver.sea_edges.values()),

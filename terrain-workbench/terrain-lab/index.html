@@ -11,6 +11,8 @@
   <form id="controls">
     <input type="hidden" id="main_bank_width" name="main_bank_width" value="28"><input type="hidden" id="branch_bank_width" name="branch_bank_width" value="20"><input type="hidden" id="branch_depth" name="branch_depth" value="5">
     <div class="preset-row"><button type="button" id="rich" class="preset active">水系丰富</button><button type="button" id="original" class="preset">原始参数</button></div>
+    <label class="field" for="terrain_mode">目标地形<select id="terrain_mode" name="terrain_mode" aria-label="目标地形"><option value="custom">自由调整</option><option value="water_network">稠密水网</option><option value="mountains">高山</option><option value="plains">平原</option></select></label>
+    <p id="terrainModeHelp" class="terrain-help">种子决定随机细节，参数决定地形倾向。</p>
     <div class="seed-row"><label for="seed">地图种子</label><div class="seed-input"><input id="seed" name="seed" value="42" inputmode="numeric"><button type="button" id="randomSeed" aria-label="随机种子">↻</button></div></div>
     <h2>地形</h2>
     <label class="slider">地形起伏 <output for="vertical_scale"></output><input id="vertical_scale" name="vertical_scale" type="range" min="0.25" max="2" step="0.05" value="0.8"></label>
@@ -43,11 +45,12 @@
   <div class="map-wrap"><canvas id="map" width="768" height="768" tabindex="0" role="img" aria-label="二维地形网格图，可点击网格查看其高程、方块与群系">二维地图</canvas><div id="loading" class="loading" hidden><span class="spinner"></span><p id="phase">正在生成…</p><progress id="progress" max="100" value="0"></progress><span id="elapsed"></span><div class="generation-actions"><button id="cancelGenerate" type="button">取消生成</button><a id="generationLog" target="_blank" rel="noopener" hidden>查看生成记录 ↗</a></div></div></div>
   <div id="legend" class="legend"></div>
   <p id="inletSummary" class="status"></p>
+  <p id="terrainProfile" class="terrain-help"></p>
   <div class="detail" id="cellDetail" aria-live="polite">移动鼠标或点击网格，查看高程和地表信息。</div>
   <a id="lastGenerationLog" class="generation-log" target="_blank" rel="noopener" hidden>查看本次生成记录 ↗</a>
   <p id="status" class="status" role="status">建筑、火山与蘑菇岛生成已关闭。</p>
 </section>
 </main>
 <dialog id="imagePreview"><div class="preview-title"><h2 id="imageTitle">当前地图</h2><button id="closePreview" type="button" aria-label="关闭图片预览">×</button></div><img id="previewImage" alt="当前地图图层"><p>可右键图片另存为。</p></dialog>
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body></html>

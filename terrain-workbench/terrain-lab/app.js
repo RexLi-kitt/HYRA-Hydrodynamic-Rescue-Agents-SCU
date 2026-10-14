@@ -2,6 +2,7 @@
 const $ = id => document.getElementById(id);
 const form = $('controls'), canvas = $('map'), ctx = canvas.getContext('2d');
 let map = null, arrays = {}, layer = 'height', defaults = null, busy = false, generationJob = null;
+let terrainProfiles = {};
 const materialLabels = ['草本地表','土壤','砂质地表','砂砾','黏土','岩石'];
 const materialColors = ['#6b9e58','#9b7049','#e1cd94','#a0a397','#9baeb7','#697b80'];
 const biomeStyles = {
@@ -38,8 +39,9 @@ function updateLabels() {
   output.value = input.id.endsWith('chance') ? `${Math.round(Number(input.value)*100)}%` : String(Number(input.value));
  }
  $('modeHelp').textContent = $('mode').value === 'quick' ? '快速预览只生成地形与河网。' : '完整生成耗时更长，包含实际方块与群系。';
+ $('terrainModeHelp').textContent = $('terrain_mode').value === 'custom' ? '种子决定随机细节，参数决定地形倾向。' : '保留种子，最多检查附近 9 个区域；符合目标后才替换地图。修改地形参数会回到自由调整。';
 }
-function getConfig() { const o = Object.fromEntries(new FormData(form)); for (const k of Object.keys(o)) if (!['seed','mode'].includes(k)) o[k] = Number(o[k]); return o; }
+function getConfig() { const o = Object.fromEntries(new FormData(form)); for (const k of Object.keys(o)) if (!['seed','mode','terrain_mode'].includes(k)) o[k] = Number(o[k]); return o; }
 function applyConfig(config) { for (const [k,v] of Object.entries(config)) if ($(k)) $(k).value = v; updateLabels(); }
 function notify(text, error = false) { $('status').textContent = text; $('status').classList.toggle('error', error); }
 async function json(url, options) { const r = await fetch(url, options); const j = await r.json(); if (!r.ok) throw new Error(j.error || '读取失败'); return j; }
@@ -58,7 +60,9 @@ async function loadMap(result) {
  map.biomeNames = Object.fromEntries(Object.entries(map.biome_ids).map(([n,i]) => [i,n]));
  const [nz,nx] = map.shape;
  $('mapInfo').textContent = `${nx} × ${nz} 网格 · 间距 ${map.step} · ${map.full ? '完整地表' : '地形预览'} · 种子 ${map.config.seed}`;
- $('mapTitle').textContent = map.config.river_count >= 20 ? '水系丰富的地图' : '当前地形';
+ const profile=map.terrain_profile;
+ $('mapTitle').textContent = profile?.accepted ? `${profile.label}地图` : '当前地形';
+ $('terrainProfile').textContent = profile?.accepted ? `已通过${profile.label}检查 · 陆地 ${(profile.metrics.land_fraction*100).toFixed(0)}% · 陆地起伏 ${profile.metrics.land_relief_m.toFixed(1)} m${profile.terrain_mode==='water_network'?` · 河流水面 ${(profile.metrics.wet_river_fraction*100).toFixed(1)}%`:''} · 区域起点 (${map.origin.join(', ')}) · 检查了 ${profile.candidates_checked} 个区域` : '';
  for (const b of document.querySelectorAll('[data-layer]')) {
   b.disabled = !map.full && ['material','biome'].includes(b.dataset.layer);
   b.title = b.disabled ? '完整生成地表后可查看' : '';
@@ -151,10 +155,12 @@ async function generate(event) {
   const logUrl=`/generated/${job.id}/generation.log`;
   for(const id of ['generationLog','lastGenerationLog']){$(id).href=logUrl;$(id).hidden=false;}
   while(true){const state=await json(`/api/jobs/${job.id}`);$('phase').textContent=state.message;
+   if(state.candidate_count)$('phase').textContent+=`（区域 ${state.candidate_index}/${state.candidate_count}）`;
+   if(state.log_url)for(const id of ['generationLog','lastGenerationLog'])$(id).href=state.log_url;
    if(state.progress_known)$('progress').value=state.progress;else $('progress').removeAttribute('value');
    if(state.state==='cancelled'){notify(state.message);break;}
    if(state.state==='failed')throw new Error(state.message);
-   if(state.state==='done'){await loadMap(state.result);notify(`生成完成。${map.full ? '当前可查看实际方块与群系。' : '切换“完整地表与群系”生成后可查看地表类型。'}`);break;}
+   if(state.state==='done'){await loadMap(state.result);applyConfig(map.config);notify(`生成完成。${map.full ? '当前可查看实际方块与群系。' : '切换“完整地表与群系”生成后可查看地表类型。'}`);break;}
    await new Promise(resolve=>setTimeout(resolve,1500));
   }
  }catch(error){notify(error.message,true);}
@@ -166,13 +172,14 @@ $('cancelGenerate').addEventListener('click',async()=>{
  catch(error){notify(error.message,true);$('cancelGenerate').disabled=false;}
 });
 form.addEventListener('submit',generate);
-form.addEventListener('input',()=>{updateLabels();document.querySelectorAll('.preset').forEach(b=>b.classList.remove('active'));notify('参数已修改，点击“生成地图”应用。');});
+form.addEventListener('input',event=>{if(!['seed','origin_x','origin_z','span','mode','terrain_mode'].includes(event.target.id))$('terrain_mode').value='custom';updateLabels();document.querySelectorAll('.preset').forEach(b=>b.classList.remove('active'));notify('参数已修改，点击“生成地图”应用。');});
+$('terrain_mode').addEventListener('change',()=>{const profile=terrainProfiles[$('terrain_mode').value];if(profile)applyConfig(profile.parameters);updateLabels();notify('目标地形已选择，点击“生成地图”应用。');});
 $('mode').addEventListener('change',updateLabels);
 $('randomSeed').addEventListener('click',()=>{$('seed').value=String(crypto.getRandomValues(new Uint32Array(1))[0]);notify('种子已修改，点击“生成地图”应用。');});
-$('rich').addEventListener('click',()=>{applyConfig(defaults);$('rich').classList.add('active');$('original').classList.remove('active');notify('已载入水系丰富参数，点击“生成地图”应用。');});
-$('original').addEventListener('click',()=>{applyConfig({...defaults,vertical_scale:1,continent_scale:3000,region_size:1200,river_count:8,main_width:8,branch_width:5,river_depth:5,main_bank_width:20,branch_bank_width:14,branch_depth:4,lake_chance:0.3,wetland_chance:0.6,lake_distance:0.03});$('original').classList.add('active');$('rich').classList.remove('active');notify('已载入原始参数，点击“生成地图”应用。');});
+$('rich').addEventListener('click',()=>{const current=getConfig();applyConfig({...defaults,seed:current.seed,origin_x:current.origin_x,origin_z:current.origin_z,span:current.span,mode:current.mode});$('rich').classList.add('active');$('original').classList.remove('active');notify('已载入水系丰富参数，点击“生成地图”应用。');});
+$('original').addEventListener('click',()=>{const current=getConfig();applyConfig({...defaults,seed:current.seed,origin_x:current.origin_x,origin_z:current.origin_z,span:current.span,mode:current.mode,vertical_scale:1,continent_scale:3000,region_size:1200,river_count:8,main_width:8,branch_width:5,river_depth:5,main_bank_width:20,branch_bank_width:14,branch_depth:4,lake_chance:0.3,wetland_chance:0.6,lake_distance:0.03});$('original').classList.add('active');$('rich').classList.remove('active');notify('已载入原始参数，点击“生成地图”应用。');});
 document.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>setLayer(b.dataset.layer)));
 canvas.addEventListener('pointermove',inspectCell);canvas.addEventListener('click',inspectCell);
 $('exportPng').addEventListener('click',()=>{if(!map)return;$('previewImage').src=canvas.toDataURL('image/png');$('imageTitle').textContent=`${{height:'地形高程',water:'水系',material:'地表类型',biome:'群系'}[layer]} · 种子 ${map.config.seed}`;$('imagePreview').showModal();});
 $('closePreview').addEventListener('click',()=>$('imagePreview').close());
-(async()=>{for(const el of form.querySelectorAll('button,input,select'))el.disabled=true;try{const cfg=await json('/api/config');defaults=cfg.defaults;applyConfig(defaults);const example=new URLSearchParams(location.search).get('example')==='rich';const current=await json(example?'/rich-result.json':'/api/current');applyConfig({...current.config,mode:'quick'});await loadMap(current);}catch(error){notify(`读取地图失败：${error.message}`,true);}finally{for(const el of form.querySelectorAll('button,input,select'))el.disabled=false;}})();
+(async()=>{for(const el of form.querySelectorAll('button,input,select'))el.disabled=true;try{const cfg=await json('/api/config');defaults=cfg.defaults;terrainProfiles=cfg.terrain_profiles||{};applyConfig(defaults);const example=new URLSearchParams(location.search).get('example')==='rich';const current=await json(example?'/rich-result.json':'/api/current');applyConfig({...current.config,mode:'quick'});await loadMap(current);}catch(error){notify(`读取地图失败：${error.message}`,true);}finally{for(const el of form.querySelectorAll('button,input,select'))el.disabled=false;}})();
