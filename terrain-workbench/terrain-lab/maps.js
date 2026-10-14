@@ -6,6 +6,7 @@ let terrain,scene,process={state:'ready',frames:[]},patches=[],selected={x:0,z:0
 let externalDraft=[],pickInflow=false,inflowDirty=false;
 const selectedRiverIds=new Set();
 let busy=false,playing=false,time=0,display,baseImage,terrainMin=0,terrainMax=1,epoch=0,pollTimer,seekVersion=0,seeking=false;
+let speedScale=0;
 const cache=new Map(),pending=new Map();let lastDraw=0;
 const fields={mapResolution:'resolution',mapUnit:'metres_per_block',mapDuration:'duration_s',
  mapManning:'manning',mapRain:'rain_mm_h',mapRainUntil:'rain_duration_s',mapInfiltration:'infiltration_mm_h',
@@ -63,7 +64,8 @@ function installScene(next){
  $('computeStatus').textContent='地图已建立，初始水体已显示。';$('mapProgress').value=0;render();
 }
 async function restore(id){
- const next=await json(`/api/maps/${id}`);installScene(next);remember();
+ let next;try{next=await json(`/api/maps/${id}`);}catch(e){if(e.status!==404||!/^maps-[a-z0-9-]+$/.test(id))throw e;next=await json(`/generated/${id}/maps/replay.json`);}
+ installScene(next);remember();
  const mode=scene.provenance==='synthetic_multilayer_demo'?'demo':'current';
  externalDraft=normalizeInflows(next.scenario_config?.external_inflows||next.M_forcing?.external_inflows||[]);inflowDirty=false;inletControls();
  imported=scene.scenario_config||{mode,terrain_id:terrain.id,layers:{...scene.M_base,hydrographs:scene.source_hydrographs},flood:scene.config};
@@ -71,13 +73,14 @@ async function restore(id){
  for(const [key,name] of Object.entries(fields))$(key).value=scene.config[name];
  $('mapBoundary').value=scene.config.boundary;$('mapInitialWater').checked=scene.config.initial_water;$('mapBaseflow').checked=scene.config.baseflow;
  if(scene.config.inflow_m3_s>0&&!externalDraft.some(p=>p.id==='legacy-point'))externalDraft.push({id:'legacy-point',kind:'manual',x:scene.config.source_x,z:scene.config.source_z,enabled:true,hydrograph:[[0,scene.config.inflow_m3_s]]});
- inletControls();makeBase();$('hydrographs').value=JSON.stringify(imported.layers?.hydrographs||{});
+ inletControls();restoreInflowEditor();makeBase();$('hydrographs').value=JSON.stringify(imported.layers?.hydrographs||{});
  await poll(epoch);status(active()?'已恢复正在运行的洪水过程，可以继续查看或取消。':'已恢复洪水过程，可播放与导出。');controls();
  if(process.frames.length){const pair=framePair(process.frames,0);await Promise.all([requestFrame(pair.lo),requestFrame(pair.hi)]);renderTime(0);}
 }
 async function poll(token){
  try{
-  const id=scene.id,p=await json(`/api/maps/${id}/status`);if(token!==epoch)return;process=p;
+  const id=scene.id,p=await json(scene.archive_status_url||`/api/maps/${id}/status`);if(token!==epoch)return;process=p;
+  if(updateSpeedScale())draw('speedMap','speed');
   $('computeStatus').textContent=p.message;$('mapProgress').value=p.progress;
   $('availableTime').textContent=`已计算 ${fmt(available(),1)} / ${fmt(scene.config.duration_s)} 秒`;
   if(p.initial_conditions){const w=p.initial_conditions;
@@ -114,6 +117,13 @@ function renderTime(target){
 }
 function crossings(){return $('mapSource').value==='demo'?[]:(scene?.M_forcing?.river_crossings||terrain?.river_inlets?.crossings||[]);}
 function inletCurve(){return validateCurve($('customInflowCurve').checked?JSON.parse($('inflowCurve').value):windowCurve(Number($('inflowStart').value),Number($('inflowEnd').value),Number($('mapInflow').value)));}
+function inletVelocity(){const v=Number($('inflowVelocity').value);if(!Number.isFinite(v)||v<0||v>30)throw Error('入流速度须为0—30 m/s，0为自动');return v;}
+function restoreInflowEditor(){
+ const p=externalDraft[0];if(!p)return;const curve=p.hydrograph,simple=curve.length===2&&curve[1][1]===0;
+ $('mapInflow').value=curve[0][1];$('inflowStart').value=curve[0][0];
+ if(simple)$('inflowEnd').value=curve[1][0];$('customInflowCurve').checked=!simple;
+ $('inflowCurve').value=JSON.stringify(curve);$('inflowVelocity').value=p.inlet_velocity_m_s??0;
+}
 function normalizeInflows(values){if(!Array.isArray(values)||values.length>32)throw Error('外源点列表最多32项');return values.map(p=>({...p,kind:p.kind??'manual',enabled:p.enabled??true,hydrograph:validateCurve(p.hydrograph??[[0,50],[120,0]])}));}
 function inletControls(){
  const points=crossings();for(const id of selectedRiverIds)if(!points.some(p=>p.id===id))selectedRiverIds.delete(id);
@@ -128,8 +138,8 @@ function inletControls(){
  $('externalInflowList').replaceChildren(...externalDraft.map(p=>{
   const row=document.createElement('div');row.className='inlet-row';const label=document.createElement('label'),check=document.createElement('input');check.type='checkbox';check.checked=p.enabled;check.setAttribute('aria-label',`启用入水点 ${p.id}`);
   check.onchange=()=>{p.enabled=check.checked;forcingEdited();};label.append(check,document.createTextNode(p.kind==='river'?portLabel(points.find(v=>v.id===p.id)||p):`手动入水点 ${p.id} · (${p.x},${p.z})`));
-  const desc=document.createElement('small');desc.textContent=p.hydrograph.map(([t,q])=>`${fmt(t)}s: ${fmt(q)}m³/s`).join(' → ');
-  const edit=document.createElement('button');edit.textContent='修改流量';edit.setAttribute('aria-label',`修改入水点 ${p.id}`);edit.onclick=()=>{try{p.hydrograph=inletCurve();forcingEdited();}catch(e){status(e.message,true);}};
+  const desc=document.createElement('small');desc.textContent=p.hydrograph.map(([t,q])=>`${fmt(t)}s: ${fmt(q)}m³/s`).join(' → ')+(p.kind==='river'?` · 边界入流速度 ${p.inlet_velocity_m_s?fmt(p.inlet_velocity_m_s)+' m/s':'自动'}`:' · 体积补给');
+  const edit=document.createElement('button');edit.textContent='修改来水';edit.setAttribute('aria-label',`修改入水点 ${p.id}`);edit.onclick=()=>{try{const curve=inletCurve(),velocity=inletVelocity();p.hydrograph=curve;if(p.kind==='river')p.inlet_velocity_m_s=velocity;forcingEdited();}catch(e){status(e.message,true);}};
   const del=document.createElement('button');del.textContent='移除';del.setAttribute('aria-label',`移除入水点 ${p.id}`);del.onclick=()=>{externalDraft=externalDraft.filter(v=>v.id!==p.id);forcingEdited();};
   row.append(label,desc,edit,del);return row;
  }));controls();
@@ -147,16 +157,18 @@ function externalMarkers(ctx){
   const x=Math.max(9,Math.min(S-9,px)),z=Math.max(9,Math.min(S-9,pz));ctx.save();ctx.strokeStyle=enabled?'#8c3bb2':p.role==='outlet'?'#777e87':'#8c5ca0';ctx.fillStyle=ctx.strokeStyle;ctx.lineWidth=3;
   ctx.beginPath();ctx.arc(x,z,7,0,Math.PI*2);ctx.stroke();
   if(enabled){ctx.beginPath();if(p.kind==='manual'){ctx.moveTo(x-4,z);ctx.lineTo(x+4,z);ctx.moveTo(x,z-4);ctx.lineTo(x,z+4);}else{const [dx,dz]=({west:[1,0],east:[-1,0],north:[0,1],south:[0,-1]})[p.edge]||[1,0];ctx.moveTo(x-dx*5-dz*3,z-dz*5+dx*3);ctx.lineTo(x+dx*5,z+dz*5);ctx.lineTo(x-dx*5+dz*3,z-dz*5-dx*3);}ctx.stroke();}
-  if(enabled){ctx.font='bold 17px sans-serif';ctx.textAlign=x>S/2?'right':'left';const text=`${inflowDirty?'草稿 ':''}${fmt(discharge(entry.hydrograph,time))} m³/s`;const tx=x+(x>S/2?-13:13),tz=Math.max(22,Math.min(S-8,z));ctx.strokeStyle='#fff';ctx.lineWidth=4;ctx.strokeText(text,tx,tz);ctx.fillText(text,tx,tz);}
+  if(enabled){ctx.font='bold 17px sans-serif';ctx.textAlign=x>S/2?'right':'left';const q=discharge(entry.hydrograph,time),text=`${inflowDirty?'草稿 ':''}${fmt(q)} m³/s`;const tx=x+(x>S/2?-13:13),tz=Math.max(22,Math.min(S-28,z));ctx.strokeStyle='#fff';ctx.lineWidth=4;ctx.strokeText(text,tx,tz);ctx.fillText(text,tx,tz);
+   const state=boundaryInfo(entry.id);if(!inflowDirty&&q>0&&state&&Math.abs(state.discharge_m3_s-q)<1e-6){const label=`边界入速 ${boundarySpeed(state)} m/s`;ctx.font='14px sans-serif';ctx.strokeText(label,tx,tz+18);ctx.fillText(label,tx,tz+18);}
+  }
   ctx.restore();
  }
 }
 $('addRiverInflow').onclick=()=>{
  if(active()||busy)return;
  try{
-  const points=crossings().filter(p=>selectedRiverIds.has(p.id)),curve=inletCurve();
+  const points=crossings().filter(p=>selectedRiverIds.has(p.id)),curve=inletCurve(),velocity=inletVelocity();
   if(externalDraft.length+points.filter(p=>!externalDraft.some(e=>e.id===p.id)).length>32)throw Error('最多32个外源来水点');
-  for(const p of points){const entry={id:p.id,kind:'river',enabled:true,hydrograph:curve.map(v=>[...v])},existing=externalDraft.find(e=>e.id===p.id);if(existing)Object.assign(existing,entry);else externalDraft.push(entry);}
+  for(const p of points){const entry={id:p.id,kind:'river',enabled:true,inlet_velocity_m_s:velocity,hydrograph:curve.map(v=>[...v])},existing=externalDraft.find(e=>e.id===p.id);if(existing)Object.assign(existing,entry);else externalDraft.push(entry);}
   selectedRiverIds.clear();forcingEdited();
  }catch(e){status(e.message,true);}
 };
@@ -164,7 +176,13 @@ $('addManualInflow').onclick=()=>{let n=1;while(externalDraft.some(p=>p.id===`ma
 $('pickInflow').onclick=()=>{pickInflow=!pickInflow;$('pickInflow').setAttribute('aria-pressed',String(pickInflow));status(pickInflow?'点击任意地图选择强制来水位置，然后添加入水点。':'已退出入水选点。');};
 function rgbHeight(z){const t=(z-terrainMin)/Math.max(.01,terrainMax-terrainMin);return [112+116*t,152+74*t,117+74*t];}
 function rgbDepth(h){const t=Math.min(1,Math.max(0,h)/Math.max(.1,Number($('depthScale').value)||3));return [155-134*t,217-156*t,234-110*t];}
-function rgbSpeed(v){const t=Math.min(1,v/2);return t<.5?[151+166*t,210+18*t,189-154*t]:[234,219-290*(t-.5),112-88*(t-.5)];}
+function updateSpeedScale(){
+ let peak=0;for(const f of [scene.M_water.summary,...process.frames]){const v=Number(f.max_speed_m_s);if(Number.isFinite(v)&&v>peak)peak=v;}
+ const changed=peak!==speedScale;speedScale=peak;const label=fmt(peak,peak<.01?6:2);
+ $('speedCaption').textContent=peak?`0—${label} m/s · 已计算帧峰值，统一色标`:'静水 · 流速为0 m/s';
+ $('speedLimit').textContent=`${label} m/s`;return changed;
+}
+function rgbSpeed(v){const t=speedScale>0?Math.min(1,Math.max(0,v/speedScale)):0;return t<.5?[151+166*t,210+18*t,189-154*t]:[234,219-290*(t-.5),112-88*(t-.5)];}
 function image(colors){const [nz,nx]=scene.grid.shape,cv=document.createElement('canvas');cv.width=nx;cv.height=nz;
  const img=new ImageData(nx,nz);for(let i=0;i<nx*nz;i++)img.data.set([...colors(i).map(Math.round),255],i*4);cv.getContext('2d').putImageData(img,0,0);return cv;}
 function markers(ctx,sources=true){
@@ -226,10 +244,15 @@ function inspect(){
  const [nz,nx]=scene.grid.shape,N=nz*nx,x=selected.x,z=selected.z,i=z*nx+x,b=scene.M_base,h=display[i],u=display[N+i],v=display[2*N+i];
  const types=terrain.terrain_ids||{},label=scene.provenance==='synthetic_multilayer_demo'?b.terrain_class[z][x]:types[b.terrain_class[z][x]]||b.terrain_class[z][x];
  const incoming=(scene.M_forcing?.external_inflows||[]).filter(p=>p.enabled&&p.cells.some(c=>c.x===x&&c.z===z)).map(p=>`${p.id} ${fmt(discharge(p.hydrograph,time))} m³/s`).join('；');
+ const states=accountedWater().boundary_inflows||[],boundary=states.filter(p=>p.faces.some(f=>f.x===x&&f.z===z)).map(p=>`${fmt(p.discharge_m3_s)} m³/s · 面入速 ${boundarySpeed(p)} m/s`).join('；');
  $('mapCellDetail').textContent=`${fmt(time,1)} 秒 · 格 (${x}, ${z}) · 地面 ${fmt(b.z[z][x])} m · 地表 ${label} · 糙率 ${fmt(b.n[z][x],3)} · 建筑 ${b.solid[z][x]?'是':'否'}\n水深 ${fmt(h,3)} m · 水面 ${fmt(b.z[z][x]+h,3)} m · 流速 ${fmt(Math.hypot(u,v),3)} m/s · X / Z 速度 ${fmt(u,3)} / ${fmt(v,3)} m/s\n累计最大水深 ${fmt(display[3*N+i],3)} m · 本格储水 ${fmt(h*scene.grid.dx_m**2)} m³ · 排水能力 ${fmt(b.drain_capacity[z][x])} m³/s · 水源编号 ${b.source_id[z][x]}${incoming?'\n外源来水：'+incoming:''}`;
+ if(boundary)$('mapCellDetail').textContent+=`\n边界输入（最近计算子步 ${fmt(accountedWater().boundary_sample_time_s,3)} 秒）：${boundary}`;
 }
+function accountedWater(){const pair=framePair(process.frames,time);return pair?process.frames[pair.lo]:scene.M_water.summary;}
+function boundaryInfo(id){return (accountedWater().boundary_inflows||scene.M_forcing?.boundary_inflows||[]).find(p=>p.id===id);}
+function boundarySpeed(p){const v=p.faces.map(f=>f.inward_velocity_m_s),lo=Math.min(...v),hi=Math.max(...v);return hi-lo<.01?fmt(hi):`${fmt(lo)}—${fmt(hi)}`;}
 function render(pair){
- if(!scene)return;pair??=framePair(process.frames,time);draw('baseMap','base');draw('depthMap','depth');draw('speedMap','speed');draw('maximumMap','maximum');inspect();
+ if(!scene)return;updateSpeedScale();pair??=framePair(process.frames,time);draw('baseMap','base');draw('depthMap','depth');draw('speedMap','speed');draw('maximumMap','maximum');inspect();
  $('worldTime').textContent=`${fmt(time,1)} 秒`;$('mapTimeline').value=time;
  const limit=Math.max(.1,Number($('depthScale').value)||3);$('depthLimit').textContent=`≥ ${fmt(limit)} m`;$('maximumLimit').textContent=`≥ ${fmt(limit)} m`;
  $('depthCaption').textContent=pair&&pair.alpha>1e-6&&pair.alpha<1-1e-6?'帧间平滑显示 · 流向与 m/s':'计算水情 · 流向与 m/s';
@@ -282,18 +305,19 @@ function displayedForcing(){
  return {external_inflows:entries,river_crossings:scene.M_forcing?.river_crossings||[],
   inlet_count:scene.M_forcing?.inlet_count||Array.from({length:nz},()=>Array(nx).fill(0)),
   external_rate_m_s:rate,instantaneous_discharge_by_id_m3_s:byId,
+  boundary_inflows:actual.boundary_inflows||[],boundary_sample_time_s:actual.boundary_sample_time_s??null,
   accumulated_m3:actual.external_inflow_by_id_m3||{},accounted_frame_time_s:actual.time_s};
 }
 function saveJson(data,name){download(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),name);}
 $('saveMapConfig').onclick=()=>{try{saveJson(config(),'hyra-map-flood-scenario.json');}catch(e){status(e.message,true);}};
 $('exportFrame').onclick=()=>{if(!scene)return;const [nz,nx]=scene.grid.shape,N=nz*nx,pair=framePair(process.frames,time),layers={};for(const [k,j] of ['depth','u','v','maximum_depth'].entries())layers[j]=Array.from({length:nz},(_,z)=>Array.from(display.slice(k*N+z*nx,k*N+(z+1)*nx)));saveJson({schema:'hyra-map-display-v1',time_s:time,grid:scene.grid,display_interpolated:Boolean(pair&&pair.alpha>1e-6&&pair.alpha<1-1e-6),source_frame_times_s:pair?[process.frames[pair.lo].time_s,process.frames[pair.hi].time_s]:[0],M_forcing:displayedForcing(),layers},'hyra-displayed-water.json');};
 $('exportPng').onclick=()=>$('depthMap').toBlob(blob=>download(blob,'hyra-map-water-depth.png'));
-$('importMapConfig').onchange=async()=>{try{const file=$('importMapConfig').files[0];if(!file)return;if(file.size>8*1024*1024)throw Error('场景配置文件过大');const c=JSON.parse(await file.text());if(!c||!['current','demo'].includes(c.mode)||c.agents||c.legacy_exploration)throw Error('请选择纯地图与洪水场景配置');imported=c;patches=[];externalDraft=normalizeInflows(c.external_inflows||[]);inflowDirty=true;draft();$('mapSource').value=c.mode;for(const [id,name] of Object.entries(fields))if(c.flood?.[name]!==undefined)$(id).value=c.flood[name];for(const [id,name] of [['mapBaseflow','baseflow'],['mapInitialWater','initial_water']])if(c.flood?.[name]!==undefined)$(id).checked=c.flood[name];if(c.flood?.boundary)$('mapBoundary').value=c.flood.boundary;if(c.flood?.inflow_m3_s>0&&!externalDraft.some(p=>p.id==='legacy-point'))externalDraft.push({id:'legacy-point',kind:'manual',x:c.flood.source_x,z:c.flood.source_z,enabled:true,hydrograph:[[0,c.flood.inflow_m3_s]]});$('hydrographs').value=JSON.stringify(c.layers?.hydrographs||{});inletControls();status('地图场景配置已载入，应用或开始模拟后生效。');}catch(e){status(e.message,true);}};
+$('importMapConfig').onchange=async()=>{try{const file=$('importMapConfig').files[0];if(!file)return;if(file.size>8*1024*1024)throw Error('场景配置文件过大');const c=JSON.parse(await file.text());if(!c||!['current','demo'].includes(c.mode)||c.agents||c.legacy_exploration)throw Error('请选择纯地图与洪水场景配置');imported=c;patches=[];externalDraft=normalizeInflows(c.external_inflows||[]);inflowDirty=true;draft();$('mapSource').value=c.mode;for(const [id,name] of Object.entries(fields))if(c.flood?.[name]!==undefined)$(id).value=c.flood[name];for(const [id,name] of [['mapBaseflow','baseflow'],['mapInitialWater','initial_water']])if(c.flood?.[name]!==undefined)$(id).checked=c.flood[name];if(c.flood?.boundary)$('mapBoundary').value=c.flood.boundary;if(c.flood?.inflow_m3_s>0&&!externalDraft.some(p=>p.id==='legacy-point'))externalDraft.push({id:'legacy-point',kind:'manual',x:c.flood.source_x,z:c.flood.source_z,enabled:true,hydrograph:[[0,c.flood.inflow_m3_s]]});$('hydrographs').value=JSON.stringify(c.layers?.hydrographs||{});inletControls();restoreInflowEditor();status('地图场景配置已载入，应用或开始模拟后生效。');}catch(e){status(e.message,true);}};
 json('/api/current').then(async t=>{
  terrain=t;$('terrainInfo').textContent=`当前种子 ${t.config.seed} · ${t.shape[1]} × ${t.shape[0]} 原始网格。`;
  for(const [id,size] of [['sourceX',t.shape[1]],['sourceZ',t.shape[0]]]){$(id).max=size-1;$(id).value=Math.min(size-1,Number($(id).value));}
  controls();let saved=location.hash.slice(1);if(!saved)try{saved=localStorage.getItem('hyra-map-process')||'';}catch{}
- if(/^maps-[a-f0-9]{12}$/.test(saved)){busy=true;controls();try{await restore(saved);return;}catch{try{localStorage.removeItem('hyra-map-process');}catch{}history.replaceState(null,'',location.pathname);}finally{busy=false;controls();}}
+ if(/^maps-[a-z0-9-]{1,64}$/.test(saved)){busy=true;controls();try{await restore(saved);return;}catch{try{localStorage.removeItem('hyra-map-process');}catch{}history.replaceState(null,'',location.pathname);}finally{busy=false;controls();}}
  await create(false);
 }).catch(e=>status(e.message,true));
 requestAnimationFrame(animate);

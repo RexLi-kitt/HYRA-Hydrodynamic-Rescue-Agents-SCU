@@ -97,7 +97,8 @@ class ExternalFlowTests(unittest.TestCase):
         river_inlets.configure(w,[port],[dict(id=port['id'],kind='river',hydrograph=[[0,8]],enabled=True)],[32,48])
         cells=w.external_inflows[0]['cells'];self.assertEqual(len(cells),3)
         self.assertAlmostEqual(sum(c['weight'] for c in cells),1)
-        self.assertAlmostEqual(w.solver.external_rate.sum()*w.solver.dx**2,8)
+        self.assertEqual(w.solver.external_rate.sum(),0)
+        self.assertAlmostEqual(w.solver.forcing_rate().sum()*w.solver.dx**2,8)
         w.advance_to(1);self.assertAlmostEqual(w.solver.summary()['balance']['external_inflow_m3'],8)
         self.assertEqual(w.external_inflows[0]['id'],port['id'])
 

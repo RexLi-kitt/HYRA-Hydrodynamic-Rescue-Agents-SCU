@@ -61,6 +61,8 @@ class FloodSolver:
         self.external_schedule = []
         self.external_rate = np.zeros_like(self.h)
         self.external_volume_by_id = {}
+        self.last_boundary_inflows = []
+        self.boundary_sample_time = None
         self.balance = dict(initial_m3=float(self.h.sum() * dx**2), rainfall_m3=0.0,
                             inflow_m3=0.0, baseflow_m3=0.0, infiltration_m3=0.0, outflow_m3=0.0,
                             sea_inflow_m3=0.0, sea_outflow_m3=0.0, drainage_m3=0.0,
@@ -109,8 +111,44 @@ class FloodSolver:
     def _external_rate(self,time):
         rate=np.zeros_like(self.h)
         for entry in self.external_schedule:
+            if entry.get('delivery')=='boundary_discharge_with_momentum':continue
             q=self.external_discharge(entry,time)
             for cell in entry['cells']:rate[cell['z'],cell['x']]+=q*cell['weight']/self.dx**2
+        return rate
+
+    def boundary_forcing(self):
+        """Exact inward discharge on native-width fractions of outer faces.
+
+        Add advected normal momentum; the pressure closure extrapolates the
+        interior depth rather than prescribing both stage and discharge.
+        """
+        edges={name:dict(fraction=np.zeros(len(mask)),q=np.zeros(len(mask)),
+            advective=np.zeros(len(mask)),wave=0.) for name,mask in self.sea_edges.items()}
+        states=[]
+        for entry in self.external_schedule:
+            if entry.get('delivery')!='boundary_discharge_with_momentum':continue
+            q=self.external_discharge(entry,self.time);faces=[]
+            for face in entry['boundary_faces']:
+                flow=q*face['weight'];width=face['width_m'];z,x=face['z'],face['x']
+                critical=(flow/width)**(2/3)/G**(1/3) if flow else 0.
+                depth=max(float(self.h[z,x]),critical,DRY)
+                velocity=entry['inlet_velocity_m_s'] or flow/(width*depth)
+                if not flow:velocity=0.
+                e=edges[face['edge']];i=face['offset'];e['fraction'][i]+=width/self.dx
+                e['q'][i]+=flow/self.dx;e['advective'][i]+=flow/self.dx*velocity
+                if flow:e['wave']=max(e['wave'],velocity+np.sqrt(G*max(depth,flow/(width*max(velocity,DRY)))))
+                faces.append(dict(face,discharge_m3_s=flow,inward_velocity_m_s=float(velocity),
+                    reference_depth_m=float(flow/(width*velocity)) if velocity else float(self.h[z,x])))
+            states.append(dict(id=entry['id'],discharge_m3_s=q,faces=faces))
+        for e in edges.values():
+            if (e['fraction']>1+1e-10).any():raise ValueError('河口占用的边界宽度超过网格面宽')
+        return edges,states
+
+    def forcing_rate(self):
+        """Equivalent depth rate for diagnostics/CFL; only manual sources add h."""
+        rate=self._external_rate(self.time)
+        for state in self.boundary_forcing()[1]:
+            for face in state['faces']:rate[face['z'],face['x']]+=face['discharge_m3_s']/self.dx**2
         return rate
 
     @staticmethod
@@ -140,6 +178,7 @@ class FloodSolver:
         for name in self.balance: self.balance[name] = 0.0
         self.balance['initial_m3'] = float(self.h.sum()*self.dx**2)
         for key in self.external_volume_by_id:self.external_volume_by_id[key]=0.
+        self.last_boundary_inflows=[];self.boundary_sample_time=None
 
     def velocity(self):
         wet = self.h > DRY
@@ -149,17 +188,17 @@ class FloodSolver:
     def timestep(self, limit=1.0, rain=0.0, inflow=0.0, source=None):
         u, v = self.velocity()
         # Include this step's potential source water in the wave-speed bound.
-        prospective = self.h + (rain*(~self.solid)+self.baseflow_rate+self.source_rate+self.external_rate) * limit
+        prospective = self.h + (rain*(~self.solid)+self.baseflow_rate+self.source_rate+self.forcing_rate()) * limit
         if source is not None:
             prospective = prospective.copy()
             prospective[source] += inflow * limit / self.dx**2
         wave = np.sqrt(G * prospective)
         speed = float(np.max(np.abs(u) + wave) + np.max(np.abs(v) + wave))
         # A dry initial map can still receive deep water from the external sea.
-        speed = max(speed, 2*self.sea_wave_speed)
+        speed = max(speed, 2*self.sea_wave_speed,2*max(e['wave'] for e in self.boundary_forcing()[0].values()))
         return min(limit, 0.45 * self.dx / max(speed, 1e-9))
 
-    def _flux(self, axis):
+    def _flux(self, axis, inlet_edges=None):
         pads = ((0, 0), (1, 1)) if axis == 1 else ((1, 1), (0, 0))
         h, b, mx, mz = [np.pad(a, pads, mode='edge') for a in (self.h, self.bed, self.mx, self.mz)]
         normal = mx if axis == 1 else mz
@@ -207,6 +246,15 @@ class FloodSolver:
                 mass[s][ordinary] = q[ordinary]
                 fx[s][ordinary] = (q*ue + (.5*G*h[s]**2 if axis == 1 else 0))[ordinary]
                 fz[s][ordinary] = (q*ve + (.5*G*h[s]**2 if axis == 0 else 0))[ordinary]
+        inlet_edges=inlet_edges if inlet_edges is not None else self.boundary_forcing()[0]
+        for face,sign,name,cell in zip((0,-1),(1,-1),edge_names,(0,-1)):
+            s=(slice(None),face) if axis==1 else (face,slice(None))
+            interior=(slice(None),cell) if axis==1 else (cell,slice(None))
+            e=inlet_edges[name];fraction=np.minimum(1,e['fraction']);keep=1-fraction
+            mass[s]=mass[s]*keep+sign*e['q']
+            pressure=.5*G*self.h[interior]**2*fraction
+            fx[s]=fx[s]*keep+(e['advective']+pressure if axis==1 else 0)
+            fz[s]=fz[s]*keep+(e['advective']+pressure if axis==0 else 0)
         # Reflect each side of a blocked face separately: equal/opposite water
         # exchange is zero, while each fluid cell retains its own pressure force.
         cells=np.pad(self.solid,pads,mode='edge')
@@ -246,14 +294,20 @@ class FloodSolver:
         retained=np.divide(self.h-drained,self.h,out=np.zeros_like(self.h),where=self.h>0)
         self.mx*=retained; self.mz*=retained; self.h-=drained
         self.balance['drainage_m3']+=float(drained.sum()*area)
-        ax, bx, cx, lx, rx = self._flux(1)
-        az, bz, cz, lz, rz = self._flux(0)
+        inlet_edges,states=self.boundary_forcing()
+        self.last_boundary_inflows=states;self.boundary_sample_time=self.time
+        self.balance['external_inflow_m3']+=dt*sum(s['discharge_m3_s'] for s in states)
+        ax, bx, cx, lx, rx = self._flux(1,inlet_edges)
+        az, bz, cz, lz, rz = self._flux(0,inlet_edges)
         self.qx=ax.copy(); self.qy=az.copy()
         f = dt/self.dx
         self.h -= f*(ax[:, 1:]-ax[:, :-1] + az[1:, :]-az[:-1, :])
         self.mx -= f*(bx[:, 1:]+lx[:, 1:] - bx[:, :-1]-rx[:, :-1] + bz[1:, :]-bz[:-1, :])
         self.mz -= f*(cx[:, 1:]-cx[:, :-1] + cz[1:, :]+lz[1:, :] - cz[:-1, :]-rz[:-1, :])
         for name, outward in zip(self.sea_edges, (-ax[:, 0], ax[:, -1], -az[0, :], az[-1, :])):
+            # Remove prescribed incoming Q before classifying the remaining
+            # open/sea exchange, including mixed river/ocean coarse faces.
+            outward=outward+inlet_edges[name]['q']
             sea = self.sea_edges[name]
             self.balance['outflow_m3'] += float(dt*self.dx*outward[~sea].sum())
             self.balance['sea_inflow_m3'] += float(dt*self.dx*np.maximum(0, -outward[sea]).sum())
@@ -301,4 +355,5 @@ class FloodSolver:
                     wet_area_m2=int((self.h >= .01).sum())*self.dx**2,
                     newly_flooded_area_m2=int(((self.initial < .01) & (self.h >= .01)).sum())*self.dx**2,
                     external_inflow_by_id_m3=dict(self.external_volume_by_id),
+                    boundary_inflows=self.last_boundary_inflows,boundary_sample_time_s=self.boundary_sample_time,
                     balance=dict(b, current_m3=current, residual_m3=current-expected))

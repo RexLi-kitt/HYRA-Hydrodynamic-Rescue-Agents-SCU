@@ -162,6 +162,32 @@ def configure(world,crossings,settings,native_shape):
         if enabled and any(world.base.solid[z,x] for z,x in weights):raise ValueError('外源来水不能注入不透水建筑格')
         total=sum(weights.values());coarse=[dict(z=int(z),x=int(x),weight=w/total) for (z,x),w in sorted(weights.items())]
         entry=dict(geometry,enabled=enabled,hydrograph=points,cells=coarse,delivery='volume_source_at_inlet_cells')
+        if kind=='river':
+            velocity=item.get('inlet_velocity_m_s',0)
+            if isinstance(velocity,bool) or not isinstance(velocity,(int,float)) or not math.isfinite(velocity) or not 0<=velocity<=30:
+                raise ValueError('河口入流速度需要在0到30 m/s之间，0为自动')
+            faces=p.get('faces')
+            if not faces:
+                faces=[]
+                for z,x in cells:
+                    for edge,hit,offset in [('west',x==0,z),('east',x==native_x-1,z),('north',z==0,x),('south',z==native_z-1,x)]:
+                        if hit:faces.append(dict(edge=edge,offset=offset))
+            counts=Counter((f['edge'],f['offset']//factor) for f in faces)
+            if not counts:raise ValueError('河口必须与地图外边界相交')
+            boundary_faces=[];nz,nx=world.base.shape
+            for (edge,offset),count in sorted(counts.items()):
+                z,x={'west':(offset,0),'east':(offset,nx-1),'north':(0,offset),'south':(nz-1,offset)}[edge]
+                wall={'west':world.base.wall_x[z,0],'east':world.base.wall_x[z,nx],
+                      'north':world.base.wall_y[0,x],'south':world.base.wall_y[nz,x]}[edge]
+                if enabled and (world.base.solid[z,x] or wall):raise ValueError('河口边界被建筑或阻水边封闭，请先移除阻挡')
+                boundary_faces.append(dict(edge=edge,offset=int(offset),z=int(z),x=int(x),
+                    width_m=count*world.solver.dx/factor,weight=count/sum(counts.values())))
+            entry.update(delivery='boundary_discharge_with_momentum',inlet_velocity_m_s=float(velocity),
+                boundary_faces=boundary_faces,velocity_method='specified' if velocity else 'local_depth_with_critical_floor',
+                zero_discharge='no_exchange_on_configured_inlet_fraction')
+            face_cells=Counter()
+            for face in boundary_faces:face_cells[(face['z'],face['x'])]+=face['weight']
+            entry['cells']=[dict(z=z,x=x,weight=weight) for (z,x),weight in sorted(face_cells.items())]
         entries.append(entry)
     world.external_inflows=entries;world.river_crossings=crossings
     world.solver.set_external_inflows(entries)

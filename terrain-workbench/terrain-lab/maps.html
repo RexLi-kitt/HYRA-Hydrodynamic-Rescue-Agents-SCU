@@ -18,6 +18,7 @@
 <fieldset class="river-candidates"><legend>河流边界交点（可多选）</legend><div id="riverCandidates"></div></fieldset><button id="addRiverInflow" disabled>添加选中的河口</button>
 <div class="pair"><label>来水流量（m³/s）<input id="mapInflow" type="number" min="0" max="10000" step="1" value="50"></label><label>开始（秒）<input id="inflowStart" type="number" min="0" max="3600" value="0"></label></div>
 <label class="field">结束（秒）<input id="inflowEnd" type="number" min="0.1" max="3600" value="120"></label>
+<label class="field">河口入流速度（m/s，0为自动）<input id="inflowVelocity" type="number" min="0" max="30" step="0.1" value="0"></label><p class="hint">河口从边界按流量带入动量；自动速度按河口有效宽度与水深计算。手动内部点仍为体积补给。</p>
 <details><summary>自定义上游流量过程</summary><label class="check"><input id="customInflowCurve" type="checkbox"> 使用下方时间—流量过程</label><label class="field">[秒, m³/s]（分段常量）<textarea id="inflowCurve" rows="3">[[0,10],[30,100],[90,30],[120,0]]</textarea></label></details>
 <button id="pickInflow" aria-pressed="false">在地图上选择入水点</button><div class="pair"><label>原始格 X<input id="sourceX" type="number" min="0" value="128"></label><label>原始格 Z<input id="sourceZ" type="number" min="0" value="128"></label></div><button id="addManualInflow">添加手动强制来水点</button>
 <p class="hint">没有河流也可在任意非建筑格来水。河口方向按地形推断，外源洪水需主动启用；与日常基流分别计算。编辑后应用地图或重新模拟。</p>
@@ -42,10 +43,10 @@
 <div class="map-grid">
 <figure><figcaption><strong>固定地图</strong><span id="baseCaption">高程、地表与水工地物</span></figcaption><canvas id="baseMap" width="640" height="640" tabindex="0" aria-label="固定地图，点击查点或编辑"></canvas></figure>
 <figure><figcaption><strong>水深与流向</strong><span id="depthCaption">实时水深 · 箭头显示流向与 m/s</span></figcaption><canvas id="depthMap" width="640" height="640" tabindex="0" aria-label="洪水水深与流向地图"></canvas><div class="map-ramp depth-ramp"><span>0 m</span><span id="depthLimit">3 m</span></div></figure>
-<figure><figcaption><strong>流速</strong><span>0—2 m/s · 查点显示实际数值</span></figcaption><canvas id="speedMap" width="640" height="640" tabindex="0" aria-label="洪水流速地图"></canvas><div class="map-ramp speed-ramp"><span>0 m/s</span><span>≥ 2 m/s</span></div></figure>
+<figure><figcaption><strong>流速</strong><span id="speedCaption">按本次模拟峰值自动缩放</span></figcaption><canvas id="speedMap" width="640" height="640" tabindex="0" aria-label="洪水流速地图"></canvas><div class="map-ramp speed-ramp"><span>0 m/s</span><span id="speedLimit">0 m/s</span></div></figure>
 <figure><figcaption><strong>累计最大水深</strong><span>从洪水零时刻至当前播放时刻的最大值</span></figcaption><canvas id="maximumMap" width="640" height="640" tabindex="0" aria-label="累计最大水深地图"></canvas><div class="map-ramp depth-ramp"><span>0 m</span><span id="maximumLimit">3 m</span></div></figure>
 </div>
 <p class="legend">深灰：建筑 · 黑线：阻水边 · 青色：排水口 · 绿色：变化水源 · 紫色入箭头：外源来水 · 灰色：未启用河口 · 金色：所选格。水深低于0.01米按干地显示。</p>
 <p class="detail" id="mapCellDetail" aria-live="polite">点击地图查看该位置的各层数据。</p>
 <details><summary>水量收支与场景信息</summary><p id="mapBalance">尚未开始洪水计算。</p><p id="scenarioInfo"></p></details>
-</section></main><script type="module" src="maps.js?v=10"></script></body></html>
+</section></main><script type="module" src="maps.js?v=14"></script></body></html>

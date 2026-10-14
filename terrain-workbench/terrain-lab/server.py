@@ -8,6 +8,7 @@ import re
 import subprocess
 import sys
 import threading
+import time
 import uuid
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -24,6 +25,7 @@ DEFAULTS = dict(seed='42', origin_x=512, origin_z=1536, span=1024, vertical_scal
     lake_chance=0.8, wetland_chance=0.85, lake_distance=0.35,
     biome_size=225, moisture_bias=0.0, temperature_bias=0.05, mode='quick')
 DEFAULTS.update(plains_weight=2.0, hills_weight=2.0, mountains_weight=2.5)
+DEFAULTS['terrain_mode'] = 'custom'
 SPECS = {
     'origin_x': (-30000000, 30000000, int), 'origin_z': (-30000000, 30000000, int),
     'span': (512, 4096, int), 'vertical_scale': (0.25, 2.0, float),
@@ -89,6 +91,12 @@ def simulate_flood(jobid, terrain, config):
 def settings(data):
     result = dict(DEFAULTS)
     if not isinstance(data, dict): raise ValueError('参数格式不正确')
+    terrain_mode = data.get('terrain_mode', 'custom')
+    from terrain_modes import PROFILES
+    if terrain_mode not in ('custom', *PROFILES): raise ValueError('请选择地形类型')
+    result['terrain_mode'] = terrain_mode
+    if terrain_mode != 'custom':
+        data = dict(data, **PROFILES[terrain_mode]['parameters'])
     for key, (low, high, cast) in SPECS.items():
         value = float(data.get(key, result[key]))
         if not math.isfinite(value) or not low <= value <= high or cast is int and value != int(value):
@@ -119,6 +127,8 @@ def preset_for(config):
     p['climate']['biomeShape'].update(biomeSize=config['biome_size'], undergroundBiomeSize=config['biome_size'])
     p['climate']['moisture']['bias'] = config['moisture_bias']
     p['climate']['temperature']['bias'] = config['temperature_bias']
+    from terrain_modes import configure_preset
+    configure_preset(p, config.get('terrain_mode', 'custom'))
     return p
 
 def describe(relative):
@@ -139,6 +149,8 @@ def describe(relative):
             result['fields'][name] = field
     config_file = folder.parent / 'config.json'
     result['config'] = json.loads(config_file.read_text()) if config_file.is_file() else dict(DEFAULTS)
+    report = folder.parent / 'terrain-profile.json'
+    if report.is_file(): result['terrain_profile'] = json.loads(report.read_text())
     try:
         import river_inlets
         result['river_inlets']=river_inlets.annotate(ROOT,result)
@@ -192,14 +204,60 @@ def generate(jobid, config):
                 job.update(stage='surface', progress_known=True, progress=round(100*int(surface[1])/int(surface[2])), message='正在读取地面方块与群系…')
         pending = pending.rsplit('\n', 1)[-1]
     try:
-        code = generation_process.run([sys.executable, '-u', str(GENERATOR / 'run.py'), 'export', '--request', str(path)],
-            GENERATOR, directory / 'generation.log', report, lambda: job.get('cancel_requested', False))
-        if code:
-            diagnostic = next((s.strip() for s in job['log_tail'].splitlines() if '生成新地图需要' in s or '--java-home' in s), None)
-            raise RuntimeError(diagnostic or '地形生成失败；请打开生成记录查看具体构建或下载错误')
-        if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
+        from terrain_modes import candidate_origins, assess, PROFILES
+        target = config.get('terrain_mode', 'custom')
+        origins = candidate_origins(config)
+        requested_origin = [config['origin_x'], config['origin_z']]
+        attempts = []
+        started = time.monotonic()
+        def export(candidate_request, log_name):
+            nonlocal pending
+            if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
+            remaining = 1800 - (time.monotonic() - started)
+            if remaining <= 0: raise TimeoutError('寻找目标地形超过 1800 秒，原地图保留；请更换种子或缩小范围')
+            pending = ''
+            path.write_text(json.dumps(candidate_request, indent=2))
+            job['log_url'] = f'/generated/{jobid}/{log_name}'
+            code = generation_process.run([sys.executable, '-u', str(GENERATOR / 'run.py'), 'export', '--request', str(path)],
+                GENERATOR, directory / log_name, report, lambda: job.get('cancel_requested', False), total_timeout=remaining)
+            if code:
+                diagnostic = next((s.strip() for s in job['log_tail'].splitlines() if '生成新地图需要' in s or '--java-home' in s), None)
+                raise RuntimeError(diagnostic or '地形生成失败；请打开生成记录查看具体构建或下载错误')
+            if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
+        for number, (x,z) in enumerate(origins,1):
+            candidate = dict(request, origin_x=x, origin_z=z)
+            if target != 'custom':
+                candidate.pop('surface',None)
+                candidate.update(export_datapack=False, output=f'candidate-{number}/raw')
+                job.update(message=f'正在寻找{PROFILES[target]["label"]}区域（{number}/{len(origins)}），保留原种子…',
+                           candidate_index=number, candidate_count=len(origins))
+            export(candidate, f'candidate-{number}.log' if target != 'custom' else 'generation.log')
+            if target == 'custom': break
+            check = assess(directory/candidate['output'],target)
+            attempts.append(dict(origin=[x,z], **check))
+            (directory/'terrain-search.json').write_text(json.dumps(attempts,indent=2))
+            if check['accepted']:
+                config = dict(config,origin_x=x,origin_z=z)
+                (directory/'config.json').write_text(json.dumps(config,indent=2))
+                if config['mode'] == 'surface':
+                    final_request = dict(request,origin_x=x,origin_z=z)
+                    final_request['surface'] = {key: final_request[key] for key in ('origin_x','origin_z','nx','nz','step_blocks')}
+                    export(final_request,'generation.log')
+                    check = assess(directory/'raw',target)
+                    if not check['accepted']:
+                        raise RuntimeError('实际地表未达到所选地形标准，原地图保留；可使用快速预览或更换种子')
+                else:
+                    (directory/candidate['output']).replace(directory/'raw')
+                    path.write_text(json.dumps(dict(candidate,output='raw'),indent=2))
+                check.update(requested_origin=requested_origin, selected_origin=[x,z],
+                             candidates_checked=number, seed=config['seed'])
+                (directory/'terrain-profile.json').write_text(json.dumps(check,indent=2))
+                break
+        else:
+            raise RuntimeError(f'已检查 {len(origins)} 个区域，未找到符合“{PROFILES[target]["label"]}”标准的地图；原地图保留，请更换种子或扩大地图范围')
         result = describe(f'generated/{jobid}/raw')
         if config['mode'] == 'surface' and not result['full']: raise RuntimeError('地表生成尚未完成')
+        if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
         pointer = ROOT / 'current.json.tmp'
         pointer.write_text(json.dumps({'directory': result['id']}))
         pointer.replace(ROOT / 'current.json')
@@ -219,7 +277,9 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         try:
-            if path == '/api/config': return self.json({'defaults': DEFAULTS, 'flood_defaults': flood_run.DEFAULTS})
+            if path == '/api/config':
+                from terrain_modes import PROFILES
+                return self.json({'defaults': DEFAULTS, 'terrain_profiles': PROFILES, 'flood_defaults': flood_run.DEFAULTS})
             if path == '/api/current':
                 return self.json(current_terrain())
             if path=='/api/maps/schema':
