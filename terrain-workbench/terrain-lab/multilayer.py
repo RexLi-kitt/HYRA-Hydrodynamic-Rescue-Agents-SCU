@@ -120,7 +120,8 @@ class MapWorld:
             if entry['enabled']:
                 for cell in entry['cells']:count[cell['z'],cell['x']]+=1
         return dict(external_inflows=self.external_inflows,river_crossings=self.river_crossings,
-                    inlet_count=count,external_rate_m_s=self.solver._external_rate(self.solver.time),
+                    inlet_count=count,external_rate_m_s=self.solver.forcing_rate(),
+                    boundary_inflows=self.solver.boundary_forcing()[1],
                     accumulated_m3=self.solver.external_volume_by_id)
 
     def snapshot(self):
@@ -156,7 +157,8 @@ DATA_DICTIONARY=dict(schema='hyra-multilayer-v2',axis_order=['z','x'],
         qx='[nz,nx+1] last transported face flux, m2/s',qy='[nz+1,nx] last transported face flux, m2/s'),
     M_forcing=dict(external_inflows='stable id, native position, normalized coarse cells, enabled flag and [s,m3/s] curve',
         river_crossings='native river/edge crossings; inferred inlet/outlet/uncertain; no discharge enabled automatically',
-        inlet_count='count of enabled external points mapped to each cell',external_rate_m_s='instantaneous external water depth source rate, m/s',
+        inlet_count='count of enabled external points mapped to each cell',external_rate_m_s='equivalent supplied depth rate for cell sources and boundary inflows, m/s; boundary inflows are applied only through face fluxes',
+        boundary_inflows='instantaneous prescribed inward discharge and normal velocity by outer face; Q=width*reference_depth*velocity',
         accumulated_m3='per-point supplied volume since flood t=0; independent of daily baseflow'),
     source_hydrographs='source_id -> strictly increasing [simulation s,total m3/s], piecewise constant',
     frames=dict(fields=['depth','u','v','maximum_depth'],dtype='<f4',order='[field,z,x]',

@@ -4,7 +4,7 @@ import json
 import numpy as np
 import flood_run
 from flood_solver import FloodSolver
-from multilayer import MapWorld, DATA_DICTIONARY
+from multilayer import MapWorld, DATA_DICTIONARY, json_safe
 
 
 def create(root,terrain,data):
@@ -51,6 +51,7 @@ def create(root,terrain,data):
     import river_inlets
     crossings=terrain.get('river_inlets',{}).get('crossings',[]) if mode=='current' else []
     river_inlets.configure(world,crossings,data.get('external_inflows',[]),terrain['shape'] if mode=='current' else [32,32])
+    world.scenario_config=json_safe(data)
     return world
 
 
@@ -104,4 +105,17 @@ def save_process(root,session_id,world,frames):
             river_crossings=world.river_crossings),ensure_ascii=False,allow_nan=False))
         for f in frames:archive.write(folder/Path(f['url']).name,Path(f['url']).name)
     tmp.replace(folder/'map-result.zip')
+    if hasattr(world,'scenario_config'):
+        url=f'/generated/{session_id}/maps/'
+        complete=bool(frames and frames[-1]['time_s']>=c['duration_s']-1e-8)
+        status=dict(state='done' if complete else 'cancelled',progress=100 if complete else
+            (100*frames[-1]['time_s']/c['duration_s'] if frames else 0),frames=frames,
+            message='已保存的洪水过程，可回放或重新模拟' if complete else '已保存的部分过程，可回放已计算时段',
+            initial_conditions=meta.get('initial_conditions',{}),archive_url=url+'map-result.zip')
+        replay=dict(world.snapshot(),id=session_id,scenario_config=world.scenario_config,
+            process=status,archive_status_url=url+'status.json')
+        for name,value in [('status.json',status),('replay.json',replay)]:
+            file=folder/name;pending=file.with_suffix('.json.tmp')
+            pending.write_text(json.dumps(value,ensure_ascii=False,allow_nan=False,separators=(',',':')),encoding='utf-8')
+            pending.replace(file)
     return f'/generated/{session_id}/maps/map-result.zip'
