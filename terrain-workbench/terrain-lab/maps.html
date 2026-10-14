@@ -1,35 +1,51 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HYRA · 多层地图与观测</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="maps.css?v=1"></head><body>
-<header><div class="brand"><span class="mark">▦</span><div><h1>多层地图与观测</h1><p>固定环境、动态洪水与无人机掌握的信息</p></div></div><nav class="map-actions"><a class="elevation-link" href="/">地形生成</a><a class="elevation-link" href="flood.html">洪水过程</a></nav></header>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HYRA · 多层地图与洪水</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="maps.css?v=4"></head><body>
+<header><div class="brand"><span class="mark">▦</span><div><h1>多层地图与洪水</h1><p>在同一张地图上查看地形、地物与洪水演化</p></div></div><nav class="map-actions"><a class="elevation-link" href="/">地形生成</a><a class="elevation-link" href="elevation.html">高程可视化</a></nav></header>
 <main><aside>
-<h2>建立场景</h2><p id="terrainInfo">正在读取当前地图…</p><label class="field">地图来源<select id="mapSource"><option value="demo">合成多层示例</option><option value="current">当前生成地图</option></select></label>
-<div class="pair"><label>当前地图计算网格<select id="mapResolution"><option value="32">32 × 32</option><option value="64" selected>64 × 64</option><option value="128">128 × 128</option></select></label><label>每方块米数<input id="mapUnit" type="number" min="0.1" max="100" step="0.1" value="1"></label></div><p class="hint">合成示例固定为 32 × 32；当前地图按所选分辨率计算。</p>
-<div class="pair"><label>降雨（mm/h）<input id="mapRain" type="number" min="0" max="1000" value="60"></label><label>降雨时长（秒）<input id="mapRainUntil" type="number" min="0" max="3600" value="300"></label></div>
-<label class="check"><input id="mapBaseflow" type="checkbox" checked> 当前地图持续补给日常基流</label>
-<button id="createMap" class="primary" disabled>建立／应用场景</button><p class="hint">重新建立会从零时刻开始，观测也会重置。示例包含建筑、边墙、禁飞区、排水口、人员和变化的水源；不会改动生成地图。</p>
+<h2>地图与洪水场景</h2><p id="terrainInfo">正在读取当前地图…</p>
+<label class="field">地图来源<select id="mapSource"><option value="current" selected>当前生成地图</option><option value="demo">建筑与水源示例</option></select></label>
+<div class="pair"><label>计算网格<select id="mapResolution"><option value="32">32 × 32</option><option value="64" selected>64 × 64</option><option value="128">128 × 128</option><option value="256">256 × 256</option></select></label><label>每方块米数<input id="mapUnit" type="number" min="0.1" max="100" step="0.1" value="1"></label></div>
+<p class="hint">示例为 32 × 32；当前地形按选择的分辨率计算。</p>
+<div class="pair"><label>模拟总时长（秒）<input id="mapDuration" type="number" min="1" max="3600" value="600"></label><label>降雨时长（秒）<input id="mapRainUntil" type="number" min="0" max="3600" value="300"></label></div>
+<div class="pair"><label>降雨（mm/h）<input id="mapRain" type="number" min="0" max="1000" value="60"></label><label>入渗（mm/h）<input id="mapInfiltration" type="number" min="0" max="500" value="1"></label></div>
+<label class="field">边界<select id="mapBoundary"><option value="ocean" selected>海平面双向交换</option><option value="open">自由出流</option><option value="closed">封闭边界</option></select></label>
+<label class="field">默认地表糙率<input id="mapManning" type="number" min="0.01" max="0.2" step="0.005" value="0.035"></label>
+<label class="check"><input id="mapInitialWater" type="checkbox" checked> 使用初始水体</label>
+<label class="check"><input id="mapBaseflow" type="checkbox" checked> 持续补给河流日常基流</label>
+<div class="pair"><label>日常总来水（m³/s）<input id="mapBaseflowRate" type="number" min="0" max="10000" step="0.1" value="5"></label><label>基流预热（秒）<input id="mapWarmup" type="number" min="0" max="3600" value="600"></label></div>
+<details id="inflowPanel" open><summary>外源洪水／上游来水</summary>
+<p id="riverInletInfo" class="hint">正在识别河流入图处…</p>
+<fieldset class="river-candidates"><legend>河流边界交点（可多选）</legend><div id="riverCandidates"></div></fieldset><button id="addRiverInflow" disabled>添加选中的河口</button>
+<div class="pair"><label>来水流量（m³/s）<input id="mapInflow" type="number" min="0" max="10000" step="1" value="50"></label><label>开始（秒）<input id="inflowStart" type="number" min="0" max="3600" value="0"></label></div>
+<label class="field">结束（秒）<input id="inflowEnd" type="number" min="0.1" max="3600" value="120"></label>
+<details><summary>自定义上游流量过程</summary><label class="check"><input id="customInflowCurve" type="checkbox"> 使用下方时间—流量过程</label><label class="field">[秒, m³/s]（分段常量）<textarea id="inflowCurve" rows="3">[[0,10],[30,100],[90,30],[120,0]]</textarea></label></details>
+<button id="pickInflow" aria-pressed="false">在地图上选择入水点</button><div class="pair"><label>原始格 X<input id="sourceX" type="number" min="0" value="128"></label><label>原始格 Z<input id="sourceZ" type="number" min="0" value="128"></label></div><button id="addManualInflow">添加手动强制来水点</button>
+<p class="hint">没有河流也可在任意非建筑格来水。河口方向按地形推断，外源洪水需主动启用；与日常基流分别计算。编辑后应用地图或重新模拟。</p>
+<p id="externalInflowCount" class="hint" aria-live="polite">尚未配置外源来水点</p><div id="externalInflowList" class="inlet-list"></div>
+</details>
+<div class="map-run-actions"><button id="createMap" disabled>应用地图／查看初始状态</button><button id="runMap" class="primary" disabled>开始洪水模拟</button><button id="cancelMap" disabled>取消计算</button></div>
+<p class="hint">设置一次总时长，自动计算完整洪水过程；所有地图层同步播放。修改参数后重新模拟会从零时刻开始。</p>
 <details><summary>编辑固定环境</summary>
-<label class="field">地图点击操作<select id="editTool"><option value="inspect">查点并选择无人机目标</option><option value="building">不透水建筑</option><option value="wall_x">竖向边墙（格子左边）</option><option value="wall_y">横向边墙（格子上边）</option><option value="roughness">地表糙率</option><option value="drain">排水能力（m³/s）</option><option value="no_fly">禁飞区</option><option value="person">人员（1 未施救／2 已施救）</option><option value="source">水源编号</option></select></label>
-<div class="pair"><label>宽（格）<input id="patchWidth" type="number" min="1" max="128" value="1"></label><label>高（格）<input id="patchHeight" type="number" min="1" max="128" value="1"></label></div>
-<label class="field">编辑值<input id="patchValue" type="number" step="any" value="1"></label><label class="field">水源过程（编号对应秒、m³/s）<textarea id="hydrographs" rows="3">{"0":[[0,8],[120,3],[300,0]]}</textarea></label>
-<p class="hint">编辑写入草稿，点击“应用场景”后生效。边墙只封闭公共边，不会把整格变为建筑。</p><p id="draftInfo">草稿：0 项编辑</p><button id="clearDraft">清空编辑草稿</button>
+<label class="field">点击地图操作<select id="editTool"><option value="inspect">查点</option><option value="building">不透水建筑</option><option value="wall_x">竖向边墙（格子左边）</option><option value="wall_y">横向边墙（格子上边）</option><option value="roughness">地表糙率</option><option value="drain">排水能力（m³/s）</option><option value="source">变化水源编号</option><option value="terrain">地表类型编号</option></select></label>
+<div class="pair"><label>宽（格）<input id="patchWidth" type="number" min="1" max="256" value="1"></label><label>高（格）<input id="patchHeight" type="number" min="1" max="256" value="1"></label></div>
+<label class="field">编辑值<input id="patchValue" type="number" step="any" value="1"></label><label class="field">水源过程（编号：秒、m³/s）<textarea id="hydrographs" rows="3">{}</textarea></label>
+<p class="hint">编辑写入草稿，应用或重新模拟后生效。建筑／墙值为 0 可清除；水源编号 -1 清除水源。示例默认水源 0：前120秒8 m³/s，随后3 m³/s，300秒停止。</p><p id="draftInfo">草稿：0 项编辑</p><button id="clearDraft">清空编辑草稿</button>
 </details>
-<details><summary>无人机与观测</summary>
-<label class="field">查看已知地图<select id="viewAgent"><option value="uav-1">uav-1</option><option value="team">团队共享</option></select></label><label class="field">执行观测的无人机<select id="activeAgent"><option value="uav-1">uav-1</option></select></label>
-<div class="pair"><label>目标 X<input id="targetX" type="number" min="0" value="7"></label><label>目标 Z<input id="targetZ" type="number" min="0" value="16"></label></div>
-<button id="moveAgent" disabled>移动无人机</button><button id="observeMap" disabled>观察当前视野</button><button id="invalidObservation" disabled>模拟无效观测</button>
-<label class="field">共享给<select id="shareTarget"><option value="team">团队共享地图</option></select></label><button id="shareMap" disabled>共享已有记录</button><p class="hint">移动和洪水推进都不会自动更新观测。建筑格的水面与人员不可见；默认观测无噪声、无延迟，不模拟三维遮挡。</p>
-</details>
-<details><summary>保存与接口</summary><button id="saveMapConfig">导出场景配置 JSON</button><label class="field">导入场景配置 JSON<input id="importMapConfig" type="file" accept=".json,application/json"></label><a id="downloadMap" class="elevation-link" hidden>下载全部地图与记录 ZIP</a><a id="agentViewLink" class="elevation-link" hidden target="_blank">查看智能体输入 JSON</a><a class="elevation-link" href="/api/maps/schema" target="_blank">数据字典</a><p class="hint">ZIP 保留各无人机观测、探索记录、人员位置、公共边流量和事件时间。智能体接口只含已知信息，不包含完整水情或隐藏人员。</p></details>
+<details><summary>保存与导入</summary><button id="saveMapConfig">导出场景配置 JSON</button><label class="field">导入场景配置 JSON<input id="importMapConfig" type="file" accept=".json,application/json"></label><a id="downloadMap" class="elevation-link" hidden>下载地图与洪水完整过程 ZIP</a><button id="exportFrame" disabled>导出当前显示水情 JSON</button><button id="exportPng" disabled>导出水深图片</button><a class="elevation-link" href="/api/maps/schema" target="_blank">地图数据字典</a><p class="hint">完整导出保留固定环境、真实计算帧、最终水情与水量收支。帧间显示平滑不修改计算结果。</p></details>
 </aside><section class="workspace">
-<div class="map-bar"><div><h2>同一网格，四幅对照地图</h2><p id="worldInfo">先建立示例或当前地图场景。</p></div></div>
-<div class="world-toolbar"><label>推进（模拟秒）<input id="advanceSeconds" type="number" min="0.1" max="60" step="0.1" value="10"></label><button id="advanceMap" disabled>推进洪水</button><strong id="worldTime">0.0 秒</strong><span id="knownCount">已知：0 格</span><span id="mapBalance">收支误差：—</span></div>
-<p id="mapStatus" role="status">真实水情供调试对照；无人机执行使用各自的已知地图。</p>
+<div class="map-bar"><div><h2>地图与洪水过程</h2><p id="worldInfo">先应用当前地形或建立示例场景。</p></div><strong id="worldTime">0.0 秒</strong></div>
+<div class="process-status"><progress id="mapProgress" max="100" value="0"></progress><span id="computeStatus">地图就绪后可直接开始整段模拟。</span></div>
+<div class="playback"><button id="playMap" disabled>播放</button><button id="rewindMap" disabled>回到起点</button><label>播放速度<select id="playSpeed"><option value="1">1×</option><option value="5">5×</option><option value="10" selected>10×</option><option value="30">30×</option><option value="60">60×</option></select></label><span id="availableTime">已计算 0 秒</span></div>
+<label class="timeline-label">洪水时间轴<input id="mapTimeline" type="range" min="0" max="600" step="0.1" value="0" disabled></label><div class="time-labels"><span>0 秒</span><span id="durationLabel">600 秒</span></div>
+<div class="display-controls"><label>固定地图图层<select id="baseLayer"><option value="elevation">高程与等高线</option><option value="terrain">地表类型</option><option value="roughness">糙率</option><option value="structures">建筑与阻水边</option><option value="sources">水源、入水点与排水</option></select></label><label class="check"><input id="flowArrows" type="checkbox" checked> 流向箭头</label><label class="check"><input id="flowLabels" type="checkbox" checked> 流速数值</label><label>箭头密度<select id="flowDensity"><option value="6">疏</option><option value="8" selected>适中</option><option value="14">密</option></select></label><label>水深色标上限（m）<input id="depthScale" type="number" min="0.1" step="0.5" value="3"></label></div>
+<p id="mapStatus" role="status">点击任意图层可查看同一位置的高程、地物、水深和流速。</p>
 <div class="map-grid">
-<figure><figcaption><strong>固定环境</strong><span>高程与等高线、建筑、边墙、糙率、排水和禁飞区</span></figcaption><canvas id="baseMap" width="480" height="480" tabindex="0" aria-label="固定环境地图，点击编辑或查点"></canvas></figure>
-<figure><figcaption><strong>真实水情</strong><span>调试真值：水深、流向与全部人员</span></figcaption><canvas id="truthMap" width="480" height="480" tabindex="0" aria-label="真实水情调试地图"></canvas></figure>
-<figure><figcaption><strong>已知水情</strong><span id="knownCaption">无人机最近的有效观测；灰色是未知</span></figcaption><canvas id="knownMap" width="480" height="480" tabindex="0" aria-label="无人机已知水情地图"></canvas></figure>
-<figure><figcaption><strong>信息年龄</strong><span>绿：新观测；黄至红：逐渐过时；灰：未知</span></figcaption><canvas id="ageMap" width="480" height="480" tabindex="0" aria-label="水情信息年龄地图"></canvas></figure>
+<figure><figcaption><strong>固定地图</strong><span id="baseCaption">高程、地表与水工地物</span></figcaption><canvas id="baseMap" width="640" height="640" tabindex="0" aria-label="固定地图，点击查点或编辑"></canvas></figure>
+<figure><figcaption><strong>水深与流向</strong><span id="depthCaption">实时水深 · 箭头显示流向与 m/s</span></figcaption><canvas id="depthMap" width="640" height="640" tabindex="0" aria-label="洪水水深与流向地图"></canvas><div class="map-ramp depth-ramp"><span>0 m</span><span id="depthLimit">3 m</span></div></figure>
+<figure><figcaption><strong>流速</strong><span>0—2 m/s · 查点显示实际数值</span></figcaption><canvas id="speedMap" width="640" height="640" tabindex="0" aria-label="洪水流速地图"></canvas><div class="map-ramp speed-ramp"><span>0 m/s</span><span>≥ 2 m/s</span></div></figure>
+<figure><figcaption><strong>累计最大水深</strong><span>从洪水零时刻至当前播放时刻的最大值</span></figcaption><canvas id="maximumMap" width="640" height="640" tabindex="0" aria-label="累计最大水深地图"></canvas><div class="map-ramp depth-ramp"><span>0 m</span><span id="maximumLimit">3 m</span></div></figure>
 </div>
-<p class="legend">深灰块：建筑 · 紫色斜线：禁飞区 · 黑线：阻水边 · 青点：排水口 · 绿点：水源 · 红人：未施救 · 蓝人：已施救 · 橙圈：无人机视野</p>
-<p class="detail" id="mapCellDetail" aria-live="polite">点击任意地图查看该格的各层数据。确认无水与未知会分别显示。</p>
-<details><summary>当前人员、探索与操作记录</summary><p id="positionInfo">尚未建立场景。</p><ol id="mapEvents"></ol></details>
-</section></main><script src="maps.js?v=3"></script></body></html>
+<p class="legend">深灰：建筑 · 黑线：阻水边 · 青色：排水口 · 绿色：变化水源 · 紫色入箭头：外源来水 · 灰色：未启用河口 · 金色：所选格。水深低于0.01米按干地显示。</p>
+<p class="detail" id="mapCellDetail" aria-live="polite">点击地图查看该位置的各层数据。</p>
+<details><summary>水量收支与场景信息</summary><p id="mapBalance">尚未开始洪水计算。</p><p id="scenarioInfo"></p></details>
+</section></main><script type="module" src="maps.js?v=10"></script></body></html>

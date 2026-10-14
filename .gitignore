@@ -9,3 +9,9 @@ __pycache__/
 **/.runtime/
 terrain-workbench/terrain-lab/current.json
 terrain-workbench/terrain-lab/exports/
+
+# Derived native-grid river inlet metadata
+**/river-inlets.json
+**/river-inlets.json.*.tmp
+**/hydrology-terrain.i32
+**/hydrology-terrain.i32.*.tmp

@@ -41,7 +41,28 @@ FLOOD_JOBS = {}
 MAP_SESSIONS = {}
 
 def map_reply(session_id,entry):
-    return dict(id=session_id,archive_url=f'/generated/{session_id}/maps/map-result.zip',**entry['world'].snapshot())
+    # The initial physical layers are immutable while the worker runs.
+    return dict(id=session_id,**entry['scene'],process=dict(entry['process']))
+
+
+def simulate_maps(session_id,entry):
+    import map_sessions
+    def update(**values):
+        with entry['lock']:entry['process'].update(values)
+    def cancelled():
+        with entry['lock']:return entry['process'].get('cancel_requested',False)
+    try:
+        result=map_sessions.run(ROOT,session_id,entry['world'],update,cancelled)
+        update(state='done',progress=100,message='洪水过程计算完成，可播放或拖动时间轴',**result)
+    except InterruptedError as error:
+        try:
+            archive=map_sessions.save_process(ROOT,session_id,entry['world'],entry['process']['frames'])
+            update(state='cancelled',message=str(error),archive_url=archive)
+        except Exception as export_error:
+            update(state='failed',message=f'计算已停止，但保存失败：{export_error}')
+    except Exception as error:
+        update(state='failed',message=str(error))
+
 
 def current_terrain():
     pointer = ROOT / 'current.json'
@@ -118,6 +139,12 @@ def describe(relative):
             result['fields'][name] = field
     config_file = folder.parent / 'config.json'
     result['config'] = json.loads(config_file.read_text()) if config_file.is_file() else dict(DEFAULTS)
+    try:
+        import river_inlets
+        result['river_inlets']=river_inlets.annotate(ROOT,result)
+        result['fields']['terrain']=result['river_inlets']['terrain_field']
+    except ImportError:
+        result['river_inlets']=dict(crossings=[],message='安装 NumPy 后可识别河道入口')
     return result
 
 def generate(jobid, config):
@@ -203,10 +230,7 @@ class Handler(SimpleHTTPRequestHandler):
                 with LOCK:entry=MAP_SESSIONS.get(sid)
                 if entry is None:return self.json({'error':'未找到这次多层场景'},404)
                 with entry['lock']:
-                    if len(parts)==5 and parts[3]=='agent':
-                        from urllib.parse import parse_qs
-                        factor=int(parse_qs(urlparse(self.path).query).get('pool',['1'])[0])
-                        return self.json(entry['world'].policy_view(parts[4],factor))
+                    if len(parts)==4 and parts[3]=='status':return self.json(dict(entry['process']))
                     if len(parts)==3:return self.json(map_reply(sid,entry))
                 return self.json({'error':'未找到地图操作'},404)
             if path.startswith('/api/flood-jobs/'):
@@ -234,10 +258,15 @@ class Handler(SimpleHTTPRequestHandler):
                 import map_sessions
                 if self.path=='/api/maps':
                     world=map_sessions.create(ROOT,current_terrain(),data)
-                    sid='maps-'+uuid.uuid4().hex[:12];entry=dict(world=world,lock=threading.Lock())
-                    map_sessions.persist(ROOT,sid,world)
+                    sid='maps-'+uuid.uuid4().hex[:12]
+                    entry=dict(world=world,scene=dict(world.snapshot(),scenario_config=data),lock=threading.Lock(),
+                        process=dict(state='ready',progress=0,message='地图已建立，点击开始模拟',frames=[]))
                     with LOCK:
-                        if len(MAP_SESSIONS)>=3:MAP_SESSIONS.pop(next(iter(MAP_SESSIONS)))
+                        if len(MAP_SESSIONS)>=3:
+                            old=next((key for key,value in MAP_SESSIONS.items()
+                                if value['process']['state'] not in ('queued','running')),None)
+                            if old is None:return self.json({'error':'运行中的地图过多，请先取消计算'},409)
+                            MAP_SESSIONS.pop(old)
                         MAP_SESSIONS[sid]=entry
                     return self.json(map_reply(sid,entry),201)
                 parts=self.path.strip('/').split('/')
@@ -245,15 +274,24 @@ class Handler(SimpleHTTPRequestHandler):
                 sid,action=parts[2:]
                 with LOCK:entry=MAP_SESSIONS.get(sid)
                 if entry is None:return self.json({'error':'未找到这次多层场景'},404)
-                with entry['lock']:
-                    w=entry['world'];name=data.get('agent','uav-1')
-                    if action=='advance':w.advance(data.get('seconds',10))
-                    elif action=='observe':w.observe(name,data.get('valid',True))
-                    elif action=='move':w.move(name,data.get('x'),data.get('z'))
-                    elif action=='share':w.share(name,data.get('target','team'))
-                    else:return self.json({'error':'未找到地图操作'},404)
-                    map_sessions.persist(ROOT,sid,w)
-                    return self.json(map_reply(sid,entry))
+                if action=='run':
+                    with LOCK:
+                        running=next((key for key,value in MAP_SESSIONS.items()
+                            if value['process']['state'] in ('queued','running')),None)
+                        if running is not None:
+                            return self.json({'error':'已有多层洪水过程正在计算，已恢复该过程，可等待或取消',
+                                              'process_id':running},409)
+                        with entry['lock']:
+                            if entry['process']['state']!='ready':return self.json({'error':'请重新建立场景后模拟'},409)
+                            entry['process'].update(state='queued',message='正在开始洪水计算…')
+                    threading.Thread(target=simulate_maps,args=(sid,entry),daemon=True).start()
+                    return self.json({'id':sid},202)
+                if action=='cancel':
+                    with entry['lock']:
+                        if entry['process']['state'] in ('queued','running'):
+                            entry['process'].update(cancel_requested=True,message='正在停止计算…')
+                    return self.json({'id':sid})
+                return self.json({'error':'未找到地图操作'},404)
             if self.path.startswith('/api/jobs/') and self.path.endswith('/cancel'):
                 jobid = self.path.split('/')[-2]
                 with LOCK:

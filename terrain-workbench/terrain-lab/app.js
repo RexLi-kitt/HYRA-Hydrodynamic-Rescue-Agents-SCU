@@ -65,6 +65,8 @@ async function loadMap(result) {
  }
  if (!map.full && ['material','biome'].includes(layer)) setLayer('height'); else draw();
  $('cellDetail').textContent = '移动鼠标或点击网格，查看高程和地表信息。';
+ const ports=map.river_inlets?.crossings||[];
+ $('inletSummary').textContent=`河道边界：${ports.filter(p=>p.role==='inlet').length} 个推断入口、${ports.filter(p=>p.role==='outlet').length} 个推断出口、${ports.filter(p=>p.role==='uncertain').length} 个待确认交点。${map.river_inlets?.message||''} 外源来水可进入多层地图配置。`;
 }
 function height(i) { return map.full ? arrays.ground_height[i] : arrays.height[i] * map.scale; }
 function wet(i) {
@@ -103,6 +105,7 @@ function draw() {
  }
  const buffer=document.createElement('canvas');buffer.width=nx;buffer.height=nz;buffer.getContext('2d').putImageData(image,0,0);
  ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(buffer,0,0,canvas.width,canvas.height);
+ drawRiverPorts();
  const legend=$('legend');legend.replaceChildren();
  if(layer==='material') materialLabels.forEach((s,i)=>legend.append(swatch(s,materialColors[i])));
  else if(layer==='biome') Object.values(map.biomeNames).forEach(n=>{const[s,c]=biomeStyle(n);legend.append(swatch(s,c));});
@@ -110,7 +113,16 @@ function draw() {
   if(layer==='height'){const a=document.createElement('span');a.textContent=`当前范围 ${min.toFixed(1)}`;const r=document.createElement('span');r.className='color-ramp';const b=document.createElement('span');b.textContent=`${max.toFixed(1)} 高程 / 方块单位`;legend.append(a,r,b);}
   legend.append(swatch('河流与湖泊','#4ab1d0'),swatch('海洋','#2b75a6'));
  }
+ legend.append(swatch('推断河流入口','#913db5'),swatch('推断出口／待确认','#777e87'));
  canvas.setAttribute('aria-label',`${{height:'地形高程',water:'水系',material:'地表类型',biome:'群系'}[layer]}，${nx}乘${nz}网格，最低高程${min.toFixed(1)}，最高${max.toFixed(1)}`);
+}
+function drawRiverPorts(){
+ const [nz,nx]=map.shape;
+ for(const p of map.river_inlets?.crossings||[]){
+  const x=Math.max(10,Math.min(canvas.width-10,(p.x+.5)*canvas.width/nx)),z=Math.max(10,Math.min(canvas.height-10,(p.z+.5)*canvas.height/nz));
+  ctx.save();ctx.strokeStyle=p.role==='inlet'?'#913db5':'#777e87';ctx.fillStyle=ctx.strokeStyle;ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,z,8,0,Math.PI*2);ctx.stroke();
+  const label=p.role==='inlet'?'入口':p.role==='outlet'?'出口':'待确认';ctx.font='bold 15px sans-serif';ctx.textAlign=x>canvas.width/2?'right':'left';const tx=x+(x>canvas.width/2?-12:12),tz=Math.max(20,Math.min(canvas.height-7,z));ctx.strokeStyle='#fff';ctx.lineWidth=4;ctx.strokeText(label,tx,tz);ctx.fillText(label,tx,tz);ctx.restore();
+ }
 }
 function setLayer(next) {
  layer=next;for(const b of document.querySelectorAll('[data-layer]')){const active=b.dataset.layer===layer;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));}draw();
@@ -123,6 +135,7 @@ function inspectCell(event) {
  let text=`格 (${x}, ${z}) · 高程 ${height(i).toFixed(1)}`;
  if(map.full){const bn=map.blockNames[arrays.ground_block_id[i]];text+=` · ${blockNames[short(bn)]||short(bn)} · ${biomeStyle(map.biomeNames[arrays.biome_id[i]])[0]}`;if(wet(i))text+=` · 水深 ${arrays.water_depth[i].toFixed(1)}`;}
  else text+=` · ${map.terrain_ids[arrays.terrain[i]] || ''}`;
+ const port=(map.river_inlets?.crossings||[]).find(p=>Math.abs(p.x-x)<=2&&Math.abs(p.z-z)<=2);if(port)text+=` · ${port.id} · ${{inlet:'推断入口',outlet:'推断出口',uncertain:'方向待确认'}[port.role]}`;
  $('cellDetail').textContent=text;
 }
 async function generate(event) {

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {discharge,windowCurve,portLabel,validateCurve} from '../inflow-controls.mjs';
+const curve=windowCurve(10,20,50);
+assert.equal(discharge(curve,9),0);assert.equal(discharge(curve,10),50);assert.equal(discharge(curve,19.9),50);assert.equal(discharge(curve,20),0);
+assert.equal(discharge([[0,10],[30,100],[90,30],[120,0]],80),100);
+assert.throws(()=>windowCurve(10,9,50));assert.throws(()=>windowCurve(0,20,-1));
+assert.match(portLabel({id:'river-a',role:'inlet',x:0,z:3}),/入口/);
+for(const p of [[],{},[[0,-1]],[[0,1],[0,0]],[[0,true]],[[0,NaN]]])assert.throws(()=>validateCurve(p));
+assert.deepEqual(validateCurve([[0,1],[1,0]]),[[0,1],[1,0]]);
+console.log('External forcing curve timing, manual flow window and point labels passed.');

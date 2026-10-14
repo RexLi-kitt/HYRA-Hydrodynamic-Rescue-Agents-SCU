@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {framePair,blendFrames,playbackTime} from '../maps-playback.mjs';
+const frames=[{time_s:0},{time_s:10},{time_s:25}];
+assert.deepEqual(framePair(frames,7.5),{lo:0,hi:1,time:7.5,alpha:.75});
+assert.equal(framePair(frames,20).alpha,2/3);
+assert.equal(framePair(frames,100).time,25);
+assert.equal(framePair(frames,-1).time,0);
+assert.equal(framePair([],0),null);
+const a=new Float32Array([0,2,1,0]),b=new Float32Array([2,4,-1,2]);
+assert.deepEqual([...blendFrames(a,b,.25)],[.5,2.5,.5,.5]);
+assert.equal(playbackTime(0,.05,10,100),.5);
+assert.equal(playbackTime(9.9,.1,10,10),10);
+assert.equal(playbackTime(0,600,10,100),2.5);
+assert.deepEqual([...blendFrames(a,b,0)],[...a]);
+assert.deepEqual([...blendFrames(a,b,1)],[...b]);
+assert.throws(()=>blendFrames(a,new Float32Array(2),.5));
+console.log('Playback time, fractional seeking, buffering limits and frame interpolation passed.');
