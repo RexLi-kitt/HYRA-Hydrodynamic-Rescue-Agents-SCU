@@ -5,6 +5,7 @@ import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import server
 import terrain_modes as modes
+import terrain_cache
 
 
 class TerrainModeTests(unittest.TestCase):
@@ -60,6 +61,50 @@ class TerrainModeTests(unittest.TestCase):
         self.assertTrue(modes.verdict('water_network',network))
         w[:]=h
         self.assertFalse(modes.verdict('water_network',modes.assess_arrays(h,t,w,ids,63,4)))
+
+    def test_network_density_is_stable_across_sampling_steps(self):
+        densities=[]
+        for step in (4,8,16):
+            coords=np.arange(0,2048,step)
+            channels=np.zeros((len(coords),len(coords)),bool)
+            for center in (256,768,1280,1792):
+                hit=np.abs(coords-center)<=16
+                channels[hit,:]=True;channels[:,hit]=True
+            h=np.where(channels,75.,80.);types=channels.astype(int);water=np.full(h.shape,80.)
+            m=modes.assess_arrays(h,types,water,{'0':'plains','1':'river'},63,step)
+            self.assertTrue(modes.verdict('water_network',m))
+            densities.append(m['river_length_density_km_per_km2'])
+        self.assertLess(max(densities)/min(densities),1.1)
+
+    def test_channel_length_is_not_a_water_area_threshold(self):
+        mask=np.zeros((160,160),bool);mask[80,10:150]=True
+        thin=modes.river_length(mask,8)
+        wide=np.zeros_like(mask);wide[74:87,10:150]=True
+        thick=modes.river_length(wide,8)
+        self.assertGreater(thick/thin,.85);self.assertLessEqual(thick/thin,1.05)
+        self.assertEqual(modes.river_length(np.zeros_like(mask),8),0)
+
+    def test_cache_requires_matching_parameters_and_complete_native_fields(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);job=root/'generated/old';raw=job/'candidate-1/raw';raw.mkdir(parents=True)
+            preset={'parameters':1};(job/'preset.json').write_text(json.dumps(preset))
+            (job/'config.json').write_text('{"seed":"42"}')
+            fields={name:dict(file=name+'.f32',dtype='<f4') for name in ('height','terrain','riverWaterLevel','riverZone')}
+            for field in fields.values():np.ones((4,4),dtype='<f4').tofile(raw/field['file'])
+            grid=dict(seed='42',shape=[4,4],step_blocks=16,origin_blocks=[512,1536],
+                upstream_revision=terrain_cache.REVISION,height_policy='simulation_without_game_ceiling',fields=fields)
+            (raw/'grid.json').write_text(json.dumps(grid))
+            request=dict(seed='42',nx=4,nz=4,step_blocks=16)
+            match=terrain_cache.previews(root,root/'generated/new',preset,request)
+            self.assertEqual(match,{(512,1536):raw})
+            self.assertEqual(terrain_cache.previews(root,root/'generated/new',{'parameters':2},request),{})
+            self.assertEqual(terrain_cache.previews(root,root/'generated/new',preset,dict(request,seed='43')),{})
+            self.assertEqual(terrain_cache.previews(root,root/'generated/new',preset,dict(request,step_blocks=8)),{})
+            (raw/'river-inlets.json').write_text('{"old_url":"/generated/old/candidate-1/raw"}')
+            target=root/'generated/new/raw';terrain_cache.copy_preview(raw,target)
+            self.assertTrue((target/'height.f32').is_file());self.assertFalse((target/'river-inlets.json').exists())
+            (raw/'height.f32').write_bytes(b'broken')
+            self.assertEqual(terrain_cache.previews(root,root/'generated/new',preset,request),{})
 
     def generate_fake(self,checks,*,mode='quick',cancel=False):
         with tempfile.TemporaryDirectory() as temp:

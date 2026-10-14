@@ -62,7 +62,7 @@ async function loadMap(result) {
  $('mapInfo').textContent = `${nx} × ${nz} 网格 · 间距 ${map.step} · ${map.full ? '完整地表' : '地形预览'} · 种子 ${map.config.seed}`;
  const profile=map.terrain_profile;
  $('mapTitle').textContent = profile?.accepted ? `${profile.label}地图` : '当前地形';
- $('terrainProfile').textContent = profile?.accepted ? `已通过${profile.label}检查 · 陆地 ${(profile.metrics.land_fraction*100).toFixed(0)}% · 陆地起伏 ${profile.metrics.land_relief_m.toFixed(1)} m${profile.terrain_mode==='water_network'?` · 河流水面 ${(profile.metrics.wet_river_fraction*100).toFixed(1)}%`:''} · 区域起点 (${map.origin.join(', ')}) · 检查了 ${profile.candidates_checked} 个区域` : '';
+ $('terrainProfile').textContent = profile?.accepted ? `已通过${profile.label}检查 · 陆地 ${(profile.metrics.land_fraction*100).toFixed(0)}% · 陆地起伏 ${profile.metrics.land_relief_m.toFixed(1)} m${profile.terrain_mode==='water_network'?` · 河流水面 ${(profile.metrics.wet_river_fraction*100).toFixed(1)}%${Number.isFinite(profile.metrics.river_length_density_km_per_km2)?` · 河道密度 ${profile.metrics.river_length_density_km_per_km2.toFixed(2)} km/km²`:''}`:''} · 区域起点 (${map.origin.join(', ')}) · 检查了 ${profile.candidates_checked} 个区域` : '';
  for (const b of document.querySelectorAll('[data-layer]')) {
   b.disabled = !map.full && ['material','biome'].includes(b.dataset.layer);
   b.title = b.disabled ? '完整生成地表后可查看' : '';
