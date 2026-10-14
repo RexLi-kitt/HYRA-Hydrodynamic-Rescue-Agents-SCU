@@ -6,6 +6,7 @@ let terrain,scene,process={state:'ready',frames:[]},patches=[],selected={x:0,z:0
 let externalDraft=[],pickInflow=false,inflowDirty=false;
 const selectedRiverIds=new Set();
 let busy=false,playing=false,time=0,display,baseImage,terrainMin=0,terrainMax=1,epoch=0,pollTimer,seekVersion=0,seeking=false;
+let speedScale=0;
 const cache=new Map(),pending=new Map();let lastDraw=0;
 const fields={mapResolution:'resolution',mapUnit:'metres_per_block',mapDuration:'duration_s',
  mapManning:'manning',mapRain:'rain_mm_h',mapRainUntil:'rain_duration_s',mapInfiltration:'infiltration_mm_h',
@@ -79,6 +80,7 @@ async function restore(id){
 async function poll(token){
  try{
   const id=scene.id,p=await json(scene.archive_status_url||`/api/maps/${id}/status`);if(token!==epoch)return;process=p;
+  if(updateSpeedScale())draw('speedMap','speed');
   $('computeStatus').textContent=p.message;$('mapProgress').value=p.progress;
   $('availableTime').textContent=`已计算 ${fmt(available(),1)} / ${fmt(scene.config.duration_s)} 秒`;
   if(p.initial_conditions){const w=p.initial_conditions;
@@ -174,7 +176,13 @@ $('addManualInflow').onclick=()=>{let n=1;while(externalDraft.some(p=>p.id===`ma
 $('pickInflow').onclick=()=>{pickInflow=!pickInflow;$('pickInflow').setAttribute('aria-pressed',String(pickInflow));status(pickInflow?'点击任意地图选择强制来水位置，然后添加入水点。':'已退出入水选点。');};
 function rgbHeight(z){const t=(z-terrainMin)/Math.max(.01,terrainMax-terrainMin);return [112+116*t,152+74*t,117+74*t];}
 function rgbDepth(h){const t=Math.min(1,Math.max(0,h)/Math.max(.1,Number($('depthScale').value)||3));return [155-134*t,217-156*t,234-110*t];}
-function rgbSpeed(v){const t=Math.min(1,v/2);return t<.5?[151+166*t,210+18*t,189-154*t]:[234,219-290*(t-.5),112-88*(t-.5)];}
+function updateSpeedScale(){
+ let peak=0;for(const f of [scene.M_water.summary,...process.frames]){const v=Number(f.max_speed_m_s);if(Number.isFinite(v)&&v>peak)peak=v;}
+ const changed=peak!==speedScale;speedScale=peak;const label=fmt(peak,peak<.01?6:2);
+ $('speedCaption').textContent=peak?`0—${label} m/s · 已计算帧峰值，统一色标`:'静水 · 流速为0 m/s';
+ $('speedLimit').textContent=`${label} m/s`;return changed;
+}
+function rgbSpeed(v){const t=speedScale>0?Math.min(1,Math.max(0,v/speedScale)):0;return t<.5?[151+166*t,210+18*t,189-154*t]:[234,219-290*(t-.5),112-88*(t-.5)];}
 function image(colors){const [nz,nx]=scene.grid.shape,cv=document.createElement('canvas');cv.width=nx;cv.height=nz;
  const img=new ImageData(nx,nz);for(let i=0;i<nx*nz;i++)img.data.set([...colors(i).map(Math.round),255],i*4);cv.getContext('2d').putImageData(img,0,0);return cv;}
 function markers(ctx,sources=true){
@@ -244,7 +252,7 @@ function accountedWater(){const pair=framePair(process.frames,time);return pair?
 function boundaryInfo(id){return (accountedWater().boundary_inflows||scene.M_forcing?.boundary_inflows||[]).find(p=>p.id===id);}
 function boundarySpeed(p){const v=p.faces.map(f=>f.inward_velocity_m_s),lo=Math.min(...v),hi=Math.max(...v);return hi-lo<.01?fmt(hi):`${fmt(lo)}—${fmt(hi)}`;}
 function render(pair){
- if(!scene)return;pair??=framePair(process.frames,time);draw('baseMap','base');draw('depthMap','depth');draw('speedMap','speed');draw('maximumMap','maximum');inspect();
+ if(!scene)return;updateSpeedScale();pair??=framePair(process.frames,time);draw('baseMap','base');draw('depthMap','depth');draw('speedMap','speed');draw('maximumMap','maximum');inspect();
  $('worldTime').textContent=`${fmt(time,1)} 秒`;$('mapTimeline').value=time;
  const limit=Math.max(.1,Number($('depthScale').value)||3);$('depthLimit').textContent=`≥ ${fmt(limit)} m`;$('maximumLimit').textContent=`≥ ${fmt(limit)} m`;
  $('depthCaption').textContent=pair&&pair.alpha>1e-6&&pair.alpha<1-1e-6?'帧间平滑显示 · 流向与 m/s':'计算水情 · 流向与 m/s';

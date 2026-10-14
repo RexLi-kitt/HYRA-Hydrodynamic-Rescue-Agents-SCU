@@ -43,10 +43,10 @@
 <div class="map-grid">
 <figure><figcaption><strong>固定地图</strong><span id="baseCaption">高程、地表与水工地物</span></figcaption><canvas id="baseMap" width="640" height="640" tabindex="0" aria-label="固定地图，点击查点或编辑"></canvas></figure>
 <figure><figcaption><strong>水深与流向</strong><span id="depthCaption">实时水深 · 箭头显示流向与 m/s</span></figcaption><canvas id="depthMap" width="640" height="640" tabindex="0" aria-label="洪水水深与流向地图"></canvas><div class="map-ramp depth-ramp"><span>0 m</span><span id="depthLimit">3 m</span></div></figure>
-<figure><figcaption><strong>流速</strong><span>0—2 m/s · 查点显示实际数值</span></figcaption><canvas id="speedMap" width="640" height="640" tabindex="0" aria-label="洪水流速地图"></canvas><div class="map-ramp speed-ramp"><span>0 m/s</span><span>≥ 2 m/s</span></div></figure>
+<figure><figcaption><strong>流速</strong><span id="speedCaption">按本次模拟峰值自动缩放</span></figcaption><canvas id="speedMap" width="640" height="640" tabindex="0" aria-label="洪水流速地图"></canvas><div class="map-ramp speed-ramp"><span>0 m/s</span><span id="speedLimit">0 m/s</span></div></figure>
 <figure><figcaption><strong>累计最大水深</strong><span>从洪水零时刻至当前播放时刻的最大值</span></figcaption><canvas id="maximumMap" width="640" height="640" tabindex="0" aria-label="累计最大水深地图"></canvas><div class="map-ramp depth-ramp"><span>0 m</span><span id="maximumLimit">3 m</span></div></figure>
 </div>
 <p class="legend">深灰：建筑 · 黑线：阻水边 · 青色：排水口 · 绿色：变化水源 · 紫色入箭头：外源来水 · 灰色：未启用河口 · 金色：所选格。水深低于0.01米按干地显示。</p>
 <p class="detail" id="mapCellDetail" aria-live="polite">点击地图查看该位置的各层数据。</p>
 <details><summary>水量收支与场景信息</summary><p id="mapBalance">尚未开始洪水计算。</p><p id="scenarioInfo"></p></details>
-</section></main><script type="module" src="maps.js?v=13"></script></body></html>
+</section></main><script type="module" src="maps.js?v=14"></script></body></html>
