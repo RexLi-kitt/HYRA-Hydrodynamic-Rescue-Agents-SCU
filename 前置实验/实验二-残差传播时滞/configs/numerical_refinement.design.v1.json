@@ -1,0 +1,71 @@
+{
+  "study_id": "bounded-mesh40-80-review-v1-20261016",
+  "status": "selected_training_diagnostic_not_confirmation",
+  "parent_run": "historical_workspace/残差收益验证/results/runs/20261015_235729_948382_numerical_stability_fixed_footprint",
+  "families": [
+    "local_v1_train_009",
+    "local_v1_train_012",
+    "local_v1_train_017",
+    "local_v1_train_020"
+  ],
+  "selection": "same_four_previously_selected_training_families_no_new_positive_selection",
+  "meshes": [
+    40,
+    80
+  ],
+  "new_mesh": 80,
+  "output_interval_s": 2,
+  "anchors_s": [
+    180,
+    210
+  ],
+  "physical_centers_y_m": [
+    20,
+    70
+  ],
+  "physical_boundary_intervals_y_m": [
+    [
+      10,
+      30
+    ],
+    [
+      60,
+      80
+    ]
+  ],
+  "fixed_xy": "hyra_validation.lead.XY",
+  "readouts": [
+    "nearest",
+    "linear"
+  ],
+  "primary_readout": "linear",
+  "forecast_releases_s": [
+    180,
+    190,
+    210,
+    220
+  ],
+  "nominal_initialization": "same_mesh_independent_nominal_base_only",
+  "conditions": [
+    "E0",
+    "E1"
+  ],
+  "coverage": "all_18432_parent_common_windows_including_all_563_disagreements",
+  "stable_controls": "before_new_integration_select_nearest_to_threshold_and_farthest_stable_window_per_family_anchor_center_condition_target_tie_by_parent_row_index",
+  "full_service_s": 12,
+  "depth_limit_m": 0.8,
+  "engineering_thresholds": {
+    "max_target_trajectory_depth_change_m": 0.005,
+    "max_nominal_lag_change_s": 2,
+    "common_window_label_changes": 0
+  },
+  "integration_budget": {
+    "max_new_fields": 56,
+    "maximum_mesh": 80,
+    "no_automatic_further_refinement": true
+  },
+  "label_policy": "retain_all_windows_report_pair_and_expanded_finite_configuration_envelopes_no_certified_error_bound",
+  "old_confirmation_labels_allowed": false,
+  "new_confirmation_families": 0,
+  "learned_models": 0
+}

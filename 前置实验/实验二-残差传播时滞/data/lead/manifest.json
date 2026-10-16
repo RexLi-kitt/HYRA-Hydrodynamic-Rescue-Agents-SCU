@@ -1,0 +1,44 @@
+{
+  "train": [
+    "lead_000_C0_stable.npz",
+    "lead_000_C1_local.npz",
+    "lead_000_C2_common.npz",
+    "lead_001_C0_stable.npz",
+    "lead_001_C1_local.npz",
+    "lead_001_C2_common.npz",
+    "lead_002_C0_stable.npz",
+    "lead_002_C1_local.npz",
+    "lead_002_C2_common.npz",
+    "lead_003_C0_stable.npz",
+    "lead_003_C1_local.npz",
+    "lead_003_C2_common.npz",
+    "lead_004_C0_stable.npz",
+    "lead_004_C1_local.npz",
+    "lead_004_C2_common.npz",
+    "lead_005_C0_stable.npz",
+    "lead_005_C1_local.npz",
+    "lead_005_C2_common.npz"
+  ],
+  "validation": [
+    "lead_006_C0_stable.npz",
+    "lead_006_C1_local.npz",
+    "lead_006_C2_common.npz",
+    "lead_007_C0_stable.npz",
+    "lead_007_C1_local.npz",
+    "lead_007_C2_common.npz",
+    "lead_008_C0_stable.npz",
+    "lead_008_C1_local.npz",
+    "lead_008_C2_common.npz"
+  ],
+  "test": [
+    "lead_009_C0_stable.npz",
+    "lead_009_C1_local.npz",
+    "lead_009_C2_common.npz",
+    "lead_010_C0_stable.npz",
+    "lead_010_C1_local.npz",
+    "lead_010_C2_common.npz",
+    "lead_011_C0_stable.npz",
+    "lead_011_C1_local.npz",
+    "lead_011_C2_common.npz"
+  ]
+}

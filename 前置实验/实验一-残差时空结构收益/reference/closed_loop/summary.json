@@ -1,0 +1,139 @@
+{
+  "methods": {
+    "B0_raw": {
+      "completion_rate": 0.32222222222222224,
+      "service_yield": 1.6111111111111112,
+      "mae_m": 0.0063657053513496015,
+      "explored_fraction": 0.8522222222222223
+    },
+    "B_local": {
+      "completion_rate": 0.4,
+      "service_yield": 2.0,
+      "mae_m": 0.005471411266872897,
+      "explored_fraction": 0.9388888888888888
+    },
+    "B1_distance": {
+      "completion_rate": 0.4111111111111111,
+      "service_yield": 2.0555555555555554,
+      "mae_m": 0.0053908516325317625,
+      "explored_fraction": 0.8944444444444445
+    },
+    "B2_structure": {
+      "completion_rate": 0.3666666666666667,
+      "service_yield": 1.8333333333333333,
+      "mae_m": 0.005434303556579327,
+      "explored_fraction": 0.9294444444444445
+    },
+    "B2_uniform": {
+      "completion_rate": 0.3555555555555555,
+      "service_yield": 1.7777777777777777,
+      "mae_m": 0.00608563993774528,
+      "explored_fraction": 0.9044444444444443
+    }
+  },
+  "paired": [
+    {
+      "baseline": "B0_raw",
+      "metric": "weighted_service_yield",
+      "difference_b2_minus_baseline": 0.22222222222222224,
+      "event_bootstrap_interval_95": [
+        -0.16666666666666674,
+        0.5
+      ],
+      "independent_families": 3,
+      "uncertainty": "event variation after averaging seeds; pilot interval",
+      "event_and_training_seed_interval_95": [
+        -0.3333333333333333,
+        0.8333333333333334
+      ],
+      "training_seeds": 3,
+      "per_seed_paired_difference": {
+        "11": 0.16666666666666666,
+        "22": 0.5,
+        "33": 0.0
+      }
+    },
+    {
+      "baseline": "B_local",
+      "metric": "weighted_service_yield",
+      "difference_b2_minus_baseline": -0.1666666666666666,
+      "event_bootstrap_interval_95": [
+        -0.6666666666666666,
+        0.16666666666666696
+      ],
+      "independent_families": 3,
+      "uncertainty": "event variation after averaging seeds; pilot interval",
+      "event_and_training_seed_interval_95": [
+        -1.1666666666666667,
+        0.5555555555555556
+      ],
+      "training_seeds": 3,
+      "per_seed_paired_difference": {
+        "11": 0.16666666666666666,
+        "22": 0.3333333333333333,
+        "33": -1.0
+      }
+    },
+    {
+      "baseline": "B1_distance",
+      "metric": "weighted_service_yield",
+      "difference_b2_minus_baseline": -0.22222222222222224,
+      "event_bootstrap_interval_95": [
+        -0.6666666666666666,
+        0.16666666666666652
+      ],
+      "independent_families": 3,
+      "uncertainty": "event variation after averaging seeds; pilot interval",
+      "event_and_training_seed_interval_95": [
+        -1.1666666666666667,
+        0.6666666666666666
+      ],
+      "training_seeds": 3,
+      "per_seed_paired_difference": {
+        "11": 0.3333333333333333,
+        "22": -1.1666666666666667,
+        "33": 0.16666666666666666
+      }
+    },
+    {
+      "baseline": "B2_uniform",
+      "metric": "weighted_service_yield",
+      "difference_b2_minus_baseline": 0.055555555555555504,
+      "event_bootstrap_interval_95": [
+        -1.1666666666666667,
+        0.6666666666666666
+      ],
+      "independent_families": 3,
+      "uncertainty": "event variation after averaging seeds; pilot interval",
+      "event_and_training_seed_interval_95": [
+        -1.1666666666666667,
+        1.1111111111111112
+      ],
+      "training_seeds": 3,
+      "per_seed_paired_difference": {
+        "11": 0.0,
+        "22": -0.3333333333333333,
+        "33": 0.5
+      }
+    }
+  ],
+  "action_value": {
+    "cases": 675,
+    "excluded_before_truth_by_geometry_or_forecast_horizon": 9981,
+    "independent_families": 9,
+    "order_sensitive_cases": 32,
+    "positive_gap_cases": 15,
+    "event_mean_gap": 0.022222222222222223,
+    "note": "Training/validation diagnostic only; time points and layouts are not independent floods; no residual efficacy claim"
+  },
+  "immediate_summary_sensitivity": {
+    "changed": 6,
+    "total": 3231,
+    "fraction": 0.0018570102135561746
+  },
+  "main_rollouts": 90,
+  "models": 15,
+  "all_checks_passed": true,
+  "failed_attempts_without_same_step_restart": 80,
+  "interpretation": "diagnostic re-evaluation on reused test events; not blind holdout"
+}

@@ -1,0 +1,20 @@
+{
+  "train": [
+    "../events/flood_000.npz",
+    "../events/flood_001.npz",
+    "../events/flood_002.npz",
+    "../events/flood_003.npz",
+    "../events/flood_004.npz",
+    "../events/flood_005.npz"
+  ],
+  "validation": [
+    "../events/flood_006.npz",
+    "../events/flood_007.npz",
+    "../events/flood_008.npz"
+  ],
+  "test": [
+    "../events/flood_009.npz",
+    "../events/flood_010.npz",
+    "../events/flood_011.npz"
+  ]
+}

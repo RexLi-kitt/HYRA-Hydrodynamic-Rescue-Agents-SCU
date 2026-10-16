@@ -1,0 +1,86 @@
+[
+  {
+    "baseline": "B0_raw",
+    "metric": "weighted_service_yield",
+    "difference_b2_minus_baseline": 0.22222222222222224,
+    "event_bootstrap_interval_95": [
+      -0.16666666666666674,
+      0.5
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval",
+    "event_and_training_seed_interval_95": [
+      -0.3333333333333333,
+      0.8333333333333334
+    ],
+    "training_seeds": 3,
+    "per_seed_paired_difference": {
+      "11": 0.16666666666666666,
+      "22": 0.5,
+      "33": 0.0
+    }
+  },
+  {
+    "baseline": "B_local",
+    "metric": "weighted_service_yield",
+    "difference_b2_minus_baseline": -0.1666666666666666,
+    "event_bootstrap_interval_95": [
+      -0.6666666666666666,
+      0.16666666666666696
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval",
+    "event_and_training_seed_interval_95": [
+      -1.1666666666666667,
+      0.5555555555555556
+    ],
+    "training_seeds": 3,
+    "per_seed_paired_difference": {
+      "11": 0.16666666666666666,
+      "22": 0.3333333333333333,
+      "33": -1.0
+    }
+  },
+  {
+    "baseline": "B1_distance",
+    "metric": "weighted_service_yield",
+    "difference_b2_minus_baseline": -0.22222222222222224,
+    "event_bootstrap_interval_95": [
+      -0.6666666666666666,
+      0.16666666666666652
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval",
+    "event_and_training_seed_interval_95": [
+      -1.1666666666666667,
+      0.6666666666666666
+    ],
+    "training_seeds": 3,
+    "per_seed_paired_difference": {
+      "11": 0.3333333333333333,
+      "22": -1.1666666666666667,
+      "33": 0.16666666666666666
+    }
+  },
+  {
+    "baseline": "B2_uniform",
+    "metric": "weighted_service_yield",
+    "difference_b2_minus_baseline": 0.055555555555555504,
+    "event_bootstrap_interval_95": [
+      -1.1666666666666667,
+      0.6666666666666666
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval",
+    "event_and_training_seed_interval_95": [
+      -1.1666666666666667,
+      1.1111111111111112
+    ],
+    "training_seeds": 3,
+    "per_seed_paired_difference": {
+      "11": 0.0,
+      "22": -0.3333333333333333,
+      "33": 0.5
+    }
+  }
+]

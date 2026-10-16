@@ -1,0 +1,95 @@
+{
+  "study_id": "metric-flight-all-target-pairs-training-screen-v1-20261016",
+  "status": "training_redesign_after_identifying_all32_old_layouts_same_side",
+  "hydraulic_parent": "historical_workspace/残差收益验证/results/runs/20261016_131234_643267_physical_scale_training_screen",
+  "prerequisites": [
+    "hydraulic_parent_complete",
+    "hydraulic_parent_independent_audit_passed"
+  ],
+  "additional_reference_or_probe_integrations": 0,
+  "additional_nominal_forecast_integrations": 24,
+  "additional_actual_forecast_releases_s": [
+    320,
+    330
+  ],
+  "additional_forecast_state_source": "same_mesh_independent_nominal_base_only_never_truth",
+  "candidate_lengths_x_m": [
+    100,
+    200,
+    300
+  ],
+  "candidate_amplitudes_m": [
+    0.1,
+    0.2
+  ],
+  "target_ids": [
+    13,
+    23,
+    33,
+    63,
+    73,
+    83,
+    15,
+    25,
+    35,
+    65,
+    75,
+    85
+  ],
+  "target_pairs": "all66_unordered_pairs_no_outcome_based_selection",
+  "origin_ids": [
+    44,
+    45,
+    54,
+    55
+  ],
+  "flight_speed_m_per_s": [
+    5,
+    10
+  ],
+  "motion": "straight_line_physical_distance_divided_by_speed_same_speed_for_all_directions_no_flood_based_flight_exclusion",
+  "service_s": 12,
+  "abort_feedback_s": 6,
+  "service_depth_threshold_m": 0.8,
+  "maximum_worst_order_duration_s": 48,
+  "eligibility": "both_orders_duration_at_most48s_and_decision_plus_worst_duration_before_anchor_plus60s_geometry_and_clock_only_all_exclusions_counted",
+  "decision_offsets_s": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "late_decision_reason": "10s_delay_and5s_sampling_new_source_response_usually_not_available_by_old_last_decision12s",
+  "anchors_s": [
+    180,
+    240,
+    300
+  ],
+  "physical_centers_y_m": [
+    20,
+    70
+  ],
+  "deadline": "anchor_plus_60s",
+  "forecast_versions": "same_actual_independent_nominal_versions_as_hydraulic_parent",
+  "critical_filter": "anchor_issue_only_either_order_full_service_maximum_within_0.05m_of_0.8m",
+  "populations": [
+    "all_geometrically_eligible",
+    "nominal_critical"
+  ],
+  "secondary_strata": [
+    "same_half",
+    "cross_half",
+    "speed5",
+    "speed10"
+  ],
+  "weighting": "pool_eligible_design_cases_within_each_family_include_both_speeds_all_pairs_all_origins_E0_E1_equal_then_family_macro_report_coverage",
+  "visibility": "same_preregistered_six_sources_four_phases_D0_D10_paired_1mm_necessary_diagnostic_not_detector",
+  "pulse_specific": "same_alternative_improves_E1_but_not_E0",
+  "candidate_selection": "ascending_length_then_amplitude_first_with_all4_families_10critical_design_cases_2nonempty_cells_headroom_macro_ge4_per100_and_visible_pulse_D0_macro_ge2_per100",
+  "minimum_practical_confirmed_gain_per100": 1,
+  "scope_limit": "training_task_design_only_not_model_advantage_not_new_geometry_convergence_not_real_uav_dynamics_validation",
+  "old_confirmation_labels_allowed": false,
+  "no_additional_outcome_based_pair_or_speed_selection": true
+}

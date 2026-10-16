@@ -1,0 +1,226 @@
+{
+  "protocol_id": "local-service-regret-design-v1-20261015",
+  "status": "design_only_not_runner_config_not_frozen",
+  "protocol_path": "docs/protocols/HyRA_下一轮实验协议_本地残差与服务遗憾_20261015.md",
+  "execution_started": false,
+  "master_seed": 2026101517,
+  "scope": "single_uav_two_known_targets_initial_order_selection",
+  "runtime_python": "python",
+  "family_counts": {
+    "train": 24,
+    "validation": 12,
+    "sample_size_pilot": 12,
+    "confirmation_min": 48,
+    "confirmation_max": 120,
+    "confirmation_final_n": null,
+    "round_up_multiple": 12
+  },
+  "hydraulic_parameters_uniform": {
+    "slope": [
+      0.001,
+      0.002
+    ],
+    "ridge_m": [
+      0.04,
+      0.1
+    ],
+    "rate_m_per_s": [
+      0.0025,
+      0.0035
+    ],
+    "onset_s": [
+      15,
+      30
+    ],
+    "friction": [
+      0.025,
+      0.035
+    ]
+  },
+  "truth_conditions": [
+    "E0_base",
+    "E1_local_boundary_pulse"
+  ],
+  "pulse": {
+    "amplitude_m": 0.1,
+    "rise_s": 10,
+    "plateau_s": 20,
+    "fall_s": 10,
+    "start_s_candidates": [
+      60,
+      90
+    ],
+    "center_y_m_candidates": [
+      25,
+      75
+    ]
+  },
+  "forecast": {
+    "release_interval_s": 10,
+    "published_horizon_s": 60,
+    "evaluated_horizon_s": 50,
+    "offset_interval_s": 2,
+    "historical_match": "latest_actual_release_at_or_before_observation_valid_time_minus_20s",
+    "actual_historical_lead_logged_and_featured": true,
+    "truth_or_observation_state_reset": false,
+    "near_accurate_factor_uniform": [
+      0.98,
+      1.02
+    ],
+    "underestimate_factor_uniform": [
+      0.8,
+      0.95
+    ],
+    "overestimate_factor_uniform": [
+      1.05,
+      1.2
+    ],
+    "switch_directions": [
+      "under_to_over",
+      "over_to_under"
+    ],
+    "switch_time_s_candidates": [
+      90,
+      120,
+      150
+    ],
+    "switch_known_before_occurrence": false
+  },
+  "observations": {
+    "network": "existing_MONITORS_24",
+    "targets": "existing_TARGETS_12_all_have_local_support",
+    "revisit_s": 5,
+    "phase_fractions": [
+      0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "noise_std_m": [
+      0,
+      0.02
+    ],
+    "delay_s": [
+      0,
+      10
+    ],
+    "noisy_replicates": 3,
+    "noiseless_replicates": 1,
+    "history_age_upper_exclusive_s": 60,
+    "history_bins": 6,
+    "bin_width_s": 10,
+    "all_methods_share_records": true,
+    "true_noise_class_as_input": false
+  },
+  "task": {
+    "move_step_s": 6,
+    "full_service_s": 12,
+    "service_depth_limit_m": 0.8,
+    "layout_count": 32,
+    "layout_seed_attempt_limit": 128,
+    "obstacle_count": 10,
+    "obstacle_excluded_regions": [
+      0,
+      1,
+      10,
+      11
+    ],
+    "geometry_preview_path": "configs/local_service_regret.geometry.preview.v1.json",
+    "maximum_worst_order_duration_s": 48,
+    "decision_times_range_inclusive_s": [
+      24,
+      240,
+      6
+    ],
+    "decision_times_sampled_without_replacement_per_layout": 4,
+    "primary_cases_per_family_condition": 128,
+    "candidate_orders": 2,
+    "replan_in_transit": false,
+    "selection": [
+      "predicted_service_count",
+      "full_service_maximin_depth_margin",
+      "target_id_lexicographic"
+    ],
+    "nominal_critical_band_m": 0.05,
+    "truth_used_to_select_layout": false
+  },
+  "models": {
+    "ridge_alpha": [
+      0.1,
+      1,
+      10
+    ],
+    "ols_window_s": [
+      20,
+      40,
+      60
+    ],
+    "shared_local_candidate_count": 10,
+    "ordinary_update_candidate_count": 26,
+    "ewma_half_life_s": [
+      10,
+      20,
+      40
+    ],
+    "kf_rw_process_variance_rate_m2_per_s": [
+      1e-07,
+      1e-06,
+      1e-05,
+      0.0001
+    ],
+    "kf_cv_process_spectral_density_m2_per_s3": [
+      1e-08,
+      1e-07,
+      1e-06
+    ],
+    "kf_measurement_std_m": [
+      0.005,
+      0.02,
+      0.05
+    ],
+    "kf_initial_bias_std_m": 0.05,
+    "kf_initial_bias_rate_std_m_per_s": 0.002,
+    "A0": "nominal",
+    "A1": "forecast_only_ridge_selected_by_validation_service_regret",
+    "A2": "ordinary_update_pool_selected_by_validation_service_regret",
+    "A3": "shared_local_pool_selected_by_validation_full_curve_MAE",
+    "A4": "same_exact_candidates_as_A3_selected_by_validation_service_regret",
+    "A5": "history_ridge_component_selected_by_validation_service_regret",
+    "one_selected_model_per_group_across_all_conditions": true,
+    "test_selection_allowed": false
+  },
+  "statistics": {
+    "independent_unit": "hydraulic_family",
+    "primary_comparisons": [
+      [
+        "A4",
+        "A3"
+      ],
+      [
+        "A4",
+        "A2"
+      ]
+    ],
+    "primary_population": "all_geometry_feasible_monitored_compact_layout_time_cases",
+    "minimum_practical_gain_services_per_initial_case": 0.01,
+    "pilot_sd_inflation": 1.25,
+    "power_planning_z_sum": 3.083,
+    "bootstrap_family_resamples": 10000,
+    "primary_two_sided_CI_level_each": 0.975,
+    "zero_pilot_variance_means": "inspect_opportunities_do_not_claim_high_power",
+    "test_based_optional_stopping": false,
+    "maximum_mean_loss_for_engineering_gate": 0.005,
+    "maximum_failed_service_rate_increase_upper_one_sided_95CI": 0.005,
+    "failure_rate_denominator": "two_target_slots_per_initial_case"
+  },
+  "freeze_required_before_confirmation": [
+    "source_hashes",
+    "data_and_layout_manifest",
+    "random_substreams",
+    "selected_candidates",
+    "final_confirmation_n",
+    "metric_definitions",
+    "resource_benchmark",
+    "causal_input_and_scoring_audit"
+  ]
+}

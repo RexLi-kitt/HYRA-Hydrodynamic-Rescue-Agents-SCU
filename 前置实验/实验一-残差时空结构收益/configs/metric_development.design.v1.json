@@ -1,0 +1,207 @@
+{
+  "study_id": "hidden-target-metric-development-v2-20261016",
+  "stage": "fresh_development_not_confirmation",
+  "master_seed": 2026101609,
+  "seed_namespace": 271,
+  "split_ids": {
+    "train": 1,
+    "validation": 2,
+    "pilot": 3,
+    "confirmation": 4
+  },
+  "planned_family_counts": {
+    "train": 24,
+    "validation": 12,
+    "pilot": 12
+  },
+  "confirmation_n": null,
+  "confirmation_min": 48,
+  "confirmation_max": 120,
+  "hydraulic_parameters_uniform": {
+    "slope": [
+      0.001,
+      0.002
+    ],
+    "ridge": [
+      0.04,
+      0.1
+    ],
+    "rate": [
+      0.0025,
+      0.0035
+    ],
+    "onset": [
+      15,
+      30
+    ],
+    "friction": [
+      0.025,
+      0.035
+    ]
+  },
+  "nominal_factor_uniform": [
+    0.98,
+    1.02
+  ],
+  "length_x_m": 100,
+  "reference_meshes": [
+    80,
+    40
+  ],
+  "primary_reference_mesh": 80,
+  "nominal_mesh": 40,
+  "reference_precision_contract": "reference80_primary_reference40_secondary_sources_match_each_reference_nominal40_always_independent_never_reset_from_reference",
+  "point_readout": "fixed_physical_points_convex_centroid_Delaunay_linear",
+  "output_interval_s": 2,
+  "reference_final_time_s": 390,
+  "nominal_final_time_s": 450,
+  "reference_fork_horizon_s": 90,
+  "calibration_fork_horizon_s": 150,
+  "anchors_s": [
+    180,
+    240,
+    300
+  ],
+  "centers_y_m": [
+    20,
+    70
+  ],
+  "pulse_amplitude_m": 0.2,
+  "probe_amplitude_m": 0.1,
+  "pulse_shape_s": [
+    10,
+    20,
+    10
+  ],
+  "global_sensitivity_relative_step": 0.02,
+  "forecast_release_grid": [
+    100,
+    330,
+    10
+  ],
+  "published_forecast_horizon_s": 60,
+  "anchor_forecasts": "first60s_of_same_nominal150s_unperturbed_calibration_fork_actual_issue_logged",
+  "history_s": 60,
+  "sample_interval_s": 5,
+  "raw_slots_per_source": 12,
+  "source_ids": [
+    10,
+    20,
+    30,
+    60,
+    70,
+    80
+  ],
+  "source_fields": [
+    "observation",
+    "matched_prior",
+    "residual",
+    "age",
+    "actual_lead",
+    "mask"
+  ],
+  "history_prior": "latest_actual_issue_at_or_before_valid_minus20s_no_interpolated_issue",
+  "target_observations_allowed": false,
+  "sample_phase_fractions": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "noise_std_m": [
+    0,
+    0.02
+  ],
+  "noisy_replicates": 3,
+  "noise_pairing": "same_noise_for_E0_E1_centers_precisions_and_methods_seed_excludes_condition_center_precision",
+  "delays_s": [
+    0,
+    10
+  ],
+  "primary_delay_s": 0,
+  "target_pairs": "all66",
+  "origin_ids": [
+    44,
+    45,
+    54,
+    55
+  ],
+  "speeds_m_per_s": [
+    5,
+    10
+  ],
+  "decision_offsets_s": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "maximum_order_duration_s": 48,
+  "absolute_deadline": "anchor_plus60",
+  "full_service_s": 12,
+  "abort_feedback_s": 6,
+  "service_depth_limit_m": 0.8,
+  "primary_population": "nominal40_anchor_issue_critical_full_service_maxima_within0.05m_all_geometrically_and_clock_eligible_cases",
+  "general_population_also_reported": true,
+  "critical_band_m": 0.05,
+  "empty_family_policy": "fixed_attempts_no_replacement_report_coverage_conditional_active_family_macro_bootstrap_all_attempts_as_ratio_min80percent_active_for_confirmation",
+  "within_family_weights": "eligible_cases_pooled_E0_E1_centers_and_anchors_noise_classes_equal_phases_equal_replicates_inverse_count",
+  "independent_unit": "hydraulic_family",
+  "P0": "nominal_and_forecast_only_regression",
+  "P1": "all12raw_slots_ordinary_KF_EWMA_spatial_transfer",
+  "P2": "all_source_raw_history_target_conditioned_ridge_MLP_GRU_shared_public_nominal_context",
+  "P3": "training_only_conditional_detrending_and_empirical_temporal_filters",
+  "P4": "nominal_global_sensitivity_plus_all_center_unknown_onset_response_mixture",
+  "P5": "same_source_inference_prior_support_and_capacity_asP4_target_response_lag_removed",
+  "additional_controls": [
+    "wrong_spatial_target_response",
+    "wrong_target_lag",
+    "P5_exact_selected_P4_hyperparameters"
+  ],
+  "prohibited_features": [
+    "reference_target_depth",
+    "true_condition",
+    "true_pulse_center",
+    "true_pulse_anchor",
+    "true_pulse_amplitude",
+    "future_observation",
+    "future_published_issue"
+  ],
+  "physical_library_selection": "all_centers_nominal_states_only_interpolate_by_public_nominal_state_not_true_event_metadata",
+  "proposed_physical_hyperparameters": {
+    "noise_std_m": [
+      0.005,
+      0.02,
+      0.05
+    ],
+    "pulse_coefficient_prior_std": [
+      1,
+      2,
+      3
+    ],
+    "global_relative_forcing_prior_std": 0.02,
+    "candidate_onset_ages_s": [
+      0,
+      40,
+      2
+    ]
+  },
+  "selection": "global_validation_primary_task_yield_no_per_family_or_test_selection_matched_P4_P5_candidate_budget",
+  "B_star": "global_validation_selected_best_P0_through_P3_candidate",
+  "robust_precision_criterion": "per_family_minimum_improvement_across_reference80_and40_same_frozen_model_same_nominal40",
+  "fixed_sequence_confirmatory_requirements": [
+    "positive95CI_6_and12s_average_MAE_improvement_P4_vs_P5",
+    "positive95CI_common_complete_window_classification_error_improvement_P4_vs_Bstar",
+    "positive95CI_actual_completed_service_improvement_P4_vs_Bstar_and_point_estimate_at_least0.01"
+  ],
+  "minimum_practical_gain_services_per_case": 0.01,
+  "pilot_minimum_oracle_headroom_CI_lower": 0.02,
+  "planned95CI_halfwidth_max": 0.005,
+  "family_bootstrap_resamples": 10000,
+  "information_action_check": "fixed_E1_truth_swap_arrived_E1_observations_for_paired_E0_same_noise_P0_negative_control_actual_actions_and_yields_recomputed",
+  "old_confirmation_labels_allowed": false,
+  "pilot_open_before_model_freeze": false,
+  "fresh_confirmation_open_before_N_and_model_freeze": false
+}

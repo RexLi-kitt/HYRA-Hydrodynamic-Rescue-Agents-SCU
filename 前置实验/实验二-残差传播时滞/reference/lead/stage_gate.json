@@ -1,0 +1,7 @@
+{
+  "information_gate_passed": false,
+  "formal_blind_test": false,
+  "criterion": "C1 tau20, all five baselines, stationary/moving, >=5% MAE reduction and >=2/3 diagnostic families favorable",
+  "next": "Do not start large strategy training; locate failed information/lag hypothesis",
+  "task_efficacy_tested": false
+}

@@ -1,0 +1,20 @@
+{
+  "train": [
+    "../../results/runs/20261014_234422_742121_events/flood_000.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_001.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_002.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_003.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_004.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_005.npz"
+  ],
+  "validation": [
+    "../../results/runs/20261014_234422_742121_events/flood_006.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_007.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_008.npz"
+  ],
+  "test": [
+    "../../results/runs/20261014_234422_742121_events/flood_009.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_010.npz",
+    "../../results/runs/20261014_234422_742121_events/flood_011.npz"
+  ]
+}

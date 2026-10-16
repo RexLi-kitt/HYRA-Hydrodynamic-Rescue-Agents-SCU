@@ -1,0 +1,116 @@
+{
+  "study_id": "physical-scale-calibration-v1-20261016",
+  "status": "training_design_screen_not_confirmation",
+  "source_family_parent": "historical_workspace/残差收益验证/results/runs/20261015_223803_062443_local_service_campaign",
+  "family_ids": [
+    "local_v1_train_000",
+    "local_v1_train_001",
+    "local_v1_train_002",
+    "local_v1_train_003"
+  ],
+  "family_selection": "first_four_old_training_families_no_positive_outcome_selection",
+  "domain_lengths_x_m": [
+    100,
+    200,
+    300
+  ],
+  "domain_length_y_m": 100,
+  "terrain": "same_total_x_relief_slope_divided_by_length_scale_same_y_ridge",
+  "sampling_xy": "original_grid_x_coordinate_times_length_scale_fixed_across_meshes",
+  "mesh": 40,
+  "output_interval_s": 2,
+  "final_time_s": 390,
+  "truth_pulse_amplitudes_m": [
+    0.1,
+    0.2
+  ],
+  "nominal_probe_amplitude_m": 0.1,
+  "pulse_rise_plateau_fall_s": [
+    10,
+    20,
+    10
+  ],
+  "anchors_s": [
+    180,
+    240,
+    300
+  ],
+  "physical_centers_y_m": [
+    20,
+    70
+  ],
+  "physical_boundary_intervals_y_m": [
+    [
+      10,
+      30
+    ],
+    [
+      60,
+      80
+    ]
+  ],
+  "forecast_releases_s": {
+    "start": 100,
+    "stop_inclusive": 310,
+    "step": 10
+  },
+  "forecast_horizon_s": 60,
+  "forecast_initialization": "same_configuration_independent_nominal_base_only",
+  "current_forecast": "latest_actual_release_at_or_before_decision",
+  "history_prior": "latest_actual_release_at_or_before_valid_minus_20_seconds",
+  "decision_offsets_s": [
+    0,
+    6,
+    12
+  ],
+  "all32_original_layouts": true,
+  "move_step_s": 6,
+  "motion_semantics": "one_8_neighbor_grid_edge_per_6s_in_every_length_condition_effective_speed_changes_with_physical_grid_length_recorded_explicitly",
+  "service_s": 12,
+  "service_depth_threshold_m": 0.8,
+  "deadline": "anchor_plus_60s",
+  "critical_filter": "anchor_published_nominal_full_service_maxima_within_0.05m_of_threshold_no_truth_or_later_issue",
+  "source_ids": [
+    10,
+    20,
+    30,
+    60,
+    70,
+    80
+  ],
+  "target_observations_allowed": false,
+  "sample_interval_s": 5,
+  "sample_phase_fractions": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "observation_delays_s": [
+    0,
+    10
+  ],
+  "paired_response_visibility_threshold_m": 0.001,
+  "offline_visibility": "any_of_six_common_sources_latest_arrived_record_in_each_10s_age_bin_not_an_operational_detector",
+  "training_screen_selection_rule": {
+    "order": "ascending_length_then_ascending_amplitude",
+    "all4_families_have_at_least_10_critical_cases": true,
+    "critical_cases_counted_before_E0_E1_duplication": true,
+    "all4_families_have_at_least_2_nonempty_anchor_center_cells": true,
+    "minimum_family_macro_nominal_headroom_per100": 4,
+    "minimum_family_macro_visible_pulse_gain_D0_per100": 2,
+    "interpretation": "necessary_optimistic_training_screen_only_not_Bstar_gate_not_confirmation"
+  },
+  "subsequent_required_checks": [
+    "new_geometry_mesh40_to80_sensitivity",
+    "P0_to_P5_and_strong_baseline_development",
+    "fresh_pilot_Bstar_headroom_lower95CI_at_least_2_per100",
+    "new_fixed_confirmation"
+  ],
+  "minimum_practical_confirmed_gain_per100": 1,
+  "all_conditions_reported": true,
+  "old_confirmation_labels_allowed": false,
+  "learned_models": 0,
+  "maximum_new_integrations": 504,
+  "no_automatic_additional_scale_search": true
+}

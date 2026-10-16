@@ -1,0 +1,122 @@
+[
+  {
+    "event_id": "flood_000",
+    "split": "train",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_000.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_001",
+    "split": "train",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_001.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_002",
+    "split": "train",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_002.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_003",
+    "split": "train",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_003.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_004",
+    "split": "train",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_004.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_005",
+    "split": "train",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_005.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_006",
+    "split": "validation",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_006.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_007",
+    "split": "validation",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_007.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_008",
+    "split": "validation",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_008.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_009",
+    "split": "test",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_009.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_010",
+    "split": "test",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_010.solver.npz",
+    "families_isolated": true
+  },
+  {
+    "event_id": "flood_011",
+    "split": "test",
+    "source": "ANUGA",
+    "version": "4.0.1",
+    "forecast_initial_nominal_max_error_m": 0.0,
+    "mapping_max_distance_m": 3.3333333333333357,
+    "raw_solver_file": "flood_011.solver.npz",
+    "families_isolated": true
+  }
+]

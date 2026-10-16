@@ -1,0 +1,321 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "moving": false,
+      "noise": 0,
+      "delay": 0,
+      "phase": 0,
+      "name": "fixed_n0_d0_p0",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "I1_common",
+      "proposed_mae_m": 0.0032213841424569983,
+      "baseline_mae_m": 0.003305599757467704,
+      "relative_reduction": 0.025476652102376707,
+      "mae_delta_m": -8.421561501070487e-05,
+      "interval_95": [
+        -8.894956275123152e-05,
+        -7.940169795605427e-05
+      ],
+      "favorable_families": 3,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.0033447876047331985,
+          0.003424189302689253
+        ],
+        [
+          "lead_010",
+          0.0034355816793850964,
+          0.0035198772637099252
+        ],
+        [
+          "lead_011",
+          0.002883783143252701,
+          0.0029727327060039325
+        ]
+      ]
+    },
+    {
+      "moving": false,
+      "noise": 0,
+      "delay": 0,
+      "phase": 0,
+      "name": "fixed_n0_d0_p0",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "N3_uniform_norm",
+      "proposed_mae_m": 0.0032213841424569983,
+      "baseline_mae_m": 0.003303340504249418,
+      "relative_reduction": 0.024810146482625917,
+      "mae_delta_m": -8.195636179241916e-05,
+      "interval_95": [
+        -8.550676928936957e-05,
+        -7.761334398082801e-05
+      ],
+      "favorable_families": 3,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.0033447876047331985,
+          0.0034224009487140265
+        ],
+        [
+          "lead_010",
+          0.0034355816793850964,
+          0.0035183306514921563
+        ],
+        [
+          "lead_011",
+          0.002883783143252701,
+          0.0029692899125420705
+        ]
+      ]
+    },
+    {
+      "moving": false,
+      "noise": 0,
+      "delay": 0,
+      "phase": 0,
+      "name": "fixed_n0_d0_p0",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "N2_recent_norm",
+      "proposed_mae_m": 0.0032213841424569983,
+      "baseline_mae_m": 0.003210595621218903,
+      "relative_reduction": -0.003360286535867063,
+      "mae_delta_m": 1.0788521238095511e-05,
+      "interval_95": [
+        8.166096392630846e-06,
+        1.3384013501611253e-05
+      ],
+      "favorable_families": 0,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.0033447876047331985,
+          0.0033314035912315873
+        ],
+        [
+          "lead_010",
+          0.0034355816793850964,
+          0.0034274155829924656
+        ],
+        [
+          "lead_011",
+          0.002883783143252701,
+          0.0028729676894326565
+        ]
+      ]
+    },
+    {
+      "moving": false,
+      "noise": 0,
+      "delay": 0,
+      "phase": 0,
+      "name": "fixed_n0_d0_p0",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "N4_wrong_norm",
+      "proposed_mae_m": 0.0032213841424569983,
+      "baseline_mae_m": 0.003330397734842134,
+      "relative_reduction": 0.032732904915425354,
+      "mae_delta_m": -0.00010901359238513527,
+      "interval_95": [
+        -0.00013106244705037495,
+        -8.135935962599785e-05
+      ],
+      "favorable_families": 3,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.0033447876047331985,
+          0.0034261469643591964
+        ],
+        [
+          "lead_010",
+          0.0034355816793850964,
+          0.0035502006498641294
+        ],
+        [
+          "lead_011",
+          0.002883783143252701,
+          0.003014845590303076
+        ]
+      ]
+    },
+    {
+      "name": "rotating_phase_average",
+      "moving": true,
+      "noise": 0,
+      "delay": 0,
+      "phase": "average",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "I1_common",
+      "proposed_mae_m": 0.004584816748368355,
+      "baseline_mae_m": 0.004768214973679489,
+      "relative_reduction": 0.03846265873570942,
+      "mae_delta_m": -0.00018339822531113445,
+      "interval_95": [
+        -0.00019646223967832548,
+        -0.00017062055533782327
+      ],
+      "favorable_families": 3,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.004667598052803849,
+          0.004850709933721104
+        ],
+        [
+          "lead_010",
+          0.00467490647987609,
+          0.004845527035213913
+        ],
+        [
+          "lead_011",
+          0.004411945712425126,
+          0.004608407952103452
+        ]
+      ]
+    },
+    {
+      "name": "rotating_phase_average",
+      "moving": true,
+      "noise": 0,
+      "delay": 0,
+      "phase": "average",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "N3_uniform_norm",
+      "proposed_mae_m": 0.004584816748368355,
+      "baseline_mae_m": 0.004706530951107286,
+      "relative_reduction": 0.025860703775951066,
+      "mae_delta_m": -0.00012171420273893059,
+      "interval_95": [
+        -0.00016984855476808412,
+        -8.439310492693725e-05
+      ],
+      "favorable_families": 3,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.004667598052803849,
+          0.00477849900132562
+        ],
+        [
+          "lead_010",
+          0.00467490647987609,
+          0.004844755034644174
+        ],
+        [
+          "lead_011",
+          0.004411945712425126,
+          0.0044963388173520635
+        ]
+      ]
+    },
+    {
+      "name": "rotating_phase_average",
+      "moving": true,
+      "noise": 0,
+      "delay": 0,
+      "phase": "average",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "N2_recent_norm",
+      "proposed_mae_m": 0.004584816748368355,
+      "baseline_mae_m": 0.004584843641841868,
+      "relative_reduction": 5.865734060583883e-06,
+      "mae_delta_m": -2.6893473512671257e-08,
+      "interval_95": [
+        -7.409597521743777e-08,
+        6.1862395726863806e-09
+      ],
+      "favorable_families": 2,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.004667598052803849,
+          0.004667672148779067
+        ],
+        [
+          "lead_010",
+          0.00467490647987609,
+          0.004674900293636517
+        ],
+        [
+          "lead_011",
+          0.004411945712425126,
+          0.0044119584831100195
+        ]
+      ]
+    },
+    {
+      "name": "rotating_phase_average",
+      "moving": true,
+      "noise": 0,
+      "delay": 0,
+      "phase": "average",
+      "tau": 20,
+      "condition": "C1_local",
+      "stratum": "all",
+      "proposed": "N1_physical_norm",
+      "baseline": "N4_wrong_norm",
+      "proposed_mae_m": 0.004584816748368355,
+      "baseline_mae_m": 0.004662238287216743,
+      "relative_reduction": 0.016606087908605627,
+      "mae_delta_m": -7.742153884838833e-05,
+      "interval_95": [
+        -8.558423334214041e-05,
+        -6.665185627594168e-05
+      ],
+      "favorable_families": 3,
+      "independent_families": 3,
+      "family_values": [
+        [
+          "lead_009",
+          0.004667598052803849,
+          0.004734249909079791
+        ],
+        [
+          "lead_010",
+          0.00467490647987609,
+          0.004754935006803173
+        ],
+        [
+          "lead_011",
+          0.004411945712425126,
+          0.004497529945767267
+        ]
+      ]
+    }
+  ],
+  "original_information_gate_changed": false,
+  "formal_test_opened": false,
+  "policy_trained": false,
+  "decision": "Stop before rescue-policy/critical-order testing; lag-specific information gate failed"
+}
