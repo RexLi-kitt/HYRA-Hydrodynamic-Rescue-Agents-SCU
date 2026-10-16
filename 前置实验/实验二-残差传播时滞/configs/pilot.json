@@ -1,0 +1,63 @@
+{
+  "status": "PILOT_FROZEN_BEFORE_TEST",
+  "seed": 20261014,
+  "manifest": "data/manifests/pilot.json",
+  "representation": {
+    "n_regions": 100,
+    "history_length": 2,
+    "decay_time_s": 30,
+    "max_age_s": 60,
+    "max_links_per_region": 3,
+    "lead_time_s": 20
+  },
+  "observations": {
+    "sample_interval_s": 10,
+    "delay_s": 0,
+    "noise_std_m": 0,
+    "lead_time_s": 20,
+    "seed": 17
+  },
+  "environment": {
+    "grid_size": 10,
+    "n_agents": 4,
+    "n_targets": 5,
+    "obstacle_fraction": 0.1,
+    "episode_limit": 50,
+    "step_s": 6,
+    "service_s": 12,
+    "depth_limit_m": 0.8,
+    "resources_per_agent": 2,
+    "sense_width": 5
+  },
+  "training": {
+    "episodes": 120,
+    "batch_size": 4,
+    "buffer_size": 64,
+    "hidden_dim": 64,
+    "embed_dim": 32,
+    "target_update_interval": 20,
+    "lr": 0.0001,
+    "gamma": 0.99,
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "validation_interval": 60
+  },
+  "evaluation": {
+    "underestimation_threshold_m": 0.15,
+    "ridge_candidates": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "bootstrap_seed": 91
+  },
+  "methods": [
+    "B0_raw",
+    "B1_distance",
+    "B2_structure",
+    "B2_uniform"
+  ]
+}

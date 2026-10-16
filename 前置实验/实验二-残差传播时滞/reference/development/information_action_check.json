@@ -1,0 +1,255 @@
+{
+  "completed": true,
+  "intervention": "Same E1 truth; replace arrived inputs by paired E0 inputs with identical noise; recompute predictions and initial order; same actual six-second abort feedback",
+  "primary_delay_s": 0,
+  "E1_condition_only": true,
+  "training_diagnostic": false,
+  "confirmation_claim": false,
+  "summary": [
+    {
+      "name": "P0_nominal",
+      "decision_offset_s": null,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P0_nominal",
+      "decision_offset_s": 0,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P0_nominal",
+      "decision_offset_s": 6,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P0_nominal",
+      "decision_offset_s": 12,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P0_nominal",
+      "decision_offset_s": 18,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P0_nominal",
+      "decision_offset_s": 24,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P0_nominal",
+      "decision_offset_s": 30,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P2_mlp_mse_e20",
+      "decision_offset_s": null,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.037916095449196566,
+      "minimum_mesh_action_change_fraction": 0.14776340283308934
+    },
+    {
+      "name": "P2_mlp_mse_e20",
+      "decision_offset_s": 0,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P2_mlp_mse_e20",
+      "decision_offset_s": 6,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.005402899140956547,
+      "minimum_mesh_action_change_fraction": 0.032554679057161744
+    },
+    {
+      "name": "P2_mlp_mse_e20",
+      "decision_offset_s": 12,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.04810387837637748,
+      "minimum_mesh_action_change_fraction": 0.19947356537612085
+    },
+    {
+      "name": "P2_mlp_mse_e20",
+      "decision_offset_s": 18,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.05021603589311924,
+      "minimum_mesh_action_change_fraction": 0.2233090637260655
+    },
+    {
+      "name": "P2_mlp_mse_e20",
+      "decision_offset_s": 24,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.0829099980114725,
+      "minimum_mesh_action_change_fraction": 0.28607357321796384
+    },
+    {
+      "name": "P2_mlp_mse_e20",
+      "decision_offset_s": 30,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.0835252483893118,
+      "minimum_mesh_action_change_fraction": 0.36502056122789867
+    },
+    {
+      "name": "P5_mlp_mse_g4_e20",
+      "decision_offset_s": null,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.03185086920705811,
+      "minimum_mesh_action_change_fraction": 0.13867581396804862
+    },
+    {
+      "name": "P5_mlp_mse_g4_e20",
+      "decision_offset_s": 0,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P5_mlp_mse_g4_e20",
+      "decision_offset_s": 6,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.004492375396502898,
+      "minimum_mesh_action_change_fraction": 0.03990580070782695
+    },
+    {
+      "name": "P5_mlp_mse_g4_e20",
+      "decision_offset_s": 12,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.03973822502128439,
+      "minimum_mesh_action_change_fraction": 0.1730582186493946
+    },
+    {
+      "name": "P5_mlp_mse_g4_e20",
+      "decision_offset_s": 18,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.037662954329620996,
+      "minimum_mesh_action_change_fraction": 0.20995992918983306
+    },
+    {
+      "name": "P5_mlp_mse_g4_e20",
+      "decision_offset_s": 24,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.07335604190040441,
+      "minimum_mesh_action_change_fraction": 0.2810797366998095
+    },
+    {
+      "name": "P5_mlp_mse_g4_e20",
+      "decision_offset_s": 30,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.08045572491535036,
+      "minimum_mesh_action_change_fraction": 0.30714943754461616
+    },
+    {
+      "name": "P4_direct_g0",
+      "decision_offset_s": null,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.04073721373707382,
+      "minimum_mesh_action_change_fraction": 0.13946488233856397
+    },
+    {
+      "name": "P4_direct_g0",
+      "decision_offset_s": 0,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P4_direct_g0",
+      "decision_offset_s": 6,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0035171991503913243,
+      "minimum_mesh_action_change_fraction": 0.020338348219804698
+    },
+    {
+      "name": "P4_direct_g0",
+      "decision_offset_s": 12,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.054990921805873526,
+      "minimum_mesh_action_change_fraction": 0.1877541694205359
+    },
+    {
+      "name": "P4_direct_g0",
+      "decision_offset_s": 18,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.058428502438919096,
+      "minimum_mesh_action_change_fraction": 0.225392558612199
+    },
+    {
+      "name": "P4_direct_g0",
+      "decision_offset_s": 24,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.0866174811416265,
+      "minimum_mesh_action_change_fraction": 0.27572133573088736
+    },
+    {
+      "name": "P4_direct_g0",
+      "decision_offset_s": 30,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.07778764848169256,
+      "minimum_mesh_action_change_fraction": 0.3235214183113401
+    },
+    {
+      "name": "P5_direct_g0",
+      "decision_offset_s": null,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.015050688114836808,
+      "minimum_mesh_action_change_fraction": 0.13924674587965916
+    },
+    {
+      "name": "P5_direct_g0",
+      "decision_offset_s": 0,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.0,
+      "minimum_mesh_action_change_fraction": 0.0
+    },
+    {
+      "name": "P5_direct_g0",
+      "decision_offset_s": 6,
+      "independent_families": 12,
+      "robust_completed_service_gain": -0.001020013726878024,
+      "minimum_mesh_action_change_fraction": 0.03402761162629648
+    },
+    {
+      "name": "P5_direct_g0",
+      "decision_offset_s": 12,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.01985017987934918,
+      "minimum_mesh_action_change_fraction": 0.20467821990569648
+    },
+    {
+      "name": "P5_direct_g0",
+      "decision_offset_s": 18,
+      "independent_families": 12,
+      "robust_completed_service_gain": 0.02087886072261072,
+      "minimum_mesh_action_change_fraction": 0.2285207889862838
+    },
+    {
+      "name": "P5_direct_g0",
+      "decision_offset_s": 24,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.0279436717061014,
+      "minimum_mesh_action_change_fraction": 0.21694977208121716
+    },
+    {
+      "name": "P5_direct_g0",
+      "decision_offset_s": 30,
+      "independent_families": 11,
+      "robust_completed_service_gain": 0.05783896638446063,
+      "minimum_mesh_action_change_fraction": 0.28281259543926257
+    }
+  ]
+}

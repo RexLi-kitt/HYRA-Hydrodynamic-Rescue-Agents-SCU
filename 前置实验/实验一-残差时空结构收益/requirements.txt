@@ -1,0 +1,6 @@
+# Exact versions used for local verification; CPU replay needs no CUDA.
+numpy==2.4.6
+scipy==1.18.1
+torch==2.14.0
+matplotlib==3.10.9
+pytest==9.1.1

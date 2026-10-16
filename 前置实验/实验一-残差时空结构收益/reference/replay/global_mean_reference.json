@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "flood_009",
+    "reference": "arithmetic mean of latest available local residuals; offline only",
+    "mae_m": 0.01805728132712294,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.5253940455341506,
+    "false_positive_rate": 0.0
+  },
+  {
+    "event_id": "flood_010",
+    "reference": "arithmetic mean of latest available local residuals; offline only",
+    "mae_m": 0.02944630990508873,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.7880220646178093,
+    "false_positive_rate": 0.0
+  },
+  {
+    "event_id": "flood_011",
+    "reference": "arithmetic mean of latest available local residuals; offline only",
+    "mae_m": 0.02191655676269418,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.6696428571428571,
+    "false_positive_rate": 0.0
+  }
+]

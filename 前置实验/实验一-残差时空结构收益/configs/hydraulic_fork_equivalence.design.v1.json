@@ -1,0 +1,56 @@
+{
+  "study_id": "hydraulic-fork-equivalence-v1-20261016",
+  "purpose": "validate_reference_state_prefix_reuse_before_fresh_family_generation_not_model_efficacy",
+  "exploratory_example_already_inspected": "scale_family000_mesh40_anchor240_center20_amplitude0.2_max_full_state_difference_about1.6e-13",
+  "scale_parent": "historical_workspace/残差收益验证/results/runs/20261016_131234_643267_physical_scale_training_screen",
+  "refinement_parent": "historical_workspace/残差收益验证/results/runs/20261016_124403_266761_bounded_mesh80_review",
+  "coarse_families": [
+    "local_v1_train_000",
+    "local_v1_train_001",
+    "local_v1_train_002",
+    "local_v1_train_003"
+  ],
+  "coarse_mesh": 40,
+  "coarse_anchors_s": [
+    180,
+    240,
+    300
+  ],
+  "coarse_amplitudes_m": [
+    0.1,
+    0.2
+  ],
+  "fine_families": [
+    "local_v1_train_009",
+    "local_v1_train_012",
+    "local_v1_train_017",
+    "local_v1_train_020"
+  ],
+  "fine_mesh": 80,
+  "fine_anchors_s": [
+    180,
+    210
+  ],
+  "fine_amplitudes_m": [
+    0.1
+  ],
+  "centers_y_m": [
+    20,
+    70
+  ],
+  "length_x_m": 100,
+  "post_fork_horizon_s": 90,
+  "output_interval_s": 2,
+  "initial_state": "same_family_same_mesh_reference_base_at_pulse_anchor_before_nonzero_forcing",
+  "evolved_fields": [
+    "stage",
+    "xmomentum",
+    "ymomentum"
+  ],
+  "comparison": "all_centroids_all_saved_postfork_times_against_preexisting_full_from_zero_pulse_run",
+  "maximum_absolute_field_difference": 1e-09,
+  "maximum_absolute_fixed_point_depth_difference_m": 1e-09,
+  "maximum_fork_integrations": 64,
+  "forecast_warning": "reference_restart_is_only_environment_generation_nominal_forecasts_must_still_restart_only_from_independent_nominal_states",
+  "old_confirmation_labels_allowed": false
+}

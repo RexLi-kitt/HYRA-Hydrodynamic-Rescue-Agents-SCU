@@ -1,0 +1,152 @@
+[
+  {
+    "method": "B0_raw",
+    "seed": 11,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5992,
+    "elapsed_s": 43.109266899999966,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B0_raw_seed11\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B0_raw",
+    "seed": 22,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 6000,
+    "elapsed_s": 45.31423060000088,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B0_raw_seed22\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B0_raw",
+    "seed": 33,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5991,
+    "elapsed_s": 46.519093600000815,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B0_raw_seed33\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B_local",
+    "seed": 11,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5992,
+    "elapsed_s": 45.578379000000496,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B_local_seed11\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B_local",
+    "seed": 22,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5995,
+    "elapsed_s": 44.864624700000604,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B_local_seed22\\checkpoint_00060",
+    "loss_updates": 117
+  },
+  {
+    "method": "B_local",
+    "seed": 33,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5993,
+    "elapsed_s": 70.91439429999991,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B_local_seed33\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B1_distance",
+    "seed": 11,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5974,
+    "elapsed_s": 39.013691400000425,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B1_distance_seed11\\checkpoint_00060",
+    "loss_updates": 117
+  },
+  {
+    "method": "B1_distance",
+    "seed": 22,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 6000,
+    "elapsed_s": 37.772281999999905,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B1_distance_seed22\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B1_distance",
+    "seed": 33,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 6000,
+    "elapsed_s": 37.867870400000356,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B1_distance_seed33\\checkpoint_00060",
+    "loss_updates": 117
+  },
+  {
+    "method": "B2_structure",
+    "seed": 11,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5992,
+    "elapsed_s": 38.16525730000012,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B2_structure_seed11\\checkpoint_00060",
+    "loss_updates": 117
+  },
+  {
+    "method": "B2_structure",
+    "seed": 22,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 6000,
+    "elapsed_s": 38.481459800000266,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B2_structure_seed22\\checkpoint_00060",
+    "loss_updates": 117
+  },
+  {
+    "method": "B2_structure",
+    "seed": 33,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 6000,
+    "elapsed_s": 38.52529240000058,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B2_structure_seed33\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B2_uniform",
+    "seed": 11,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 5992,
+    "elapsed_s": 38.19086960000004,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B2_uniform_seed11\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B2_uniform",
+    "seed": 22,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 6000,
+    "elapsed_s": 38.154813599999216,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B2_uniform_seed22\\checkpoint_00120",
+    "loss_updates": 117
+  },
+  {
+    "method": "B2_uniform",
+    "seed": 33,
+    "capacity": 52696,
+    "mixing_capacity": 70721,
+    "steps": 6000,
+    "elapsed_s": 38.020759300000464,
+    "selected_checkpoint": "historical_workspace/残差收益验证\\results\\runs\\20261015_003734_999486_closed_loop\\B2_uniform_seed33\\checkpoint_00060",
+    "loss_updates": 117
+  }
+]

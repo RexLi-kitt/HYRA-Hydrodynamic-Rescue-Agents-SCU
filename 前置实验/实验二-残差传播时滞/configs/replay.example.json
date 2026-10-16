@@ -1,0 +1,35 @@
+{
+  "status": "TEMPLATE_ONLY_NOT_RUNNABLE",
+  "seed": null,
+  "manifest": "data/manifests/split.example.json",
+  "forecast": {
+    "protocol": null,
+    "lead_time_s": null,
+    "version_selection_rule": null
+  },
+  "observations": {
+    "route_file": null,
+    "sample_interval_s": null,
+    "delay_s": null,
+    "noise_std_m": null
+  },
+  "representation": {
+    "region_definition": null,
+    "max_links_per_region": null,
+    "history_length": null,
+    "decay_time_s": null,
+    "max_age_s": null
+  },
+  "methods": [
+    "B0_raw",
+    "B1_distance",
+    "B2_structure",
+    "B2_uniform"
+  ],
+  "evaluation": {
+    "underestimation_threshold_m": null,
+    "diagnostic_reader": null,
+    "paired_comparison_unit": "independent_flood_event"
+  },
+  "output_dir": "results/runs/TO_BE_ASSIGNED"
+}

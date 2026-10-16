@@ -1,0 +1,518 @@
+{
+  "chosen": {
+    "P0": "P0_nominal",
+    "P1": "P1_kf_rw_q1e-06_r0.005_uniform_g1",
+    "P2": "P2_mlp_mse_e20",
+    "P3": "P3_w5_ridge_a100",
+    "P4": "P4_direct_g0",
+    "P5": "P5_mlp_mse_g4_e20",
+    "B_star": "P2_mlp_mse_e20",
+    "P5_exact_P4": "P5_direct_g0"
+  },
+  "independent_families": 12,
+  "training_diagnostic": false,
+  "mean_family_robust_contrasts": {
+    "H2_MAE_6_12_improvement_vs_P5": 0.0016524079731546112,
+    "H2_MAE_6_12_improvement_vs_matched_P5": 0.0036664217834717146,
+    "H4_common_window_error_reduction_vs_Bstar": 0.0021856696951090505,
+    "H5_completed_service_gain_vs_Bstar": 0.001499097016989905,
+    "service_gain_vs_P5": 0.004551774403048085
+  },
+  "mean_robust_oracle_headroom_vs_Bstar": 0.013662959108458883,
+  "families": [
+    {
+      "family": "metric_v2_validation_000",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.00044810467239536807,
+            "40": 0.000547862433724542
+          },
+          "robust": 0.00044810467239536807
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.0036817161699061666,
+            "40": 0.0038679527049915643
+          },
+          "robust": 0.0036817161699061666
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.008790729138596888,
+            "40": -0.008030741938381339
+          },
+          "robust": -0.008790729138596888
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.0063662085691187364,
+            "40": -0.005709377526273318
+          },
+          "robust": -0.0063662085691187364
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.00047157100511996397,
+            "40": 0.0025852196173534736
+          },
+          "robust": 0.00047157100511996397
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.014239760172459981
+    },
+    {
+      "family": "metric_v2_validation_001",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.002504677928632186,
+            "40": 0.0027947905512932065
+          },
+          "robust": 0.002504677928632186
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.004390185271515905,
+            "40": 0.0046138538907395995
+          },
+          "robust": 0.004390185271515905
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.009265859438361699,
+            "40": 0.011451838757096478
+          },
+          "robust": 0.009265859438361699
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.001283074817518548,
+            "40": -0.0009931949513382055
+          },
+          "robust": -0.001283074817518548
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.0012688184306570705,
+            "40": 0.0013971259124083701
+          },
+          "robust": 0.0012688184306570705
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.0009456736617994288
+    },
+    {
+      "family": "metric_v2_validation_002",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.0012817317643631183,
+            "40": 0.0014951087213230076
+          },
+          "robust": 0.0012817317643631183
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.003815526279287266,
+            "40": 0.004046770370091223
+          },
+          "robust": 0.003815526279287266
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.0008805614406780203,
+            "40": -0.001088747645951068
+          },
+          "robust": -0.001088747645951068
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.00038841807909628656,
+            "40": 0.0005429025423722145
+          },
+          "robust": 0.00038841807909628656
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.00018538135593204608,
+            "40": 0.0012756002824856338
+          },
+          "robust": 0.00018538135593204608
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.006651659604517635
+    },
+    {
+      "family": "metric_v2_validation_003",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.0008805918598950163,
+            "40": 0.0008992208707243759
+          },
+          "robust": 0.0008805918598950163
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.004061451294362426,
+            "40": 0.004261816481666099
+          },
+          "robust": 0.004061451294362426
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.007565780787917201,
+            "40": 0.005339531844106488
+          },
+          "robust": 0.005339531844106488
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.0033963086185042624,
+            "40": 0.0029210234474015273
+          },
+          "robust": 0.0029210234474015273
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.0018466809252215555,
+            "40": 0.0011684093789605665
+          },
+          "robust": 0.0011684093789605665
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.009139337769326072
+    },
+    {
+      "family": "metric_v2_validation_004",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.0013598680093736735,
+            "40": 0.0014311396523727527
+          },
+          "robust": 0.0013598680093736735
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.0037780011735019698,
+            "40": 0.0039363581616244925
+          },
+          "robust": 0.0037780011735019698
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.01720321728497617,
+            "40": 0.015653118078626942
+          },
+          "robust": 0.015653118078626942
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.011835548172757226,
+            "40": 0.012211897840532115
+          },
+          "robust": 0.011835548172757226
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.004446982281284484,
+            "40": 0.004360465116279411
+          },
+          "robust": 0.004360465116279411
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.019825408361019647
+    },
+    {
+      "family": "metric_v2_validation_005",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.002074312069855182,
+            "40": 0.0023879595379271714
+          },
+          "robust": 0.002074312069855182
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.0033681033697180837,
+            "40": 0.003639925287956302
+          },
+          "robust": 0.0033681033697180837
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.0009385781464152504,
+            "40": -0.0006217803298833174
+          },
+          "robust": -0.0009385781464152504
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.012219977314618102,
+            "40": 0.012454806465333812
+          },
+          "robust": 0.012219977314618102
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.01017740677725798,
+            "40": 0.011231922586133702
+          },
+          "robust": 0.01017740677725798
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.03481231390897499
+    },
+    {
+      "family": "metric_v2_validation_006",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.001386792847368539,
+            "40": 0.0016545140211838586
+          },
+          "robust": 0.001386792847368539
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.003973065732315545,
+            "40": 0.004245519885571349
+          },
+          "robust": 0.003973065732315545
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.003913150282635461,
+            "40": -0.004499674306659478
+          },
+          "robust": -0.004499674306659478
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.0022688129305779015,
+            "40": -0.0033949390567038495
+          },
+          "robust": -0.0033949390567038495
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.004653550609432511,
+            "40": 0.007315679650238716
+          },
+          "robust": 0.004653550609432511
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.015070217276099918
+    },
+    {
+      "family": "metric_v2_validation_007",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": -0.0005412154233016262,
+            "40": -0.00038557890987561813
+          },
+          "robust": -0.0005412154233016262
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.003123713301427315,
+            "40": 0.0033169052014233973
+          },
+          "robust": 0.003123713301427315
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.003793887478849409,
+            "40": -0.003074179827035161
+          },
+          "robust": -0.003793887478849409
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.0014893542019169814,
+            "40": -0.0011809080654248127
+          },
+          "robust": -0.0014893542019169814
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.0046090665538631725,
+            "40": 0.006759376762548341
+          },
+          "robust": 0.0046090665538631725
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.0011104060913696978
+    },
+    {
+      "family": "metric_v2_validation_008",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.002092343946814919,
+            "40": 0.002200536851961019
+          },
+          "robust": 0.002092343946814919
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.003793434482312454,
+            "40": 0.004012011847294853
+          },
+          "robust": 0.003793434482312454
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.00840388762049725,
+            "40": 0.009539890918315662
+          },
+          "robust": 0.00840388762049725
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.002102359208524085,
+            "40": -0.000390030441400846
+          },
+          "robust": -0.002102359208524085
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.0009560502283103567,
+            "40": 0.002592275494672114
+          },
+          "robust": 0.0009560502283103567
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.006145357686455188
+    },
+    {
+      "family": "metric_v2_validation_009",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.004956074123256972,
+            "40": 0.005098557336138539
+          },
+          "robust": 0.004956074123256972
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.0036507451627989297,
+            "40": 0.003856346504513593
+          },
+          "robust": 0.0036507451627989297
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.010435312251392194,
+            "40": 0.011333753204278235
+          },
+          "robust": 0.010435312251392194
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": 0.011609984089100744,
+            "40": 0.013714863431450453
+          },
+          "robust": 0.011609984089100744
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.02157086979580969,
+            "40": 0.023443715194908066
+          },
+          "robust": 0.02157086979580969
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.038223448687350836
+    },
+    {
+      "family": "metric_v2_validation_010",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.0014656199279074653,
+            "40": 0.00150074848760888
+          },
+          "robust": 0.0014656199279074653
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.003079747643572285,
+            "40": 0.0033882530039080778
+          },
+          "robust": 0.003079747643572285
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.0011143956456456626,
+            "40": -0.0021007335460460526
+          },
+          "robust": -0.0021007335460460526
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.001923798798799059,
+            "40": -0.006217154654654777
+          },
+          "robust": -0.006217154654654777
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.008152683933933758,
+            "40": 0.004768440315315203
+          },
+          "robust": 0.004768440315315203
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.01764264264264248
+    },
+    {
+      "family": "metric_v2_validation_011",
+      "values": {
+        "H2_MAE_6_12_improvement_vs_P5": {
+          "by_mesh": {
+            "80": 0.0019199939512945202,
+            "40": 0.0020576644282605614
+          },
+          "robust": 0.0019199939512945202
+        },
+        "H2_MAE_6_12_improvement_vs_matched_P5": {
+          "by_mesh": {
+            "80": 0.00328137152094223,
+            "40": 0.003545915961357289
+          },
+          "robust": 0.00328137152094223
+        },
+        "H4_common_window_error_reduction_vs_Bstar": {
+          "by_mesh": {
+            "80": -0.0010643356334041057,
+            "40": -0.001657322629157818
+          },
+          "robust": -0.001657322629157818
+        },
+        "H5_completed_service_gain_vs_Bstar": {
+          "by_mesh": {
+            "80": 4.1467622081015065e-05,
+            "40": -0.00013269639065804917
+          },
+          "robust": -0.00013269639065804917
+        },
+        "service_gain_vs_P5": {
+          "by_mesh": {
+            "80": 0.0006137208067942268,
+            "40": 0.0004312632696390484
+          },
+          "robust": 0.0004312632696390484
+        }
+      },
+      "oracle_headroom_vs_Bstar": 0.00014928343949072165
+    }
+  ],
+  "confirmation_claim": false,
+  "CI_policy": "No confirmatory confidence claim on reused training diagnostics"
+}

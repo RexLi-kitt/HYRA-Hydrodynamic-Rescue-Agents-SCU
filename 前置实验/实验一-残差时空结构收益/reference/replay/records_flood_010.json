@@ -1,0 +1,1386 @@
+[
+  {
+    "region_id": 22,
+    "valid_time_s": 20.0,
+    "arrival_time_s": 20.0,
+    "observed_depth_m": 0.16885065276394318,
+    "matched_forecast_id": 0,
+    "prior_release_s": 0.0,
+    "prior_depth_m": 0.1688567176895808,
+    "residual_m": -6.064925637622176e-06
+  },
+  {
+    "region_id": 23,
+    "valid_time_s": 20.0,
+    "arrival_time_s": 20.0,
+    "observed_depth_m": 0.17472369333507431,
+    "matched_forecast_id": 0,
+    "prior_release_s": 0.0,
+    "prior_depth_m": 0.17472357524858861,
+    "residual_m": 1.1808648570088565e-07
+  },
+  {
+    "region_id": 32,
+    "valid_time_s": 20.0,
+    "arrival_time_s": 20.0,
+    "observed_depth_m": 0.15964784618924086,
+    "matched_forecast_id": 0,
+    "prior_release_s": 0.0,
+    "prior_depth_m": 0.15965184081727168,
+    "residual_m": -3.9946280308289506e-06
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 20.0,
+    "arrival_time_s": 20.0,
+    "observed_depth_m": 0.1488546544356506,
+    "matched_forecast_id": 0,
+    "prior_release_s": 0.0,
+    "prior_depth_m": 0.14885417650799013,
+    "residual_m": 4.779276604749416e-07
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 30.0,
+    "arrival_time_s": 30.0,
+    "observed_depth_m": 0.12721871032778986,
+    "matched_forecast_id": 1,
+    "prior_release_s": 10.0,
+    "prior_depth_m": 0.1272489129761416,
+    "residual_m": -3.0202648351740358e-05
+  },
+  {
+    "region_id": 34,
+    "valid_time_s": 30.0,
+    "arrival_time_s": 30.0,
+    "observed_depth_m": 0.15219552905857778,
+    "matched_forecast_id": 1,
+    "prior_release_s": 10.0,
+    "prior_depth_m": 0.15218895295522902,
+    "residual_m": 6.5761033487543585e-06
+  },
+  {
+    "region_id": 43,
+    "valid_time_s": 30.0,
+    "arrival_time_s": 30.0,
+    "observed_depth_m": 0.07512785678432593,
+    "matched_forecast_id": 1,
+    "prior_release_s": 10.0,
+    "prior_depth_m": 0.07516047956962121,
+    "residual_m": -3.2622785295283174e-05
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 30.0,
+    "arrival_time_s": 30.0,
+    "observed_depth_m": 0.09952698928882456,
+    "matched_forecast_id": 1,
+    "prior_release_s": 10.0,
+    "prior_depth_m": 0.09952576069573048,
+    "residual_m": 1.228593094079744e-06
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 40.0,
+    "arrival_time_s": 40.0,
+    "observed_depth_m": 0.09184431868998803,
+    "matched_forecast_id": 2,
+    "prior_release_s": 20.0,
+    "prior_depth_m": 0.09187900666392572,
+    "residual_m": -3.468797393768597e-05
+  },
+  {
+    "region_id": 45,
+    "valid_time_s": 40.0,
+    "arrival_time_s": 40.0,
+    "observed_depth_m": 0.08041590117414761,
+    "matched_forecast_id": 2,
+    "prior_release_s": 20.0,
+    "prior_depth_m": 0.08042448763201838,
+    "residual_m": -8.586457870773945e-06
+  },
+  {
+    "region_id": 54,
+    "valid_time_s": 40.0,
+    "arrival_time_s": 40.0,
+    "observed_depth_m": 0.07432683014239258,
+    "matched_forecast_id": 2,
+    "prior_release_s": 20.0,
+    "prior_depth_m": 0.07429900861666223,
+    "residual_m": 2.7821525730345464e-05
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 40.0,
+    "arrival_time_s": 40.0,
+    "observed_depth_m": 0.09695908228136806,
+    "matched_forecast_id": 2,
+    "prior_release_s": 20.0,
+    "prior_depth_m": 0.09696687362107866,
+    "residual_m": -7.791339710599976e-06
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 50.0,
+    "arrival_time_s": 50.0,
+    "observed_depth_m": 0.09510219735767221,
+    "matched_forecast_id": 3,
+    "prior_release_s": 30.0,
+    "prior_depth_m": 0.09497264690368028,
+    "residual_m": 0.00012955045399193343
+  },
+  {
+    "region_id": 56,
+    "valid_time_s": 50.0,
+    "arrival_time_s": 50.0,
+    "observed_depth_m": 0.09228657780921384,
+    "matched_forecast_id": 3,
+    "prior_release_s": 30.0,
+    "prior_depth_m": 0.09226902227220929,
+    "residual_m": 1.7555537004554367e-05
+  },
+  {
+    "region_id": 65,
+    "valid_time_s": 50.0,
+    "arrival_time_s": 50.0,
+    "observed_depth_m": 0.15557171685208518,
+    "matched_forecast_id": 3,
+    "prior_release_s": 30.0,
+    "prior_depth_m": 0.15526094584157646,
+    "residual_m": 0.00031077101050872025
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 50.0,
+    "arrival_time_s": 50.0,
+    "observed_depth_m": 0.1678556085055905,
+    "matched_forecast_id": 3,
+    "prior_release_s": 30.0,
+    "prior_depth_m": 0.16789073458354603,
+    "residual_m": -3.512607795552736e-05
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 60.0,
+    "arrival_time_s": 60.0,
+    "observed_depth_m": 0.18485070796112907,
+    "matched_forecast_id": 4,
+    "prior_release_s": 40.0,
+    "prior_depth_m": 0.18357644565921596,
+    "residual_m": 0.0012742623019131039
+  },
+  {
+    "region_id": 67,
+    "valid_time_s": 60.0,
+    "arrival_time_s": 60.0,
+    "observed_depth_m": 0.18755878589810968,
+    "matched_forecast_id": 4,
+    "prior_release_s": 40.0,
+    "prior_depth_m": 0.18773502449920346,
+    "residual_m": -0.0001762386010937811
+  },
+  {
+    "region_id": 76,
+    "valid_time_s": 60.0,
+    "arrival_time_s": 60.0,
+    "observed_depth_m": 0.19353157734580934,
+    "matched_forecast_id": 4,
+    "prior_release_s": 40.0,
+    "prior_depth_m": 0.1924441749357057,
+    "residual_m": 0.0010874024101036328
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 60.0,
+    "arrival_time_s": 60.0,
+    "observed_depth_m": 0.20373524018366573,
+    "matched_forecast_id": 4,
+    "prior_release_s": 40.0,
+    "prior_depth_m": 0.20377420364946172,
+    "residual_m": -3.8963465795988084e-05
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 70.0,
+    "arrival_time_s": 70.0,
+    "observed_depth_m": 0.20754891726159885,
+    "matched_forecast_id": 5,
+    "prior_release_s": 50.0,
+    "prior_depth_m": 0.2051212932353445,
+    "residual_m": 0.002427624026254349
+  },
+  {
+    "region_id": 78,
+    "valid_time_s": 70.0,
+    "arrival_time_s": 70.0,
+    "observed_depth_m": 0.21513307326238248,
+    "matched_forecast_id": 5,
+    "prior_release_s": 50.0,
+    "prior_depth_m": 0.2149026194421208,
+    "residual_m": 0.00023045382026168348
+  },
+  {
+    "region_id": 87,
+    "valid_time_s": 70.0,
+    "arrival_time_s": 70.0,
+    "observed_depth_m": 0.20524573788647382,
+    "matched_forecast_id": 5,
+    "prior_release_s": 50.0,
+    "prior_depth_m": 0.20250931488124013,
+    "residual_m": 0.00273642300523369
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 70.0,
+    "arrival_time_s": 70.0,
+    "observed_depth_m": 0.21267291620177312,
+    "matched_forecast_id": 5,
+    "prior_release_s": 50.0,
+    "prior_depth_m": 0.21216348009882824,
+    "residual_m": 0.0005094361029448768
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 80.0,
+    "arrival_time_s": 80.0,
+    "observed_depth_m": 0.22200866950232168,
+    "matched_forecast_id": 6,
+    "prior_release_s": 60.0,
+    "prior_depth_m": 0.2180764955724912,
+    "residual_m": 0.003932173929830474
+  },
+  {
+    "region_id": 89,
+    "valid_time_s": 80.0,
+    "arrival_time_s": 80.0,
+    "observed_depth_m": 0.22443337139257463,
+    "matched_forecast_id": 6,
+    "prior_release_s": 60.0,
+    "prior_depth_m": 0.22086044516065328,
+    "residual_m": 0.0035729262319213473
+  },
+  {
+    "region_id": 98,
+    "valid_time_s": 80.0,
+    "arrival_time_s": 80.0,
+    "observed_depth_m": 0.2196232145124432,
+    "matched_forecast_id": 6,
+    "prior_release_s": 60.0,
+    "prior_depth_m": 0.2157221039528187,
+    "residual_m": 0.003901110559624499
+  },
+  {
+    "region_id": 99,
+    "valid_time_s": 80.0,
+    "arrival_time_s": 80.0,
+    "observed_depth_m": 0.22123331357868553,
+    "matched_forecast_id": 6,
+    "prior_release_s": 60.0,
+    "prior_depth_m": 0.21790744589177446,
+    "residual_m": 0.003325867686911066
+  },
+  {
+    "region_id": 0,
+    "valid_time_s": 90.0,
+    "arrival_time_s": 90.0,
+    "observed_depth_m": 0.36200263097831586,
+    "matched_forecast_id": 7,
+    "prior_release_s": 70.0,
+    "prior_depth_m": 0.3030443265733448,
+    "residual_m": 0.058958304404971074
+  },
+  {
+    "region_id": 1,
+    "valid_time_s": 90.0,
+    "arrival_time_s": 90.0,
+    "observed_depth_m": 0.29805166486535534,
+    "matched_forecast_id": 7,
+    "prior_release_s": 70.0,
+    "prior_depth_m": 0.25483941193036974,
+    "residual_m": 0.043212252934985595
+  },
+  {
+    "region_id": 10,
+    "valid_time_s": 90.0,
+    "arrival_time_s": 90.0,
+    "observed_depth_m": 0.33350897518854966,
+    "matched_forecast_id": 7,
+    "prior_release_s": 70.0,
+    "prior_depth_m": 0.2819275843514368,
+    "residual_m": 0.051581390837112884
+  },
+  {
+    "region_id": 11,
+    "valid_time_s": 90.0,
+    "arrival_time_s": 90.0,
+    "observed_depth_m": 0.30556955024002136,
+    "matched_forecast_id": 7,
+    "prior_release_s": 70.0,
+    "prior_depth_m": 0.26074709782177363,
+    "residual_m": 0.04482245241824773
+  },
+  {
+    "region_id": 11,
+    "valid_time_s": 100.0,
+    "arrival_time_s": 100.0,
+    "observed_depth_m": 0.33468069772831166,
+    "matched_forecast_id": 8,
+    "prior_release_s": 80.0,
+    "prior_depth_m": 0.2830608457114213,
+    "residual_m": 0.051619852016890344
+  },
+  {
+    "region_id": 12,
+    "valid_time_s": 100.0,
+    "arrival_time_s": 100.0,
+    "observed_depth_m": 0.31211721519390984,
+    "matched_forecast_id": 8,
+    "prior_release_s": 80.0,
+    "prior_depth_m": 0.26647768504483715,
+    "residual_m": 0.04563953014907268
+  },
+  {
+    "region_id": 21,
+    "valid_time_s": 100.0,
+    "arrival_time_s": 100.0,
+    "observed_depth_m": 0.32712329545804497,
+    "matched_forecast_id": 8,
+    "prior_release_s": 80.0,
+    "prior_depth_m": 0.2769068303167852,
+    "residual_m": 0.05021646514125977
+  },
+  {
+    "region_id": 22,
+    "valid_time_s": 100.0,
+    "arrival_time_s": 100.0,
+    "observed_depth_m": 0.3134245534898828,
+    "matched_forecast_id": 8,
+    "prior_release_s": 80.0,
+    "prior_depth_m": 0.266114053046094,
+    "residual_m": 0.04731050044378882
+  },
+  {
+    "region_id": 22,
+    "valid_time_s": 110.0,
+    "arrival_time_s": 110.0,
+    "observed_depth_m": 0.34420689464349363,
+    "matched_forecast_id": 9,
+    "prior_release_s": 90.0,
+    "prior_depth_m": 0.28976713455579783,
+    "residual_m": 0.0544397600876958
+  },
+  {
+    "region_id": 23,
+    "valid_time_s": 110.0,
+    "arrival_time_s": 110.0,
+    "observed_depth_m": 0.3293661245117614,
+    "matched_forecast_id": 9,
+    "prior_release_s": 90.0,
+    "prior_depth_m": 0.27972294890339083,
+    "residual_m": 0.04964317560837056
+  },
+  {
+    "region_id": 32,
+    "valid_time_s": 110.0,
+    "arrival_time_s": 110.0,
+    "observed_depth_m": 0.338386823003283,
+    "matched_forecast_id": 9,
+    "prior_release_s": 90.0,
+    "prior_depth_m": 0.2838218537155605,
+    "residual_m": 0.054564969287722476
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 110.0,
+    "arrival_time_s": 110.0,
+    "observed_depth_m": 0.3138731594692502,
+    "matched_forecast_id": 9,
+    "prior_release_s": 90.0,
+    "prior_depth_m": 0.26280402249102025,
+    "residual_m": 0.051069136978229956
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 120.0,
+    "arrival_time_s": 120.0,
+    "observed_depth_m": 0.34415309714413655,
+    "matched_forecast_id": 10,
+    "prior_release_s": 100.0,
+    "prior_depth_m": 0.2853827425181179,
+    "residual_m": 0.05877035462601865
+  },
+  {
+    "region_id": 34,
+    "valid_time_s": 120.0,
+    "arrival_time_s": 120.0,
+    "observed_depth_m": 0.33929212402708525,
+    "matched_forecast_id": 10,
+    "prior_release_s": 100.0,
+    "prior_depth_m": 0.286083963844106,
+    "residual_m": 0.05320816018297925
+  },
+  {
+    "region_id": 43,
+    "valid_time_s": 120.0,
+    "arrival_time_s": 120.0,
+    "observed_depth_m": 0.29594986798326145,
+    "matched_forecast_id": 10,
+    "prior_release_s": 100.0,
+    "prior_depth_m": 0.2362953553338117,
+    "residual_m": 0.05965451264944974
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 120.0,
+    "arrival_time_s": 120.0,
+    "observed_depth_m": 0.2889610468643499,
+    "matched_forecast_id": 10,
+    "prior_release_s": 100.0,
+    "prior_depth_m": 0.23552787170667797,
+    "residual_m": 0.05343317515767196
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 130.0,
+    "arrival_time_s": 130.0,
+    "observed_depth_m": 0.32324882102279473,
+    "matched_forecast_id": 11,
+    "prior_release_s": 110.0,
+    "prior_depth_m": 0.2620703498849725,
+    "residual_m": 0.06117847113782221
+  },
+  {
+    "region_id": 45,
+    "valid_time_s": 130.0,
+    "arrival_time_s": 130.0,
+    "observed_depth_m": 0.3065200553277264,
+    "matched_forecast_id": 11,
+    "prior_release_s": 110.0,
+    "prior_depth_m": 0.24495171494404286,
+    "residual_m": 0.061568340383683556
+  },
+  {
+    "region_id": 54,
+    "valid_time_s": 130.0,
+    "arrival_time_s": 130.0,
+    "observed_depth_m": 0.3120654670810448,
+    "matched_forecast_id": 11,
+    "prior_release_s": 110.0,
+    "prior_depth_m": 0.24905328248352263,
+    "residual_m": 0.0630121845975222
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 130.0,
+    "arrival_time_s": 130.0,
+    "observed_depth_m": 0.3219931145395581,
+    "matched_forecast_id": 11,
+    "prior_release_s": 110.0,
+    "prior_depth_m": 0.2610865227447869,
+    "residual_m": 0.0609065917947712
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 140.0,
+    "arrival_time_s": 140.0,
+    "observed_depth_m": 0.3780325596039463,
+    "matched_forecast_id": 12,
+    "prior_release_s": 120.0,
+    "prior_depth_m": 0.29973033993937487,
+    "residual_m": 0.07830221966457146
+  },
+  {
+    "region_id": 56,
+    "valid_time_s": 140.0,
+    "arrival_time_s": 140.0,
+    "observed_depth_m": 0.384525098599811,
+    "matched_forecast_id": 12,
+    "prior_release_s": 120.0,
+    "prior_depth_m": 0.3004094726307548,
+    "residual_m": 0.0841156259690562
+  },
+  {
+    "region_id": 65,
+    "valid_time_s": 140.0,
+    "arrival_time_s": 140.0,
+    "observed_depth_m": 0.42299008845733577,
+    "matched_forecast_id": 12,
+    "prior_release_s": 120.0,
+    "prior_depth_m": 0.34319311012729964,
+    "residual_m": 0.07979697833003613
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 140.0,
+    "arrival_time_s": 140.0,
+    "observed_depth_m": 0.4377506349484383,
+    "matched_forecast_id": 12,
+    "prior_release_s": 120.0,
+    "prior_depth_m": 0.35303904623508314,
+    "residual_m": 0.08471158871335516
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 150.0,
+    "arrival_time_s": 150.0,
+    "observed_depth_m": 0.4950094887681697,
+    "matched_forecast_id": 13,
+    "prior_release_s": 130.0,
+    "prior_depth_m": 0.39194712714286206,
+    "residual_m": 0.10306236162530763
+  },
+  {
+    "region_id": 67,
+    "valid_time_s": 150.0,
+    "arrival_time_s": 150.0,
+    "observed_depth_m": 0.5021816232575109,
+    "matched_forecast_id": 13,
+    "prior_release_s": 130.0,
+    "prior_depth_m": 0.3949537743738159,
+    "residual_m": 0.10722784888369502
+  },
+  {
+    "region_id": 76,
+    "valid_time_s": 150.0,
+    "arrival_time_s": 150.0,
+    "observed_depth_m": 0.5125827003678263,
+    "matched_forecast_id": 13,
+    "prior_release_s": 130.0,
+    "prior_depth_m": 0.4067131966849401,
+    "residual_m": 0.10586950368288617
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 150.0,
+    "arrival_time_s": 150.0,
+    "observed_depth_m": 0.5284387851503322,
+    "matched_forecast_id": 13,
+    "prior_release_s": 130.0,
+    "prior_depth_m": 0.4196084631884191,
+    "residual_m": 0.10883032196191306
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 160.0,
+    "arrival_time_s": 160.0,
+    "observed_depth_m": 0.5926453144643405,
+    "matched_forecast_id": 14,
+    "prior_release_s": 140.0,
+    "prior_depth_m": 0.4623927939788512,
+    "residual_m": 0.13025252048548935
+  },
+  {
+    "region_id": 78,
+    "valid_time_s": 160.0,
+    "arrival_time_s": 160.0,
+    "observed_depth_m": 0.6067220050739507,
+    "matched_forecast_id": 14,
+    "prior_release_s": 140.0,
+    "prior_depth_m": 0.4755118031634238,
+    "residual_m": 0.1312102019105269
+  },
+  {
+    "region_id": 87,
+    "valid_time_s": 160.0,
+    "arrival_time_s": 160.0,
+    "observed_depth_m": 0.5982352490433845,
+    "matched_forecast_id": 14,
+    "prior_release_s": 140.0,
+    "prior_depth_m": 0.4708144469632639,
+    "residual_m": 0.12742080208012063
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 160.0,
+    "arrival_time_s": 160.0,
+    "observed_depth_m": 0.611310996240057,
+    "matched_forecast_id": 14,
+    "prior_release_s": 140.0,
+    "prior_depth_m": 0.4836943022833199,
+    "residual_m": 0.12761669395673714
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 170.0,
+    "arrival_time_s": 170.0,
+    "observed_depth_m": 0.6693356668327032,
+    "matched_forecast_id": 15,
+    "prior_release_s": 150.0,
+    "prior_depth_m": 0.5241248642333729,
+    "residual_m": 0.14521080259933028
+  },
+  {
+    "region_id": 89,
+    "valid_time_s": 170.0,
+    "arrival_time_s": 170.0,
+    "observed_depth_m": 0.6738522428516389,
+    "matched_forecast_id": 15,
+    "prior_release_s": 150.0,
+    "prior_depth_m": 0.5284205107994471,
+    "residual_m": 0.14543173205219184
+  },
+  {
+    "region_id": 98,
+    "valid_time_s": 170.0,
+    "arrival_time_s": 170.0,
+    "observed_depth_m": 0.6677983807935222,
+    "matched_forecast_id": 15,
+    "prior_release_s": 150.0,
+    "prior_depth_m": 0.5236093480959944,
+    "residual_m": 0.1441890326975278
+  },
+  {
+    "region_id": 99,
+    "valid_time_s": 170.0,
+    "arrival_time_s": 170.0,
+    "observed_depth_m": 0.6721205218883811,
+    "matched_forecast_id": 15,
+    "prior_release_s": 150.0,
+    "prior_depth_m": 0.5276655016008895,
+    "residual_m": 0.14445502028749158
+  },
+  {
+    "region_id": 0,
+    "valid_time_s": 180.0,
+    "arrival_time_s": 180.0,
+    "observed_depth_m": 0.6602952685914942,
+    "matched_forecast_id": 16,
+    "prior_release_s": 160.0,
+    "prior_depth_m": 0.5257932681534011,
+    "residual_m": 0.13450200043809313
+  },
+  {
+    "region_id": 1,
+    "valid_time_s": 180.0,
+    "arrival_time_s": 180.0,
+    "observed_depth_m": 0.6240308854701337,
+    "matched_forecast_id": 16,
+    "prior_release_s": 160.0,
+    "prior_depth_m": 0.48555914361278063,
+    "residual_m": 0.13847174185735311
+  },
+  {
+    "region_id": 10,
+    "valid_time_s": 180.0,
+    "arrival_time_s": 180.0,
+    "observed_depth_m": 0.6223481896888468,
+    "matched_forecast_id": 16,
+    "prior_release_s": 160.0,
+    "prior_depth_m": 0.49552746233384026,
+    "residual_m": 0.1268207273550065
+  },
+  {
+    "region_id": 11,
+    "valid_time_s": 180.0,
+    "arrival_time_s": 180.0,
+    "observed_depth_m": 0.6161907473573035,
+    "matched_forecast_id": 16,
+    "prior_release_s": 160.0,
+    "prior_depth_m": 0.48265307216930664,
+    "residual_m": 0.13353767518799686
+  },
+  {
+    "region_id": 11,
+    "valid_time_s": 190.0,
+    "arrival_time_s": 190.0,
+    "observed_depth_m": 0.6793753213091837,
+    "matched_forecast_id": 17,
+    "prior_release_s": 170.0,
+    "prior_depth_m": 0.521946594521078,
+    "residual_m": 0.1574287267881057
+  },
+  {
+    "region_id": 12,
+    "valid_time_s": 190.0,
+    "arrival_time_s": 190.0,
+    "observed_depth_m": 0.7045542280431565,
+    "matched_forecast_id": 17,
+    "prior_release_s": 170.0,
+    "prior_depth_m": 0.5354089182867137,
+    "residual_m": 0.16914530975644282
+  },
+  {
+    "region_id": 21,
+    "valid_time_s": 190.0,
+    "arrival_time_s": 190.0,
+    "observed_depth_m": 0.6857698900065164,
+    "matched_forecast_id": 17,
+    "prior_release_s": 170.0,
+    "prior_depth_m": 0.5231649715458887,
+    "residual_m": 0.16260491846062775
+  },
+  {
+    "region_id": 22,
+    "valid_time_s": 190.0,
+    "arrival_time_s": 190.0,
+    "observed_depth_m": 0.6962579236286786,
+    "matched_forecast_id": 17,
+    "prior_release_s": 170.0,
+    "prior_depth_m": 0.5274320950835618,
+    "residual_m": 0.16882582854511674
+  },
+  {
+    "region_id": 22,
+    "valid_time_s": 200.0,
+    "arrival_time_s": 200.0,
+    "observed_depth_m": 0.761625678939951,
+    "matched_forecast_id": 18,
+    "prior_release_s": 180.0,
+    "prior_depth_m": 0.5752247585880309,
+    "residual_m": 0.18640092035192013
+  },
+  {
+    "region_id": 23,
+    "valid_time_s": 200.0,
+    "arrival_time_s": 200.0,
+    "observed_depth_m": 0.7795534333233881,
+    "matched_forecast_id": 18,
+    "prior_release_s": 180.0,
+    "prior_depth_m": 0.5892659905409431,
+    "residual_m": 0.19028744278244503
+  },
+  {
+    "region_id": 32,
+    "valid_time_s": 200.0,
+    "arrival_time_s": 200.0,
+    "observed_depth_m": 0.7553730976983656,
+    "matched_forecast_id": 18,
+    "prior_release_s": 180.0,
+    "prior_depth_m": 0.5695350989508681,
+    "residual_m": 0.1858379987474975
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 200.0,
+    "arrival_time_s": 200.0,
+    "observed_depth_m": 0.7551968310983596,
+    "matched_forecast_id": 18,
+    "prior_release_s": 180.0,
+    "prior_depth_m": 0.5677191824258274,
+    "residual_m": 0.18747764867253214
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 210.0,
+    "arrival_time_s": 210.0,
+    "observed_depth_m": 0.8236153070816243,
+    "matched_forecast_id": 19,
+    "prior_release_s": 190.0,
+    "prior_depth_m": 0.6129224989350174,
+    "residual_m": 0.21069280814660696
+  },
+  {
+    "region_id": 34,
+    "valid_time_s": 210.0,
+    "arrival_time_s": 210.0,
+    "observed_depth_m": 0.8580631775934245,
+    "matched_forecast_id": 19,
+    "prior_release_s": 190.0,
+    "prior_depth_m": 0.645170309497076,
+    "residual_m": 0.21289286809634855
+  },
+  {
+    "region_id": 43,
+    "valid_time_s": 210.0,
+    "arrival_time_s": 210.0,
+    "observed_depth_m": 0.7739041661255276,
+    "matched_forecast_id": 19,
+    "prior_release_s": 190.0,
+    "prior_depth_m": 0.5624532813106738,
+    "residual_m": 0.21145088481485375
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 210.0,
+    "arrival_time_s": 210.0,
+    "observed_depth_m": 0.8119085020877351,
+    "matched_forecast_id": 19,
+    "prior_release_s": 190.0,
+    "prior_depth_m": 0.5958480129109527,
+    "residual_m": 0.21606048917678244
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 220.0,
+    "arrival_time_s": 220.0,
+    "observed_depth_m": 0.8737886915127236,
+    "matched_forecast_id": 20,
+    "prior_release_s": 200.0,
+    "prior_depth_m": 0.649964598488916,
+    "residual_m": 0.22382409302380768
+  },
+  {
+    "region_id": 45,
+    "valid_time_s": 220.0,
+    "arrival_time_s": 220.0,
+    "observed_depth_m": 0.8697806555201752,
+    "matched_forecast_id": 20,
+    "prior_release_s": 200.0,
+    "prior_depth_m": 0.6464411933702695,
+    "residual_m": 0.22333946214990574
+  },
+  {
+    "region_id": 54,
+    "valid_time_s": 220.0,
+    "arrival_time_s": 220.0,
+    "observed_depth_m": 0.8549857727510954,
+    "matched_forecast_id": 20,
+    "prior_release_s": 200.0,
+    "prior_depth_m": 0.6308667053847459,
+    "residual_m": 0.22411906736634957
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 220.0,
+    "arrival_time_s": 220.0,
+    "observed_depth_m": 0.8884627804592707,
+    "matched_forecast_id": 20,
+    "prior_release_s": 200.0,
+    "prior_depth_m": 0.6650119515465385,
+    "residual_m": 0.22345082891273227
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 230.0,
+    "arrival_time_s": 230.0,
+    "observed_depth_m": 0.9475720662653945,
+    "matched_forecast_id": 21,
+    "prior_release_s": 210.0,
+    "prior_depth_m": 0.7112002720577387,
+    "residual_m": 0.23637179420765575
+  },
+  {
+    "region_id": 56,
+    "valid_time_s": 230.0,
+    "arrival_time_s": 230.0,
+    "observed_depth_m": 0.9524378369419716,
+    "matched_forecast_id": 21,
+    "prior_release_s": 210.0,
+    "prior_depth_m": 0.7137447944600814,
+    "residual_m": 0.23869304248189016
+  },
+  {
+    "region_id": 65,
+    "valid_time_s": 230.0,
+    "arrival_time_s": 230.0,
+    "observed_depth_m": 0.9961496626273281,
+    "matched_forecast_id": 21,
+    "prior_release_s": 210.0,
+    "prior_depth_m": 0.7581628536253839,
+    "residual_m": 0.23798680900194413
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 230.0,
+    "arrival_time_s": 230.0,
+    "observed_depth_m": 1.0106498634154493,
+    "matched_forecast_id": 21,
+    "prior_release_s": 210.0,
+    "prior_depth_m": 0.7715485935961651,
+    "residual_m": 0.23910126981928415
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 240.0,
+    "arrival_time_s": 240.0,
+    "observed_depth_m": 1.0691982226035837,
+    "matched_forecast_id": 22,
+    "prior_release_s": 220.0,
+    "prior_depth_m": 0.817192640520991,
+    "residual_m": 0.2520055820825926
+  },
+  {
+    "region_id": 67,
+    "valid_time_s": 240.0,
+    "arrival_time_s": 240.0,
+    "observed_depth_m": 1.0739289089637163,
+    "matched_forecast_id": 22,
+    "prior_release_s": 220.0,
+    "prior_depth_m": 0.8216227774113634,
+    "residual_m": 0.25230613155235293
+  },
+  {
+    "region_id": 76,
+    "valid_time_s": 240.0,
+    "arrival_time_s": 240.0,
+    "observed_depth_m": 1.0824849375929582,
+    "matched_forecast_id": 22,
+    "prior_release_s": 220.0,
+    "prior_depth_m": 0.8320851980929822,
+    "residual_m": 0.25039973949997596
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 240.0,
+    "arrival_time_s": 240.0,
+    "observed_depth_m": 1.0949275145605266,
+    "matched_forecast_id": 22,
+    "prior_release_s": 220.0,
+    "prior_depth_m": 0.844845730609106,
+    "residual_m": 0.25008178395142067
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 250.0,
+    "arrival_time_s": 250.0,
+    "observed_depth_m": 1.1486875340891,
+    "matched_forecast_id": 23,
+    "prior_release_s": 230.0,
+    "prior_depth_m": 0.8890849331959475,
+    "residual_m": 0.25960260089315257
+  },
+  {
+    "region_id": 78,
+    "valid_time_s": 250.0,
+    "arrival_time_s": 250.0,
+    "observed_depth_m": 1.1602584732340915,
+    "matched_forecast_id": 23,
+    "prior_release_s": 230.0,
+    "prior_depth_m": 0.9008460626420082,
+    "residual_m": 0.2594124105920833
+  },
+  {
+    "region_id": 87,
+    "valid_time_s": 250.0,
+    "arrival_time_s": 250.0,
+    "observed_depth_m": 1.1513595890948067,
+    "matched_forecast_id": 23,
+    "prior_release_s": 230.0,
+    "prior_depth_m": 0.8909679864549234,
+    "residual_m": 0.26039160263988337
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 250.0,
+    "arrival_time_s": 250.0,
+    "observed_depth_m": 1.1631020719634808,
+    "matched_forecast_id": 23,
+    "prior_release_s": 230.0,
+    "prior_depth_m": 0.9025937080971906,
+    "residual_m": 0.26050836386629017
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 260.0,
+    "arrival_time_s": 260.0,
+    "observed_depth_m": 1.2145920169560398,
+    "matched_forecast_id": 24,
+    "prior_release_s": 240.0,
+    "prior_depth_m": 0.9452530109951134,
+    "residual_m": 0.2693390059609264
+  },
+  {
+    "region_id": 89,
+    "valid_time_s": 260.0,
+    "arrival_time_s": 260.0,
+    "observed_depth_m": 1.2183754428173028,
+    "matched_forecast_id": 24,
+    "prior_release_s": 240.0,
+    "prior_depth_m": 0.9491295891692041,
+    "residual_m": 0.2692458536480987
+  },
+  {
+    "region_id": 98,
+    "valid_time_s": 260.0,
+    "arrival_time_s": 260.0,
+    "observed_depth_m": 1.2149974837994135,
+    "matched_forecast_id": 24,
+    "prior_release_s": 240.0,
+    "prior_depth_m": 0.9450558419097745,
+    "residual_m": 0.269941641889639
+  },
+  {
+    "region_id": 99,
+    "valid_time_s": 260.0,
+    "arrival_time_s": 260.0,
+    "observed_depth_m": 1.2187313461861045,
+    "matched_forecast_id": 24,
+    "prior_release_s": 240.0,
+    "prior_depth_m": 0.9488914935987599,
+    "residual_m": 0.26983985258734455
+  },
+  {
+    "region_id": 0,
+    "valid_time_s": 270.0,
+    "arrival_time_s": 270.0,
+    "observed_depth_m": 1.1594436828007764,
+    "matched_forecast_id": 25,
+    "prior_release_s": 250.0,
+    "prior_depth_m": 0.8787309864873686,
+    "residual_m": 0.2807126963134078
+  },
+  {
+    "region_id": 1,
+    "valid_time_s": 270.0,
+    "arrival_time_s": 270.0,
+    "observed_depth_m": 1.1763586330080302,
+    "matched_forecast_id": 25,
+    "prior_release_s": 250.0,
+    "prior_depth_m": 0.8966130894466725,
+    "residual_m": 0.2797455435613577
+  },
+  {
+    "region_id": 10,
+    "valid_time_s": 270.0,
+    "arrival_time_s": 270.0,
+    "observed_depth_m": 1.1563963032833544,
+    "matched_forecast_id": 25,
+    "prior_release_s": 250.0,
+    "prior_depth_m": 0.8754138925673112,
+    "residual_m": 0.28098241071604324
+  },
+  {
+    "region_id": 11,
+    "valid_time_s": 270.0,
+    "arrival_time_s": 270.0,
+    "observed_depth_m": 1.1710631974362926,
+    "matched_forecast_id": 25,
+    "prior_release_s": 250.0,
+    "prior_depth_m": 0.8908083352505869,
+    "residual_m": 0.2802548621857057
+  },
+  {
+    "region_id": 11,
+    "valid_time_s": 280.0,
+    "arrival_time_s": 280.0,
+    "observed_depth_m": 1.2225806098015173,
+    "matched_forecast_id": 26,
+    "prior_release_s": 260.0,
+    "prior_depth_m": 0.9330621037482866,
+    "residual_m": 0.2895185060532307
+  },
+  {
+    "region_id": 12,
+    "valid_time_s": 280.0,
+    "arrival_time_s": 280.0,
+    "observed_depth_m": 1.2412929887081159,
+    "matched_forecast_id": 26,
+    "prior_release_s": 260.0,
+    "prior_depth_m": 0.9523877244126313,
+    "residual_m": 0.2889052642954846
+  },
+  {
+    "region_id": 21,
+    "valid_time_s": 280.0,
+    "arrival_time_s": 280.0,
+    "observed_depth_m": 1.2258350045193875,
+    "matched_forecast_id": 26,
+    "prior_release_s": 260.0,
+    "prior_depth_m": 0.9360283299392171,
+    "residual_m": 0.2898066745801704
+  },
+  {
+    "region_id": 22,
+    "valid_time_s": 280.0,
+    "arrival_time_s": 280.0,
+    "observed_depth_m": 1.2316875008216859,
+    "matched_forecast_id": 26,
+    "prior_release_s": 260.0,
+    "prior_depth_m": 0.9420476105127201,
+    "residual_m": 0.28963989030896575
+  },
+  {
+    "region_id": 22,
+    "valid_time_s": 290.0,
+    "arrival_time_s": 290.0,
+    "observed_depth_m": 1.2810237747381652,
+    "matched_forecast_id": 27,
+    "prior_release_s": 270.0,
+    "prior_depth_m": 0.9823337050668689,
+    "residual_m": 0.2986900696712963
+  },
+  {
+    "region_id": 23,
+    "valid_time_s": 290.0,
+    "arrival_time_s": 290.0,
+    "observed_depth_m": 1.2936561552366457,
+    "matched_forecast_id": 27,
+    "prior_release_s": 270.0,
+    "prior_depth_m": 0.9953767450538737,
+    "residual_m": 0.29827941018277193
+  },
+  {
+    "region_id": 32,
+    "valid_time_s": 290.0,
+    "arrival_time_s": 290.0,
+    "observed_depth_m": 1.2748435915425393,
+    "matched_forecast_id": 27,
+    "prior_release_s": 270.0,
+    "prior_depth_m": 0.976465710313757,
+    "residual_m": 0.2983778812287824
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 290.0,
+    "arrival_time_s": 290.0,
+    "observed_depth_m": 1.2704491273980265,
+    "matched_forecast_id": 27,
+    "prior_release_s": 270.0,
+    "prior_depth_m": 0.9726748945886703,
+    "residual_m": 0.2977742328093562
+  },
+  {
+    "region_id": 33,
+    "valid_time_s": 300.0,
+    "arrival_time_s": 300.0,
+    "observed_depth_m": 1.3193751663798734,
+    "matched_forecast_id": 28,
+    "prior_release_s": 280.0,
+    "prior_depth_m": 1.009678015681433,
+    "residual_m": 0.3096971506984405
+  },
+  {
+    "region_id": 34,
+    "valid_time_s": 300.0,
+    "arrival_time_s": 300.0,
+    "observed_depth_m": 1.3482421214257871,
+    "matched_forecast_id": 28,
+    "prior_release_s": 280.0,
+    "prior_depth_m": 1.038881748545192,
+    "residual_m": 0.30936037288059515
+  },
+  {
+    "region_id": 43,
+    "valid_time_s": 300.0,
+    "arrival_time_s": 300.0,
+    "observed_depth_m": 1.2701520699347832,
+    "matched_forecast_id": 28,
+    "prior_release_s": 280.0,
+    "prior_depth_m": 0.9600341511255139,
+    "residual_m": 0.3101179188092693
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 300.0,
+    "arrival_time_s": 300.0,
+    "observed_depth_m": 1.3010593324609592,
+    "matched_forecast_id": 28,
+    "prior_release_s": 280.0,
+    "prior_depth_m": 0.9909989604213111,
+    "residual_m": 0.3100603720396481
+  },
+  {
+    "region_id": 44,
+    "valid_time_s": 310.0,
+    "arrival_time_s": 310.0,
+    "observed_depth_m": 1.347559168164566,
+    "matched_forecast_id": 29,
+    "prior_release_s": 290.0,
+    "prior_depth_m": 1.0286323708202472,
+    "residual_m": 0.31892679734431884
+  },
+  {
+    "region_id": 45,
+    "valid_time_s": 310.0,
+    "arrival_time_s": 310.0,
+    "observed_depth_m": 1.3403967721380656,
+    "matched_forecast_id": 29,
+    "prior_release_s": 290.0,
+    "prior_depth_m": 1.0215620144017696,
+    "residual_m": 0.318834757736296
+  },
+  {
+    "region_id": 54,
+    "valid_time_s": 310.0,
+    "arrival_time_s": 310.0,
+    "observed_depth_m": 1.328835479688602,
+    "matched_forecast_id": 29,
+    "prior_release_s": 290.0,
+    "prior_depth_m": 1.0098191526617055,
+    "residual_m": 0.3190163270268964
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 310.0,
+    "arrival_time_s": 310.0,
+    "observed_depth_m": 1.3590728907848761,
+    "matched_forecast_id": 29,
+    "prior_release_s": 290.0,
+    "prior_depth_m": 1.0402999439652143,
+    "residual_m": 0.31877294681966184
+  },
+  {
+    "region_id": 55,
+    "valid_time_s": 320.0,
+    "arrival_time_s": 320.0,
+    "observed_depth_m": 1.4068800835222557,
+    "matched_forecast_id": 30,
+    "prior_release_s": 300.0,
+    "prior_depth_m": 1.0775420310786912,
+    "residual_m": 0.3293380524435645
+  },
+  {
+    "region_id": 56,
+    "valid_time_s": 320.0,
+    "arrival_time_s": 320.0,
+    "observed_depth_m": 1.4069685039952193,
+    "matched_forecast_id": 30,
+    "prior_release_s": 300.0,
+    "prior_depth_m": 1.0776131433924903,
+    "residual_m": 0.3293553606027291
+  },
+  {
+    "region_id": 65,
+    "valid_time_s": 320.0,
+    "arrival_time_s": 320.0,
+    "observed_depth_m": 1.4542839841464275,
+    "matched_forecast_id": 30,
+    "prior_release_s": 300.0,
+    "prior_depth_m": 1.1246162094692587,
+    "residual_m": 0.3296677746771688
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 320.0,
+    "arrival_time_s": 320.0,
+    "observed_depth_m": 1.4656044725336779,
+    "matched_forecast_id": 30,
+    "prior_release_s": 300.0,
+    "prior_depth_m": 1.1359525372343402,
+    "residual_m": 0.3296519352993377
+  },
+  {
+    "region_id": 66,
+    "valid_time_s": 330.0,
+    "arrival_time_s": 330.0,
+    "observed_depth_m": 1.5124394404637909,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 67,
+    "valid_time_s": 330.0,
+    "arrival_time_s": 330.0,
+    "observed_depth_m": 1.5142208847660885,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 76,
+    "valid_time_s": 330.0,
+    "arrival_time_s": 330.0,
+    "observed_depth_m": 1.5250291437246475,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 330.0,
+    "arrival_time_s": 330.0,
+    "observed_depth_m": 1.5360466384964422,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 77,
+    "valid_time_s": 340.0,
+    "arrival_time_s": 340.0,
+    "observed_depth_m": 1.5825994585831353,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 78,
+    "valid_time_s": 340.0,
+    "arrival_time_s": 340.0,
+    "observed_depth_m": 1.593407667448351,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 87,
+    "valid_time_s": 340.0,
+    "arrival_time_s": 340.0,
+    "observed_depth_m": 1.5853511126635746,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 340.0,
+    "arrival_time_s": 340.0,
+    "observed_depth_m": 1.5961877560122713,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 88,
+    "valid_time_s": 350.0,
+    "arrival_time_s": 350.0,
+    "observed_depth_m": 1.6419286863653344,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 89,
+    "valid_time_s": 350.0,
+    "arrival_time_s": 350.0,
+    "observed_depth_m": 1.6455493624373165,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 98,
+    "valid_time_s": 350.0,
+    "arrival_time_s": 350.0,
+    "observed_depth_m": 1.6418176706380392,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 99,
+    "valid_time_s": 350.0,
+    "arrival_time_s": 350.0,
+    "observed_depth_m": 1.6454321134764591,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 0,
+    "valid_time_s": 360.0,
+    "arrival_time_s": 360.0,
+    "observed_depth_m": 1.5918737842991624,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 1,
+    "valid_time_s": 360.0,
+    "arrival_time_s": 360.0,
+    "observed_depth_m": 1.6099856577528935,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 10,
+    "valid_time_s": 360.0,
+    "arrival_time_s": 360.0,
+    "observed_depth_m": 1.592417985003274,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  },
+  {
+    "region_id": 11,
+    "valid_time_s": 360.0,
+    "arrival_time_s": 360.0,
+    "observed_depth_m": 1.6051815372512042,
+    "matched_forecast_id": null,
+    "prior_depth_m": null,
+    "residual_m": null
+  }
+]

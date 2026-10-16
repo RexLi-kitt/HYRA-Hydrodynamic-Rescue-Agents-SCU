@@ -1,0 +1,46 @@
+[
+  {
+    "baseline": "B0_raw",
+    "metric": "mae_m",
+    "difference_b2_minus_baseline": -0.0009314017947702745,
+    "event_bootstrap_interval_95": [
+      -0.00172891398436484,
+      -0.00034047177693843477
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval"
+  },
+  {
+    "baseline": "B_local",
+    "metric": "mae_m",
+    "difference_b2_minus_baseline": -3.710771029356852e-05,
+    "event_bootstrap_interval_95": [
+      -0.00014059263222599826,
+      2.362585849306504e-05
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval"
+  },
+  {
+    "baseline": "B1_distance",
+    "metric": "mae_m",
+    "difference_b2_minus_baseline": 4.345192404756464e-05,
+    "event_bootstrap_interval_95": [
+      -1.1029796133438761e-05,
+      0.0001350426649023139
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval"
+  },
+  {
+    "baseline": "B2_uniform",
+    "metric": "mae_m",
+    "difference_b2_minus_baseline": -0.0006513363811659527,
+    "event_bootstrap_interval_95": [
+      -0.0011136891639252824,
+      -0.00026097935422247833
+    ],
+    "independent_families": 3,
+    "uncertainty": "event variation after averaging seeds; pilot interval"
+  }
+]

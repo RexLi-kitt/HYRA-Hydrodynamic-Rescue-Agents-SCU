@@ -1,0 +1,95 @@
+{
+  "study_id": "numerical-stability-fixed-footprint-v1-20261015",
+  "status": "training_design_diagnostic_not_confirmation",
+  "selected_training_families": [
+    "local_v1_train_009",
+    "local_v1_train_012",
+    "local_v1_train_017",
+    "local_v1_train_020"
+  ],
+  "selection_reason": "all_coarse_positive_families_in_previous_alignment_run",
+  "anchors_s": [
+    180,
+    210
+  ],
+  "legacy_requested_centers_y_m": [
+    25,
+    75
+  ],
+  "common_physical_boundary_intervals_y_m": [
+    [
+      10,
+      30
+    ],
+    [
+      60,
+      80
+    ]
+  ],
+  "common_physical_centers_y_m": [
+    20,
+    70
+  ],
+  "meshes": [
+    10,
+    20,
+    40
+  ],
+  "output_interval_s": [
+    2,
+    1
+  ],
+  "one_second_output_meshes": [
+    40
+  ],
+  "decimate_one_second_run_to_two_seconds": true,
+  "spatial_readouts": [
+    "nearest_centroid",
+    "centroid_Delaunay_linear"
+  ],
+  "initial_decision_offsets_s": [
+    0,
+    6,
+    12
+  ],
+  "full_service_s": 12,
+  "move_s": 6,
+  "depth_limit_m": 0.8,
+  "absolute_deadline": "anchor_plus_60s",
+  "frozen_task_population": "previous_mesh10_nearest_anchor_forecast_critical_mask_and_all32_layouts",
+  "frozen_action_analysis": true,
+  "matched_resolution_nominal_forecasts": true,
+  "forecast_releases_s": [
+    180,
+    190,
+    210,
+    220
+  ],
+  "nominal_forecast_state_source": "independent_nominal_base_only_never_truth",
+  "reference_finaltime_s": 300,
+  "history_sampling_s": 5,
+  "history_phase_fractions": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "history_age_s": [
+    0,
+    60
+  ],
+  "delays_s": [
+    0,
+    10
+  ],
+  "response_visibility_threshold_m": 0.001,
+  "engineering_consistency_proposals": {
+    "mesh20_to40_linear_max_target_depth_change_m": 0.005,
+    "mesh20_to40_linear_max_nominal_lag_change_s": 2,
+    "mesh20_to40_linear_common_window_label_changes": 0,
+    "mesh40_output2_to1_max_common_window_change_m": 0.001
+  },
+  "robust_means": "same_alternative_improves_over_frozen_action_and_response_is_visible_in_every_tested_numerical_variant_not_a_proven_error_bound",
+  "old_confirmation_labels_allowed": false,
+  "new_learned_models": 0
+}

@@ -1,0 +1,452 @@
+[
+  {
+    "event_id": "flood_009",
+    "event_family_id": "flood_009",
+    "method": "B0_raw",
+    "mae_m": 0.004711979840379728,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.9474605954465849,
+    "false_positive_rate": 0.011592958351223702,
+    "effective_coverage": 0.20379310344827586,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.004472521553403033,
+        "samples": 203,
+        "severe_underestimate_recall": 0.8837209302325582,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.004898253403477552,
+        "samples": 388,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.013289036544850499
+      },
+      "unobserved": {
+        "mae_m": 0.004701731200178046,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9433106575963719,
+        "false_positive_rate": 0.012312633832976445
+      }
+    }
+  },
+  {
+    "event_id": "flood_010",
+    "event_family_id": "flood_010",
+    "method": "B0_raw",
+    "mae_m": 0.008508750195338654,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.9385342789598109,
+    "false_positive_rate": 0.005518087063151441,
+    "effective_coverage": 0.20379310344827586,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.007601663189632751,
+        "samples": 203,
+        "severe_underestimate_recall": 0.9545454545454546,
+        "false_positive_rate": 0.008695652173913044
+      },
+      "stale": {
+        "mae_m": 0.009504057309893291,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9215686274509803,
+        "false_positive_rate": 0.0
+      },
+      "unobserved": {
+        "mae_m": 0.008421248896815961,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9406345957011258,
+        "false_positive_rate": 0.006006006006006006
+      }
+    }
+  },
+  {
+    "event_id": "flood_011",
+    "event_family_id": "flood_011",
+    "method": "B0_raw",
+    "mae_m": 0.005876386018330423,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.984375,
+    "false_positive_rate": 0.008982035928143712,
+    "effective_coverage": 0.20379310344827586,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.0056302704411461514,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.006435112206924852,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9927536231884058,
+        "false_positive_rate": 0.012
+      },
+      "unobserved": {
+        "mae_m": 0.005804136430194333,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9812680115273775,
+        "false_positive_rate": 0.009287925696594427
+      }
+    }
+  },
+  {
+    "event_id": "flood_009",
+    "event_family_id": "flood_009",
+    "method": "B_local",
+    "mae_m": 0.004365864420589066,
+    "samples": 2900,
+    "severe_underestimate_recall": 1.0,
+    "false_positive_rate": 0.0124516960068699,
+    "effective_coverage": 0.20379310344827586,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.004187468646241569,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.004515729289886544,
+        "samples": 388,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.019933554817275746
+      },
+      "unobserved": {
+        "mae_m": 0.004356365404956809,
+        "samples": 2309,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.012312633832976445
+      }
+    }
+  },
+  {
+    "event_id": "flood_010",
+    "event_family_id": "flood_010",
+    "method": "B_local",
+    "mae_m": 0.006920428843199812,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.9385342789598109,
+    "false_positive_rate": 0.00674432863274065,
+    "effective_coverage": 0.20379310344827586,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.005993891941437957,
+        "samples": 203,
+        "severe_underestimate_recall": 0.9545454545454546,
+        "false_positive_rate": 0.02608695652173913
+      },
+      "stale": {
+        "mae_m": 0.00767372401725152,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9215686274509803,
+        "false_positive_rate": 0.0
+      },
+      "unobserved": {
+        "mae_m": 0.006875304747715009,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9406345957011258,
+        "false_positive_rate": 0.006006006006006006
+      }
+    }
+  },
+  {
+    "event_id": "flood_011",
+    "event_family_id": "flood_011",
+    "method": "B_local",
+    "mae_m": 0.005127940536829809,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.984375,
+    "false_positive_rate": 0.008982035928143712,
+    "effective_coverage": 0.20379310344827586,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.004614646457056096,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.005587475934506929,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9927536231884058,
+        "false_positive_rate": 0.012
+      },
+      "unobserved": {
+        "mae_m": 0.005095848273467029,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9812680115273775,
+        "false_positive_rate": 0.009287925696594427
+      }
+    }
+  },
+  {
+    "event_id": "flood_009",
+    "event_family_id": "flood_009",
+    "method": "B1_distance",
+    "mae_m": 0.004365165160067475,
+    "samples": 2900,
+    "severe_underestimate_recall": 1.0,
+    "false_positive_rate": 0.0124516960068699,
+    "effective_coverage": 0.3355172413793103,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.0043256937614011125,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.00445309526927823,
+        "samples": 388,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.019933554817275746
+      },
+      "unobserved": {
+        "mae_m": 0.00435385975147306,
+        "samples": 2309,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.012312633832976445
+      }
+    }
+  },
+  {
+    "event_id": "flood_010",
+    "event_family_id": "flood_010",
+    "method": "B1_distance",
+    "mae_m": 0.0066447935460715,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.9921197793538219,
+    "false_positive_rate": 0.025137952176578784,
+    "effective_coverage": 0.3355172413793103,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.006376454073121129,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.043478260869565216
+      },
+      "stale": {
+        "mae_m": 0.006951114244064184,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9950980392156863,
+        "false_positive_rate": 0.0
+      },
+      "unobserved": {
+        "mae_m": 0.006616911554814576,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9907881269191402,
+        "false_positive_rate": 0.02702702702702703
+      }
+    }
+  },
+  {
+    "event_id": "flood_011",
+    "event_family_id": "flood_011",
+    "method": "B1_distance",
+    "mae_m": 0.005162596191456313,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.984375,
+    "false_positive_rate": 0.008982035928143712,
+    "effective_coverage": 0.3355172413793103,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.00486630940807293,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.005471651828279027,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9927536231884058,
+        "false_positive_rate": 0.012
+      },
+      "unobserved": {
+        "mae_m": 0.00513671166566143,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9812680115273775,
+        "false_positive_rate": 0.009287925696594427
+      }
+    }
+  },
+  {
+    "event_id": "flood_009",
+    "event_family_id": "flood_009",
+    "method": "B2_structure",
+    "mae_m": 0.0043715080634412935,
+    "samples": 2900,
+    "severe_underestimate_recall": 1.0,
+    "false_positive_rate": 0.0124516960068699,
+    "effective_coverage": 0.33827586206896554,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.004118551334121274,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.004584860159616814,
+        "samples": 388,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.019933554817275746
+      },
+      "unobserved": {
+        "mae_m": 0.00435789593816449,
+        "samples": 2309,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.012312633832976445
+      }
+    }
+  },
+  {
+    "event_id": "flood_010",
+    "event_family_id": "flood_010",
+    "method": "B2_structure",
+    "mae_m": 0.006779836210973814,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.9629629629629629,
+    "false_positive_rate": 0.025137952176578784,
+    "effective_coverage": 0.33827586206896554,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.006281633007706045,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.043478260869565216
+      },
+      "stale": {
+        "mae_m": 0.007298429376466674,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9656862745098039,
+        "false_positive_rate": 0.0
+      },
+      "unobserved": {
+        "mae_m": 0.006736493249541214,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9590583418628454,
+        "false_positive_rate": 0.02702702702702703
+      }
+    }
+  },
+  {
+    "event_id": "flood_011",
+    "event_family_id": "flood_011",
+    "method": "B2_structure",
+    "mae_m": 0.005151566395322874,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.984375,
+    "false_positive_rate": 0.008982035928143712,
+    "effective_coverage": 0.33827586206896554,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.004808933046411438,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.00556365983025514,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9927536231884058,
+        "false_positive_rate": 0.012
+      },
+      "unobserved": {
+        "mae_m": 0.0051124422364122206,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9812680115273775,
+        "false_positive_rate": 0.009287925696594427
+      }
+    }
+  },
+  {
+    "event_id": "flood_009",
+    "event_family_id": "flood_009",
+    "method": "B2_uniform",
+    "mae_m": 0.004632487417663772,
+    "samples": 2900,
+    "severe_underestimate_recall": 1.0,
+    "false_positive_rate": 0.0124516960068699,
+    "effective_coverage": 0.33827586206896554,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.004400332750226445,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.004788754004374611,
+        "samples": 388,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.019933554817275746
+      },
+      "unobserved": {
+        "mae_m": 0.004626638981910621,
+        "samples": 2309,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.012312633832976445
+      }
+    }
+  },
+  {
+    "event_id": "flood_010",
+    "event_family_id": "flood_010",
+    "method": "B2_uniform",
+    "mae_m": 0.007893525374899096,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.9385342789598109,
+    "false_positive_rate": 0.005518087063151441,
+    "effective_coverage": 0.33827586206896554,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.007230359031418096,
+        "samples": 203,
+        "severe_underestimate_recall": 0.9545454545454546,
+        "false_positive_rate": 0.008695652173913044
+      },
+      "stale": {
+        "mae_m": 0.00864010592410912,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9215686274509803,
+        "false_positive_rate": 0.0
+      },
+      "unobserved": {
+        "mae_m": 0.007826374883185435,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9406345957011258,
+        "false_positive_rate": 0.006006006006006006
+      }
+    }
+  },
+  {
+    "event_id": "flood_011",
+    "event_family_id": "flood_011",
+    "method": "B2_uniform",
+    "mae_m": 0.0057309070206729715,
+    "samples": 2900,
+    "severe_underestimate_recall": 0.984375,
+    "false_positive_rate": 0.008982035928143712,
+    "effective_coverage": 0.33827586206896554,
+    "strata": {
+      "fresh": {
+        "mae_m": 0.005596863525409972,
+        "samples": 203,
+        "severe_underestimate_recall": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "stale": {
+        "mae_m": 0.006100351850729882,
+        "samples": 388,
+        "severe_underestimate_recall": 0.9927536231884058,
+        "false_positive_rate": 0.012
+      },
+      "unobserved": {
+        "mae_m": 0.0056806108905197925,
+        "samples": 2309,
+        "severe_underestimate_recall": 0.9812680115273775,
+        "false_positive_rate": 0.009287925696594427
+      }
+    }
+  }
+]

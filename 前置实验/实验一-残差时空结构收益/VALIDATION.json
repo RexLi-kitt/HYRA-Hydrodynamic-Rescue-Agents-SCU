@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-17",
+  "timezone": "Asia/Shanghai",
+  "platform": "Windows / Python 3.14 (see VERIFIED_ENVIRONMENT.json)",
+  "user_confirmed_split": true,
+  "all_existing_tests": {
+    "passed": 137,
+    "failed": 0
+  },
+  "focused_tests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "fixed_data_replay": {
+    "passed": true,
+    "reference_checked": true,
+    "rtol": 1e-09,
+    "atol": 1e-09
+  },
+  "filterpy_reference": {
+    "passed": true,
+    "prediction_curves": 672,
+    "max_absolute_difference_m": 4.440892098500626e-16
+  },
+  "relocation": {
+    "passed": true,
+    "isolated_package": true,
+    "external_warehouse_required": false,
+    "tests_passed": true
+  },
+  "clean_dependency_install_tested": false,
+  "github_actions_executed": false,
+  "full_strategy_training_rerun": false,
+  "full_hydraulic_regeneration_rerun": false,
+  "cpu_training_smoke": {
+    "passed": true,
+    "static_models": 2,
+    "episodes_per_model": 8
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "stage": "fresh_development_selection_not_confirmation",
+  "training_families": 24,
+  "validation_families": 12,
+  "training_reference_mesh": 80,
+  "evaluation_reference_meshes": [
+    80,
+    40
+  ],
+  "common_inputs": "all six upstream sources, all twelve arrived 5-second records, same legal published forecasts and nominal context; no target observations",
+  "P0_candidates": 6,
+  "P1_candidates": 225,
+  "P2_candidates": 17,
+  "P3_candidates": 15,
+  "P4_candidates": 30,
+  "P5_candidates": 30,
+  "total_candidates": 323,
+  "ridge_alpha_grid": [
+    0.1,
+    1,
+    10,
+    100,
+    1000
+  ],
+  "empirical_filter_width_s": [
+    5,
+    10,
+    20
+  ],
+  "neural_architectures": [
+    "MLP",
+    "GRU"
+  ],
+  "neural_losses": [
+    "MSE",
+    "threshold_weighted_MSE"
+  ],
+  "neural_checkpoints_epochs": [
+    20,
+    60,
+    120
+  ],
+  "physical_hyperparameter_grid": "all nine pairs in metric_development.design.v1.json",
+  "pointwise_physical_reader_alpha": 10,
+  "hybrid_physical_grid_index": 4,
+  "hybrid_physical_parameters": {
+    "noise_std_m": 0.02,
+    "pulse_amplitude_coefficient_prior_std": 2,
+    "global_relative_forcing_prior_std": 0.02
+  },
+  "hybrid_inputs": "same full raw encoder, public nominal context, own-lead physical correction, global correction and source posterior mass",
+  "matched_P4_P5_training": "same architecture parameter count initial seed batches loss checkpoints prior source inference and hypothesis support; only target propagation lag differs",
+  "development_diagnostics_already_opened": "four fresh training families fitted; other training families 004 and 005 used for implementation diagnostics; all remain development training data",
+  "validation_selection": "one global winner per group; Bstar is one winner across P0-P3; rank family macro minimum gain over nominal across both meshes on fixed nominal critical D0 cases",
+  "robust_inference": "for each paired contrast take the minimum within each hydraulic family across the two meshes before family averaging; do not subtract two separately minimized means",
+  "additional_required_reports": [
+    "general population",
+    "10-second delay",
+    "false feasible and false infeasible windows",
+    "wrong lag and wrong spatial controls",
+    "paired fixed-E1-truth information intervention"
+  ],
+  "pilot_gate": "freeze selected models and evaluation contracts before opening any pilot family; inspect Bstar oracle headroom and plan confirmation family count without lowering preset gain or precision targets",
+  "confirmation_opened": false
+}

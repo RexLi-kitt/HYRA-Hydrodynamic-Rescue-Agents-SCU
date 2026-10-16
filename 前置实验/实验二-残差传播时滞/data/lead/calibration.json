@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "mesh_pair": [
+        10,
+        20
+      ],
+      "cells": 12,
+      "median_peak_relative_error": 0.04232464713752131,
+      "median_arrival_difference_s": 2.0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "nmesh": 10,
+  "selected_amplitude_m": 0.1,
+  "selected_plateau_s": 20,
+  "scan": [
+    {
+      "amplitude_m": 0.05,
+      "plateau_s": 20,
+      "max_downstream_response_m": 0.008412941801438145,
+      "first_upstream_s": 96.0,
+      "first_downstream_s": 110.0
+    },
+    {
+      "amplitude_m": 0.05,
+      "plateau_s": 40,
+      "max_downstream_response_m": 0.00849460003435254,
+      "first_upstream_s": 96.0,
+      "first_downstream_s": 110.0
+    },
+    {
+      "amplitude_m": 0.1,
+      "plateau_s": 20,
+      "max_downstream_response_m": 0.016992342538572236,
+      "first_upstream_s": 96.0,
+      "first_downstream_s": 108.0
+    },
+    {
+      "amplitude_m": 0.1,
+      "plateau_s": 40,
+      "max_downstream_response_m": 0.017308971032245657,
+      "first_upstream_s": 96.0,
+      "first_downstream_s": 108.0
+    },
+    {
+      "amplitude_m": 0.2,
+      "plateau_s": 20,
+      "max_downstream_response_m": 0.03537497586864241,
+      "first_upstream_s": 96.0,
+      "first_downstream_s": 108.0
+    },
+    {
+      "amplitude_m": 0.2,
+      "plateau_s": 40,
+      "max_downstream_response_m": 0.03621990676294762,
+      "first_upstream_s": 96.0,
+      "first_downstream_s": 108.0
+    }
+  ],
+  "selection": "Middle amplitude and shorter plateau prespecified; no residual/policy outcome selection",
+  "output_step_check": {
+    "max_response_difference_m": 0.0005527474305042634,
+    "max_arrival_difference_s": 1.0,
+    "tolerance_m": 0.001,
+    "tolerance_s": 2
+  },
+  "limitations": "Representative calibration, not full parameter-range convergence"
+}

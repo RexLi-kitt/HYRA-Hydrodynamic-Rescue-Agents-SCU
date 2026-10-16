@@ -1,0 +1,134 @@
+{
+  "protocol_id": "hidden-target-physics-alignment-design-v1-20261015",
+  "status": "design_only_not_executable_runner_config_not_frozen",
+  "protocol_path": "docs/protocols/HyRA_下一步实验方案_技能审查版_20261015.md",
+  "execution_started": false,
+  "runtime_python": "python",
+  "stage_A": {
+    "initial_training_family_ids": [
+      "local_v1_train_000",
+      "local_v1_train_001",
+      "local_v1_train_002",
+      "local_v1_train_003"
+    ],
+    "initial_n_independent_families": 4,
+    "expand_after_engineering_checks_to_old_training_families": 24,
+    "old_confirmation_labels_allowed": false,
+    "anchor_issue_and_pulse_start_s": [
+      90,
+      120,
+      150,
+      180,
+      210
+    ],
+    "initial_decision_offsets_from_anchor_s": [
+      0,
+      6,
+      12
+    ],
+    "pulse_boundary_center_y_m": [
+      25,
+      75
+    ],
+    "pulse_amplitude_m": 0.1,
+    "pulse_rise_plateau_fall_s": [
+      10,
+      20,
+      10
+    ],
+    "include_paired_no_pulse": true,
+    "trajectory_finaltime_s": 300,
+    "anchor_forecast_horizon_s": 60,
+    "maximum_order_duration_s": 48,
+    "nominal_critical_band_m": 0.05,
+    "critical_filter_uses": "only_anchor_issue_full_service_intervals_no_truth_no_later_issue",
+    "all_anchor_conditions_reported": true,
+    "layouts": 32,
+    "initial_layout_time_cases_per_family_before_filter": 480,
+    "initial_truth_plus_nominal_probe_trajectory_integrations_max": 88,
+    "forecast_integrations_and_numerical_refinements_counted_separately": true,
+    "in_transit_replanning": false,
+    "service_s": 12,
+    "move_step_s": 6,
+    "simulation_service_depth_threshold_m": 0.8,
+    "source_region_ids": [
+      10,
+      20,
+      30,
+      60,
+      70,
+      80
+    ],
+    "all_target_observations_masked": true,
+    "sample_interval_s": 5,
+    "sample_phase_fractions": [
+      0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "observation_delay_s": [
+      0,
+      10
+    ],
+    "observation_noise_std_m": [
+      0,
+      0.02
+    ],
+    "noisy_repeats": 3,
+    "noiseless_repeats": 1,
+    "primary_forecast_mode": "M0_near_accurate",
+    "prohibited_model_features": [
+      "pulse_start",
+      "pulse_center",
+      "true_condition_id",
+      "future_reference_depth"
+    ],
+    "deliverables": [
+      "propagation_table",
+      "opportunity_table",
+      "actionable_time_sets",
+      "coverage_and_empty_cells",
+      "input_reference_audit",
+      "trajectory_hash_manifest"
+    ]
+  },
+  "stage_B": {
+    "groups": [
+      "P0_forecast_only",
+      "P1_upstream_conventional_spatial_update",
+      "P2_full_upstream_raw_history_target_conditioned",
+      "P3_detrended_statistical_links",
+      "P4_nominal_physical_links_and_lag",
+      "P5_same_links_recency"
+    ],
+    "B_star": "global_validation_selected_best_P0_to_P3",
+    "shared_raw_records_and_budget": true,
+    "mechanism_horizons_s": [
+      6,
+      12
+    ],
+    "complete_curve_offsets_s": {
+      "start": 0,
+      "stop_inclusive": 50,
+      "step": 2
+    },
+    "future_development_split_sizes": null,
+    "confirmation_n": null
+  },
+  "proposed_preconfirmation_gates": {
+    "nondegenerate_fraction_at_weight_L1_ge_0_1_min": 0.2,
+    "oracle_headroom_over_B_star_95CI_lower_min_services_per_case": 0.02,
+    "minimum_practical_confirmed_gain_services_per_case": 0.01,
+    "planned_95CI_halfwidth_max_services_per_case": 0.005,
+    "independent_unit": "hydraulic_family",
+    "freeze_before_confirmation": true,
+    "test_based_optional_stopping": false,
+    "all_thresholds_proposals_not_completed_results": true
+  },
+  "planned_fixed_sequence": [
+    "P4_vs_P5_paired_family_mean_absolute_error_at_6_and_12_seconds",
+    "P4_vs_B_star_paired_family_actual_completed_services"
+  ],
+  "next_script_proposed_not_created": "scripts/calibrate_pulse_service_alignment.py"
+}

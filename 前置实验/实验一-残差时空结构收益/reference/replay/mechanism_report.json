@@ -1,0 +1,98 @@
+[
+  {
+    "event_id": "flood_000",
+    "split": "train",
+    "selected_link_mean_correlation": 0.9998847065034346,
+    "after_global_mean_removal_correlation": 0.9770816558406079,
+    "common_mode_variance_ratio": 0.992367058269622,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_001",
+    "split": "train",
+    "selected_link_mean_correlation": 0.9998948047752337,
+    "after_global_mean_removal_correlation": 0.9781352088153897,
+    "common_mode_variance_ratio": 0.993264382220411,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_002",
+    "split": "train",
+    "selected_link_mean_correlation": 0.9998916738191482,
+    "after_global_mean_removal_correlation": 0.9787129701966757,
+    "common_mode_variance_ratio": 0.9930950182142967,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_003",
+    "split": "train",
+    "selected_link_mean_correlation": 0.9998668470867504,
+    "after_global_mean_removal_correlation": 0.9700180335302189,
+    "common_mode_variance_ratio": 0.9926953700317018,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_004",
+    "split": "train",
+    "selected_link_mean_correlation": 0.9999015270872172,
+    "after_global_mean_removal_correlation": 0.9816389939725068,
+    "common_mode_variance_ratio": 0.9936448458391367,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_005",
+    "split": "train",
+    "selected_link_mean_correlation": 0.9998766223391395,
+    "after_global_mean_removal_correlation": 0.9743128954908131,
+    "common_mode_variance_ratio": 0.9930187905738942,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_006",
+    "split": "validation",
+    "selected_link_mean_correlation": 0.9998897001773106,
+    "after_global_mean_removal_correlation": 0.976042760225839,
+    "common_mode_variance_ratio": 0.9932451872566829,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_007",
+    "split": "validation",
+    "selected_link_mean_correlation": 0.9998756123993436,
+    "after_global_mean_removal_correlation": 0.9748880088135266,
+    "common_mode_variance_ratio": 0.9931003069642861,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_008",
+    "split": "validation",
+    "selected_link_mean_correlation": 0.9998654867705263,
+    "after_global_mean_removal_correlation": 0.9731869203618877,
+    "common_mode_variance_ratio": 0.9928241817571989,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_009",
+    "split": "test",
+    "selected_link_mean_correlation": 0.9998992578853825,
+    "after_global_mean_removal_correlation": 0.9802089509916126,
+    "common_mode_variance_ratio": 0.992830402492491,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_010",
+    "split": "test",
+    "selected_link_mean_correlation": 0.9998723339648597,
+    "after_global_mean_removal_correlation": 0.9691513337779238,
+    "common_mode_variance_ratio": 0.9932744333751928,
+    "signed_link_agreement": 1.0
+  },
+  {
+    "event_id": "flood_011",
+    "split": "test",
+    "selected_link_mean_correlation": 0.999893892884125,
+    "after_global_mean_removal_correlation": 0.9709031435916563,
+    "common_mode_variance_ratio": 0.9932268027834426,
+    "signed_link_agreement": 1.0
+  }
+]
