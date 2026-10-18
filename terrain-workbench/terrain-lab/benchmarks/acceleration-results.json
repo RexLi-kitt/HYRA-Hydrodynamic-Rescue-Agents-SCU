@@ -1,0 +1,408 @@
+{
+  "scenario": {
+    "mode": "current",
+    "terrain_id": "generated/909c3cb6340c/raw",
+    "flood": {
+      "frames": 121,
+      "resolution": 256,
+      "metres_per_block": 1,
+      "duration_s": 1500,
+      "manning": 0.035,
+      "rain_mm_h": 100,
+      "rain_duration_s": 50,
+      "infiltration_mm_h": 5,
+      "baseflow_m3_s": 100,
+      "warmup_s": 50,
+      "source_x": 23,
+      "source_z": 110,
+      "flux_method": "rusanov",
+      "spatial_order": 2,
+      "time_integrator": "rk2",
+      "low_froude": 1,
+      "cfl": 0.4,
+      "limiter_theta": 1.5,
+      "velocity_depth": 1e-06,
+      "max_timestep": 1,
+      "max_steps": 500000,
+      "inflow_m3_s": 0,
+      "boundary": "ocean",
+      "initial_water": true,
+      "baseflow": true,
+      "refine_inland_water": false,
+      "refinement_buffer": 0
+    },
+    "layers": {
+      "patches": [],
+      "hydrographs": {}
+    },
+    "external_inflows": [
+      {
+        "id": "river-63ecc53a9f",
+        "kind": "river",
+        "enabled": true,
+        "inlet_velocity_m_s": 0,
+        "hydrograph": [
+          [
+            0,
+            1500
+          ],
+          [
+            1200,
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  "duration_s": 0.2,
+  "repeats": 3,
+  "native_backend_states_match": true,
+  "rows": [
+    {
+      "phase": "warmup",
+      "backend": "numpy",
+      "factor": 1,
+      "repeat": 0,
+      "cells": 262144,
+      "steps": 9,
+      "simulated_s": 0.2,
+      "wall_s": 9.141331599996192,
+      "max_stage_courant": 0.38856014801261424,
+      "mass_residual_m3": 4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 1,
+      "repeat": 0,
+      "cells": 262144,
+      "steps": 9,
+      "simulated_s": 0.2,
+      "wall_s": 1.417495300003793,
+      "max_stage_courant": 0.38856014801261424,
+      "mass_residual_m3": 4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 2,
+      "repeat": 0,
+      "cells": 65536,
+      "steps": 4,
+      "simulated_s": 0.2,
+      "wall_s": 0.14485320000676438,
+      "max_stage_courant": 0.3844388521140486,
+      "mass_residual_m3": -4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 4,
+      "repeat": 0,
+      "cells": 16384,
+      "steps": 2,
+      "simulated_s": 0.2,
+      "wall_s": 0.01665909998700954,
+      "max_stage_courant": 0.34468321125458073,
+      "mass_residual_m3": 0.0
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 4,
+      "repeat": 1,
+      "cells": 16384,
+      "steps": 2,
+      "simulated_s": 0.2,
+      "wall_s": 0.021424699982162565,
+      "max_stage_courant": 0.34468321125458073,
+      "mass_residual_m3": 0.0
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 2,
+      "repeat": 1,
+      "cells": 65536,
+      "steps": 4,
+      "simulated_s": 0.2,
+      "wall_s": 0.13883650000207126,
+      "max_stage_courant": 0.3844388521140486,
+      "mass_residual_m3": -4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 1,
+      "repeat": 1,
+      "cells": 262144,
+      "steps": 9,
+      "simulated_s": 0.2,
+      "wall_s": 1.4196745000081137,
+      "max_stage_courant": 0.38856014801261424,
+      "mass_residual_m3": 4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numpy",
+      "factor": 1,
+      "repeat": 1,
+      "cells": 262144,
+      "steps": 9,
+      "simulated_s": 0.2,
+      "wall_s": 10.105631800019182,
+      "max_stage_courant": 0.38856014801261424,
+      "mass_residual_m3": 4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numpy",
+      "factor": 1,
+      "repeat": 2,
+      "cells": 262144,
+      "steps": 9,
+      "simulated_s": 0.2,
+      "wall_s": 10.282121799973538,
+      "max_stage_courant": 0.38856014801261424,
+      "mass_residual_m3": 4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 1,
+      "repeat": 2,
+      "cells": 262144,
+      "steps": 9,
+      "simulated_s": 0.2,
+      "wall_s": 1.4387387000024319,
+      "max_stage_courant": 0.38856014801261424,
+      "mass_residual_m3": 4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 2,
+      "repeat": 2,
+      "cells": 65536,
+      "steps": 4,
+      "simulated_s": 0.2,
+      "wall_s": 0.1364531999861356,
+      "max_stage_courant": 0.3844388521140486,
+      "mass_residual_m3": -4.547473508864641e-13
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 4,
+      "repeat": 2,
+      "cells": 16384,
+      "steps": 2,
+      "simulated_s": 0.2,
+      "wall_s": 0.01609479999751784,
+      "max_stage_courant": 0.34468321125458073,
+      "mass_residual_m3": 0.0
+    },
+    {
+      "phase": "flood",
+      "backend": "numpy",
+      "factor": 1,
+      "repeat": 0,
+      "cells": 262144,
+      "steps": 44,
+      "simulated_s": 0.2,
+      "wall_s": 48.38497220000136,
+      "max_stage_courant": 0.3009135590863836,
+      "mass_residual_m3": 1.8189894035458565e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 1,
+      "repeat": 0,
+      "cells": 262144,
+      "steps": 44,
+      "simulated_s": 0.2,
+      "wall_s": 9.571744999993825,
+      "max_stage_courant": 0.3009135590863836,
+      "mass_residual_m3": 1.8189894035458565e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 2,
+      "repeat": 0,
+      "cells": 65536,
+      "steps": 20,
+      "simulated_s": 0.2,
+      "wall_s": 0.9509364000114147,
+      "max_stage_courant": 0.27193608566808475,
+      "mass_residual_m3": 2.2737367544323206e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 4,
+      "repeat": 0,
+      "cells": 16384,
+      "steps": 10,
+      "simulated_s": 0.2,
+      "wall_s": 0.11928410001564771,
+      "max_stage_courant": 0.21280801373806224,
+      "mass_residual_m3": 0.0
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 4,
+      "repeat": 1,
+      "cells": 16384,
+      "steps": 10,
+      "simulated_s": 0.2,
+      "wall_s": 0.12178120002499782,
+      "max_stage_courant": 0.21280801373806224,
+      "mass_residual_m3": 0.0
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 2,
+      "repeat": 1,
+      "cells": 65536,
+      "steps": 20,
+      "simulated_s": 0.2,
+      "wall_s": 0.9798294999927748,
+      "max_stage_courant": 0.27193608566808475,
+      "mass_residual_m3": 2.2737367544323206e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 1,
+      "repeat": 1,
+      "cells": 262144,
+      "steps": 44,
+      "simulated_s": 0.2,
+      "wall_s": 9.020599600014975,
+      "max_stage_courant": 0.3009135590863836,
+      "mass_residual_m3": 1.8189894035458565e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numpy",
+      "factor": 1,
+      "repeat": 1,
+      "cells": 262144,
+      "steps": 44,
+      "simulated_s": 0.2,
+      "wall_s": 48.913303899986204,
+      "max_stage_courant": 0.3009135590863836,
+      "mass_residual_m3": 1.8189894035458565e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numpy",
+      "factor": 1,
+      "repeat": 2,
+      "cells": 262144,
+      "steps": 44,
+      "simulated_s": 0.2,
+      "wall_s": 47.27218620001804,
+      "max_stage_courant": 0.3009135590863836,
+      "mass_residual_m3": 1.8189894035458565e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 1,
+      "repeat": 2,
+      "cells": 262144,
+      "steps": 44,
+      "simulated_s": 0.2,
+      "wall_s": 6.48324830000638,
+      "max_stage_courant": 0.3009135590863836,
+      "mass_residual_m3": 1.8189894035458565e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 2,
+      "repeat": 2,
+      "cells": 65536,
+      "steps": 20,
+      "simulated_s": 0.2,
+      "wall_s": 0.48327540000900626,
+      "max_stage_courant": 0.27193608566808475,
+      "mass_residual_m3": 2.2737367544323206e-12
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 4,
+      "repeat": 2,
+      "cells": 16384,
+      "steps": 10,
+      "simulated_s": 0.2,
+      "wall_s": 0.06080820001079701,
+      "max_stage_courant": 0.21280801373806224,
+      "mass_residual_m3": 0.0
+    }
+  ],
+  "summary": [
+    {
+      "phase": "warmup",
+      "backend": "numpy",
+      "factor": 1,
+      "median_wall_s": 10.105631800019182,
+      "speedup_vs_numpy_native": 1.0
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 1,
+      "median_wall_s": 1.4196745000081137,
+      "speedup_vs_numpy_native": 7.118273801467468
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 2,
+      "median_wall_s": 0.13883650000207126,
+      "speedup_vs_numpy_native": 72.78800459438563
+    },
+    {
+      "phase": "warmup",
+      "backend": "numba",
+      "factor": 4,
+      "median_wall_s": 0.01665909998700954,
+      "speedup_vs_numpy_native": 606.6133109171185
+    },
+    {
+      "phase": "flood",
+      "backend": "numpy",
+      "factor": 1,
+      "median_wall_s": 48.38497220000136,
+      "speedup_vs_numpy_native": 1.0
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 1,
+      "median_wall_s": 9.020599600014975,
+      "speedup_vs_numpy_native": 5.363831047319851
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 2,
+      "median_wall_s": 0.9509364000114147,
+      "speedup_vs_numpy_native": 50.881396694269526
+    },
+    {
+      "phase": "flood",
+      "backend": "numba",
+      "factor": 4,
+      "median_wall_s": 0.11928410001564771,
+      "speedup_vs_numpy_native": 405.62801072107857
+    }
+  ]
+}

@@ -7,10 +7,10 @@ import zipfile
 import numpy as np
 
 
-def json_safe(value):
-    if isinstance(value,np.ndarray): return json_safe(value.tolist())
-    if isinstance(value,dict): return {k:json_safe(v) for k,v in value.items()}
-    if isinstance(value,(list,tuple)): return [json_safe(v) for v in value]
+def json_safe(value,array_encoder=None):
+    if isinstance(value,np.ndarray): return array_encoder(value) if array_encoder else json_safe(value.tolist())
+    if isinstance(value,dict): return {k:json_safe(v,array_encoder) for k,v in value.items()}
+    if isinstance(value,(list,tuple)): return [json_safe(v,array_encoder) for v in value]
     if isinstance(value,(np.integer,np.bool_)): return value.item()
     if isinstance(value,(float,np.floating)): return float(value) if np.isfinite(value) else None
     return value
@@ -81,7 +81,9 @@ class BaseMap:
         solver.set_source_schedule(entries)
 
     def snapshot(self):
-        return {k:getattr(self,k) for k in ('z','n','solid','source_id','drain_capacity','wall_x','wall_y','terrain_class')}
+        result={k:getattr(self,k) for k in ('z','n','solid','source_id','drain_capacity','wall_x','wall_y','terrain_class')}
+        if hasattr(self,'refinement_level'):result['refinement_level']=self.refinement_level
+        return result
 
 
 class MapWorld:
@@ -95,24 +97,24 @@ class MapWorld:
         self.generated_initial=solver.h.copy()
         self.external_inflows=[];self.river_crossings=[]
 
-    def advance_to(self,end,cancelled=lambda:False):
+    def advance_to(self,end,cancelled=lambda:False,progress=None):
         if not isinstance(end,(int,float)) or not math.isfinite(end) or end<self.solver.time:
             raise ValueError('模拟时间需要有限且不能倒退')
         c=self.config
         self.solver.advance(end,rain=c['rain_mm_h']/3600000,rain_until=c['rain_duration_s'],
             infiltration=c['infiltration_mm_h']/3600000,inflow=c['inflow_m3_s'],
             source=(c['source_z']//self.meta['coarsening_factor'],c['source_x']//self.meta['coarsening_factor']),
-            cancelled=cancelled)
+            cancelled=cancelled,progress=progress)
 
     def grid(self):
         return dict(shape=list(self.base.shape),axis_order=['z','x'],
                     origin_blocks=self.meta.get('origin_blocks',[0,0]),dx_m=self.base.dx)
 
-    def water(self):
+    def water(self,compact=False):
         u,v=self.solver.velocity()
-        return dict(h=self.solver.h,u=u,v=v,maximum_depth=self.solver.maximum,
-                    volume=self.solver.h*self.base.dx**2,qx=self.solver.qx,qy=self.solver.qy,
-                    summary=self.solver.summary())
+        result=dict(h=self.solver.h,u=u,v=v,maximum_depth=self.solver.maximum,summary=self.solver.summary())
+        if not compact:result.update(volume=self.solver.h*self.base.dx**2,qx=self.solver.qx,qy=self.solver.qy)
+        return result
 
     def forcing(self):
         count=np.zeros(self.base.shape,np.int32)
@@ -124,10 +126,15 @@ class MapWorld:
                     boundary_inflows=self.solver.boundary_forcing()[1],
                     accumulated_m3=self.solver.external_volume_by_id)
 
-    def snapshot(self):
-        return json_safe(dict(schema='hyra-multilayer-v2',time_s=self.solver.time,grid=self.grid(),
+    def snapshot(self,array_encoder=None,compact=False):
+        result=dict(schema='hyra-multilayer-v2',time_s=self.solver.time,grid=self.grid(),
             provenance=self.meta.get('terrain_source'),config=self.config,scenario_metadata=self.meta,
-            source_hydrographs=self.base.hydrographs,M_base=self.base.snapshot(),M_water=self.water(),M_forcing=self.forcing()))
+            source_hydrographs=self.base.hydrographs,M_base=self.base.snapshot(),M_water=self.water(compact),M_forcing=self.forcing())
+        if hasattr(self.solver,'mesh_snapshot'):
+            result['M_mesh']=self.solver.mesh_snapshot(compact)
+            result['M_mesh']['origin_m']=[v*self.config['metres_per_block']-self.base.dx/2 for v in self.meta.get('origin_blocks',[0,0])]
+            result['M_mesh']['coordinate_definition']='local x_m/z_m from origin_m; parent grid origin is the first sample centre'
+        return json_safe(result,array_encoder)
 
     def arrays(self):
         result={'M_base.'+k:v for k,v in self.base.snapshot().items()}
@@ -136,6 +143,9 @@ class MapWorld:
             initial_depth=self.solver.initial,generated_initial_depth=self.generated_initial,
             baseflow_rate=self.solver.baseflow_rate).items()})
         result.update({'M_forcing.'+k:v for k,v in self.forcing().items() if isinstance(v,np.ndarray)})
+        if hasattr(self.solver,'mesh_snapshot'):
+            result.update({'M_mesh.'+k:v for k,v in self.solver.mesh_snapshot().items() if isinstance(v,np.ndarray)})
+            result['M_mesh.origin_m']=np.asarray([v*self.config['metres_per_block']-self.base.dx/2 for v in self.meta.get('origin_blocks',[0,0])])
         return result
 
     def export_zip(self):
@@ -148,19 +158,32 @@ class MapWorld:
 
 
 DATA_DICTIONARY=dict(schema='hyra-multilayer-v2',axis_order=['z','x'],
+    M_mesh=dict(schema='hyra-static-leaf-v1',parent='flat base-grid index',child='-1 coarse; 0/1 upper left/right, 2/3 lower left/right',
+        origin_m='outer-corner origin in metres; absolute centres are origin_m + (x_m,z_m)',
+        h='actual leaf depth, m',u='actual leaf +X velocity, m/s',v='actual leaf +Z velocity, m/s',
+        maximum_depth='actual leaf cumulative maximum depth, m',area_m2='actual cell area',
+        x_m='local leaf centre +X from origin_m, m',z_m='local leaf centre +Z from origin_m, m',
+        width_m='leaf square side length, m',bed='inherited parent ground elevation, m',
+        mx='leaf depth times +X velocity, m2/s',mz='leaf depth times +Z velocity, m2/s',
+        face_left='leaf index or -1 exterior',face_right='leaf index or -1 exterior',
+        face_axis='1 +X, 0 +Z',face_length_m='shared physical subface length',face_mass_flux='last RK-weighted mass flux, m2/s'),
     M_base=dict(z='ground elevation, m',n='Manning coefficient, s/m^(1/3)',solid='impermeable cell, bool',
         source_id='-1 none or hydrograph id',drain_capacity='per-cell capacity, m3/s',
         wall_x='[nz,nx+1] impermeable faces',wall_y='[nz+1,nx] impermeable faces',
-        terrain_class='integer land-cover class'),
+        terrain_class='integer land-cover class',refinement_level='0 native parent, 1 split into four leaf cells'),
     M_water=dict(h='depth, m',u='cell +x velocity, m/s',v='cell +z velocity, m/s',
         maximum_depth='maximum depth since flood t=0, m',volume='per-cell volume, m3',
-        qx='[nz,nx+1] last transported face flux, m2/s',qy='[nz+1,nx] last transported face flux, m2/s'),
+        qx='[nz,nx+1] RK-weighted transported face flux over last solver step, m2/s',
+        qy='[nz+1,nx] RK-weighted transported face flux over last solver step, m2/s'),
+    refined_projection='M_water h/mx/mz are leaf area averages; u/v from averaged momentum/depth; maximum_depth is area-averaged leaf maxima; qx/qy are face-length averages',
     M_forcing=dict(external_inflows='stable id, native position, normalized coarse cells, enabled flag and [s,m3/s] curve',
         river_crossings='native river/edge crossings; inferred inlet/outlet/uncertain; no discharge enabled automatically',
         inlet_count='count of enabled external points mapped to each cell',external_rate_m_s='equivalent supplied depth rate for cell sources and boundary inflows, m/s; boundary inflows are applied only through face fluxes',
-        boundary_inflows='instantaneous prescribed inward discharge and normal velocity by outer face; Q=width*reference_depth*velocity',
+        boundary_inflows='prescribed inward discharge with X/Z velocity and momentum_direction_xz by outer face; Q=width*reference_depth*inward_normal_velocity',
         accumulated_m3='per-point supplied volume since flood t=0; independent of daily baseflow'),
     source_hydrographs='source_id -> strictly increasing [simulation s,total m3/s], piecewise constant',
     frames=dict(fields=['depth','u','v','maximum_depth'],dtype='<f4',order='[field,z,x]',
         interpolation='linear interpolation for display only; exported frames are calculated states'),
-    solver='full SWE finite volumes, adaptive CFL, hydrostatic reconstruction; no agent or observation system')
+    mesh_frames=dict(fields=['depth','u','v','maximum_depth'],dtype='<f4',order='[field,leaf]',
+        geometry='M_mesh parent/child/area; fixed throughout a run'),
+    solver='Native square-grid SWE, limited hydrostatic reconstruction, SSP-RK2/Euler, Rusanov/KNP, adaptive CFL; split source/sinks; M_mesh fields describe legacy refined archives only')

@@ -39,7 +39,9 @@ function updateLabels() {
   output.value = input.id.endsWith('chance') ? `${Math.round(Number(input.value)*100)}%` : String(Number(input.value));
  }
  $('modeHelp').textContent = $('mode').value === 'quick' ? '快速预览只生成地形与河网。' : '完整生成耗时更长，包含实际方块与群系。';
- $('terrainModeHelp').textContent = $('terrain_mode').value === 'custom' ? '种子决定随机细节，参数决定地形倾向。' : '保留种子，最多检查附近 9 个区域；符合目标后才替换地图。修改地形参数会回到自由调整。';
+ const side=Number($('span').value);
+ $('gridHelp').textContent=`${side} × ${side} 格，共 ${(side*side).toLocaleString('zh-CN')} 格；每格 1 方块，洪水直接沿用。${side>=1024?'大地图会显著增加生成、模拟和存储开销，可先用 128 或 256 验证场景。':''}`;
+ $('terrainModeHelp').textContent = $('terrain_mode').value === 'custom' ? '种子决定随机细节，参数决定地形倾向。' : '保留种子，最多检查附近 9 个区域；同一种子与坐标会重复相同搜索。符合目标后才替换地图，修改地形参数会回到自由调整。';
 }
 function getConfig() { const o = Object.fromEntries(new FormData(form)); for (const k of Object.keys(o)) if (!['seed','mode','terrain_mode'].includes(k)) o[k] = Number(o[k]); return o; }
 function applyConfig(config) { for (const [k,v] of Object.entries(config)) if ($(k)) $(k).value = v; updateLabels(); }
@@ -56,10 +58,12 @@ async function loadMap(result) {
   next[name] = a;
  }));
  map = result; arrays = next;
+ // A new terrain enters the current workbench, rather than restoring an old run.
+ $('floodWorkbenchLink').href=`maps.html?ui=28&fresh=1&terrain_id=${encodeURIComponent(map.id)}`;
  map.blockNames = Object.fromEntries(Object.entries(map.block_ids).map(([n,i]) => [i,n]));
  map.biomeNames = Object.fromEntries(Object.entries(map.biome_ids).map(([n,i]) => [i,n]));
  const [nz,nx] = map.shape;
- $('mapInfo').textContent = `${nx} × ${nz} 网格 · 间距 ${map.step} · ${map.full ? '完整地表' : '地形预览'} · 种子 ${map.config.seed}`;
+ $('mapInfo').textContent = `${nx} × ${nz} 格 · 每格 ${map.step} 方块 · 覆盖 ${nx*map.step} × ${nz*map.step} 方块${map.step!==1?'（旧地图，重新生成可使用每方块一格）':''} · ${map.full ? '完整地表' : '地形预览'} · 种子 ${map.config.seed}`;
  const profile=map.terrain_profile;
  $('mapTitle').textContent = profile?.accepted ? `${profile.label}地图` : '当前地形';
  $('terrainProfile').textContent = profile?.accepted ? `已通过${profile.label}检查 · 陆地 ${(profile.metrics.land_fraction*100).toFixed(0)}% · 陆地起伏 ${profile.metrics.land_relief_m.toFixed(1)} m${profile.terrain_mode==='water_network'?` · 河流水面 ${(profile.metrics.wet_river_fraction*100).toFixed(1)}%${Number.isFinite(profile.metrics.river_length_density_km_per_km2)?` · 河道密度 ${profile.metrics.river_length_density_km_per_km2.toFixed(2)} km/km²`:''}`:''} · 区域起点 (${map.origin.join(', ')}) · 检查了 ${profile.candidates_checked} 个区域` : '';

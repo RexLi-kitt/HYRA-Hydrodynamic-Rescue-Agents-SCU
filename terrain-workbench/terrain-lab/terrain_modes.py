@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-VERSION = 'hyra-terrain-modes-v2'
+VERSION = 'hyra-terrain-modes-v3'
 PROFILES = {
     'water_network': dict(label='稠密水网', parameters=dict(vertical_scale=.55,
         continent_scale=4000, region_size=800, plains_weight=10, hills_weight=.5,
@@ -101,19 +101,34 @@ def assess_arrays(bed, types, water, terrain_ids, sea_level, step):
         mountain_land_fraction=float(mountain[land].mean()) if elevations.size else 0)
 
 
-def verdict(mode, metrics):
-    if mode == 'custom': return True
+def rejection_reasons(mode, metrics):
+    """Report the same measurable constraints used for acceptance."""
+    if mode == 'custom': return []
     m = metrics
     if mode == 'water_network':
-        return (m['land_fraction'] >= .55 and m['river_length_density_km_per_km2'] >= .8
-                and m['river_tile_coverage'] >= .625 and m['river_boundary_crossings'] >= 4
-                and m['land_relief_m'] <= 80)
-    if mode == 'mountains':
-        return (m['land_fraction'] >= .7 and m['mountain_land_fraction'] >= .25
-                and m['land_relief_m'] >= 80 and m['land_p90_height_m'] >= 140)
-    if mode == 'plains':
-        return m['land_fraction'] >= .7 and m['land_relief_m'] <= 45 and m['land_p90_slope'] <= .15
-    raise ValueError('请选择地形类型')
+        # A branching channel may enter/leave a crop at three boundary points.
+        # Four crossings excluded these crops despite broad, dense wet channels.
+        rules = [(m['land_fraction'] >= .55, f'陆地 {m["land_fraction"]:.0%}，需至少55%'),
+                 (m['river_length_density_km_per_km2'] >= .8, f'河道密度 {m["river_length_density_km_per_km2"]:.2f} km/km²，需至少0.8'),
+                 (m['river_tile_coverage'] >= .625, f'河道覆盖 {m["river_tile_coverage"]*16:.0f}/16 分区，需至少10/16'),
+                 (m['river_boundary_crossings'] >= 3, f'河道边界交点 {m["river_boundary_crossings"]} 处，需至少3处'),
+                 (m['land_relief_m'] <= 80, f'陆地起伏 {m["land_relief_m"]:.1f} m，需不超过80 m')]
+    elif mode == 'mountains':
+        rules = [(m['land_fraction'] >= .7, f'陆地 {m["land_fraction"]:.0%}，需至少70%'),
+                 (m['mountain_land_fraction'] >= .25, f'山地占陆地 {m["mountain_land_fraction"]:.0%}，需至少25%'),
+                 (m['land_relief_m'] >= 80, f'陆地起伏 {m["land_relief_m"]:.1f} m，需至少80 m'),
+                 (m['land_p90_height_m'] >= 140, f'P90高程 {m["land_p90_height_m"]:.1f} m，需至少140 m')]
+    elif mode == 'plains':
+        rules = [(m['land_fraction'] >= .7, f'陆地 {m["land_fraction"]:.0%}，需至少70%'),
+                 (m['land_relief_m'] <= 45, f'陆地起伏 {m["land_relief_m"]:.1f} m，需不超过45 m'),
+                 (m['land_p90_slope'] <= .15, f'P90坡度 {m["land_p90_slope"]:.3f}，需不超过0.15')]
+    else:
+        raise ValueError('请选择地形类型')
+    return [description for passed, description in rules if not passed]
+
+
+def verdict(mode, metrics):
+    return not rejection_reasons(mode, metrics)
 
 
 def assess(folder, mode):
@@ -133,4 +148,5 @@ def assess(folder, mode):
                           fields['riverZone']['values'],grid['sea_level_blocks'])
     metrics = assess_arrays(bed,types,water,ids,grid['sea_level_blocks'],grid['step_blocks'])
     return dict(schema=VERSION, terrain_mode=mode, label=PROFILES[mode]['label'],
-                accepted=bool(verdict(mode,metrics)), full_surface=surface.is_file(), metrics=metrics)
+                accepted=bool(verdict(mode,metrics)), rejection_reasons=rejection_reasons(mode,metrics),
+                full_surface=surface.is_file(), metrics=metrics)

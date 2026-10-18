@@ -8,7 +8,58 @@ from pathlib import Path
 import hashlib,json,math,re,uuid
 import numpy as np
 
-SCHEMA='hyra-river-inlets-v2'
+SCHEMA='hyra-river-inlets-v3'
+INWARD={'west':(1.,0.),'east':(-1.,0.),'north':(0.,1.),'south':(0.,-1.)}
+
+
+def channel_tangent(river,cells,edge):
+    """Fit local channel cross-section centres, oriented towards the map interior."""
+    nz,nx=river.shape;normal=np.array(INWARD[edge]);transverse=np.array([-normal[1],normal[0]])
+    radius=min(40,max(12,min(nz,nx)//4));seen=set(map(tuple,cells))
+    queue=deque((z,x,0) for z,x in seen)
+    while queue:
+        z,x,d=queue.popleft()
+        if d>=radius:continue
+        for dz in (-1,0,1):
+            for dx in (-1,0,1):
+                zz,xx=z+dz,x+dx
+                if 0<=zz<nz and 0<=xx<nx and (zz,xx) not in seen and river[zz,xx]:
+                    seen.add((zz,xx));queue.append((zz,xx,d+1))
+    distance={'west':lambda z,x:x,'east':lambda z,x:nx-1-x,
+              'north':lambda z,x:z,'south':lambda z,x:nz-1-z}[edge]
+    sections={}
+    for z,x in seen:sections.setdefault(distance(z,x),[]).append(float(np.dot([x,z],transverse)))
+    positions=np.array(sorted(sections),float)
+    vector=normal;method='boundary_normal_fallback';confidence=0.;residual=0.
+    if len(positions)>=4 and positions[-1]-positions[0]>=3:
+        centres=np.array([np.median(sections[int(d)]) for d in positions])
+        centred=positions-positions.mean()
+        slope=float(np.dot(centred,centres-centres.mean())/np.dot(centred,centred))
+        residual=float(np.sqrt(np.mean((centres-(centres.mean()+slope*centred))**2)))
+        if residual<=max(2.,len(cells)/3):
+            vector=normal+slope*transverse;vector/=np.linalg.norm(vector)
+            method='local_channel_cross_section_fit';confidence=float(1/(1+residual))
+    return dict(vector_xz=vector.tolist(),angle_deg=float(np.degrees(np.arctan2(vector[1],vector[0]))%360),
+        method=method,confidence=confidence,section_count=len(positions),fit_residual_blocks=residual)
+
+
+def face_direction(port,edge,mode,angle=0.):
+    normal=np.array(INWARD[edge]);method=mode
+    if mode=='angle':
+        vector=np.array([math.cos(math.radians(angle)),math.sin(math.radians(angle))])
+    elif mode=='auto':
+        inferred=port.get('inward_tangent',{})
+        vector=np.asarray(inferred.get('vector_xz',normal),float)
+        method=inferred.get('method','boundary_normal_fallback')
+    else:vector=normal.copy()
+    norm=float(np.linalg.norm(vector))
+    if vector.shape!=(2,) or not np.isfinite(vector).all() or norm<1e-12:
+        raise ValueError('河口方向向量无效')
+    vector=vector/norm;projection=float(np.dot(vector,normal))
+    if projection<.15:
+        if mode=='angle':raise ValueError(f'自定义方向须指向图内，并与{edge}边界法线夹角小于约81°')
+        vector=normal;method='boundary_normal_fallback'
+    return vector.tolist(),method
 
 def water_types(types,bed,water,zones,terrain_ids,zone_ids,sea_level):
     """Recover sea cells overwritten by the generator's river influence.
@@ -53,6 +104,7 @@ def detect(river,bed,water,origin=(0,0),step=1):
         elif run:groups.append(run);run=[]
     if run:groups.append(run)
     result=[]
+    wet=river&np.isfinite(water)&(water>bed+.01)
     for group in groups:
         cells=sorted({(z,x) for _,_,z,x in group});edge=Counter(f[0] for f in group).most_common(1)[0][0]
         distance={'north':lambda z,x:z,'south':lambda z,x:nz-1-z,
@@ -78,11 +130,14 @@ def detect(river,bed,water,origin=(0,0),step=1):
         central=group[len(group)//3:max(len(group)//3+1,2*len(group)//3)]
         _,_,z,x=min(central,key=lambda f:(bed[f[2],f[3]],f[2],f[3]))
         digest=hashlib.sha256(json.dumps(sorted(group),separators=(',',':')).encode()).hexdigest()[:10]
+        wet_cells=[c for c in cells if wet[c]]
+        tangent=channel_tangent(wet if wet_cells else river,wet_cells or cells,edge)
         result.append(dict(id='river-'+digest,kind='river',role=role,edge=edge,
             label=f'河道交点 {len(result)+1}',x=int(x),z=int(z),native_cells=[list(c) for c in cells],
             faces=[dict(edge=e,offset=int(o),z=int(zz),x=int(xx)) for e,o,zz,xx in group],
             width_blocks=len(group)*step,world_blocks=[origin[0]+x*step,origin[1]+z*step],
             inward_stage_drop_blocks=drop,direction_basis=basis,direction_inferred=True,
+            inward_tangent=tangent,
             enabled=False,hydrograph=[[0,50],[120,0]]))
     return result
 
@@ -117,7 +172,7 @@ def annotate(root,terrain):
         sea_reclassified_cells=int(changed.sum()),
         terrain_field=dict(url=f'/{terrain["id"]}/hydrology-terrain.i32',dtype='<i4',
             values=terrain['terrain_ids'],file='hydrology-terrain.i32'),
-        direction_method='native river boundary intersection; local inward stage/bed gradient; uncalibrated prior',
+        direction_method='native river boundary intersection; local stage/bed gradient for role; local channel cross-section fit for inward tangent; uncalibrated prior',
         message='已标注河道边界交点，流向为地形推断，可手动确认' if points else
             '河流未穿过地图边界，可手动设置入水点' if river.any() else '当前地图没有河流，可手动设置入水点')
     tmp=target.with_suffix('.json.'+uuid.uuid4().hex+'.tmp');tmp.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8');tmp.replace(target)
@@ -148,6 +203,12 @@ def configure(world,crossings,settings,native_shape):
         if not isinstance(enabled,bool):raise ValueError('入水点启用标记需要布尔值')
         kind=item.get('kind','manual')
         if kind=='river':
+            direction_mode=item.get('inlet_direction_mode','auto')
+            if direction_mode not in ('auto','normal','angle'):raise ValueError('请选择沿河道、垂直边界或自定义来水方向')
+            angle=item.get('inlet_angle_deg',0.)
+            if isinstance(angle,bool) or not isinstance(angle,(int,float)) or not math.isfinite(angle):
+                raise ValueError('入流方位角需要是有限数值')
+            angle=float(angle)%360
             if sid not in available:raise ValueError('河道入口已变化，请重新读取地图')
             p=available[sid]
             cells=p['native_cells'];geometry=dict(p)
@@ -180,9 +241,12 @@ def configure(world,crossings,settings,native_shape):
                 wall={'west':world.base.wall_x[z,0],'east':world.base.wall_x[z,nx],
                       'north':world.base.wall_y[0,x],'south':world.base.wall_y[nz,x]}[edge]
                 if enabled and (world.base.solid[z,x] or wall):raise ValueError('河口边界被建筑或阻水边封闭，请先移除阻挡')
+                direction,method=face_direction(p,edge,direction_mode,angle)
                 boundary_faces.append(dict(edge=edge,offset=int(offset),z=int(z),x=int(x),
+                    momentum_direction_xz=direction,direction_method=method,
                     width_m=count*world.solver.dx/factor,weight=count/sum(counts.values())))
             entry.update(delivery='boundary_discharge_with_momentum',inlet_velocity_m_s=float(velocity),
+                inlet_direction_mode=direction_mode,inlet_angle_deg=angle,
                 boundary_faces=boundary_faces,velocity_method='specified' if velocity else 'local_depth_with_critical_floor',
                 zero_discharge='no_exchange_on_configured_inlet_fraction')
             face_cells=Counter()

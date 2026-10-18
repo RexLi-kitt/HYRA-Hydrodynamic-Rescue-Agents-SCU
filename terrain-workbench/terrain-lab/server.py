@@ -28,7 +28,7 @@ DEFAULTS.update(plains_weight=2.0, hills_weight=2.0, mountains_weight=2.5)
 DEFAULTS['terrain_mode'] = 'custom'
 SPECS = {
     'origin_x': (-30000000, 30000000, int), 'origin_z': (-30000000, 30000000, int),
-    'span': (512, 4096, int), 'vertical_scale': (0.25, 2.0, float),
+    'span': (32, 4096, int), 'vertical_scale': (0.25, 2.0, float),
     'continent_scale': (500, 6000, int), 'region_size': (200, 2400, int),
     'river_count': (0, 30, int), 'main_width': (1, 20, int), 'branch_width': (1, 20, int),
     'river_depth': (1, 10, int), 'lake_chance': (0, 1, float), 'wetland_chance': (0, 1, float),
@@ -102,7 +102,6 @@ def settings(data):
         if not math.isfinite(value) or not low <= value <= high or cast is int and value != int(value):
             raise ValueError(f'{key} 超出允许范围')
         result[key] = cast(value)
-    if result['span'] not in (512, 1024, 2048, 4096): raise ValueError('请选择预设地图范围')
     seed = str(data.get('seed', result['seed'])).strip()
     if not re.fullmatch(r'-?\d{1,19}', seed) or not -(1 << 63) <= int(seed) < (1 << 63):
         raise ValueError('种子需要是 64 位整数')
@@ -110,7 +109,7 @@ def settings(data):
     result['mode'] = data.get('mode', 'quick')
     if result['mode'] not in ('quick', 'surface'): raise ValueError('请选择生成方式')
     if result['mode'] == 'surface' and result['span'] > 1024:
-        raise ValueError('完整地表请使用 512 或 1024 的地图范围；更大范围可先快速预览')
+        raise ValueError('完整地表边长不能超过1024方块；更大范围可使用快速预览')
     return result
 
 def preset_for(config):
@@ -159,16 +158,25 @@ def describe(relative):
         result['river_inlets']=dict(crossings=[],message='安装 NumPy 后可识别河道入口')
     return result
 
+def generation_request(config):
+    """One original terrain sample per block, shared with the flood grid."""
+    request = dict(seed=config['seed'], preset_file='preset.json', natural_surface=True,
+        generate_structures=False, unbounded_height=True,
+        origin_x=config['origin_x'], origin_z=config['origin_z'],
+        nx=config['span'], nz=config['span'], step_blocks=1,
+        fields=['height','terrain','riverZone','riverMask','riverWaterLevel','temperature','moisture'],
+        output='raw', export_datapack=config['mode'] == 'surface')
+    if config['mode'] == 'surface':
+        request['surface'] = {key: request[key] for key in ('origin_x', 'origin_z', 'nx', 'nz', 'step_blocks')}
+    return request
+
+
 def generate(jobid, config):
     directory = ROOT / 'generated' / jobid
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'config.json').write_text(json.dumps(config, indent=2))
     (directory / 'preset.json').write_text(json.dumps(preset_for(config), indent=2))
-    request = dict(seed=config['seed'], preset_file='preset.json', natural_surface=True, generate_structures=False, unbounded_height=True,
-        origin_x=config['origin_x'], origin_z=config['origin_z'], nx=256, nz=256,
-        step_blocks=config['span'] // 256, output='raw', export_datapack=config['mode'] == 'surface')
-    if config['mode'] == 'surface':
-        request['surface'] = {key: request[key] for key in ('origin_x', 'origin_z', 'nx', 'nz', 'step_blocks')}
+    request = generation_request(config)
     path = directory / 'request.json'; path.write_text(json.dumps(request, indent=2))
     job = JOBS[jobid]
     job.update(state='running', progress=0, progress_known=False, stage='dependencies',
@@ -267,7 +275,10 @@ def generate(jobid, config):
                 (directory/'terrain-profile.json').write_text(json.dumps(check,indent=2))
                 break
         else:
-            raise RuntimeError(f'已检查 {len(origins)} 个区域，未找到符合“{PROFILES[target]["label"]}”标准的地图；原地图保留，请更换种子或扩大地图范围')
+            closest=min(attempts,key=lambda a:len(a.get('rejection_reasons',[])))
+            reasons='；'.join(closest.get('rejection_reasons',[]))
+            detail=f'。最接近的区域 {tuple(closest["origin"])} 未达标项：{reasons}' if reasons else ''
+            raise RuntimeError(f'已检查 {len(origins)} 个区域，未找到符合“{PROFILES[target]["label"]}”标准的地图{detail}。原地图保留；相同种子与坐标会重复相同搜索，请更换种子或区域起点')
         result = describe(f'generated/{jobid}/raw')
         if config['mode'] == 'surface' and not result['full']: raise RuntimeError('地表生成尚未完成')
         if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
@@ -332,7 +343,7 @@ class Handler(SimpleHTTPRequestHandler):
                 if self.path=='/api/maps':
                     world=map_sessions.create(ROOT,current_terrain(),data)
                     sid='maps-'+uuid.uuid4().hex[:12]
-                    entry=dict(world=world,scene=dict(world.snapshot(),scenario_config=data),lock=threading.Lock(),
+                    entry=dict(world=world,scene=dict(map_sessions.browser_scene(ROOT,sid,world),scenario_config=data),lock=threading.Lock(),
                         process=dict(state='ready',progress=0,message='地图已建立，点击开始模拟',frames=[]))
                     with LOCK:
                         if len(MAP_SESSIONS)>=3:

@@ -5,30 +5,56 @@ import math
 from pathlib import Path
 import zipfile
 
-DEFAULTS = dict(metres_per_block=1.0, resolution=128, duration_s=600.0,
+DEFAULTS = dict(metres_per_block=1.0, duration_s=600.0,
                 rain_mm_h=80.0, rain_duration_s=600.0, infiltration_mm_h=0.0,
                 inflow_m3_s=0.0, source_x=128, source_z=128,
                 manning=0.035, boundary='ocean', initial_water=True, frames=31,
-                baseflow=True, baseflow_m3_s=5.0, warmup_s=600.0)
+                baseflow=True, baseflow_m3_s=5.0, warmup_s=600.0,
+                refine_inland_water=False, refinement_buffer=0, grid_factor=1,
+                flux_method='rusanov', spatial_order=2, time_integrator='rk2',
+                low_froude=0, cfl=.4, limiter_theta=1.5, velocity_depth=1e-6,
+                max_timestep=1., max_steps=500000)
+
+NUMERICAL_KEYS = ('flux_method', 'spatial_order', 'time_integrator', 'low_froude',
+                  'cfl', 'limiter_theta', 'velocity_depth', 'max_timestep', 'max_steps')
+
+
+def numerical_options(config):
+    return {key: config.get(key, DEFAULTS[key]) for key in NUMERICAL_KEYS}
 
 
 def settings(data, shape):
     if not isinstance(data, dict): raise ValueError('洪水参数格式不正确')
     config = dict(DEFAULTS)
+    config['source_x']=min(config['source_x'],shape[1]-1)
+    config['source_z']=min(config['source_z'],shape[0]-1)
     specs = dict(metres_per_block=(.1, 100), duration_s=(1, 3600), rain_mm_h=(0, 1000),
                  rain_duration_s=(0, 3600), infiltration_mm_h=(0, 500), inflow_m3_s=(0, 10000),
                  manning=(.01, .2), source_x=(0, shape[1]-1), source_z=(0, shape[0]-1),
-                 resolution=(32, 256), frames=(2, 61), baseflow_m3_s=(0, 10000), warmup_s=(0, 3600))
+                 frames=(2, 61), baseflow_m3_s=(0, 10000), warmup_s=(0, 3600),
+                 refinement_buffer=(0,4),
+                 spatial_order=(1, 2), low_froude=(0, 2), cfl=(.0001, .45),
+                 limiter_theta=(1, 2), velocity_depth=(1e-8, .01),
+                 max_timestep=(1e-5, 60), max_steps=(1, 5000000))
     for name, (low, high) in specs.items():
+        if name in NUMERICAL_KEYS and isinstance(data.get(name), bool):
+            raise ValueError(f'{name} 需要数值，不能是布尔值')
         try: value = float(data.get(name, config[name]))
         except (ValueError, TypeError): raise ValueError(f'{name} 需要是数值')
         if not math.isfinite(value) or not low <= value <= high:
             raise ValueError(f'{name} 超出允许范围')
-        if name in ('source_x', 'source_z', 'resolution', 'frames'):
+        if name in ('source_x', 'source_z', 'frames', 'spatial_order', 'low_froude', 'max_steps','refinement_buffer'):
             if value != int(value): raise ValueError(f'{name} 需要是整数')
             value = int(value)
         config[name] = value
-    if config['resolution'] not in (32, 64, 128, 256): raise ValueError('请选择计算分辨率')
+    # Legacy resolution settings never resample a newly constructed scene.
+    config['resolution'] = max(shape)
+    factor=data.get('grid_factor',1)
+    if isinstance(factor,bool) or not isinstance(factor,int) or factor not in (1,2,4):
+        raise ValueError('计算格合并倍数需要为1、2或4')
+    if any(n%factor or n//factor<2 for n in shape):
+        raise ValueError('地图尺寸必须能被计算格合并倍数整除，且至少保留2×2格')
+    config['grid_factor']=factor
     if config['rain_duration_s'] > config['duration_s']: raise ValueError('降雨持续时间不能超过模拟时间')
     config['boundary'] = data.get('boundary', config['boundary'])
     if config['boundary'] not in ('ocean', 'open', 'closed'): raise ValueError('请选择边界方式')
@@ -36,6 +62,15 @@ def settings(data, shape):
     if not isinstance(config['initial_water'], bool): raise ValueError('初始水体参数格式不正确')
     config['baseflow'] = data.get('baseflow', True)
     if not isinstance(config['baseflow'], bool): raise ValueError('基流参数格式不正确')
+    config['refine_inland_water']=data.get('refine_inland_water',False)
+    if not isinstance(config['refine_inland_water'],bool):raise ValueError('内陆水域加密开关需要布尔值')
+    if isinstance(data.get('refinement_buffer'),bool):raise ValueError('加密过渡带需要整数')
+    # Accept legacy configuration files, but all new runs use native cells.
+    config['refine_inland_water']=False
+    config['refinement_buffer']=0
+    for name, allowed in (('flux_method', ('rusanov', 'knp')), ('time_integrator', ('euler', 'rk2'))):
+        config[name] = data.get(name, config[name])
+        if config[name] not in allowed: raise ValueError(f'{name} 参数无效')
     return config
 
 
@@ -80,25 +115,27 @@ def prepare(root, terrain, config):
             depth = np.maximum(depth, np.maximum(0, terrain['sea_level']-bed))
             if not np.isfinite(depth).all(): raise ValueError('快速预览初始水体数据不完整')
     else: depth = np.zeros_like(bed)
-    factor = max(1, math.ceil(max(nz, nx)/config['resolution']))
-    if nz % factor or nx % factor: raise ValueError('当前网格无法均匀降采样，请使用原始分辨率')
-    def coarsen(a): return a.reshape(nz//factor, factor, nx//factor, factor).mean(axis=(1, 3))
+    factor = config.get('grid_factor',1)
+    if factor>1:
+        from grid_coarsening import blocks
+        bed,depth=blocks(bed,factor),blocks(depth,factor)
     unit = config['metres_per_block']
-    bed, depth = coarsen(bed)*unit, coarsen(depth)*unit
-    dx = terrain['step']*factor*unit
-    # Group actual outer faces, not whole coarse cells: an ocean pixel inside a
-    # coastal cell must not accidentally open that cell's land-facing boundary.
-    sea_edges = {name: a.reshape(-1, factor).any(axis=1) for name, a in
+    bed, depth = bed*unit, depth*unit
+    dx = terrain['step']*unit*factor
+    sea_edges = {name: a.copy() for name, a in
                  (('west', ocean[:, 0]), ('east', ocean[:, -1]),
                   ('north', ocean[0, :]), ('south', ocean[-1, :]))}
+    if factor>1:
+        sea_edges={name:mask.reshape(-1,factor).any(axis=1) for name,mask in sea_edges.items()}
     sea_level = terrain['sea_level']*unit
     solver = FloodSolver(bed, depth, dx, boundary=config['boundary'], manning=config['manning'],
-                         sea_level=sea_level, sea_edges=sea_edges)
+                         sea_level=sea_level, sea_edges=sea_edges, **numerical_options(config))
     from river_baseflow import plan
     groups, sources = plan(river, river_water, native_bed, factor,
                            config['baseflow_m3_s'] if config['baseflow'] else 0)
     solver.set_baseflow(sources)
-    meta = dict(schema='hyra-flood-v1', solver='2D SWE / first-order Rusanov / hydrostatic reconstruction',
+    meta = dict(schema='hyra-flood-v1', solver='Cartesian 2D SWE / MUSCL / selectable Rusanov or KNP / SSP-RK2',
+                numerics=solver.numerical_config(),
                 shape=list(bed.shape), axis_order=['z', 'x'], dx_m=dx, coarsening_factor=factor,
                 origin_blocks=[v+(factor-1)*terrain['step']/2 for v in terrain['origin']],
                 step_blocks=terrain['step']*factor, terrain_id=terrain['id'], seed=terrain['config']['seed'],
@@ -107,6 +144,9 @@ def prepare(root, terrain, config):
                 frame_fields=['depth', 'u', 'v', 'maximum_depth'], frame_dtype='<f4',
                 wet_threshold_m=.01, frames=[])
     meta['terrain_mode'] = terrain['config'].get('terrain_mode', 'custom')
+    meta['grid_aggregation']=dict(factor=factor,native_shape=list(terrain['shape']),
+        bed='area_mean',initial_depth='area_mean_preserving_volume',
+        sea_boundary='coarse_face_touches_native_ocean')
     if 'terrain_profile' in terrain: meta['terrain_profile'] = terrain['terrain_profile']
     meta['boundary_conditions'] = dict(mode=config['boundary'], sea_level_m=sea_level,
         sea_edges={name: mask.tolist() for name, mask in solver.sea_edges.items()},

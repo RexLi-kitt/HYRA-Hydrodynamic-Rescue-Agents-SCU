@@ -40,7 +40,13 @@ class BaseflowTests(unittest.TestCase):
         np.testing.assert_allclose(sim.h,initial,atol=1e-3)
         self.assertGreater(sim.h[3:5,2:].min(),.1)
         self.assertGreater(sim.velocity()[0][3:5,2:].min(),.1)
-        self.assertAlmostEqual(sim.balance['outflow_m3'],90,places=5)
+        # The warm-up criterion allows a small storage drift. Test actual
+        # conservation instead of assuming exactly zero storage change after
+        # changing the integration scheme or the output-time step sequence.
+        storage_change = float((sim.h-initial).sum()*sim.dx**2)
+        self.assertAlmostEqual(sim.balance['outflow_m3']+storage_change,90,places=8)
+        storage_tolerance = int((initial>0).sum())*sim.dx**2*1e-3
+        self.assertLess(abs(sim.balance['outflow_m3']-90),storage_tolerance)
         self.assertAlmostEqual(sim.balance['baseflow_m3'],90,places=8)
         self.assertLess(abs(sim.summary()['balance']['residual_m3']),1e-9)
         # Flood accounting starts from the warmed river, not the generator pool.

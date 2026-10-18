@@ -10,6 +10,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import generation_process
+import server
 
 spec = importlib.util.spec_from_file_location('generator_runner', ROOT.parent / 'freeterraforged-reproduction/run.py')
 runner = importlib.util.module_from_spec(spec)
@@ -17,6 +18,18 @@ spec.loader.exec_module(runner)
 
 
 class GenerationTests(unittest.TestCase):
+    def test_one_block_one_cell_for_every_supported_side_including_custom_sizes(self):
+        for side in (32,128,257,512,1024,2048,4096):
+            cfg=server.settings(dict(span=side))
+            request=server.generation_request(cfg)
+            self.assertEqual((request['nx'],request['nz'],request['step_blocks']),(side,side,1))
+            self.assertIn('height',request['fields'])
+        for side in (31,4097,256.5):
+            with self.assertRaises(ValueError):server.settings(dict(span=side))
+        cfg=server.settings(dict(span=128,mode='surface'))
+        self.assertEqual(server.generation_request(cfg)['surface'],dict(origin_x=512,origin_z=1536,nx=128,nz=128,step_blocks=1))
+        with self.assertRaises(ValueError):server.settings(dict(span=2048,mode='surface'))
+
     def supervised(self, script, **options):
         with tempfile.TemporaryDirectory() as folder:
             chunks = []

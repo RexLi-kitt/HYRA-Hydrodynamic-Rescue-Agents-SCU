@@ -25,7 +25,8 @@
     <label class="slider">湿地概率 <output for="wetland_chance"></output><input id="wetland_chance" name="wetland_chance" type="range" min="0" max="1" step="0.05" value="0.85"></label>
     <details><summary>地图范围与更多参数</summary>
       <div class="pair"><label>起点 X<input id="origin_x" name="origin_x" type="number" value="512" min="-30000000" max="30000000"></label><label>起点 Z<input id="origin_z" name="origin_z" type="number" value="1536" min="-30000000" max="30000000"></label></div>
-      <label class="field">地图边长<select id="span" name="span"><option value="512">512 方块单位</option><option value="1024" selected>1024 方块单位</option><option value="2048">2048 方块单位</option><option value="4096">4096 方块单位</option></select></label>
+      <label class="field">地图边长（方块，每方块一格）<input id="span" name="span" type="number" min="32" max="4096" step="1" value="1024" required></label>
+      <p id="gridHelp" class="terrain-help">1024 × 1024 格，每格 1 方块；洪水直接使用同一网格。</p>
       <label class="slider">河床深度 <output for="river_depth"></output><input id="river_depth" name="river_depth" type="range" min="1" max="10" step="1" value="7"></label>
       <label class="slider">地貌区域尺度 <output for="region_size"></output><input id="region_size" name="region_size" type="range" min="200" max="2400" step="100" value="800"></label>
       <label class="slider">平原权重 <output for="plains_weight"></output><input id="plains_weight" name="plains_weight" type="range" min="0" max="10" step="0.5" value="2"></label>
@@ -40,7 +41,7 @@
   </form>
 </aside>
 <section class="workspace">
-  <div class="map-bar"><div><h2 id="mapTitle">水系丰富的地图</h2><p id="mapInfo">正在读取地图…</p></div><div class="map-actions"><a class="elevation-link" href="maps.html">多层地图与洪水 ↗</a><a class="elevation-link" href="elevation.html">高程可视化 ↗</a><button id="exportPng" type="button">图片预览</button></div></div>
+  <div class="map-bar"><div><h2 id="mapTitle">水系丰富的地图</h2><p id="mapInfo">正在读取地图…</p></div><div class="map-actions"><a id="floodWorkbenchLink" class="elevation-link" href="maps.html?ui=28&amp;fresh=1">洪水工作台 ↗</a><a class="elevation-link" href="elevation.html">高程可视化 ↗</a><button id="exportPng" type="button">图片预览</button></div></div>
   <nav aria-label="地图图层" class="layers"><button class="active" data-layer="height" aria-pressed="true">地形高程</button><button data-layer="water" aria-pressed="false">水系</button><button data-layer="material" aria-pressed="false">地表类型</button><button data-layer="biome" aria-pressed="false">群系</button></nav>
   <div class="map-wrap"><canvas id="map" width="768" height="768" tabindex="0" role="img" aria-label="二维地形网格图，可点击网格查看其高程、方块与群系">二维地图</canvas><div id="loading" class="loading" hidden><span class="spinner"></span><p id="phase">正在生成…</p><progress id="progress" max="100" value="0"></progress><span id="elapsed"></span><div class="generation-actions"><button id="cancelGenerate" type="button">取消生成</button><a id="generationLog" target="_blank" rel="noopener" hidden>查看生成记录 ↗</a></div></div></div>
   <div id="legend" class="legend"></div>
@@ -52,5 +53,5 @@
 </section>
 </main>
 <dialog id="imagePreview"><div class="preview-title"><h2 id="imageTitle">当前地图</h2><button id="closePreview" type="button" aria-label="关闭图片预览">×</button></div><img id="previewImage" alt="当前地图图层"><p>可右键图片另存为。</p></dialog>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=7"></script>
 </body></html>

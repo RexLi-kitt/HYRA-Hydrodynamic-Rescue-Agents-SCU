@@ -123,7 +123,7 @@ class PhysicsTests(unittest.TestCase):
 
 
 class AdapterTests(unittest.TestCase):
-    def test_coarse_sea_faces_use_actual_map_edge_and_convert_stage(self):
+    def test_native_sea_faces_use_actual_map_edge_and_convert_stage(self):
         # Ocean inside a coarse corner must not open its north face; a lake
         # below sea level must not be mistaken for an external ocean either.
         with tempfile.TemporaryDirectory(dir=ROOT / '.runtime') as folder:
@@ -143,11 +143,13 @@ class AdapterTests(unittest.TestCase):
                                             source_x=0, source_z=0), shape)
             sim, meta = flood_run.prepare(root, terrain, config)
             self.assertEqual(meta['boundary_conditions']['sea_face_count'], 1)
-            self.assertTrue(sim.sea_edges['west'][0])
+            self.assertTrue(sim.sea_edges['west'][3])
             self.assertFalse(sim.sea_edges['north'].any())
             self.assertEqual(sim.sea_level, 0)
             self.assertEqual(sim.h[0,0], 4)
-            self.assertEqual(sim.dx, 8)
+            self.assertEqual(sim.dx, 2)
+            self.assertEqual(sim.h.shape,tuple(shape))
+            self.assertEqual(meta['coarsening_factor'],1)
             # Full export uses actual ground and water but keeps ocean identity.
             terrain['full'] = True; terrain['sea_level'] = 3
             fields['ground_height'] = fields['height']
@@ -156,14 +158,28 @@ class AdapterTests(unittest.TestCase):
             self.assertEqual(sim.sea_level, 6)
             self.assertEqual(meta['boundary_conditions']['sea_face_count'], 1)
 
-    def test_example_coarsening_preserves_volume_and_si_conversion(self):
+    def test_legacy_resolution_does_not_resample_and_si_conversion_is_preserved(self):
         terrain = server.describe('example/raw')
         full, _ = flood_run.prepare(ROOT, terrain, flood_run.settings(dict(resolution=256), terrain['shape']))
-        coarse, meta = flood_run.prepare(ROOT, terrain, flood_run.settings(dict(resolution=64, metres_per_block=2), terrain['shape']))
-        self.assertEqual(meta['shape'], [64, 64])
-        self.assertEqual(meta['dx_m'], 32)
-        self.assertAlmostEqual(coarse.balance['initial_m3'], 8*full.balance['initial_m3'])
-        np.testing.assert_allclose(coarse.bed, full.bed.reshape(64,4,64,4).mean(axis=(1,3))*2)
+        native, meta = flood_run.prepare(ROOT, terrain, flood_run.settings(dict(resolution=64, metres_per_block=2), terrain['shape']))
+        self.assertEqual(meta['shape'], terrain['shape'])
+        self.assertEqual(meta['dx_m'], terrain['step']*2)
+        self.assertAlmostEqual(native.balance['initial_m3'], 8*full.balance['initial_m3'])
+        np.testing.assert_array_equal(native.bed, full.bed*2)
+
+    def test_rectangular_non_power_of_two_native_grid_is_preserved(self):
+        with tempfile.TemporaryDirectory(dir=ROOT/'.runtime') as tmp:
+            root=Path(tmp);shape=[33,47];bed=np.arange(np.prod(shape),dtype='<f4').reshape(shape)/100
+            arrays=dict(height=bed,terrain=np.ones(shape,dtype='<i4'),riverWaterLevel=bed)
+            fields={}
+            for name,a in arrays.items():
+                a.tofile(root/name);fields[name]=dict(url='/'+name,dtype=a.dtype.str)
+            terrain=dict(shape=shape,fields=fields,full=False,scale=1,sea_level=-1,
+                terrain_ids={'1':'plains'},step=1,origin=[7,-4],id='native',config=dict(seed='1'))
+            config=flood_run.settings(dict(resolution=32,source_x=0,source_z=0,baseflow=False),shape)
+            sim,meta=flood_run.prepare(root,terrain,config)
+            np.testing.assert_array_equal(sim.bed,bed)
+            self.assertEqual(sim.dx,1);self.assertEqual(meta['origin_blocks'],[7,-4])
 
     def test_invalid_scenarios_are_rejected(self):
         for values in (dict(rain_mm_h=float('nan')), dict(source_x=256), dict(source_x=1.2),

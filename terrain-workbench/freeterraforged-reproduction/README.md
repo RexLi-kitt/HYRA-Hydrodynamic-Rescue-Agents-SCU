@@ -53,6 +53,8 @@ python3 run.py verify-source
 
 坐标与间距采用 Minecraft 方块单位；第 `row, col` 个采样点为 `(origin_x + col × step_blocks, origin_z + row × step_blocks)`。算法先按原版 tile 生成与过滤，再采样；改变输出网格间距不会改变原版侵蚀使用的空间尺度。
 
+可选 `fields` 数组指定导出的原版Cell字段名，例如 `["height","terrain","riverWaterLevel"]`；不指定时保留全部字段。工作台固定 `step_blocks=1`，并令 `nx=nz=地图边长`，只导出显示和洪水需要的7个字段。导出器按tile窗口遍历采样点，避免为每个格子保存额外的装箱索引。
+
 种子使用字符串保存，保留完整 64 位整数精度。输出路径相对于请求文件所在目录。
 
 预设名称：`ftf-default`、`modern-default-with-rivers`、`legacy-default`、`legacy-vanillaish`、`legacy-beautiful`、`legacy-lite`、`legacy-huge-biomes`、`community-1`。

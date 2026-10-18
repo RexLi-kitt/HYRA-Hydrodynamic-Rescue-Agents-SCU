@@ -50,12 +50,19 @@ def plan(river, water, bed, factor, total_discharge):
 def spin_up(solver, limit, infiltration, update, cancelled):
     """Report finite warm-up honestly; convergence is never assumed from elapsed time."""
     elapsed = 0.0; stable_windows = 0; checks = []
+    depth=lambda:solver.leaf['h'] if hasattr(solver,'mesh') else solver.h
+    velocity=solver.leaf_velocity if hasattr(solver,'mesh') else solver.velocity
+    update(state='running',progress=0,message='正在准备基流预热，首次计算可能稍慢…')
+    def progress(s):
+        update(state='running',progress=0,warmup_time_s=float(s.time),steps=s.steps,
+            dt_s=s.last_timestep.get('dt_s'),
+            message=f'正在基流预热：{s.time:.2f} / {limit:.0f} 秒 · 已算 {s.steps} 步（洪水尚未开始）')
     while elapsed < limit-1e-9:
-        before, bu, bv = solver.h.copy(), *solver.velocity()
+        before, bu, bv = depth().copy(), *velocity()
         end = min(limit, elapsed+60)
-        solver.advance(end, infiltration=infiltration, cancelled=cancelled)
-        u, v = solver.velocity()
-        change = float(np.max(np.abs(solver.h-before)))
+        solver.advance(end, infiltration=infiltration, cancelled=cancelled,progress=progress)
+        u, v = velocity()
+        change = float(np.max(np.abs(depth()-before)))
         velocity_change = float(np.max(np.hypot(u-bu, v-bv)))
         stable_windows = stable_windows+1 if change <= .01 and velocity_change <= .01 else 0
         checks.append(dict(time_s=end, max_depth_change_m=change,

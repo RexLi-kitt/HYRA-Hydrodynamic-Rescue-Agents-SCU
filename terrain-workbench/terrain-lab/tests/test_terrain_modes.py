@@ -76,6 +76,18 @@ class TerrainModeTests(unittest.TestCase):
             densities.append(m['river_length_density_km_per_km2'])
         self.assertLess(max(densities)/min(densities),1.1)
 
+    def test_three_crossings_accepts_broad_wet_network_but_other_gates_still_apply(self):
+        metrics=dict(land_fraction=.834278,river_length_density_km_per_km2=6.000988,
+            river_tile_coverage=.625,river_boundary_crossings=3,land_relief_m=10.86485)
+        self.assertTrue(modes.verdict('water_network',metrics))
+        for key,value in [('river_boundary_crossings',2),('river_tile_coverage',.5),
+                          ('river_length_density_km_per_km2',.79),('land_fraction',.54),
+                          ('land_relief_m',81)]:
+            with self.subTest(key=key):
+                changed=dict(metrics,**{key:value})
+                self.assertFalse(modes.verdict('water_network',changed))
+                self.assertEqual(len(modes.rejection_reasons('water_network',changed)),1)
+
     def test_channel_length_is_not_a_water_area_threshold(self):
         mask=np.zeros((160,160),bool);mask[80,10:150]=True
         thin=modes.river_length(mask,8)

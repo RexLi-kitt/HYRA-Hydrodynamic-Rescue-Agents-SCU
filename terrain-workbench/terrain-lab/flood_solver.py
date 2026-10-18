@@ -1,10 +1,16 @@
-"""2-D shallow-water finite volumes: Rusanov flux + hydrostatic reconstruction.
+"""Cartesian shallow-water finite volumes with MUSCL and SSP-RK2 transport.
 
 Reference: Audusse et al. (2004), doi:10.1137/S1064827503431090.
-Cell centres, SI units, first-order explicit transport, semi-implicit Manning drag.
+KNP/normal rotation/low-Froude ideas: ANUGA e2e7bf67b5ed, see docs.
+Native square cells, SI units, hydrostatic reconstruction, RK-weighted water
+sources/sinks and split exact fixed-depth Manning drag. Bounded dry sinks and
+discontinuous forcing do not imply smooth global second-order convergence.
 """
 from __future__ import annotations
+import os
+import time
 import numpy as np
+from flood_numerics import face_flux, minmod_slope
 
 G = 9.81
 DRY = 1e-8
@@ -12,7 +18,10 @@ DRY = 1e-8
 
 class FloodSolver:
     def __init__(self, bed, depth, dx, *, boundary='open', manning=0.035,
-                 sea_level=None, sea_edges=None):
+                 sea_level=None, sea_edges=None, flux_method='rusanov',
+                 spatial_order=2, time_integrator='rk2', low_froude=0,
+                 cfl=.4, limiter_theta=1.5, velocity_depth=1e-6,
+                 max_timestep=1., max_steps=500000):
         self.bed = np.asarray(bed, dtype=np.float64).copy()
         self.h = np.asarray(depth, dtype=np.float64).copy()
         if (self.bed.ndim != 2 or min(self.bed.shape) < 2 or self.h.shape != self.bed.shape
@@ -20,8 +29,30 @@ class FloodSolver:
                 or (self.h < 0).any() or not np.isfinite(dx) or dx <= 0):
             raise ValueError('Invalid terrain, depth or grid spacing')
         n = np.broadcast_to(np.asarray(manning, dtype=np.float64), self.h.shape)
-        if boundary not in ('ocean', 'open', 'closed') or not np.isfinite(n).all() or (n < 0).any():
+        if boundary not in ('ocean', 'open', 'closed', 'periodic') or not np.isfinite(n).all() or (n < 0).any():
             raise ValueError('Invalid boundary or Manning coefficient')
+        if (flux_method not in ('rusanov', 'knp') or spatial_order not in (1, 2)
+                or isinstance(spatial_order, bool) or time_integrator not in ('euler', 'rk2')
+                or low_froude not in (0, 1, 2) or isinstance(low_froude, bool)
+                or not np.isfinite(cfl) or not 0 < cfl <= .45
+                or not np.isfinite(limiter_theta) or not 1 <= limiter_theta <= 2
+                or not np.isfinite(velocity_depth) or velocity_depth < DRY
+                or not np.isfinite(max_timestep) or max_timestep <= 0
+                or not isinstance(max_steps, int) or isinstance(max_steps, bool) or max_steps < 1):
+            raise ValueError('Invalid numerical configuration')
+        self.flux_method, self.spatial_order = flux_method, int(spatial_order)
+        self.time_integrator, self.low_froude = time_integrator, int(low_froude)
+        self.cfl, self.limiter_theta = float(cfl), float(limiter_theta)
+        self.velocity_depth, self.max_timestep = float(velocity_depth), float(max_timestep)
+        self.max_steps = max_steps
+        self.acceleration = None
+        if os.environ.get('HYRA_FLOOD_BACKEND', 'auto') != 'numpy':
+            try:
+                import flood_acceleration
+                self.acceleration = flood_acceleration
+            except ImportError:
+                if os.environ.get('HYRA_FLOOD_BACKEND') == 'numba':
+                    raise
         self.dx, self.boundary, self.manning = float(dx), boundary, n.copy()
         nz, nx = self.h.shape
         self.sea_edges = {name: np.zeros(n, dtype=bool) for name, n in
@@ -63,6 +94,10 @@ class FloodSolver:
         self.external_volume_by_id = {}
         self.last_boundary_inflows = []
         self.boundary_sample_time = None
+        self.boundary_state_time = None
+        self.last_timestep = {}
+        self.diagnostics = dict(min_dt_s=None, max_dt_s=0., limited_faces=0,
+                                max_stage_courant=0., minimum_raw_depth_m=0.)
         self.balance = dict(initial_m3=float(self.h.sum() * dx**2), rainfall_m3=0.0,
                             inflow_m3=0.0, baseflow_m3=0.0, infiltration_m3=0.0, outflow_m3=0.0,
                             sea_inflow_m3=0.0, sea_outflow_m3=0.0, drainage_m3=0.0,
@@ -119,11 +154,12 @@ class FloodSolver:
     def boundary_forcing(self):
         """Exact inward discharge on native-width fractions of outer faces.
 
-        Add advected normal momentum; the pressure closure extrapolates the
+        Add both components of advected momentum; the pressure closure extrapolates the
         interior depth rather than prescribing both stage and discharge.
         """
         edges={name:dict(fraction=np.zeros(len(mask)),q=np.zeros(len(mask)),
-            advective=np.zeros(len(mask)),wave=0.) for name,mask in self.sea_edges.items()}
+            advective=np.zeros(len(mask)),advective_x=np.zeros(len(mask)),advective_z=np.zeros(len(mask)),
+            wave=0.) for name,mask in self.sea_edges.items()}
         states=[]
         for entry in self.external_schedule:
             if entry.get('delivery')!='boundary_discharge_with_momentum':continue
@@ -132,13 +168,21 @@ class FloodSolver:
                 flow=q*face['weight'];width=face['width_m'];z,x=face['z'],face['x']
                 critical=(flow/width)**(2/3)/G**(1/3) if flow else 0.
                 depth=max(float(self.h[z,x]),critical,DRY)
-                velocity=entry['inlet_velocity_m_s'] or flow/(width*depth)
+                normal={'west':(1.,0.),'east':(-1.,0.),'north':(0.,1.),'south':(0.,-1.)}[face['edge']]
+                direction=face.get('momentum_direction_xz',normal)
+                projection=direction[0]*normal[0]+direction[1]*normal[1]
+                velocity=entry['inlet_velocity_m_s'] or flow/(width*depth*projection)
                 if not flow:velocity=0.
+                ux,uz=velocity*direction[0],velocity*direction[1]
+                normal_velocity=velocity*projection
                 e=edges[face['edge']];i=face['offset'];e['fraction'][i]+=width/self.dx
-                e['q'][i]+=flow/self.dx;e['advective'][i]+=flow/self.dx*velocity
-                if flow:e['wave']=max(e['wave'],velocity+np.sqrt(G*max(depth,flow/(width*max(velocity,DRY)))))
-                faces.append(dict(face,discharge_m3_s=flow,inward_velocity_m_s=float(velocity),
-                    reference_depth_m=float(flow/(width*velocity)) if velocity else float(self.h[z,x])))
+                signed_flow=flow/self.dx*(1 if face['edge'] in ('west','north') else -1)
+                e['q'][i]+=flow/self.dx;e['advective'][i]+=flow/self.dx*normal_velocity
+                e['advective_x'][i]+=signed_flow*ux;e['advective_z'][i]+=signed_flow*uz
+                if flow:e['wave']=max(e['wave'],max(abs(ux),abs(uz))+np.sqrt(G*max(depth,flow/(width*max(normal_velocity,DRY)))))
+                faces.append(dict(face,discharge_m3_s=flow,inward_velocity_m_s=float(normal_velocity),
+                    velocity_m_s=float(velocity),velocity_x_m_s=float(ux),velocity_z_m_s=float(uz),
+                    reference_depth_m=float(flow/(width*normal_velocity)) if normal_velocity else float(self.h[z,x])))
             states.append(dict(id=entry['id'],discharge_m3_s=q,faces=faces))
         for e in edges.values():
             if (e['fraction']>1+1e-10).any():raise ValueError('河口占用的边界宽度超过网格面宽')
@@ -179,91 +223,343 @@ class FloodSolver:
         self.balance['initial_m3'] = float(self.h.sum()*self.dx**2)
         for key in self.external_volume_by_id:self.external_volume_by_id[key]=0.
         self.last_boundary_inflows=[];self.boundary_sample_time=None
+        self.boundary_state_time=None;self.last_timestep={}
+        self.diagnostics=dict(min_dt_s=None,max_dt_s=0.,limited_faces=0,
+                              max_stage_courant=0.,minimum_raw_depth_m=0.)
 
     def velocity(self):
-        wet = self.h > DRY
+        wet = self.h > self.velocity_depth
         return (np.divide(self.mx, self.h, out=np.zeros_like(self.h), where=wet),
                 np.divide(self.mz, self.h, out=np.zeros_like(self.h), where=wet))
 
+    def numerical_config(self):
+        return dict(schema='hyra-swe-v2', flux_method=self.flux_method,
+                    compute_backend='numba' if self.acceleration else 'numpy',
+                    spatial_order=self.spatial_order, time_integrator=self.time_integrator,
+                    low_froude=self.low_froude, cfl=self.cfl,
+                    limiter='generalised_minmod', limiter_theta=self.limiter_theta,
+                    dry_depth_m=DRY, velocity_depth_m=self.velocity_depth,
+                    max_timestep_s=self.max_timestep, max_steps=self.max_steps,
+                    source_integration='RK-weighted_water_sources; Strang_Manning; piecewise_constant_events',
+                    dry_sink_completion='unused_per_cell_capacity_after_RK_average',
+                    positivity_limiter='shared_donor_factor_on_mass_and_advective_momentum',
+                    bed_source='hydrostatic_reconstruction_and_within_cell_bed_gradient',
+                    face_flux_sampling='RK-weighted mean over last accepted transport step')
+
+    def _blocked_faces(self, axis):
+        pads = ((0, 0), (1, 1)) if axis == 1 else ((1, 1), (0, 0))
+        cells = np.pad(self.solid, pads, mode='wrap' if self.boundary == 'periodic' else 'edge')
+        if axis == 1:
+            return self.wall_x | cells[:, :-1] | cells[:, 1:]
+        return self.wall_y | cells[:-1, :] | cells[1:, :]
+
+    def _slope(self, values, axis, *, differences=None, blocked=None):
+        if self.spatial_order == 1:
+            return np.zeros_like(values)
+        if differences is None:
+            differences = (values-np.roll(values, 1, axis), np.roll(values, -1, axis)-values)
+        slope = minmod_slope(*differences, self.limiter_theta)
+        blocked = self._blocked_faces(axis) if blocked is None else blocked
+        unavailable = (blocked[:, :-1] | blocked[:, 1:]) if axis == 1 else (blocked[:-1] | blocked[1:])
+        slope[unavailable] = 0.
+        if self.boundary != 'periodic':
+            if axis == 1:
+                slope[:, 0] = 0.; slope[:, -1] = 0.
+            else:
+                slope[0, :] = 0.; slope[-1, :] = 0.
+        return slope
+
+    def _reconstruction(self, h=None, velocities=None):
+        h = self.h if h is None else h
+        u, v = self.velocity() if velocities is None else velocities
+        if self.acceleration:
+            a = self.acceleration.reconstruction(h,self.bed,u,v,self.solid,self.wall_x,self.wall_y,
+                self.boundary=='periodic',self.spatial_order,self.limiter_theta,self.velocity_depth)
+            return {axis:tuple(a[axis,k] for k in range(4)) for axis in (0,1)}
+        result = {}
+        for axis in (0, 1):
+            blocked = self._blocked_faces(axis)
+            hm, hp = np.roll(h, 1, axis), np.roll(h, -1, axis)
+            dh = (h-hm, hp-h)
+            sh = self._slope(h, axis, differences=dh, blocked=blocked)
+            sh *= np.minimum(1., 2*np.maximum(h, 0.)/np.maximum(np.abs(sh), 1e-100))
+            # Difference h and bed separately: a large absolute elevation must
+            # not erase a millimetre-scale water-surface gradient.
+            deta = (dh[0] + (self.bed-np.roll(self.bed, 1, axis)),
+                    dh[1] + (np.roll(self.bed, -1, axis)-self.bed))
+            seta = self._slope(h, axis, differences=deta, blocked=blocked)
+            su, sv = self._slope(u, axis, blocked=blocked), self._slope(v, axis, blocked=blocked)
+            near_dry = ((h <= self.velocity_depth)
+                        | (hm <= self.velocity_depth) | (hp <= self.velocity_depth))
+            # Fall back to first order beside a dry cell, as in ANUGA's
+            # wet/dry limiter. A dry neighbour's bed is not a water surface
+            # from which to extrapolate a wet cell's free-surface gradient.
+            sh[near_dry] = 0.; seta[near_dry] = 0.
+            su[near_dry] = 0.; sv[near_dry] = 0.
+            # Reconstruct stage and depth together; derive the bed slope.
+            result[axis] = (sh, seta-sh, su, sv)
+        return result
+
+    def _faces(self, values, slope, axis):
+        pads = ((0, 0), (1, 1)) if axis == 1 else ((1, 1), (0, 0))
+        mode = 'wrap' if self.boundary == 'periodic' else 'edge'
+        left = np.pad(values+.5*slope, pads, mode=mode)
+        right = np.pad(values-.5*slope, pads, mode=mode)
+        if axis == 1:
+            return left[:, :-1], right[:, 1:]
+        return left[:-1, :], right[1:, :]
+
     def timestep(self, limit=1.0, rain=0.0, inflow=0.0, source=None):
+        if not np.isfinite(limit) or limit <= 0:
+            raise ValueError('Timestep limit must be finite and positive')
         u, v = self.velocity()
-        # Include this step's potential source water in the wave-speed bound.
-        prospective = self.h + (rain*(~self.solid)+self.baseflow_rate+self.source_rate+self.forcing_rate()) * limit
+        prospective = self.h + (rain*(~self.solid)+self.baseflow_rate
+                               + self.source_rate+self.forcing_rate())*limit
         if source is not None:
             prospective = prospective.copy()
-            prospective[source] += inflow * limit / self.dx**2
-        wave = np.sqrt(G * prospective)
-        speed = float(np.max(np.abs(u) + wave) + np.max(np.abs(v) + wave))
-        # A dry initial map can still receive deep water from the external sea.
-        speed = max(speed, 2*self.sea_wave_speed,2*max(e['wave'] for e in self.boundary_forcing()[0].values()))
-        return min(limit, 0.45 * self.dx / max(speed, 1e-9))
+            prospective[source] += inflow*limit/self.dx**2
+        bounds = []
+        for axis, velocity in (() if self.acceleration else ((1, u), (0, v))):
+            # CFL needs only depth and normal-velocity slopes, not the full
+            # eight-field transport reconstruction (including bed/tangential slopes).
+            blocked = self._blocked_faces(axis)
+            hm, hp = np.roll(prospective, 1, axis), np.roll(prospective, -1, axis)
+            sh = self._slope(prospective, axis, differences=(prospective-hm, hp-prospective), blocked=blocked)
+            sh *= np.minimum(1., 2*np.maximum(prospective, 0.)/np.maximum(np.abs(sh), 1e-100))
+            velocity_slope = self._slope(velocity, axis, blocked=blocked)
+            near_dry = ((prospective <= self.velocity_depth)
+                        | (hm <= self.velocity_depth) | (hp <= self.velocity_depth))
+            sh[near_dry] = 0.; velocity_slope[near_dry] = 0.
+            hv = prospective+.5*np.abs(sh)
+            bounds.append(np.abs(velocity)+.5*np.abs(velocity_slope)+np.sqrt(G*np.maximum(hv, 0.)))
+        if self.acceleration:
+            internal_speed,z,x = self.acceleration.timestep_bounds(prospective,u,v,self.solid,
+                self.wall_x,self.wall_y,self.boundary=='periodic',self.spatial_order,
+                self.limiter_theta,self.velocity_depth)
+            index=(z,x)
+        else:
+            cell_bound = bounds[0]+bounds[1]
+            index = np.unravel_index(int(np.argmax(cell_bound)), self.h.shape)
+            # Global directional maxima also bound waves coming from a neighbour.
+            internal_speed = float(bounds[0].max()+bounds[1].max())
+        inlet_speed = 2*max(e['wave'] for e in self.boundary_forcing()[0].values())
+        boundary_speed = max(2*self.sea_wave_speed, inlet_speed)
+        speed = max(internal_speed, boundary_speed, 1e-100)
+        cfl_limit = self.cfl*self.dx/speed
+        dt = min(limit, self.max_timestep, cfl_limit)
+        cause = ('cfl_boundary' if boundary_speed > internal_speed else 'cfl_grid') if dt == cfl_limit else (
+                 'max_timestep' if dt == self.max_timestep else 'event_or_output')
+        self.last_timestep = dict(dt_s=float(dt), cause=cause, requested_limit_s=float(limit),
+            cfl_limit_s=float(cfl_limit), limiting_cell=[int(index[0]), int(index[1])],
+            cell_depth_m=float(self.h[index]), cell_u_m_s=float(u[index]), cell_v_m_s=float(v[index]),
+            grid_wave_bound_m_s=internal_speed, boundary_wave_bound_m_s=float(boundary_speed))
+        return dt
 
-    def _flux(self, axis, inlet_edges=None):
-        pads = ((0, 0), (1, 1)) if axis == 1 else ((1, 1), (0, 0))
-        h, b, mx, mz = [np.pad(a, pads, mode='edge') for a in (self.h, self.bed, self.mx, self.mz)]
-        normal = mx if axis == 1 else mz
+    def _flux(self, axis, inlet_edges=None, reconstruction=None, details=False, velocities=None):
+        u, v = self.velocity() if velocities is None else velocities
+        reconstruction = self._reconstruction(velocities=(u, v)) if reconstruction is None else reconstruction
+        sh, sb, su, sv = reconstruction[axis]
+        if self.acceleration:
+            names=('west','east') if axis==1 else ('north','south')
+            inlets=self.boundary_forcing()[0] if inlet_edges is None else inlet_edges
+            a,b=(inlets[name] for name in names)
+            fields=self.acceleration.flux_axis(self.h,self.bed,u,v,sh,sb,su,sv,self._blocked_faces(axis),
+                axis,{'closed':0,'open':1,'ocean':2,'periodic':3}[self.boundary],
+                self.sea_level if self.sea_level is not None else 0.,
+                self.sea_edges[names[0]],self.sea_edges[names[1]],
+                a['fraction'],b['fraction'],a['q'],b['q'],a['advective_x'],b['advective_x'],a['advective_z'],b['advective_z'],
+                0 if self.flux_method=='rusanov' else 1,self.low_froude)
+            mass,advx,advz,pressure,cl,cr,speed=fields
+            if details:
+                return dict(zip(('mass','advx','advz','pressure','corr_l','corr_r','speed'),fields))
+            return mass,advx+(pressure if axis==1 else 0.),advz+(pressure if axis==0 else 0.),cl,cr
+        hl, hr = self._faces(self.h, sh, axis)
+        zeros = np.zeros_like(self.h)
+        bl, br = self._faces(self.bed, zeros, axis)
+        offset_l, offset_r = self._faces(zeros, sb, axis)
+        ul, ur = self._faces(u, su, axis)
+        vl, vr = self._faces(v, sv, axis)
         edge_names = ('west', 'east') if axis == 1 else ('north', 'south')
-        if self.boundary == 'ocean':
-            # Ghost cells represent a calm external reservoir at the map's sea level.
-            # Only ocean faces receive a stage boundary; inland water is never reset.
-            for edge, name in zip((0, -1), edge_names):
-                s = (slice(None), edge) if axis == 1 else (edge, slice(None))
-                mask = self.sea_edges[name]
-                h[s][mask] = np.maximum(0, self.sea_level-b[s][mask])
-                mx[s][mask] = 0; mz[s][mask] = 0
-        if self.boundary == 'closed':
-            if axis == 1:
-                normal[:, 0] *= -1; normal[:, -1] *= -1
-            else:
-                normal[0, :] *= -1; normal[-1, :] *= -1
-        left = (slice(None), slice(None, -1)) if axis == 1 else (slice(None, -1), slice(None))
-        right = (slice(None), slice(1, None)) if axis == 1 else (slice(1, None), slice(None))
-        hl, hr, bl, br = h[left], h[right], b[left], b[right]
-        top = np.maximum(bl, br)
-        # Avoid subtracting large absolute elevations from a small depth.
-        dl = np.maximum(0, hl - (top - bl))
-        dr = np.maximum(0, hr - (top - br))
-        ul = np.divide(mx[left], hl, out=np.zeros_like(hl), where=hl > DRY)
-        ur = np.divide(mx[right], hr, out=np.zeros_like(hr), where=hr > DRY)
-        vl = np.divide(mz[left], hl, out=np.zeros_like(hl), where=hl > DRY)
-        vr = np.divide(mz[right], hr, out=np.zeros_like(hr), where=hr > DRY)
-        nl, nr = (ul, ur) if axis == 1 else (vl, vr)
-        speed = np.maximum(np.abs(nl) + np.sqrt(G*dl), np.abs(nr) + np.sqrt(G*dr))
-        mass = .5*(dl*nl + dr*nr) - .5*speed*(dr-dl)
-        fx = .5*(dl*nl*ul + dr*nr*ur) - .5*speed*(dr*ur-dl*ul)
-        fz = .5*(dl*nl*vl + dr*nr*vr) - .5*speed*(dr*vr-dl*vl)
-        pressure = .25*G*(dl**2 + dr**2)
-        if axis == 1: fx += pressure
-        else: fz += pressure
+        if self.boundary != 'periodic':
+            for face, name, side in ((0, edge_names[0], 0), (-1, edge_names[1], 1)):
+                index = (slice(None), face) if axis == 1 else (face, slice(None))
+                gh, gb = (hl, bl) if side == 0 else (hr, br)
+                gu, gv = (ul, vl) if side == 0 else (ur, vr)
+                if self.boundary == 'ocean':
+                    mask = self.sea_edges[name]
+                    gh[index][mask] = np.maximum(0., self.sea_level-gb[index][mask])
+                    gu[index][mask] = 0.; gv[index][mask] = 0.
+                elif self.boundary == 'closed':
+                    normal_velocity = gu if axis == 1 else gv
+                    normal_velocity[index] *= -1.
+        # Keep reconstruction offsets separate from absolute bed elevations.
+        # Forming (bed+offset) first loses small offsets on high terrain.
+        jump = (br-bl)+(offset_r-offset_l)
+        dl = np.maximum(0., hl-np.maximum(jump, 0.))
+        dr = np.maximum(0., hr-np.maximum(-jump, 0.))
+        mass, advx, advz, pressure, speed = face_flux(
+            dl, dr, ul, vl, ur, vr, normal=(1., 0.) if axis == 1 else (0., 1.),
+            method=self.flux_method, low_froude=self.low_froude)
         if self.boundary in ('open', 'ocean'):
-            # Transmissive outflow only. A boundary is not an infinite water source.
-            for edge, sign, name in zip((0, -1), (-1, 1), edge_names):
-                s = (slice(None), edge) if axis == 1 else (edge, slice(None))
-                q = sign * np.maximum(0, sign*normal[s])
-                ue = np.divide(mx[s], h[s], out=np.zeros_like(q), where=h[s] > DRY)
-                ve = np.divide(mz[s], h[s], out=np.zeros_like(q), where=h[s] > DRY)
+            for face, sign, name, cell in zip((0, -1), (-1, 1), edge_names, (0, -1)):
+                index = (slice(None), face) if axis == 1 else (face, slice(None))
+                ci = (slice(None), cell) if axis == 1 else (cell, slice(None))
+                normal_velocity = u[ci] if axis == 1 else v[ci]
+                q = sign*np.maximum(0., sign*self.h[ci]*normal_velocity)
                 ordinary = ~self.sea_edges[name]
-                mass[s][ordinary] = q[ordinary]
-                fx[s][ordinary] = (q*ue + (.5*G*h[s]**2 if axis == 1 else 0))[ordinary]
-                fz[s][ordinary] = (q*ve + (.5*G*h[s]**2 if axis == 0 else 0))[ordinary]
-        inlet_edges=inlet_edges if inlet_edges is not None else self.boundary_forcing()[0]
-        for face,sign,name,cell in zip((0,-1),(1,-1),edge_names,(0,-1)):
-            s=(slice(None),face) if axis==1 else (face,slice(None))
-            interior=(slice(None),cell) if axis==1 else (cell,slice(None))
-            e=inlet_edges[name];fraction=np.minimum(1,e['fraction']);keep=1-fraction
-            mass[s]=mass[s]*keep+sign*e['q']
-            pressure=.5*G*self.h[interior]**2*fraction
-            fx[s]=fx[s]*keep+(e['advective']+pressure if axis==1 else 0)
-            fz[s]=fz[s]*keep+(e['advective']+pressure if axis==0 else 0)
-        # Reflect each side of a blocked face separately: equal/opposite water
-        # exchange is zero, while each fluid cell retains its own pressure force.
-        cells=np.pad(self.solid,pads,mode='edge')
-        blocked=(self.wall_x if axis==1 else self.wall_y) | cells[left] | cells[right]
-        mass[blocked]=0; fx[blocked]=0; fz[blocked]=0
-        corr_l=.5*G*(hl**2-dl**2); corr_r=.5*G*(hr**2-dr**2)
-        corr_l[blocked]=.5*G*hl[blocked]**2
-        corr_r[blocked]=.5*G*hr[blocked]**2
-        return mass, fx, fz, corr_l, corr_r
+                mass[index][ordinary] = q[ordinary]
+                advx[index][ordinary] = (q*u[ci])[ordinary]
+                advz[index][ordinary] = (q*v[ci])[ordinary]
+                pressure[index][ordinary] = (.5*G*self.h[ci]**2)[ordinary]
+        inlet_edges = self.boundary_forcing()[0] if inlet_edges is None else inlet_edges
+        for face, sign, name, cell in zip((0, -1), (1, -1), edge_names, (0, -1)):
+            index = (slice(None), face) if axis == 1 else (face, slice(None))
+            ci = (slice(None), cell) if axis == 1 else (cell, slice(None))
+            e = inlet_edges[name]; fraction = np.minimum(1., e['fraction']); keep = 1.-fraction
+            mass[index] = mass[index]*keep+sign*e['q']
+            advx[index] = advx[index]*keep+e['advective_x']
+            advz[index] = advz[index]*keep+e['advective_z']
+            pressure[index] = pressure[index]*keep+.5*G*self.h[ci]**2*fraction
+        blocked = self._blocked_faces(axis)
+        mass[blocked] = 0.; advx[blocked] = 0.; advz[blocked] = 0.; pressure[blocked] = 0.
+        corr_l = .5*G*(hl-dl)*(hl+dl)
+        corr_r = .5*G*(hr-dr)*(hr+dr)
+        corr_l[blocked] = .5*G*hl[blocked]**2
+        corr_r[blocked] = .5*G*hr[blocked]**2
+        if details:
+            return dict(mass=mass, advx=advx, advz=advz, pressure=pressure,
+                        corr_l=corr_l, corr_r=corr_r, speed=speed)
+        return (mass, advx+(pressure if axis == 1 else 0.),
+                advz+(pressure if axis == 0 else 0.), corr_l, corr_r)
+
+    def _transport_euler(self, dt, inlet_edges):
+        velocities = self.velocity()
+        recon = self._reconstruction(velocities=velocities)
+        fx = self._flux(1, inlet_edges, recon, details=True, velocities=velocities)
+        fz = self._flux(0, inlet_edges, recon, details=True, velocities=velocities)
+        if self.acceleration:
+            keys=('mass','advx','advz','pressure','corr_l','corr_r','speed')
+            h,mx,mz,adjustment,minimum,limited,finite=self.acceleration.transport(
+                self.h,self.mx,self.mz,recon[1][1],recon[0][1],
+                tuple(fx[k] for k in keys),tuple(fz[k] for k in keys),dt,self.dx,self.boundary=='periodic')
+            if not finite or minimum < -1e-9:
+                raise RuntimeError(f'Water transport unstable: t={self.time:g}, min(h)={minimum:g}, dt={dt:g}')
+            d=self.diagnostics;d['limited_faces']+=limited
+            d['minimum_raw_depth_m']=min(d['minimum_raw_depth_m'],minimum)
+            courant=dt/self.dx*(float(fx['speed'].max())+float(fz['speed'].max()))
+            d['max_stage_courant']=max(d['max_stage_courant'],courant)
+            return h,mx,mz,fx,fz,adjustment
+        # Conservative draining limiter: share one donor factor at each face.
+        # Scale transported mass/advection, leaving hydrostatic pressure intact.
+        outgoing = (np.maximum(fx['mass'][:, 1:], 0.)+np.maximum(-fx['mass'][:, :-1], 0.)
+                    + np.maximum(fz['mass'][1:], 0.)+np.maximum(-fz['mass'][:-1], 0.))
+        available, requested = self.h*self.dx, dt*outgoing
+        theta = np.divide(available, requested, out=np.ones_like(self.h),
+                          where=requested > available)
+        limited = 0
+        for axis, face in ((1, fx), (0, fz)):
+            pads = ((0, 0), (1, 1)) if axis == 1 else ((1, 1), (0, 0))
+            if self.boundary == 'periodic':
+                padded = np.pad(theta, pads, mode='wrap')
+            else:
+                padded = np.pad(theta, pads, mode='constant', constant_values=1.)
+            donor_l = padded[:, :-1] if axis == 1 else padded[:-1]
+            donor_r = padded[:, 1:] if axis == 1 else padded[1:]
+            factor = np.where(face['mass'] >= 0., donor_l, donor_r)
+            limited += int(np.count_nonzero((factor < 1.-1e-12) & (face['mass'] != 0.)))
+            for name in ('mass', 'advx', 'advz'):
+                face[name] *= factor
+        ax, az = fx['mass'], fz['mass']
+        bx, bz = fx['advx']+fx['pressure'], fz['advx']
+        cx, cz = fx['advz'], fz['advz']+fz['pressure']
+        factor = dt/self.dx
+        h = self.h-factor*(ax[:, 1:]-ax[:, :-1]+az[1:]-az[:-1])
+        mx = self.mx-factor*(bx[:, 1:]+fx['corr_l'][:, 1:]-bx[:, :-1]-fx['corr_r'][:, :-1]
+                             +bz[1:]-bz[:-1])
+        mz = self.mz-factor*(cx[:, 1:]-cx[:, :-1]
+                             +cz[1:]+fz['corr_l'][1:]-cz[:-1]-fz['corr_r'][:-1])
+        # Within-cell bed source, consistent with the two reconstructed depths.
+        # Their average is h_i; this cancels the pressure difference at rest.
+        mx -= factor*G*self.h*recon[1][1]
+        mz -= factor*G*self.h*recon[0][1]
+        minimum = float(h.min())
+        if not all(np.isfinite(a).all() for a in (h, mx, mz)) or minimum < -1e-9:
+            raise RuntimeError(f'Water transport unstable: t={self.time:g}, min(h)={minimum:g}, dt={dt:g}')
+        adjustment = float(-np.minimum(h, 0.).sum()*self.dx**2)
+        np.maximum(h, 0., out=h)
+        self.diagnostics['limited_faces'] += limited
+        self.diagnostics['minimum_raw_depth_m'] = min(self.diagnostics['minimum_raw_depth_m'], minimum)
+        courant = dt/self.dx*(float(fx['speed'].max())+float(fz['speed'].max()))
+        self.diagnostics['max_stage_courant'] = max(self.diagnostics['max_stage_courant'], courant)
+        return h, mx, mz, fx, fz, adjustment
+
+    def _boundary_budget(self, fx, fz, inlet_edges, dt):
+        for name, outward in zip(self.sea_edges, (-fx[:, 0], fx[:, -1], -fz[0], fz[-1])):
+            outward = outward+inlet_edges[name]['q']
+            sea = self.sea_edges[name]
+            self.balance['outflow_m3'] += float(dt*self.dx*outward[~sea].sum())
+            self.balance['sea_inflow_m3'] += float(dt*self.dx*np.maximum(0., -outward[sea]).sum())
+            self.balance['sea_outflow_m3'] += float(dt*self.dx*np.maximum(0., outward[sea]).sum())
+
+    def _water_sources(self, dt, rain, infiltration, inflow, source):
+        area = self.dx**2
+        if self.acceleration:
+            sz,sx=source if source is not None else (-1,-1)
+            a,b,removed_i,removed_d,fluid=self.acceleration.water_sources(
+                self.h,self.mx,self.mz,self.solid,self.baseflow_rate,self.source_rate,self.external_rate,
+                self.drain_capacity,dt,rain,infiltration,self.dx,inflow,sz,sx)
+            self.balance['rainfall_m3']+=rain*dt*fluid*area
+            self.balance['baseflow_m3']+=self.baseflow_m3_s*dt
+            self.balance['scheduled_inflow_m3']+=float(self.source_rate.sum()*dt*area)
+            self.balance['external_inflow_m3']+=float(self.external_rate.sum()*dt*area)
+            self.balance['inflow_m3']+=inflow*dt
+            self.balance['infiltration_m3']+=removed_i;self.balance['drainage_m3']+=removed_d
+            return [a,b]
+        self.h += dt*(rain*(~self.solid)+self.baseflow_rate+self.source_rate+self.external_rate)
+        self.balance['rainfall_m3'] += rain*dt*int((~self.solid).sum())*area
+        self.balance['baseflow_m3'] += self.baseflow_m3_s*dt
+        self.balance['scheduled_inflow_m3'] += float(self.source_rate.sum()*dt*area)
+        self.balance['external_inflow_m3'] += float(self.external_rate.sum()*dt*area)
+        if inflow:
+            self.h[source] += inflow*dt/area
+            self.balance['inflow_m3'] += inflow*dt
+        removals = []
+        for amount, key in ((infiltration*dt, 'infiltration_m3'),
+                            (self.drain_capacity*dt/area, 'drainage_m3')):
+            removed = np.minimum(self.h, amount)
+            retained = np.divide(self.h-removed, self.h, out=np.zeros_like(self.h), where=self.h > 0.)
+            self.mx *= retained; self.mz *= retained; self.h -= removed
+            self.balance[key] += float(removed.sum()*area)
+            removals.append(removed)
+        return removals
+
+    def _complete_dry_sinks(self, dt, infiltration, removals):
+        """Spend unused sink capacity after SSP averaging at a drying event.
+
+        Averaging a fully drained Euler stage with the initial wet state would
+        otherwise leave half the water indefinitely. Only unused per-cell
+        capacity can remove this remainder; smooth, unsaturated sinks need no
+        correction and keep their RK weights.
+        """
+        if self.acceleration:
+            a,b=self.acceleration.complete_sinks(self.h,self.mx,self.mz,self.drain_capacity,
+                removals[0],removals[1],dt,infiltration,self.dx)
+            self.balance['infiltration_m3']+=a;self.balance['drainage_m3']+=b
+            return
+        for requested, applied, key in zip(
+                (infiltration*dt, self.drain_capacity*dt/self.dx**2), removals,
+                ('infiltration_m3', 'drainage_m3')):
+            extra = np.minimum(self.h, np.maximum(requested-applied, 0.))
+            retained = np.divide(self.h-extra, self.h, out=np.zeros_like(self.h), where=self.h > 0.)
+            self.mx *= retained; self.mz *= retained; self.h -= extra
+            self.balance[key] += float(extra.sum()*self.dx**2)
+
+    def _drag(self, dt):
+        if self.acceleration:
+            self.acceleration.drag(self.h,self.mx,self.mz,self.manning,dt)
+            return
+        drag = 1.+dt*G*self.manning**2*np.hypot(self.mx, self.mz)/np.maximum(self.h, DRY)**(7./3.)
+        self.mx /= drag; self.mz /= drag
 
     def step(self, dt, *, rain=0.0, infiltration=0.0, inflow=0.0, source=None):
         if not all(np.isfinite(v) and v >= 0 for v in (dt, rain, infiltration, inflow)) or dt == 0:
@@ -271,77 +567,100 @@ class FloodSolver:
         if inflow and (source is None or len(source) != 2 or not
                        all(isinstance(v, (int, np.integer)) and 0 <= v < n for v, n in zip(source, self.h.shape))):
             raise ValueError('Inflow requires a valid source cell')
-        if inflow and self.solid[source]:raise ValueError('Inflow cannot be inside a solid cell')
-        area = self.dx**2
-        self.h += rain*dt*(~self.solid)
-        self.balance['rainfall_m3'] += rain*dt*int((~self.solid).sum())*area
-        self.h += self.baseflow_rate*dt
-        self.balance['baseflow_m3'] += self.baseflow_m3_s*dt
-        self.h += self.source_rate*dt
-        self.balance['scheduled_inflow_m3'] += float(self.source_rate.sum()*dt*area)
-        self.h += self.external_rate*dt
-        self.balance['external_inflow_m3'] += float(self.external_rate.sum()*dt*area)
+        if inflow and self.solid[source]:
+            raise ValueError('Inflow cannot be inside a solid cell')
+        self.source_rate = self._scheduled_rate(self.time)
+        self.external_rate = self._external_rate(self.time)
+        # Piecewise-constant forcing uses its left limit for BOTH RK stages.
+        self._drag(.5*dt)
+        initial = (self.h.copy(), self.mx.copy(), self.mz.copy())
+        balance_before = dict(self.balance)
+        inlet0, states0 = self.boundary_forcing()
+        h1, mx1, mz1, fx0, fz0, adjustment0 = self._transport_euler(dt, inlet0)
+        # Only mass fluxes survive to RK averaging and boundary accounting.
+        # Release the other face arrays before constructing the second stage.
+        qx0, qy0 = fx0['mass'], fz0['mass']
+        del fx0, fz0
+        self.h, self.mx, self.mz = h1, mx1, mz1
+        removals = self._water_sources(dt, rain, infiltration, inflow, source)
+        if self.time_integrator == 'rk2':
+            inlet1, states1 = self.boundary_forcing()
+            h2, mx2, mz2, fx1, fz1, adjustment1 = self._transport_euler(dt, inlet1)
+            self.h, self.mx, self.mz = h2, mx2, mz2
+            second_removals = self._water_sources(dt, rain, infiltration, inflow, source)
+            removals = [.5*(a+b) for a,b in zip(removals, second_removals)]
+            self.h = .5*(initial[0]+self.h)
+            self.mx = .5*(initial[1]+self.mx)
+            self.mz = .5*(initial[2]+self.mz)
+            # Each Euler stage has applied the full source duration. Match the
+            # same SSP weights used for the accepted conserved state.
+            for name in self.balance:
+                self.balance[name] = balance_before[name]+.5*(self.balance[name]-balance_before[name])
+            self.qx = .5*(qx0+fx1['mass'])
+            self.qy = .5*(qy0+fz1['mass'])
+            self._boundary_budget(qx0, qy0, inlet0, .5*dt)
+            self._boundary_budget(fx1['mass'], fz1['mass'], inlet1, .5*dt)
+            self.balance['numerical_adjustment_m3'] += .5*(adjustment0+adjustment1)
+            self.last_boundary_inflows = states1
+            self.boundary_state_time = self.time+dt
+        else:
+            self.qx, self.qy = qx0, qy0
+            self._boundary_budget(self.qx, self.qy, inlet0, dt)
+            self.balance['numerical_adjustment_m3'] += adjustment0
+            self.last_boundary_inflows = states0
+            self.boundary_state_time = self.time
+        self.boundary_sample_time = self.time
+        self.balance['external_inflow_m3'] += dt*sum(s['discharge_m3_s'] for s in states0)
         for entry in self.external_schedule:
-            self.external_volume_by_id[entry['id']]+=self.external_discharge(entry,self.time)*dt
-        if inflow:
-            self.h[source] += inflow*dt/area
-            self.balance['inflow_m3'] += inflow*dt
-        removed = np.minimum(self.h, infiltration*dt)
-        retained = np.divide(self.h-removed, self.h, out=np.zeros_like(self.h), where=self.h > 0)
-        self.mx *= retained; self.mz *= retained; self.h -= removed
-        self.balance['infiltration_m3'] += float(removed.sum()*area)
-        drained=np.minimum(self.h,self.drain_capacity*dt/area)
-        retained=np.divide(self.h-drained,self.h,out=np.zeros_like(self.h),where=self.h>0)
-        self.mx*=retained; self.mz*=retained; self.h-=drained
-        self.balance['drainage_m3']+=float(drained.sum()*area)
-        inlet_edges,states=self.boundary_forcing()
-        self.last_boundary_inflows=states;self.boundary_sample_time=self.time
-        self.balance['external_inflow_m3']+=dt*sum(s['discharge_m3_s'] for s in states)
-        ax, bx, cx, lx, rx = self._flux(1,inlet_edges)
-        az, bz, cz, lz, rz = self._flux(0,inlet_edges)
-        self.qx=ax.copy(); self.qy=az.copy()
-        f = dt/self.dx
-        self.h -= f*(ax[:, 1:]-ax[:, :-1] + az[1:, :]-az[:-1, :])
-        self.mx -= f*(bx[:, 1:]+lx[:, 1:] - bx[:, :-1]-rx[:, :-1] + bz[1:, :]-bz[:-1, :])
-        self.mz -= f*(cx[:, 1:]-cx[:, :-1] + cz[1:, :]+lz[1:, :] - cz[:-1, :]-rz[:-1, :])
-        for name, outward in zip(self.sea_edges, (-ax[:, 0], ax[:, -1], -az[0, :], az[-1, :])):
-            # Remove prescribed incoming Q before classifying the remaining
-            # open/sea exchange, including mixed river/ocean coarse faces.
-            outward=outward+inlet_edges[name]['q']
-            sea = self.sea_edges[name]
-            self.balance['outflow_m3'] += float(dt*self.dx*outward[~sea].sum())
-            self.balance['sea_inflow_m3'] += float(dt*self.dx*np.maximum(0, -outward[sea]).sum())
-            self.balance['sea_outflow_m3'] += float(dt*self.dx*np.maximum(0, outward[sea]).sum())
-        if not all(np.isfinite(a).all() for a in (self.h, self.mx, self.mz)) or self.h.min() < -1e-7:
-            raise RuntimeError('水动力计算不稳定，请检查网格与场景参数')
-        adjustment = float(-np.minimum(self.h, 0).sum()*area)
-        self.balance['numerical_adjustment_m3'] += adjustment
-        np.maximum(self.h, 0, out=self.h)
-        wet = self.h > DRY
-        self.mx[~wet] = 0; self.mz[~wet] = 0
-        drag = 1 + dt*G*self.manning**2*np.hypot(self.mx, self.mz)/np.maximum(self.h, DRY)**(7/3)
-        self.mx /= drag; self.mz /= drag
-        self.mx[self.solid]=0; self.mz[self.solid]=0; self.h[self.solid]=0
+            self.external_volume_by_id[entry['id']] += self.external_discharge(entry, self.time)*dt
+        self._drag(.5*dt)
+        self._complete_dry_sinks(dt, infiltration, removals)
+        wet = (self.h > self.velocity_depth) & (~self.solid)
+        self.mx[~wet] = 0.; self.mz[~wet] = 0.; self.h[self.solid] = 0.
+        if not all(np.isfinite(a).all() for a in (self.h, self.mx, self.mz)):
+            raise RuntimeError('Non-finite hydraulic state after source update')
         np.maximum(self.maximum, self.h, out=self.maximum)
-        self.time += dt
-        self.steps += 1
+        self.time += dt; self.steps += 1
+        d = self.diagnostics
+        d['min_dt_s'] = dt if d['min_dt_s'] is None else min(d['min_dt_s'], dt)
+        d['max_dt_s'] = max(d['max_dt_s'], dt)
 
     def advance(self, end, *, rain=0.0, rain_until=float('inf'), infiltration=0.0,
-                inflow=0.0, source=None, cancelled=lambda: False):
-        while self.time < end - 1e-10:
-            if cancelled(): raise InterruptedError('模拟已取消')
-            raining = rain if self.time < rain_until - 1e-10 else 0.0
-            limit = min(1.0, end-self.time)
-            if raining: limit = min(limit, rain_until-self.time)
-            self.source_rate=self._scheduled_rate(self.time)
-            self.external_rate=self._external_rate(self.time)
+                inflow=0.0, source=None, cancelled=lambda: False, progress=None):
+        if not np.isfinite(end) or end < self.time:
+            raise ValueError('End time must be finite and cannot go backwards')
+        if (not all(np.isfinite(v) and v >= 0 for v in (rain, infiltration, inflow))
+                or np.isnan(rain_until) or rain_until < 0):
+            raise ValueError('Invalid forcing')
+        if inflow and (source is None or len(source) != 2 or not all(
+                isinstance(v, (int, np.integer)) and 0 <= v < n for v, n in zip(source, self.h.shape))):
+            raise ValueError('Inflow requires a valid source cell')
+        last_report=time.perf_counter()
+        while self.time < end:
+            if cancelled():
+                raise InterruptedError('模拟已取消')
+            remaining = float(end-self.time)
+            if remaining <= 8*np.finfo(float).eps*max(1., abs(end)):
+                self.time = float(end)
+                break
+            raining = rain if self.time < rain_until-1e-10 else 0.
+            limit = min(self.max_timestep, remaining)
+            if raining:
+                limit = min(limit, rain_until-self.time)
+            self.source_rate = self._scheduled_rate(self.time)
+            self.external_rate = self._external_rate(self.time)
             for entry in self.source_schedule+self.external_schedule:
-                for t,_ in entry['hydrograph']:
-                    if t>self.time+1e-10: limit=min(limit,t-self.time);break
+                for t, _ in entry['hydrograph']:
+                    if t > self.time+1e-10:
+                        limit = min(limit, t-self.time)
+                        break
             dt = self.timestep(limit, raining, inflow, source)
-            if dt < 1e-9 or self.steps >= 500000:
-                raise RuntimeError('场景需要过多计算步，请缩短时间或降低计算分辨率')
+            if dt < 1e-10 or self.steps >= self.max_steps:
+                raise RuntimeError('水动力步长过小或超过步数上限: '+str(self.last_timestep))
             self.step(dt, rain=raining, infiltration=infiltration, inflow=inflow, source=source)
+            if progress is not None and time.perf_counter()-last_report>=1.:
+                progress(self)
+                last_report=time.perf_counter()
 
     def summary(self):
         u, v = self.velocity()
@@ -351,9 +670,12 @@ class FloodSolver:
                     + b['scheduled_inflow_m3'] + b['external_inflow_m3'] - b['drainage_m3']
                     - b['infiltration_m3'] - b['outflow_m3'] - b['sea_outflow_m3'])
         return dict(time_s=self.time, steps=self.steps, max_depth_m=float(self.h.max()),
+                    numerics=self.numerical_config(), diagnostics=dict(self.diagnostics),
+                    last_timestep=dict(self.last_timestep), boundary_state_time_s=self.boundary_state_time,
                     max_speed_m_s=float(np.hypot(u, v).max()),
                     wet_area_m2=int((self.h >= .01).sum())*self.dx**2,
                     newly_flooded_area_m2=int(((self.initial < .01) & (self.h >= .01)).sum())*self.dx**2,
                     external_inflow_by_id_m3=dict(self.external_volume_by_id),
                     boundary_inflows=self.last_boundary_inflows,boundary_sample_time_s=self.boundary_sample_time,
-                    balance=dict(b, current_m3=current, residual_m3=current-expected))
+                    balance=dict(b, current_m3=current, residual_m3=current-expected,
+                                 corrected_residual_m3=current-expected-b['numerical_adjustment_m3']))

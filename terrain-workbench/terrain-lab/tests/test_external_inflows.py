@@ -15,6 +15,14 @@ def world(factor=1):
 
 
 class RiverDetectionTests(unittest.TestCase):
+    def test_diagonal_channel_tangent_tracks_channel_and_points_inward(self):
+        z,x=np.indices((48,64));river=np.abs(z-(8+.5*x))<=1.5
+        bed=10-.02*x;ports=river_inlets.detect(river,bed,bed+.5)
+        west=next(p for p in ports if p['edge']=='west');v=west['inward_tangent']['vector_xz']
+        self.assertEqual(west['inward_tangent']['method'],'local_channel_cross_section_fit')
+        self.assertGreater(v[0],0);self.assertAlmostEqual(v[1]/v[0],.5,delta=.08)
+        self.assertAlmostEqual(np.linalg.norm(v),1)
+
     def test_sea_connected_river_override_excludes_channel_banks_and_isolated_water(self):
         types=np.zeros((8,12),np.int32);types[:,0]=2;types[2:5,1:5]=5
         types[6,8:10]=5;types[0,8:10]=5
@@ -68,6 +76,40 @@ class RiverDetectionTests(unittest.TestCase):
 
 
 class ExternalFlowTests(unittest.TestCase):
+    def test_auto_tangent_and_manual_angle_set_real_two_component_boundary_momentum(self):
+        for backend in ('numpy','numba'):
+            for edge,vector in [('west',(.8,.6)),('east',(-.8,.6)),('north',(.6,.8)),('south',(.6,-.8))]:
+                for direction_mode in ('auto','angle'):
+                    with self.subTest(backend=backend,edge=edge,mode=direction_mode):
+                        w=world();s=w.solver
+                        if backend=='numpy':s.acceleration=None
+                        elif not s.acceleration:continue
+                        s.h.fill(1);s.initial=s.h.copy();s.maximum=s.h.copy()
+                        s.balance['initial_m3']=float(s.h.sum()*s.dx**2);s.time_integrator='euler';s.manning.fill(0)
+                        z,x={'west':(3,0),'east':(3,11),'north':(0,5),'south':(7,5)}[edge]
+                        p=dict(id='oblique',kind='river',role='inlet',x=x,z=z,edge=edge,native_cells=[[z,x]],
+                            inward_tangent=dict(vector_xz=list(vector),method='local_channel_cross_section_fit'))
+                        river_inlets.configure(w,[p],[dict(id='oblique',kind='river',inlet_velocity_m_s=2,
+                            inlet_direction_mode=direction_mode,inlet_angle_deg=float(np.degrees(np.arctan2(vector[1],vector[0]))%360),
+                            hydrograph=[[0,4],[1,0]])],[8,12])
+                        before=s.h.sum()*s.dx**2;dt=.001;s.step(dt)
+                        self.assertAlmostEqual(s.h.sum()*s.dx**2-before,4*dt,places=11)
+                        self.assertAlmostEqual(float(s.mx.sum()*s.dx**2),4*2*vector[0]*dt,places=11)
+                        self.assertAlmostEqual(float(s.mz.sum()*s.dx**2),4*2*vector[1]*dt,places=11)
+                        state=s.last_boundary_inflows[0]['faces'][0]
+                        self.assertAlmostEqual(state['velocity_x_m_s'],2*vector[0])
+                        self.assertAlmostEqual(state['velocity_z_m_s'],2*vector[1])
+
+    def test_outward_or_parallel_manual_direction_is_rejected_and_auto_falls_back(self):
+        p=dict(id='angle',kind='river',role='inlet',x=0,z=3,edge='west',native_cells=[[3,0]],
+            inward_tangent=dict(vector_xz=[0,1]))
+        for angle in (90,180,270,float('nan'),True):
+            with self.subTest(angle=angle),self.assertRaises(ValueError):
+                river_inlets.configure(world(),[p],[dict(id='angle',kind='river',inlet_direction_mode='angle',inlet_angle_deg=angle)],[8,12])
+        w=world();river_inlets.configure(w,[p],[dict(id='angle',kind='river')],[8,12])
+        f=w.external_inflows[0]['boundary_faces'][0]
+        self.assertEqual(f['momentum_direction_xz'],[1,0]);self.assertEqual(f['direction_method'],'boundary_normal_fallback')
+
     def test_two_uncertain_river_crossings_can_both_supply_water(self):
         w=world();ports=[dict(id='river-a',kind='river',role='uncertain',x=0,z=3,native_cells=[[3,0]]),
                         dict(id='river-b',kind='river',role='uncertain',x=11,z=5,native_cells=[[5,11]])]
@@ -151,7 +193,7 @@ class ExternalFlowTests(unittest.TestCase):
         with zipfile.ZipFile(io.BytesIO(w.export_zip())) as z:
             state=json.loads(z.read('map_model.json'));self.assertEqual(state['M_forcing']['external_inflows'][0]['id'],port['id'])
             arrays=np.load(io.BytesIO(z.read('layers.npz')),allow_pickle=False)
-            self.assertEqual(arrays['M_forcing.inlet_count'].shape,(32,32))
+            self.assertEqual(arrays['M_forcing.inlet_count'].shape,tuple(t['shape']))
             self.assertTrue(np.isfinite(arrays['M_forcing.external_rate_m_s']).all())
         again=map_sessions.create(ROOT,t,data)
         self.assertEqual(again.external_inflows,w.external_inflows)

@@ -105,9 +105,32 @@ class MapProcessTests(unittest.TestCase):
         terrain=server.describe('example/raw')
         w=map_sessions.create(ROOT,terrain,dict(mode='current',terrain_id=terrain['id'],
             flood=dict(resolution=32,baseflow=False,warmup_s=0)))
-        self.assertEqual(w.base.shape,(32,32));self.assertEqual(w.base.dx,32)
-        self.assertEqual(w.base.terrain_class.shape,(32,32))
+        self.assertEqual(w.base.shape,tuple(terrain['shape']));self.assertEqual(w.base.dx,terrain['step'])
+        self.assertEqual(w.base.terrain_class.shape,tuple(terrain['shape']))
+        self.assertEqual(w.meta['coarsening_factor'],1)
+        raw=terrain['fields']['terrain']
+        np.testing.assert_array_equal(w.base.terrain_class,np.fromfile(ROOT/raw['url'].lstrip('/'),dtype=raw['dtype']).reshape(terrain['shape']))
         self.assertNotIn('agents',w.snapshot())
+
+    def test_binary_scene_and_streamed_archive_preserve_all_grid_values(self):
+        import tempfile
+        w=world(depth=np.full((8,12),.25));w.scenario_config=dict(mode='demo')
+        with tempfile.TemporaryDirectory(dir=ROOT/'.runtime/test-temp') as tmp:
+            root=Path(tmp)
+            scene=map_sessions.browser_scene(root,'packed-test',w,pack_threshold=0)
+            for group,fields in [('M_base',w.base.snapshot()),('M_water',w.water(compact=True))]:
+                for name,a in fields.items():
+                    if not isinstance(a,np.ndarray):continue
+                    field=scene[group][name]
+                    actual=np.fromfile(root/field['array_url'].lstrip('/'),dtype=field['dtype']).reshape(field['shape'])
+                    np.testing.assert_array_equal(actual,a)
+            out=io.StringIO();map_sessions.write_snapshot(out,w)
+            self.assertEqual(json.loads(out.getvalue()),w.snapshot())
+            url=map_sessions.save_process(root,'packed-test',w,[])
+            with zipfile.ZipFile(root/url.lstrip('/')) as archive:
+                arrays=np.load(io.BytesIO(archive.read('layers.npz')))
+                np.testing.assert_array_equal(arrays['M_base.z'],w.base.z)
+                self.assertEqual(json.loads(archive.read('map_model.json')),w.snapshot())
 
     def test_removed_agent_config_and_reversed_time_are_rejected(self):
         terrain=server.describe('example/raw')

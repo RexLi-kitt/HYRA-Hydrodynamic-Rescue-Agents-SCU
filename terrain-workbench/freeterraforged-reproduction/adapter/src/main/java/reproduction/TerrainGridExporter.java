@@ -30,7 +30,10 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.concurrent.CompletableFuture;
 
 /** Sampling adapter only: all generation and filtering remain in upstream classes. */
@@ -88,40 +91,46 @@ public final class TerrainGridExporter implements DataProvider {
         int tileWidth = context.generator.getTileBlockSize();
 
         List<Column> columns = new ArrayList<>();
+        Set<String> requestedFields = null;
+        if (request.has("fields")) {
+            requestedFields = new HashSet<>();
+            for (var name : request.getAsJsonArray("fields")) requestedFields.add(name.getAsString());
+            if (requestedFields.isEmpty()) throw new IllegalArgumentException("fields must not be empty");
+        }
         Field[] fields = Cell.class.getFields();
         Arrays.sort(fields, Comparator.comparing(Field::getName));
         for (Field field : fields) {
-            if (!Modifier.isStatic(field.getModifiers())) columns.add(new Column(field, count));
+            if (!Modifier.isStatic(field.getModifiers()) && (requestedFields == null || requestedFields.contains(field.getName()))) columns.add(new Column(field, count));
         }
-        record Key(int x, int z) implements Comparable<Key> {
-            public int compareTo(Key other) { int c = Integer.compare(z, other.z); return c != 0 ? c : Integer.compare(x, other.x); }
+        if (requestedFields != null && columns.size() != requestedFields.size()) {
+            throw new IllegalArgumentException("Unknown original Cell field in fields");
         }
-        Map<Key, List<Integer>> samples = new TreeMap<>();
-        for (int row = 0; row < nz; row++) {
-            int z = Math.toIntExact((long) originZ + (long) row * step);
-            for (int col = 0; col < nx; col++) {
-                int x = Math.toIntExact((long) originX + (long) col * step);
-                samples.computeIfAbsent(new Key(Math.floorDiv(x, tileWidth), Math.floorDiv(z, tileWidth)), k -> new ArrayList<>())
-                        .add(row * nx + col);
-            }
-        }
+        // A rectangular sample grid is a Cartesian product of tile columns and
+        // rows. Keep O(nx+nz) tile coordinates instead of one boxed index per cell.
+        Set<Integer> tileXs = new TreeSet<>(), tileZs = new TreeSet<>();
+        for (int col = 0; col < nx; col++) tileXs.add(Math.floorDiv(Math.toIntExact((long) originX + (long) col * step), tileWidth));
+        for (int row = 0; row < nz; row++) tileZs.add(Math.floorDiv(Math.toIntExact((long) originZ + (long) row * step), tileWidth));
+        int totalTiles = Math.multiplyExact(tileXs.size(), tileZs.size());
         double[] maximumHeight = {Double.NEGATIVE_INFINITY};
         int completed = 0;
-        for (var group : samples.entrySet()) {
-            Key key = group.getKey();
-            try (Tile tile = context.generator.generate(key.x(), key.z()).join()) {
+        for (int tileZ : tileZs) for (int tileX : tileXs) {
+            try (Tile tile = context.generator.generate(tileX, tileZ).join()) {
                 for (Cell cell : tile.getBacking()) {
                     if (!Float.isFinite(cell.height)) throw new IllegalStateException("Non-finite terrain elevation");
                     maximumHeight[0] = Math.max(maximumHeight[0], (double) cell.height * context.levels.terrainScaleFactor);
                 }
-                for (int index : group.getValue()) {
-                    int x = Math.toIntExact((long) originX + (long) (index % nx) * step);
-                    int z = Math.toIntExact((long) originZ + (long) (index / nx) * step);
+                int rowStart = Math.toIntExact(Math.max(0L, Math.ceilDiv((long) tileZ * tileWidth - originZ, step)));
+                int rowEnd = Math.toIntExact(Math.min((long) nz, Math.floorDiv(((long) tileZ + 1) * tileWidth - 1 - originZ, step) + 1));
+                int colStart = Math.toIntExact(Math.max(0L, Math.ceilDiv((long) tileX * tileWidth - originX, step)));
+                int colEnd = Math.toIntExact(Math.min((long) nx, Math.floorDiv(((long) tileX + 1) * tileWidth - 1 - originX, step) + 1));
+                for (int row = rowStart; row < rowEnd; row++) for (int col = colStart; col < colEnd; col++) {
+                    int x = Math.toIntExact((long) originX + (long) col * step);
+                    int z = Math.toIntExact((long) originZ + (long) row * step);
                     Cell cell = tile.lookup(x, z);
-                    for (Column column : columns) column.store(index, cell);
+                    for (Column column : columns) column.store(row * nx + col, cell);
                 }
             }
-            System.out.printf("Original terrain tiles: %d/%d%n", ++completed, samples.size());
+            System.out.printf("Original terrain tiles: %d/%d%n", ++completed, totalTiles);
         }
 
         Map<String, Object> metadata = new LinkedHashMap<>();
