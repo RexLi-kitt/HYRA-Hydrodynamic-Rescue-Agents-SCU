@@ -1,0 +1,1622 @@
+{
+  "metadata": {
+    "mode": "uniform",
+    "warmup_wall_s": 13.044036000035703,
+    "roughness": {
+      "mode": "uniform",
+      "n": 0.035,
+      "base_source": "uniform",
+      "effective_min_n": 0.035,
+      "effective_max_n": 0.035,
+      "manual_patch_count": 0
+    },
+    "branches": [
+      {
+        "time_s": 70.0,
+        "steps": 3256,
+        "max_depth_m": 5.968602569837694,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 8.112696635365069e-06,
+          "max_dt_s": 0.023477977946623922,
+          "limited_faces": 0,
+          "max_stage_courant": 0.4014591720668697,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.0059662635773634065,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.0059662635773634065,
+          "cfl_limit_s": 0.021913825037999324,
+          "limiting_cell": [
+            250,
+            69
+          ],
+          "cell_depth_m": 5.937349057122994,
+          "cell_u_m_s": 0.3837524739992839,
+          "cell_v_m_s": 0.6288573064081235,
+          "grid_wave_bound_m_s": 18.253317223551175,
+          "boundary_wave_bound_m_s": 7.50605006362689,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 8.167900423637155,
+        "wet_area_m2": 5245.0,
+        "newly_flooded_area_m2": 340.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 699.9999999999998
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 51,
+                "z": 0,
+                "x": 51,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 52,
+                "z": 0,
+                "x": 52,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 53,
+                "z": 0,
+                "x": 53,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 54,
+                "z": 0,
+                "x": 54,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5457541284864066,
+                "velocity_m_s": 0.7776839912907293,
+                "velocity_x_m_s": 0.5540260116185177,
+                "velocity_z_m_s": 0.5457541284864066,
+                "reference_depth_m": 1.0179594190085786
+              },
+              {
+                "edge": "north",
+                "offset": 55,
+                "z": 0,
+                "x": 55,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5331883712411493,
+                "velocity_m_s": 0.7597781473621009,
+                "velocity_x_m_s": 0.5412697977738984,
+                "velocity_z_m_s": 0.5331883712411493,
+                "reference_depth_m": 1.0419498727294825
+              },
+              {
+                "edge": "north",
+                "offset": 56,
+                "z": 0,
+                "x": 56,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5259177952478731,
+                "velocity_m_s": 0.7494177849529059,
+                "velocity_x_m_s": 0.5338890231549401,
+                "velocity_z_m_s": 0.5259177952478731,
+                "reference_depth_m": 1.0563543591327116
+              },
+              {
+                "edge": "north",
+                "offset": 57,
+                "z": 0,
+                "x": 57,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5278171197928593,
+                "velocity_m_s": 0.7521242679931678,
+                "velocity_x_m_s": 0.5358171353716014,
+                "velocity_z_m_s": 0.5278171197928593,
+                "reference_depth_m": 1.0525531187271497
+              },
+              {
+                "edge": "north",
+                "offset": 58,
+                "z": 0,
+                "x": 58,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5312688907259949,
+                "velocity_m_s": 0.7570429426420378,
+                "velocity_x_m_s": 0.539321224087173,
+                "velocity_z_m_s": 0.5312688907259949,
+                "reference_depth_m": 1.0457144494125605
+              },
+              {
+                "edge": "north",
+                "offset": 59,
+                "z": 0,
+                "x": 59,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5349356164965343,
+                "velocity_m_s": 0.7622679217734099,
+                "velocity_x_m_s": 0.5430435256664295,
+                "velocity_z_m_s": 0.5349356164965343,
+                "reference_depth_m": 1.038546580977479
+              },
+              {
+                "edge": "north",
+                "offset": 60,
+                "z": 0,
+                "x": 60,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5364039944201106,
+                "velocity_m_s": 0.7643603182294788,
+                "velocity_x_m_s": 0.5445341594923317,
+                "velocity_z_m_s": 0.5364039944201106,
+                "reference_depth_m": 1.0357036139452116
+              },
+              {
+                "edge": "north",
+                "offset": 61,
+                "z": 0,
+                "x": 61,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5303607938401081,
+                "velocity_m_s": 0.7557489306065197,
+                "velocity_x_m_s": 0.5383993633634687,
+                "velocity_z_m_s": 0.5303607938401081,
+                "reference_depth_m": 1.0475049475905323
+              },
+              {
+                "edge": "north",
+                "offset": 62,
+                "z": 0,
+                "x": 62,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 63,
+                "z": 0,
+                "x": 63,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 64,
+                "z": 0,
+                "x": 64,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.736662576554988,
+                "velocity_m_s": 2.474694397285103,
+                "velocity_x_m_s": 1.7629848142135742,
+                "velocity_z_m_s": 1.736662576554988,
+                "reference_depth_m": 0.3198983861664189
+              },
+              {
+                "edge": "north",
+                "offset": 65,
+                "z": 0,
+                "x": 65,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 66,
+                "z": 0,
+                "x": 66,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 67,
+                "z": 0,
+                "x": 67,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 68,
+                "z": 0,
+                "x": 68,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.99403373642264,
+        "balance": {
+          "initial_m3": 7833.066896402823,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 1039.271243201962,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 699.9999999999998,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 7493.795653200861,
+          "residual_m3": 0.0,
+          "corrected_residual_m3": 0.0
+        }
+      },
+      {
+        "time_s": 70.0,
+        "steps": 4533,
+        "max_depth_m": 7.068739208310934,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.00021320708387584375,
+          "max_dt_s": 0.02044172266962167,
+          "limited_faces": 0,
+          "max_stage_courant": 0.39990083322457093,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.0017429860057660562,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.0017429860057660562,
+          "cfl_limit_s": 0.014874850993405275,
+          "limiting_cell": [
+            56,
+            114
+          ],
+          "cell_depth_m": 0.5249124376016026,
+          "cell_u_m_s": -8.393933428851808,
+          "cell_v_m_s": 8.379054315513153,
+          "grid_wave_bound_m_s": 26.891025676649733,
+          "boundary_wave_bound_m_s": 7.754954521534312,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 13.863793159006768,
+        "wet_area_m2": 6509.0,
+        "newly_flooded_area_m2": 1433.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 6125.000000000038
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 51,
+                "z": 0,
+                "x": 51,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 52,
+                "z": 0,
+                "x": 52,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 53,
+                "z": 0,
+                "x": 53,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 54,
+                "z": 0,
+                "x": 54,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.4929108323820841,
+                "velocity_m_s": 0.7023838088782915,
+                "velocity_x_m_s": 0.500381780538398,
+                "velocity_z_m_s": 0.4929108323820841,
+                "reference_depth_m": 1.12709139068973
+              },
+              {
+                "edge": "north",
+                "offset": 55,
+                "z": 0,
+                "x": 55,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.4805048893190145,
+                "velocity_m_s": 0.6847056955788632,
+                "velocity_x_m_s": 0.4877878031466721,
+                "velocity_z_m_s": 0.4805048893190145,
+                "reference_depth_m": 1.1561912644487449
+              },
+              {
+                "edge": "north",
+                "offset": 56,
+                "z": 0,
+                "x": 56,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.47189553676285306,
+                "velocity_m_s": 0.6724376149380926,
+                "velocity_x_m_s": 0.4790479604036838,
+                "velocity_z_m_s": 0.47189553676285306,
+                "reference_depth_m": 1.177285039325865
+              },
+              {
+                "edge": "north",
+                "offset": 57,
+                "z": 0,
+                "x": 57,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.47544961865191415,
+                "velocity_m_s": 0.6775020797668327,
+                "velocity_x_m_s": 0.4826559107813073,
+                "velocity_z_m_s": 0.47544961865191415,
+                "reference_depth_m": 1.1684845959720678
+              },
+              {
+                "edge": "north",
+                "offset": 58,
+                "z": 0,
+                "x": 58,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.4779691686928059,
+                "velocity_m_s": 0.6810923663625414,
+                "velocity_x_m_s": 0.4852136491242126,
+                "velocity_z_m_s": 0.4779691686928059,
+                "reference_depth_m": 1.1623250869401054
+              },
+              {
+                "edge": "north",
+                "offset": 59,
+                "z": 0,
+                "x": 59,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.4806271464717391,
+                "velocity_m_s": 0.6848799085174961,
+                "velocity_x_m_s": 0.48791191332592754,
+                "velocity_z_m_s": 0.4806271464717391,
+                "reference_depth_m": 1.155897164015521
+              },
+              {
+                "edge": "north",
+                "offset": 60,
+                "z": 0,
+                "x": 60,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.48256448499708826,
+                "velocity_m_s": 0.6876405603902604,
+                "velocity_x_m_s": 0.4898786156930372,
+                "velocity_z_m_s": 0.48256448499708826,
+                "reference_depth_m": 1.1512566150799675
+              },
+              {
+                "edge": "north",
+                "offset": 61,
+                "z": 0,
+                "x": 61,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.47865808954610806,
+                "velocity_m_s": 0.682074058833408,
+                "velocity_x_m_s": 0.4859130118092634,
+                "velocity_z_m_s": 0.47865808954610806,
+                "reference_depth_m": 1.1606521809385197
+              },
+              {
+                "edge": "north",
+                "offset": 62,
+                "z": 0,
+                "x": 62,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 63,
+                "z": 0,
+                "x": 63,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 64,
+                "z": 0,
+                "x": 64,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.5896468520896194,
+                "velocity_m_s": 2.2652012035243643,
+                "velocity_x_m_s": 1.613740802635229,
+                "velocity_z_m_s": 1.5896468520896194,
+                "reference_depth_m": 0.34948363205655886
+              },
+              {
+                "edge": "north",
+                "offset": 65,
+                "z": 0,
+                "x": 65,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 66,
+                "z": 0,
+                "x": 66,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 67,
+                "z": 0,
+                "x": 67,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.6629692845544217,
+                "velocity_m_s": 2.369683568300085,
+                "velocity_x_m_s": 1.6881745681356473,
+                "velocity_z_m_s": 1.6629692845544217,
+                "reference_depth_m": 0.33407445387929213
+              },
+              {
+                "edge": "north",
+                "offset": 68,
+                "z": 0,
+                "x": 68,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.542880073926637,
+                "velocity_m_s": 2.1985598850198866,
+                "velocity_x_m_s": 1.5662651900297064,
+                "velocity_z_m_s": 1.542880073926637,
+                "reference_depth_m": 0.3600769528001383
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.99825701399423,
+        "balance": {
+          "initial_m3": 7833.066896402823,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 2982.93093188527,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 6125.000000000038,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 10975.135964517545,
+          "residual_m3": -4.547473508864641e-11,
+          "corrected_residual_m3": -4.547473508864641e-11
+        }
+      }
+    ]
+  },
+  "series": [
+    {
+      "time_s": 0.0,
+      "additional_wet_area_m2": 0,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.60032014556606,
+          "flood_stage_m": 152.60032014556606,
+          "pulse_rise_m": 0.0
+        },
+        "middle": {
+          "control_stage_m": 147.41147160830434,
+          "flood_stage_m": 147.41147160830434,
+          "pulse_rise_m": 0.0
+        },
+        "downstream": {
+          "control_stage_m": 146.999681939006,
+          "flood_stage_m": 146.999681939006,
+          "pulse_rise_m": 0.0
+        }
+      }
+    },
+    {
+      "time_s": 2.0,
+      "additional_wet_area_m2": 0,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.58278281183482,
+          "flood_stage_m": 152.58278281183482,
+          "pulse_rise_m": 0.0
+        },
+        "middle": {
+          "control_stage_m": 147.48238037065047,
+          "flood_stage_m": 147.48238037065047,
+          "pulse_rise_m": 0.0
+        },
+        "downstream": {
+          "control_stage_m": 147.00942861073366,
+          "flood_stage_m": 147.00942861073366,
+          "pulse_rise_m": 0.0
+        }
+      }
+    },
+    {
+      "time_s": 4.0,
+      "additional_wet_area_m2": 0,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.56873513329217,
+          "flood_stage_m": 152.56873513329217,
+          "pulse_rise_m": 0.0
+        },
+        "middle": {
+          "control_stage_m": 147.51010958957178,
+          "flood_stage_m": 147.51010958957178,
+          "pulse_rise_m": 0.0
+        },
+        "downstream": {
+          "control_stage_m": 147.00609712669774,
+          "flood_stage_m": 147.00609712669774,
+          "pulse_rise_m": 0.0
+        }
+      }
+    },
+    {
+      "time_s": 6.0,
+      "additional_wet_area_m2": 16,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.55284199004984,
+          "flood_stage_m": 152.5528403393199,
+          "pulse_rise_m": -1.6507299273049725e-06
+        },
+        "middle": {
+          "control_stage_m": 147.4694728574671,
+          "flood_stage_m": 147.46947287385032,
+          "pulse_rise_m": 1.638320479280253e-08
+        },
+        "downstream": {
+          "control_stage_m": 147.00213694679323,
+          "flood_stage_m": 147.00213700514274,
+          "pulse_rise_m": 5.834951721794823e-08
+        }
+      }
+    },
+    {
+      "time_s": 8.0,
+      "additional_wet_area_m2": 48,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.54055327481336,
+          "flood_stage_m": 152.54055517541124,
+          "pulse_rise_m": 1.9005978746378105e-06
+        },
+        "middle": {
+          "control_stage_m": 147.41387688668914,
+          "flood_stage_m": 147.41387647953627,
+          "pulse_rise_m": -4.0715287741299733e-07
+        },
+        "downstream": {
+          "control_stage_m": 146.97613466900884,
+          "flood_stage_m": 146.9761340390808,
+          "pulse_rise_m": -6.299280261856666e-07
+        }
+      }
+    },
+    {
+      "time_s": 10.0,
+      "additional_wet_area_m2": 112,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.53277354550627,
+          "flood_stage_m": 152.53286422974597,
+          "pulse_rise_m": 9.068423969404993e-05
+        },
+        "middle": {
+          "control_stage_m": 147.32517744003053,
+          "flood_stage_m": 147.32517747306068,
+          "pulse_rise_m": 3.3030143509193977e-08
+        },
+        "downstream": {
+          "control_stage_m": 146.98895675540084,
+          "flood_stage_m": 146.98895713424287,
+          "pulse_rise_m": 3.788420261940928e-07
+        }
+      }
+    },
+    {
+      "time_s": 12.0,
+      "additional_wet_area_m2": 208,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.52818485583344,
+          "flood_stage_m": 153.27228931662833,
+          "pulse_rise_m": 0.7441044607948784
+        },
+        "middle": {
+          "control_stage_m": 147.2534872279557,
+          "flood_stage_m": 147.2534874884727,
+          "pulse_rise_m": 2.6051699153484265e-07
+        },
+        "downstream": {
+          "control_stage_m": 146.9941484261488,
+          "flood_stage_m": 146.99415002847388,
+          "pulse_rise_m": 1.602325079730349e-06
+        }
+      }
+    },
+    {
+      "time_s": 14.0,
+      "additional_wet_area_m2": 368,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.52429825713585,
+          "flood_stage_m": 153.25102862533615,
+          "pulse_rise_m": 0.7267303682002784
+        },
+        "middle": {
+          "control_stage_m": 147.19746088847162,
+          "flood_stage_m": 147.19746153092163,
+          "pulse_rise_m": 6.424499929824634e-07
+        },
+        "downstream": {
+          "control_stage_m": 146.98519878445066,
+          "flood_stage_m": 146.98519686896935,
+          "pulse_rise_m": -1.915481318448542e-06
+        }
+      }
+    },
+    {
+      "time_s": 16.0,
+      "additional_wet_area_m2": 528,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.52081241708643,
+          "flood_stage_m": 153.97945013968595,
+          "pulse_rise_m": 1.458637722599518
+        },
+        "middle": {
+          "control_stage_m": 147.1748562355306,
+          "flood_stage_m": 147.1748567705614,
+          "pulse_rise_m": 5.350308036611295e-07
+        },
+        "downstream": {
+          "control_stage_m": 146.9812577540249,
+          "flood_stage_m": 146.98125479130874,
+          "pulse_rise_m": -2.9627161515222156e-06
+        }
+      }
+    },
+    {
+      "time_s": 18.0,
+      "additional_wet_area_m2": 656,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5179488380848,
+          "flood_stage_m": 154.49353238109265,
+          "pulse_rise_m": 1.975583543007862
+        },
+        "middle": {
+          "control_stage_m": 147.18374270457687,
+          "flood_stage_m": 147.18374226717611,
+          "pulse_rise_m": -4.3740074273657115e-07
+        },
+        "downstream": {
+          "control_stage_m": 146.97348244173563,
+          "flood_stage_m": 146.9734877606108,
+          "pulse_rise_m": 5.318875167859005e-06
+        }
+      }
+    },
+    {
+      "time_s": 20.0,
+      "additional_wet_area_m2": 880,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.51425236406322,
+          "flood_stage_m": 154.65895653170827,
+          "pulse_rise_m": 2.144704167645026
+        },
+        "middle": {
+          "control_stage_m": 147.1890913728985,
+          "flood_stage_m": 147.18909130364096,
+          "pulse_rise_m": -6.925753193165463e-08
+        },
+        "downstream": {
+          "control_stage_m": 147.01093130966524,
+          "flood_stage_m": 147.01092298481885,
+          "pulse_rise_m": -8.324846383800377e-06
+        }
+      }
+    },
+    {
+      "time_s": 22.0,
+      "additional_wet_area_m2": 944,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.51139105608232,
+          "flood_stage_m": 154.69090739612565,
+          "pulse_rise_m": 2.1795163400433495
+        },
+        "middle": {
+          "control_stage_m": 147.18045195712526,
+          "flood_stage_m": 147.18044766979193,
+          "pulse_rise_m": -4.287333323471643e-06
+        },
+        "downstream": {
+          "control_stage_m": 147.06916892540806,
+          "flood_stage_m": 147.06916515078112,
+          "pulse_rise_m": -3.774626946118076e-06
+        }
+      }
+    },
+    {
+      "time_s": 24.0,
+      "additional_wet_area_m2": 1040,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5102617167285,
+          "flood_stage_m": 154.73271095091275,
+          "pulse_rise_m": 2.2224492341842597
+        },
+        "middle": {
+          "control_stage_m": 147.173847715965,
+          "flood_stage_m": 147.17383737647822,
+          "pulse_rise_m": -1.033948678008656e-05
+        },
+        "downstream": {
+          "control_stage_m": 147.1156899132284,
+          "flood_stage_m": 147.11569280609072,
+          "pulse_rise_m": 2.8928622937129944e-06
+        }
+      }
+    },
+    {
+      "time_s": 26.0,
+      "additional_wet_area_m2": 1168,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50560295024678,
+          "flood_stage_m": 154.75357017930466,
+          "pulse_rise_m": 2.2479672290578883
+        },
+        "middle": {
+          "control_stage_m": 147.1723171472839,
+          "flood_stage_m": 147.17228595348192,
+          "pulse_rise_m": -3.119380199390065e-05
+        },
+        "downstream": {
+          "control_stage_m": 147.1591141157386,
+          "flood_stage_m": 147.1591181922921,
+          "pulse_rise_m": 4.076553548948425e-06
+        }
+      }
+    },
+    {
+      "time_s": 28.0,
+      "additional_wet_area_m2": 1264,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50846250154376,
+          "flood_stage_m": 154.7721213324284,
+          "pulse_rise_m": 2.2636588308846637
+        },
+        "middle": {
+          "control_stage_m": 147.1786382641336,
+          "flood_stage_m": 147.17883556697427,
+          "pulse_rise_m": 0.0001973028406800914
+        },
+        "downstream": {
+          "control_stage_m": 147.19273048382786,
+          "flood_stage_m": 147.19272796088143,
+          "pulse_rise_m": -2.52294644820239e-06
+        }
+      }
+    },
+    {
+      "time_s": 30.0,
+      "additional_wet_area_m2": 1376,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5060777341961,
+          "flood_stage_m": 154.78421302312947,
+          "pulse_rise_m": 2.278135288933364
+        },
+        "middle": {
+          "control_stage_m": 147.18330678369466,
+          "flood_stage_m": 148.04988647100396,
+          "pulse_rise_m": 0.8665796873093008
+        },
+        "downstream": {
+          "control_stage_m": 147.21758764091786,
+          "flood_stage_m": 147.2175898319751,
+          "pulse_rise_m": 2.191057253853046e-06
+        }
+      }
+    },
+    {
+      "time_s": 32.0,
+      "additional_wet_area_m2": 1504,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5050704960704,
+          "flood_stage_m": 154.7858307143091,
+          "pulse_rise_m": 2.2807602182386857
+        },
+        "middle": {
+          "control_stage_m": 147.1750014012925,
+          "flood_stage_m": 148.45125924737798,
+          "pulse_rise_m": 1.27625784608548
+        },
+        "downstream": {
+          "control_stage_m": 147.22713036910045,
+          "flood_stage_m": 147.2271270145993,
+          "pulse_rise_m": -3.3545011364211064e-06
+        }
+      }
+    },
+    {
+      "time_s": 34.0,
+      "additional_wet_area_m2": 1584,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50462852738107,
+          "flood_stage_m": 154.79059512707,
+          "pulse_rise_m": 2.2859665996889222
+        },
+        "middle": {
+          "control_stage_m": 147.15903030077294,
+          "flood_stage_m": 148.66217997763442,
+          "pulse_rise_m": 1.5031496768614812
+        },
+        "downstream": {
+          "control_stage_m": 147.23539384071222,
+          "flood_stage_m": 147.23539836280673,
+          "pulse_rise_m": 4.522094522840803e-06
+        }
+      }
+    },
+    {
+      "time_s": 36.0,
+      "additional_wet_area_m2": 1680,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5042516073308,
+          "flood_stage_m": 154.79700223609612,
+          "pulse_rise_m": 2.2927506287653454
+        },
+        "middle": {
+          "control_stage_m": 147.14244853919408,
+          "flood_stage_m": 148.831360616246,
+          "pulse_rise_m": 1.6889120770519193
+        },
+        "downstream": {
+          "control_stage_m": 147.23892581585366,
+          "flood_stage_m": 147.2389295458915,
+          "pulse_rise_m": 3.7300378386007083e-06
+        }
+      }
+    },
+    {
+      "time_s": 38.0,
+      "additional_wet_area_m2": 1712,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50360837261195,
+          "flood_stage_m": 154.7343595496075,
+          "pulse_rise_m": 2.230751176995526
+        },
+        "middle": {
+          "control_stage_m": 147.1285783671293,
+          "flood_stage_m": 148.85528433073998,
+          "pulse_rise_m": 1.7267059636106779
+        },
+        "downstream": {
+          "control_stage_m": 147.24723738924368,
+          "flood_stage_m": 147.2472417105155,
+          "pulse_rise_m": 4.321271825702411e-06
+        }
+      }
+    },
+    {
+      "time_s": 40.0,
+      "additional_wet_area_m2": 1792,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50283662461163,
+          "flood_stage_m": 154.21786800006194,
+          "pulse_rise_m": 1.7150313754503232
+        },
+        "middle": {
+          "control_stage_m": 147.11320373602598,
+          "flood_stage_m": 148.75280032167913,
+          "pulse_rise_m": 1.6395965856531403
+        },
+        "downstream": {
+          "control_stage_m": 147.24408011529735,
+          "flood_stage_m": 147.24408649264393,
+          "pulse_rise_m": 6.377346577046694e-06
+        }
+      }
+    },
+    {
+      "time_s": 42.0,
+      "additional_wet_area_m2": 1824,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50239076395349,
+          "flood_stage_m": 153.79451458643481,
+          "pulse_rise_m": 1.2921238224813503
+        },
+        "middle": {
+          "control_stage_m": 147.09494519186086,
+          "flood_stage_m": 148.82031235346585,
+          "pulse_rise_m": 1.7253671616050006
+        },
+        "downstream": {
+          "control_stage_m": 147.22751911583035,
+          "flood_stage_m": 147.22752355087852,
+          "pulse_rise_m": 4.435048163387023e-06
+        }
+      }
+    },
+    {
+      "time_s": 44.0,
+      "additional_wet_area_m2": 1936,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5026530023113,
+          "flood_stage_m": 153.59372892832948,
+          "pulse_rise_m": 1.0910759260181857
+        },
+        "middle": {
+          "control_stage_m": 147.07805077635615,
+          "flood_stage_m": 148.83178051190527,
+          "pulse_rise_m": 1.7537297355491321
+        },
+        "downstream": {
+          "control_stage_m": 147.2080542741537,
+          "flood_stage_m": 147.20804915640474,
+          "pulse_rise_m": -5.117748950844714e-06
+        }
+      }
+    },
+    {
+      "time_s": 46.0,
+      "additional_wet_area_m2": 1920,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50159517110697,
+          "flood_stage_m": 153.53261051741956,
+          "pulse_rise_m": 1.0310153463125857
+        },
+        "middle": {
+          "control_stage_m": 147.05777438453242,
+          "flood_stage_m": 148.87791972008657,
+          "pulse_rise_m": 1.8201453355541437
+        },
+        "downstream": {
+          "control_stage_m": 147.19181893805484,
+          "flood_stage_m": 147.1928501041129,
+          "pulse_rise_m": 0.0010311660580359927
+        }
+      }
+    },
+    {
+      "time_s": 48.0,
+      "additional_wet_area_m2": 1872,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5011669768461,
+          "flood_stage_m": 153.4397277502934,
+          "pulse_rise_m": 0.9385607734473242
+        },
+        "middle": {
+          "control_stage_m": 147.03305702169826,
+          "flood_stage_m": 148.88749222806635,
+          "pulse_rise_m": 1.8544352063680907
+        },
+        "downstream": {
+          "control_stage_m": 147.17420437412878,
+          "flood_stage_m": 147.67611375271204,
+          "pulse_rise_m": 0.5019093785832585
+        }
+      }
+    },
+    {
+      "time_s": 50.0,
+      "additional_wet_area_m2": 1952,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50054725819803,
+          "flood_stage_m": 153.4299270614713,
+          "pulse_rise_m": 0.9293798032732667
+        },
+        "middle": {
+          "control_stage_m": 147.0047675802998,
+          "flood_stage_m": 148.7281117248661,
+          "pulse_rise_m": 1.7233441445662563
+        },
+        "downstream": {
+          "control_stage_m": 147.15384935051824,
+          "flood_stage_m": 147.94599403474624,
+          "pulse_rise_m": 0.7921446842279956
+        }
+      }
+    },
+    {
+      "time_s": 52.0,
+      "additional_wet_area_m2": 2064,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.50036869252676,
+          "flood_stage_m": 153.32617344382453,
+          "pulse_rise_m": 0.8258047512977478
+        },
+        "middle": {
+          "control_stage_m": 146.97292928419904,
+          "flood_stage_m": 148.46567402732995,
+          "pulse_rise_m": 1.4927447431309007
+        },
+        "downstream": {
+          "control_stage_m": 147.13295134364688,
+          "flood_stage_m": 148.22238962119133,
+          "pulse_rise_m": 1.0894382775444207
+        }
+      }
+    },
+    {
+      "time_s": 54.0,
+      "additional_wet_area_m2": 1968,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.5000532684525,
+          "flood_stage_m": 153.1771548999008,
+          "pulse_rise_m": 0.6771016314483337
+        },
+        "middle": {
+          "control_stage_m": 146.945774457196,
+          "flood_stage_m": 148.21360616607785,
+          "pulse_rise_m": 1.267831708881861
+        },
+        "downstream": {
+          "control_stage_m": 147.1130610011889,
+          "flood_stage_m": 148.2700182712257,
+          "pulse_rise_m": 1.1569572700368012
+        }
+      }
+    },
+    {
+      "time_s": 56.0,
+      "additional_wet_area_m2": 1808,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.49978128130584,
+          "flood_stage_m": 153.06721546139994,
+          "pulse_rise_m": 0.567434180094107
+        },
+        "middle": {
+          "control_stage_m": 146.9242655586718,
+          "flood_stage_m": 148.05204135344013,
+          "pulse_rise_m": 1.1277757947683427
+        },
+        "downstream": {
+          "control_stage_m": 147.0947791590881,
+          "flood_stage_m": 148.40615493270118,
+          "pulse_rise_m": 1.3113757736130731
+        }
+      }
+    },
+    {
+      "time_s": 58.0,
+      "additional_wet_area_m2": 1776,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.49956097087835,
+          "flood_stage_m": 152.9716721018932,
+          "pulse_rise_m": 0.47211113101486035
+        },
+        "middle": {
+          "control_stage_m": 146.90723525680576,
+          "flood_stage_m": 148.0000731690628,
+          "pulse_rise_m": 1.0928379122570582
+        },
+        "downstream": {
+          "control_stage_m": 147.07845983883578,
+          "flood_stage_m": 148.5568090152674,
+          "pulse_rise_m": 1.478349176431597
+        }
+      }
+    },
+    {
+      "time_s": 60.0,
+      "additional_wet_area_m2": 1760,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.49923836222663,
+          "flood_stage_m": 152.91101044088475,
+          "pulse_rise_m": 0.41177207865810406
+        },
+        "middle": {
+          "control_stage_m": 146.90559951394383,
+          "flood_stage_m": 147.96520265356014,
+          "pulse_rise_m": 1.0596031396163186
+        },
+        "downstream": {
+          "control_stage_m": 147.0625131645407,
+          "flood_stage_m": 148.54231055002987,
+          "pulse_rise_m": 1.479797385489161
+        }
+      }
+    },
+    {
+      "time_s": 62.0,
+      "additional_wet_area_m2": 1696,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.49863048548823,
+          "flood_stage_m": 152.86038317365316,
+          "pulse_rise_m": 0.3617526881649197
+        },
+        "middle": {
+          "control_stage_m": 146.9265851976619,
+          "flood_stage_m": 147.8987777295454,
+          "pulse_rise_m": 0.9721925318835072
+        },
+        "downstream": {
+          "control_stage_m": 147.04578665780338,
+          "flood_stage_m": 148.54783495600498,
+          "pulse_rise_m": 1.5020482982016077
+        }
+      }
+    },
+    {
+      "time_s": 64.0,
+      "additional_wet_area_m2": 1520,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.49895256952766,
+          "flood_stage_m": 152.81620780562992,
+          "pulse_rise_m": 0.31725523610227074
+        },
+        "middle": {
+          "control_stage_m": 146.97227605843545,
+          "flood_stage_m": 147.85261901518248,
+          "pulse_rise_m": 0.88034295674704
+        },
+        "downstream": {
+          "control_stage_m": 147.02885372660452,
+          "flood_stage_m": 148.46184178276957,
+          "pulse_rise_m": 1.4329880561650503
+        }
+      }
+    },
+    {
+      "time_s": 66.0,
+      "additional_wet_area_m2": 1440,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.49900188242285,
+          "flood_stage_m": 152.77198879506278,
+          "pulse_rise_m": 0.27298691263994823
+        },
+        "middle": {
+          "control_stage_m": 147.01694022747427,
+          "flood_stage_m": 147.89057238590007,
+          "pulse_rise_m": 0.8736321584258067
+        },
+        "downstream": {
+          "control_stage_m": 147.01025843772953,
+          "flood_stage_m": 148.32812750629267,
+          "pulse_rise_m": 1.317869068563155
+        }
+      }
+    },
+    {
+      "time_s": 68.0,
+      "additional_wet_area_m2": 1424,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.49845511990281,
+          "flood_stage_m": 152.72224215240473,
+          "pulse_rise_m": 0.22378703250191
+        },
+        "middle": {
+          "control_stage_m": 147.0512684495635,
+          "flood_stage_m": 147.91480101840057,
+          "pulse_rise_m": 0.8635325688370523
+        },
+        "downstream": {
+          "control_stage_m": 146.99009494958474,
+          "flood_stage_m": 148.17173007508876,
+          "pulse_rise_m": 1.1816351255040232
+        }
+      }
+    },
+    {
+      "time_s": 70.0,
+      "additional_wet_area_m2": 1424,
+      "probes": {
+        "upstream": {
+          "control_stage_m": 152.4988294117252,
+          "flood_stage_m": 152.68014508890096,
+          "pulse_rise_m": 0.18131567717577263
+        },
+        "middle": {
+          "control_stage_m": 147.0734213113817,
+          "flood_stage_m": 147.83538484288061,
+          "pulse_rise_m": 0.7619635314988964
+        },
+        "downstream": {
+          "control_stage_m": 146.96903522890756,
+          "flood_stage_m": 148.0202875938185,
+          "pulse_rise_m": 1.0512523649109369
+        }
+      }
+    }
+  ]
+}

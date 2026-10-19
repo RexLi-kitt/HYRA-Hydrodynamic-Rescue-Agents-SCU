@@ -1,0 +1,124 @@
+{
+  "checks": {
+    "full_uniform_finite": true,
+    "full_uniform_nonnegative": true,
+    "full_uniform_roughness": true,
+    "full_uniform_grid": true,
+    "full_uniform_matched_geometry": true,
+    "full_uniform_matched_times": true,
+    "full_uniform_0_mass": true,
+    "full_uniform_1_mass": true,
+    "full_classified_finite": true,
+    "full_classified_nonnegative": true,
+    "full_classified_roughness": true,
+    "full_classified_grid": true,
+    "full_classified_matched_geometry": true,
+    "full_classified_matched_times": true,
+    "full_classified_0_mass": true,
+    "full_classified_1_mass": true,
+    "matched_forcing": true,
+    "complete_70_seconds": true
+  },
+  "balances": [
+    {
+      "variant": "full_uniform",
+      "branch": "control",
+      "time_s": 70.0,
+      "residual_m3": 0.0,
+      "adjustment_m3": 0.0
+    },
+    {
+      "variant": "full_uniform",
+      "branch": "pulse",
+      "time_s": 70.0,
+      "residual_m3": -4.547473508864641e-11,
+      "adjustment_m3": 0.0
+    },
+    {
+      "variant": "full_classified",
+      "branch": "control",
+      "time_s": 70.0,
+      "residual_m3": 1.8189894035458565e-12,
+      "adjustment_m3": 0.0
+    },
+    {
+      "variant": "full_classified",
+      "branch": "pulse",
+      "time_s": 70.0,
+      "residual_m3": -2.546585164964199e-11,
+      "adjustment_m3": 0.0
+    }
+  ],
+  "roughness": {
+    "profile": "hyra-static-landcover-v1",
+    "mode": "landcover",
+    "calibrated": false,
+    "reference": "https://www.hec.usace.army.mil/confluence/rasdocs/r2dum/6.0/developing-a-terrain-model-and-geospatial-layers/creating-land-cover-mannings-n-values-and-impervious-layers",
+    "priority": "terrain proxy < biome < material/cover < channel/lake/ocean; explicit n and authored patches override",
+    "inputs": {
+      "biome": true,
+      "material": true,
+      "cover_flags": true
+    },
+    "native_classes": [
+      {
+        "key": "channel",
+        "label": "天然河槽",
+        "n": 0.035,
+        "cells": 5367
+      },
+      {
+        "key": "soil",
+        "label": "裸土与黏土",
+        "n": 0.025,
+        "cells": 16660
+      },
+      {
+        "key": "sand",
+        "label": "砂质地表",
+        "n": 0.025,
+        "cells": 33
+      },
+      {
+        "key": "gravel",
+        "label": "砂砾",
+        "n": 0.035,
+        "cells": 9
+      },
+      {
+        "key": "rock",
+        "label": "裸岩",
+        "n": 0.03,
+        "cells": 8643
+      },
+      {
+        "key": "grass",
+        "label": "草本地表",
+        "n": 0.035,
+        "cells": 12961
+      },
+      {
+        "key": "forest",
+        "label": "树木覆盖",
+        "n": 0.1,
+        "cells": 21863
+      }
+    ],
+    "fallback_cells": 0,
+    "fallback_n": 0.035,
+    "aggregation": "native n area mean; approximate, not a subgrid conveyance model",
+    "source_layers": [
+      "terrain",
+      "biome_id",
+      "ground_block_id",
+      "cover_flags"
+    ],
+    "source_kind": "actual_surface"
+  },
+  "biome_counts": {
+    "minecraft:meadow": 10,
+    "minecraft:dark_forest": 60139,
+    "minecraft:river": 5387
+  },
+  "tree_coverage_fraction": 0.3369140625
+}

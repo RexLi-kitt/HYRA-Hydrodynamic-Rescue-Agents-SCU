@@ -8,7 +8,7 @@ import zipfile
 DEFAULTS = dict(metres_per_block=1.0, duration_s=600.0,
                 rain_mm_h=80.0, rain_duration_s=600.0, infiltration_mm_h=0.0,
                 inflow_m3_s=0.0, source_x=128, source_z=128,
-                manning=0.035, boundary='ocean', initial_water=True, frames=31,
+                manning=0.035, roughness_mode='landcover', boundary='ocean', initial_water=True, frames=31,
                 baseflow=True, baseflow_m3_s=5.0, warmup_s=600.0,
                 refine_inland_water=False, refinement_buffer=0, grid_factor=1,
                 flux_method='rusanov', spatial_order=2, time_integrator='rk2',
@@ -55,6 +55,8 @@ def settings(data, shape):
     if any(n%factor or n//factor<2 for n in shape):
         raise ValueError('地图尺寸必须能被计算格合并倍数整除，且至少保留2×2格')
     config['grid_factor']=factor
+    config['roughness_mode']=data.get('roughness_mode',config['roughness_mode'])
+    if config['roughness_mode'] not in ('landcover','uniform'):raise ValueError('糙率模式需要为landcover或uniform')
     if config['rain_duration_s'] > config['duration_s']: raise ValueError('降雨持续时间不能超过模拟时间')
     config['boundary'] = data.get('boundary', config['boundary'])
     if config['boundary'] not in ('ocean', 'open', 'closed'): raise ValueError('请选择边界方式')
@@ -116,6 +118,13 @@ def prepare(root, terrain, config):
             if not np.isfinite(depth).all(): raise ValueError('快速预览初始水体数据不完整')
     else: depth = np.zeros_like(bed)
     factor = config.get('grid_factor',1)
+    if config.get('roughness_mode','uniform')=='landcover':
+        from surface_roughness import from_terrain
+        native_n,roughness=from_terrain(root,terrain,config['manning'])
+        from grid_coarsening import blocks
+        manning=blocks(native_n,factor) if factor>1 else native_n
+    else:
+        manning=config['manning'];roughness=dict(mode='uniform',n=float(manning))
     if factor>1:
         from grid_coarsening import blocks
         bed,depth=blocks(bed,factor),blocks(depth,factor)
@@ -128,7 +137,7 @@ def prepare(root, terrain, config):
     if factor>1:
         sea_edges={name:mask.reshape(-1,factor).any(axis=1) for name,mask in sea_edges.items()}
     sea_level = terrain['sea_level']*unit
-    solver = FloodSolver(bed, depth, dx, boundary=config['boundary'], manning=config['manning'],
+    solver = FloodSolver(bed, depth, dx, boundary=config['boundary'], manning=manning,
                          sea_level=sea_level, sea_edges=sea_edges, **numerical_options(config))
     from river_baseflow import plan
     groups, sources = plan(river, river_water, native_bed, factor,
@@ -144,6 +153,7 @@ def prepare(root, terrain, config):
                 frame_fields=['depth', 'u', 'v', 'maximum_depth'], frame_dtype='<f4',
                 wet_threshold_m=.01, frames=[])
     meta['terrain_mode'] = terrain['config'].get('terrain_mode', 'custom')
+    meta['roughness']=roughness
     meta['grid_aggregation']=dict(factor=factor,native_shape=list(terrain['shape']),
         bed='area_mean',initial_depth='area_mean_preserving_volume',
         sea_boundary='coarse_face_touches_native_ocean')

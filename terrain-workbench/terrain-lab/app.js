@@ -59,7 +59,7 @@ async function loadMap(result) {
  }));
  map = result; arrays = next;
  // A new terrain enters the current workbench, rather than restoring an old run.
- $('floodWorkbenchLink').href=`maps.html?ui=28&fresh=1&terrain_id=${encodeURIComponent(map.id)}`;
+ $('floodWorkbenchLink').href=`maps.html?ui=30&fresh=1&terrain_id=${encodeURIComponent(map.id)}`;
  map.blockNames = Object.fromEntries(Object.entries(map.block_ids).map(([n,i]) => [i,n]));
  map.biomeNames = Object.fromEntries(Object.entries(map.biome_ids).map(([n,i]) => [i,n]));
  const [nz,nx] = map.shape;
@@ -75,6 +75,8 @@ async function loadMap(result) {
  $('cellDetail').textContent = '移动鼠标或点击网格，查看高程和地表信息。';
  const ports=map.river_inlets?.crossings||[];
  $('inletSummary').textContent=`河道边界：${ports.filter(p=>p.role==='inlet').length} 个推断入口、${ports.filter(p=>p.role==='outlet').length} 个推断出口、${ports.filter(p=>p.role==='uncertain').length} 个待确认交点。${map.river_inlets?.message||''} 外源来水可进入多层地图配置。`;
+ const network=map.river_network;
+ $('inletSummary').textContent+=network?` 河网生成检查：${network.status==='no_river'?'无河流，不适用':`RivGraph · ${network.components_four} 个连通分区 · ${network.links} 条骨架河段`}。${(network.warnings||[]).join('；')}`:' 此历史地图尚无 RivGraph 生成检查记录。';
 }
 function height(i) { return map.full ? arrays.ground_height[i] : arrays.height[i] * map.scale; }
 function wet(i) {

@@ -118,7 +118,7 @@ class TerrainModeTests(unittest.TestCase):
             (raw/'height.f32').write_bytes(b'broken')
             self.assertEqual(terrain_cache.previews(root,root/'generated/new',preset,request),{})
 
-    def generate_fake(self,checks,*,mode='quick',cancel=False):
+    def generate_fake(self,checks,*,mode='quick',cancel=False,audit_error=None):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);(root/'current.json').write_text('{"directory":"previous/raw"}')
             cfg=server.settings(dict(seed='42',terrain_mode='plains',mode=mode))
@@ -133,8 +133,10 @@ class TerrainModeTests(unittest.TestCase):
                 return dict(id=relative,full=mode=='surface')
             with patch.object(server,'ROOT',root),patch.object(server.generation_process,'run',side_effect=export),\
                  patch.object(modes,'assess',side_effect=[dict(accepted=value,label='平原') for value in checks]),\
-                 patch.object(server,'describe',side_effect=describe):
+                 patch.object(server,'describe',side_effect=describe),\
+                 patch('river_network.audit_generation',side_effect=audit_error,return_value={'status':'analyzed'}) as audit:
                 server.JOBS['test']={};server.generate('test',cfg)
+                if server.JOBS['test'].get('state')=='done':audit.assert_called_once()
             job=server.JOBS.pop('test')
             return job,calls,json.loads((root/'current.json').read_text()),\
                 json.loads((root/'generated/test/config.json').read_text())
@@ -161,6 +163,12 @@ class TerrainModeTests(unittest.TestCase):
     def test_cancel_after_verification_still_preserves_pointer(self):
         job,_,pointer,_=self.generate_fake([True],cancel=True)
         self.assertEqual(job['state'],'cancelled');self.assertEqual(pointer['directory'],'previous/raw')
+
+    def test_failed_rivgraph_audit_does_not_publish_map(self):
+        job,_,pointer,_=self.generate_fake([True],audit_error=RuntimeError('RivGraph failed'))
+        self.assertEqual(job['state'],'failed')
+        self.assertEqual(pointer['directory'],'previous/raw')
+        self.assertIn('RivGraph',job['message'])
 
 
 if __name__=='__main__':unittest.main()

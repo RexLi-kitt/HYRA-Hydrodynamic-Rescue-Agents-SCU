@@ -84,6 +84,8 @@ class FloodSolver:
         self.solid = np.zeros_like(self.h, dtype=bool)
         self.wall_x = np.zeros((nz,nx+1),dtype=bool)
         self.wall_y = np.zeros((nz+1,nx),dtype=bool)
+        self.structures = None
+        self.structure_warmup = False
         self.drain_capacity = np.zeros_like(self.h)
         self.qx = np.zeros((nz,nx+1))
         self.qy = np.zeros((nz+1,nx))
@@ -234,6 +236,7 @@ class FloodSolver:
 
     def numerical_config(self):
         return dict(schema='hyra-swe-v2', flux_method=self.flux_method,
+                    structures='hydrostatic_crest_ANUGA_Villemonte_shared_RK_flux' if self.structures and self.structures.barriers else 'none',
                     compute_backend='numba' if self.acceleration else 'numpy',
                     spatial_order=self.spatial_order, time_integrator=self.time_integrator,
                     low_froude=self.low_froude, cfl=self.cfl,
@@ -253,13 +256,81 @@ class FloodSolver:
             return self.wall_x | cells[:, :-1] | cells[:, 1:]
         return self.wall_y | cells[:-1, :] | cells[1:, :]
 
+    def _reconstruction_walls(self):
+        if self.structures is None or not self.structures.barriers:
+            return self.wall_x, self.wall_y
+        self.structures.faces(self.time, self.structure_warmup)
+        return self.wall_x | self.structures.masks[1], self.wall_y | self.structures.masks[0]
+
+    def _structure_flux(self, axis, fields):
+        """Finite crests: hydrostatic reconstruction then ANUGA weir blend.
+
+        Both adjacent cell slopes are zeroed at a barrier. One shared mass and
+        advective flux enters the existing donor limiter/RK stages. Hydrostatic
+        wall pressure remains separate, including on a fully dry crest.
+        """
+        if self.structures is None:
+            return fields
+        entries = self.structures.faces(self.time, self.structure_warmup)[axis]
+        if not entries:
+            return fields
+        blocked = self._blocked_faces(axis)
+        entries = [(z,x,c,q) for (z,x),(c,q) in entries.items() if not blocked[z,x]]
+        if not entries:
+            return fields
+        from hydraulic_structures import weir_flux
+        z, x, crest, coefficients = map(np.asarray, zip(*entries))
+        z, x = z.astype(int), x.astype(int)
+        li = (z, x-1) if axis == 1 else (z-1, x)
+        ri = (z, x)
+        hl, hr = self.h[li], self.h[ri]
+        bl, br = self.bed[li], self.bed[ri]
+        top = np.maximum(crest, np.maximum(bl, br))
+        dl = np.maximum(0., hl-(top-bl)); dr = np.maximum(0., hr-(top-br))
+        ul = np.divide(self.mx[li],hl,out=np.zeros_like(hl),where=hl>self.velocity_depth)
+        ur = np.divide(self.mx[ri],hr,out=np.zeros_like(hr),where=hr>self.velocity_depth)
+        vl = np.divide(self.mz[li],hl,out=np.zeros_like(hl),where=hl>self.velocity_depth)
+        vr = np.divide(self.mz[ri],hr,out=np.zeros_like(hr),where=hr>self.velocity_depth)
+        mass, ax, az, pressure, speed = face_flux(dl,dr,ul,vl,ur,vr,
+            normal=(1.,0.) if axis == 1 else (0.,1.),method=self.flux_method,low_froude=self.low_froude)
+        for i in range(len(entries)):
+            mass[i],ax[i],az[i],wall_speed = weir_flux(mass[i],ax[i],az[i],dl[i],dr[i],
+                max(0.,top[i]-min(bl[i],br[i])),coefficients[i])
+            speed[i] = max(speed[i],wall_speed)
+        for key, value in dict(mass=mass,advx=ax,advz=az,pressure=pressure,
+                corr_l=.5*G*(hl-dl)*(hl+dl),corr_r=.5*G*(hr-dr)*(hr+dr),speed=speed).items():
+            fields[key][z,x] = value
+        return fields
+
+    def _structure_speed(self):
+        if self.structures is None:
+            return 0.
+        speed = 0.
+        # Conservative bound on the corrected crest flow; include it BEFORE
+        # choosing dt, rather than only reporting it after the step.
+        for axis, entries in self.structures.faces(self.time, self.structure_warmup).items():
+            for (z,x),(crest,qfactor) in entries.items():
+                li = (z,x-1) if axis == 1 else (z-1,x)
+                ri = (z,x)
+                if self.solid[li] or self.solid[ri]:continue
+                head = max(0.,self.h[li]+self.bed[li]-crest,self.h[ri]+self.bed[ri]-crest)
+                if not head:continue
+                height = max(0.,crest-min(self.bed[li],self.bed[ri]))
+                velocity = max(abs(self.mx[li])/max(self.h[li],DRY),abs(self.mx[ri])/max(self.h[ri],DRY),
+                               abs(self.mz[li])/max(self.h[li],DRY),abs(self.mz[ri])/max(self.h[ri],DRY))
+                speed = max(speed,velocity+np.sqrt(G*(head+height))+
+                            max(2.,qfactor*2/3)*np.sqrt(2/3*G*head))
+        return 2*speed
+
     def _slope(self, values, axis, *, differences=None, blocked=None):
         if self.spatial_order == 1:
             return np.zeros_like(values)
         if differences is None:
             differences = (values-np.roll(values, 1, axis), np.roll(values, -1, axis)-values)
         slope = minmod_slope(*differences, self.limiter_theta)
-        blocked = self._blocked_faces(axis) if blocked is None else blocked
+        if blocked is None:
+            wx,wy = self._reconstruction_walls()
+            blocked = self._blocked_faces(axis) | (wx if axis == 1 else wy)
         unavailable = (blocked[:, :-1] | blocked[:, 1:]) if axis == 1 else (blocked[:-1] | blocked[1:])
         slope[unavailable] = 0.
         if self.boundary != 'periodic':
@@ -273,12 +344,14 @@ class FloodSolver:
         h = self.h if h is None else h
         u, v = self.velocity() if velocities is None else velocities
         if self.acceleration:
-            a = self.acceleration.reconstruction(h,self.bed,u,v,self.solid,self.wall_x,self.wall_y,
+            wx,wy = self._reconstruction_walls()
+            a = self.acceleration.reconstruction(h,self.bed,u,v,self.solid,wx,wy,
                 self.boundary=='periodic',self.spatial_order,self.limiter_theta,self.velocity_depth)
             return {axis:tuple(a[axis,k] for k in range(4)) for axis in (0,1)}
         result = {}
+        wx,wy = self._reconstruction_walls()
         for axis in (0, 1):
-            blocked = self._blocked_faces(axis)
+            blocked = self._blocked_faces(axis) | (wx if axis == 1 else wy)
             hm, hp = np.roll(h, 1, axis), np.roll(h, -1, axis)
             dh = (h-hm, hp-h)
             sh = self._slope(h, axis, differences=dh, blocked=blocked)
@@ -319,10 +392,11 @@ class FloodSolver:
             prospective = prospective.copy()
             prospective[source] += inflow*limit/self.dx**2
         bounds = []
+        wx,wy = self._reconstruction_walls()
         for axis, velocity in (() if self.acceleration else ((1, u), (0, v))):
             # CFL needs only depth and normal-velocity slopes, not the full
             # eight-field transport reconstruction (including bed/tangential slopes).
-            blocked = self._blocked_faces(axis)
+            blocked = self._blocked_faces(axis) | (wx if axis == 1 else wy)
             hm, hp = np.roll(prospective, 1, axis), np.roll(prospective, -1, axis)
             sh = self._slope(prospective, axis, differences=(prospective-hm, hp-prospective), blocked=blocked)
             sh *= np.minimum(1., 2*np.maximum(prospective, 0.)/np.maximum(np.abs(sh), 1e-100))
@@ -334,7 +408,7 @@ class FloodSolver:
             bounds.append(np.abs(velocity)+.5*np.abs(velocity_slope)+np.sqrt(G*np.maximum(hv, 0.)))
         if self.acceleration:
             internal_speed,z,x = self.acceleration.timestep_bounds(prospective,u,v,self.solid,
-                self.wall_x,self.wall_y,self.boundary=='periodic',self.spatial_order,
+                wx,wy,self.boundary=='periodic',self.spatial_order,
                 self.limiter_theta,self.velocity_depth)
             index=(z,x)
         else:
@@ -344,15 +418,18 @@ class FloodSolver:
             internal_speed = float(bounds[0].max()+bounds[1].max())
         inlet_speed = 2*max(e['wave'] for e in self.boundary_forcing()[0].values())
         boundary_speed = max(2*self.sea_wave_speed, inlet_speed)
-        speed = max(internal_speed, boundary_speed, 1e-100)
+        structure_speed = self._structure_speed()
+        speed = max(internal_speed, boundary_speed, structure_speed, 1e-100)
         cfl_limit = self.cfl*self.dx/speed
         dt = min(limit, self.max_timestep, cfl_limit)
         cause = ('cfl_boundary' if boundary_speed > internal_speed else 'cfl_grid') if dt == cfl_limit else (
                  'max_timestep' if dt == self.max_timestep else 'event_or_output')
+        if dt == cfl_limit and structure_speed >= max(internal_speed,boundary_speed):cause='cfl_structure'
         self.last_timestep = dict(dt_s=float(dt), cause=cause, requested_limit_s=float(limit),
             cfl_limit_s=float(cfl_limit), limiting_cell=[int(index[0]), int(index[1])],
             cell_depth_m=float(self.h[index]), cell_u_m_s=float(u[index]), cell_v_m_s=float(v[index]),
-            grid_wave_bound_m_s=internal_speed, boundary_wave_bound_m_s=float(boundary_speed))
+            grid_wave_bound_m_s=internal_speed, boundary_wave_bound_m_s=float(boundary_speed),
+            structure_wave_bound_m_s=float(structure_speed))
         return dt
 
     def _flux(self, axis, inlet_edges=None, reconstruction=None, details=False, velocities=None):
@@ -370,8 +447,9 @@ class FloodSolver:
                 a['fraction'],b['fraction'],a['q'],b['q'],a['advective_x'],b['advective_x'],a['advective_z'],b['advective_z'],
                 0 if self.flux_method=='rusanov' else 1,self.low_froude)
             mass,advx,advz,pressure,cl,cr,speed=fields
+            face = self._structure_flux(axis,dict(zip(('mass','advx','advz','pressure','corr_l','corr_r','speed'),fields)))
             if details:
-                return dict(zip(('mass','advx','advz','pressure','corr_l','corr_r','speed'),fields))
+                return face
             return mass,advx+(pressure if axis==1 else 0.),advz+(pressure if axis==0 else 0.),cl,cr
         hl, hr = self._faces(self.h, sh, axis)
         zeros = np.zeros_like(self.h)
@@ -426,6 +504,8 @@ class FloodSolver:
         corr_r = .5*G*(hr-dr)*(hr+dr)
         corr_l[blocked] = .5*G*hl[blocked]**2
         corr_r[blocked] = .5*G*hr[blocked]**2
+        self._structure_flux(axis,dict(mass=mass,advx=advx,advz=advz,pressure=pressure,
+                                      corr_l=corr_l,corr_r=corr_r,speed=speed))
         if details:
             return dict(mass=mass, advx=advx, advz=advz, pressure=pressure,
                         corr_l=corr_l, corr_r=corr_r, speed=speed)
@@ -647,6 +727,8 @@ class FloodSolver:
             limit = min(self.max_timestep, remaining)
             if raining:
                 limit = min(limit, rain_until-self.time)
+            if self.structures is not None and not self.structure_warmup:
+                limit = min(limit,self.structures.next_event(self.time)-self.time)
             self.source_rate = self._scheduled_rate(self.time)
             self.external_rate = self._external_rate(self.time)
             for entry in self.source_schedule+self.external_schedule:

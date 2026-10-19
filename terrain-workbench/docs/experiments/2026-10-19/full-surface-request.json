@@ -1,0 +1,30 @@
+{
+  "seed": "3346354700",
+  "preset_file": "preset.json",
+  "natural_surface": true,
+  "generate_structures": false,
+  "unbounded_height": true,
+  "origin_x": 8512,
+  "origin_z": 9536,
+  "nx": 256,
+  "nz": 256,
+  "step_blocks": 1,
+  "fields": [
+    "height",
+    "terrain",
+    "riverZone",
+    "riverMask",
+    "riverWaterLevel",
+    "temperature",
+    "moisture"
+  ],
+  "output": "raw",
+  "export_datapack": true,
+  "surface": {
+    "origin_x": 8512,
+    "origin_z": 9536,
+    "nx": 256,
+    "nz": 256,
+    "step_blocks": 1
+  }
+}

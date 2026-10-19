@@ -1,6 +1,8 @@
 # HYRA-Hydrodynamic-Rescue-Agents-
 项目仓库
 
+[开发日志](DEVLOG.md)：记录地图图层、人员布点、河网检查、分类糙率及洪水对照试验的改动、证据与待办。
+
 ## 地形生成工作台
 
 [进入地形实验台](terrain-workbench/README.md)：生成二维高程、水系、地表类型与群系图，并导出用于洪水模拟的高程矩阵。

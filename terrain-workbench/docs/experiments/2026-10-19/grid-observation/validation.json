@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "factor": 1,
+      "paired_initial_state": true,
+      "finite_nonnegative": true,
+      "all_area_samples_recomputed": true,
+      "final_mae_recomputed": true,
+      "matched_inflow": true,
+      "mass_balance_passed": true
+    },
+    {
+      "factor": 2,
+      "paired_initial_state": true,
+      "finite_nonnegative": true,
+      "all_area_samples_recomputed": true,
+      "final_mae_recomputed": true,
+      "matched_inflow": true,
+      "mass_balance_passed": true
+    },
+    {
+      "factor": 4,
+      "paired_initial_state": true,
+      "finite_nonnegative": true,
+      "all_area_samples_recomputed": true,
+      "final_mae_recomputed": true,
+      "matched_inflow": true,
+      "mass_balance_passed": true
+    }
+  ],
+  "maximum_absolute_mass_residual_m3": 1.0913936421275139e-11,
+  "visual_qa": "response.png and depth-maps.png inspected; common scales, labels and units checked"
+}

@@ -1,0 +1,132 @@
+{
+  "source_preview": "generated/768474f49cad/raw",
+  "full_surface": "generated/surface-df3682282712/raw",
+  "native_fields_identical": {
+    "height": true,
+    "terrain": true,
+    "riverWaterLevel": true,
+    "riverZone": true,
+    "riverMask": true,
+    "temperature": true,
+    "moisture": true
+  },
+  "solver_unchanged": {
+    "flood_solver.py": true,
+    "flood_acceleration.py": true
+  },
+  "original_config": {
+    "terrain_id": "generated/768474f49cad/raw",
+    "native_shape": [
+      256,
+      256
+    ],
+    "origin": [
+      8512,
+      9536
+    ],
+    "source_kind": "continuous_preview",
+    "factors": [
+      1,
+      2,
+      4
+    ],
+    "options": {
+      "metres_per_block": 1,
+      "boundary": "open",
+      "initial_water": true,
+      "baseflow": false,
+      "warmup_s": 0,
+      "rain_mm_h": 0,
+      "infiltration_mm_h": 0,
+      "inflow_m3_s": 0,
+      "flux_method": "rusanov",
+      "spatial_order": 2,
+      "time_integrator": "rk2",
+      "low_froude": 1,
+      "cfl": 0.4,
+      "manning": 0.035,
+      "max_timestep": 0.5,
+      "max_steps": 30000
+    },
+    "inlet_id": "river-5694119d2e",
+    "inlet_width_m": 18,
+    "pulse_hydrograph": [
+      [
+        0,
+        10
+      ],
+      [
+        5.833333333333333,
+        100
+      ],
+      [
+        11.666666666666666,
+        200
+      ],
+      [
+        23.333333333333332,
+        200
+      ],
+      [
+        35.0,
+        50
+      ],
+      [
+        46.666666666666664,
+        10
+      ]
+    ],
+    "control_hydrograph": [
+      [
+        0,
+        10
+      ]
+    ],
+    "warmup_s": 20.0,
+    "duration_s": 70,
+    "sample_interval_s": 2,
+    "wall_budget_s": 240.0,
+    "pilot_1_sim_s_wall_s": 0.7385234999819659,
+    "arrival_definition": "first of two consecutive samples with flood-control stage >= 0.05 m; null = not detected within window",
+    "inundation_definition": "depth >= 0.05 m; flood wet / control dry; all areas compared on common 4 m cell averages",
+    "reference": "1 m numerical comparison only; not measured ground truth",
+    "probes": [
+      {
+        "name": "upstream",
+        "x_m": 90.5,
+        "z_m": 26.5
+      },
+      {
+        "name": "middle",
+        "x_m": 103.5,
+        "z_m": 128.5
+      },
+      {
+        "name": "downstream",
+        "x_m": 57.5,
+        "z_m": 230.5
+      }
+    ],
+    "source_sha256": {
+      "flood_solver.py": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "flood_acceleration.py": "5c2495bd66dd843341215fd8976cd74fd0126cd5c892bfb53d20a9b4ec578984",
+      "observe_grid_flood.py": "63c6879a806f94408874dfba6ea7d00b4e0b2d263bdb1281f64ad409761c2845"
+    },
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "1.26.4"
+  },
+  "wall_budget_s": 360.0,
+  "boundary_geometry": "original preview boundary faces and inferred momentum direction, frozen across variants",
+  "source_sha256": {
+    "compare_surface_roughness.py": "fc4dce989cf6e39ad77a9c00b78608194305370e6c5127d7a456f1fb6738a3a9",
+    "surface_roughness.py": "d5dee85f2199b188ec5ca1e8ac08547e0e14a26ecbb95fa217eb726811ab626a",
+    "map_sessions.py": "fdf30b5964fff00fd2697a9d3882295ea998c2d2ab5c277e76b5bea3d20ce392",
+    "flood_run.py": "d294e7baddcc216792b7501246c786b092c30557e4cae5a1266076227ce520d6"
+  },
+  "bed_difference": {
+    "mae_m": 0.5480043736752123,
+    "max_abs_m": 27.613006591796875,
+    "changed_cells": 65536
+  },
+  "comparison": "preview uniform -> full uniform isolates surface pipeline; full uniform -> full classified isolates n including its warmup effect"
+}

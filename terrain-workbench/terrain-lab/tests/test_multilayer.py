@@ -24,6 +24,17 @@ def world(shape=(8,12),layers=None,depth=None):
 
 
 class HydraulicLayersTests(unittest.TestCase):
+    def test_frictionless_solver_keeps_zero_roughness_in_map_and_export(self):
+        shape=(8,12)
+        config=flood_run.settings(dict(baseflow=False,warmup_s=0),shape)
+        solver=FloodSolver(np.zeros(shape),np.ones(shape),2,manning=0)
+        scene=MapWorld(solver,dict(config=config,coarsening_factor=1))
+        np.testing.assert_array_equal(scene.base.n,0)
+        np.testing.assert_array_equal(scene.solver.manning,0)
+        np.testing.assert_array_equal(scene.base.snapshot()['n'],0)
+        with self.assertRaises(ValueError):
+            BaseMap(np.zeros(shape),2,dict(n=np.full(shape,-.001)))
+
     def test_internal_wall_blocks_water_and_preserves_stationary_pressure(self):
         bed=np.zeros((8,12));h=np.zeros_like(bed);h[:,:6]=1
         wall=np.zeros((8,13),bool);wall[:,6]=True
@@ -68,7 +79,7 @@ class HydraulicLayersTests(unittest.TestCase):
         self.assertGreater(s.velocity()[0][4,3],s.velocity()[0][4,9])
 
     def test_invalid_fixed_layer_and_source_configuration_is_rejected(self):
-        for config in (dict(n=np.zeros((8,12))),dict(solid=[[0]]),dict(patches=[dict(kind='drain',x=0,z=0,value=-1)]),
+        for config in (dict(n=np.full((8,12),-.001)),dict(solid=[[0]]),dict(patches=[dict(kind='drain',x=0,z=0,value=-1)]),
             dict(patches=[dict(kind='source',x=0,z=0,value=0)]),
             dict(patches=[dict(kind='source',x=0,z=0,value=0)],hydrographs={'0':[[0,-1]]})):
             with self.assertRaises(ValueError):BaseMap(np.zeros((8,12)),2,config)
@@ -99,7 +110,7 @@ class MapProcessTests(unittest.TestCase):
             self.assertIsNone(z.testzip());arrays=np.load(io.BytesIO(z.read('layers.npz')))
             self.assertEqual(arrays['M_water.qx'].shape,(8,13))
             self.assertEqual(arrays['M_water.qy'].shape,(9,12))
-            self.assertTrue(all(k.startswith(('M_base.','M_water.','M_forcing.')) for k in arrays.files))
+            self.assertTrue(all(k.startswith(('M_base.','M_water.','M_forcing.','M_people.')) for k in arrays.files))
 
     def test_current_generated_map_has_common_grid_and_no_agent_defaults(self):
         terrain=server.describe('example/raw')

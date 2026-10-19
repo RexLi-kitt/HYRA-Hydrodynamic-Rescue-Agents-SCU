@@ -88,6 +88,18 @@ def create(root,terrain,data):
         raw=terrain['fields']['terrain'];types=np.fromfile(root/raw['url'].lstrip('/'),dtype=raw['dtype']).reshape(terrain['shape'])
         old_factor=layers.get('grid_factor',1)
         if old_factor not in (1,2,4) or isinstance(old_factor,bool):raise ValueError('图层网格倍数需要为1、2或4')
+        explicit_n='n' in layers
+        if not explicit_n:
+            from grid_coarsening import blocks
+            if old_factor==config['grid_factor']:
+                layers['n']=solver.manning.copy()
+            elif config['roughness_mode']=='landcover':
+                from surface_roughness import from_terrain
+                native_n,_=from_terrain(root,terrain,config['manning'])
+                layers['n']=blocks(native_n,old_factor) if old_factor>1 else native_n
+            else:
+                layers['n']=np.full((terrain['shape'][0]//old_factor,terrain['shape'][1]//old_factor),config['manning'])
+        meta['roughness']['base_source']='explicit_n_layer' if explicit_n else config['roughness_mode']
         if old_factor>1:
             from grid_coarsening import blocks
             layers.setdefault('terrain_class',blocks(types,old_factor,'mode'))
@@ -95,11 +107,21 @@ def create(root,terrain,data):
         layers=dict(layers,patches=[normalize_patch(p,old_factor) for p in layers.get('patches',[])])
         if old_factor!=config['grid_factor']:
             from grid_coarsening import resize_layers
+            rough_patches=[p for p in layers.get('patches',[]) if p.get('kind')=='roughness']
             name='ground_height' if terrain['full'] else 'height';field=terrain['fields'][name]
             native_bed=np.fromfile(root/field['url'].lstrip('/'),dtype=field['dtype']).reshape(terrain['shape'])
             native_bed=native_bed*config['metres_per_block']*(1 if terrain['full'] else terrain['scale'])
             layers=resize_layers(layers,native_bed,terrain['step']*config['metres_per_block'],
                 config['grid_factor'],config['manning'])
+            if not explicit_n and config['roughness_mode']=='landcover' and old_factor>config['grid_factor']:
+                # Restore native automatic detail outside authored coarse patches.
+                authored=np.zeros((terrain['shape'][0]//old_factor,terrain['shape'][1]//old_factor),bool)
+                for p in rough_patches:
+                    authored[p['z']:p['z']+p.get('height',1),p['x']:p['x']+p.get('width',1)]=True
+                ratio=old_factor//config['grid_factor']
+                authored=np.repeat(np.repeat(authored,ratio,axis=0),ratio,axis=1)
+                fresh=blocks(native_n,config['grid_factor']) if config['grid_factor']>1 else native_n
+                layers['n']=np.where(authored,layers['n'],fresh)
             # Rebin default terrain classes even when the authored layers use a coarse grid.
         elif old_factor>1 and np.asarray(layers['terrain_class']).shape!=solver.h.shape:
             from grid_coarsening import blocks
@@ -113,7 +135,15 @@ def create(root,terrain,data):
         if h.shape!=solver.h.shape or not np.isfinite(h).all() or (h<0).any():raise ValueError('初始水深数组需要同网格、非负且有限')
         solver.h=h.copy()
     config['frames']=frames
-    world=MapWorld(solver,meta,layers)
+    world=MapWorld(solver,meta,layers,data.get('structures',[]),data.get('people'))
+    if mode=='current':
+        meta['roughness'].update(effective_min_n=float(world.base.n.min()),effective_max_n=float(world.base.n.max()),
+            manual_patch_count=sum(p.get('kind')=='roughness' for p in data.get('layers',{}).get('patches',[])))
+    if mode=='current':
+        import river_network
+        meta['river_network_grid_check']=river_network.audit_world(root,terrain,world)
+    data=dict(data,structures=world.structures.items,people=world.people,
+              flood=dict(data.get('flood',{}),roughness_mode=config['roughness_mode']))
     import river_inlets
     crossings=terrain.get('river_inlets',{}).get('crossings',[]) if mode=='current' else []
     river_inlets.configure(world,crossings,data.get('external_inflows',[]),terrain['shape'] if mode=='current' else [32,32])
@@ -154,9 +184,12 @@ def run(root,session_id,world,update,cancelled):
     if s.baseflow_m3_s>0 and c['warmup_s']>0:
         from river_baseflow import spin_up
         schedule=s.source_schedule;external=s.external_schedule;s.source_schedule=[];s.external_schedule=[];s.external_rate.fill(0)
+        s.structure_warmup=True
         try:
             meta['initial_conditions']=spin_up(s,c['warmup_s'],c['infiltration_mm_h']/3600000,update,cancelled)
-        finally:s.source_schedule=schedule;s.external_schedule=external;s.external_rate=s._external_rate(0)
+        finally:
+            s.source_schedule=schedule;s.external_schedule=external;s.external_rate=s._external_rate(0)
+            s.structure_warmup=False
         s.start_scenario();s.qx.fill(0);s.qy.fill(0)
     else:
         meta['initial_conditions']=dict(duration_s=0,converged=False,

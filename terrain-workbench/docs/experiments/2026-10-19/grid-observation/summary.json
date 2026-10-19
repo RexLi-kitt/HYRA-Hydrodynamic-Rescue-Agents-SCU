@@ -1,0 +1,2010 @@
+{
+  "config": {
+    "terrain_id": "generated/768474f49cad/raw",
+    "native_shape": [
+      256,
+      256
+    ],
+    "origin": [
+      8512,
+      9536
+    ],
+    "source_kind": "continuous_preview",
+    "factors": [
+      1,
+      2,
+      4
+    ],
+    "options": {
+      "metres_per_block": 1,
+      "boundary": "open",
+      "initial_water": true,
+      "baseflow": false,
+      "warmup_s": 0,
+      "rain_mm_h": 0,
+      "infiltration_mm_h": 0,
+      "inflow_m3_s": 0,
+      "flux_method": "rusanov",
+      "spatial_order": 2,
+      "time_integrator": "rk2",
+      "low_froude": 1,
+      "cfl": 0.4,
+      "manning": 0.035,
+      "max_timestep": 0.5,
+      "max_steps": 30000
+    },
+    "inlet_id": "river-5694119d2e",
+    "inlet_width_m": 18,
+    "pulse_hydrograph": [
+      [
+        0,
+        10
+      ],
+      [
+        5.833333333333333,
+        100
+      ],
+      [
+        11.666666666666666,
+        200
+      ],
+      [
+        23.333333333333332,
+        200
+      ],
+      [
+        35.0,
+        50
+      ],
+      [
+        46.666666666666664,
+        10
+      ]
+    ],
+    "control_hydrograph": [
+      [
+        0,
+        10
+      ]
+    ],
+    "warmup_s": 20.0,
+    "duration_s": 70,
+    "sample_interval_s": 2,
+    "wall_budget_s": 240.0,
+    "pilot_1_sim_s_wall_s": 0.7385234999819659,
+    "arrival_definition": "first of two consecutive samples with flood-control stage >= 0.05 m; null = not detected within window",
+    "inundation_definition": "depth >= 0.05 m; flood wet / control dry; all areas compared on common 4 m cell averages",
+    "reference": "1 m numerical comparison only; not measured ground truth",
+    "probes": [
+      {
+        "name": "upstream",
+        "x_m": 90.5,
+        "z_m": 26.5
+      },
+      {
+        "name": "middle",
+        "x_m": 103.5,
+        "z_m": 128.5
+      },
+      {
+        "name": "downstream",
+        "x_m": 57.5,
+        "z_m": 230.5
+      }
+    ],
+    "source_sha256": {
+      "flood_solver.py": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "flood_acceleration.py": "5c2495bd66dd843341215fd8976cd74fd0126cd5c892bfb53d20a9b4ec578984",
+      "observe_grid_flood.py": "63c6879a806f94408874dfba6ea7d00b4e0b2d263bdb1281f64ad409761c2845"
+    },
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "1.26.4"
+  },
+  "runs": [
+    {
+      "factor": 1,
+      "cells": 65536,
+      "wall_s": 118.68597660004161,
+      "control": {
+        "time_s": 70.0,
+        "steps": 3167,
+        "max_depth_m": 6.397995522165749,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 4.7922757033802554e-05,
+          "max_dt_s": 0.023270354600443226,
+          "limited_faces": 0,
+          "max_stage_courant": 0.40017957115397046,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.006455201757631812,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.006455201757631812,
+          "cfl_limit_s": 0.02219313518470953,
+          "limiting_cell": [
+            254,
+            70
+          ],
+          "cell_depth_m": 5.361264807753147,
+          "cell_u_m_s": 0.7546339485443482,
+          "cell_v_m_s": 1.8568261391096674,
+          "grid_wave_bound_m_s": 18.02359137953565,
+          "boundary_wave_bound_m_s": 7.300020374802871,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 5.397070250481109,
+        "wet_area_m2": 4717.0,
+        "newly_flooded_area_m2": 340.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 700.0000000000011
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 51,
+                "z": 0,
+                "x": 51,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 52,
+                "z": 0,
+                "x": 52,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 53,
+                "z": 0,
+                "x": 53,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 54,
+                "z": 0,
+                "x": 54,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.9722135549060348,
+                "velocity_m_s": 1.3853764512293665,
+                "velocity_x_m_s": 0.9869491958950288,
+                "velocity_z_m_s": 0.9722135549060348,
+                "reference_depth_m": 0.5714336657332971
+              },
+              {
+                "edge": "north",
+                "offset": 55,
+                "z": 0,
+                "x": 55,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.6578450783182689,
+                "velocity_m_s": 0.9374103821740605,
+                "velocity_x_m_s": 0.6678159009338943,
+                "velocity_z_m_s": 0.6578450783182689,
+                "reference_depth_m": 0.8445081887300749
+              },
+              {
+                "edge": "north",
+                "offset": 56,
+                "z": 0,
+                "x": 56,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5864627662283114,
+                "velocity_m_s": 0.8356926333269048,
+                "velocity_x_m_s": 0.5953516618140019,
+                "velocity_z_m_s": 0.5864627662283114,
+                "reference_depth_m": 0.9472989378822328
+              },
+              {
+                "edge": "north",
+                "offset": 57,
+                "z": 0,
+                "x": 57,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5825701683659933,
+                "velocity_m_s": 0.8301457929384446,
+                "velocity_x_m_s": 0.5914000646461051,
+                "velocity_z_m_s": 0.5825701683659933,
+                "reference_depth_m": 0.9536285682354644
+              },
+              {
+                "edge": "north",
+                "offset": 58,
+                "z": 0,
+                "x": 58,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5944820161497516,
+                "velocity_m_s": 0.847119834626068,
+                "velocity_x_m_s": 0.6034924578579448,
+                "velocity_z_m_s": 0.5944820161497516,
+                "reference_depth_m": 0.9345203731370902
+              },
+              {
+                "edge": "north",
+                "offset": 59,
+                "z": 0,
+                "x": 59,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.6428113154655578,
+                "velocity_m_s": 0.915987700990063,
+                "velocity_x_m_s": 0.6525542744281891,
+                "velocity_z_m_s": 0.6428113154655578,
+                "reference_depth_m": 0.8642591413519113
+              },
+              {
+                "edge": "north",
+                "offset": 60,
+                "z": 0,
+                "x": 60,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.7640266452915967,
+                "velocity_m_s": 1.0887160718521884,
+                "velocity_x_m_s": 0.7756068400895704,
+                "velocity_z_m_s": 0.7640266452915967,
+                "reference_depth_m": 0.7271415977168224
+              },
+              {
+                "edge": "north",
+                "offset": 61,
+                "z": 0,
+                "x": 61,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.0447848185735045,
+                "velocity_m_s": 1.4887884219980594,
+                "velocity_x_m_s": 1.060620407287075,
+                "velocity_z_m_s": 1.0447848185735045,
+                "reference_depth_m": 0.5317416042798963
+              },
+              {
+                "edge": "north",
+                "offset": 62,
+                "z": 0,
+                "x": 62,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.6395389911186597,
+                "velocity_m_s": 2.336296071687331,
+                "velocity_x_m_s": 1.66438914655896,
+                "velocity_z_m_s": 1.6395389911186597,
+                "reference_depth_m": 0.3388486388948269
+              },
+              {
+                "edge": "north",
+                "offset": 63,
+                "z": 0,
+                "x": 63,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 64,
+                "z": 0,
+                "x": 64,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 65,
+                "z": 0,
+                "x": 65,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 66,
+                "z": 0,
+                "x": 66,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 67,
+                "z": 0,
+                "x": 67,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 68,
+                "z": 0,
+                "x": 68,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.99354479824237,
+        "balance": {
+          "initial_m3": 12199.028823852537,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 3475.922514447314,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 700.0000000000011,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 9423.106309405237,
+          "residual_m3": 1.0913936421275139e-11,
+          "corrected_residual_m3": 1.0913936421275139e-11
+        }
+      },
+      "flood": {
+        "time_s": 70.0,
+        "steps": 4442,
+        "max_depth_m": 7.5352262664066245,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.001673653706610878,
+          "max_dt_s": 0.023270354600443226,
+          "limited_faces": 0,
+          "max_stage_courant": 0.40017957115397046,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.005328854890990442,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.005328854890990442,
+          "cfl_limit_s": 0.019228515464108347,
+          "limiting_cell": [
+            254,
+            70
+          ],
+          "cell_depth_m": 6.479740245776906,
+          "cell_u_m_s": 1.0225703202581495,
+          "cell_v_m_s": 2.280592351559196,
+          "grid_wave_bound_m_s": 20.802437959739216,
+          "boundary_wave_bound_m_s": 7.410328741575299,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 6.269854246633828,
+        "wet_area_m2": 5744.0,
+        "newly_flooded_area_m2": 946.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 6125.000000000009
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 51,
+                "z": 0,
+                "x": 51,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 52,
+                "z": 0,
+                "x": 52,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 53,
+                "z": 0,
+                "x": 53,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 54,
+                "z": 0,
+                "x": 54,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.8898975902519597,
+                "velocity_m_s": 1.2680785608466238,
+                "velocity_x_m_s": 0.9033855850867891,
+                "velocity_z_m_s": 0.8898975902519597,
+                "reference_depth_m": 0.6242915607831451
+              },
+              {
+                "edge": "north",
+                "offset": 55,
+                "z": 0,
+                "x": 55,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5953225007216425,
+                "velocity_m_s": 0.8483175010519713,
+                "velocity_x_m_s": 0.6043456814817092,
+                "velocity_z_m_s": 0.5953225007216425,
+                "reference_depth_m": 0.9332010042995487
+              },
+              {
+                "edge": "north",
+                "offset": 56,
+                "z": 0,
+                "x": 56,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5505941336932426,
+                "velocity_m_s": 0.784580859991584,
+                "velocity_x_m_s": 0.5589393757892901,
+                "velocity_z_m_s": 0.5505941336932426,
+                "reference_depth_m": 1.009011032916448
+              },
+              {
+                "edge": "north",
+                "offset": 57,
+                "z": 0,
+                "x": 57,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5507518582596876,
+                "velocity_m_s": 0.7848056129782407,
+                "velocity_x_m_s": 0.5590994909545645,
+                "velocity_z_m_s": 0.5507518582596876,
+                "reference_depth_m": 1.0087220718801513
+              },
+              {
+                "edge": "north",
+                "offset": 58,
+                "z": 0,
+                "x": 58,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.5618181044245356,
+                "velocity_m_s": 0.800574696594617,
+                "velocity_x_m_s": 0.5703334659375905,
+                "velocity_z_m_s": 0.5618181044245356,
+                "reference_depth_m": 0.988853066820631
+              },
+              {
+                "edge": "north",
+                "offset": 59,
+                "z": 0,
+                "x": 59,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.6047399118558262,
+                "velocity_m_s": 0.8617370420067406,
+                "velocity_x_m_s": 0.6139058303804703,
+                "velocity_z_m_s": 0.6047399118558262,
+                "reference_depth_m": 0.9186685791097636
+              },
+              {
+                "edge": "north",
+                "offset": 60,
+                "z": 0,
+                "x": 60,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.7159006284335608,
+                "velocity_m_s": 1.0201378771642586,
+                "velocity_x_m_s": 0.726751387087519,
+                "velocity_z_m_s": 0.7159006284335608,
+                "reference_depth_m": 0.7760232824088293
+              },
+              {
+                "edge": "north",
+                "offset": 61,
+                "z": 0,
+                "x": 61,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 0.963544169389556,
+                "velocity_m_s": 1.3730228253407422,
+                "velocity_x_m_s": 0.9781484102844848,
+                "velocity_z_m_s": 0.963544169389556,
+                "reference_depth_m": 0.5765750789686397
+              },
+              {
+                "edge": "north",
+                "offset": 62,
+                "z": 0,
+                "x": 62,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.4977133444544901,
+                "velocity_m_s": 2.13419859004102,
+                "velocity_x_m_s": 1.5204138777240968,
+                "velocity_z_m_s": 1.4977133444544901,
+                "reference_depth_m": 0.37093583869876295
+              },
+              {
+                "edge": "north",
+                "offset": 63,
+                "z": 0,
+                "x": 63,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 64,
+                "z": 0,
+                "x": 64,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 65,
+                "z": 0,
+                "x": 65,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 66,
+                "z": 0,
+                "x": 66,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 67,
+                "z": 0,
+                "x": 67,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 68,
+                "z": 0,
+                "x": 68,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.99467114510901,
+        "balance": {
+          "initial_m3": 12199.028823852537,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 6591.189517640592,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 6125.000000000009,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 11732.839306211961,
+          "residual_m3": 7.275957614183426e-12,
+          "corrected_residual_m3": 7.275957614183426e-12
+        }
+      },
+      "grid_check": {
+        "native_components": 1,
+        "effective_components": 1,
+        "lost_native_channel_cells": 0,
+        "split_native_components": 0,
+        "merged_effective_components": 0,
+        "warnings": [],
+        "scope": "channel-mask topology through unsealed faces; not a hydraulic convergence test",
+        "native_wet_channel_cells_bed_above_original_stage": 0,
+        "schema": "hyra-river-network-v1",
+        "factor": 1,
+        "dx_m": 1.0,
+        "status": "no_component_change_detected",
+        "native_audit": "review"
+      },
+      "probes": {
+        "upstream": {
+          "peak_pulse_rise_m": 2.77801181274166,
+          "arrival_s": 12.0
+        },
+        "middle": {
+          "peak_pulse_rise_m": 1.703991167815917,
+          "arrival_s": 28.0
+        },
+        "downstream": {
+          "peak_pulse_rise_m": 2.0246397177303024,
+          "arrival_s": 44.0
+        }
+      },
+      "max_additional_wet_area_m2": 2064,
+      "final_depth_mae_vs_1m_common4_m": 0.0,
+      "final_depth_mae_wet_union_m": 0.0,
+      "final_wet_iou_vs_1m_common4": 1.0
+    },
+    {
+      "factor": 2,
+      "cells": 16384,
+      "wall_s": 16.27309490001062,
+      "control": {
+        "time_s": 70.0,
+        "steps": 1607,
+        "max_depth_m": 6.173153833818279,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.00041307595885520243,
+          "max_dt_s": 0.046713052052920236,
+          "limited_faces": 0,
+          "max_stage_courant": 0.40014789177934,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.02365221279370644,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.02365221279370644,
+          "cfl_limit_s": 0.04203410851673815,
+          "limiting_cell": [
+            126,
+            35
+          ],
+          "cell_depth_m": 5.392488256092532,
+          "cell_u_m_s": 1.2836497980446873,
+          "cell_v_m_s": 2.539527563454262,
+          "grid_wave_bound_m_s": 19.032162884611594,
+          "boundary_wave_bound_m_s": 7.713204818363805,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 5.3776483337157455,
+        "wet_area_m2": 4308.0,
+        "newly_flooded_area_m2": 212.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 700.0
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 25,
+                "z": 0,
+                "x": 25,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 26,
+                "z": 0,
+                "x": 26,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 27,
+                "z": 0,
+                "x": 27,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.6954507120009924,
+                "velocity_m_s": 0.9909973323607798,
+                "velocity_x_m_s": 0.7059915154755719,
+                "velocity_z_m_s": 0.6954507120009924,
+                "reference_depth_m": 0.7988424570838067
+              },
+              {
+                "edge": "north",
+                "offset": 28,
+                "z": 0,
+                "x": 28,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.4800955981312755,
+                "velocity_m_s": 0.6841224673669873,
+                "velocity_x_m_s": 0.48737230841654056,
+                "velocity_z_m_s": 0.4800955981312755,
+                "reference_depth_m": 1.1571769408384507
+              },
+              {
+                "edge": "north",
+                "offset": 29,
+                "z": 0,
+                "x": 29,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.4862878814592579,
+                "velocity_m_s": 0.6929462936329728,
+                "velocity_x_m_s": 0.493658446909947,
+                "velocity_z_m_s": 0.4862878814592579,
+                "reference_depth_m": 1.1424417032323293
+              },
+              {
+                "edge": "north",
+                "offset": 30,
+                "z": 0,
+                "x": 30,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.5652550395376623,
+                "velocity_m_s": 0.8054722306251821,
+                "velocity_x_m_s": 0.5738224939696792,
+                "velocity_z_m_s": 0.5652550395376623,
+                "reference_depth_m": 0.9828405174590921
+              },
+              {
+                "edge": "north",
+                "offset": 31,
+                "z": 0,
+                "x": 31,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.8633064015050934,
+                "velocity_m_s": 1.2301868790096386,
+                "velocity_x_m_s": 0.8763913591585679,
+                "velocity_z_m_s": 0.8633064015050934,
+                "reference_depth_m": 0.6435207182374609
+              },
+              {
+                "edge": "north",
+                "offset": 32,
+                "z": 0,
+                "x": 32,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 33,
+                "z": 0,
+                "x": 33,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 34,
+                "z": 0,
+                "x": 34,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.9763477872063,
+        "balance": {
+          "initial_m3": 12199.018198838536,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 3658.809367376383,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 700.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 9240.208831462154,
+          "residual_m3": 1.8189894035458565e-12,
+          "corrected_residual_m3": 1.8189894035458565e-12
+        }
+      },
+      "flood": {
+        "time_s": 70.0,
+        "steps": 2144,
+        "max_depth_m": 7.505149359733435,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.00061854926052618,
+          "max_dt_s": 0.046713052052920236,
+          "limited_faces": 0,
+          "max_stage_courant": 0.4011810190698189,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.01572812463307116,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.01572812463307116,
+          "cfl_limit_s": 0.036422870451843246,
+          "limiting_cell": [
+            126,
+            35
+          ],
+          "cell_depth_m": 6.560827386216274,
+          "cell_u_m_s": 1.7991326857819663,
+          "cell_v_m_s": 3.3642911462816523,
+          "grid_wave_bound_m_s": 21.964221657316266,
+          "boundary_wave_bound_m_s": 7.891502135702794,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 6.077656160490326,
+        "wet_area_m2": 6732.0,
+        "newly_flooded_area_m2": 2048.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 6124.999999999988
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 25,
+                "z": 0,
+                "x": 25,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 26,
+                "z": 0,
+                "x": 26,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 27,
+                "z": 0,
+                "x": 27,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.625605801806149,
+                "velocity_m_s": 0.8914703371508457,
+                "velocity_x_m_s": 0.6350879803352666,
+                "velocity_z_m_s": 0.625605801806149,
+                "reference_depth_m": 0.8880281384086344
+              },
+              {
+                "edge": "north",
+                "offset": 28,
+                "z": 0,
+                "x": 28,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.4469686564035356,
+                "velocity_m_s": 0.6369175248527946,
+                "velocity_x_m_s": 0.4537432684431014,
+                "velocity_z_m_s": 0.4469686564035356,
+                "reference_depth_m": 1.242940746730985
+              },
+              {
+                "edge": "north",
+                "offset": 29,
+                "z": 0,
+                "x": 29,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.4541456247401182,
+                "velocity_m_s": 0.6471444990340807,
+                "velocity_x_m_s": 0.461029016613357,
+                "velocity_z_m_s": 0.4541456247401182,
+                "reference_depth_m": 1.223298266659441
+              },
+              {
+                "edge": "north",
+                "offset": 30,
+                "z": 0,
+                "x": 30,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.5239247621810913,
+                "velocity_m_s": 0.7465777699548557,
+                "velocity_x_m_s": 0.5318657820956828,
+                "velocity_z_m_s": 0.5239247621810913,
+                "reference_depth_m": 1.060372778035506
+              },
+              {
+                "edge": "north",
+                "offset": 31,
+                "z": 0,
+                "x": 31,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 0.7785935670701583,
+                "velocity_m_s": 1.1094735178856063,
+                "velocity_x_m_s": 0.7903945497069359,
+                "velocity_z_m_s": 0.7785935670701583,
+                "reference_depth_m": 0.7135373050230905
+              },
+              {
+                "edge": "north",
+                "offset": 32,
+                "z": 0,
+                "x": 32,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 33,
+                "z": 0,
+                "x": 33,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 2.0,
+                "weight": 0.1111111111111111,
+                "discharge_m3_s": 1.1111111111111112,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 34,
+                "z": 0,
+                "x": 34,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.98427187536693,
+        "balance": {
+          "initial_m3": 12199.018198838536,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 6618.236249155264,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 6124.999999999988,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 11705.781949683265,
+          "residual_m3": 5.4569682106375694e-12,
+          "corrected_residual_m3": 5.4569682106375694e-12
+        }
+      },
+      "grid_check": {
+        "native_components": 1,
+        "effective_components": 1,
+        "lost_native_channel_cells": 76,
+        "split_native_components": 0,
+        "merged_effective_components": 0,
+        "warnings": [
+          "76 个原始河道格在当前河道分类或建筑占地下消失",
+          "4 个原始有水河道格映射后的河床不低于原水面，需检查河槽是否被平均抬高"
+        ],
+        "scope": "channel-mask topology through unsealed faces; not a hydraulic convergence test",
+        "native_wet_channel_cells_bed_above_original_stage": 4,
+        "schema": "hyra-river-network-v1",
+        "factor": 2,
+        "dx_m": 2.0,
+        "status": "review",
+        "native_audit": "review"
+      },
+      "probes": {
+        "upstream": {
+          "peak_pulse_rise_m": 2.6354919817074687,
+          "arrival_s": 12.0
+        },
+        "middle": {
+          "peak_pulse_rise_m": 1.5458387392283037,
+          "arrival_s": 28.0
+        },
+        "downstream": {
+          "peak_pulse_rise_m": 1.8544715282340025,
+          "arrival_s": 44.0
+        }
+      },
+      "max_additional_wet_area_m2": 2480,
+      "final_depth_mae_vs_1m_common4_m": 0.01841341145336628,
+      "final_depth_mae_wet_union_m": 0.17978926002979279,
+      "final_wet_iou_vs_1m_common4": 0.8246913580246914
+    },
+    {
+      "factor": 4,
+      "cells": 4096,
+      "wall_s": 2.381035900034476,
+      "control": {
+        "time_s": 70.0,
+        "steps": 827,
+        "max_depth_m": 5.6060072144160715,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.007082375631271454,
+          "max_dt_s": 0.09656344497490028,
+          "limited_faces": 0,
+          "max_stage_courant": 0.4003540599158806,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.024555908743963073,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.024555908743963073,
+          "cfl_limit_s": 0.07591986459823445,
+          "limiting_cell": [
+            62,
+            17
+          ],
+          "cell_depth_m": 4.506952231958902,
+          "cell_u_m_s": 2.910229203675302,
+          "cell_v_m_s": 4.0371930268316225,
+          "grid_wave_bound_m_s": 21.07485318193269,
+          "boundary_wave_bound_m_s": 8.29123402816729,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 5.705794603154375,
+        "wet_area_m2": 4400.0,
+        "newly_flooded_area_m2": 32.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 700.0
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 12,
+                "z": 0,
+                "x": 12,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 13,
+                "z": 0,
+                "x": 13,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 14,
+                "z": 0,
+                "x": 14,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 0.3869882476321632,
+                "velocity_m_s": 0.5514471614458558,
+                "velocity_x_m_s": 0.39285374894644864,
+                "velocity_z_m_s": 0.3869882476321632,
+                "reference_depth_m": 1.4355876669505931
+              },
+              {
+                "edge": "north",
+                "offset": 15,
+                "z": 0,
+                "x": 15,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 0.4019201628252721,
+                "velocity_m_s": 0.5727247126339653,
+                "velocity_x_m_s": 0.40801198410851236,
+                "velocity_z_m_s": 0.4019201628252721,
+                "reference_depth_m": 1.3822535093793586
+              },
+              {
+                "edge": "north",
+                "offset": 16,
+                "z": 0,
+                "x": 16,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 0.862787212323119,
+                "velocity_m_s": 1.2294470493057523,
+                "velocity_x_m_s": 0.8758643007328946,
+                "velocity_z_m_s": 0.862787212323119,
+                "reference_depth_m": 0.6439079620335132
+              },
+              {
+                "edge": "north",
+                "offset": 17,
+                "z": 0,
+                "x": 17,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.97544409125604,
+        "balance": {
+          "initial_m3": 12197.32083349317,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 4654.832632676339,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 700.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 8242.488200816824,
+          "residual_m3": -7.275957614183426e-12,
+          "corrected_residual_m3": -7.275957614183426e-12
+        }
+      },
+      "flood": {
+        "time_s": 70.0,
+        "steps": 1044,
+        "max_depth_m": 7.1066063447160905,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "structures": "none",
+          "compute_backend": "numba",
+          "spatial_order": 2,
+          "time_integrator": "rk2",
+          "low_froude": 1,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 0.5,
+          "max_steps": 30000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.0038178288404751015,
+          "max_dt_s": 0.09656344498675641,
+          "limited_faces": 0,
+          "max_stage_courant": 0.4030438693614599,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.04143219506970297,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.04143219506970297,
+          "cfl_limit_s": 0.06802041128248972,
+          "limiting_cell": [
+            62,
+            17
+          ],
+          "cell_depth_m": 5.870656569931255,
+          "cell_u_m_s": 2.9450998943955877,
+          "cell_v_m_s": 4.372685629286248,
+          "grid_wave_bound_m_s": 23.522351156554727,
+          "boundary_wave_bound_m_s": 8.392548619068238,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 70.0,
+        "max_speed_m_s": 6.510734516501732,
+        "wet_area_m2": 7792.0,
+        "newly_flooded_area_m2": 2752.0,
+        "external_inflow_by_id_m3": {
+          "river-5694119d2e": 6125.0
+        },
+        "boundary_inflows": [
+          {
+            "id": "river-5694119d2e",
+            "discharge_m3_s": 10.0,
+            "faces": [
+              {
+                "edge": "north",
+                "offset": 12,
+                "z": 0,
+                "x": 12,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 13,
+                "z": 0,
+                "x": 13,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              },
+              {
+                "edge": "north",
+                "offset": 14,
+                "z": 0,
+                "x": 14,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 0.37434605128510945,
+                "velocity_m_s": 0.5334323939879808,
+                "velocity_x_m_s": 0.380019937428281,
+                "velocity_z_m_s": 0.37434605128510945,
+                "reference_depth_m": 1.4840694957202403
+              },
+              {
+                "edge": "north",
+                "offset": 15,
+                "z": 0,
+                "x": 15,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 0.384909492703092,
+                "velocity_m_s": 0.5484849952509084,
+                "velocity_x_m_s": 0.39074348675625736,
+                "velocity_z_m_s": 0.384909492703092,
+                "reference_depth_m": 1.4433407491565686
+              },
+              {
+                "edge": "north",
+                "offset": 16,
+                "z": 0,
+                "x": 16,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 4.0,
+                "weight": 0.2222222222222222,
+                "discharge_m3_s": 2.2222222222222223,
+                "inward_velocity_m_s": 0.7746283503841919,
+                "velocity_m_s": 1.103823197754768,
+                "velocity_x_m_s": 0.7863692330468095,
+                "velocity_z_m_s": 0.7746283503841919,
+                "reference_depth_m": 0.7171898049948948
+              },
+              {
+                "edge": "north",
+                "offset": 17,
+                "z": 0,
+                "x": 17,
+                "momentum_direction_xz": [
+                  0.7124050614684708,
+                  0.7017685005713098
+                ],
+                "direction_method": "local_channel_cross_section_fit",
+                "width_m": 1.0,
+                "weight": 0.05555555555555555,
+                "discharge_m3_s": 0.5555555555555556,
+                "inward_velocity_m_s": 1.7598088635408027,
+                "velocity_m_s": 2.5076771928465615,
+                "velocity_x_m_s": 1.786481924712937,
+                "velocity_z_m_s": 1.7598088635408027,
+                "reference_depth_m": 0.31569084976521633
+              }
+            ]
+          }
+        ],
+        "boundary_sample_time_s": 69.9585678049303,
+        "balance": {
+          "initial_m3": 12197.32083349317,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 7047.475514893509,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 0.0,
+          "external_inflow_m3": 6125.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 11274.845318599666,
+          "residual_m3": 5.4569682106375694e-12,
+          "corrected_residual_m3": 5.4569682106375694e-12
+        }
+      },
+      "grid_check": {
+        "native_components": 1,
+        "effective_components": 1,
+        "lost_native_channel_cells": 229,
+        "split_native_components": 0,
+        "merged_effective_components": 0,
+        "warnings": [
+          "229 个原始河道格在当前河道分类或建筑占地下消失",
+          "54 个原始有水河道格映射后的河床不低于原水面，需检查河槽是否被平均抬高"
+        ],
+        "scope": "channel-mask topology through unsealed faces; not a hydraulic convergence test",
+        "native_wet_channel_cells_bed_above_original_stage": 54,
+        "schema": "hyra-river-network-v1",
+        "factor": 4,
+        "dx_m": 4.0,
+        "status": "review",
+        "native_audit": "review"
+      },
+      "probes": {
+        "upstream": {
+          "peak_pulse_rise_m": 2.799196522996277,
+          "arrival_s": 12.0
+        },
+        "middle": {
+          "peak_pulse_rise_m": 1.4671567455168462,
+          "arrival_s": 30.0
+        },
+        "downstream": {
+          "peak_pulse_rise_m": 1.672325736417017,
+          "arrival_s": 46.0
+        }
+      },
+      "max_additional_wet_area_m2": 2608,
+      "final_depth_mae_vs_1m_common4_m": 0.03856679052114487,
+      "final_depth_mae_wet_union_m": 0.3542591631412506,
+      "final_wet_iou_vs_1m_common4": 0.6880733944954128
+    }
+  ],
+  "experiment_wall_s": 139.84458640002413
+}

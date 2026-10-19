@@ -1,5 +1,7 @@
 import {discharge,windowCurve,portLabel,validateCurve} from './inflow-controls.mjs';
 import {framePair,blendFrames,playbackTime} from './maps-playback.mjs';
+import {StructureEditor,staticSolids} from './structure-editor.mjs?v=2';
+import {PeopleEditor} from './people-editor.mjs?v=1';
 import {hydrateScene} from './map-arrays.mjs';
 import {meshGeometry,meshState,meshPixel,selectedLeaf,exportMesh} from './map-mesh.mjs';
 import {inwardVectors,inflowVectors,bearingLabel,inflowDirection,portCode,visibleCrossings,oceanMask,speedStats,speedColor} from './map-display.mjs?v=5';
@@ -11,6 +13,8 @@ const selectedRiverIds=new Set();
 let busy=false,playing=false,time=0,display,baseImage,terrainMin=0,terrainMax=1,epoch=0,pollTimer,seekVersion=0,seeking=false;
 let speedScale=0,speedOceanMask=[],focusedPort=null,markerHits=[];
 let meshDisplay=null,geometry=null,meshOcean=[];
+let structureEditor,structureDragClick=false;
+let peopleEditor;
 const meshCache=new Map();
 const cache=new Map(),pending=new Map();let lastDraw=0;
 const fields={mapUnit:'metres_per_block',mapGridFactor:'grid_factor',mapDuration:'duration_s',
@@ -20,7 +24,7 @@ const numericalFields={mapFlux:['flux_method','rusanov'],mapSpatialOrder:['spati
  mapIntegrator:['time_integrator','rk2'],mapLowFroude:['low_froude',0],mapCfl:['cfl',.4],
  mapLimiter:['limiter_theta',1.5],mapVelocityDepth:['velocity_depth',1e-6],
  mapMaxTimestep:['max_timestep',1],mapMaxSteps:['max_steps',500000]};
-function loadNumerics(flood={}){for(const [id,[key,fallback]] of Object.entries(numericalFields))$(id).value=flood[key]??fallback;}
+function loadNumerics(flood={}){for(const [id,[key,fallback]] of Object.entries(numericalFields))$(id).value=flood[key]??fallback;$('mapRoughnessMode').value=flood.roughness_mode??'uniform';}
 function readNumerics(){
  const result={};
  for(const [id,[key,fallback]] of Object.entries(numericalFields)){
@@ -47,6 +51,7 @@ function controls(){
  $('saveInflowSettings').disabled=busy||active()||!externalDraft.some(p=>p.id===focusedPort);
  for(const el of $('riverCandidates').querySelectorAll('input'))el.disabled=busy||active();
  for(const el of $('externalInflowList').querySelectorAll('button,input'))el.disabled=busy||active();
+ peopleEditor?.fields();
  $('cancelMap').disabled=busy||!active()||process.cancel_requested;
  $('cancelMap').hidden=!active();
  $('playMap').textContent=playing?'暂停播放':time>=available()&&available()>0?'重播':'播放';
@@ -63,6 +68,7 @@ function config(){
  flood.refine_inland_water=false;flood.refinement_buffer=0;
  flood.inflow_m3_s=0; // The point editor now uses explicit, separately accounted external sources.
  flood.boundary=$('mapBoundary').value;flood.initial_water=$('mapInitialWater').checked;
+ flood.roughness_mode=$('mapRoughnessMode').value;
  flood.baseflow=mode==='current'&&$('mapBaseflow').checked;
  if(mode==='demo'){
   flood.grid_factor=1;
@@ -73,7 +79,7 @@ function config(){
   patches:[...(imported?.layers?.patches||[]),...patches]};
  const hydro=JSON.parse($('hydrographs').value);
  if(Object.keys(hydro).length)layers.hydrographs=hydro;else if(mode==='current')layers.hydrographs={};
- return {...(imported||{}),mode,terrain_id:terrain.id,flood,layers,external_inflows:externalDraft.map(p=>({...p}))};
+ return {...(imported||{}),mode,terrain_id:terrain.id,flood,layers,structures:structureEditor.config(),people:peopleEditor.config(),external_inflows:externalDraft.map(p=>({...p}))};
 }
 function draft(){$('draftInfo').textContent=`草稿：${patches.length} 项编辑；应用或重新模拟后生效。`;}
 function pendingSettings(dirty=true){$('draftBadge').textContent=dirty?'有未应用修改':'已应用';$('draftBadge').classList.toggle('is-dirty',dirty);}
@@ -86,11 +92,12 @@ function showPanel(panel){
  for(const button of document.querySelectorAll('[data-panel]'))button.setAttribute('aria-selected',String(button.dataset.panel===panel));
  for(const section of document.querySelectorAll('.settings-panel'))section.hidden=section.id!==`panel-${panel}`;
  document.querySelector('.settings-scroll').scrollTop=0;
- if(panel==='inflows'||panel==='environment')showView('base');
+ if(panel==='inflows'||panel==='environment'||panel==='people')showView('base');
 }
 async function create(start=false){
  if(busy||active())return;
  try{
+  peopleEditor.assertValid();
   const c=config();busy=true;controls();status('正在准备地图与洪水场景…');
   const next=await hydrateScene(await post('/api/maps',c));inflowDirty=false;installScene(next);pendingSettings(false);remember();
   status('地图已应用。可开始整段洪水模拟，或编辑固定环境。');
@@ -100,6 +107,8 @@ async function create(start=false){
 function remember(){try{localStorage.setItem('hyra-map-process',scene.id);}catch{}history.replaceState(null,'',`#${scene.id}`);}
 function installScene(next){
  clearTimeout(pollTimer);epoch++;cache.clear();pending.clear();scene=next;process=next.process;time=0;playing=false;seeking=false;seekVersion++;selected={x:0,z:0};
+ structureEditor.load(next.M_structures?.objects||next.scenario_config?.structures||[]);
+ peopleEditor.load(next.M_people||next.scenario_config?.people||null);
  meshCache.clear();geometry=meshGeometry(scene.M_mesh,scene.grid.shape);meshDisplay=geometry?meshState(scene.M_mesh):null;
  const w=scene.M_water,[rows,cols]=scene.grid.shape,N=rows*cols;display=new Float32Array(4*N);
  for(const [k,name] of ['h','u','v','maximum_depth'].entries())for(let z=0;z<rows;z++)display.set(w[name][z],k*N+z*cols);
@@ -109,7 +118,11 @@ function installScene(next){
  meshOcean=geometry?Uint8Array.from(scene.M_mesh.parent,p=>speedOceanMask[p]):[];
  const refinement=scene.scenario_metadata.refinement;
  $('refinementInfo').textContent=refinement?.enabled?'正在查看历史加密过程；重新应用或模拟将使用统一格宽。':`统一格宽 ${fmt(scene.grid.dx_m)} 米 · ${fmt(N,0)} 个计算格。${factor>1?'高程和水深按面积平均，窄河道细节会变粗。':''}`;
+ const networkCheck=scene.scenario_metadata.river_network_grid_check;
+ if(networkCheck)$('refinementInfo').textContent+=` 河网复查：${networkCheck.warnings.length?networkCheck.warnings.join('；'):'未发现河道分类分区变化；仍需验证水位与流量'}。`;
  const n=scene.config;$('numericsApplied').textContent=`本场景：${n.flux_method==='knp'?'KNP':'Rusanov'} · ${n.spatial_order??2} 阶空间 · ${(n.time_integrator||'rk2').toUpperCase()} · 低弗劳德修正 ${n.low_froude??0} · CFL ${n.cfl??.4}`;
+ const rough=scene.scenario_metadata.roughness;
+ $('roughnessInfo').textContent=rough?`${rough.base_source==='explicit_n_layer'?'显式导入糙率':rough.mode==='landcover'?'按地表分类（'+(rough.source_kind==='actual_surface'?'完整地表':'快速预览近似')+'）':'统一糙率'} · n ${fmt(rough.effective_min_n??n.manning,3)}—${fmt(rough.effective_max_n??n.manning,3)} · 手动编辑优先。${rough.mode==='landcover'?'分类值为未率定初值。':''}`:'示例或历史糙率图层；手动编辑优先。';
  terrainMin=Infinity;terrainMax=-Infinity;for(const row of scene.M_base.z)for(const h of row){terrainMin=Math.min(terrainMin,h);terrainMax=Math.max(terrainMax,h);}
  inletControls();makeBase();$('mapTimeline').max=scene.config.duration_s;$('durationLabel').textContent=`${fmt(scene.config.duration_s)} 秒`;
  $('worldInfo').textContent=`${scene.provenance==='synthetic_multilayer_demo'?'建筑与水源示例':'当前生成地图'} · ${cols} × ${rows} 计算格 · ${geometry?`最细 ${fmt(scene.grid.dx_m/2)} 米`:`格宽 ${fmt(scene.grid.dx_m)} 米`} · 全部图层同步`;
@@ -331,9 +344,9 @@ function image(colors,leafColors=null){const [nz,nx]=scene.grid.shape,cv=documen
  }
  if(scale===2)for(const leaf of geometry.fine){const p=meshPixel(scene.M_mesh.parent[leaf],scene.M_mesh.child[leaf],nx);img.data.set([...leafColors(leaf).map(Math.round),255],p*4);}
  cv.getContext('2d').putImageData(img,0,0);return cv;}
-function markers(ctx,sources=true){
+function markers(ctx,sources=true,solids=scene.M_base.solid){
  const [nz,nx]=scene.grid.shape,sx=S/nx,sz=S/nz,b=scene.M_base;
- ctx.fillStyle='#414e4e';for(let z=0;z<nz;z++)for(let x=0;x<nx;x++)if(b.solid[z][x])ctx.fillRect(x*sx,z*sz,sx,sz);
+ ctx.fillStyle='#414e4e';for(let z=0;z<nz;z++)for(let x=0;x<nx;x++)if(solids[z][x])ctx.fillRect(x*sx,z*sz,sx,sz);
  ctx.strokeStyle='#182d2c';ctx.lineWidth=2;ctx.beginPath();
  for(let z=0;z<nz;z++)for(let x=0;x<=nx;x++)if(b.wall_x[z][x]){ctx.moveTo(x*sx,z*sz);ctx.lineTo(x*sx,(z+1)*sz);}
  for(let z=0;z<=nz;z++)for(let x=0;x<nx;x++)if(b.wall_y[z][x]){ctx.moveTo(x*sx,z*sz);ctx.lineTo((x+1)*sx,z*sz);}ctx.stroke();
@@ -355,9 +368,9 @@ function makeBase(){
    if(z+1<nz&&Math.floor(b.z[z+1][x]/interval)!==band){ctx.moveTo(x*sx,(z+1)*sz);ctx.lineTo((x+1)*sx,(z+1)*sz);}
   }ctx.stroke();
  }
- markers(ctx);
+ markers(ctx,true,staticSolids(scene));
  const captions={elevation:`高程 ${fmt(terrainMin)}—${fmt(terrainMax)} m · 等高线与地物`,terrain:'独立地表类型图层 · 查点显示类别',roughness:'逐格 Manning 糙率 · 深色表示较大阻力',structures:'建筑与公共边阻水墙',sources:'绿色内源 · 紫色外源 · 青色排水口'};
- $('baseCaption').textContent=captions[mode];
+ $('baseCaption').textContent='编辑预览 · '+captions[mode];
 }
 function arrows(ctx){
  if(!$('flowArrows').checked)return;
@@ -395,6 +408,8 @@ function draw(id,kind){
   ctx.drawImage(img,0,0,S,S);markers(ctx,false);if(kind==='depth')arrows(ctx);
  }
  externalMarkers(ctx,kind);
+ structureEditor?.draw(ctx,S,time,kind==='base'?structureEditor.objects:(scene.M_structures?.objects||[]));
+ peopleEditor?.draw(ctx,S,time,kind==='base'?peopleEditor.items:(scene.M_people?.items||[]),kind==='base'?peopleEditor.start:(scene.M_people?.start||null));
  const sx=S/nx,sz=S/nz,fine=selectedLeaf(geometry,scene.M_mesh,selected.z*nx+selected.x,selected.child)>=0;
  ctx.strokeStyle='#f9bd38';ctx.lineWidth=2;ctx.strokeRect((selected.x+(fine?(selected.child&1)/2:0))*sx,(selected.z+(fine?(selected.child>>1)/2:0))*sz,sx/(fine?2:1),sz/(fine?2:1));
  if(kind==='base'){ctx.strokeStyle='#da982b';ctx.setLineDash([4,3]);for(const p of patches)ctx.strokeRect(p.x*sx,p.z*sz,(p.width||1)*sx,(p.height||1)*sz);ctx.setLineDash([]);}
@@ -462,7 +477,7 @@ $('playMap').onclick=()=>{if(!playing&&time>=available()-1e-6){seekTo(0,true);re
 $('rewindMap').onclick=()=>seekTo(0);
 $('mapTimeline').oninput=()=>seekTo(Math.min(Number($('mapTimeline').value),available()));
 $('baseLayer').onchange=()=>{makeBase();render();};
-for(const id of ['flowArrows','flowLabels','flowDensity','depthScale'])$(id).onchange=()=>render(framePair(process.frames,time));
+for(const id of ['flowArrows','flowLabels','flowDensity','depthScale','showPeople'])$(id).onchange=()=>render(framePair(process.frames,time));
 $('crossingDisplay').onchange=()=>{inletControls();if(scene)render(framePair(process.frames,time));};
 $('speedScaleMode').onchange=()=>{$('speedManualControl').hidden=$('speedScaleMode').value!=='manual';if(scene)render(framePair(process.frames,time));};
 for(const id of ['speedManualLimit','speedEnhance'])$(id).onchange=()=>{if(!$('speedManualLimit').checkValidity()){$('speedManualLimit').reportValidity();return;}if(scene)render(framePair(process.frames,time));};
@@ -470,6 +485,11 @@ $('speedManualLimit').oninput=()=>{if($('speedManualLimit').checkValidity()&&sce
 $('depthScale').oninput=()=>{if($('depthScale').checkValidity()&&scene)render(framePair(process.frames,time));};
 for(const id of ids){
  $(id).onclick=e=>{if(!scene||busy)return;const r=$(id).getBoundingClientRect(),[nz,nx]=scene.grid.shape;
+  if(id==='baseMap'&&!pickInflow){
+   if(structureDragClick){structureDragClick=false;return;}
+   if(peopleEditor.pick&&peopleEditor.click([(e.clientX-r.left)/r.width*nx*scene.grid.dx_m,(e.clientY-r.top)/r.height*nz*scene.grid.dx_m]))return;
+   if(structureEditor.click([(e.clientX-r.left)/r.width*nx*scene.grid.dx_m,(e.clientY-r.top)/r.height*nz*scene.grid.dx_m]))return;
+  }
   if(id==='baseMap'&&!pickInflow&&$('editTool').value==='inspect'){
    const px=(e.clientX-r.left)/r.width*S,pz=(e.clientY-r.top)/r.height*S,hit=markerHits.find(m=>Math.abs(m.position[0]-px)<=24&&Math.abs(m.position[1]-pz)<=16);
    if(hit){focusPort(hit.p);return;}
@@ -488,9 +508,19 @@ for(const id of ids){
  };
  $(id).onkeydown=e=>{const d={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];if(!scene||!d)return;e.preventDefault();delete selected.child;selected.x=Math.max(0,Math.min(scene.grid.shape[1]-1,selected.x+d[0]));selected.z=Math.max(0,Math.min(scene.grid.shape[0]-1,selected.z+d[1]));render(framePair(process.frames,time));};
 }
+structureEditor=new StructureEditor({getScene:()=>scene,getTime:()=>time,
+ redraw:()=>{if(scene&&baseImage)render();},dirty:()=>pendingSettings(),message:status,locked:()=>busy||active()});
+peopleEditor=new PeopleEditor({getScene:()=>scene,getStructures:()=>structureEditor.objects,
+ redraw:()=>{if(scene&&baseImage)render();},dirty:()=>pendingSettings(),message:status,locked:()=>busy||active()});
+function structurePosition(e){const r=$('baseMap').getBoundingClientRect(),[nz,nx]=scene.grid.shape,dx=scene.grid.dx_m;return [Math.max(0,Math.min(nx*dx,(e.clientX-r.left)/r.width*nx*dx)),Math.max(0,Math.min(nz*dx,(e.clientY-r.top)/r.height*nz*dx))];}
+$('baseMap').addEventListener('pointerdown',e=>{if(!scene||busy||pickInflow||peopleEditor?.pick)return;if(structureEditor.down(structurePosition(e))){$('baseMap').setPointerCapture(e.pointerId);e.preventDefault();}});
+$('baseMap').addEventListener('pointermove',e=>{if(scene)structureEditor.move(structurePosition(e));});
+$('baseMap').addEventListener('pointerup',e=>{if(scene&&structureEditor.up(structurePosition(e)))structureDragClick=true;});
+$('baseMap').addEventListener('pointercancel',()=>structureEditor.cancel());
+$('editTool').addEventListener('change',()=>{$('structureTool').value='none';structureEditor.cancel();});
 $('editTool').onchange=()=>{$('patchValue').value=({roughness:.06,drain:1,source:0,terrain:0})[$('editTool').value]??1;};
 $('clearDraft').onclick=()=>{patches=[];draft();render();};
-$('mapSource').onchange=()=>{imported=null;patches=[];externalDraft=[];focusedPort=null;selectedRiverIds.clear();inflowDirty=true;inletControls();draft();$('hydrographs').value='{}';$('mapBoundary').value=$('mapSource').value==='demo'?'closed':'ocean';status('地图来源已更改，应用或开始模拟后生效。');};
+$('mapSource').onchange=()=>{imported=null;patches=[];externalDraft=[];focusedPort=null;selectedRiverIds.clear();inflowDirty=true;peopleEditor.reset();inletControls();draft();$('hydrographs').value='{}';$('mapBoundary').value=$('mapSource').value==='demo'?'closed':'ocean';status('地图来源已更改，应用或开始模拟后生效。');};
 function download(blob,name){const a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function displayedForcing(){
  const [nz,nx]=scene.grid.shape,rate=Array.from({length:nz},()=>Array(nx).fill(0)),entries=scene.M_forcing?.external_inflows||[];
@@ -509,11 +539,11 @@ $('exportFrame').onclick=()=>{
  for(const [k,j] of ['depth','u','v','maximum_depth'].entries())layers[j]=Array.from({length:nz},(_,z)=>Array.from(display.slice(k*N+z*nx,k*N+(z+1)*nx)));
  saveJson({schema:'hyra-map-display-v1',time_s:time,grid:scene.grid,display_interpolated:Boolean(pair&&pair.alpha>1e-6&&pair.alpha<1-1e-6),
   source_frame_times_s:pair?[process.frames[pair.lo].time_s,process.frames[pair.hi].time_s]:[0],
-  M_forcing:displayedForcing(),layers,M_mesh:geometry?exportMesh(scene.M_mesh,meshDisplay):undefined,
+  M_forcing:displayedForcing(),M_structures:scene.M_structures,layers,M_mesh:geometry?exportMesh(scene.M_mesh,meshDisplay):undefined,
   base_frame_projection:geometry?'area_averaged_conserved_state':undefined},'hyra-displayed-water.json');
 };
 $('exportPng').onclick=()=>$('depthMap').toBlob(blob=>download(blob,'hyra-map-water-depth.png'));
-$('importMapConfig').onchange=async()=>{try{const file=$('importMapConfig').files[0];if(!file)return;if(file.size>8*1024*1024)throw Error('场景配置文件过大');const c=JSON.parse(await file.text());if(!c||!['current','demo'].includes(c.mode)||c.agents||c.legacy_exploration)throw Error('请选择纯地图与洪水场景配置');imported=c;loadNumerics(c.flood);patches=[];externalDraft=normalizeInflows(c.external_inflows||[]);inflowDirty=true;draft();$('mapSource').value=c.mode;for(const [id,name] of Object.entries(fields))if(c.flood?.[name]!==undefined)$(id).value=c.flood[name];for(const [id,name] of [['mapBaseflow','baseflow'],['mapInitialWater','initial_water']])if(c.flood?.[name]!==undefined)$(id).checked=c.flood[name];if(c.flood?.boundary)$('mapBoundary').value=c.flood.boundary;if(c.flood?.inflow_m3_s>0&&!externalDraft.some(p=>p.id==='legacy-point'))externalDraft.push({id:'legacy-point',kind:'manual',x:c.flood.source_x,z:c.flood.source_z,enabled:true,hydrograph:[[0,c.flood.inflow_m3_s]]});$('hydrographs').value=JSON.stringify(c.layers?.hydrographs||{});inletControls();restoreInflowEditor();status('地图场景配置已载入，应用或开始模拟后生效。');}catch(e){status(e.message,true);}};
+$('importMapConfig').onchange=async()=>{try{const file=$('importMapConfig').files[0];if(!file)return;if(file.size>8*1024*1024)throw Error('场景配置文件过大');const c=JSON.parse(await file.text());if(!c||!['current','demo'].includes(c.mode)||c.agents||c.legacy_exploration)throw Error('请选择纯地图与洪水场景配置');imported=c;structureEditor.load(c.structures||[]);peopleEditor.load(c.people||null);loadNumerics(c.flood);patches=[];externalDraft=normalizeInflows(c.external_inflows||[]);inflowDirty=true;draft();$('mapSource').value=c.mode;for(const [id,name] of Object.entries(fields))if(c.flood?.[name]!==undefined)$(id).value=c.flood[name];for(const [id,name] of [['mapBaseflow','baseflow'],['mapInitialWater','initial_water']])if(c.flood?.[name]!==undefined)$(id).checked=c.flood[name];if(c.flood?.boundary)$('mapBoundary').value=c.flood.boundary;if(c.flood?.inflow_m3_s>0&&!externalDraft.some(p=>p.id==='legacy-point'))externalDraft.push({id:'legacy-point',kind:'manual',x:c.flood.source_x,z:c.flood.source_z,enabled:true,hydrograph:[[0,c.flood.inflow_m3_s]]});$('hydrographs').value=JSON.stringify(c.layers?.hydrographs||{});inletControls();restoreInflowEditor();status('地图场景配置已载入，应用或开始模拟后生效。');}catch(e){status(e.message,true);}};
 json('/api/current').then(async t=>{
  terrain=t;$('terrainInfo').textContent=`当前种子 ${t.config.seed} · ${t.shape[1]} × ${t.shape[0]} 格 · 每格 ${t.step} 方块${t.step!==1?'（旧地图，重新生成可使用每方块一格）':''}。`;
  for(const [id,size] of [['sourceX',t.shape[1]],['sourceZ',t.shape[0]]]){$(id).max=size-1;$(id).value=Math.min(size-1,Number($(id).value));}

@@ -1,0 +1,3 @@
+# Install in an isolated Python 3.12 environment: upstream requires NumPy <2.
+rivgraph @ git+https://github.com/VeinsOfTheEarth/RivGraph.git@f8745a645d822377c75e16f97ae995da32587695
+tifffile==2025.12.20

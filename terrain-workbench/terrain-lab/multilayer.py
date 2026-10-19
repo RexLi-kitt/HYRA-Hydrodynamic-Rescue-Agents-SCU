@@ -41,7 +41,7 @@ class BaseMap:
             if key in ('source_id','terrain_class') and (numeric!=np.floor(numeric)).any(): raise ValueError(f'{key} 需要整数')
             setattr(self,key,numeric.astype(default.dtype))
         for p in config.get('patches',[]): self.patch(p)
-        if (self.n<=0).any() or (self.n>.5).any(): raise ValueError('每格糙率需要在 0 到 0.5 之间')
+        if (self.n<0).any() or (self.n>.5).any(): raise ValueError('每格糙率需要在 0 到 0.5 之间（含端点）')
         if (self.drain_capacity<0).any(): raise ValueError('排水能力不能为负')
         if (self.source_id<-1).any() or (self.solid & (self.source_id>=0)).any(): raise ValueError('水源编号无效或位于建筑内')
         self.hydrographs={}
@@ -82,18 +82,35 @@ class BaseMap:
 
     def snapshot(self):
         result={k:getattr(self,k) for k in ('z','n','solid','source_id','drain_capacity','wall_x','wall_y','terrain_class')}
+        if hasattr(self,'static_solid'):result['static_solid']=self.static_solid
         if hasattr(self,'refinement_level'):result['refinement_level']=self.refinement_level
         return result
 
 
 class MapWorld:
-    def __init__(self,solver,meta,layers=None):
+    def __init__(self,solver,meta,layers=None,structures=None,people=None):
         self.solver=solver;self.meta=meta;self.config=meta['config']
+        layers=dict(layers or {})
+        layers.setdefault('n',solver.manning)
         self.base=BaseMap(solver.bed,solver.dx,layers,self.config['manning'])
+        from hydraulic_structures import Structures
+        self.structures=Structures(structures or [],self.base.z,self.base.dx)
+        self.base.static_solid=self.base.solid.copy()
+        self.base.solid |= self.structures.buildings
+        if np.any(self.base.solid & (self.base.source_id>=0)):
+            raise ValueError('建筑与变化水源重叠，请移动建筑或水源')
+        solver.structures=self.structures
         self.base.configure(solver)
         source=(self.config['source_z']//meta['coarsening_factor'],self.config['source_x']//meta['coarsening_factor'])
         if self.config['inflow_m3_s'] and self.base.solid[source]:
             raise ValueError('指定洪水来水不能放在建筑格内')
+        import people as people_layer
+        levees=[(e['axis'],e['z'],e['x']) for obj in self.structures.compiled
+                if obj['kind']!='building' and self.structures.active(obj,0.)
+                for e in obj['edges']]
+        self.people=people_layer.normalize(people,shape=self.base.shape,dx=self.base.dx,
+            solid=self.base.solid,bed=self.base.z,wall_x=self.base.wall_x,wall_y=self.base.wall_y,
+            levee_edges=levees,terrain_class=self.base.terrain_class,terrain_ids=meta.get('terrain_ids'))
         self.generated_initial=solver.h.copy()
         self.external_inflows=[];self.river_crossings=[]
 
@@ -129,7 +146,10 @@ class MapWorld:
     def snapshot(self,array_encoder=None,compact=False):
         result=dict(schema='hyra-multilayer-v2',time_s=self.solver.time,grid=self.grid(),
             provenance=self.meta.get('terrain_source'),config=self.config,scenario_metadata=self.meta,
-            source_hydrographs=self.base.hydrographs,M_base=self.base.snapshot(),M_water=self.water(compact),M_forcing=self.forcing())
+            source_hydrographs=self.base.hydrographs,M_base=self.base.snapshot(),M_water=self.water(compact),M_forcing=self.forcing(),
+            M_structures=dict(schema='hyra-structures-v1',coordinate_system='local metres from displayed grid outer corner',
+                              objects=self.structures.compiled),
+            M_people=self.people)
         if hasattr(self.solver,'mesh_snapshot'):
             result['M_mesh']=self.solver.mesh_snapshot(compact)
             result['M_mesh']['origin_m']=[v*self.config['metres_per_block']-self.base.dx/2 for v in self.meta.get('origin_blocks',[0,0])]
@@ -143,6 +163,8 @@ class MapWorld:
             initial_depth=self.solver.initial,generated_initial_depth=self.generated_initial,
             baseflow_rate=self.solver.baseflow_rate).items()})
         result.update({'M_forcing.'+k:v for k,v in self.forcing().items() if isinstance(v,np.ndarray)})
+        import people as people_layer
+        result['M_people.count']=people_layer.cell_counts(self.people,self.base.shape)
         if hasattr(self.solver,'mesh_snapshot'):
             result.update({'M_mesh.'+k:v for k,v in self.solver.mesh_snapshot().items() if isinstance(v,np.ndarray)})
             result['M_mesh.origin_m']=np.asarray([v*self.config['metres_per_block']-self.base.dx/2 for v in self.meta.get('origin_blocks',[0,0])])
@@ -158,6 +180,21 @@ class MapWorld:
 
 
 DATA_DICTIONARY=dict(schema='hyra-multilayer-v2',axis_order=['z','x'],
+    M_structures=dict(schema='hyra-structures-v1',
+        coordinate_system='local x_m/z_m from displayed grid outer corner, positive right/down; independent of grid_factor',
+        objects='original metre geometry plus compiled cell_bounds/edges; building height is metadata, solid footprint excludes water',
+        crest_mode='relative: max(adjacent ground)+crest_m; absolute: crest_m',
+        temporary='enabled only during flood time [start_s,end_s); no temporary structures in baseflow warmup',
+        hydraulic_model='ANUGA Villemonte overtopping blend, zero below crest; no seepage or structural failure model',
+        grid_mapping='rectangular intersecting cells; polylines snapped to connected staircase interior faces'),
+    M_people=dict(schema='hyra-people-v1',
+        coordinate_system='local x_m/z_m from displayed grid outer corner, positive right/down; independent of grid_factor',
+        mode='uniform, cluster, cluster_isolated or manual; the authored mode is metadata for reproduction',
+        start='rescue entry point; automatic picks the lowest standable boundary cell',
+        items='stable id, metre position, [z,x] cell, group (-1 isolated) and kind',
+        counts='total people, reachable people and size of the connected walkable area',
+        legality='rejects building cells, ocean cells, sealed starts and targets unreachable from the start',
+        reachability='four-neighbour walk over cells that are not solid and faces without a sealed wall or an active levee; flood water is not a barrier'),
     M_mesh=dict(schema='hyra-static-leaf-v1',parent='flat base-grid index',child='-1 coarse; 0/1 upper left/right, 2/3 lower left/right',
         origin_m='outer-corner origin in metres; absolute centres are origin_m + (x_m,z_m)',
         h='actual leaf depth, m',u='actual leaf +X velocity, m/s',v='actual leaf +Z velocity, m/s',
@@ -168,6 +205,7 @@ DATA_DICTIONARY=dict(schema='hyra-multilayer-v2',axis_order=['z','x'],
         face_left='leaf index or -1 exterior',face_right='leaf index or -1 exterior',
         face_axis='1 +X, 0 +Z',face_length_m='shared physical subface length',face_mass_flux='last RK-weighted mass flux, m2/s'),
     M_base=dict(z='ground elevation, m',n='Manning coefficient, s/m^(1/3)',solid='impermeable cell, bool',
+        static_solid='impermeable cells before authored objects; for editing preview, retains legacy overlaps',
         source_id='-1 none or hydrograph id',drain_capacity='per-cell capacity, m3/s',
         wall_x='[nz,nx+1] impermeable faces',wall_y='[nz+1,nx] impermeable faces',
         terrain_class='integer land-cover class',refinement_level='0 native parent, 1 split into four leaf cells'),

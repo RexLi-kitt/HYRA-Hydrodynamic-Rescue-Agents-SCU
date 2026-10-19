@@ -150,6 +150,8 @@ def describe(relative):
     result['config'] = json.loads(config_file.read_text()) if config_file.is_file() else dict(DEFAULTS)
     report = folder.parent / 'terrain-profile.json'
     if report.is_file(): result['terrain_profile'] = json.loads(report.read_text())
+    network = folder / 'river-network.json'
+    if network.is_file(): result['river_network'] = json.loads(network.read_text(encoding='utf-8'))
     try:
         import river_inlets
         result['river_inlets']=river_inlets.annotate(ROOT,result)
@@ -281,6 +283,10 @@ def generate(jobid, config):
             raise RuntimeError(f'已检查 {len(origins)} 个区域，未找到符合“{PROFILES[target]["label"]}”标准的地图{detail}。原地图保留；相同种子与坐标会重复相同搜索，请更换种子或区域起点')
         result = describe(f'generated/{jobid}/raw')
         if config['mode'] == 'surface' and not result['full']: raise RuntimeError('地表生成尚未完成')
+        if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
+        job.update(stage='river_network', progress_known=False, message='正在用 RivGraph 检查原始河网拓扑…')
+        import river_network
+        result['river_network'] = river_network.audit_generation(ROOT, result, lambda: job.get('cancel_requested', False))
         if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
         pointer = ROOT / 'current.json.tmp'
         pointer.write_text(json.dumps({'directory': result['id']}))
