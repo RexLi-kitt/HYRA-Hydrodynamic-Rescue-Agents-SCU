@@ -1,0 +1,127 @@
+{
+  "study_id": "hyra-experiment3-20261018-v1",
+  "status": "development_not_frozen",
+  "master_seed": 2026101803,
+  "source_document": "docs/protocols/实验三原始方案.md",
+  "family_counts": {
+    "design": 6,
+    "train": 24,
+    "validation": 12,
+    "test": 36
+  },
+  "scales": [
+    {
+      "side": 32,
+      "cells": 1024,
+      "drones": 4,
+      "hidden_targets": 12,
+      "methods": [
+        "H",
+        "E",
+        "P"
+      ]
+    },
+    {
+      "side": 50,
+      "cells": 2500,
+      "drones": 10,
+      "hidden_targets": 30,
+      "methods": [
+        "H",
+        "E",
+        "P",
+        "P_wrong_links",
+        "P_uniform_time"
+      ]
+    },
+    {
+      "side": 70,
+      "cells": 4900,
+      "drones": 20,
+      "hidden_targets": 60,
+      "methods": [
+        "H",
+        "E",
+        "P"
+      ]
+    }
+  ],
+  "episode": {
+    "duration_s": 1200,
+    "cell_size_m": 10,
+    "speed_mps": 5,
+    "payload": 4,
+    "sensor_shape": [
+      5,
+      5
+    ],
+    "sampling_period_s": 5,
+    "planning_period_s": 10,
+    "service_duration_s": 12,
+    "max_service_depth_m": 0.8,
+    "observation_noise_m": 0.02,
+    "main_delay_s": 0,
+    "extension_delay_s": 10
+  },
+  "hydrology": {
+    "onset_s": 120,
+    "rise_m": [
+      0.6,
+      0.9
+    ],
+    "rise_duration_s": [
+      600,
+      900
+    ],
+    "local_perturbation_m": [
+      0,
+      0.1,
+      0.2
+    ],
+    "nominal_rise_factor": 0.75,
+    "post_rise": "hold",
+    "design_conditions": "full_factorial_per_design_family",
+    "formal_condition_allocation": "unresolved"
+  },
+  "evaluation": {
+    "layout_noise_configs": 2,
+    "model_training_seeds": [
+      101,
+      202,
+      303
+    ],
+    "primary_baseline": "select_H_or_E_once_on_validation_then_freeze",
+    "family_paired": true,
+    "bootstrap_unit": [
+      "family",
+      "training_seed"
+    ],
+    "engineering_target_percentage_points": 3,
+    "quoted_main_episodes": 2376,
+    "quoted_delay_episodes": 648,
+    "quoted_total_episodes": 3024,
+    "delay_methods": "unresolved"
+  },
+  "development_choices": {
+    "hydraulic_mesh_m": [
+      10,
+      5
+    ],
+    "output_intervals_s": [
+      2,
+      1
+    ],
+    "forecast_horizon_s": 60,
+    "nominal_only_preflight": true,
+    "greedy_planner_is_formal_planner": false
+  },
+  "formal_test_enabled": false,
+  "configuration_frozen": false,
+  "unresolved_before_freeze": [
+    "Assign one hydrology condition per family or cross all twelve within each family",
+    "Specify whether delay extension uses three or five methods",
+    "Complete six-family design audit and numerical tolerances",
+    "Implement and train five capacity-matched information modules",
+    "Freeze planner, training, fixed-route replay and validation B* selection"
+  ]
+}
