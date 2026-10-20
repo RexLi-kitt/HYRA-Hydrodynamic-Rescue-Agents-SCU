@@ -209,6 +209,8 @@ def generate(jobid, config):
         origins = candidate_origins(config)
         requested_origin = [config['origin_x'], config['origin_z']]
         attempts = []
+        import terrain_cache
+        cached = terrain_cache.previews(ROOT,directory,preset_for(config),request) if target != 'custom' else {}
         started = time.monotonic()
         def export(candidate_request, log_name):
             nonlocal pending
@@ -231,9 +233,20 @@ def generate(jobid, config):
                 candidate.update(export_datapack=False, output=f'candidate-{number}/raw')
                 job.update(message=f'正在寻找{PROFILES[target]["label"]}区域（{number}/{len(origins)}），保留原种子…',
                            candidate_index=number, candidate_count=len(origins))
-            export(candidate, f'candidate-{number}.log' if target != 'custom' else 'generation.log')
+            source = cached.get((x,z))
+            if source is not None:
+                if job.get('cancel_requested'): raise InterruptedError('生成已取消，原地图保留')
+                job.update(stage='cache',progress_known=False,message='正在重新检查已生成的区域…')
+                terrain_cache.copy_preview(source,directory/candidate['output'])
+                path.write_text(json.dumps(candidate,indent=2))
+                log_name = f'candidate-{number}.log'
+                (directory/log_name).write_text(f'Reused native preview: {source.relative_to(ROOT)}\n')
+                job['log_url'] = f'/generated/{jobid}/{log_name}'
+            else:
+                export(candidate, f'candidate-{number}.log' if target != 'custom' else 'generation.log')
             if target == 'custom': break
             check = assess(directory/candidate['output'],target)
+            if source is not None: check['reused_preview'] = str(source.relative_to(ROOT))
             attempts.append(dict(origin=[x,z], **check))
             (directory/'terrain-search.json').write_text(json.dumps(attempts,indent=2))
             if check['accepted']:

@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-VERSION = 'hyra-terrain-modes-v1'
+VERSION = 'hyra-terrain-modes-v2'
 PROFILES = {
     'water_network': dict(label='稠密水网', parameters=dict(vertical_scale=.55,
         continent_scale=4000, region_size=800, plains_weight=10, hills_weight=.5,
@@ -49,6 +49,30 @@ def candidate_origins(config):
             if abs(x+dx*stride) <= 30000000 and abs(z+dz*stride) <= 30000000]
 
 
+def river_length(mask, step):
+    """Estimate channel length from a one-cell skeleton, rather than channel width."""
+    import numpy as np
+    line = np.asarray(mask, bool).copy()
+    changed = True
+    while changed:
+        changed = False
+        for phase in (0,1):
+            p = np.pad(line,1)
+            neighbors = [p[:-2,1:-1],p[:-2,2:],p[1:-1,2:],p[2:,2:],
+                         p[2:,1:-1],p[2:,:-2],p[1:-1,:-2],p[:-2,:-2]]
+            count = np.stack(neighbors).sum(axis=0)
+            transitions = sum((~neighbors[i] & neighbors[(i+1)%8]).astype('u1') for i in range(8))
+            n,e,s,w = [neighbors[i] for i in (0,2,4,6)]
+            guard = (~(n&e&s) & ~(e&s&w)) if phase == 0 else (~(n&e&w) & ~(n&s&w))
+            remove = line & (count>=2) & (count<=6) & (transitions==1) & guard
+            if remove.any(): line[remove] = False; changed = True
+    cardinal = (line[:,:-1]&line[:,1:]).sum() + (line[:-1,:]&line[1:,:]).sum()
+    # Count a diagonal only when the two cells have no shorter cardinal connection.
+    diagonal = ((line[:-1,:-1]&line[1:,1:]) & ~(line[:-1,1:]|line[1:,:-1])).sum()
+    diagonal += ((line[:-1,1:]&line[1:,:-1]) & ~(line[:-1,:-1]|line[1:,1:])).sum()
+    return float(step * (cardinal + np.sqrt(2)*diagonal))
+
+
 def assess_arrays(bed, types, water, terrain_ids, sea_level, step):
     import numpy as np
     from river_inlets import detect
@@ -64,8 +88,12 @@ def assess_arrays(bed, types, water, terrain_ids, sea_level, step):
     covered = sum(bool(part.any()) for row in np.array_split(river,4,axis=0)
                   for part in np.array_split(row,4,axis=1)) / 16
     elevations = bed[land]
+    length_km = river_length(river,step)/1000
+    inland_area_km2 = float((land|inland).sum())*step**2/1e6
     return dict(land_fraction=float(land.mean()), inland_water_fraction=float(inland.mean()),
         wet_river_fraction=float(river.mean()), river_tile_coverage=covered,
+        river_length_km=length_km,
+        river_length_density_km_per_km2=length_km/inland_area_km2 if inland_area_km2 else 0,
         river_boundary_crossings=len(detect(river,bed,water,step=step)),
         land_relief_m=float(np.percentile(elevations,95)-np.percentile(elevations,5)) if elevations.size else 0,
         land_p90_height_m=float(np.percentile(elevations,90)) if elevations.size else 0,
@@ -77,8 +105,8 @@ def verdict(mode, metrics):
     if mode == 'custom': return True
     m = metrics
     if mode == 'water_network':
-        return (m['land_fraction'] >= .55 and m['wet_river_fraction'] >= .04
-                and m['river_tile_coverage'] >= .5 and m['river_boundary_crossings'] >= 3
+        return (m['land_fraction'] >= .55 and m['river_length_density_km_per_km2'] >= .8
+                and m['river_tile_coverage'] >= .625 and m['river_boundary_crossings'] >= 4
                 and m['land_relief_m'] <= 80)
     if mode == 'mountains':
         return (m['land_fraction'] >= .7 and m['mountain_land_fraction'] >= .25
