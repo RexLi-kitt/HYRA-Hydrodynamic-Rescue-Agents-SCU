@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-20",
+  "source_package": "D:\\HyRA\\实验\\实验三-多无人机闭环搜救\\results\\packages\\20261020_002534_experiment3",
+  "destination": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\前置实验\\实验三-多无人机闭环搜救",
+  "all_original_manifest_files_verified": true,
+  "files_verified": 55001,
+  "bytes_verified": 40276294752,
+  "frozen_configuration_models_and_evidence_verified": true,
+  "report_copies_sha256": {
+    "fixed_record_errors.png": "4f941c8df177e8156b30d47325047e36450f472d87bc2118b718b831d126bf6c",
+    "primary_effects.png": "81eb6317137e441c08d410a23882765e2fb9b0e63ab237933e6626eb93db6614",
+    "raw_statistics.json": "57bf1c1a0ef8c54e6e7b10154392468169472ae5acae86745ba61acb4ba186f9",
+    "实验三完整报告.md": "2945dae0f889a9d01eb6a941319886b3dc6703e12f16b4ba1d836c03bc3af897"
+  },
+  "changes_limited_to_preliminary_experiments": true,
+  "raw_results_excluded_from_git": true,
+  "git_candidate_files": 129,
+  "git_candidate_bytes": 16070979,
+  "training_or_simulation_started": false,
+  "verifier_output": "{'status': 'passed', 'files': 55001, 'bytes_verified': 40276294752, 'all_manifest_hashes_checked': True}\nFrozen configuration, model weights and pre-test evidence verified\n"
+}
