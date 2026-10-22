@@ -1,0 +1,58 @@
+name: 自动同步 main 到 LLY
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-main-to-lly
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出主分支及完整历史
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: 读取杂项中的同步配置
+        id: config
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import subprocess
+          with open('杂项文件夹/branch-sync.yml', encoding='utf-8') as f:
+              config = json.loads('\n'.join(line for line in f if not line.lstrip().startswith('#')))
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              for key in ('source_branch', 'target_branch'):
+                  value = config[key]
+                  subprocess.run(['git', 'check-ref-format', '--branch', value], check=True)
+                  print(f'{key}={value}', file=output)
+          PY
+
+      - name: 合并主分支并推送 LLY
+        env:
+          SOURCE_BRANCH: ${{ steps.config.outputs.source_branch }}
+          TARGET_BRANCH: ${{ steps.config.outputs.target_branch }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin "$SOURCE_BRANCH" "$TARGET_BRANCH"
+          git checkout -B "$TARGET_BRANCH" "origin/$TARGET_BRANCH"
+          if ! git merge --no-edit "origin/$SOURCE_BRANCH"; then
+            git merge --abort
+            echo '::error::自动同步发生合并冲突，请手动将 main 合并到 LLY 后重试。'
+            exit 1
+          fi
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"
