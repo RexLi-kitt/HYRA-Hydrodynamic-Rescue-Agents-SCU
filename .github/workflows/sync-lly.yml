@@ -1,0 +1,42 @@
+name: 自动同步 main 到 LLY
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-main-to-lly
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SOURCE_BRANCH: main
+      TARGET_BRANCH: LLY
+    steps:
+      - name: 检出主分支及完整历史
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: 合并主分支并推送 LLY
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin "$SOURCE_BRANCH" "$TARGET_BRANCH"
+          git checkout -B "$TARGET_BRANCH" "origin/$TARGET_BRANCH"
+          if ! git merge --no-edit "origin/$SOURCE_BRANCH"; then
+            git merge --abort
+            echo '::error::自动同步发生合并冲突，请手动将 main 合并到 LLY 后重试。'
+            exit 1
+          fi
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"

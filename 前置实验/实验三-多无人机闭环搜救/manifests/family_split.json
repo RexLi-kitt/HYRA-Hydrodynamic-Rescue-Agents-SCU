@@ -1,0 +1,553 @@
+{
+  "study_id": "hyra-experiment3-20261018-v1",
+  "status": "development_registration_not_model_freeze",
+  "families": [
+    {
+      "family_id": "exp3-design-000",
+      "split": "design",
+      "family_seed": 1247336298,
+      "index_within_split": 0,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-design-001",
+      "split": "design",
+      "family_seed": 3215248552,
+      "index_within_split": 1,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-design-002",
+      "split": "design",
+      "family_seed": 2286610114,
+      "index_within_split": 2,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-design-003",
+      "split": "design",
+      "family_seed": 983002156,
+      "index_within_split": 3,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-design-004",
+      "split": "design",
+      "family_seed": 924508798,
+      "index_within_split": 4,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-design-005",
+      "split": "design",
+      "family_seed": 730262501,
+      "index_within_split": 5,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-000",
+      "split": "train",
+      "family_seed": 856338772,
+      "index_within_split": 0,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-001",
+      "split": "train",
+      "family_seed": 2810266031,
+      "index_within_split": 1,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-002",
+      "split": "train",
+      "family_seed": 3182056238,
+      "index_within_split": 2,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-003",
+      "split": "train",
+      "family_seed": 3122198700,
+      "index_within_split": 3,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-004",
+      "split": "train",
+      "family_seed": 1437827265,
+      "index_within_split": 4,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-005",
+      "split": "train",
+      "family_seed": 4235177348,
+      "index_within_split": 5,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-006",
+      "split": "train",
+      "family_seed": 2164913426,
+      "index_within_split": 6,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-007",
+      "split": "train",
+      "family_seed": 142146408,
+      "index_within_split": 7,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-008",
+      "split": "train",
+      "family_seed": 3505828674,
+      "index_within_split": 8,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-009",
+      "split": "train",
+      "family_seed": 1404364420,
+      "index_within_split": 9,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-010",
+      "split": "train",
+      "family_seed": 3481160579,
+      "index_within_split": 10,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-011",
+      "split": "train",
+      "family_seed": 4181888117,
+      "index_within_split": 11,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-012",
+      "split": "train",
+      "family_seed": 2918684373,
+      "index_within_split": 12,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-013",
+      "split": "train",
+      "family_seed": 286786728,
+      "index_within_split": 13,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-014",
+      "split": "train",
+      "family_seed": 3597065745,
+      "index_within_split": 14,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-015",
+      "split": "train",
+      "family_seed": 3924459603,
+      "index_within_split": 15,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-016",
+      "split": "train",
+      "family_seed": 2838833467,
+      "index_within_split": 16,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-017",
+      "split": "train",
+      "family_seed": 3390988719,
+      "index_within_split": 17,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-018",
+      "split": "train",
+      "family_seed": 1441978385,
+      "index_within_split": 18,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-019",
+      "split": "train",
+      "family_seed": 1238406544,
+      "index_within_split": 19,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-020",
+      "split": "train",
+      "family_seed": 1557491416,
+      "index_within_split": 20,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-021",
+      "split": "train",
+      "family_seed": 299133790,
+      "index_within_split": 21,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-022",
+      "split": "train",
+      "family_seed": 3221359953,
+      "index_within_split": 22,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-train-023",
+      "split": "train",
+      "family_seed": 3737757823,
+      "index_within_split": 23,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-000",
+      "split": "validation",
+      "family_seed": 3390572760,
+      "index_within_split": 0,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-001",
+      "split": "validation",
+      "family_seed": 177767934,
+      "index_within_split": 1,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-002",
+      "split": "validation",
+      "family_seed": 1400019570,
+      "index_within_split": 2,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-003",
+      "split": "validation",
+      "family_seed": 775749909,
+      "index_within_split": 3,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-004",
+      "split": "validation",
+      "family_seed": 3249906353,
+      "index_within_split": 4,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-005",
+      "split": "validation",
+      "family_seed": 1301224207,
+      "index_within_split": 5,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-006",
+      "split": "validation",
+      "family_seed": 521237504,
+      "index_within_split": 6,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-007",
+      "split": "validation",
+      "family_seed": 972459935,
+      "index_within_split": 7,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-008",
+      "split": "validation",
+      "family_seed": 696940715,
+      "index_within_split": 8,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-009",
+      "split": "validation",
+      "family_seed": 2482299548,
+      "index_within_split": 9,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-010",
+      "split": "validation",
+      "family_seed": 828497077,
+      "index_within_split": 10,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-validation-011",
+      "split": "validation",
+      "family_seed": 992814027,
+      "index_within_split": 11,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-000",
+      "split": "test",
+      "family_seed": 947150356,
+      "index_within_split": 0,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-001",
+      "split": "test",
+      "family_seed": 1887423319,
+      "index_within_split": 1,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-002",
+      "split": "test",
+      "family_seed": 3672691903,
+      "index_within_split": 2,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-003",
+      "split": "test",
+      "family_seed": 1014705933,
+      "index_within_split": 3,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-004",
+      "split": "test",
+      "family_seed": 986820913,
+      "index_within_split": 4,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-005",
+      "split": "test",
+      "family_seed": 3519933358,
+      "index_within_split": 5,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-006",
+      "split": "test",
+      "family_seed": 3704409767,
+      "index_within_split": 6,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-007",
+      "split": "test",
+      "family_seed": 2307364624,
+      "index_within_split": 7,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-008",
+      "split": "test",
+      "family_seed": 2411431413,
+      "index_within_split": 8,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-009",
+      "split": "test",
+      "family_seed": 172887945,
+      "index_within_split": 9,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-010",
+      "split": "test",
+      "family_seed": 2721806083,
+      "index_within_split": 10,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-011",
+      "split": "test",
+      "family_seed": 3072718753,
+      "index_within_split": 11,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-012",
+      "split": "test",
+      "family_seed": 3284066154,
+      "index_within_split": 12,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-013",
+      "split": "test",
+      "family_seed": 1887963130,
+      "index_within_split": 13,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-014",
+      "split": "test",
+      "family_seed": 2267921652,
+      "index_within_split": 14,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-015",
+      "split": "test",
+      "family_seed": 2353303421,
+      "index_within_split": 15,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-016",
+      "split": "test",
+      "family_seed": 1715559738,
+      "index_within_split": 16,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-017",
+      "split": "test",
+      "family_seed": 77278057,
+      "index_within_split": 17,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-018",
+      "split": "test",
+      "family_seed": 3665564364,
+      "index_within_split": 18,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-019",
+      "split": "test",
+      "family_seed": 3155053533,
+      "index_within_split": 19,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-020",
+      "split": "test",
+      "family_seed": 2274938114,
+      "index_within_split": 20,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-021",
+      "split": "test",
+      "family_seed": 3292972845,
+      "index_within_split": 21,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-022",
+      "split": "test",
+      "family_seed": 1991412849,
+      "index_within_split": 22,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-023",
+      "split": "test",
+      "family_seed": 2933362430,
+      "index_within_split": 23,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-024",
+      "split": "test",
+      "family_seed": 2262200990,
+      "index_within_split": 24,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-025",
+      "split": "test",
+      "family_seed": 402075753,
+      "index_within_split": 25,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-026",
+      "split": "test",
+      "family_seed": 2487216600,
+      "index_within_split": 26,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-027",
+      "split": "test",
+      "family_seed": 2334716520,
+      "index_within_split": 27,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-028",
+      "split": "test",
+      "family_seed": 1508206961,
+      "index_within_split": 28,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-029",
+      "split": "test",
+      "family_seed": 742508103,
+      "index_within_split": 29,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-030",
+      "split": "test",
+      "family_seed": 1955617476,
+      "index_within_split": 30,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-031",
+      "split": "test",
+      "family_seed": 63256165,
+      "index_within_split": 31,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-032",
+      "split": "test",
+      "family_seed": 183086126,
+      "index_within_split": 32,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-033",
+      "split": "test",
+      "family_seed": 2082750257,
+      "index_within_split": 33,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-034",
+      "split": "test",
+      "family_seed": 4081615812,
+      "index_within_split": 34,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    },
+    {
+      "family_id": "exp3-test-035",
+      "split": "test",
+      "family_seed": 3909540631,
+      "index_within_split": 35,
+      "isolation": "all_scales_hydrologies_layouts_remain_in_this_split"
+    }
+  ],
+  "actual_test_simulations": 0
+}

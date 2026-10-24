@@ -1,0 +1,8 @@
+# Versions present on the execution host; install in a dedicated compatible environment.
+numpy==2.4.6
+scipy==1.18.1
+anuga==4.0.1
+pytest==9.1.1
+matplotlib==3.10.9
+# Learning tests and five-method training; tested host build: 2.14.0+cu130.
+torch>=2.2

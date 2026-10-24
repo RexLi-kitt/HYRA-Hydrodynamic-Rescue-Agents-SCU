@@ -1,0 +1,81 @@
+{
+  "stage": "planned_not_executed",
+  "family_ids": [
+    "exp3-design-000",
+    "exp3-design-001",
+    "exp3-design-002",
+    "exp3-design-003",
+    "exp3-design-004",
+    "exp3-design-005"
+  ],
+  "conditions": [
+    {
+      "rise_m": 0.6,
+      "rise_duration_s": 600,
+      "perturbation_m": 0
+    },
+    {
+      "rise_m": 0.6,
+      "rise_duration_s": 600,
+      "perturbation_m": 0.1
+    },
+    {
+      "rise_m": 0.6,
+      "rise_duration_s": 600,
+      "perturbation_m": 0.2
+    },
+    {
+      "rise_m": 0.6,
+      "rise_duration_s": 900,
+      "perturbation_m": 0
+    },
+    {
+      "rise_m": 0.6,
+      "rise_duration_s": 900,
+      "perturbation_m": 0.1
+    },
+    {
+      "rise_m": 0.6,
+      "rise_duration_s": 900,
+      "perturbation_m": 0.2
+    },
+    {
+      "rise_m": 0.9,
+      "rise_duration_s": 600,
+      "perturbation_m": 0
+    },
+    {
+      "rise_m": 0.9,
+      "rise_duration_s": 600,
+      "perturbation_m": 0.1
+    },
+    {
+      "rise_m": 0.9,
+      "rise_duration_s": 600,
+      "perturbation_m": 0.2
+    },
+    {
+      "rise_m": 0.9,
+      "rise_duration_s": 900,
+      "perturbation_m": 0
+    },
+    {
+      "rise_m": 0.9,
+      "rise_duration_s": 900,
+      "perturbation_m": 0.1
+    },
+    {
+      "rise_m": 0.9,
+      "rise_duration_s": 900,
+      "perturbation_m": 0.2
+    }
+  ],
+  "scales": [
+    32,
+    50,
+    70
+  ],
+  "selection_rule": "do_not_filter_by_method_advantage",
+  "full_design_truth_fields": 216,
+  "formal_test": false
+}

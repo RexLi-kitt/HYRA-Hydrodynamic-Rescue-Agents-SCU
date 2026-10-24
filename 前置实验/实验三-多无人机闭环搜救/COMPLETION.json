@@ -1,0 +1,163 @@
+{
+  "objective": "完成实验三",
+  "complete": true,
+  "plan": "D:\\HyRA\\实验三-多无人机闭环搜救\\manifests\\full_execution_plan.v1.json",
+  "requirements": {
+    "design_numerical_and_clock_checks": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261018_221349_b7089a5d_design_refinement/refinement_integrity_audit.json",
+          "sha256": "88acb55d332e66666d341b9d549e6891456830764142cad5953879fdb9be29ed"
+        },
+        {
+          "path": "results/runs/20261019_193133_fc004e2a_formal_test/formal_integrity_audit.json",
+          "sha256": "789f813cc7e5f2c56ad8fe3a2ba45907cb1d241e40be70b570f0cca867df2714"
+        }
+      ]
+    },
+    "planner_candidate_and_budget_sensitivity": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261018_223923_f19c493b_planner_sensitivity/sensitivity_summary.json",
+          "sha256": "98c6a48b86f549da458a98b1328a6151648bd35f6a615e8cb693886cc9b1d23b"
+        },
+        {
+          "path": "results/runs/20261018_223923_f19c493b_planner_sensitivity/sensitivity_integrity_audit.json",
+          "sha256": "a6b2c4157c4dd476ff916a322380039a6c51ec9603aaa42b2fe3cbed5aba8755"
+        }
+      ]
+    },
+    "common_causal_training_records": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261018_221758_55a20cbf_common_training_records/common_data_integrity_audit.json",
+          "sha256": "cb5453775754cea62bd54b38e203f2c9f6cfe3f416571632803135f1f85cba1a"
+        }
+      ]
+    },
+    "five_parameter_matched_models_three_training_seeds": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261018_223600_2a8a230f_five_method_training/training_summary.json",
+          "sha256": "de7744c2ae5c5623255914de74f240fac07798ea58cc9ee949fa4fa12b2b7530"
+        },
+        {
+          "path": "results/runs/20261018_223600_2a8a230f_five_method_training/training_integrity_audit.json",
+          "sha256": "233375862221ef83f1870476103bbe1cdcdfc51352b5b61896edd54168ee4aea"
+        }
+      ]
+    },
+    "training_only_statistical_and_validated_physical_links_and_lags": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261018_223600_2a8a230f_five_method_training/frozen_training_links.json",
+          "sha256": "673cb5368680207b6aa4110c06b539e585f2d91f4b2472d9c302d167cb443354"
+        }
+      ]
+    },
+    "fixed_route_identical_record_prediction_and_window_evaluation": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261019_184725_4e50ddde_fixed_route_validation/fixed_validation_summary.json",
+          "sha256": "62f0d95a917da7b9a0a0d9a8fba738cefec5bebbee2f9fbc1e5b6365a7b5a90e"
+        }
+      ]
+    },
+    "validation_B_star_and_configuration_freeze": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261019_185500_1440a017_closed_loop_validation/B_star_selection.json",
+          "sha256": "c0575902848ce6e991f0f51f93615ae5aaad95cc56929f5b12dc1cacd37ec9c3"
+        },
+        {
+          "path": "configs/frozen_experiment3.v1.json",
+          "sha256": "5f17ea1bb7a2002ccecfb8b3afae98324d1ea06399afa957124bc851e83956d8"
+        },
+        {
+          "path": "registrations/frozen_configuration.v1.json",
+          "sha256": "6a408ede75a26838d73c9412e7bdfc942d709d3a04a08cc8def2c9140f3dc2e6"
+        }
+      ]
+    },
+    "single_independent_3024_episode_test": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261019_193133_fc004e2a_formal_test/formal_summary.json",
+          "sha256": "30f15f49f30f6a76a642747a219920bc11aaa5037e7cb21a575082cb5f3c71fd"
+        },
+        {
+          "path": "results/runs/20261019_193133_fc004e2a_formal_test/formal_integrity_audit.json",
+          "sha256": "789f813cc7e5f2c56ad8fe3a2ba45907cb1d241e40be70b570f0cca867df2714"
+        }
+      ]
+    },
+    "paired_family_and_training_seed_95_percent_intervals_and_3pp_target": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/final_reports/20261020_001328/raw_statistics.json",
+          "sha256": "57bf1c1a0ef8c54e6e7b10154392468169472ae5acae86745ba61acb4ba186f9"
+        }
+      ]
+    },
+    "causal_reassignment_counterfactuals": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261019_215350_4f3b2c59_reassignment_counterfactual/diagnostic_summary.json",
+          "sha256": "45082a4d24ed4bf717c8570cdd5fdc2fe8a11f926b986688f0c32b3f35bdaee0"
+        },
+        {
+          "path": "results/runs/20261019_215350_4f3b2c59_reassignment_counterfactual/diagnostic_integrity_audit.json",
+          "sha256": "260c00d01ae8ab0c8ee7cb3726a286737218d014296e3cc664d075c540fed6f7"
+        }
+      ]
+    },
+    "numerical_direction_stability_of_final_gain": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/runs/20261019_225450_ed11c450_numerical_direction/diagnostic_summary.json",
+          "sha256": "3e9e4d008997e468c570fda4cef4137cac5c819097c77f3af849ac8dc335e6fb"
+        },
+        {
+          "path": "results/runs/20261019_225450_ed11c450_numerical_direction/diagnostic_integrity_audit.json",
+          "sha256": "0fe2ebe588127b67b8640226609d159716ebb91f677a50ebe1f38ddb3e1e60e2"
+        }
+      ]
+    },
+    "independent_reproducible_package_frozen_configuration_raw_statistics_final_report": {
+      "status": "verified",
+      "evidence": [
+        {
+          "path": "results/final_reports/20261020_001328/实验三完整报告.md",
+          "sha256": "2945dae0f889a9d01eb6a941319886b3dc6703e12f16b4ba1d836c03bc3af897"
+        },
+        {
+          "path": "results/final_reports/20261020_001328/raw_statistics.json",
+          "sha256": "57bf1c1a0ef8c54e6e7b10154392468169472ae5acae86745ba61acb4ba186f9"
+        }
+      ]
+    }
+  },
+  "formal_test_episodes": 3024,
+  "models_trained": 15,
+  "latest_clock_interface_tests": {
+    "passed": 87,
+    "run": "D:\\HyRA\\实验三-多无人机闭环搜救\\results\\runs\\20261019_004837_43f67300_test"
+  },
+  "automated_workflow": "D:\\HyRA\\实验三-多无人机闭环搜救\\results\\runs\\20261018_235201_35018c2a_full_experiment_workflow",
+  "report": "results/final_reports/20261020_001328",
+  "statistical_positive_result_is_not_required_for_completion": true,
+  "export_status": "verified",
+  "portable_manifest": "INTEGRITY.json",
+  "completion_recorded_at": "2026-10-20T00:32:37.362682+08:00"
+}
