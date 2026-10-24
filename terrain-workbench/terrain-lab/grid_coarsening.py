@@ -61,3 +61,28 @@ def resize_layers(layers,native_bed,native_dx,factor,manning):
         # Returning to a finer grid restores the original terrain samples.
         result['z']=blocks(native_bed,factor)
     return result
+
+
+def coarsen_water_state(bed, depth, factor, metres_per_unit=1.):
+    """Conserve volume; reject mixed shoreline cells that shift wet-cell stage.
+
+    A single coarse bed/depth pair cannot in general retain both wet-subcell
+    free surface and storage. Reject instead of silently deleting water.
+    Inputs use terrain units; tolerance is in physical metres.
+    """
+    bed=np.asarray(bed,float); depth=np.asarray(depth,float)
+    if bed.shape!=depth.shape or not np.isfinite(bed).all() or not np.isfinite(depth).all() or (depth<0).any():
+        raise ValueError('Invalid bed/depth for water coarsening')
+    if not np.isfinite(metres_per_unit) or metres_per_unit<=0:
+        raise ValueError('Invalid terrain unit')
+    if factor==1:return bed.copy(),depth.copy()
+    coarse_bed=blocks(bed,factor);coarse_depth=blocks(depth,factor)
+    wet=depth>0
+    coverage=blocks(wet.astype(float),factor)
+    wet_stage=np.divide(blocks(np.where(wet,bed+depth,0.),factor),coverage,
+                        out=np.zeros_like(coverage),where=coverage>0)
+    shift=(coarse_bed+coarse_depth-wet_stage)*metres_per_unit
+    risky=(coverage>0)&(coverage<1)&(np.abs(shift)>1e-6)
+    if risky.any():
+        raise ValueError(f'初始水体粗化会改变干湿岸线水面（{int(risky.sum())}个格，最大偏移{float(np.abs(shift[risky]).max()):.6g}米）；请选择原始格宽重新模拟。')
+    return coarse_bed,coarse_depth

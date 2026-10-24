@@ -85,7 +85,9 @@ def create(root,terrain,data):
     elif mode=='current':
         if data.get('terrain_id')!=terrain['id']:raise ValueError('地图已更新，请重新读取地图')
         config=flood_run.settings({'warmup_s':0,**incoming},terrain['shape'])
-        solver,meta=flood_run.prepare(root,terrain,config)
+        prepare_config=dict(config,initial_water=False) if 'initial_depth' in data else config
+        solver,meta=flood_run.prepare(root,terrain,prepare_config)
+        meta['config']=config
         meta['terrain_ids']=dict(terrain['terrain_ids'])
         layers=dict(data.get('layers',{}))
         raw=terrain['fields']['terrain'];types=np.fromfile(root/raw['url'].lstrip('/'),dtype=raw['dtype']).reshape(terrain['shape'])
@@ -133,8 +135,11 @@ def create(root,terrain,data):
     if 'initial_depth' in data:
         h=np.asarray(data['initial_depth'],float)
         if mode=='current' and h.shape==tuple(terrain['shape']) and config['grid_factor']>1:
-            from grid_coarsening import blocks
-            h=blocks(h,config['grid_factor'])
+            from grid_coarsening import coarsen_water_state
+            name='ground_height' if terrain['full'] else 'height';field=terrain['fields'][name]
+            native_bed=np.fromfile(root/field['url'].lstrip('/'),dtype=field['dtype']).reshape(terrain['shape'])
+            native_bed=native_bed*config['metres_per_block']*(1 if terrain['full'] else terrain['scale'])
+            _,h=coarsen_water_state(native_bed,h,config['grid_factor'])
         if h.shape!=solver.h.shape or not np.isfinite(h).all() or (h<0).any():raise ValueError('初始水深数组需要同网格、非负且有限')
         solver.h=h.copy()
     config['frames']=frames

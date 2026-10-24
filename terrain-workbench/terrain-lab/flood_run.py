@@ -127,7 +127,8 @@ def prepare(root, terrain, config):
         manning=config['manning'];roughness=dict(mode='uniform',n=float(manning))
     if factor>1:
         from grid_coarsening import blocks
-        bed,depth=blocks(bed,factor),blocks(depth,factor)
+        from grid_coarsening import coarsen_water_state
+        bed,depth=coarsen_water_state(bed,depth,factor,config['metres_per_block'])
     unit = config['metres_per_block']
     bed, depth = bed*unit, depth*unit
     dx = terrain['step']*unit*factor
