@@ -1,0 +1,83 @@
+{
+  "baseline": {
+    "speed_rmse_m_s": 0.7383470220052278,
+    "speed_mae_m_s": 0.5987857051025174,
+    "speed_bias_m_s": 0.27492885812535417,
+    "direction_mae_deg": 27.598875427737436,
+    "direction_points": 37,
+    "measured_points": 40,
+    "model_dry_points": 2
+  },
+  "layered": {
+    "speed_rmse_m_s": 0.6590639325676693,
+    "speed_mae_m_s": 0.5289142617277127,
+    "speed_bias_m_s": 0.1984158365249073,
+    "direction_mae_deg": 24.211618028663768,
+    "direction_points": 38,
+    "measured_points": 40,
+    "model_dry_points": 1
+  },
+  "improved_points": 25,
+  "wall_s": 740.5313018000452,
+  "common_direction_cohort": {
+    "points": 37,
+    "baseline_mae_deg": 27.598875427737436,
+    "layered_mae_deg": 24.460361489745782
+  },
+  "balance": {
+    "initial_m3": 0.0,
+    "rainfall_m3": 0.0,
+    "inflow_m3": 0.0,
+    "baseflow_m3": 0.0,
+    "infiltration_m3": 0.0,
+    "outflow_m3": 5428.696262628882,
+    "sea_inflow_m3": 0.0,
+    "sea_outflow_m3": 0.0,
+    "drainage_m3": 0.0,
+    "scheduled_inflow_m3": 0.0,
+    "external_inflow_m3": 15759.359999999991,
+    "numerical_adjustment_m3": 0.0,
+    "current_m3": 10330.663737371127,
+    "residual_m3": 1.8189894035458565e-11,
+    "corrected_residual_m3": 1.8189894035458565e-11
+  },
+  "stages": [
+    {
+      "id": "P1",
+      "x_m": 69.1562,
+      "y_m": 57.761,
+      "ground_m": 22.964176495869953,
+      "solid": false,
+      "final_depth_m": 0.18458888462323708,
+      "final_stage_m": 23.14876538049319
+    },
+    {
+      "id": "P2",
+      "x_m": 69.5845,
+      "y_m": 90.052,
+      "ground_m": 22.54864365713937,
+      "solid": false,
+      "final_depth_m": 0.30930509643729187,
+      "final_stage_m": 22.85794875357666
+    },
+    {
+      "id": "P3",
+      "x_m": 50.0884,
+      "y_m": 190.659,
+      "ground_m": 19.492296805748573,
+      "solid": false,
+      "final_depth_m": 0.48482735553429923,
+      "final_stage_m": 19.977124161282873
+    },
+    {
+      "id": "P4",
+      "x_m": 70.1806,
+      "y_m": 299.221,
+      "ground_m": 17.837526440620422,
+      "solid": false,
+      "final_depth_m": 0.46077179961477854,
+      "final_stage_m": 18.2982982402352
+    }
+  ],
+  "scope": "full-domain 800 s paired diagnostic; inferred geometry, no acceptance threshold"
+}

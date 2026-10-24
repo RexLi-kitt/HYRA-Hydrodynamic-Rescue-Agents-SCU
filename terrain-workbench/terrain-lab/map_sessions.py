@@ -51,6 +51,9 @@ def write_snapshot(stream,world):
 
 def create(root,terrain,data):
     if not isinstance(data,dict):raise ValueError('场景需要是对象')
+    if terrain.get('source_kind')=='imported_experiment_raster' and data.get('mode','current')=='current':
+        import raster_import
+        data=raster_import.defaults(root,terrain,data)
     if 'agents' in data or 'legacy_exploration' in data:raise ValueError('地图工作台已移除无人机与探索体系，请使用地图场景配置')
     mode=data.get('mode','current')
     incoming=dict(data.get('flood',{}));frames=incoming.pop('frames',121)
@@ -146,7 +149,10 @@ def create(root,terrain,data):
             manual_patch_count=sum(p.get('kind')=='roughness' for p in data.get('layers',{}).get('patches',[])))
     if mode=='current':
         import river_network
-        meta['river_network_grid_check']=river_network.audit_world(root,terrain,world)
+        meta['river_network_grid_check']=(dict(status='not_applicable',warnings=[],message='导入实验没有自然河网分类')
+            if terrain.get('source_kind')=='imported_experiment_raster' else river_network.audit_world(root,terrain,world))
+        if terrain.get('imported'):
+            meta['imported']=terrain['imported'];meta['terrain_source']=terrain['source_kind']
     data=dict(data,structures=world.structures.items,people=world.people,
               flood=dict(data.get('flood',{}),roughness_mode=config['roughness_mode']))
     import river_inlets

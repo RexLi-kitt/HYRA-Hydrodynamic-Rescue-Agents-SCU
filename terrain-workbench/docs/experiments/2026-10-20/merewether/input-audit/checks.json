@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-23",
+  "scope": "archived layered f4-n0.042 800s experiment input audit; no simulation rerun",
+  "checks": {
+    "source_sha256": {
+      "merewether-0p175m.dem": true,
+      "merewether-0p175m.par": true,
+      "merewether.bci": true,
+      "merewether.stage": true,
+      "Location_of_velocity_sampling_points.csv": true
+    },
+    "snapshot_sha256": {
+      "run_merewether.py": true,
+      "raster_import.py": true,
+      "merewether.py": true,
+      "obstacle_layers.py": true,
+      "flood_solver.py": true,
+      "flood_acceleration.py": true
+    },
+    "package_md5_matches_archived_provenance": true,
+    "source_matches_zip": {
+      "merewether-0p175m.dem": true,
+      "merewether-0p175m.par": true,
+      "merewether.bci": true,
+      "merewether.stage": true,
+      "Location_of_velocity_sampling_points.csv": true
+    },
+    "all_40_observations_preserved": true,
+    "west_east_closed": true,
+    "north_wall_open": true,
+    "south_closed_except_inlet": true,
+    "inlet_cells_not_solid": true,
+    "inlet_width_38m": true,
+    "configured_Q_matches_source": true,
+    "integrated_inflow_matches_Q_times_800": true,
+    "sampling_indices_match_rotated_frame": true
+  },
+  "values": {
+    "inlet_width_m": 37.999999999999986,
+    "Q_m3_s": 19.699199999999998,
+    "total_input_m3": 15759.359999999999,
+    "source_shape": [
+      2197,
+      696
+    ],
+    "source_dx_m": 0.175,
+    "source_extent_m": [
+      121.8,
+      384.475
+    ],
+    "run_shape": [
+      550,
+      174
+    ],
+    "run_dx_m": 0.7,
+    "run_extent_m": [
+      121.8,
+      385.0
+    ],
+    "north_padding_m": 0.5250000000000341,
+    "quasi_steady": false,
+    "last_steady_check": {
+      "time_s": 800.0,
+      "wet_mean_depth_change_m": 0.002586604117804086,
+      "gauge_max_change_m": 1.7508527815124353e-05,
+      "consecutive_windows": 0
+    }
+  },
+  "unverified": [
+    "equivalence of original LISFLOOD DG2 inlet momentum and FREE outlet implementation",
+    "independent measured stage values and transient time series",
+    "surveyed obstacle footprints and ground underneath obstacles",
+    "current UI active scenario equivalence; audit targets archived run only"
+  ]
+}

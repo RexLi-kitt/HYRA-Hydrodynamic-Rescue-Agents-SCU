@@ -1,0 +1,31 @@
+{
+  "script_sha256": "68c928cd4802ff3913bd42e40b0847496aa16c1d5a85c332225290c7b2f0fc12",
+  "layered": {
+    "result.json": "936fd56822d94e23a43f251dd3f1988bd63b1a5d8cf8adf3d68440d156c66763",
+    "config.json": "e82a3a75d57ecc59439f862c4cae31c6bffd116dc3fab66d0fafcc8c9a24f457",
+    "series.json": "92e85f70ea82c9368eefbe4bd1af4a25566823e73572610212f76445c61d0f75",
+    "final.npz": "84e4991a3ebd69c4a4598ec3d528e13e19f445356b27240b6513745988f77c93"
+  },
+  "baseline": {
+    "result.json": "fe18232e2371ce840da1d2957db31f10edfd968c84837029587fd749b4f57eb2",
+    "config.json": "e26db41da738971ec8b9d697cbb0d9e7f52955f10ea42ef85dad5bb959b2cad8"
+  },
+  "source": {
+    "record": "https://zenodo.org/records/6914888",
+    "doi": "10.5281/zenodo.6914888",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "package_md5": "56f0861641cc52007924c599dbae211c",
+    "paper": "https://doi.org/10.1061/JHEND8.HYENG-13244",
+    "files": {
+      "merewether-0p175m.dem": "611fecca3c901109bd6df218e44508cb474a1878e5e123d1c730308de38a5810",
+      "merewether-0p175m.par": "0123687e5585b20dfc2d8610c4674aa682a80213e5c8199011dd57da1c5c8ae7",
+      "merewether.bci": "59572fa8de0271c5aa18b3169eb6ac7d459df62e8c2b53da12982fa92cda2d1d",
+      "merewether.stage": "22e5e3938bc09bcc76948149845d464276acd141748978e6a8ad223338e27108",
+      "Location_of_velocity_sampling_points.csv": "6cb88ba6abf96444dfe570ecfd552f5b4e3f9740d2e125527397c4668d7a905b"
+    },
+    "observation_kind": "maximum velocity measurements from physical model, rescaled to prototype",
+    "missing": "Four water-stage locations are supplied, but measured water-level values are not in this bundle"
+  }
+}

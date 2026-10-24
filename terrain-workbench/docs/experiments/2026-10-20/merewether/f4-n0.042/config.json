@@ -1,0 +1,100 @@
+{
+  "terrain_id": "generated/merewether-f4-max-n0p042/raw",
+  "scenario": {
+    "mode": "current",
+    "flood": {
+      "metres_per_block": 1,
+      "roughness_mode": "uniform",
+      "manning": 0.042,
+      "boundary": "open",
+      "initial_water": false,
+      "baseflow": false,
+      "warmup_s": 0,
+      "rain_mm_h": 0,
+      "infiltration_mm_h": 0,
+      "rain_duration_s": 0,
+      "inflow_m3_s": 0,
+      "duration_s": 800.0,
+      "grid_factor": 1,
+      "frames": 9,
+      "flux_method": "rusanov",
+      "spatial_order": 2,
+      "time_integrator": "rk2",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "max_timestep": 1,
+      "max_steps": 1000000
+    },
+    "external_inflows": [
+      {
+        "id": "merewether-inlet",
+        "kind": "river",
+        "enabled": true,
+        "inlet_direction_mode": "normal",
+        "inlet_velocity_m_s": 0,
+        "hydrograph": [
+          [
+            0,
+            19.699199999999998
+          ]
+        ]
+      }
+    ],
+    "terrain_id": "generated/merewether-f4-max-n0p042/raw"
+  },
+  "source": {
+    "record": "https://zenodo.org/records/6914888",
+    "doi": "10.5281/zenodo.6914888",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "package_md5": "56f0861641cc52007924c599dbae211c",
+    "paper": "https://doi.org/10.1061/JHEND8.HYENG-13244",
+    "files": {
+      "merewether-0p175m.dem": "611fecca3c901109bd6df218e44508cb474a1878e5e123d1c730308de38a5810",
+      "merewether-0p175m.par": "0123687e5585b20dfc2d8610c4674aa682a80213e5c8199011dd57da1c5c8ae7",
+      "merewether.bci": "59572fa8de0271c5aa18b3169eb6ac7d459df62e8c2b53da12982fa92cda2d1d",
+      "merewether.stage": "22e5e3938bc09bcc76948149845d464276acd141748978e6a8ad223338e27108",
+      "Location_of_velocity_sampling_points.csv": "6cb88ba6abf96444dfe570ecfd552f5b4e3f9740d2e125527397c4668d7a905b"
+    },
+    "observation_kind": "maximum velocity measurements from physical model, rescaled to prototype",
+    "missing": "Four water-stage locations are supplied, but measured water-level values are not in this bundle"
+  },
+  "comparison": "independent measured maximum velocity vectors",
+  "sampling": {
+    "interval_s": 0.5,
+    "velocity_minimum_depth_m": 0.01,
+    "method": "containing-cell conserved state",
+    "direction": "observed Mod_Angle in x/y; solver z points south, so v_north=-mz/h"
+  },
+  "roughness": {
+    "n": 0.042,
+    "units": "s/m^(1/3)",
+    "reference_n": 0.042,
+    "tutorial_n": 0.02,
+    "calibrated_here": false,
+    "literature_calibration": "0.042 fitted at water-level point 4 by source authors",
+    "reason": "uniform road-base experimental surface; buildings and piers represented by supplied DEM, not extra vegetation drag"
+  },
+  "wall_budget_s": 240.0,
+  "code_sha256": {
+    "run_merewether.py": "d4fde8df077b0a4f9f6d2fbf6dd17bd606805a7187db38054219b38c6d2b2649",
+    "raster_import.py": "d4396a738933c3e6a34c10aa4314bd8acbb91877cd5e305fa7ade68aa1487dc4",
+    "merewether.py": "7e93aaa8920f6f5b66872af3276a349bb84a2cf9b2f2df0d23d9988dd9319952",
+    "flood_solver.py": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+    "flood_acceleration.py": "5c2495bd66dd843341215fd8976cd74fd0126cd5c892bfb53d20a9b4ec578984"
+  },
+  "segments": [
+    {
+      "continued_from_s": 629.912159245197,
+      "previous_wall_s": 600.020465300011,
+      "previous_code_sha256": {
+        "run_merewether.py": "f8a1ee70da11b97a15030b5f3865ddcd4440e9c7690a86babfd4fbd2b6e06a26",
+        "raster_import.py": "7992d0aa1c295d22635c3fcc71c98a579ede960d872e324110200dbc0e194b41",
+        "merewether.py": "7e93aaa8920f6f5b66872af3276a349bb84a2cf9b2f2df0d23d9988dd9319952",
+        "flood_solver.py": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+        "flood_acceleration.py": "5c2495bd66dd843341215fd8976cd74fd0126cd5c892bfb53d20a9b4ec578984"
+      }
+    }
+  ]
+}

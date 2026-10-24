@@ -41,9 +41,10 @@ function status(text,error=false){$('mapStatus').textContent=text;$('mapStatus')
 async function json(url,options){const r=await fetch(url,options),j=await r.json();if(!r.ok){const error=Error(j.error||'读取失败');error.process_id=j.process_id;error.status=r.status;throw error;}return j;}
 function post(url,data={}){return json(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}
 function active(){return ['queued','running'].includes(process.state);}
+function layeredObstacles(){return scene?.scenario_metadata?.imported?.obstacle_layers||terrain?.imported?.obstacle_layers;}
 function controls(){
  for(const el of document.querySelectorAll('.settings-panel input,.settings-panel select,.settings-panel textarea'))el.disabled=busy||active();
- $('mapGridFactor').disabled=busy||active()||$('mapSource').value==='demo';
+ $('mapGridFactor').disabled=busy||active()||$('mapSource').value==='demo'||!!layeredObstacles();
  for(const el of $('numericsPanel').querySelectorAll('input,select,button'))el.disabled=busy||active();
  for(const id of ['createMap','runMap','importMapConfig','addRiverInflow','addManualInflow','pickInflow'])$(id).disabled=busy||active()||!terrain;
  $('runMap').textContent=scene&&process.state!=='ready'?'重新模拟洪水':'开始洪水模拟';
@@ -120,17 +121,18 @@ function installScene(next){
  const refinement=scene.scenario_metadata.refinement;
  $('refinementInfo').textContent=refinement?.enabled?'正在查看历史加密过程；重新应用或模拟将使用统一格宽。':`统一格宽 ${fmt(scene.grid.dx_m)} 米 · ${fmt(N,0)} 个计算格。${factor>1?'高程和水深按面积平均，窄河道细节会变粗。':''}`;
  const networkCheck=scene.scenario_metadata.river_network_grid_check;
- if(networkCheck)$('refinementInfo').textContent+=` 河网复查：${networkCheck.warnings.length?networkCheck.warnings.join('；'):'未发现河道分类分区变化；仍需验证水位与流量'}。`;
+ if(networkCheck)$('refinementInfo').textContent+=` 河网复查：${networkCheck.status==='not_applicable'?'导入实验采用指定边界，无自然河网分类':networkCheck.warnings.length?networkCheck.warnings.join('；'):'未发现河道分类分区变化；仍需验证水位与流量'}。`;
+ if(layeredObstacles())$('refinementInfo').textContent+=' 地面与阻水占地分层；障碍轮廓由原高程推断。本图格宽固定，更换格宽需重新生成障碍占地。';
  const n=scene.config;$('numericsApplied').textContent=`本场景：${n.flux_method==='knp'?'KNP':'Rusanov'} · ${n.spatial_order??2} 阶空间 · ${(n.time_integrator||'rk2').toUpperCase()} · 低弗劳德修正 ${n.low_froude??0} · CFL ${n.cfl??.4}`;
  const rough=scene.scenario_metadata.roughness;
  $('roughnessInfo').textContent=rough?`${rough.base_source==='explicit_n_layer'?'显式导入糙率':rough.mode==='landcover'?'按地表分类（'+(rough.source_kind==='actual_surface'?'完整地表':'快速预览近似')+'）':'统一糙率'} · n ${fmt(rough.effective_min_n??n.manning,3)}—${fmt(rough.effective_max_n??n.manning,3)} · 手动编辑优先。${rough.mode==='landcover'?'分类值为未率定初值。':''}`:'示例或历史糙率图层；手动编辑优先。';
  terrainMin=Infinity;terrainMax=-Infinity;for(const row of scene.M_base.z)for(const h of row){terrainMin=Math.min(terrainMin,h);terrainMax=Math.max(terrainMax,h);}
  inletControls();makeBase();$('mapTimeline').max=scene.config.duration_s;$('durationLabel').textContent=`${fmt(scene.config.duration_s)} 秒`;
- $('worldInfo').textContent=`${scene.provenance==='synthetic_multilayer_demo'?'建筑与水源示例':'当前生成地图'} · ${cols} × ${rows} 计算格 · ${geometry?`最细 ${fmt(scene.grid.dx_m/2)} 米`:`格宽 ${fmt(scene.grid.dx_m)} 米`} · 全部图层同步`;
+ $('worldInfo').textContent=`${scene.provenance==='synthetic_multilayer_demo'?'建筑与水源示例':scene.provenance==='imported_experiment_raster'?'导入实验地形':'当前生成地图'} · ${cols} × ${rows} 计算格 · ${geometry?`最细 ${fmt(scene.grid.dx_m/2)} 米`:`格宽 ${fmt(scene.grid.dx_m)} 米`} · ${layeredObstacles()?'地面与障碍分层':'全部图层同步'}`;
  $('computeStatus').textContent='地图已建立，初始水体已显示。';$('mapProgress').value=0;render();
 }
 async function restore(id){
- let next;try{next=await json(`/api/maps/${id}`);}catch(e){if(e.status!==404||!/^maps-[a-z0-9-]+$/.test(id))throw e;next=await json(`/generated/${id}/maps/replay.json`);}
+ let next;try{next=await json(`/api/maps/${id}`);}catch(e){if(e.status!==404||!/^(?:maps|merewether)-[a-z0-9-]+$/.test(id))throw e;next=await json(`/generated/${id}/maps/replay.json`);}
  await hydrateScene(next);installScene(next);remember();
  const mode=scene.provenance==='synthetic_multilayer_demo'?'demo':'current';
  externalDraft=normalizeInflows(next.scenario_config?.external_inflows||next.M_forcing?.external_inflows||[]);inflowDirty=false;inletControls();
@@ -547,11 +549,18 @@ $('exportFrame').onclick=()=>{
 $('exportPng').onclick=()=>$('depthMap').toBlob(blob=>download(blob,'hyra-map-water-depth.png'));
 $('importMapConfig').onchange=async()=>{try{const file=$('importMapConfig').files[0];if(!file)return;if(file.size>8*1024*1024)throw Error('场景配置文件过大');const c=JSON.parse(await file.text());if(!c||!['current','demo'].includes(c.mode)||c.agents||c.legacy_exploration)throw Error('请选择纯地图与洪水场景配置');imported=c;structureEditor.load(c.structures||[]);peopleEditor.load(c.people||null);loadNumerics(c.flood);patches=[];externalDraft=normalizeInflows(c.external_inflows||[]);inflowDirty=true;draft();$('mapSource').value=c.mode;for(const [id,name] of Object.entries(fields))if(c.flood?.[name]!==undefined)$(id).value=c.flood[name];for(const [id,name] of [['mapBaseflow','baseflow'],['mapInitialWater','initial_water']])if(c.flood?.[name]!==undefined)$(id).checked=c.flood[name];if(c.flood?.boundary)$('mapBoundary').value=c.flood.boundary;if(c.flood?.inflow_m3_s>0&&!externalDraft.some(p=>p.id==='legacy-point'))externalDraft.push({id:'legacy-point',kind:'manual',x:c.flood.source_x,z:c.flood.source_z,enabled:true,hydrograph:[[0,c.flood.inflow_m3_s]]});$('hydrographs').value=JSON.stringify(c.layers?.hydrographs||{});inletControls();restoreInflowEditor();status('地图场景配置已载入，应用或开始模拟后生效。');}catch(e){status(e.message,true);}};
 json('/api/current').then(async t=>{
- terrain=t;$('terrainInfo').textContent=`当前种子 ${t.config.seed} · ${t.shape[1]} × ${t.shape[0]} 格 · 每格 ${t.step} 方块${t.step!==1?'（旧地图，重新生成可使用每方块一格）':''}。`;
+ terrain=t;$('terrainInfo').textContent=t.imported?`导入地形 · ${t.imported.name||'外部高程'} · ${t.shape[1]} × ${t.shape[0]} 格 · 每格 ${t.step} 米。`:`当前种子 ${t.config.seed} · ${t.shape[1]} × ${t.shape[0]} 格 · 每格 ${t.step} 方块${t.step!==1?'（旧地图，重新生成可使用每方块一格）':''}。`;
+ if(t.imported&&t.case_defaults){
+  imported={...t.case_defaults,mode:'current',terrain_id:t.id};const f=imported.flood||{};
+  loadNumerics(f);externalDraft=normalizeInflows(imported.external_inflows||[]);
+  for(const [id,name] of Object.entries(fields))if(f[name]!==undefined)$(id).value=f[name];
+  for(const [id,name] of [['mapBaseflow','baseflow'],['mapInitialWater','initial_water']])if(f[name]!==undefined)$(id).checked=f[name];
+  if(f.boundary)$('mapBoundary').value=f.boundary;
+ }
  for(const [id,size] of [['sourceX',t.shape[1]],['sourceZ',t.shape[0]]]){$(id).max=size-1;$(id).value=Math.min(size-1,Number($(id).value));}
  const entry=new URLSearchParams(location.search),fresh=entry.get('fresh')==='1';
  controls();let saved=location.hash.slice(1);if(!saved&&!fresh)try{saved=localStorage.getItem('hyra-map-process')||'';}catch{}
- if(/^maps-[a-z0-9-]{1,64}$/.test(saved)){busy=true;controls();try{await restore(saved);return;}catch{try{localStorage.removeItem('hyra-map-process');}catch{}history.replaceState(null,'',location.pathname);}finally{busy=false;controls();}}
+ if(/^(?:maps|merewether)-[a-z0-9-]{1,64}$/.test(saved)){busy=true;controls();try{await restore(saved);return;}catch{try{localStorage.removeItem('hyra-map-process');}catch{}history.replaceState(null,'',location.pathname);}finally{busy=false;controls();}}
  await create(false);
 }).catch(e=>status(e.message,true));
 requestAnimationFrame(animate);

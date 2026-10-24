@@ -1,0 +1,16 @@
+{
+  "complete_800s": true,
+  "same_forcing": true,
+  "same_flood_settings": true,
+  "same_numerical_kernel": true,
+  "same_source": true,
+  "fixed_measurements": true,
+  "mass": true,
+  "forcing_volume": true,
+  "solid_stays_dry": true,
+  "finite": true,
+  "nonnegative": true,
+  "same_roughness": true,
+  "maxima_recomputed": true,
+  "rmse_recomputed": true
+}

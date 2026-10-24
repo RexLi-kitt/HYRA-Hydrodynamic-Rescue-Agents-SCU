@@ -141,9 +141,9 @@
       if(window.ELEVATION_DATA) next=window.ELEVATION_DATA;
       else {
         const m=await (await read('/api/current')).json(),field=m.fields[m.full?'ground_height':'height'];
-        const buf=await (await read(field.url)).arrayBuffer(),a=field.dtype==='<f4'?new Float32Array(buf):new Int32Array(buf);
+        const buf=await (await read(field.url)).arrayBuffer(),a=field.dtype==='<f8'?new Float64Array(buf):field.dtype==='<f4'?new Float32Array(buf):new Int32Array(buf);
         let water=null;if(m.full)water=new Float32Array(await (await read(m.fields.water_surface.url)).arrayBuffer());
-        next={shape:m.shape,origin:m.origin,step:m.step,seed:m.config.seed,full:m.full,heights:Array.from(a,v=>v*(m.full?1:m.scale)),water};
+        next={shape:m.shape,origin:m.origin,step:m.step,seed:m.config.seed,full:m.full,imported:m.imported,heights:Array.from(a,v=>v*(m.full?1:m.scale)),water};
       }
       const [nz,nx]=next.shape||[];
       if(!Number.isInteger(nx)||!Number.isInteger(nz)||nx<2||nz<2||next.heights?.length!==nx*nz||!next.heights.every(Number.isFinite)||!Number.isFinite(next.step)||next.step<=0||!Array.isArray(next.origin)||next.origin.length!==2||!next.origin.every(Number.isFinite)||next.water&&next.water.length!==nx*nz)throw new Error('高程数据格式不完整');
@@ -151,8 +151,8 @@
       for(const [id,v] of [['minimum',low],['maximum',high],['average',average],['relief',high-low]])$(id).textContent=v.toFixed(1);
       $('legendMin').textContent=low.toFixed(1);$('legendMax').textContent=high.toFixed(1);
       $('mapInfo').textContent=`种子 ${data.seed} · ${nx} × ${nz} 网格 · 采样间距 ${data.step} · X / Z 跨度 ${(nx-1)*data.step} / ${(nz-1)*data.step} 方块单位`;
-      $('sourceLabel').textContent=data.full?'实际地面高程':'连续地形高程';$('profileRow').max=nz-1;
-      buildMesh();select(Math.floor(nx/2),Math.floor(nz/2));$('empty').hidden=true;status(notice);
+      if(data.imported){$('mapInfo').textContent=`导入实验地形 · ${nx} × ${nz} 网格 · 格宽 ${data.step} 米`;for(const el of document.querySelectorAll('.stats small'))el.textContent='米';} $('sourceLabel').textContent=data.imported?'导入实验高程':data.full?'实际地面高程':'连续地形高程';$('profileRow').max=nz-1;
+      buildMesh();select(Math.floor(nx/2),Math.floor(nz/2));$('empty').hidden=true;status(data.imported?'导入实验高程，单位为米；保持来源高程基准，不包含群系或初始积水。':notice);
     }catch(e){$('empty').hidden=false;$('empty').textContent=e.message;status(`读取失败：${e.message}`,true);}
     finally{busy=false;$('refresh').disabled=Boolean(window.ELEVATION_DATA);$('saveImage').disabled=!data;$('saveMatrix').disabled=!data;}
   }
