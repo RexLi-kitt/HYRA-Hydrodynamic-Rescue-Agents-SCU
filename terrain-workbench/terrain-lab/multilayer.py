@@ -95,6 +95,8 @@ class MapWorld:
         self.base=BaseMap(solver.bed,solver.dx,layers,self.config['manning'])
         from hydraulic_structures import Structures
         self.structures=Structures(structures or [],self.base.z,self.base.dx)
+        from channel_audit import audit_channels
+        self.channel_audit=audit_channels(self.structures)
         self.base.static_solid=self.base.solid.copy()
         self.base.solid |= self.structures.buildings
         if np.any(self.base.solid & (self.base.source_id>=0)):
@@ -148,7 +150,7 @@ class MapWorld:
             provenance=self.meta.get('terrain_source'),config=self.config,scenario_metadata=self.meta,
             source_hydrographs=self.base.hydrographs,M_base=self.base.snapshot(),M_water=self.water(compact),M_forcing=self.forcing(),
             M_structures=dict(schema='hyra-structures-v1',coordinate_system='local metres from displayed grid outer corner',
-                              objects=self.structures.compiled),
+                              objects=self.structures.compiled,channel_audit=self.channel_audit),
             M_people=self.people)
         if hasattr(self.solver,'mesh_snapshot'):
             result['M_mesh']=self.solver.mesh_snapshot(compact)

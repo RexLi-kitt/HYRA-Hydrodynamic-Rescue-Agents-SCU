@@ -99,6 +99,12 @@ def channel_check(method, old_solver):
     bed=np.full((8,24),4.); bed[3:5,1:]=.02*np.arange(22,-1,-1)
     depth=np.zeros_like(bed); depth[3:5,1:]=.3
     cls=old_solver if method=='legacy_rusanov' else FloodSolver
+    if method == 'legacy_rusanov':
+        # Adapt only the progress callback API; the frozen numerical code is unchanged.
+        class LegacyProgressAdapter(old_solver):
+            def advance(self, end, *, progress=None, **kwargs):
+                return super().advance(end, **kwargs)
+        cls = LegacyProgressAdapter
     solver=cls(bed,depth,1.,manning=.035,**METHODS[method])
     solver.set_baseflow([dict(z=3,x=1,discharge_m3_s=.15),dict(z=4,x=1,discharge_m3_s=.15)])
     report=spin_up(solver,600.,0.,lambda **kw:None,lambda:False)

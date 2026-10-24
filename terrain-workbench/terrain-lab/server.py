@@ -298,6 +298,10 @@ def generate(jobid, config):
         job.update(state='failed', message=str(error), progress=0)
 
 class Handler(SimpleHTTPRequestHandler):
+    # Windows MIME registries may classify ES modules as plain text.
+    extensions_map = {**SimpleHTTPRequestHandler.extensions_map,
+                      ".mjs": "text/javascript", ".js": "text/javascript"}
+
     def __init__(self, *args, **kwargs): super().__init__(*args, directory=str(ROOT), **kwargs)
     def json(self, data, status=200):
         body = json.dumps(data, ensure_ascii=False, allow_nan=False).encode()

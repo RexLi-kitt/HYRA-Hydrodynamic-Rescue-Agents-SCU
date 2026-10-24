@@ -21,7 +21,7 @@ class FloodSolver:
                  sea_level=None, sea_edges=None, flux_method='rusanov',
                  spatial_order=2, time_integrator='rk2', low_froude=0,
                  cfl=.4, limiter_theta=1.5, velocity_depth=1e-6,
-                 max_timestep=1., max_steps=500000):
+                 max_timestep=1., max_steps=500000, open_boundary_mode='outflow_only'):
         self.bed = np.asarray(bed, dtype=np.float64).copy()
         self.h = np.asarray(depth, dtype=np.float64).copy()
         if (self.bed.ndim != 2 or min(self.bed.shape) < 2 or self.h.shape != self.bed.shape
@@ -45,8 +45,13 @@ class FloodSolver:
         self.cfl, self.limiter_theta = float(cfl), float(limiter_theta)
         self.velocity_depth, self.max_timestep = float(velocity_depth), float(max_timestep)
         self.max_steps = max_steps
+        if open_boundary_mode not in ('outflow_only', 'extrapolated'):
+            raise ValueError('Invalid open_boundary_mode')
+        if open_boundary_mode == 'extrapolated' and boundary != 'open':
+            raise ValueError('Experimental extrapolation requires boundary=open')
+        self.open_boundary_mode = open_boundary_mode
         self.acceleration = None
-        if os.environ.get('HYRA_FLOOD_BACKEND', 'auto') != 'numpy':
+        if open_boundary_mode == 'outflow_only' and os.environ.get('HYRA_FLOOD_BACKEND', 'auto') != 'numpy':
             try:
                 import flood_acceleration
                 self.acceleration = flood_acceleration
@@ -106,14 +111,18 @@ class FloodSolver:
                             scheduled_inflow_m3=0.0, external_inflow_m3=0.0, numerical_adjustment_m3=0.0)
 
     def set_environment(self, *, solid=None, wall_x=None, wall_y=None, drain_capacity=None):
+        pending = {}
         for name,value in (('solid',solid),('wall_x',wall_x),('wall_y',wall_y),('drain_capacity',drain_capacity)):
             if value is None: continue
             a = np.asarray(value,dtype=bool if name!='drain_capacity' else float)
             if a.shape!=getattr(self,name).shape or (name=='drain_capacity' and
                     (not np.isfinite(a).all() or (a<0).any())): raise ValueError('Invalid environment layer')
-            setattr(self,name,a.copy())
-        if np.any(self.solid & (self.baseflow_rate>0)):
+            pending[name] = a.copy()
+        if np.any(pending.get('solid', self.solid) & (self.baseflow_rate>0)):
             raise ValueError('River sources cannot be inside a solid cell')
+        self._validated_source_schedule(self.source_schedule, pending.get('solid', self.solid))
+        for name, a in pending.items():
+            setattr(self, name, a)
         self.h[self.solid]=0; self.mx[self.solid]=0; self.mz[self.solid]=0
         self.initial=self.h.copy(); self.maximum=self.h.copy()
         self.balance['initial_m3']=float(self.h.sum()*self.dx**2)
@@ -124,9 +133,49 @@ class FloodSolver:
                 h=np.maximum(0,self.sea_level-b[self.sea_edges[name]&~solid])
                 if h.size:self.sea_wave_speed=max(self.sea_wave_speed,float(np.sqrt(G*h).max()))
 
+    def _validated_source_schedule(self, schedule, solid=None):
+        """Validate and detach scheduled sources before committing any state."""
+        solid = self.solid if solid is None else solid
+        if not isinstance(schedule, (list, tuple)):
+            raise ValueError('Source schedule must be a sequence')
+        clean = []
+        for source in schedule:
+            if not isinstance(source, dict):
+                raise ValueError('Invalid scheduled source')
+            cells = source.get('cells', [])
+            points = source.get('hydrograph', [])
+            if not isinstance(cells, (list, tuple)) or not cells:
+                raise ValueError('Scheduled source requires cells')
+            checked = []
+            for cell in cells:
+                if (not isinstance(cell, (list, tuple)) or len(cell) != 2
+                        or not all(isinstance(v, (int, np.integer)) and not isinstance(v, (bool, np.bool_))
+                                   and 0 <= v < n for v, n in zip(cell, self.h.shape))):
+                    raise ValueError('Invalid scheduled source cell')
+                z, x = map(int, cell)
+                if solid[z, x]:
+                    raise ValueError('Scheduled sources cannot be inside a solid cell')
+                checked.append((z, x))
+            if len(set(checked)) != len(checked):
+                raise ValueError('Duplicate scheduled source cells')
+            if not isinstance(points, (list, tuple)) or not points:
+                raise ValueError('Scheduled source requires a hydrograph')
+            graph = []; previous = -1.
+            for point in points:
+                if (not isinstance(point, (list, tuple)) or len(point) != 2
+                        or not all(isinstance(v, (int, float, np.integer, np.floating))
+                                   and not isinstance(v, (bool, np.bool_)) and np.isfinite(v) for v in point)):
+                    raise ValueError('Invalid source hydrograph point')
+                t, q = map(float, point)
+                if t < 0 or t <= previous or q < 0:
+                    raise ValueError('Hydrograph times must increase and flows must be nonnegative')
+                previous = t; graph.append([t, q])
+            clean.append(dict(source, cells=checked, hydrograph=graph))
+        return clean
+
     def set_source_schedule(self, schedule):
-        # Each event is a piecewise-constant hydrograph shared by source_id cells.
-        self.source_schedule = schedule
+        # Each event is piecewise constant; use a detached validated snapshot.
+        self.source_schedule = self._validated_source_schedule(schedule)
 
     def _scheduled_rate(self, time):
         rate = np.zeros_like(self.h)
@@ -214,6 +263,8 @@ class FloodSolver:
                     or not np.isfinite(q) or q < 0):
                 raise ValueError('Invalid river baseflow source')
             rate[z, x] += q/self.dx**2
+        if np.any(self.solid & (rate > 0)):
+            raise ValueError('River sources cannot be inside a solid cell')
         self.baseflow_rate = rate
         self.baseflow_m3_s = float(rate.sum()*self.dx**2)
 
@@ -236,6 +287,7 @@ class FloodSolver:
 
     def numerical_config(self):
         return dict(schema='hyra-swe-v2', flux_method=self.flux_method,
+                    open_boundary_mode=self.open_boundary_mode,
                     structures='hydrostatic_crest_ANUGA_Villemonte_shared_RK_flux' if self.structures and self.structures.barriers else 'none',
                     compute_backend='numba' if self.acceleration else 'numpy',
                     spatial_order=self.spatial_order, time_integrator=self.time_integrator,
@@ -478,7 +530,9 @@ class FloodSolver:
         mass, advx, advz, pressure, speed = face_flux(
             dl, dr, ul, vl, ur, vr, normal=(1., 0.) if axis == 1 else (0., 1.),
             method=self.flux_method, low_froude=self.low_froude)
-        if self.boundary in ('open', 'ocean'):
+        # Extrapolated ghost states already passed through the selected face flux.
+        # Keep that flux, including inward transport; no outflow-only override.
+        if self.boundary in ('open', 'ocean') and self.open_boundary_mode == 'outflow_only':
             for face, sign, name, cell in zip((0, -1), (-1, 1), edge_names, (0, -1)):
                 index = (slice(None), face) if axis == 1 else (face, slice(None))
                 ci = (slice(None), cell) if axis == 1 else (cell, slice(None))

@@ -74,6 +74,12 @@
 <div class="export-area"><details><summary>保存与导入</summary><button id="saveMapConfig">导出场景配置 JSON</button><label class="field">导入场景配置 JSON<input id="importMapConfig" type="file" accept=".json,application/json"></label><a id="downloadMap" class="elevation-link" hidden>下载地图与洪水完整过程 ZIP</a><button id="exportFrame" disabled>导出当前显示水情 JSON</button><button id="exportPng" disabled>导出水深图片</button><a class="elevation-link" href="/api/maps/schema" target="_blank">地图数据字典</a><p class="hint">完整导出保留固定环境、真实计算帧、最终水情与水量收支。帧间显示平滑不修改计算结果。</p></details>
 </div></div><div class="settings-footer"><div class="map-run-actions"><button id="createMap" disabled>应用设置</button><button id="runMap" class="primary" disabled>开始洪水模拟</button><button id="cancelMap" disabled>取消计算</button></div><p>修改后应用设置或重新模拟。</p></div></aside><section class="workspace"><div class="map-bar"><div><span class="eyebrow">HYDRODYNAMIC WORKSPACE</span><h2>地图与洪水过程</h2><p id="worldInfo">先应用当前地形或建立示例场景。</p></div><strong id="worldTime">0.0 秒</strong></div>
 <div class="process-status" aria-live="polite"><progress id="mapProgress" max="100" value="0"></progress><span id="computeStatus">地图就绪后可直接开始整段模拟。</span></div>
+<details id="channelAuditPanel" open><summary>建筑间通道检查</summary>
+<p id="channelAuditSummary" role="status">应用地图后检查。</p>
+<label><input id="showChannelAudit" type="checkbox" checked>在地图上标出风险通道（红：封闭；橙：缩窄；灰：未评估）</label>
+<p>仅检查已应用的矩形建筑及其基础网格，连通性仅指通道内部。未计入地形高差、其他障碍、阻水墙、堤坝和水位，也不判断绕行通路。格宽缩小后需要重新检查。</p>
+<p id="channelAuditStale" hidden>有未应用修改：以下结果属于上一次应用的地图，风险标记暂时隐藏。</p>
+<div id="channelAuditList" style="max-height:180px;overflow:auto"></div></details>
 <p id="mapStatus" role="status">点击任意图层可查看同一位置的高程、地物、水深和流速。</p>
 <div class="view-tabs" role="tablist" aria-label="地图视图"><button role="tab" aria-selected="true" data-view="depth">水深与流向</button><button role="tab" aria-selected="false" data-view="base">地形与河口</button><button role="tab" aria-selected="false" data-view="speed">流速</button><button role="tab" aria-selected="false" data-view="maximum">最大水深</button><button role="tab" aria-selected="false" data-view="compare">四图对比</button></div><div class="map-grid" data-view="depth">
 <figure data-map="base"><figcaption><strong>固定地图</strong><span id="baseCaption">高程、地表与水工地物</span></figcaption><canvas id="baseMap" width="640" height="640" tabindex="0" aria-label="固定地图，点击查点或编辑"></canvas><p id="crossingMapInfo" class="hint"></p></figure>
@@ -88,4 +94,4 @@
 </details><div class="result-metrics"><div><span>当前最大水深</span><strong id="metricDepth">—</strong></div><div><span>当前最大流速</span><strong id="metricSpeed">—</strong></div><div><span>当前有水面积</span><strong id="metricArea">—</strong></div><div><span>计算网格</span><strong id="metricGrid">—</strong></div></div><details class="map-legend"><summary>图例与标记说明</summary><p class="legend">河口编号与左侧列表对应：<b class="port-in">蓝色「入」：推断入口</b> · <b class="port-out">橙色「出」：推断出口</b> · 灰色「?」：待确认 · <b class="port-active">紫色「来」：启用的外源来水</b>。实箭头为配置的河道切线或自定义动量方向，候选虚线箭头为地形推断；候选点仅在固定地图显示。↑ −Z · → +X · ↓ +Z。深灰：建筑 · 黑线：墙 · 青色：排水口 · 绿色：变化水源 · 金色：所选格 · 彩色圆点：受困人员（孤立人员为灰蓝） · 绿色菱形「起」：救援起点。水深低于0.01米显示地形底色；流速色标仅作用于有水区域。</p>
 </details><p class="detail" id="mapCellDetail" aria-live="polite">点击地图查看该位置的各层数据。</p>
 <details><summary>水量收支与场景信息</summary><p id="mapBalance">尚未开始洪水计算。</p><p id="scenarioInfo"></p></details>
-</section></main><script type="module" src="maps.js?v=33"></script></body></html>
+</section></main><script type="module" src="maps.js?v=34"></script></body></html>

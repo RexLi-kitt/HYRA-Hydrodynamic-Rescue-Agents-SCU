@@ -1,3 +1,4 @@
+import {auditWarnings,auditSummary,drawChannelAudit} from './channel-audit.mjs';
 import {discharge,windowCurve,portLabel,validateCurve} from './inflow-controls.mjs';
 import {framePair,blendFrames,playbackTime} from './maps-playback.mjs';
 import {StructureEditor,staticSolids} from './structure-editor.mjs?v=2';
@@ -82,7 +83,7 @@ function config(){
  return {...(imported||{}),mode,terrain_id:terrain.id,flood,layers,structures:structureEditor.config(),people:peopleEditor.config(),external_inflows:externalDraft.map(p=>({...p}))};
 }
 function draft(){$('draftInfo').textContent=`草稿：${patches.length} 项编辑；应用或重新模拟后生效。`;}
-function pendingSettings(dirty=true){$('draftBadge').textContent=dirty?'有未应用修改':'已应用';$('draftBadge').classList.toggle('is-dirty',dirty);}
+function pendingSettings(dirty=true){$('channelAuditStale').hidden=!dirty;$('draftBadge').textContent=dirty?'有未应用修改':'已应用';$('draftBadge').classList.toggle('is-dirty',dirty);if(scene&&baseImage)render();}
 function showView(view){
  document.querySelector('.map-grid').dataset.view=view;
  for(const button of document.querySelectorAll('[data-view]'))if(button.tagName==='BUTTON')button.setAttribute('aria-selected',String(button.dataset.view===view));
@@ -106,7 +107,7 @@ async function create(start=false){
 }
 function remember(){try{localStorage.setItem('hyra-map-process',scene.id);}catch{}history.replaceState(null,'',`#${scene.id}`);}
 function installScene(next){
- clearTimeout(pollTimer);epoch++;cache.clear();pending.clear();scene=next;process=next.process;time=0;playing=false;seeking=false;seekVersion++;selected={x:0,z:0};
+ clearTimeout(pollTimer);epoch++;cache.clear();pending.clear();scene=next;showChannelAudit();process=next.process;time=0;playing=false;seeking=false;seekVersion++;selected={x:0,z:0};
  structureEditor.load(next.M_structures?.objects||next.scenario_config?.structures||[]);
  peopleEditor.load(next.M_people||next.scenario_config?.people||null);
  meshCache.clear();geometry=meshGeometry(scene.M_mesh,scene.grid.shape);meshDisplay=geometry?meshState(scene.M_mesh):null;
@@ -407,6 +408,7 @@ function draw(id,kind){
    }:null);
   ctx.drawImage(img,0,0,S,S);markers(ctx,false);if(kind==='depth')arrows(ctx);
  }
+ if($('showChannelAudit').checked&&$('channelAuditStale').hidden)drawChannelAudit(ctx,scene.M_structures?.channel_audit,scene.grid,S);
  externalMarkers(ctx,kind);
  structureEditor?.draw(ctx,S,time,kind==='base'?structureEditor.objects:(scene.M_structures?.objects||[]));
  peopleEditor?.draw(ctx,S,time,kind==='base'?peopleEditor.items:(scene.M_people?.items||[]),kind==='base'?peopleEditor.start:(scene.M_people?.start||null));
@@ -553,3 +555,18 @@ json('/api/current').then(async t=>{
  await create(false);
 }).catch(e=>status(e.message,true));
 requestAnimationFrame(animate);
+
+function showChannelAudit(){
+ const audit=scene.M_structures?.channel_audit;
+ $('channelAuditStale').hidden=true;
+ $('channelAuditSummary').textContent=auditSummary(audit);
+ const list=$('channelAuditList');list.replaceChildren();
+ for(const c of auditWarnings(audit)){
+  const button=document.createElement('button');button.type='button';button.style.display='block';
+  const label={closed:'网格内封闭',narrowed:'网格缩窄',not_evaluated:'未评估'}[c.status];
+  button.textContent=`${c.building_ids.join(' ↔ ')}：${label}；几何宽 ${fmt(c.physical_width_m,3)} m，网格最小净宽 ${c.grid_min_width_m==null?'未计算':fmt(c.grid_min_width_m,3)+' m'}`;
+  button.onclick=()=>{const [x,z,x1,z1]=c.bounds_m,dx=scene.grid.dx_m;selected={x:Math.min(scene.grid.shape[1]-1,Math.floor((x+x1)/2/dx)),z:Math.min(scene.grid.shape[0]-1,Math.floor((z+z1)/2/dx))};render();};
+  list.append(button);
+ }
+}
+$('showChannelAudit').onchange=()=>{if(scene)render();};
