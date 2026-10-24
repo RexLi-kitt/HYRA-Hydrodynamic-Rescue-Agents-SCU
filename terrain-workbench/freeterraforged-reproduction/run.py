@@ -85,10 +85,14 @@ def main():
     print('HYRA_STAGE: Java 21 已就绪，正在准备构建依赖', flush=True)
     if args.gradle_cache:
         env["GRADLE_USER_HOME"] = str(args.gradle_cache.resolve())
+    elif env.get("GRADLE_USER_HOME"):
+        # Keep an explicitly selected cache, including one outside the checkout.
+        env["GRADLE_USER_HOME"] = str(Path(env["GRADLE_USER_HOME"]).expanduser().resolve())
     elif (root.parent.parent / "work" / "gradle-cache").is_dir():
         env["GRADLE_USER_HOME"] = str((root.parent.parent / "work" / "gradle-cache").resolve())
     else:
         env["GRADLE_USER_HOME"] = str(root / ".runtime" / "gradle")
+    print('HYRA_STAGE: Gradle cache: ' + env["GRADLE_USER_HOME"], flush=True)
     if args.request:
         request = args.request.resolve()
         # Passing the path as an explicit Gradle property preserves relative output semantics.

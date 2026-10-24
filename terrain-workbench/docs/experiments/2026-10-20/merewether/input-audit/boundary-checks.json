@@ -1,0 +1,233 @@
+{
+  "scope": "compiled official CPU DG2 boundary/HLL probes and archived inlet depth snapshots; no full-domain counterfactual",
+  "gravity_m_s2": 9.81,
+  "critical_depth_m": 0.3014534969080837,
+  "critical_velocity_m_s": 1.7196682251726059,
+  "original_version": "LISFLOOD-FP 8.0, Zenodo 4073011; exact paper-run binary not archived",
+  "original_zip_md5": "00602cbba617a50a34478495d2688add",
+  "original_source_sha256": {
+    "swe\\dg2.cpp": "ad690a099b60f70969fb7be16ec567abaed294162721a6769d0b84dbe83d2af8",
+    "swe\\hll.cpp": "305bb7fd703a1bac0634f11243392f5ed2772838f5b260d5fc4e91f56d864ed7",
+    "swe\\hll_include.h": "4ba5e50e5be65d76f1936aa24d5af1cc5d8c7ff6e200984652f6d4a76814f0d9"
+  },
+  "archived_local_solver_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+  "probes": [
+    {
+      "interior_depth_m": 0.0,
+      "original_boundary_depth_m": 0.0011,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 244.30778775323176,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_pressure_flux_m3_s2": 0.0,
+      "local_total_normal_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_to_original_total_ratio": 0.003648987271866802
+    },
+    {
+      "interior_depth_m": 0.001,
+      "original_boundary_depth_m": 0.0011,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 244.30778775323176,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_pressure_flux_m3_s2": 4.9050000000000005e-06,
+      "local_total_normal_momentum_flux_m3_s2": 0.891480912929479,
+      "local_to_original_total_ratio": 0.0036490073490000165
+    },
+    {
+      "interior_depth_m": 0.01,
+      "original_boundary_depth_m": 0.01,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 26.874346499999998,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_pressure_flux_m3_s2": 0.0004905,
+      "local_total_normal_momentum_flux_m3_s2": 0.8919665079294788,
+      "local_to_original_total_ratio": 0.03319025852142968
+    },
+    {
+      "interior_depth_m": 0.05,
+      "original_boundary_depth_m": 0.05,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 5.387033699999999,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_pressure_flux_m3_s2": 0.012262500000000003,
+      "local_total_normal_momentum_flux_m3_s2": 0.9037385079294789,
+      "local_to_original_total_ratio": 0.1677618070088329
+    },
+    {
+      "interior_depth_m": 0.1,
+      "original_boundary_depth_m": 0.1,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 2.736435599999999,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_pressure_flux_m3_s2": 0.04905000000000001,
+      "local_total_normal_momentum_flux_m3_s2": 0.9405260079294789,
+      "local_to_original_total_ratio": 0.3437047844025561
+    },
+    {
+      "interior_depth_m": 0.2,
+      "original_boundary_depth_m": 0.2,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 1.5398927999999996,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_pressure_flux_m3_s2": 0.19620000000000004,
+      "local_total_normal_momentum_flux_m3_s2": 1.087676007929479,
+      "local_to_original_total_ratio": 0.7063322900980374
+    },
+    {
+      "interior_depth_m": 0.3,
+      "original_boundary_depth_m": 0.3,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 1.3372452,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.8914760079294789,
+      "local_pressure_flux_m3_s2": 0.44145,
+      "local_total_normal_momentum_flux_m3_s2": 1.332926007929479,
+      "local_to_original_total_ratio": 0.9967700822029341
+    },
+    {
+      "interior_depth_m": 0.4,
+      "original_boundary_depth_m": 0.4,
+      "original_mass_flux_m2_s": 0.5183999999999999,
+      "original_normal_momentum_flux_m3_s2": 1.4566464,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.6718463999999998,
+      "local_pressure_flux_m3_s2": 0.7848000000000002,
+      "local_total_normal_momentum_flux_m3_s2": 1.4566464,
+      "local_to_original_total_ratio": 1.0
+    },
+    {
+      "interior_depth_m": 0.5,
+      "original_boundary_depth_m": 0.5,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 1.76372712,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.5374771199999999,
+      "local_pressure_flux_m3_s2": 1.22625,
+      "local_total_normal_momentum_flux_m3_s2": 1.76372712,
+      "local_to_original_total_ratio": 1.0
+    },
+    {
+      "interior_depth_m": 1.0,
+      "original_boundary_depth_m": 1.0,
+      "original_mass_flux_m2_s": 0.5184,
+      "original_normal_momentum_flux_m3_s2": 5.17373856,
+      "local_mass_flux_m2_s": 0.5184,
+      "local_advective_momentum_flux_m3_s2": 0.26873855999999996,
+      "local_pressure_flux_m3_s2": 4.905,
+      "local_total_normal_momentum_flux_m3_s2": 5.17373856,
+      "local_to_original_total_ratio": 1.0
+    }
+  ],
+  "final_inlet": {
+    "depth_min_m": 0.1895905646287479,
+    "depth_max_m": 0.7196189332391378,
+    "width_below_critical_m": 2.2999999999999914,
+    "width_fraction_below_critical": 0.060526315789473456,
+    "local_width_integrated_normal_momentum_flux_m4_s2": 74.81108971290242,
+    "original_formula_on_same_cell_depths_m4_s2": 75.40045484535895,
+    "local_to_original_on_same_depths_ratio": 0.9921835334592439
+  },
+  "snapshots": [
+    {
+      "time_s": 0.0,
+      "depth_min_m": 0.0,
+      "depth_max_m": 0.0,
+      "width_below_critical_m": 37.999999999999986,
+      "width_fraction_below_critical": 0.9999999999999997,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 33.87608830132019,
+      "original_formula_on_same_cell_depths_m4_s2": 9283.695934622805,
+      "local_to_original_on_same_depths_ratio": 0.003648987271866802
+    },
+    {
+      "time_s": 100.0,
+      "depth_min_m": 0.18947690725326538,
+      "depth_max_m": 0.7181166410446167,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.6142593290112,
+      "original_formula_on_same_cell_depths_m4_s2": 75.20553971794895,
+      "local_to_original_on_same_depths_ratio": 0.9921378080503739
+    },
+    {
+      "time_s": 200.0,
+      "depth_min_m": 0.1895860731601715,
+      "depth_max_m": 0.7195897698402405,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.80726270325553,
+      "original_formula_on_same_cell_depths_m4_s2": 75.39668772793848,
+      "local_to_original_on_same_depths_ratio": 0.992182348556082
+    },
+    {
+      "time_s": 300.0,
+      "depth_min_m": 0.1895902156829834,
+      "depth_max_m": 0.7196183204650879,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.81100071189687,
+      "original_formula_on_same_cell_depths_m4_s2": 75.4003700811423,
+      "local_to_original_on_same_depths_ratio": 0.9921834684815051
+    },
+    {
+      "time_s": 400.0,
+      "depth_min_m": 0.1895906776189804,
+      "depth_max_m": 0.7196189165115356,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.81108418300364,
+      "original_formula_on_same_cell_depths_m4_s2": 75.40044818220255,
+      "local_to_original_on_same_depths_ratio": 0.9921835477983535
+    },
+    {
+      "time_s": 500.0,
+      "depth_min_m": 0.18959058821201324,
+      "depth_max_m": 0.7196189165115356,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.81108372125765,
+      "original_formula_on_same_cell_depths_m4_s2": 75.40044859001736,
+      "local_to_original_on_same_depths_ratio": 0.9921835363080619
+    },
+    {
+      "time_s": 600.0,
+      "depth_min_m": 0.18959057331085205,
+      "depth_max_m": 0.7196189165115356,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.81108411149884,
+      "original_formula_on_same_cell_depths_m4_s2": 75.40044915352752,
+      "local_to_original_on_same_depths_ratio": 0.9921835340684957
+    },
+    {
+      "time_s": 700.0,
+      "depth_min_m": 0.18959055840969086,
+      "depth_max_m": 0.7196189165115356,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.81108249462245,
+      "original_formula_on_same_cell_depths_m4_s2": 75.40044758817737,
+      "local_to_original_on_same_depths_ratio": 0.9921835332228541
+    },
+    {
+      "time_s": 800.0,
+      "depth_min_m": 0.18959055840969086,
+      "depth_max_m": 0.7196189165115356,
+      "width_below_critical_m": 2.2999999999999914,
+      "width_fraction_below_critical": 0.060526315789473456,
+      "local_width_integrated_normal_momentum_flux_m4_s2": 74.81108957036672,
+      "original_formula_on_same_cell_depths_m4_s2": 75.40045466392162,
+      "local_to_original_on_same_depths_ratio": 0.9921835339563687
+    }
+  ],
+  "limitations": [
+    "CPU DG2 boundary probe uses homogeneous face/interior depths and zero tangential discharge",
+    "snapshots do not measure time-integrated momentum or isolate whole-domain effects",
+    "8.0 reference source is verified; exact binary/commit used for 2023 paper is unverified",
+    "no direct transplant of original near-dry boundary into production solver"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "kind": "synthetic closed-box dam-break on real terrain crop; not Merewether validation",
+  "setup": {
+    "source_row_range": [
+      1029,
+      1125
+    ],
+    "source_col_range": [
+      232,
+      344
+    ],
+    "extent_xy_m": [
+      40.6,
+      60.2,
+      187.6,
+      204.4
+    ],
+    "reservoir_x_width_m": 2.8,
+    "initial_water_surface_m": 19.8,
+    "duration_s": 40,
+    "all_boundaries": "closed",
+    "n": 0.042,
+    "numerical_method": "unchanged Rusanov/MUSCL/RK2/CFL0.4"
+  },
+  "wall_budget_s": 120.0,
+  "wall_s": 14.027765200007707,
+  "results": [
+    {
+      "label": "combined-native",
+      "dx_m": 0.175,
+      "shape": [
+        96,
+        112
+      ],
+      "complete": true,
+      "duration_s": 40.0,
+      "wet_cells": 5619,
+      "wet_area_m2": 172.08187499999997,
+      "maximum_speed_m_s": 0.24269035559216645,
+      "initial_volume_m3": 27.56529339337352,
+      "volume_m3": 27.56529339337352,
+      "residual_m3": 0.0,
+      "numerical_adjustment_m3": 0.0,
+      "solid_storage_m3": 0.0,
+      "finite": true,
+      "nonnegative": true,
+      "depth_at_20F_location_m": 0.12598584874512267,
+      "ground_or_surface_at_20F_m": 19.290660858154297
+    },
+    {
+      "label": "layered-native",
+      "dx_m": 0.175,
+      "shape": [
+        96,
+        112
+      ],
+      "complete": true,
+      "duration_s": 40.0,
+      "wet_cells": 5619,
+      "wet_area_m2": 172.08187499999997,
+      "maximum_speed_m_s": 0.24269035559216673,
+      "initial_volume_m3": 27.56529339337352,
+      "volume_m3": 27.56529339337352,
+      "residual_m3": 0.0,
+      "numerical_adjustment_m3": 0.0,
+      "solid_storage_m3": 0.0,
+      "finite": true,
+      "nonnegative": true,
+      "depth_at_20F_location_m": 0.12598584874512267,
+      "ground_or_surface_at_20F_m": 19.290660858154297
+    },
+    {
+      "label": "combined-coarse",
+      "dx_m": 0.7,
+      "shape": [
+        24,
+        28
+      ],
+      "complete": true,
+      "duration_s": 40.0,
+      "wet_cells": 320,
+      "wet_area_m2": 156.79999999999998,
+      "maximum_speed_m_s": 0.09993406108025416,
+      "initial_volume_m3": 25.051014106750515,
+      "volume_m3": 25.051014106750515,
+      "residual_m3": 0.0,
+      "numerical_adjustment_m3": 0.0,
+      "solid_storage_m3": 0.0,
+      "finite": true,
+      "nonnegative": true,
+      "depth_at_20F_location_m": 0.0,
+      "ground_or_surface_at_20F_m": 21.977516174316406
+    },
+    {
+      "label": "layered-coarse",
+      "dx_m": 0.7,
+      "shape": [
+        24,
+        28
+      ],
+      "complete": true,
+      "duration_s": 40.0,
+      "wet_cells": 341,
+      "wet_area_m2": 167.08999999999997,
+      "maximum_speed_m_s": 0.12621612425754355,
+      "initial_volume_m3": 26.762700414461992,
+      "volume_m3": 26.762700414461992,
+      "residual_m3": 0.0,
+      "numerical_adjustment_m3": 0.0,
+      "solid_storage_m3": 0.0,
+      "finite": true,
+      "nonnegative": true,
+      "depth_at_20F_location_m": 0.11209947615244131,
+      "ground_or_surface_at_20F_m": 19.310148366292317
+    }
+  ],
+  "native_equivalence": {
+    "max_depth_difference_m": 2.220446049250313e-16,
+    "max_u_difference_m_s": 1.6445178552260131e-15,
+    "max_v_difference_m_s": 1.186550857568136e-15,
+    "note": "Same native terrain and initial head; engineering consistency, not experimental accuracy"
+  },
+  "initial_volume_note": "Identical initial head, not equalized volume; coarse representations change initial storage.",
+  "probe_indexing": "Global containing-cell indices minus crop offset; no independent crop rounding at exact grid faces."
+}

@@ -1,0 +1,305 @@
+{
+  "f4-n0.042": {
+    "metrics": {
+      "primary": {
+        "speed_rmse_m_s": 0.7383470220052278,
+        "speed_mae_m_s": 0.5987857051025174,
+        "speed_bias_m_s": 0.27492885812535417,
+        "direction_mae_deg": 27.598875427737436,
+        "direction_points": 37,
+        "measured_points": 40,
+        "model_dry_points": 2
+      },
+      "late_diagnostic_rmse_m_s": 0.6883978352927624,
+      "late_diagnostic_bias_m_s": -0.03489042646622849,
+      "vector_rmse_m_s": 0.9663135494359467,
+      "top5_squared_error_share_pct": 49.74747759604036,
+      "top10_squared_error_share_pct": 67.45557318126525,
+      "points_abs_error_over_05": 21,
+      "points_abs_error_under_025": 10,
+      "transient_excess_over_05": 12,
+      "late_speed_range_over_01": 0,
+      "largest_late_speed_range_m_s": 0.00015571396393943004,
+      "measured_flow_model_dry": [
+        "19-J",
+        "20-F"
+      ],
+      "direction_over_45deg": [
+        "15-J",
+        "17-J",
+        "19-F",
+        "20-G",
+        "20-H",
+        "21-H"
+      ],
+      "normalized_rmse_by_observed_mean": 0.7057728886814677,
+      "measured_mean_nonzero_m_s": 1.0461538461538462
+    },
+    "groups": [
+      {
+        "region": "upstream_y135_160",
+        "points": 16,
+        "rmse_m_s": 0.8524793062362747,
+        "bias_m_s": 0.52681103114019,
+        "squared_error_share_pct": 53.32202411402406
+      },
+      {
+        "region": "middle_y160_190",
+        "points": 11,
+        "rmse_m_s": 0.7465524944075113,
+        "bias_m_s": -0.08492313564276327,
+        "squared_error_share_pct": 28.114627932852933
+      },
+      {
+        "region": "downstream_y190_216",
+        "points": 13,
+        "rmse_m_s": 0.5580164471807815,
+        "bias_m_s": 0.26941017837242476,
+        "squared_error_share_pct": 18.563347953123003
+      }
+    ],
+    "geometry": {
+      "aggregation": "max",
+      "native_dx_m": 0.175,
+      "native_shape": [
+        2197,
+        696
+      ],
+      "cell_width_to_side_pier_ratio": 2.0,
+      "cell_width_to_corner_pier_ratio": 1.346153846153846,
+      "native_area_raised_over_05_m2": 1668.7868749999998,
+      "pier_region_area_raised_over_05_m2": 480.04687499999994,
+      "pier_region_fraction_raised_over_05_pct": 3.9373342175066313,
+      "max_point_uplift_m": 2.6868553161621094
+    }
+  },
+  "f8-n0.042": {
+    "metrics": {
+      "primary": {
+        "speed_rmse_m_s": 0.7641069695311385,
+        "speed_mae_m_s": 0.558883788614043,
+        "speed_bias_m_s": 0.22219264678749803,
+        "direction_mae_deg": 30.45538643848335,
+        "direction_points": 36,
+        "measured_points": 40,
+        "model_dry_points": 3
+      },
+      "late_diagnostic_rmse_m_s": 0.7783350720954929,
+      "late_diagnostic_bias_m_s": -0.1786320900769003,
+      "vector_rmse_m_s": 1.0112776771627365,
+      "top5_squared_error_share_pct": 62.98043934046946,
+      "top10_squared_error_share_pct": 82.30794866054694,
+      "points_abs_error_over_05": 15,
+      "points_abs_error_under_025": 13,
+      "transient_excess_over_05": 14,
+      "late_speed_range_over_01": 0,
+      "largest_late_speed_range_m_s": 0.0005518637685684169,
+      "measured_flow_model_dry": [
+        "16-K",
+        "17-J",
+        "20-F"
+      ],
+      "direction_over_45deg": [
+        "14-G",
+        "15-J",
+        "16-D",
+        "16-H",
+        "18-G",
+        "19-F",
+        "19-J",
+        "20-G",
+        "20-H",
+        "21-H"
+      ],
+      "normalized_rmse_by_observed_mean": 0.7303963679341765,
+      "measured_mean_nonzero_m_s": 1.0461538461538462
+    },
+    "groups": [
+      {
+        "region": "upstream_y135_160",
+        "points": 16,
+        "rmse_m_s": 0.9264952229971342,
+        "bias_m_s": 0.35310918485854503,
+        "squared_error_share_pct": 58.80822052168641
+      },
+      {
+        "region": "middle_y160_190",
+        "points": 11,
+        "rmse_m_s": 0.6421006824496751,
+        "bias_m_s": -0.15096831466909755,
+        "squared_error_share_pct": 19.41916871374792
+      },
+      {
+        "region": "downstream_y190_216",
+        "points": 13,
+        "rmse_m_s": 0.6254141958754236,
+        "bias_m_s": 0.3768161827017903,
+        "squared_error_share_pct": 21.77261076456566
+      }
+    ],
+    "geometry": {
+      "aggregation": "max",
+      "native_dx_m": 0.175,
+      "native_shape": [
+        2197,
+        696
+      ],
+      "cell_width_to_side_pier_ratio": 4.0,
+      "cell_width_to_corner_pier_ratio": 2.692307692307692,
+      "native_area_raised_over_05_m2": 3867.0493749999996,
+      "pier_region_area_raised_over_05_m2": 957.7968749999999,
+      "pier_region_fraction_raised_over_05_pct": 7.855829515312274,
+      "max_point_uplift_m": 2.6868553161621094
+    }
+  },
+  "f8-n0.02": {
+    "metrics": {
+      "primary": {
+        "speed_rmse_m_s": 1.3347208579067402,
+        "speed_mae_m_s": 1.1147850311967358,
+        "speed_bias_m_s": 0.8759857623248939,
+        "direction_mae_deg": 26.111521728800106,
+        "direction_points": 36,
+        "measured_points": 40,
+        "model_dry_points": 4
+      },
+      "late_diagnostic_rmse_m_s": 1.0018774908821488,
+      "late_diagnostic_bias_m_s": 0.061250227664526646,
+      "vector_rmse_m_s": 1.5165583756100174,
+      "top5_squared_error_share_pct": 47.73557388381762,
+      "top10_squared_error_share_pct": 66.60504226288867,
+      "points_abs_error_over_05": 33,
+      "points_abs_error_under_025": 5,
+      "transient_excess_over_05": 23,
+      "late_speed_range_over_01": 0,
+      "largest_late_speed_range_m_s": 0.0019147328252269238,
+      "measured_flow_model_dry": [
+        "16-K",
+        "17-J",
+        "20-F"
+      ],
+      "direction_over_45deg": [
+        "14-G",
+        "16-D",
+        "16-H",
+        "18-J",
+        "19-J"
+      ],
+      "normalized_rmse_by_observed_mean": 1.2758361141755605,
+      "measured_mean_nonzero_m_s": 1.0461538461538462
+    },
+    "groups": [
+      {
+        "region": "upstream_y135_160",
+        "points": 16,
+        "rmse_m_s": 1.7155522124831917,
+        "bias_m_s": 1.2939791606986035,
+        "squared_error_share_pct": 66.08257799486218
+      },
+      {
+        "region": "middle_y160_190",
+        "points": 11,
+        "rmse_m_s": 0.8618448553896412,
+        "bias_m_s": 0.23271676206810124,
+        "squared_error_share_pct": 11.465948486624548
+      },
+      {
+        "region": "downstream_y190_216",
+        "points": 13,
+        "rmse_m_s": 1.109356651355228,
+        "bias_m_s": 0.9058368876206914,
+        "squared_error_share_pct": 22.451473518513275
+      }
+    ],
+    "geometry": {
+      "aggregation": "max",
+      "native_dx_m": 0.175,
+      "native_shape": [
+        2197,
+        696
+      ],
+      "cell_width_to_side_pier_ratio": 4.0,
+      "cell_width_to_corner_pier_ratio": 2.692307692307692,
+      "native_area_raised_over_05_m2": 3867.0493749999996,
+      "pier_region_area_raised_over_05_m2": 957.7968749999999,
+      "pier_region_fraction_raised_over_05_pct": 7.855829515312274,
+      "max_point_uplift_m": 2.6868553161621094
+    }
+  },
+  "f8-n0.042-mean": {
+    "metrics": {
+      "primary": {
+        "speed_rmse_m_s": 0.7335163552401723,
+        "speed_mae_m_s": 0.6124300370790737,
+        "speed_bias_m_s": 0.2761027539182246,
+        "direction_mae_deg": 28.152491691858746,
+        "direction_points": 37,
+        "measured_points": 40,
+        "model_dry_points": 2
+      },
+      "late_diagnostic_rmse_m_s": 0.6823422314173223,
+      "late_diagnostic_bias_m_s": -0.08038248716956078,
+      "vector_rmse_m_s": 0.9678633704254975,
+      "top5_squared_error_share_pct": 47.32609631962576,
+      "top10_squared_error_share_pct": 66.24028750289575,
+      "points_abs_error_over_05": 26,
+      "points_abs_error_under_025": 9,
+      "transient_excess_over_05": 17,
+      "late_speed_range_over_01": 0,
+      "largest_late_speed_range_m_s": 0.000156386010631282,
+      "measured_flow_model_dry": [
+        "18-J",
+        "19-J"
+      ],
+      "direction_over_45deg": [
+        "15-I",
+        "15-J",
+        "17-J",
+        "19-F",
+        "20-G",
+        "20-H",
+        "21-H",
+        "22-E"
+      ],
+      "normalized_rmse_by_observed_mean": 0.7011553395678117,
+      "measured_mean_nonzero_m_s": 1.0461538461538462
+    },
+    "groups": [
+      {
+        "region": "upstream_y135_160",
+        "points": 16,
+        "rmse_m_s": 0.7729262521450115,
+        "bias_m_s": 0.4568598381580945,
+        "squared_error_share_pct": 44.4136539249425
+      },
+      {
+        "region": "middle_y160_190",
+        "points": 11,
+        "rmse_m_s": 0.7784987092945675,
+        "bias_m_s": -0.12825213398168878,
+        "squared_error_share_pct": 30.976253090807184
+      },
+      {
+        "region": "downstream_y190_216",
+        "points": 13,
+        "rmse_m_s": 0.6382998591214336,
+        "bias_m_s": 0.3957789399998498,
+        "squared_error_share_pct": 24.610092984250315
+      }
+    ],
+    "geometry": {
+      "aggregation": "mean",
+      "native_dx_m": 0.175,
+      "native_shape": [
+        2197,
+        696
+      ],
+      "cell_width_to_side_pier_ratio": 4.0,
+      "cell_width_to_corner_pier_ratio": 2.692307692307692,
+      "native_area_raised_over_05_m2": 1879.1499999999999,
+      "pier_region_area_raised_over_05_m2": 505.46562499999993,
+      "pier_region_fraction_raised_over_05_pct": 4.145818262197572,
+      "max_point_uplift_m": 0.0748262107372284
+    }
+  }
+}

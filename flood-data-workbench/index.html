@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HYRA · 真实洪水数据工作台</title>
+<link rel="stylesheet" href="/shared/style.css"><link rel="stylesheet" href="/style.css">
+<header><div class="brand"><span class="mark">≈</span><div><h1>真实洪水数据工作台</h1><p>事件资料 · 空间尺度 · 观测时间</p></div></div><span class="badge">独立工作区 / 不运行洪水求解</span></header>
+<main>
+<aside>
+ <p class="eyebrow">01 / 事件档案</p><h2>Harvey · 2017</h2><p class="muted">Brays Bayou / Houston</p>
+ <div id="inventory" class="inventory">正在读取档案…</div>
+ <p id="cadence" class="help"></p>
+ <details><summary>已核查的候选事件</summary><p><b>Harvey 2017</b><br>连续测站与事后洪痕、最大范围丰富；当前只导入一个测站与现代地形概览。</p><a href="https://www.usgs.gov/centers/oklahoma-texas-water-science-center/science/post-hurricane-harvey-assessment" target="_blank" rel="noreferrer">USGS 事件资料 ↗</a><p><b>Ahr 2021</b><br>有10米DEM、建筑、分类糙率；实测水位在测站损毁时中断，后段为预测／重建，最大水深为模型输出。尚未导入。</p><a href="https://doi.org/10.5880/GFZ.4.4.2021.005" target="_blank" rel="noreferrer">GFZ 数据包 ↗</a></details>
+ <p class="eyebrow separated">02 / 空间方案</p>
+ <p class="help">2公里救援概览保留，先用小窗口检查接口与耗时。最终水动力域须有真实边界，不能把独立小图直接拼接。下列方案只估算规模。</p>
+ <label class="field">局部工作区边长<select id="width"><option value="256" selected>256 米</option><option value="512">512 米</option><option value="1000">1 千米</option><option value="2000">2 千米</option></select></label>
+ <label class="field">候选计算格宽<select id="cell"><option value="1" selected>1 米</option><option value="2">2 米</option><option value="4">4 米</option></select></label>
+ <div id="scale" class="metric"></div><p class="help">四个单精度字段的内存仅作存储参考，求解器总内存和耗时需另测。10米概览不能补出1米地形。</p>
+ <p class="eyebrow separated">03 / 时间规则</p>
+ <label class="field">假设送达延迟<select id="latency"><option value="60">60 秒（工程假设）</option><option value="0">0 秒（理想送达）</option><option value="900">15 分钟（敏感性）</option><option value="3600">1 小时（敏感性）</option></select></label>
+ <p class="help">实际发布时间未知。归档数据可能已经修订，不能等同于当年的实时初报。超过30分钟的最近记录标为陈旧。</p>
+</aside>
+<section class="workspace">
+ <div class="map-bar"><div><p class="eyebrow">OBSERVED EVENT / 观测回放</p><h2 id="title">正在读取事件…</h2></div><span id="status" role="status">加载中</span></div>
+ <div class="notice">当前已有：地形概览 + 测站水位过程。全域逐时淹没、水深和流速仍为未知。</div>
+ <div class="cards"><div><small>回放时刻 · UTC</small><strong id="clock">—</strong><span id="local">—</span></div><div><small>最近送达的相对水尺水位</small><strong id="reading">—</strong><span id="age">—</span></div><div><small>当前可用记录</small><strong id="count">—</strong><span>按观测与送达时刻共同筛选</span></div></div>
+ <div class="view-grid">
+  <div class="panel"><div class="panel-title"><h3>真实地形概览</h3><span>2 km × 2 km / 北向上</span></div><canvas id="map" width="600" height="600" aria-label="地形概览、测站与局部工作区"></canvas><div class="legend"><span>● 测站点位</span><span>□ 候选精细工作区</span><span>灰色斜线：水情未知</span></div><p class="help" id="terrain-note"></p></div>
+  <div class="panel"><div class="panel-title"><h3>测站水位过程</h3><span>相对水尺 / m</span></div><canvas id="chart" width="660" height="420" aria-label="截至当前已送达的水位记录，未来数据隐藏"></canvas><p class="help">只绘制已经送达的记录；原始采样点之间不生成额外观测。缺测与超过原生间隔的断档不连线。</p><div class="truth-note"><b>水位 ≠ 地表水深</b><p>保留站点测量的空间位置。水尺零点与DEM垂直基准核验前，不把站点水位减去地面高程，也不向全图扩散。</p></div><div id="quality" class="help"></div></div>
+ </div>
+ <div class="timeline panel"><div class="play-controls"><button id="play" class="primary">播放</button><button id="step">前进15分钟</button><select id="speed" aria-label="播放速度"><option value="3600">1 秒播放1小时</option><option value="21600">1 秒播放6小时</option></select><span>时钟步长1分钟；求解器时间步保持原设计</span></div><label for="time">事件时间</label><input id="time" type="range" min="0" max="11520" value="4320" step="1"><div class="endpoints"><span>2017-08-25 00:00 UTC</span><span>2017-09-02 00:00 UTC</span></div></div>
+ <details class="panel evidence"><summary>数据来源、当前缺口与计算前提</summary><ul id="limits"></ul><p>Harvey还存在NASA/JPL不同日期的SAR洪水代理图，属于待核查的多时相观测路线；尚未确认此处覆盖与可用科学产品，未导入。</p><p>地形来自 USGS 3DEP 多分辨率服务，10米是本次导出格距，原始精度与年代仍需逐幅核验。没有2017年建筑、河床、糙率和边界条件，当前档案不具备真实事件求解条件。</p><p>下一步需先匹配同一区域的带时间淹没观测、历史地形／障碍和来水边界；局部裁剪区的水力边界需要更大范围模型或观测供给。</p><div id="sources"></div></details>
+</section>
+</main><script type="module" src="/app.mjs"></script>
+</html>

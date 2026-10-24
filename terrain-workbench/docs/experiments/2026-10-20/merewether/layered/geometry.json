@@ -1,0 +1,130 @@
+{
+  "extraction": {
+    "method": "merewether-dem-plateau-and-narrow-feature-v1",
+    "source_kind": "inferred_from_combined_dem_not_surveyed_footprints",
+    "plateau_m": 30.0,
+    "opening_window_native_cells": 9,
+    "minimum_residual_m": 0.75,
+    "plateau_halo_native_cells": 2,
+    "ground_estimation": "nearest known unmasked ground; unchanged outside extracted footprint",
+    "obstacle_behavior": "impermeable and assumed unsubmerged as in experiment setup",
+    "semantic_classes": "obstacle only; walls, piers and buildings not automatically distinguished",
+    "inferred_ground_cells": 192314,
+    "ground_under_obstacles_measured": false,
+    "observations_used_for_extraction": false
+  },
+  "grids": {
+    "1": {
+      "method": "known-fluid-ground-mean + majority solid + minimum component footprint",
+      "factor": 1,
+      "padded_north_cells": 0,
+      "padded_east_cells": 0,
+      "native_obstacle_cells": 192314,
+      "native_components": 193,
+      "minimum_component_cells_added": 0,
+      "native_obstacle_area_m2": 5889.616249999999,
+      "projected_obstacle_area_m2": 5889.616249999999,
+      "extra_blocked_native_area_m2": 0.0,
+      "lost_obstacle_native_area_m2": 0.0,
+      "partial_coverage_cells": 0,
+      "partial_coverage_used_by_solver": false,
+      "resolution_status": "native footprint",
+      "coarse_components": 193,
+      "vanished_native_components": [],
+      "split_native_components": [],
+      "native_inlet_connected_points": 44,
+      "coarse_inlet_connected_points": 44,
+      "newly_disconnected_points": [],
+      "note": "2D obstacle-only topology; no water level, capacity or velocity implication"
+    },
+    "2": {
+      "method": "known-fluid-ground-mean + majority solid + minimum component footprint",
+      "factor": 2,
+      "padded_north_cells": 1,
+      "padded_east_cells": 0,
+      "native_obstacle_cells": 192314,
+      "native_components": 193,
+      "minimum_component_cells_added": 2,
+      "native_obstacle_area_m2": 5889.616249999999,
+      "projected_obstacle_area_m2": 6115.812499999999,
+      "extra_blocked_native_area_m2": 253.14624999999998,
+      "lost_obstacle_native_area_m2": 26.949999999999996,
+      "partial_coverage_cells": 5426,
+      "partial_coverage_used_by_solver": false,
+      "resolution_status": "coarse whole-cell approximation; inspect lost footprint and channels",
+      "coarse_components": 183,
+      "vanished_native_components": [],
+      "split_native_components": [],
+      "native_inlet_connected_points": 44,
+      "coarse_inlet_connected_points": 43,
+      "newly_disconnected_points": [
+        "P2"
+      ],
+      "note": "2D obstacle-only topology; no water level, capacity or velocity implication"
+    },
+    "4": {
+      "method": "known-fluid-ground-mean + majority solid + minimum component footprint",
+      "factor": 4,
+      "padded_north_cells": 3,
+      "padded_east_cells": 0,
+      "native_obstacle_cells": 192314,
+      "native_components": 193,
+      "minimum_component_cells_added": 61,
+      "native_obstacle_area_m2": 5889.616249999999,
+      "projected_obstacle_area_m2": 5993.679999999999,
+      "extra_blocked_native_area_m2": 304.9025,
+      "lost_obstacle_native_area_m2": 200.83874999999998,
+      "partial_coverage_cells": 3991,
+      "partial_coverage_used_by_solver": false,
+      "resolution_status": "coarse whole-cell approximation; inspect lost footprint and channels",
+      "coarse_components": 175,
+      "vanished_native_components": [],
+      "split_native_components": [
+        40,
+        174
+      ],
+      "native_inlet_connected_points": 44,
+      "coarse_inlet_connected_points": 44,
+      "newly_disconnected_points": [],
+      "note": "2D obstacle-only topology; no water level, capacity or velocity implication"
+    },
+    "8": {
+      "method": "known-fluid-ground-mean + majority solid + minimum component footprint",
+      "factor": 8,
+      "padded_north_cells": 3,
+      "padded_east_cells": 0,
+      "native_obstacle_cells": 192314,
+      "native_components": 193,
+      "minimum_component_cells_added": 122,
+      "native_obstacle_area_m2": 5889.616249999999,
+      "projected_obstacle_area_m2": 6099.5199999999995,
+      "extra_blocked_native_area_m2": 633.1412499999999,
+      "lost_obstacle_native_area_m2": 423.23749999999995,
+      "partial_coverage_cells": 2198,
+      "partial_coverage_used_by_solver": false,
+      "resolution_status": "coarse whole-cell approximation; inspect lost footprint and channels",
+      "coarse_components": 118,
+      "vanished_native_components": [],
+      "split_native_components": [
+        133,
+        171
+      ],
+      "native_inlet_connected_points": 44,
+      "coarse_inlet_connected_points": 42,
+      "newly_disconnected_points": [
+        "P2",
+        "P3"
+      ],
+      "note": "2D obstacle-only topology; no water level, capacity or velocity implication"
+    }
+  },
+  "checks": {
+    "factor1_all_components_represented": true,
+    "factor2_all_components_represented": true,
+    "factor4_all_components_represented": true,
+    "factor8_all_components_represented": true,
+    "known_ground_bitwise_unchanged": true,
+    "native_footprint_identity": true,
+    "finite_ground": true
+  }
+}

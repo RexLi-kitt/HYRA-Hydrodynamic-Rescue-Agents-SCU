@@ -1,0 +1,18 @@
+{
+  "record": "https://zenodo.org/records/6914888",
+  "doi": "10.5281/zenodo.6914888",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "package_md5": "56f0861641cc52007924c599dbae211c",
+  "paper": "https://doi.org/10.1061/JHEND8.HYENG-13244",
+  "files": {
+    "merewether-0p175m.dem": "611fecca3c901109bd6df218e44508cb474a1878e5e123d1c730308de38a5810",
+    "merewether-0p175m.par": "0123687e5585b20dfc2d8610c4674aa682a80213e5c8199011dd57da1c5c8ae7",
+    "merewether.bci": "59572fa8de0271c5aa18b3169eb6ac7d459df62e8c2b53da12982fa92cda2d1d",
+    "merewether.stage": "22e5e3938bc09bcc76948149845d464276acd141748978e6a8ad223338e27108",
+    "Location_of_velocity_sampling_points.csv": "6cb88ba6abf96444dfe570ecfd552f5b4e3f9740d2e125527397c4668d7a905b"
+  },
+  "observation_kind": "maximum velocity measurements from physical model, rescaled to prototype",
+  "missing": "Four water-stage locations are supplied, but measured water-level values are not in this bundle"
+}

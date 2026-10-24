@@ -1,0 +1,117 @@
+{
+  "schema": "hyra-dem-observation-alignment-v1",
+  "target_crs_wkt": "PROJCS[\"Azimuthal_Equidistant\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",47],PARAMETER[\"longitude_of_center\",94],PARAMETER[\"false_easting\",4340913.84808],PARAMETER[\"false_northing\",4812712.92347],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "target_transform": [
+    20.0,
+    0.0,
+    1720000.0,
+    0.0,
+    -20.0,
+    2753600.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "shape": [
+    2000,
+    2000
+  ],
+  "width_m": 40000,
+  "cell_m": 20,
+  "bounds_wgs84": [
+    68.35817393904681,
+    24.647296477486204,
+    68.82447348826372,
+    25.089644560306066
+  ],
+  "vertical_datum": "EGM2008",
+  "vertical_unit": "m",
+  "source_nominal_spacing": "1 arcsecond (approximately 30 m); export 20 m is upsampling",
+  "source_acquisition": "Copernicus source primarily 2011-2015; exact per-pixel acquisition date not established; FABDEM v1.2 is a later processed derivative, not a 2022 survey",
+  "resampling": {
+    "dem": "bilinear",
+    "flood": "native integer crop; no interpolation"
+  },
+  "dems": {
+    "fabdem": {
+      "file": "fabdem-40km-equi7-20m.tif",
+      "bytes": 9186126,
+      "sha256": "538596305beb29eaba5563eded8c927296592847442ed31653439766a0eff27d",
+      "native_file": "fabdem-40km-wgs84-native.tif",
+      "native_shape": [
+        1600,
+        1686
+      ],
+      "valid_pixels": 4000000,
+      "min_m": 1.394223928451538,
+      "max_m": 22.16908073425293,
+      "percentiles_m": [
+        7.9420353794097895,
+        11.648858070373535,
+        16.467369174957273
+      ],
+      "sources": [
+        {
+          "file": "N24E068_FABDEM_V1-2.tif",
+          "sha256": "dc46e4b78931224a9de391fcbe6f07b401df316c3b5e635e5633159e709710c8"
+        },
+        {
+          "file": "N25E068_FABDEM_V1-2.tif",
+          "sha256": "4b6f09511834be5000f41f386efd07ae97c8515381123434ceb42c85905efbec"
+        }
+      ]
+    }
+  },
+  "floods": [
+    {
+      "file": "flood-20220818-40km-20m.tif",
+      "source_file": "FLOOD-HM-MASKED_20220818T012615__VV_D078_E015N027T3_AS020M_V0M2R3_S1_TUWIEN.tif",
+      "bytes": 556886,
+      "sha256": "6d1c8921d0d5696406d647cf537faa93d26ded9e8e47ef355629b80c7ef54e05",
+      "valid_pixels": 2336816,
+      "flood_pixels": 862885
+    },
+    {
+      "file": "flood-20220830-40km-20m.tif",
+      "source_file": "FLOOD-HM-MASKED_20220830T012616__VV_D078_E015N027T3_AS020M_V0M2R3_S1_TUWIEN.tif",
+      "bytes": 465308,
+      "sha256": "acec45e846fa2d3b4b6d5d09e11fe31e58496655dc09cfbdcf1931de52c68683",
+      "valid_pixels": 2533574,
+      "flood_pixels": 409451
+    },
+    {
+      "file": "flood-20220923-40km-20m.tif",
+      "source_file": "FLOOD-HM-MASKED_20220923T012616__VV_D078_E015N027T3_AS020M_V0M2R3_S1_TUWIEN.tif",
+      "bytes": 341360,
+      "sha256": "e16f9be9cc9dc2cd487ddce52d28a829711bc7d274deb15b2a3537f830fb5fd1",
+      "valid_pixels": 2694785,
+      "flood_pixels": 29437
+    }
+  ],
+  "source_provenance": [
+    {
+      "dataset": "FABDEM v1.2",
+      "original_publisher": "University of Bristol",
+      "download_host": "Fondazione LINKS public COG mirror",
+      "url": "https://huggingface.co/buckets/links-ads/fabdem/resolve/tiles/N20E060-N30E070_FABDEM_V1-2/N24E068_FABDEM_V1-2.tif",
+      "file": "N24E068_FABDEM_V1-2.tif",
+      "bytes": 16322047,
+      "sha256": "dc46e4b78931224a9de391fcbe6f07b401df316c3b5e635e5633159e709710c8",
+      "metadata_datetime_is_acquisition": false,
+      "metadata_datetime": "2025-09-11T22:10:38.415478Z",
+      "original_dataset_url": "https://data.bris.ac.uk/data/dataset/s5hqmjcdj8yo2ibzi9b4ew3sn"
+    },
+    {
+      "dataset": "FABDEM v1.2",
+      "original_publisher": "University of Bristol",
+      "download_host": "Fondazione LINKS public COG mirror",
+      "url": "https://huggingface.co/buckets/links-ads/fabdem/resolve/tiles/N20E060-N30E070_FABDEM_V1-2/N25E068_FABDEM_V1-2.tif",
+      "file": "N25E068_FABDEM_V1-2.tif",
+      "bytes": 23900524,
+      "sha256": "4b6f09511834be5000f41f386efd07ae97c8515381123434ceb42c85905efbec",
+      "metadata_datetime_is_acquisition": false,
+      "metadata_datetime": "2025-09-11T22:10:38.175547Z",
+      "original_dataset_url": "https://data.bris.ac.uk/data/dataset/s5hqmjcdj8yo2ibzi9b4ew3sn"
+    }
+  ]
+}

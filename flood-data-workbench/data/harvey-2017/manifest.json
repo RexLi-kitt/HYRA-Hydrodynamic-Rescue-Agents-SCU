@@ -1,0 +1,140 @@
+{
+  "schema": "hyra-observed-event-v1",
+  "id": "harvey-2017",
+  "title": "Harvey 2017 · Brays Bayou",
+  "subtitle": "Houston，USGS 08075000；真实水位点记录与独立地形概览",
+  "start_utc": "2017-08-25T00:00:00Z",
+  "end_utc": "2017-09-02T00:00:00Z",
+  "display_timezone": "America/Chicago",
+  "station": {
+    "id": "USGS-08075000",
+    "name": "Brays Bayou at Houston, TX",
+    "coordinates": [
+      -95.4121619737647,
+      29.6971746884659
+    ],
+    "crs": "EPSG:4326",
+    "variable": "gauge_height",
+    "datum": "gauge_relative_unresolved",
+    "unit": "m"
+  },
+  "counts": {
+    "total": 769,
+    "valid": 769
+  },
+  "interval_histogram_s": {
+    "900.0": 768
+  },
+  "replay_policy": {
+    "assumed_latency_s": 60,
+    "max_age_s": 1800
+  },
+  "provenance": [
+    {
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items?f=json&monitoring_location_id=USGS-08075000&parameter_code=00065&datetime=2017-08-25T00%3A00%3A00Z%2F2017-09-02T00%3A00%3A00Z&limit=10000",
+      "raw_file": ".runtime/harvey-2017/gauge-00.json",
+      "sha256": "51b412f2c79ffb63de07fa6c829aa9f51e21a59c863d3e52dd20c4828adf06ac",
+      "bytes": 546914
+    }
+  ],
+  "ingested_at_utc": "2026-10-20T15:49:28.663361Z",
+  "limitations": [
+    "归档审定版数据，不等于当年实时初报。",
+    "真实送达时间未知；默认60秒延迟仅是可调整的工程假设。",
+    "相对水尺的水位不是地面水深；尚未核验2017年的水尺基准变更。",
+    "一个测站不提供全域淹没范围、水深或流速；最大淹没图尚未匹配此工作区。"
+  ],
+  "capabilities": {
+    "gauge_series": true,
+    "terrain_overview": true,
+    "time_varying_extent": false,
+    "measured_depth": false,
+    "measured_velocity": false,
+    "solver_ready": false
+  },
+  "sources": [
+    {
+      "title": "USGS 连续监测接口",
+      "url": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/continuous/items"
+    },
+    {
+      "title": "Harvey 官方事件资料",
+      "url": "https://www.usgs.gov/centers/oklahoma-texas-water-science-center/science/post-hurricane-harvey-assessment"
+    }
+  ],
+  "terrain": {
+    "grid": {
+      "crs": "EPSG:32615",
+      "west_m": 265610.0,
+      "north_m": 3288660.0,
+      "cell_m": 10,
+      "rows": 200,
+      "cols": 200,
+      "axis_order": "north-up; [row=z, column=x]",
+      "station_east_m": 266614.1091881449,
+      "station_north_m": 3287665.412934187
+    },
+    "station_cell": [
+      99,
+      100
+    ],
+    "unit": "m",
+    "source_kind": "bare_earth_dem_service_export",
+    "source_resolution_m": null,
+    "export_spacing_m": 10,
+    "vertical_datum": "not_verified",
+    "acquisition_date": "not_verified_for_2017",
+    "event_compatible": false,
+    "service_description": "The USGS 3D Elevation Program (3DEP) Bare Earth DEM Dynamic service is based on multi-resolution USGS DEM sources and provides dynamic functions for visualization. These functions include: Hillshade, Aspect Map, Hillshade Stretched, Multi-directional Hillshade, Slope Map, Elevation Tinted Hillshade, Contour. In addition the OGC Web Map Service (WMS) and Web Coverage Service (WCS) interfaces are enabled. Data available in this map service reflects all 3DEP DEM data published as of September 28, 2026.",
+    "warning": "现代3DEP地形的10米概览采样；采集年份与垂直基准未逐幅核验，不是2017年地形或1米计算地形。",
+    "provenance": [
+      {
+        "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?f=image&bbox=265610%2C3286660%2C267610%2C3288660&bboxSR=32615&imageSR=32615&size=200%2C200&format=tiff&pixelType=F32&interpolation=RSP_NearestNeighbor&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D",
+        "raw_file": ".runtime/harvey-2017/overview.tif",
+        "sha256": "0ef1e9d70583662c6ba8777c29aa6a121238d17c2cec6889a8aa0348235894a5",
+        "bytes": 263296
+      },
+      {
+        "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer?f=pjson",
+        "raw_file": ".runtime/harvey-2017/elevation-service.json",
+        "sha256": "74b4d74deceb9fc1728945ec27cec809bdcb7427e1949ed80c48a9bf60c0e777",
+        "bytes": 12988
+      }
+    ],
+    "fields": {
+      "elevation": {
+        "url": "/data/harvey-2017/elevation.f32",
+        "dtype": "<f4",
+        "shape": [
+          200,
+          200
+        ]
+      },
+      "valid": {
+        "url": "/data/harvey-2017/elevation-valid.u8",
+        "dtype": "|u1",
+        "shape": [
+          200,
+          200
+        ]
+      }
+    },
+    "valid_cells": 40000,
+    "min_m": 4.34847927,
+    "max_m": 16.4553661
+  },
+  "artifacts": {
+    "observations.json": {
+      "bytes": 559627,
+      "sha256": "b32e51b970deb676cd118ef71137e2ac0bc61876fbedd0ce8e683f78df1f2277"
+    },
+    "elevation.f32": {
+      "bytes": 160000,
+      "sha256": "d68638acbad8af24aef1620c4a0ad7878d180a88f14eb20b5b82cf60ee61a4b4"
+    },
+    "elevation-valid.u8": {
+      "bytes": 40000,
+      "sha256": "fb67091504b666f393f1530f351a3fa5ae5168228b9aa06dcce5835be0402356"
+    }
+  }
+}

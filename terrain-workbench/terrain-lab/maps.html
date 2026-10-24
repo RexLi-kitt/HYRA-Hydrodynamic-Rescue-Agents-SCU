@@ -11,7 +11,7 @@
 <div class="pair"><label>降雨（mm/h）<input id="mapRain" type="number" min="0" max="1000" value="60"></label><label>入渗（mm/h）<input id="mapInfiltration" type="number" min="0" max="500" value="1"></label></div>
 <label class="field">边界<select id="mapBoundary"><option value="ocean" selected>海平面双向交换</option><option value="open">自由出流</option><option value="closed">封闭边界</option></select></label>
 <label class="field">糙率分配<select id="mapRoughnessMode"><option value="landcover" selected>按地表、群系与植被自动赋值</option><option value="uniform">统一糙率（对照）</option></select></label>
-<label class="field">统一／未知地表糙率 n<input id="mapManning" type="number" min="0.01" max="0.2" step="0.005" value="0.035"></label>
+<label class="field">统一／未知地表糙率 n<input id="mapManning" type="number" min="0.01" max="0.2" step="0.001" value="0.035"></label>
 <p id="roughnessInfo" class="hint">完整地表使用材质、群系及植被覆盖；快速预览使用地形类别。手动糙率编辑与导入数组优先。</p>
 <label class="check"><input id="mapInitialWater" type="checkbox" checked> 使用初始水体</label>
 <label class="check"><input id="mapBaseflow" type="checkbox" checked> 持续补给河流日常基流</label>
@@ -88,4 +88,4 @@
 </details><div class="result-metrics"><div><span>当前最大水深</span><strong id="metricDepth">—</strong></div><div><span>当前最大流速</span><strong id="metricSpeed">—</strong></div><div><span>当前有水面积</span><strong id="metricArea">—</strong></div><div><span>计算网格</span><strong id="metricGrid">—</strong></div></div><details class="map-legend"><summary>图例与标记说明</summary><p class="legend">河口编号与左侧列表对应：<b class="port-in">蓝色「入」：推断入口</b> · <b class="port-out">橙色「出」：推断出口</b> · 灰色「?」：待确认 · <b class="port-active">紫色「来」：启用的外源来水</b>。实箭头为配置的河道切线或自定义动量方向，候选虚线箭头为地形推断；候选点仅在固定地图显示。↑ −Z · → +X · ↓ +Z。深灰：建筑 · 黑线：墙 · 青色：排水口 · 绿色：变化水源 · 金色：所选格 · 彩色圆点：受困人员（孤立人员为灰蓝） · 绿色菱形「起」：救援起点。水深低于0.01米显示地形底色；流速色标仅作用于有水区域。</p>
 </details><p class="detail" id="mapCellDetail" aria-live="polite">点击地图查看该位置的各层数据。</p>
 <details><summary>水量收支与场景信息</summary><p id="mapBalance">尚未开始洪水计算。</p><p id="scenarioInfo"></p></details>
-</section></main><script type="module" src="maps.js?v=33"></script></body></html>
+</section></main><script type="module" src="maps.js?v=35"></script></body></html>

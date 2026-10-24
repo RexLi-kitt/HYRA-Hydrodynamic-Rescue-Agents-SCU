@@ -132,6 +132,9 @@ def preset_for(config):
 
 def describe(relative):
     folder = ROOT / relative
+    if (folder/'imported.json').is_file():
+        import raster_import
+        return raster_import.describe(ROOT,relative)
     grid = json.loads((folder / 'grid.json').read_text())
     result = dict(id=relative, shape=grid['shape'], origin=grid['origin_blocks'], step=grid['step_blocks'],
         scale=grid['terrain_scale_factor'], sea_level=grid['sea_level_blocks'], terrain_ids=grid['fields']['terrain']['values'],

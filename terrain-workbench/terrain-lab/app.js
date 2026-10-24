@@ -49,11 +49,11 @@ function notify(text, error = false) { $('status').textContent = text; $('status
 async function json(url, options) { const r = await fetch(url, options); const j = await r.json(); if (!r.ok) throw new Error(j.error || '读取失败'); return j; }
 async function loadMap(result) {
  const next = {};
- const needed = new Set(result.full ? ['ground_height','ground_block_id','biome_id','water_surface','water_depth'] : ['height','terrain','riverWaterLevel']);
+ const needed = new Set(result.imported ? ['ground_height','water_surface','solid','obstacle_fraction'] : result.full ? ['ground_height','ground_block_id','biome_id','water_surface','water_depth'] : ['height','terrain','riverWaterLevel']);
  await Promise.all(Object.entries(result.fields).filter(([name])=>needed.has(name)).map(async ([name, f]) => {
   const r = await fetch(f.url); if (!r.ok) throw new Error(`读取 ${name} 失败`);
   const b = await r.arrayBuffer();
-  const a = f.dtype === '<f4' ? new Float32Array(b) : new Int32Array(b);
+  const a = f.dtype === '<f8' ? new Float64Array(b) : f.dtype === '<f4' ? new Float32Array(b) : f.dtype === '|u1' ? new Uint8Array(b) : new Int32Array(b);
   if (a.length !== result.shape[0] * result.shape[1]) throw new Error('地图数据不完整');
   next[name] = a;
  }));
@@ -64,17 +64,20 @@ async function loadMap(result) {
  map.biomeNames = Object.fromEntries(Object.entries(map.biome_ids).map(([n,i]) => [i,n]));
  const [nz,nx] = map.shape;
  $('mapInfo').textContent = `${nx} × ${nz} 格 · 每格 ${map.step} 方块 · 覆盖 ${nx*map.step} × ${nz*map.step} 方块${map.step!==1?'（旧地图，重新生成可使用每方块一格）':''} · ${map.full ? '完整地表' : '地形预览'} · 种子 ${map.config.seed}`;
+ if(map.imported)$('mapInfo').textContent=`导入实验地形 · ${nx} × ${nz} 格 · 每格 ${map.step} 米 · 高程保留来源基准`;
  const profile=map.terrain_profile;
- $('mapTitle').textContent = profile?.accepted ? `${profile.label}地图` : '当前地形';
+ $('mapTitle').textContent = map.imported ? (map.imported.name||'导入地形') : profile?.accepted ? `${profile.label}地图` : '当前地形';
  $('terrainProfile').textContent = profile?.accepted ? `已通过${profile.label}检查 · 陆地 ${(profile.metrics.land_fraction*100).toFixed(0)}% · 陆地起伏 ${profile.metrics.land_relief_m.toFixed(1)} m${profile.terrain_mode==='water_network'?` · 河流水面 ${(profile.metrics.wet_river_fraction*100).toFixed(1)}%${Number.isFinite(profile.metrics.river_length_density_km_per_km2)?` · 河道密度 ${profile.metrics.river_length_density_km_per_km2.toFixed(2)} km/km²`:''}`:''} · 区域起点 (${map.origin.join(', ')}) · 检查了 ${profile.candidates_checked} 个区域` : '';
  for (const b of document.querySelectorAll('[data-layer]')) {
-  b.disabled = !map.full && ['material','biome'].includes(b.dataset.layer);
-  b.title = b.disabled ? '完整生成地表后可查看' : '';
+  if(b.dataset.layer==='obstacle')b.hidden=!arrays.solid;
+  b.disabled = (!map.full||map.imported) && ['material','biome'].includes(b.dataset.layer);
+  b.title = b.disabled ? (map.imported?'导入数据未提供该图层':'完整生成地表后可查看') : '';
  }
- if (!map.full && ['material','biome'].includes(layer)) setLayer('height'); else draw();
+ if (((!map.full||map.imported) && ['material','biome'].includes(layer)) || (layer==='obstacle'&&!arrays.solid)) setLayer('height'); else draw();
  $('cellDetail').textContent = '移动鼠标或点击网格，查看高程和地表信息。';
  const ports=map.river_inlets?.crossings||[];
  $('inletSummary').textContent=`河道边界：${ports.filter(p=>p.role==='inlet').length} 个推断入口、${ports.filter(p=>p.role==='outlet').length} 个推断出口、${ports.filter(p=>p.role==='uncertain').length} 个待确认交点。${map.river_inlets?.message||''} 外源来水可进入多层地图配置。`;
+ if(map.imported){$('inletSummary').textContent=`导入实验：${ports.length} 个指定来水口，出口与封闭边界使用实验配置；没有自然河网分类。`;return;}
  const network=map.river_network;
  $('inletSummary').textContent+=network?` 河网生成检查：${network.status==='no_river'?'无河流，不适用':`RivGraph · ${network.components_four} 个连通分区 · ${network.links} 条骨架河段`}。${(network.warnings||[]).join('；')}`:' 此历史地图尚无 RivGraph 生成检查记录。';
 }
@@ -85,6 +88,7 @@ function wet(i) {
  return name.includes('ocean') || height(i) < map.sea_level || ['river','lake','wetland'].includes(name) && height(i) < arrays.riverWaterLevel[i] * map.scale;
 }
 function ocean(i) {
+ if(map.imported)return false;
  if (map.full) return (map.biomeNames[arrays.biome_id[i]] || '').includes('ocean');
  return (map.terrain_ids[arrays.terrain[i]] || '').includes('ocean');
 }
@@ -101,7 +105,8 @@ function draw() {
  const image = new ImageData(nx,nz);
  for(let i=0;i<n;i++) {
   const x=i%nx,z=Math.floor(i/nx), h=height(i); let rgb;
-  if(layer==='material') rgb=hex(materialColors[materialClass(map.blockNames[arrays.ground_block_id[i]])]);
+  if(layer==='obstacle') rgb=arrays.solid[i]?[31,43,44]:[229,236,232];
+  else if(layer==='material') rgb=hex(materialColors[materialClass(map.blockNames[arrays.ground_block_id[i]])]);
   else if(layer==='biome') rgb=hex(biomeStyle(map.biomeNames[arrays.biome_id[i]])[1]);
   else {
    rgb=layer==='water'?[206,219,193]:ramp((h-min)/Math.max(1,max-min));
@@ -117,14 +122,15 @@ function draw() {
  ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(buffer,0,0,canvas.width,canvas.height);
  drawRiverPorts();
  const legend=$('legend');legend.replaceChildren();
- if(layer==='material') materialLabels.forEach((s,i)=>legend.append(swatch(s,materialColors[i])));
+ if(layer==='obstacle')legend.append(swatch('阻水占地（当前计算格）','#1f2b2c'),swatch('可通水地面','#e5ece8'));
+ else if(layer==='material') materialLabels.forEach((s,i)=>legend.append(swatch(s,materialColors[i])));
  else if(layer==='biome') Object.values(map.biomeNames).forEach(n=>{const[s,c]=biomeStyle(n);legend.append(swatch(s,c));});
  else {
-  if(layer==='height'){const a=document.createElement('span');a.textContent=`当前范围 ${min.toFixed(1)}`;const r=document.createElement('span');r.className='color-ramp';const b=document.createElement('span');b.textContent=`${max.toFixed(1)} 高程 / 方块单位`;legend.append(a,r,b);}
+  if(layer==='height'){const a=document.createElement('span');a.textContent=`当前范围 ${min.toFixed(1)}`;const r=document.createElement('span');r.className='color-ramp';const b=document.createElement('span');b.textContent=`${max.toFixed(1)} 高程 / ${map.imported?"米":"方块单位"}`;legend.append(a,r,b);}
   legend.append(swatch('河流与湖泊','#4ab1d0'),swatch('海洋','#2b75a6'));
  }
  legend.append(swatch('推断河流入口','#913db5'),swatch('推断出口／待确认','#777e87'));
- canvas.setAttribute('aria-label',`${{height:'地形高程',water:'水系',material:'地表类型',biome:'群系'}[layer]}，${nx}乘${nz}网格，最低高程${min.toFixed(1)}，最高${max.toFixed(1)}`);
+ canvas.setAttribute('aria-label',`${{height:'地形高程',water:'水系',material:'地表类型',biome:'群系',obstacle:'阻水占地'}[layer]}，${nx}乘${nz}网格，最低高程${min.toFixed(1)}，最高${max.toFixed(1)}`);
 }
 function drawRiverPorts(){
  const [nz,nx]=map.shape;
@@ -143,8 +149,11 @@ function inspectCell(event) {
  const x=Math.min(nx-1,Math.max(0,Math.floor((event.clientX-r.left)/r.width*nx)));
  const z=Math.min(nz-1,Math.max(0,Math.floor((event.clientY-r.top)/r.height*nz))),i=z*nx+x;
  let text=`格 (${x}, ${z}) · 高程 ${height(i).toFixed(1)}`;
- if(map.full){const bn=map.blockNames[arrays.ground_block_id[i]];text+=` · ${blockNames[short(bn)]||short(bn)} · ${biomeStyle(map.biomeNames[arrays.biome_id[i]])[0]}`;if(wet(i))text+=` · 水深 ${arrays.water_depth[i].toFixed(1)}`;}
+ if(map.imported)text=`格 (${x}, ${z}) · 高程 ${height(i).toFixed(3)} 米 · 导入实验地形`;
+ else if(map.full){const bn=map.blockNames[arrays.ground_block_id[i]];text+=` · ${blockNames[short(bn)]||short(bn)} · ${biomeStyle(map.biomeNames[arrays.biome_id[i]])[0]}`;if(wet(i))text+=` · 水深 ${arrays.water_depth[i].toFixed(1)}`;}
  else text+=` · ${map.terrain_ids[arrays.terrain[i]] || ''}`;
+ if(arrays.solid)text+=` · ${arrays.solid[i]?'阻水占地':'可通水地面'}`;
+ if(arrays.obstacle_fraction)text+=` · 原始障碍覆盖 ${(arrays.obstacle_fraction[i]*100).toFixed(1)}%（计算按整格）`;
  const port=(map.river_inlets?.crossings||[]).find(p=>Math.abs(p.x-x)<=2&&Math.abs(p.z-z)<=2);if(port)text+=` · ${port.id} · ${{inlet:'推断入口',outlet:'推断出口',uncertain:'方向待确认'}[port.role]}`;
  $('cellDetail').textContent=text;
 }
@@ -186,6 +195,6 @@ $('rich').addEventListener('click',()=>{const current=getConfig();applyConfig({.
 $('original').addEventListener('click',()=>{const current=getConfig();applyConfig({...defaults,seed:current.seed,origin_x:current.origin_x,origin_z:current.origin_z,span:current.span,mode:current.mode,vertical_scale:1,continent_scale:3000,region_size:1200,river_count:8,main_width:8,branch_width:5,river_depth:5,main_bank_width:20,branch_bank_width:14,branch_depth:4,lake_chance:0.3,wetland_chance:0.6,lake_distance:0.03});$('original').classList.add('active');$('rich').classList.remove('active');notify('已载入原始参数，点击“生成地图”应用。');});
 document.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>setLayer(b.dataset.layer)));
 canvas.addEventListener('pointermove',inspectCell);canvas.addEventListener('click',inspectCell);
-$('exportPng').addEventListener('click',()=>{if(!map)return;$('previewImage').src=canvas.toDataURL('image/png');$('imageTitle').textContent=`${{height:'地形高程',water:'水系',material:'地表类型',biome:'群系'}[layer]} · 种子 ${map.config.seed}`;$('imagePreview').showModal();});
+$('exportPng').addEventListener('click',()=>{if(!map)return;$('previewImage').src=canvas.toDataURL('image/png');$('imageTitle').textContent=`${{height:'地形高程',water:'水系',material:'地表类型',biome:'群系',obstacle:'阻水占地'}[layer]} · ${map.imported?'导入实验地形':'种子 '+map.config.seed}`;$('imagePreview').showModal();});
 $('closePreview').addEventListener('click',()=>$('imagePreview').close());
-(async()=>{for(const el of form.querySelectorAll('button,input,select'))el.disabled=true;try{const cfg=await json('/api/config');defaults=cfg.defaults;terrainProfiles=cfg.terrain_profiles||{};applyConfig(defaults);const example=new URLSearchParams(location.search).get('example')==='rich';const current=await json(example?'/rich-result.json':'/api/current');applyConfig({...current.config,mode:'quick'});await loadMap(current);}catch(error){notify(`读取地图失败：${error.message}`,true);}finally{for(const el of form.querySelectorAll('button,input,select'))el.disabled=false;}})();
+(async()=>{for(const el of form.querySelectorAll('button,input,select'))el.disabled=true;try{const cfg=await json('/api/config');defaults=cfg.defaults;terrainProfiles=cfg.terrain_profiles||{};applyConfig(defaults);const example=new URLSearchParams(location.search).get('example')==='rich';const current=await json(example?'/rich-result.json':'/api/current');if(!current.imported)applyConfig({...current.config,mode:'quick'});await loadMap(current);}catch(error){notify(`读取地图失败：${error.message}`,true);}finally{for(const el of form.querySelectorAll('button,input,select'))el.disabled=false;}})();

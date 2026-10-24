@@ -1,0 +1,440 @@
+{
+  "date": "2026-10-24",
+  "results": {
+    "stepwise": {
+      "case": "EA Test 4, paper benchmark, flat 1000x2000m floodplain",
+      "complete": true,
+      "duration_s": 18000,
+      "shape": [
+        200,
+        100
+      ],
+      "dx_m": 10,
+      "original_dg2_wall_s": 70.64500399993267,
+      "hyra_wall_s": 171.43759089999367,
+      "scope": "model agreement; no independent observed truth; native numerical settings and boundary closures differ",
+      "hyra_settings": {
+        "flux": "rusanov",
+        "spatial_order": 2,
+        "time": "rk2",
+        "cfl": 0.4,
+        "max_timestep": 1,
+        "manning": 0.05,
+        "acceleration": true
+      },
+      "original_settings": {
+        "solver": "CPU DG2 8.0.3",
+        "threads": 4,
+        "local_limiter": false,
+        "DepthThresh": 0.001,
+        "netcdf": false,
+        "numeric_precision": "float32"
+      },
+      "input_sha256": {
+        "ea4.dem": "5bd16ee20ae371f4f72d3c0c05ad6b5e22cab23923be38b1fdc78a04b4611b21",
+        "ea4.par": "0119f2aa55daf58a5013c791bce45400405af37a2501939aeefd8254df95de23",
+        "ea4.bci": "fcea153eccfd37fb2c118a80158541becc0b76441be5887a08815b5b0cc0d3e1",
+        "ea4.bdy": "c480a22e1d0436d0305a0dff4e09a5f4befb401110b1bd3a51df93364f55f04e",
+        "ea4.stage": "d354fd8e84d4e4ac6694f939317358865f71c5b18d9e7453f7ddd5ed56e84d47"
+      },
+      "solver_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "hyra_steps": 34281,
+      "hyra_balance": {
+        "initial_m3": 0.0,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 12615.959636845842,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 0.0,
+        "external_inflow_m3": 288000.00000000274,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 275384.0403631526,
+        "residual_m3": -4.249159246683121e-09,
+        "corrected_residual_m3": -4.249159246683121e-09
+      },
+      "hyra_finite": true,
+      "hyra_nonnegative": true,
+      "comparisons": [
+        {
+          "time_s": 3600,
+          "depth_rmse_m": 0.05286328688229668,
+          "depth_mae_m": 0.0164971,
+          "max_abs_depth_difference_m": 0.441,
+          "hyra_volume_m3": 0.0,
+          "dg2_volume_m3": 32994.2,
+          "hyra_max_depth_m": 0.0,
+          "dg2_max_depth_m": 0.441
+        },
+        {
+          "time_s": 7200,
+          "depth_rmse_m": 0.03177194534604742,
+          "depth_mae_m": 0.016523505176166565,
+          "max_abs_depth_difference_m": 0.09828132285273844,
+          "hyra_volume_m3": 71999.99999999975,
+          "dg2_volume_m3": 105000.0,
+          "hyra_max_depth_m": 0.48008492942624564,
+          "dg2_max_depth_m": 0.444
+        },
+        {
+          "time_s": 10800,
+          "depth_rmse_m": 0.025694077758132695,
+          "depth_mae_m": 0.016535616857869685,
+          "max_abs_depth_difference_m": 0.07045397967041885,
+          "hyra_volume_m3": 144000.00000000134,
+          "dg2_volume_m3": 177008.8,
+          "hyra_max_depth_m": 0.48089158966339784,
+          "dg2_max_depth_m": 0.445
+        },
+        {
+          "time_s": 14400,
+          "depth_rmse_m": 0.021680303954705108,
+          "depth_mae_m": 0.01481921343820193,
+          "max_abs_depth_difference_m": 0.08660558758970682,
+          "hyra_volume_m3": 214497.9715444957,
+          "dg2_volume_m3": 244058.19999999998,
+          "hyra_max_depth_m": 0.4812356251142236,
+          "dg2_max_depth_m": 0.445
+        },
+        {
+          "time_s": 18000,
+          "depth_rmse_m": 0.0323240368284689,
+          "depth_mae_m": 0.02062657380812237,
+          "max_abs_depth_difference_m": 0.3304553464948946,
+          "hyra_volume_m3": 275384.0403631526,
+          "dg2_volume_m3": 266670.0,
+          "hyra_max_depth_m": 0.4814553464948946,
+          "dg2_max_depth_m": 0.154
+        }
+      ],
+      "station_depth_rmse_m": 0.06211990364160254,
+      "station_speed_rmse_m_s": 0.0825894226957657,
+      "dg2_snapshot_actual_times_s": [
+        3600.392,
+        7200.708,
+        10800.185,
+        14400.436,
+        18000.658
+      ],
+      "forcing_interpretation": "native piecewise constant"
+    },
+    "linear": {
+      "case": "EA Test 4, paper benchmark, flat 1000x2000m floodplain",
+      "complete": true,
+      "duration_s": 18000,
+      "shape": [
+        200,
+        100
+      ],
+      "dx_m": 10,
+      "original_dg2_wall_s": 70.64500399993267,
+      "hyra_wall_s": 245.59079930000007,
+      "scope": "model agreement; no independent observed truth; native numerical settings and boundary closures differ",
+      "hyra_settings": {
+        "flux": "rusanov",
+        "spatial_order": 2,
+        "time": "rk2",
+        "cfl": 0.4,
+        "max_timestep": 1,
+        "manning": 0.05,
+        "acceleration": true
+      },
+      "original_settings": {
+        "solver": "CPU DG2 8.0.3",
+        "threads": 4,
+        "local_limiter": false,
+        "DepthThresh": 0.001,
+        "netcdf": false,
+        "numeric_precision": "float32"
+      },
+      "forcing_interpretation": "linear",
+      "reference_reused": true,
+      "input_sha256": {
+        "ea4.dem": "5bd16ee20ae371f4f72d3c0c05ad6b5e22cab23923be38b1fdc78a04b4611b21",
+        "ea4.par": "0119f2aa55daf58a5013c791bce45400405af37a2501939aeefd8254df95de23",
+        "ea4.bci": "fcea153eccfd37fb2c118a80158541becc0b76441be5887a08815b5b0cc0d3e1",
+        "ea4.bdy": "c480a22e1d0436d0305a0dff4e09a5f4befb401110b1bd3a51df93364f55f04e",
+        "ea4.stage": "d354fd8e84d4e4ac6694f939317358865f71c5b18d9e7453f7ddd5ed56e84d47"
+      },
+      "solver_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "hyra_steps": 34275,
+      "hyra_balance": {
+        "initial_m3": 0.0,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 19465.37133942371,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 0.0,
+        "external_inflow_m3": 285000.0207674152,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 265534.64942798915,
+        "residual_m3": -2.3283064365386963e-09,
+        "corrected_residual_m3": -2.3283064365386963e-09
+      },
+      "hyra_finite": true,
+      "hyra_nonnegative": true,
+      "comparisons": [
+        {
+          "time_s": 3600,
+          "depth_rmse_m": 0.0009823019828551131,
+          "depth_mae_m": 0.0002033437466815951,
+          "max_abs_depth_difference_m": 0.036256943509206,
+          "hyra_volume_m3": 32993.3194557659,
+          "dg2_volume_m3": 32994.2,
+          "hyra_max_depth_m": 0.477256943509206,
+          "dg2_max_depth_m": 0.441
+        },
+        {
+          "time_s": 7200,
+          "depth_rmse_m": 0.00121635048307575,
+          "depth_mae_m": 0.00043100665352334476,
+          "max_abs_depth_difference_m": 0.03655863126949205,
+          "hyra_volume_m3": 104993.31945576546,
+          "dg2_volume_m3": 105000.0,
+          "hyra_max_depth_m": 0.48055863126949205,
+          "dg2_max_depth_m": 0.444
+        },
+        {
+          "time_s": 10800,
+          "depth_rmse_m": 0.0013711975415492048,
+          "depth_mae_m": 0.0006335131666451296,
+          "max_abs_depth_difference_m": 0.03607615109694112,
+          "hyra_volume_m3": 176993.31945576504,
+          "dg2_volume_m3": 177008.8,
+          "hyra_max_depth_m": 0.48107615109694113,
+          "dg2_max_depth_m": 0.445
+        },
+        {
+          "time_s": 14400,
+          "depth_rmse_m": 0.002382088833559879,
+          "depth_mae_m": 0.0010196797274927057,
+          "max_abs_depth_difference_m": 0.03633932008394286,
+          "hyra_volume_m3": 243333.6053762166,
+          "dg2_volume_m3": 244058.19999999998,
+          "hyra_max_depth_m": 0.48133932008394287,
+          "dg2_max_depth_m": 0.445
+        },
+        {
+          "time_s": 18000,
+          "depth_rmse_m": 0.00161287429889815,
+          "depth_mae_m": 0.0008745600658905504,
+          "max_abs_depth_difference_m": 0.03047398489836163,
+          "hyra_volume_m3": 265534.64942798915,
+          "dg2_volume_m3": 266670.0,
+          "hyra_max_depth_m": 0.15453252962709246,
+          "dg2_max_depth_m": 0.154
+        }
+      ],
+      "station_depth_rmse_m": 0.00198502696072608,
+      "station_speed_rmse_m_s": 0.008654027122534186,
+      "dg2_snapshot_actual_times_s": [
+        3600.392,
+        7200.708,
+        10800.185,
+        14400.436,
+        18000.658
+      ]
+    }
+  },
+  "capacity": [
+    {
+      "n": 128,
+      "cells": 16384,
+      "dx_m": 40,
+      "backend": "numba",
+      "allocation_wall_s": 0.0008048999588936567,
+      "wall_per_step_s": [
+        0.005180599982850254,
+        0.00517540005967021,
+        0.005258399993181229
+      ],
+      "median_wall_per_step_s": 0.005180599982850254,
+      "dt_s": [
+        1.7662020667067526,
+        1.7537879687331557,
+        1.7867802316513988
+      ],
+      "peak_working_set_bytes": 110075904,
+      "private_commit_bytes": 841089024,
+      "peak_private_commit_bytes": 846024704,
+      "finite": true,
+      "nonnegative": true,
+      "source_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "scope": "synthetic thin water plus channel, 3 RK2 steps, excludes JIT; no Eden input or full-event claim"
+    },
+    {
+      "n": 256,
+      "cells": 65536,
+      "dx_m": 40,
+      "backend": "numba",
+      "allocation_wall_s": 0.0019423000048846006,
+      "wall_per_step_s": [
+        0.01792470004875213,
+        0.017452300060540438,
+        0.01733189995866269
+      ],
+      "median_wall_per_step_s": 0.017452300060540438,
+      "dt_s": [
+        1.7662020667067526,
+        1.7539639955057977,
+        1.787118023320509
+      ],
+      "peak_working_set_bytes": 129458176,
+      "private_commit_bytes": 848056320,
+      "peak_private_commit_bytes": 865300480,
+      "finite": true,
+      "nonnegative": true,
+      "source_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "scope": "synthetic thin water plus channel, 3 RK2 steps, excludes JIT; no Eden input or full-event claim"
+    },
+    {
+      "n": 512,
+      "cells": 262144,
+      "dx_m": 40,
+      "backend": "numba",
+      "allocation_wall_s": 0.006658900063484907,
+      "wall_per_step_s": [
+        0.07779050001408905,
+        0.07596279995050281,
+        0.07626839994918555
+      ],
+      "median_wall_per_step_s": 0.07626839994918555,
+      "dt_s": [
+        1.7662020667067526,
+        1.6963324902432149,
+        1.649794550234713
+      ],
+      "peak_working_set_bytes": 207994880,
+      "private_commit_bytes": 872251392,
+      "peak_private_commit_bytes": 943898624,
+      "finite": true,
+      "nonnegative": true,
+      "source_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "scope": "synthetic thin water plus channel, 3 RK2 steps, excludes JIT; no Eden input or full-event claim"
+    },
+    {
+      "n": 768,
+      "cells": 589824,
+      "dx_m": 40,
+      "backend": "numba",
+      "allocation_wall_s": 0.018111699959263206,
+      "wall_per_step_s": [
+        0.1822702999925241,
+        0.18220309994649142,
+        0.1763494999613613
+      ],
+      "median_wall_per_step_s": 0.18220309994649142,
+      "dt_s": [
+        1.7662020667067526,
+        1.696398891200649,
+        1.6496648458102086
+      ],
+      "peak_working_set_bytes": 337141760,
+      "private_commit_bytes": 914120704,
+      "peak_private_commit_bytes": 1073147904,
+      "finite": true,
+      "nonnegative": true,
+      "source_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "scope": "synthetic thin water plus channel, 3 RK2 steps, excludes JIT; no Eden input or full-event claim"
+    },
+    {
+      "n": 1250,
+      "cells": 1562500,
+      "dx_m": 40,
+      "backend": "numba",
+      "allocation_wall_s": 0.04278089990839362,
+      "wall_per_step_s": [
+        0.5264927999814972,
+        0.5382095000240952,
+        0.5015663000522181
+      ],
+      "median_wall_per_step_s": 0.5264927999814972,
+      "dt_s": [
+        1.7662020667067526,
+        1.6964447281534494,
+        1.649729841475569
+      ],
+      "peak_working_set_bytes": 721707008,
+      "private_commit_bytes": 1032462336,
+      "peak_private_commit_bytes": 1458569216,
+      "finite": true,
+      "nonnegative": true,
+      "source_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "scope": "synthetic thin water plus channel, 3 RK2 steps, excludes JIT; no Eden input or full-event claim"
+    },
+    {
+      "n": 2500,
+      "cells": 6250000,
+      "dx_m": 20,
+      "backend": "numba",
+      "allocation_wall_s": 0.1872086999937892,
+      "wall_per_step_s": [
+        2.219378100009635,
+        2.2330346000380814,
+        2.1466569000622258
+      ],
+      "median_wall_per_step_s": 2.219378100009635,
+      "dt_s": [
+        0.8831010333533763,
+        0.8478923397987115,
+        0.8174082104663689
+      ],
+      "peak_working_set_bytes": 2573512704,
+      "private_commit_bytes": 1610133504,
+      "peak_private_commit_bytes": 3313856512,
+      "finite": true,
+      "nonnegative": true,
+      "source_sha256": "f1b87c9b6fa3539bbe24cd3e98877a440a2667aaba25ccb9d60496191c0f1c08",
+      "scope": "synthetic thin water plus channel, 3 RK2 steps, excludes JIT; no Eden input or full-event claim"
+    }
+  ],
+  "conditional_estimates": [
+    {
+      "dx_m": 40,
+      "cells": 1562500,
+      "synthetic_wall_per_step_s": 0.5264927999814972,
+      "synthetic_median_dt_s": 1.6964447281534494,
+      "synthetic_peak_private_GiB": 1.3583984375,
+      "full_event_hours_if_same_step_cost_and_dt_with_default_cap": 69.49704959755763,
+      "full_event_hours_if_30s_cap_and_same_synthetic_dt": 40.96629170654087,
+      "label": "conditional extrapolation from 3 synthetic steps, not an Eden runtime prediction"
+    },
+    {
+      "dx_m": 20,
+      "cells": 6250000,
+      "synthetic_wall_per_step_s": 2.219378100009635,
+      "synthetic_median_dt_s": 0.8478923397987115,
+      "synthetic_peak_private_GiB": 3.0862693786621094,
+      "full_event_hours_if_same_step_cost_and_dt_with_default_cap": 345.51309812613664,
+      "full_event_hours_if_30s_cap_and_same_synthetic_dt": 345.51309812613664,
+      "label": "conditional extrapolation from 3 synthetic steps, not an Eden runtime prediction"
+    }
+  ],
+  "hardware": {
+    "cpu_logical_processors": 24,
+    "physical_RAM_GiB": 31.718063354492188,
+    "GPU": "RTX 5070 Ti Laptop, 12227 MiB; not used"
+  },
+  "verified_checks": {
+    "identical_input_hashes": true,
+    "unchanged_production_solver": true,
+    "complete_both_HYRA_runs": true,
+    "linear_inflow_within_1m3_of_analytic_integral": true
+  },
+  "limitations": [
+    "one EA4 benchmark only, no independent measured truth",
+    "linear input adapter changes forcing interpretation only; production solver unchanged",
+    "native precision, CFL, limiter and boundary differences are retained",
+    "DG2 raster snapshots cross nominal save times by an adaptive-step offset; exact times retained",
+    "station outputs interpolated to HYRA 100-second output times; speed extraction semantics can differ",
+    "capacity tests use synthetic uniform rainfall and a thin layer plus channel, not Eden data",
+    "Eden full DEM/rainfall/masks/observations not obtained; no full Eden event executed"
+  ]
+}

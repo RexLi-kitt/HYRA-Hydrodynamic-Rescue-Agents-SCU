@@ -1,0 +1,119 @@
+[
+  {
+    "dx_m": 0.7,
+    "shape": [
+      550,
+      174
+    ],
+    "n": 0.042,
+    "duration_s": 800.0,
+    "complete": true,
+    "wall_s": 784.765147899976,
+    "quasi_steady": true,
+    "metrics": {
+      "speed_rmse_m_s": 0.7383470220052278,
+      "speed_mae_m_s": 0.5987857051025174,
+      "speed_bias_m_s": 0.27492885812535417,
+      "direction_mae_deg": 27.598875427737436,
+      "direction_points": 37,
+      "measured_points": 40,
+      "model_dry_points": 2
+    },
+    "balance": {
+      "initial_m3": 0.0,
+      "rainfall_m3": 0.0,
+      "inflow_m3": 0.0,
+      "baseflow_m3": 0.0,
+      "infiltration_m3": 0.0,
+      "outflow_m3": 5926.72713995226,
+      "sea_inflow_m3": 0.0,
+      "sea_outflow_m3": 0.0,
+      "drainage_m3": 0.0,
+      "scheduled_inflow_m3": 0.0,
+      "external_inflow_m3": 15759.359999999862,
+      "numerical_adjustment_m3": 0.0,
+      "current_m3": 9832.632860047626,
+      "residual_m3": 2.3646862246096134e-11,
+      "corrected_residual_m3": 2.3646862246096134e-11
+    },
+    "water_level_validation": "not scored: observation values unavailable, only sampling coordinates supplied"
+  },
+  {
+    "dx_m": 1.4,
+    "shape": [
+      275,
+      87
+    ],
+    "n": 0.042,
+    "duration_s": 800.0,
+    "complete": true,
+    "wall_s": 127.53886049997527,
+    "quasi_steady": false,
+    "metrics": {
+      "speed_rmse_m_s": 0.7641069695311385,
+      "speed_mae_m_s": 0.558883788614043,
+      "speed_bias_m_s": 0.22219264678749803,
+      "direction_mae_deg": 30.45538643848335,
+      "direction_points": 36,
+      "measured_points": 40,
+      "model_dry_points": 3
+    },
+    "balance": {
+      "initial_m3": 0.0,
+      "rainfall_m3": 0.0,
+      "inflow_m3": 0.0,
+      "baseflow_m3": 0.0,
+      "infiltration_m3": 0.0,
+      "outflow_m3": 4149.940875590553,
+      "sea_inflow_m3": 0.0,
+      "sea_outflow_m3": 0.0,
+      "drainage_m3": 0.0,
+      "scheduled_inflow_m3": 0.0,
+      "external_inflow_m3": 15759.35999999994,
+      "numerical_adjustment_m3": 0.0,
+      "current_m3": 11609.419124409373,
+      "residual_m3": -1.4551915228366852e-11,
+      "corrected_residual_m3": -1.4551915228366852e-11
+    },
+    "water_level_validation": "not scored: observation values unavailable, only sampling coordinates supplied"
+  },
+  {
+    "dx_m": 1.4,
+    "shape": [
+      275,
+      87
+    ],
+    "n": 0.02,
+    "duration_s": 800.0,
+    "complete": true,
+    "wall_s": 140.91775229998166,
+    "quasi_steady": true,
+    "metrics": {
+      "speed_rmse_m_s": 1.3347208579067402,
+      "speed_mae_m_s": 1.1147850311967358,
+      "speed_bias_m_s": 0.8759857623248939,
+      "direction_mae_deg": 26.111521728800106,
+      "direction_points": 36,
+      "measured_points": 40,
+      "model_dry_points": 4
+    },
+    "balance": {
+      "initial_m3": 0.0,
+      "rainfall_m3": 0.0,
+      "inflow_m3": 0.0,
+      "baseflow_m3": 0.0,
+      "infiltration_m3": 0.0,
+      "outflow_m3": 6507.152302526918,
+      "sea_inflow_m3": 0.0,
+      "sea_outflow_m3": 0.0,
+      "drainage_m3": 0.0,
+      "scheduled_inflow_m3": 0.0,
+      "external_inflow_m3": 15759.359999999977,
+      "numerical_adjustment_m3": 0.0,
+      "current_m3": 9252.207697473084,
+      "residual_m3": 2.546585164964199e-11,
+      "corrected_residual_m3": 2.546585164964199e-11
+    },
+    "water_level_validation": "not scored: observation values unavailable, only sampling coordinates supplied"
+  }
+]

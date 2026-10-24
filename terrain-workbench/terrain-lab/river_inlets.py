@@ -233,7 +233,13 @@ def configure(world,crossings,settings,native_shape):
                 for z,x in cells:
                     for edge,hit,offset in [('west',x==0,z),('east',x==native_x-1,z),('north',z==0,x),('south',z==native_z-1,x)]:
                         if hit:faces.append(dict(edge=edge,offset=offset))
-            counts=Counter((f['edge'],f['offset']//factor) for f in faces)
+            counts=Counter()
+            for f in faces:
+                fraction=f.get('fraction',1.)
+                if isinstance(fraction,bool) or not isinstance(fraction,(int,float)) or not math.isfinite(fraction) or not 0<fraction<=1:
+                    raise ValueError('入口格边覆盖比例需要在0到1之间')
+                counts[(f['edge'],f['offset']//factor)]+=fraction
+            if any(value>factor+1e-10 for value in counts.values()):raise ValueError('河口格边重复或覆盖宽度超出计算格')
             if not counts:raise ValueError('河口必须与地图外边界相交')
             boundary_faces=[];nz,nx=world.base.shape
             for (edge,offset),count in sorted(counts.items()):
