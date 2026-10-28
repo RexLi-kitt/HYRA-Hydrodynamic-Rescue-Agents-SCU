@@ -1,0 +1,25 @@
+name: 无人机观测MVP检查
+
+on:
+  push:
+    paths: ['uav-workbench/**', '.github/workflows/uav-mvp.yml']
+  pull_request:
+    paths: ['uav-workbench/**', '.github/workflows/uav-mvp.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: uav-workbench
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt -r research-requirements.txt
+      - run: python tools/check_workbench.py
+      - run: python run.py demo --scene logic-demo --output generated/ci-demo

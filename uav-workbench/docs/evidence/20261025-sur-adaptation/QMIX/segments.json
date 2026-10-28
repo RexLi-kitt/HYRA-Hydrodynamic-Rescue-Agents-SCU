@@ -1,0 +1,26 @@
+[
+  {
+    "first_episode": 0,
+    "last_episode": 6,
+    "elapsed_s": 2.853108900017105,
+    "memory": {
+      "working_set_bytes": 1943056384,
+      "process_peak_working_set_bytes": 1946759168,
+      "scope": "process-wide native working set, peak includes prior methods in this process",
+      "cuda_peak_allocated_bytes": 77740544,
+      "cuda_peak_reserved_bytes": 98566144
+    }
+  },
+  {
+    "first_episode": 6,
+    "last_episode": 12,
+    "elapsed_s": 3.3667011000216007,
+    "memory": {
+      "working_set_bytes": 1943658496,
+      "process_peak_working_set_bytes": 1949896704,
+      "scope": "process-wide native working set, peak includes prior methods in this process",
+      "cuda_peak_allocated_bytes": 77740544,
+      "cuda_peak_reserved_bytes": 98566144
+    }
+  }
+]

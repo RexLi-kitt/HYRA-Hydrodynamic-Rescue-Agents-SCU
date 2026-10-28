@@ -1,0 +1,52 @@
+{
+  "schema": "hyra-physics-operator-validation-v1",
+  "status": "registered_before_operator_implementation",
+  "question": "Does the differentiable closed-boundary Cartesian SWE step reproduce the existing MUSCL/Rusanov/RK2/Strang-Manning numerical step?",
+  "numerical_settings": {
+    "dx_m": 5,
+    "spatial_order": 2,
+    "time_integrator": "rk2",
+    "flux_method": "rusanov",
+    "low_froude": 0,
+    "boundary": "closed",
+    "manning": 0.035,
+    "limiter_theta": 1.5,
+    "velocity_depth_m": 1e-06
+  },
+  "cases": [
+    "constant lake at rest over smooth terrain",
+    "dry bed with localized scheduled source",
+    "wet-front transport",
+    "reflective walls and solid cells",
+    "infiltration and capacity-limited drainage",
+    "steep bed and high absolute datum",
+    "nonzero momentum with Manning drag",
+    "mixed batch vs independent NumPy steps"
+  ],
+  "actual_fixture_cases": {
+    "fixtures": [
+      "slow",
+      "rapid",
+      "async"
+    ],
+    "times_s": [
+      0,
+      100,
+      300,
+      500
+    ],
+    "step_fraction_of_CFL": 0.5,
+    "max_step_s": 0.2
+  },
+  "thresholds": {
+    "float64_max_absolute_state_error": 1e-10,
+    "float32_max_absolute_state_error": 2e-05
+  },
+  "gradient_validation": "finite forward/backward including dry cells, CPU/CUDA parity and finite-difference check away from limiter kinks",
+  "restriction": "No open/ocean forcing, KNP, hydraulic structures or alternate numerical settings silently accepted; unsupported configurations explicitly rejected.",
+  "source_files": {
+    "flood_solver.py": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+    "flood_numerics.py": "506b5f1b421c913b2cd1788bbe4bc7807ddea7fdaa42c13c3b68e55f62775140"
+  },
+  "limits": "Operator engineering validation only; not policy benefit or another original P3 mechanism round. Formal auxiliary model, data splits and budgets require separate registration."
+}

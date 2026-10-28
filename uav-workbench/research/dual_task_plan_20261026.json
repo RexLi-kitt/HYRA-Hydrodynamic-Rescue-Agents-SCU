@@ -1,0 +1,1275 @@
+{
+  "schema": "hyra-dual-task-sciml-study-v1",
+  "date": "2026-10-26",
+  "status": "scale100_round_completed_broader_research_gates_separate",
+  "formal_training_started": true,
+  "user_confirmed": {
+    "dual_gmrf": true,
+    "signal_layer": "personnel",
+    "eight_directions": true,
+    "sur_qmix": true,
+    "tasks": [
+      "exploration",
+      "exploration_rescue"
+    ],
+    "scientific_machine_learning": true
+  },
+  "inherited_methods": [
+    "GMRF environment modelling",
+    "Sur-QMIX surprise enhancement",
+    "QMIX"
+  ],
+  "candidate_new_contribution": "hydrodynamic physics-informed shared representation improving independently evaluated task outcomes",
+  "task_specs": [
+    {
+      "id": "E1",
+      "name": "自主探索",
+      "target_mode": "none",
+      "rescue_reward": false
+    },
+    {
+      "id": "E2",
+      "name": "探索—救援",
+      "target_mode": "personnel_signal",
+      "rescue_reward": true
+    }
+  ],
+  "method_specs": [
+    {
+      "id": "B0",
+      "representation": "same_information_raw",
+      "surprise": false,
+      "auxiliary": "none"
+    },
+    {
+      "id": "B1",
+      "representation": "dual_gmrf",
+      "surprise": false,
+      "auxiliary": "none"
+    },
+    {
+      "id": "B2",
+      "representation": "same_information_raw",
+      "surprise": true,
+      "auxiliary": "none"
+    },
+    {
+      "id": "B3",
+      "representation": "dual_gmrf",
+      "surprise": true,
+      "auxiliary": "none"
+    },
+    {
+      "id": "D",
+      "representation": "dual_gmrf",
+      "surprise": true,
+      "auxiliary": "data"
+    },
+    {
+      "id": "P",
+      "representation": "dual_gmrf",
+      "surprise": true,
+      "auxiliary": "same_data_plus_physics"
+    }
+  ],
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "planned_training_jobs": [
+    {
+      "id": "E1-B0-s11",
+      "task": "E1",
+      "method": "B0",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B0-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B0-s29",
+      "task": "E1",
+      "method": "B0",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B0-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E1-B0-s47",
+      "task": "E1",
+      "method": "B0",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B0-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B1-s11",
+      "task": "E1",
+      "method": "B1",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B1-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B1-s29",
+      "task": "E1",
+      "method": "B1",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B1-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E1-B1-s47",
+      "task": "E1",
+      "method": "B1",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B1-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B2-s11",
+      "task": "E1",
+      "method": "B2",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B2-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B2-s29",
+      "task": "E1",
+      "method": "B2",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B2-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B2-s47",
+      "task": "E1",
+      "method": "B2",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B2-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B3-s11",
+      "task": "E1",
+      "method": "B3",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B3-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B3-s29",
+      "task": "E1",
+      "method": "B3",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B3-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-B3-s47",
+      "task": "E1",
+      "method": "B3",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-B3-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-D-s11",
+      "task": "E1",
+      "method": "D",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-D-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E1-D-s29",
+      "task": "E1",
+      "method": "D",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-D-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-D-s47",
+      "task": "E1",
+      "method": "D",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-D-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-P-s11",
+      "task": "E1",
+      "method": "P",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-P-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E1-P-s29",
+      "task": "E1",
+      "method": "P",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-P-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E1-P-s47",
+      "task": "E1",
+      "method": "P",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E1-P-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B0-s11",
+      "task": "E2",
+      "method": "B0",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B0-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B0-s29",
+      "task": "E2",
+      "method": "B0",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B0-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-B0-s47",
+      "task": "E2",
+      "method": "B0",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B0-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-B1-s11",
+      "task": "E2",
+      "method": "B1",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B1-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B1-s29",
+      "task": "E2",
+      "method": "B1",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B1-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B1-s47",
+      "task": "E2",
+      "method": "B1",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B1-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 256
+    },
+    {
+      "id": "E2-B2-s11",
+      "task": "E2",
+      "method": "B2",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B2-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B2-s29",
+      "task": "E2",
+      "method": "B2",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B2-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-B2-s47",
+      "task": "E2",
+      "method": "B2",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B2-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B3-s11",
+      "task": "E2",
+      "method": "B3",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B3-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B3-s29",
+      "task": "E2",
+      "method": "B3",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B3-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-B3-s47",
+      "task": "E2",
+      "method": "B3",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-B3-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-D-s11",
+      "task": "E2",
+      "method": "D",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-D-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-D-s29",
+      "task": "E2",
+      "method": "D",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-D-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    },
+    {
+      "id": "E2-D-s47",
+      "task": "E2",
+      "method": "D",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-D-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-P-s11",
+      "task": "E2",
+      "method": "P",
+      "seed": 11,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-P-s11",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-P-s29",
+      "task": "E2",
+      "method": "P",
+      "seed": 29,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-P-s29",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 512
+    },
+    {
+      "id": "E2-P-s47",
+      "task": "E2",
+      "method": "P",
+      "seed": 47,
+      "status": "completed",
+      "budget": {
+        "episodes": 1024,
+        "optimizer_updates": 1021
+      },
+      "output": "generated/scale100-formal-20261026/E2-P-s47",
+      "training_backend": "aux_resilient_v4",
+      "selected_episode": 1024
+    }
+  ],
+  "control_requirements": [
+    "same scene and raw sensor information",
+    "same available history and communication condition",
+    "same eight-action motion and timing",
+    "matched network capacity where possible",
+    "Data and Physics use identical labels and head architecture",
+    "same per-task training budget and validation opportunities",
+    "no future or hidden truth in actor inputs"
+  ],
+  "implementation_gates": [
+    {
+      "id": "A",
+      "name": "method_audit_and_independent_two_task_interfaces",
+      "status": "independent_two_tasks_and_2_or_4_agent_contract_implemented; original_paper_exact_replication_not_claimed"
+    },
+    {
+      "id": "B",
+      "name": "legal_hydraulic_observation_and_task_coupling",
+      "status": "actual_900s_hydraulics_legal_water_observations_and_synthetic_service_coupling_implemented; service_opportunity_sensitivity_pending"
+    },
+    {
+      "id": "C",
+      "name": "strong_baselines_resource_pilot_and_common_budget_freeze",
+      "status": "complete_for_first_matched_scale100_study; budget1024_not_convergence_claim"
+    },
+    {
+      "id": "D",
+      "name": "data_physics_auxiliary_and_operator_validation",
+      "status": "selected_v4_implementation_and_persistent_gradients_verified; task_improvement_unproven"
+    },
+    {
+      "id": "E",
+      "name": "paired_formal_training_selection_and_unseen_evaluation",
+      "status": "100m_round_completed;36training,252holdout,allreplays,report,models_and_browser_verified;n2synthetic_limitations"
+    },
+    {
+      "id": "F",
+      "name": "long_duration_original_large_grid_transfer_and_delivery",
+      "status": "pending"
+    }
+  ],
+  "nonclaims": [
+    "12 pilot episodes do not demonstrate convergence",
+    "existing four-action negative study is not an eight-action two-task experiment",
+    "prediction accuracy is not task improvement",
+    "GMRF and Sur-QMIX are inherited methods, not newly invented here",
+    "scale100 development runs are not the 36 formal jobs",
+    "service thresholds are synthetic feasibility assumptions, not human survival or flight safety models",
+    "three fit and one development procedural parents are not a broad real-flood benchmark"
+  ],
+  "budget_freeze": {
+    "status": "frozen_for_scale100_first_formal_study",
+    "episodes_per_job": 1024,
+    "optimizer_updates_per_job": 1021,
+    "heldout_tuning": false,
+    "evidence": "generated/scale100-formal-20261026/plan.json"
+  },
+  "design_path": "D:\\HyRA\\资料\\项目文档\\实验方案\\HyRA_双层GMRF_SurQMIX_科学机器学习_双任务执行方案_20261026.md",
+  "repository_design": "docs/DUAL_TASK_SCIML_PLAN_20261026.md",
+  "readiness_path": "research/dual_task_readiness_20261026.json",
+  "old_scientific_sources_preserved": 35,
+  "workbench_implementation": {
+    "version": "hyra-eight-workbench-v3",
+    "tasks": [
+      "exploration",
+      "exploration_rescue"
+    ],
+    "groups": [
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "D",
+      "P"
+    ],
+    "pure_exploration_engineering_implemented": true,
+    "four_action_ui_retired": true,
+    "formal_training_started": true,
+    "documentation": "docs/WORKBENCH_V3_20261026.md",
+    "formal_models_registered": false
+  },
+  "scale100_training": {
+    "user_authorization": "可以，就按照这样展开训练",
+    "map_m": [
+      100,
+      100
+    ],
+    "shape": [
+      20,
+      20
+    ],
+    "dx_m": 5,
+    "duration_s": 900,
+    "action_s": 5,
+    "n_agents": 2,
+    "sensor_width_cells": 5,
+    "actual_cardinal_speed_m_s": 1.0,
+    "actual_diagonal_speed_m_s": 1.4142135623730951,
+    "dataset": "../terrain-workbench/terrain-lab/generated/scale100-dynamic-900s-20261026/dataset.json",
+    "implementation": [
+      "scale100_env.py",
+      "scale100_train.py",
+      "scale100_development.py",
+      "scale100_evaluate_dev.py"
+    ],
+    "development_queue": "generated/scale100-dev-20261026/queue.json",
+    "development_training_started": true,
+    "development_jobs": 12,
+    "development_episodes_per_job": 24,
+    "development_phase": "diagnostic; not convergence or formal confirmation",
+    "preflight": "research/scale100_preflight_20261026.json",
+    "recovery_verification": "generated/scale100-dev-20261026/recovery-verification.json",
+    "documentation": "docs/SCALE100_TRAINING_20261026.md",
+    "initial_development_dataset": "../terrain-workbench/terrain-lab/generated/scale100-900s-20261026/dataset.json",
+    "initial_development_completed": true,
+    "initial_development_evaluation": "generated/scale100-dev-20261026/development-evaluation.json",
+    "budget_pilot": {
+      "phase": "development_only",
+      "queue": "generated/scale100-budget-pilot-20261026/queue.json",
+      "plan": "generated/scale100-budget-pilot-20261026/plan.json",
+      "tasks": [
+        "E1",
+        "E2"
+      ],
+      "methods": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "D",
+        "P"
+      ],
+      "training_seed": 11,
+      "jobs": 12,
+      "episodes_per_job": 256,
+      "evaluation_checkpoints": [
+        64,
+        128,
+        256
+      ],
+      "formal_training_started": false
+    },
+    "dynamic_preflight": "research/scale100_dynamic_preflight_20261026.json",
+    "dynamic_rules": "research/scale100_dynamic_rules_20261026.json",
+    "independent_evaluation": {
+      "run_audit": "scale100_run_audit.py",
+      "audit_checks": "scale100_audit_checks.py",
+      "completed_model_review": "scale100_review_pilot.py",
+      "review": "generated/scale100-budget-pilot-20261026/review.json",
+      "formal_entry": "scale100_formal.py",
+      "formal_worker": "scale100_formal_worker.py",
+      "formal_guard_checks": "scale100_formal_checks.py",
+      "guard_and_audit_tests_passed": 14,
+      "reviewed_models": 12,
+      "review_scope": "completed models listed in review only; partial pilot",
+      "formal_budget_frozen": false,
+      "formal_training_started": false,
+      "updated_at": 1792991961.0807455,
+      "formal_guard_checks_passed": 8,
+      "independent_replay_checks_passed": 6
+    },
+    "auxiliary_tuning": {
+      "phase": "development_only",
+      "queue": "generated/scale100-aux-tuning-20261026/queue.json",
+      "plan": "generated/scale100-aux-tuning-20261026/plan.json",
+      "jobs": 4,
+      "tasks": [
+        "E1",
+        "E2"
+      ],
+      "methods": [
+        "D",
+        "P"
+      ],
+      "training_seed": 11,
+      "episodes_per_job": 256,
+      "checkpoints": [
+        64,
+        128,
+        256
+      ],
+      "revision": "same actor, fit-only prior, common Data/Physics head lr and loss weights; original sources/results preserved",
+      "recovery_verification": "generated/scale100-aux-tuning-20261026/recovery-verification.json",
+      "control_checks_passed": 4,
+      "formal_backend_selection_pending": true
+    },
+    "method_readiness_decision": "research/scale100_training_decision_20261026.json",
+    "evaluation_tools": {
+      "forecast": "scale100_forecast_audit.py",
+      "primary_curves": "scale100_primary_curves.py",
+      "sealed_holdout": "scale100_evaluate_sealed.py",
+      "forecast_checks_passed": 3,
+      "sealed_evaluation_checks_passed": 5,
+      "holdout_policy_evaluated": false
+    },
+    "execution_snapshot": "research/scale100_execution_snapshot_20261026.json",
+    "auxiliary_precision": {
+      "phase": "development_only",
+      "queue": "generated/scale100-aux-precision-20261026/queue.json",
+      "plan": "generated/scale100-aux-precision-20261026/plan.json",
+      "jobs": 4,
+      "methods": [
+        "D",
+        "P"
+      ],
+      "tasks": [
+        "E1",
+        "E2"
+      ],
+      "seed": 11,
+      "episodes_per_job": 256,
+      "only_change_from_v2": "auxiliary head RMSprop eps1e-5 to1e-8; not a float64 precision change",
+      "policy_main_eps": 1e-05,
+      "auxiliary_eps": 1e-08,
+      "controls_passed": 5,
+      "wait_policy": "Wait for original12-job pilot to complete and its controller to exit, limiting concurrent training workers",
+      "formal": false
+    },
+    "backend_registry": "scale100_backend.py",
+    "original_256_episode_jobs_complete": true,
+    "auxiliary_resilient": {
+      "phase": "development_only",
+      "queue": "generated/scale100-aux-resilient-20261026/queue.json",
+      "plan": "generated/scale100-aux-resilient-20261026/plan.json",
+      "jobs": 4,
+      "tasks": [
+        "E1",
+        "E2"
+      ],
+      "methods": [
+        "D",
+        "P"
+      ],
+      "seed": 11,
+      "episodes_per_job": 256,
+      "change_from_v3": "auxiliary hidden activation ReLU to LeakyReLU(.05) only; CNN/GRU/QMIX/Sur unchanged",
+      "controls_passed": 6,
+      "formal": false
+    },
+    "formal_parallel_entry": {
+      "path": "scale100_formal_parallel.py",
+      "max_workers": 3,
+      "threads_per_learner": 1,
+      "memory_guard": "reserve1.5GiB +0.8GiB per worker",
+      "parallel_checks_passed": 3,
+      "formal_training_started": false
+    },
+    "formal_study": {
+      "plan": "generated/scale100-formal-20261026/plan.json",
+      "queue": "generated/scale100-formal-20261026/queue.json",
+      "backend": "aux_resilient_v4",
+      "jobs": 36,
+      "episodes_per_job": 1024,
+      "updates_per_job": 1021,
+      "checkpoints": [
+        256,
+        512,
+        1024
+      ],
+      "seeds": [
+        11,
+        29,
+        47
+      ],
+      "tasks": [
+        "E1",
+        "E2"
+      ],
+      "methods": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "D",
+        "P"
+      ],
+      "fresh_initialization": true,
+      "maximum_joint_decisions": 6635520,
+      "max_concurrent_workers": 3,
+      "selection": "development only, equally available at all3 checkpoints",
+      "budget_frozen": true,
+      "formal_training_started": true,
+      "holdout_evaluated": true,
+      "controller_pid": 15680,
+      "active_workers": 0,
+      "plan_sha256": "b1a4456c57ef34873ed85b21b5cecbb6c6cc7d77e23a575e82fc7e7d04862de0",
+      "start_observation": {
+        "observed_at": 1792998733.6481802,
+        "workers": [
+          {
+            "job": "E1-B0-s11",
+            "pid": 42328,
+            "episode": 261,
+            "updates": 258
+          },
+          {
+            "job": "E2-B0-s11",
+            "pid": 42464,
+            "episode": 256,
+            "updates": 253
+          },
+          {
+            "job": "E1-B1-s11",
+            "pid": 6884,
+            "episode": 256,
+            "updates": 253
+          }
+        ]
+      },
+      "latest_observation": {
+        "queue_status": "completed",
+        "completed_jobs": 36,
+        "failed_jobs": [],
+        "workers": [],
+        "posttraining_status": "completed",
+        "finalization_status": "completed",
+        "processes_normally_exited": true
+      },
+      "complete": true
+    },
+    "workbench_adapter": {
+      "status": "published_and_browser_accepted",
+      "full_development_trials": 6,
+      "contract_checks_passed": 7,
+      "release_audit_checks_passed": 7,
+      "validation": "generated/scale100-console-validation/20261026-v1/validation.json",
+      "documentation": "docs/SCALE100_WORKBENCH_20261026.md",
+      "sources": {
+        "console_app.py": "a823cadd61a593852340f667fa1a838f01606c557e71be4ce050bf3d76fac92b",
+        "console_scale100_app.py": "207f9a6bdb38066cd576940f8385d1bb0b5f123bc0f4fd358b5df18c1e2579fd",
+        "console_scale100_contract.py": "eaaf22cde298b844dd9fad72c253bc89b482d9e7d18cc5c6c3f33268cdc3e47a",
+        "console_scale100_runner.py": "0fa75a1ab37f4b32a78a4589b7409e24008d426d3cae6be36caf87788d69ca41",
+        "console-static/workbench-scale100.html": "9e7780b4f0ba8a621511ed492f2aac24d09852e5e0d3700f7923d6c233e41729",
+        "console-static/workbench-scale100.js": "f5256f176d709766759e0d944b5faefe4f445bac81b211d80cce602867a71799"
+      },
+      "ui_delivery": "generated/scale100-workbench-ui-delivery-20261026.json",
+      "http_checks_passed": 6
+    },
+    "posttraining_continuation": {
+      "pid": 33620,
+      "identity": {
+        "pid": 33620,
+        "created_filetime": 134374735921520774
+      },
+      "status": "completed",
+      "phase": "completed_and_followup_verified",
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-posttraining-20261026.json"
+    },
+    "analysis_delivery": {
+      "status": "completed",
+      "documentation": "docs/SCALE100_FINISHING_PIPELINE_20261026.md",
+      "protocol": "research/scale100-formal-forecast-protocol-20261026.json",
+      "protocol_sha256": "88b52555106dd38bbe06e71db32acef7a3a15fe9fc5db16538e728c1fc09e9f7",
+      "continuation_state": "generated/scale100-finalize-20261026.json",
+      "continuation_identity": {
+        "pid": 21500,
+        "created_filetime": 134374754265463443
+      },
+      "guards_and_development_checks_passed": 14,
+      "bindings": {
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\scale100_finalize.py": "0ceec018022c7c2c0defa1ed7cd35670983f1a98aadb2c6d368b958f1c8fff4c",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\scale100_posttraining.py": "6a0064eeba835aae074554a0bf4077ffed670009bddb982194258e3ec4151c18",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\scale100_formal_forecasts.py": "22ab1a4e46f6775f88e1c5d3d5cc468ec6a0f9af3ead99400f2e73fb8320630e",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\scale100_resilient_forecast.py": "ab46486d3a9a240327d3898e6c59d9560ccc09c94f68df14544be12e65b6c0ce",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\scale100_report.py": "ed3081919532d266516e6720366be980619c64aed11bb85f40bb562fc3e602e7",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\scale100_publish.py": "b971dd19df1ab98ffcd9ee5ecf1eace797d3955e81ef2127fd36d2ee1946785b",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\scale100_model_acceptance.py": "68f0a52d73f94527d24541c3d4abb8c3fe9c53bd42baca057d08f996814bde76",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\console_scale100_runner.py": "0fa75a1ab37f4b32a78a4589b7409e24008d426d3cae6be36caf87788d69ca41",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\console_scale100_contract.py": "eaaf22cde298b844dd9fad72c253bc89b482d9e7d18cc5c6c3f33268cdc3e47a",
+        "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\research\\scale100-formal-forecast-protocol-20261026.json": "88b52555106dd38bbe06e71db32acef7a3a15fe9fc5db16538e728c1fc09e9f7"
+      },
+      "no_formal_effect_claim": true,
+      "completion_audit": "generated\\scale100-delivery-20261026\\completion-audit.json"
+    },
+    "late_checkpoint_mechanism": {
+      "state_file": "generated\\scale100-checkpoint-mechanism-20261026\\summary.json",
+      "status": "complete",
+      "expected_jobs": 12,
+      "completed_jobs": 12,
+      "remaining_jobs": [],
+      "documentation": "docs/SCALE100_CHECKPOINT_MECHANISM_20261026.md",
+      "source_sha256": "419151c3c28c9e9d50ea34278d7cde77e0e8c58d72365081f1574f055ceaf014",
+      "rows": [
+        {
+          "job": "E1-D-s11",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E1-D-s11.json",
+          "sha256": "4b2a950b51aba79a9f6f3904b5b98fa39ca36c21ad3e9e15245fa9e8eb96bd35",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 512,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E1-D-s29",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E1-D-s29.json",
+          "sha256": "e0aadb76b656d95590f8a78d7b087241475e2fe2c5b396fba8ccaf290f5ad9a3",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E1-D-s47",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E1-D-s47.json",
+          "sha256": "b1de5f22231184980fdf89ddb86db9c2a1edc8469be6be58a9cb9462c92fb76e",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E1-P-s11",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E1-P-s11.json",
+          "sha256": "a5fd5d66106ba14e3b72466b87c258d27c5ad3546825ef51bb383a3e3033a844",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 512,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E1-P-s29",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E1-P-s29.json",
+          "sha256": "ac9ed5cf165279dcafeb038be643a214cc1e497665a41f2841646193b9ca9063",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E1-P-s47",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E1-P-s47.json",
+          "sha256": "6c7adbeee965525a3be0cd0d8063ac2bb5dd7615e65f20cf60ce3931c1db609d",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E2-D-s11",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E2-D-s11.json",
+          "sha256": "362bfccba003ecf495818505ac48aa30049518f8bb444355ebcd8418009e8818",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 512,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E2-D-s29",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E2-D-s29.json",
+          "sha256": "20d9a15d2f28e45bfa6fae2bd3dc7343321aa9e18ea250f376f873dc07a1eeea",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E2-D-s47",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E2-D-s47.json",
+          "sha256": "bf3ca64c4f597cdb864ac2081787de3301d9c7acb84a7f439a8a1e3937f1dac4",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 512,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E2-P-s11",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E2-P-s11.json",
+          "sha256": "7a9b7db1ded40ee0a618f87d4a05ff542354b780e18027f535a5dddc2946b9c8",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 512,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E2-P-s29",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E2-P-s29.json",
+          "sha256": "593ba11e196c8fe038d76b9e25fb40f615aaf8cc5f3c954ee876e80b64544842",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 512,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        },
+        {
+          "job": "E2-P-s47",
+          "path": "generated\\scale100-checkpoint-mechanism-20261026\\E2-P-s47.json",
+          "sha256": "e38833ba5c24d4b59fc386a396fbd8bff898c3afacaa7d2d142de7a06c45f750",
+          "checkpoints": [
+            {
+              "kind": "selected",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            },
+            {
+              "kind": "final",
+              "episode": 1024,
+              "states": 12,
+              "nonzero_data_shared_states": 12,
+              "nonzero_physics_shared_states": 12,
+              "data_nonzero_loss_zero_shared_states": 0,
+              "physics_nonzero_loss_zero_shared_states": 0
+            }
+          ]
+        }
+      ],
+      "automatic_finalizer_includes_this": false,
+      "checks_passed": 3
+    }
+  },
+  "round_delivery": "generated\\scale100-delivery-20261026\\README.md"
+}

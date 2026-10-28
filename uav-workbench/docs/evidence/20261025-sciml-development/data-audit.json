@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "cases": 12,
+  "parents": 4,
+  "records": [
+    {
+      "id": "confluence-runnels-rectangular-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 3.5888740633288995e-08,
+      "max_depth_m": 0.992139458656311,
+      "wet_max_speed_m_s": 2.152545690536499,
+      "mass_residual_max_m3": 1.5575096767861396e-11,
+      "passed": true
+    },
+    {
+      "id": "confluence-runnels-ascending-staircase-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 2.563789169462829e-08,
+      "max_depth_m": 0.9450111389160156,
+      "wet_max_speed_m_s": 1.886069416999817,
+      "mass_residual_max_m3": 9.094947017729282e-12,
+      "passed": true
+    },
+    {
+      "id": "confluence-runnels-falling-staircase-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 2.073459499954085e-08,
+      "max_depth_m": 0.9174128174781799,
+      "wet_max_speed_m_s": 2.0607969760894775,
+      "mass_residual_max_m3": 2.114575181622058e-11,
+      "passed": true
+    },
+    {
+      "id": "fan-corridor-rectangular-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 2.7477470452973655e-08,
+      "max_depth_m": 0.8867141008377075,
+      "wet_max_speed_m_s": 2.020690441131592,
+      "mass_residual_max_m3": 1.2846612662542611e-11,
+      "passed": true
+    },
+    {
+      "id": "fan-corridor-ascending-staircase-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 2.080959751084212e-08,
+      "max_depth_m": 0.8388423323631287,
+      "wet_max_speed_m_s": 1.7566488981246948,
+      "mass_residual_max_m3": 1.000444171950221e-11,
+      "passed": true
+    },
+    {
+      "id": "fan-corridor-falling-staircase-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 2.059003715505157e-08,
+      "max_depth_m": 0.9025653600692749,
+      "wet_max_speed_m_s": 2.0629794597625732,
+      "mass_residual_max_m3": 9.890754881780595e-12,
+      "passed": true
+    },
+    {
+      "id": "paired-depressions-rectangular-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 1.9665387907902163e-08,
+      "max_depth_m": 0.7769990563392639,
+      "wet_max_speed_m_s": 1.821931004524231,
+      "mass_residual_max_m3": 1.1141310096718371e-11,
+      "passed": true
+    },
+    {
+      "id": "paired-depressions-ascending-staircase-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 1.9097977359637986e-08,
+      "max_depth_m": 0.8409174084663391,
+      "wet_max_speed_m_s": 1.7948664426803589,
+      "mass_residual_max_m3": 1.375610736431554e-11,
+      "passed": true
+    },
+    {
+      "id": "paired-depressions-falling-staircase-v0",
+      "split": "fit",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 2.7622816645511106e-08,
+      "max_depth_m": 0.9999001622200012,
+      "wet_max_speed_m_s": 2.2101070880889893,
+      "mass_residual_max_m3": 1.2846612662542611e-11,
+      "passed": true
+    },
+    {
+      "id": "sinuous-bench-offset-doublet-v0",
+      "split": "selection",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 1.4418980033062598e-08,
+      "max_depth_m": 0.8094707131385803,
+      "wet_max_speed_m_s": 1.9403767585754395,
+      "mass_residual_max_m3": 6.0254023992456496e-12,
+      "passed": true
+    },
+    {
+      "id": "sinuous-bench-offset-doublet-v1",
+      "split": "selection",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 1.645872871536272e-08,
+      "max_depth_m": 0.8128960728645325,
+      "wet_max_speed_m_s": 1.9465110301971436,
+      "mass_residual_max_m3": 5.802913705110768e-12,
+      "passed": true
+    },
+    {
+      "id": "sinuous-bench-offset-doublet-v2",
+      "split": "selection",
+      "frames_checked": 121,
+      "rate_labels_checked": 60,
+      "normalized_rate_mae_max": 1.4016883041968098e-08,
+      "max_depth_m": 0.790408730506897,
+      "wet_max_speed_m_s": 1.9053080081939697,
+      "mass_residual_max_m3": 4.547473508864641e-12,
+      "passed": true
+    }
+  ],
+  "instrumentation_control": {
+    "case": "confluence-runnels-rectangular-v0",
+    "max_frame_depth_mae_m": 5.141693889996367e-06,
+    "max_frame_wet_disagreement": 0.0,
+    "passed": true
+  },
+  "confirmation_water_generated": false,
+  "auditor_sha256": "9f73f916ca2c9c8977be2fa8bcaa3e956c7b71358aaa07f4403a6d28e8b21314",
+  "audit_plan_sha256": "137d7df907e24a73c734bd81d2502ab688db15aad4cc38d93a5741b152232ef2"
+}

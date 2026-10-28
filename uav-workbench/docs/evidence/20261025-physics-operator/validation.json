@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "comparisons": 24,
+  "results": [
+    {
+      "fixture": "slow",
+      "time_s": 0,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 3.3881317890172014e-21,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "slow",
+      "time_s": 0,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 2.372753222064849e-12,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "slow",
+      "time_s": 100,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 3.469446951953614e-18,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "slow",
+      "time_s": 100,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 1.8428883419296938e-09,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "slow",
+      "time_s": 300,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 6.938893903907228e-18,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "slow",
+      "time_s": 300,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 6.3061974392431e-09,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "slow",
+      "time_s": 500,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 9.215718466126788e-19,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "slow",
+      "time_s": 500,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 1.5551273824243594e-08,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 0,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 0,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 100,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 100,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 8.170325332956807e-09,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 300,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 300,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 1.6482127496164622e-08,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 500,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "rapid",
+      "time_s": 500,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83"
+    },
+    {
+      "fixture": "async",
+      "time_s": 0,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    },
+    {
+      "fixture": "async",
+      "time_s": 0,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 2.169814383723434e-09,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    },
+    {
+      "fixture": "async",
+      "time_s": 100,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    },
+    {
+      "fixture": "async",
+      "time_s": 100,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 4.4300315193979145e-08,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    },
+    {
+      "fixture": "async",
+      "time_s": 300,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    },
+    {
+      "fixture": "async",
+      "time_s": 300,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 5.707985206715449e-08,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    },
+    {
+      "fixture": "async",
+      "time_s": 500,
+      "dt_s": 0.1,
+      "dtype": "torch.float64",
+      "max_abs_error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    },
+    {
+      "fixture": "async",
+      "time_s": 500,
+      "dt_s": 0.1,
+      "dtype": "torch.float32",
+      "max_abs_error": 0.0,
+      "tolerance": 2e-05,
+      "passed": true,
+      "source_sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa"
+    }
+  ],
+  "operator_sha256": "30231600636d7e445e1c53606390ffc3f2f7f1b67ac764a8e64c793356cf2a63",
+  "validation_plan_sha256": "b304f7dda4351c031a852c18ee698c42da5b1c58de2962c7d26f0438d9b0d57f",
+  "max_error_float64": 6.938893903907228e-18,
+  "max_error_float32": 5.707985206715449e-08,
+  "scope": "Single accepted substep from actual saved states; not a five/ten-second coarse difference or a policy-benefit result.",
+  "engineering_amendment": "Initial high-datum float32 comparison failed because terrain precision was lost before operator input; preserve static bed float64 or center in float64 first. Original tolerance unchanged; failed log retained."
+}

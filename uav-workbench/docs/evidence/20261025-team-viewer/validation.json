@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "valid_frames": 121,
+  "n_agents": 2,
+  "cases": [
+    {
+      "name": "future timestamp",
+      "rejected": true,
+      "error": "观测时间戳与记录状态不一致。"
+    },
+    {
+      "name": "single-agent schema",
+      "rejected": true,
+      "error": "请选择双机回放 JSON；原单机回放格式不能在此页打开。"
+    },
+    {
+      "name": "missing true frame",
+      "rejected": true,
+      "error": "回放缺少对应的实际帧或共享地图。"
+    },
+    {
+      "name": "unknown refreshed",
+      "rejected": true,
+      "error": "观测时间戳与记录状态不一致。"
+    },
+    {
+      "name": "invalid paid cost",
+      "rejected": true,
+      "error": "回放行动成本记录无效。"
+    }
+  ],
+  "app_sha256": "f6769a482e3818a0bbe04499617bb459f77e5404bdbe8c1e167c3bc6338fb179",
+  "input_sha256": "f10e6d3276c01606332b09d7e04c54990930df5b6fdc87f193c1c6fad6f4b899",
+  "scope": "Actual JS validation routine executed with DOM listener stubs; browser initial/final screenshots and local-file load are separate evidence"
+}

@@ -1,0 +1,15 @@
+{
+  "run_audit": "scale100_run_audit.py",
+  "audit_checks": "scale100_audit_checks.py",
+  "completed_model_review": "scale100_review_pilot.py",
+  "review": "generated/scale100-budget-pilot-20261026/review.json",
+  "formal_entry": "scale100_formal.py",
+  "formal_worker": "scale100_formal_worker.py",
+  "formal_guard_checks": "scale100_formal_checks.py",
+  "guard_and_audit_tests_passed": 12,
+  "reviewed_models": 4,
+  "review_scope": "completed models listed in review only; partial pilot",
+  "formal_budget_frozen": false,
+  "formal_training_started": false,
+  "updated_at": 1792991961.0807455
+}

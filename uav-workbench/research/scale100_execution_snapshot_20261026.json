@@ -1,0 +1,243 @@
+{
+  "schema": "hyra-scale100-execution-snapshot-v1",
+  "observed_at": 1792998804.5822148,
+  "processes": [
+    {
+      "queue": "original",
+      "queue_path": "generated/scale100-budget-pilot-20261026/queue.json",
+      "reported_status": "completed",
+      "stage": null,
+      "controller_pid": 10044,
+      "controller_alive": false,
+      "child_pid": 39908,
+      "child_alive": false,
+      "verified_wait_target": null,
+      "completed_jobs": 12,
+      "current": {
+        "job": "E2-P-s11",
+        "segment_end": 256,
+        "child_pid": 39908
+      },
+      "progress": {
+        "status": "completed",
+        "episode": 256,
+        "total_episodes": 256,
+        "updates": 253,
+        "elapsed_segment_s": 208.85633920005057,
+        "last": {
+          "episode": 256,
+          "return_": 79.65000000000002,
+          "metrics": {
+            "current_correct_coverage_auc": 0.6487373113434993,
+            "first_coverage": 0.925,
+            "rescued": 3,
+            "targets": 5,
+            "distance_m": 2283.624817342641,
+            "collision_events": 0,
+            "first_90_s": 495.0
+          },
+          "epsilon": 0.050000000000000044,
+          "case_index": 0,
+          "scenario_seed": 257306,
+          "update": {
+            "td": 0.6152670979499817,
+            "data": 0.051503658294677734,
+            "physics": 0.0018117468571290374,
+            "gradient_norm": 10.159667015075684,
+            "updates": 253
+          }
+        }
+      }
+    },
+    {
+      "queue": "auxiliary_revision",
+      "queue_path": "generated/scale100-aux-tuning-20261026/queue.json",
+      "reported_status": "completed",
+      "stage": "completed",
+      "controller_pid": 19200,
+      "controller_alive": false,
+      "child_pid": 25920,
+      "child_alive": false,
+      "verified_wait_target": null,
+      "completed_jobs": 4,
+      "current": {
+        "task": "E2"
+      },
+      "progress": null
+    },
+    {
+      "queue": "auxiliary_precision",
+      "queue_path": "generated/scale100-aux-precision-20261026/queue.json",
+      "reported_status": "completed",
+      "stage": "completed",
+      "controller_pid": 38572,
+      "controller_alive": false,
+      "child_pid": 30088,
+      "child_alive": false,
+      "verified_wait_target": null,
+      "completed_jobs": 4,
+      "current": {
+        "task": "E2"
+      },
+      "progress": null
+    },
+    {
+      "queue": "auxiliary_resilient",
+      "queue_path": "generated/scale100-aux-resilient-20261026/queue.json",
+      "reported_status": "completed",
+      "stage": "completed",
+      "controller_pid": 18596,
+      "controller_alive": false,
+      "child_pid": 10712,
+      "child_alive": false,
+      "verified_wait_target": null,
+      "completed_jobs": 4,
+      "current": {
+        "task": "E2"
+      },
+      "progress": null
+    },
+    {
+      "queue": "formal",
+      "queue_path": "generated/scale100-formal-20261026/queue.json",
+      "reported_status": "running",
+      "stage": null,
+      "controller_pid": 15680,
+      "controller_alive": true,
+      "child_pid": null,
+      "child_alive": false,
+      "verified_wait_target": null,
+      "completed_jobs": 0,
+      "current": {},
+      "progress": null,
+      "active_jobs": {
+        "E1-B0-s11": {
+          "stage": "training",
+          "segment_end": 512,
+          "child_pid": 42328,
+          "child_alive": true,
+          "progress": {
+            "status": "running",
+            "episode": 331,
+            "total_episodes": 1024,
+            "updates": 328,
+            "elapsed_segment_s": 77.4507728999015,
+            "last": {
+              "episode": 331,
+              "return_": 60.59999999999997,
+              "metrics": {
+                "current_correct_coverage_auc": 0.5656773033450886,
+                "first_coverage": 0.8625,
+                "rescued": 0,
+                "targets": 0,
+                "distance_m": 2191.4318164425777,
+                "collision_events": 0,
+                "first_90_s": null
+              },
+              "epsilon": 0.6172161172161172,
+              "case_index": 0,
+              "scenario_seed": 332981,
+              "update": {
+                "td": 0.1356680989265442,
+                "data": 0.0,
+                "physics": 0.0,
+                "gradient_norm": 3.516065835952759,
+                "updates": 328,
+                "shared_gradient_audit": null
+              }
+            }
+          }
+        },
+        "E2-B0-s11": {
+          "stage": "training",
+          "segment_end": 512,
+          "child_pid": 42464,
+          "child_alive": true,
+          "progress": {
+            "status": "running",
+            "episode": 326,
+            "total_episodes": 1024,
+            "updates": 323,
+            "elapsed_segment_s": 71.0949919000268,
+            "last": {
+              "episode": 326,
+              "return_": 56.250000000000014,
+              "metrics": {
+                "current_correct_coverage_auc": 0.6002314735211195,
+                "first_coverage": 0.95,
+                "rescued": 2,
+                "targets": 5,
+                "distance_m": 2179.7160876900393,
+                "collision_events": 0,
+                "first_90_s": 740.0
+              },
+              "epsilon": 0.623015873015873,
+              "case_index": 1,
+              "scenario_seed": 327936,
+              "update": {
+                "td": 0.46805673837661743,
+                "data": 0.0,
+                "physics": 0.0,
+                "gradient_norm": 7.450497150421143,
+                "updates": 323,
+                "shared_gradient_audit": null
+              }
+            }
+          }
+        },
+        "E1-B1-s11": {
+          "stage": "training",
+          "segment_end": 512,
+          "child_pid": 6884,
+          "child_alive": true,
+          "progress": {
+            "status": "running",
+            "episode": 326,
+            "total_episodes": 1024,
+            "updates": 323,
+            "elapsed_segment_s": 71.02875019994099,
+            "last": {
+              "episode": 326,
+              "return_": 35.25,
+              "metrics": {
+                "current_correct_coverage_auc": 0.523345005587388,
+                "first_coverage": 0.7475,
+                "rescued": 0,
+                "targets": 0,
+                "distance_m": 2047.2287142747482,
+                "collision_events": 8,
+                "first_90_s": null
+              },
+              "epsilon": 0.623015873015873,
+              "case_index": 1,
+              "scenario_seed": 327936,
+              "update": {
+                "td": 0.12313584983348846,
+                "data": 0.0,
+                "physics": 0.0,
+                "gradient_norm": 1.3388394117355347,
+                "updates": 323,
+                "shared_gradient_audit": null
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "original_reviewed_models": 12,
+  "original_expected_models": 12,
+  "method_readiness": "ready_for_formal",
+  "formal_training_started": true,
+  "holdout_policy_evaluated": false,
+  "scope": "A point-in-time liveness observation; revalidate processes on each continuation",
+  "latest_formal_observation": {
+    "queue_status": "completed",
+    "completed_jobs": 36,
+    "failed_jobs": [],
+    "workers": [],
+    "posttraining_status": "completed",
+    "finalization_status": "completed",
+    "processes_normally_exited": true
+  }
+}

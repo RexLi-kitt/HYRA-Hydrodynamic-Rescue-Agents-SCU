@@ -1,0 +1,4 @@
+# Development baseline uses the pre-existing locally verified CUDA build.
+# Install a PyTorch build appropriate for the target machine when reproducing.
+numpy>=2,<3
+torch>=2.6,<3

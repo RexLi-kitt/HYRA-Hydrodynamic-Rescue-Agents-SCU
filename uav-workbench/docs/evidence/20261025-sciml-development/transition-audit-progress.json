@@ -1,0 +1,16 @@
+{
+  "status": "passed_completed_jobs_only",
+  "completed_jobs": 1,
+  "training_transitions": 120000,
+  "jobs": [
+    {
+      "job": "QMIX-s11",
+      "episodes": 2000,
+      "transitions": 120000
+    }
+  ],
+  "audit_sources": {
+    "tools\\audit_sciml_transitions.py": "77389b3b473508be106bd8a318c6220fb730019d27c7fcbf0e9edc2ee949b93e",
+    "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+  }
+}

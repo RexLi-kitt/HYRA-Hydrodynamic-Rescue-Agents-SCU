@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "before": {
+    "formal-plan.json": "7a0fb1f89878e76d43c8682c4555f34e612e6cd38325c88d50036c58c3692ecb",
+    "model-freeze.json": "42c629619e277110bf3764d72cfeff0e74ea710903da7f04b907b1ba832eddc6",
+    "training-summary.json": "d9daf4c3dcded3cb9d186435acf373947f8df030d31baf3d9d6cbce141d7458c",
+    "index.json": "02626933eb7958ff7817f56eafdde79933d2c9333c9cb500fa38d2ebebe0aa1a",
+    "training-index-frozen.json": "36dedc8e11f96a28ceb3ddc11d871b6c765fc92980f4d064d7f3efa854c7fe6a"
+  },
+  "after": {
+    "formal-plan.json": "7a0fb1f89878e76d43c8682c4555f34e612e6cd38325c88d50036c58c3692ecb",
+    "model-freeze.json": "42c629619e277110bf3764d72cfeff0e74ea710903da7f04b907b1ba832eddc6",
+    "training-summary.json": "d9daf4c3dcded3cb9d186435acf373947f8df030d31baf3d9d6cbce141d7458c",
+    "index.json": "02626933eb7958ff7817f56eafdde79933d2c9333c9cb500fa38d2ebebe0aa1a",
+    "training-index-frozen.json": "36dedc8e11f96a28ceb3ddc11d871b6c765fc92980f4d064d7f3efa854c7fe6a"
+  },
+  "wrapper_sha256": "7bd909312de2cf7fb65aca2499c36e55513cc21a85cbaad83a7ea68468d0e164",
+  "no_training_and_no_metadata_rewrite": true
+}

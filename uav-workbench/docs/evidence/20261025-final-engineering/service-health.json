@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:8766/maps.html",
+      "status": 200,
+      "bytes": 24261,
+      "sha256": "32e584f278a9b6a68529a6bde28580c7fbf70a340207d96e62db0c34e7ef71af"
+    },
+    {
+      "url": "http://127.0.0.1:8767/",
+      "status": 200,
+      "bytes": 5640,
+      "sha256": "3b2e8534af22dfdefbe0c3ab27940a2a850fbe422d17858bdb7c23f2f90afced"
+    },
+    {
+      "url": "http://127.0.0.1:8767/app.js",
+      "status": 200,
+      "bytes": 8643,
+      "sha256": "46c3d6588144c39b68ba185725bc67b7a4a4cbfbabdb6f99e26fcae0b4cd0257"
+    },
+    {
+      "url": "http://127.0.0.1:8767/api/scenes",
+      "status": 200,
+      "bytes": 3020,
+      "sha256": "dd9434cd220fb264f79ab27c64df517719c3cd509cc6f4078e40cc2ac1afe409",
+      "scene_ids": [
+        "existing-demo",
+        "async",
+        "logic-demo",
+        "rapid",
+        "slow",
+        "import-af49839bcde7"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:8767/runs/6114cf6038f0/replay.json",
+      "status": 200,
+      "bytes": 1360779,
+      "sha256": "95a7b6657484ff63e74c06a91df24bfe2443cc42d68ca5496ce43abedf78cd16",
+      "actions": 60,
+      "samples": 121,
+      "cutoff_s": 600.0
+    }
+  ],
+  "scope": "HTTP availability and existing imported replay; prior browser evidence kept separately"
+}

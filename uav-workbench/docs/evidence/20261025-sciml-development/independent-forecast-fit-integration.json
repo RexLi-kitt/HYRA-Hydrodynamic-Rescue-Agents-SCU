@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "case": "confluence-runnels-rectangular-v0",
+  "holdout_used": false,
+  "rows": 60,
+  "maximum_absolute_score_disagreement": {
+    "unknown_cells": 0,
+    "stale_cells": 0,
+    "future_h_mae_m": 0,
+    "future_h_unknown_mae_m": 0,
+    "future_wet_classbalanced_error": 0,
+    "future_momentum_mae_m2_s": 0,
+    "current_h_mae_m": 0,
+    "supervised_loss": 2.0815059542655945e-07,
+    "physical_rate_loss": 2.9802322387695312e-08,
+    "absolute_volume_rate_residual_m3_s": 3.0517578125e-05,
+    "future_h_stale_mae_m": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "frames": 121,
+  "observations": 242,
+  "actions": 60,
+  "metrics": {
+    "time_average_correct_coverage": 0.2551569265296129,
+    "motion_cost": 0.020149999999960005,
+    "return_": 0.2350069265296529,
+    "distance_m": 797.499999998,
+    "turn_s": 210.0,
+    "collision_events": 0,
+    "final": {
+      "correct_coverage": 0.3759765625,
+      "unknown_fraction": 0.4482421875,
+      "observed_error_rate": 0.3185840707964602,
+      "first_coverage": 0.5517578125
+    }
+  },
+  "secondary": {
+    "change_count": 1732,
+    "undiscovered_change_fraction": 0.8233256351039261,
+    "restricted_change_delay_s": 162.95323325635104,
+    "time_average_unknown_fraction": 0.6321451822916667,
+    "union_continuous_gap_median_s": 5.0,
+    "saved_per_agent_continuous_gap_median_s": 5.0
+  },
+  "holdout_used": false,
+  "ctde_accessor_blocked": true,
+  "method": "QMIX",
+  "seed": 11,
+  "actor_sha256": "6ee584c4605928429af72bd766ff62a1754d9ae93d1ec04bb1b09dcb53233fc4",
+  "cli_sha256": "578011cd8b0b36ded6d80129d09dc201b5a687ad72b9c1f143844c4ec09198ff"
+}

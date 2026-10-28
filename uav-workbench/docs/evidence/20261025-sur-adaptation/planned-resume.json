@@ -1,0 +1,16 @@
+{
+  "state": "six_completed_each_before_resume",
+  "checkpoints": {
+    "QMIX": {
+      "path": "checkpoint-006.pt",
+      "sha256": "904911c9eab0f36114e25be03510c07affb50d44c93bfef63c57b97e08bfc443",
+      "episode": 6
+    },
+    "Sur-QMIX-adapted": {
+      "path": "checkpoint-006.pt",
+      "sha256": "eee6846dc1d56196a946c7e5e8ab5a6eafc007d82ae7093cc2ed9875e276f28d",
+      "episode": 6
+    }
+  },
+  "supervisor_sha256": "38db78c21e39e6f236b571e1245a2f2f425a729183bea72eed51836d4edfb63c"
+}

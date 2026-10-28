@@ -1,0 +1,189 @@
+{
+  "schema": "hyra-sciml-round1-design-v1",
+  "status": "registered design before new events or auxiliary policy training; executable/resource freeze follows fit-only engineering pilot",
+  "maximum_mechanism_rounds": 1,
+  "question": "Does a shallow-water-constrained auxiliary dynamics model improve Sur-QMIX closed-loop map maintenance beyond an identical data-only auxiliary model under the same legal inputs, labels and policy budget?",
+  "methods": [
+    "QMIX",
+    "Sur-QMIX",
+    "Sur-QMIX+Data",
+    "Sur-QMIX+Physics"
+  ],
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "task": {
+    "n_agents": 2,
+    "shape": [
+      32,
+      32
+    ],
+    "dx_m": 5,
+    "sample_s": 5,
+    "action_s": 10,
+    "duration_s": 600,
+    "speed_m_s": 2.5,
+    "angular_speed_deg_s": 9,
+    "range_m": 25,
+    "fov_deg": 90,
+    "threshold_m": 0.05,
+    "sharing": "instant reliable union, timestamps preserved",
+    "collision": "existing TeamEnv path separation2m, conflicting translations cancelled"
+  },
+  "terrain_families": {
+    "fit": [
+      "confluence-runnels",
+      "fan-corridor",
+      "paired-depressions"
+    ],
+    "selection": [
+      "sinuous-bench"
+    ],
+    "holdout": [
+      "constricted-neck",
+      "branching-gully",
+      "diagonal-islands"
+    ]
+  },
+  "forcing_families": {
+    "fit": [
+      "rectangular",
+      "ascending-staircase",
+      "falling-staircase"
+    ],
+    "selection": [
+      "offset-doublet"
+    ],
+    "holdout": [
+      "late-surge",
+      "gapped-train",
+      "compound-recession"
+    ]
+  },
+  "cases": {
+    "fit": 9,
+    "selection": 3,
+    "holdout": 9,
+    "parents": 7,
+    "description": "same parent terrain per family across its3 forcing cases; holdout3 new parents crossed with3 new forcing templates; selection offset-doublet has3 fixed variants; all forcing amplitudes/seeds fixed before generation"
+  },
+  "source": {
+    "boundary": "closed",
+    "initial_depth_m": 0,
+    "manning": 0.035,
+    "drain_capacity_m3_s_per_cell": 0.04,
+    "rain_mm_h": 0,
+    "source_cells": [
+      [
+        6,
+        4
+      ],
+      [
+        25,
+        27
+      ]
+    ],
+    "external_boundary_forcing": false,
+    "hydrograph_semantics": "piecewise constant left limits, events on10s boundaries"
+  },
+  "observability": "actor gets only existing legal shared dry/wet history encoding, static bed and poses; no true depth, momentum, source-rate time series or future forcing inputs. CTDE mixer current truth and auxiliary labels stay in training-only seams.",
+  "auxiliary": {
+    "input": "mean current clean recurrent actor hidden across agents plus static bed/coordinates; no true state or forcing inputs",
+    "output": "current conservative state, local conservative rate, and10s future conservative state",
+    "field_order": [
+      "h",
+      "hu",
+      "hv"
+    ],
+    "forecast_horizon_s": 10,
+    "local_rate_label": "(U_after_one_short_actual_accepted_step-U_now)/dt; dt=min(.01,.5*actual_CFL_limit), training label metadata only, not actor/model input",
+    "head": "per-cell MLP:64 recurrent-context + normalized bed,x,z ->64 SiLU ->64 SiLU ->9",
+    "current_and_forecast_depth": "5m*sigmoid(raw_h-5.1), initially about0.03m",
+    "velocity": "10m/s*tanh(raw_u/raw_v), momentum=h*velocity; same bounded architecture for both auxiliaries",
+    "rate_scales": [
+      0.1,
+      0.05,
+      0.05
+    ],
+    "state_scales": [
+      0.1,
+      0.05,
+      0.05
+    ],
+    "data_loss": "balanced current-or-future wet/dry spatial smoothL1 on normalized current and10s fields, plus0.25 times normalized local-rate loss",
+    "auxiliary_weight": 0.05,
+    "physics_weight_relative_to_auxiliary": 0.1,
+    "physical_constraint": "normalized local rate consistency: predicted U+dt*rate versus differentiable existing SWEOperator(predicted U,dt,current source label); same MUSCL/RK2/drag/source scheme, no invented RL transitions",
+    "physics_inputs": "bed,manning,walls/solids,drains and current source-rate label used only inside training loss; source labels exist identically in both auxiliary datasets; no future forcing",
+    "gradient": "auxiliary and physics losses update the policy encoder/GRU through clean current recurrent states; no detached independent predictor",
+    "training_anchors_per_episode": 4,
+    "anchor_rule": "uniform without replacement from60 valid decision states using separate fixed RNG; same anchors in Data/Physics",
+    "execution": "discard auxiliary head; no predicted map inserted into observation memory"
+  },
+  "engineering_pilot": {
+    "data_split": "fit only",
+    "methods": [
+      "Sur-QMIX+Data",
+      "Sur-QMIX+Physics"
+    ],
+    "seeds": [
+      11
+    ],
+    "episodes_per_method": 12,
+    "training_joint_steps": 1440,
+    "evaluation": "none on confirmation holdout; pilot checks finite updates, gradients, memory and timing, not method selection",
+    "budget_change_rule": "if resource failure, preserve failed run and amend engineering settings before any formal training; keep four groups matched. Do not optimize pilot return or view holdout."
+  },
+  "proposed_formal_budget": {
+    "episodes_per_method_seed": 2000,
+    "training_joint_steps_per_method_seed": 120000,
+    "total_training_joint_steps": 1440000,
+    "optimizer": "RMSprop",
+    "lr": 0.0001,
+    "alpha": 0.99,
+    "eps": 1e-05,
+    "gamma": 0.99,
+    "batch_episodes": 8,
+    "replay_capacity_episodes": 128,
+    "updates_per_episode_after_warmup": 1,
+    "target_update_every_optimizer_steps": 100,
+    "gradient_norm_clip": 10,
+    "epsilon": "linear1.0->0.1 over first1600 episodes then0.1",
+    "validation_every_episodes": 200,
+    "validation_events": 3,
+    "validation_joint_steps_total": 21600,
+    "final_holdout_joint_steps": 6480,
+    "selection": "highest selection-event mean actual episodic return, ties earliest;10 scheduled checkpoints per seed and method, no test selection",
+    "early_stopping": false,
+    "resource_gate": "freeze after auxiliary pilot peak allocated/reserved CUDA <6GiB and native process <12GiB; timing reported with scope. If not met, amend before formal runs, never weaken confirmation scope."
+  },
+  "rule_baselines": [
+    "paired R0",
+    "paired R1",
+    "paired R2"
+  ],
+  "primary": "event-equal physical-time class-balanced current correct coverage; compare Physics versus Data, Sur and QMIX, report costs separately",
+  "secondary": [
+    "real change discovery and censored restricted delay",
+    "unknown and observed error",
+    "distance/turn/collision",
+    "fixed-route10s prediction and local rate errors",
+    "conservation discrepancy",
+    "training curves and actual compute"
+  ],
+  "hypothesis_gate": {
+    "physics_vs_data_mean_min_pp": 0.5,
+    "physics_vs_sur_mean_min_pp": 0.5,
+    "positive_events_min": 7,
+    "positive_events_total": 9,
+    "each_forcing_family_positive_mean": true,
+    "mean_collision_increase_max_per_episode": 1.0,
+    "mean_motion_cost_increase_max": 0.02,
+    "interpretation": "paired differences first averaged over all3 training seeds per event; parents and forcing templates are dependence units. Gate is a development criterion, not statistical significance. Report parent/forcing-level effects and seed variation."
+  },
+  "stop_rule": "one independently registered mechanism round; no holdout-based hyperparameter, budget, reward or metric changes. Negative/inconclusive allowed. Poor learning versus rules or nonconvergence explicitly limits conclusions; no automatic extra rounds.",
+  "holdout_generation": "only after all12 selected checkpoints, configs and source/input hashes are frozen; no parent/forcing tuning with holdout water",
+  "reproduction": "archive exact sources/dependencies, all seeds/cases/budgets/checkpoints and failures; preserve original P3 and Sur preflight. No push/deploy/paid resources."
+}

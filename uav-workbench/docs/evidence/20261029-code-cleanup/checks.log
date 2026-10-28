@@ -1,0 +1,153 @@
+运行：C:\Users\Tang Guangxin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -B -m unittest discover -s tests -v
+test_actual_frame_access_refuses_future_or_interpolation (test_core.AcceptanceTests.test_actual_frame_access_refuses_future_or_interpolation) ... ok
+test_boundary_motion_stays_in_domain_and_charges_actual_distance (test_core.AcceptanceTests.test_boundary_motion_stays_in_domain_and_charges_actual_distance) ... ok
+test_change_segments_keep_undiscovered_and_repeated_changes (test_core.AcceptanceTests.test_change_segments_keep_undiscovered_and_repeated_changes) ... ok
+test_determinism_hover_and_clock (test_core.AcceptanceTests.test_determinism_hover_and_clock) ... ok
+test_inflight_sampling_keeps_intermediate_pose_and_offset (test_core.AcceptanceTests.test_inflight_sampling_keeps_intermediate_pose_and_offset) ... ok
+test_invalid_pose_and_action_do_not_mutate_task (test_core.AcceptanceTests.test_invalid_pose_and_action_do_not_mutate_task) ... ok
+test_observation_footprints_and_timestamps_are_legal (test_core.AcceptanceTests.test_observation_footprints_and_timestamps_are_legal) ... ok
+test_old_duplicate_future_and_not_arrived_messages (test_core.AcceptanceTests.test_old_duplicate_future_and_not_arrived_messages) ... ok
+test_out_of_view_change_stays_old_until_revisit (test_core.AcceptanceTests.test_out_of_view_change_stays_old_until_revisit) ... ok
+test_policy_view_is_immutable_and_has_no_truth (test_core.AcceptanceTests.test_policy_view_is_immutable_and_has_no_truth) ... ok
+test_time_config_prevents_skipping_changes_and_partial_actions (test_core.AcceptanceTests.test_time_config_prevents_skipping_changes_and_partial_actions) ... ok
+test_time_integral_uses_physical_intervals_and_not_endpoint_average (test_core.AcceptanceTests.test_time_integral_uses_physical_intervals_and_not_endpoint_average) ... ok
+test_turn_changes_view_without_observing_behind (test_core.AcceptanceTests.test_turn_changes_view_without_observing_behind) ... ok
+test_classes_are_balanced_and_unknowns_stay_in_denominator (test_core.MetricTests.test_classes_are_balanced_and_unknowns_stay_in_denominator) ... ok
+test_unknown_correct_opposite_and_single_class (test_core.MetricTests.test_unknown_correct_opposite_and_single_class) ... ok
+test_malformed_metadata_bytes_and_nonfinite_frames_rejected (test_core.ProcessValidationTests.test_malformed_metadata_bytes_and_nonfinite_frames_rejected) ... ok
+test_changes_only_from_two_actual_observations_and_retained_interval (test_diagnostic.DiagnosticTests.test_changes_only_from_two_actual_observations_and_retained_interval) ... ok
+test_no_refreshed_or_unknown_candidates_and_no_endpoint_weight (test_diagnostic.DiagnosticTests.test_no_refreshed_or_unknown_candidates_and_no_endpoint_weight) ... ok
+test_same_dimension_common_raw_evidence_and_ablation (test_diagnostic.DiagnosticTests.test_same_dimension_common_raw_evidence_and_ablation) ... ok
+test_scaling_and_model_fit_use_only_supplied_fit_data (test_diagnostic.DiagnosticTests.test_scaling_and_model_fit_use_only_supplied_fit_data) ... ok
+test_ties_rounding_no_positives_and_empty_candidates (test_diagnostic.DiagnosticTests.test_ties_rounding_no_positives_and_empty_candidates) ... ok
+test_wrong_graph_preserves_degrees_distance_rings_and_common_pool (test_diagnostic.DiagnosticTests.test_wrong_graph_preserves_degrees_distance_rings_and_common_pool) ... ok
+test_equal_time_team_records_have_deterministic_ties (test_interfaces.InterfaceTests.test_equal_time_team_records_have_deterministic_ties) ... ok
+test_interruption_keeps_last_valid_replay (test_interfaces.InterfaceTests.test_interruption_keeps_last_valid_replay) ... ok
+test_reset_reward_done_and_full_coverage_then_staleness (test_interfaces.InterfaceTests.test_reset_reward_done_and_full_coverage_then_staleness) ... ok
+test_all_models_share_raw_history_and_A1_only_removes_propagated_changes (test_relations.RelationTests.test_all_models_share_raw_history_and_A1_only_removes_propagated_changes) ... ok
+test_strict_A1_cannot_reconstruct_any_earlier_observed_changes (test_relations.RelationTests.test_strict_A1_cannot_reconstruct_any_earlier_observed_changes) ... ok
+test_weight_ablation_exact_support_degree_and_distance_mass (test_relations.RelationTests.test_weight_ablation_exact_support_degree_and_distance_mass) ... ok
+test_family_split_and_budget_are_frozen_before_holdout (test_strong_study.StrongStudyTests.test_family_split_and_budget_are_frozen_before_holdout) ... ok
+test_na_and_route_seed_aggregation_do_not_make_fake_events (test_strong_study.StrongStudyTests.test_na_and_route_seed_aggregation_do_not_make_fake_events) ... ok
+test_nonlinear_learner_recovers_history_interactions (test_strong_study.StrongStudyTests.test_nonlinear_learner_recovers_history_interactions) ... ok
+test_partial_score_cannot_be_reported_as_completed (test_strong_study.StrongStudyTests.test_partial_score_cannot_be_reported_as_completed) ... ok
+test_second_round_is_new_families_with_strict_ablation_same_budget (test_strong_study.StrongStudyTests.test_second_round_is_new_families_with_strict_ablation_same_budget) ... ok
+test_actor_encoding_cannot_read_hidden_current_or_future_water (test_team_learning.TeamLearningTests.test_actor_encoding_cannot_read_hidden_current_or_future_water) ... ok
+test_crossing_paths_cancel_translation_and_charge_time (test_team_learning.TeamLearningTests.test_crossing_paths_cancel_translation_and_charge_time) ... ok
+test_invalid_joint_action_is_atomic_and_reset_is_deterministic (test_team_learning.TeamLearningTests.test_invalid_joint_action_is_atomic_and_reset_is_deterministic) ... ok
+test_joint_clock_observations_shared_union_and_reward (test_team_learning.TeamLearningTests.test_joint_clock_observations_shared_union_and_reward) ... ok
+test_catalog_routes_keep_their_registered_profiles (test_workbench_app.HttpTests.test_catalog_routes_keep_their_registered_profiles) ... 127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /api/workbench/catalog HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /api/workbench/scale100/catalog HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /api/workbench/signal-routes/catalog HTTP/1.1" 200 -
+ok
+test_job_errors_keep_http_status_and_success_response (test_workbench_app.HttpTests.test_job_errors_keep_http_status_and_success_response) ... 127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 409 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 504 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 500 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 200 -
+ok
+test_post_rejects_malformed_body_and_cross_origin_before_execution (test_workbench_app.HttpTests.test_post_rejects_malformed_body_and_cross_origin_before_execution) ... 127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "POST /api/workbench/run HTTP/1.1" 403 -
+ok
+test_retired_routes_and_unregistered_artifacts_stay_unavailable (test_workbench_app.HttpTests.test_retired_routes_and_unregistered_artifacts_stay_unavailable) ... 127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /api/run HTTP/1.1" 410 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /api/catalog HTTP/1.1" 410 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /runs/../../README.md HTTP/1.1" 404 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /missing.html HTTP/1.1" 404 -
+ok
+test_static_assets_and_old_page_aliases_are_identical (test_workbench_app.HttpTests.test_static_assets_and_old_page_aliases_are_identical) ... 127.0.0.1 - - [29/Oct/2026 00:11:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /rescue.html HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /rescue.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /rescue.css HTTP/1.1" 200 -
+ok
+test_version_and_compatibility_imports (test_workbench_app.HttpTests.test_version_and_compatibility_imports) ... 127.0.0.1 - - [29/Oct/2026 00:11:42] "GET /api/console-version HTTP/1.1" 200 -
+ok
+test_all_profiles_use_their_worker_and_payload_contract (test_workbench_app.JobTests.test_all_profiles_use_their_worker_and_payload_contract) ... ok
+test_busy_runner_never_starts_another_worker (test_workbench_app.JobTests.test_busy_runner_never_starts_another_worker) ... ok
+test_invalid_explicit_runtime_does_not_silently_fall_back (test_workbench_app.JobTests.test_invalid_explicit_runtime_does_not_silently_fall_back) ... ok
+test_invalid_requests_never_create_job_files (test_workbench_app.JobTests.test_invalid_requests_never_create_job_files) ... ok
+test_worker_failure_and_timeout_release_lock (test_workbench_app.JobTests.test_worker_failure_and_timeout_release_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 2.767s
+
+OK
+运行：C:\Users\Tang Guangxin\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.EXE --check console-static/workbench-scale100.js
+运行：C:\Users\Tang Guangxin\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.EXE --check static/app.js
+运行：C:\Users\Tang Guangxin\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.EXE --check team-viewer/app.js
+运行：C:\Users\Tang Guangxin\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -B -m unittest -v workbench_tests console_scale100_checks console_scale100_http_checks
+test_exactly_six_groups_and_task_matched_capabilities (workbench_tests.WorkbenchTests.test_exactly_six_groups_and_task_matched_capabilities) ... ok
+test_exploration_has_no_personnel_signal_dwell_or_timeout_rescue_penalty (workbench_tests.WorkbenchTests.test_exploration_has_no_personnel_signal_dwell_or_timeout_rescue_penalty) ... ok
+test_initial_complete_and_invalid_exploration_configuration (workbench_tests.WorkbenchTests.test_initial_complete_and_invalid_exploration_configuration) ... ok
+test_original_scientific_and_eight_action_checkpoint_sources_preserved (workbench_tests.WorkbenchTests.test_original_scientific_and_eight_action_checkpoint_sources_preserved) ... ok
+test_rule_checks_are_never_attributed_to_selected_model_group (workbench_tests.WorkbenchTests.test_rule_checks_are_never_attributed_to_selected_model_group) ... ok
+test_unavailable_models_and_wrong_task_are_rejected (workbench_tests.WorkbenchTests.test_unavailable_models_and_wrong_task_are_rejected) ... ok
+test_holdout_is_absent_and_cannot_be_selected (console_scale100_checks.ContractChecks.test_holdout_is_absent_and_cannot_be_selected) ... ok
+test_rule_has_no_model_attribution_for_all_twelve_choices (console_scale100_checks.ContractChecks.test_rule_has_no_model_attribution_for_all_twelve_choices) ... ok
+test_scene_tampering_is_rejected (console_scale100_checks.ContractChecks.test_scene_tampering_is_rejected) ... ok
+test_server_import_never_loads_learning_runtime (console_scale100_checks.ContractChecks.test_server_import_never_loads_learning_runtime) ... ok
+test_unknown_or_boolean_arguments_are_rejected (console_scale100_checks.ContractChecks.test_unknown_or_boolean_arguments_are_rejected) ... ok
+test_unreleased_models_cannot_run (console_scale100_checks.ContractChecks.test_unreleased_models_cannot_run) ... ok
+test_wrong_environment_is_rejected (console_scale100_checks.ContractChecks.test_wrong_environment_is_rejected) ... ok
+test_bad_input_and_cross_origin_are_rejected (console_scale100_http_checks.HttpChecks.test_bad_input_and_cross_origin_are_rejected) ... 127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/workbench/scenes HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/workbench/scenes HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:44] "POST /api/workbench/run HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 00:11:44] "POST /api/workbench/run HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 00:11:44] "POST /api/workbench/run HTTP/1.1" 403 -
+ok
+test_catalog_has_both_profiles_and_all_twelve_capabilities (console_scale100_http_checks.HttpChecks.test_catalog_has_both_profiles_and_all_twelve_capabilities) ... 127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/console-version HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/workbench/scale100/catalog HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/workbench/catalog HTTP/1.1" 200 -
+ok
+test_four_direction_routes_remain_retired (console_scale100_http_checks.HttpChecks.test_four_direction_routes_remain_retired) ... 127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/run HTTP/1.1" 410 -
+127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/catalog HTTP/1.1" 410 -
+ok
+test_maps_preserve_native_dimensions_and_hide_new_holdout (console_scale100_http_checks.HttpChecks.test_maps_preserve_native_dimensions_and_hide_new_holdout) ... 127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/workbench/scenes HTTP/1.1" 200 -
+ok
+test_real_two_task_replays_and_downloads (console_scale100_http_checks.HttpChecks.test_real_two_task_replays_and_downloads) ... 127.0.0.1 - - [29/Oct/2026 00:11:44] "GET /api/workbench/scenes HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:49] "POST /api/workbench/run HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:49] "GET /runs/b9a469d20988/replay.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:49] "GET /runs/b9a469d20988/actions.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:49] "GET /runs/b9a469d20988/observations.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:49] "GET /runs/b9a469d20988/audit.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:49] "GET /runs/b9a469d20988/manifest.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:49] "GET /api/workbench/scenes HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:53] "POST /api/workbench/run HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:53] "GET /runs/4f5cf5c7a2a0/replay.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:53] "GET /runs/4f5cf5c7a2a0/actions.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:53] "GET /runs/4f5cf5c7a2a0/observations.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:53] "GET /runs/4f5cf5c7a2a0/audit.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:53] "GET /runs/4f5cf5c7a2a0/manifest.json HTTP/1.1" 200 -
+ok
+test_unpublished_model_request_is_rejected (console_scale100_http_checks.HttpChecks.test_unpublished_model_request_is_rejected) ... 127.0.0.1 - - [29/Oct/2026 00:11:53] "GET /api/workbench/scale100/catalog HTTP/1.1" 200 -
+skipped 'Actual formal release already exists'
+
+----------------------------------------------------------------------
+Ran 19 tests in 10.252s
+
+OK (skipped=1)
+运行：D:\Scripts\python.exe -B -c from hyra_learning.runtime import enable_existing_packages; enable_existing_packages(); import unittest; unittest.main(module=None, argv=["unittest", "-v", "console_signal_routes_checks"])
+test_real_http_route_dispatch_and_saved_replay (console_signal_routes_checks.HttpSignalRoutesChecks.test_real_http_route_dispatch_and_saved_replay) ... 127.0.0.1 - - [29/Oct/2026 00:11:54] "GET /api/workbench/signal-routes/catalog HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:59] "POST /api/workbench/run HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:59] "GET /runs/63e49b663741/replay.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:11:59] "GET /runs/63e49b663741/audit.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:12:05] "POST /api/workbench/run HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:12:05] "GET /runs/b197fdba21e1/replay.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:12:05] "GET /runs/b197fdba21e1/audit.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:12:11] "POST /api/workbench/run HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:12:11] "GET /runs/1dae39429076/replay.json HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 00:12:11] "GET /runs/1dae39429076/audit.json HTTP/1.1" 200 -
+ok
+test_catalog_and_all_selected_model_bindings (console_signal_routes_checks.SignalRoutesChecks.test_catalog_and_all_selected_model_bindings) ... ok
+test_contract_keeps_server_free_of_learning_imports (console_signal_routes_checks.SignalRoutesChecks.test_contract_keeps_server_free_of_learning_imports) ... ok
+test_invalid_task_holdout_config_and_checkpoint_are_rejected (console_signal_routes_checks.SignalRoutesChecks.test_invalid_task_holdout_config_and_checkpoint_are_rejected) ... ok
+test_real_three_path_rollouts_match_frozen_evaluator (console_signal_routes_checks.SignalRoutesChecks.test_real_three_path_rollouts_match_frozen_evaluator) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 35.033s
+
+OK
+UI-worker evidence: D:\HyRA\warehouse\HYRA-Hydrodynamic-Rescue-Agents-SCU\uav-workbench\generated\signal-routes-console-checks\99994a15fee4445bbf06a70e1ccf0b74

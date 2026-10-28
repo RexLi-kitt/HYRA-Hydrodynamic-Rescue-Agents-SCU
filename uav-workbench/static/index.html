@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HyRA · 无人机观测</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a href="/" class="brand"><b>≈</b><span>HyRA <small>无人机观测</small></span></a><span class="scope">Version 2 · 单机开发工作台</span><a href="http://127.0.0.1:8766/maps.html" target="_blank" rel="noopener">洪水工作台</a></header>
+<div class="workspace">
+<aside>
+<h1>观察正在变化的水情</h1><p class="intro">沿航向采样，保留旧记录。返回复查时，地图才会得到纠正。</p>
+<form id="setup">
+<label>洪水过程<select id="scene" required></select></label><p id="sceneInfo" class="hint"></p>
+<label class="import">导入完整过程 ZIP<input id="importFile" type="file" accept=".zip"></label>
+<fieldset><legend>飞行与感知</legend><div class="fields">
+<label>地速 m/s<input id="speed" type="number" value="2.5" min="0.1" step="0.1" required></label>
+<label>角速度 °/s<input id="angular" type="number" value="9" min="0.1" step="0.1" required></label>
+<label>视距 m<input id="range" type="number" value="25" min="1" step="0.1" required></label>
+<label>完整张角 °<input id="fov" type="number" value="90" min="1" max="360" required></label>
+<label>动作时长 s<input id="actionSeconds" type="number" value="10" min="1" required></label>
+<label>采样周期 s<input id="sample" type="number" value="5" min="1" required></label>
+<label>任务时长 s<input id="duration" type="number" value="600" min="1" required></label>
+<label>初始航向 °<input id="heading" type="number" value="0" step="1" required></label>
+<label>初始 x / m<input id="startX" type="number" value="0" step="0.1" required></label>
+<label>初始 z / m<input id="startZ" type="number" value="0" step="0.1" required></label>
+</div><p class="hint">坐标原点为左上格中心。0°朝右，90°朝下；左转减角度。</p></fieldset>
+<label>行动方式<select id="method"><option value="R0">R0 · 固定扫描与循环重访</option><option value="R1">R1 · 优先探索未知</option><option value="R2">R2 · 年龄驱动探索与复查</option><option value="fixed">固定动作序列</option></select></label>
+<label id="actionsLabel" hidden>动作序列<textarea id="fixedActions" rows="4" placeholder="forward, right, hover, left …"></textarea><span class="hint">每条动作占用共同决策时长；数量须覆盖任务全程。</span></label>
+<button id="run" class="primary" type="submit">生成观测回放</button>
+</form>
+<p id="status" role="status" aria-live="polite">正在读取过程…</p>
+<details><summary>信息权限与评价口径</summary><p>真实水情只用于传感与评价。规则策略只能读取已经到达的观测及地图几何。未知格不算正确；按当前存在的淹没、未淹没类别分别统计后取平均，再按物理时间积分。</p><p>开发过程为合成洪水，未使用真实事件率定。多起点和不同策略不增加独立事件数。</p></details>
+</aside>
+<main>
+<section class="playbar" aria-label="时间轴"><button id="play" disabled>播放</button><input id="timeline" aria-label="回放时间" type="range" min="0" max="0" value="0" disabled><output id="clock">0 / 0 s</output><label>倍速<select id="playSpeed"><option value="1">1×</option><option value="5" selected>5×</option><option value="20">20×</option></select></label></section>
+<div class="map-grid">
+<figure><figcaption><h2>真实水情</h2><span>环境与离线评价可见</span></figcaption><canvas id="truth" width="560" height="560" aria-label="真实水情与无人机轨迹"></canvas><p><i class="wet"></i>淹没 <i class="dry"></i>未淹没 <i class="flight"></i>航迹与扇形</p></figure>
+<figure><figcaption><h2>认知地图</h2><span>只由实际观测更新</span></figcaption><canvas id="memory" width="560" height="560" aria-label="最近观测与未知区域"></canvas><p><i class="unknown"></i>未知 <i class="wrong"></i>失准边框（仅评价显示）</p></figure>
+<figure><figcaption><h2>观测年龄</h2><span>自最近实际观测起计时</span></figcaption><canvas id="age" width="560" height="560" aria-label="已观测格点的信息年龄"></canvas><p>浅色：新观测　深色：久未观察　灰色：未知</p></figure>
+</div>
+<section class="readout" aria-label="当前指标"><div>当前按类正确覆盖<strong id="quality">—</strong></div><div>未知比例<strong id="unknown">—</strong></div><div>已观测区错误率<strong id="error">—</strong></div><div>飞行距离 / 转向时间<strong id="cost">—</strong></div></section>
+<section class="chart-section"><div><h2>地图质量与首次覆盖</h2><p id="summary">生成一次运行后，可逐时刻检查观测、状态与变化。</p></div><canvas id="chart" width="1000" height="220" aria-label="正确覆盖率、首次覆盖率和未知比例随物理时间变化"></canvas><p class="legend"><span style="color:#087f91">━ 当前正确覆盖</span><span style="color:#95651d">━ 首次覆盖</span><span style="color:#7b8793">━ 未知比例</span></p></section>
+<footer><span id="provenance">所有感知均使用实际计算帧</span><nav id="downloads" hidden><a id="downloadReplay" download="replay.json">完整回放</a><a id="downloadObs" download="observations.json">观测日志</a><a id="downloadActions" download="actions.json">动作序列</a><a id="downloadAudit" download="audit.json">过程核查</a></nav></footer>
+</main></div><script type="module" src="/app.js"></script>
+</body></html>

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "images": {
+    "docs/evidence/20261025-sciml-final/closed-loop.png": "858270186d6addbdb2433fafcabe472ab326681ffb99b34e7ed6fdcdb0feeea1",
+    "docs/evidence/20261025-sciml-final/training.png": "5f4060e563ad465aff2f1ae7475ea238943b2e5645571eb5f07c52082b369834"
+  },
+  "checks": [
+    "All7methods and all9paired events visible,negative differences clear",
+    "Four training panels legible,12seed traces and labels unclipped",
+    "Mean rule quality and seed instability agree with audited JSON"
+  ],
+  "scope": "Visual inspection of actual generated PNGs,not proof of convergence"
+}
