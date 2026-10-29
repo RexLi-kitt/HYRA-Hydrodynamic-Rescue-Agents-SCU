@@ -8,13 +8,11 @@ BUNDLE = REPO / 'uav-workbench/runtime-assets'
 def runtime_path(value):
     text = str(value).replace('\\', '/')
     marker = 'HYRA-Hydrodynamic-Rescue-Agents-SCU/'
-    if marker in text:
-        text = text.split(marker, 1)[1]
-    else:
-        try:
-            text = Path(text).relative_to(REPO).as_posix()
-        except ValueError:
-            pass
+    try:
+        text = Path(text).relative_to(REPO).as_posix()
+    except ValueError:
+        if marker in text:
+            text = text.rsplit(marker, 1)[1]
     relative = Path(text)
     if not relative.is_absolute() and ':' not in text:
         shipped = BUNDLE / relative
