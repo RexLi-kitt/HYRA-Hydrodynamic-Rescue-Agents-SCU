@@ -1,0 +1,43 @@
+{
+  "schema": "hyra-dual-gmrf-eight-pilot-v1",
+  "method": "Sur-QMIX8",
+  "seed": 11,
+  "episodes": 12,
+  "config": {
+    "step_s": 5.0,
+    "duration_s": 250.0,
+    "sense_width": 5,
+    "service_s": 10.0,
+    "n_targets": 5,
+    "obstacle_fraction": 0.1,
+    "seed": 11
+  },
+  "source_sha256": "af49839bcde744218aeec44938ede3734b770fa1c223788c40d9e2a176e9f902",
+  "sources": {
+    "__init__.py": "2367ec82a76dc58d31265e1f353357059ac25850b68c6552a1b64e9daf5366dc",
+    "environment.py": "18393738567bcbee0a10b638d84681f72efc3d57e871a15bacd2644616e03f4d",
+    "gmrf.py": "47dcaff21dc6b998f2efb500ac37526bdb6c2e168411f5cea5c46c2981a2032b",
+    "hydraulics.py": "8cced7d3e73d6064d6ed270d9fce5565ad3f97af4c4391db1655ac56b40f402d",
+    "learning.py": "e3d88d83b8d11fa59a587dafc4e4d2f91dc33408e9d90c0d2e5a89ce0a1ed086"
+  },
+  "scope": "engineering-only; not converged, not paper performance reproduction",
+  "n_actions": 8,
+  "action_names": [
+    "west",
+    "east",
+    "north",
+    "south",
+    "northwest",
+    "southwest",
+    "northeast",
+    "southeast"
+  ],
+  "image_shape": [
+    9,
+    5,
+    5
+  ],
+  "trained_episodes": 12,
+  "updates": 9,
+  "actor_sha256": "a048df2bd8d51992dab43161052a75adc5fcd3b8853f28cf1c42b52758eef7cc"
+}

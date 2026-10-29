@@ -10,11 +10,15 @@ Python 3.10及以上。网页服务需要NumPy，模型运行另需已安装学�
 
 ```sh
 cd uav-workbench
-python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt -r learning-requirements.txt
 python console_app.py --port 8767
 ```
 
 也可运行 `python -m hyra_workbench --port 8767`，Windows保留 `启动工作台.ps1` 和原桌面快捷方式。服务只监听本机。
+
+仓库现已包含 `runtime-assets/`：100米与三路径的场景、60项正式模型、两个原始网格工程检查点及发布证据。克隆后即可运行，无需复制作者的 `generated/` 或重新训练。建议使用 Python 3.12；CPU 可运行，GPU 用户可按设备安装对应 PyTorch 构建。
+
+执行 `python tools/check_runtime_assets.py --replay` 可校验全部220个运行文件及场景摘要，并实际运行100米和三路径各一条完整CPU模型回放。冻结文件保留原始字节，历史绝对路径由运行适配层映射到仓库内；配套冻结源码用于模型执行。新生成的回放仍写入被忽略的 `generated/`。
 
 网页进程与模型执行进程分开。模型解释器可通过环境变量 `HYRA_LEARNING_PYTHON` 指向已有Python程序；本机仍优先使用已有的 `D:/Scripts/python.exe`。其他机器未配置该变量且不存在此路径时，使用启动网页的解释器，该环境也需安装学习依赖。不自动安装依赖、不自动训练或重选模型。
 

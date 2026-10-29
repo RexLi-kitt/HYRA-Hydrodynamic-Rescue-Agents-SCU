@@ -1,9 +1,10 @@
 """Lightweight UI contract for the completed, frozen signal-route study."""
+from runtime_assets import runtime_path
 from pathlib import Path
 from console_scale100_contract import ROOT, ACTIONS, TRAINING_SEEDS, read, digest, require
 from console_scale100_contract import default_config as base_config
 
-STUDY = ROOT / 'generated/signal-routes-20261027-v2'
+STUDY = runtime_path(ROOT / 'generated/signal-routes-20261027-v2')
 LABELS = {'R1':'路径一 · 有向SAR', 'R2':'路径二 · 物理协变量均值',
           'R3':'路径三 · 跨层CRF', 'Braw':'原始信号基线', 'Bpost':'共同后验基线',
           'C1':'路径一 · 水情置乱', 'C2':'路径二 · 水情置乱', 'C3':'路径三 · 水情置乱'}
@@ -27,7 +28,7 @@ def release_record():
         and seal['dataset_sha256']==digest(STUDY/'data/dataset.json'), '冻结参数或数据清单已变化')
     require(len(seal['models'])==24 and {(r['method'],r['seed']) for r in seal['models']}==
         {(m,s) for m in LABELS for s in TRAINING_SEEDS}, '三路径模型清单不完整')
-    require(seal['sources']==complete['sources'] and all(digest(ROOT.parent/name)==sha
+    require(seal['sources']==complete['sources'] and all(digest((ROOT / 'runtime-assets/frozen-sources' / name.replace('\\', '/')))==sha
         for name,sha in seal['sources'].items()), '三路径冻结训练源码已变化')
     return seal
 
@@ -37,7 +38,7 @@ def model_record(method, training_seed=11):
     seal=release_record(); row=next(r for r in seal['models'] if (r['method'],r['seed'])==(method,training_seed))
     actor=STUDY/'formal'/f'{method}-s{training_seed}'/f"actor-{row['episode']:04d}.pt"
     meta=read(actor.with_suffix('.json'))
-    require(actor.resolve()==Path(row['actor']).resolve()
+    require(actor.resolve()==runtime_path(row['actor']).resolve()
         and digest(actor)==row['actor_sha256']==meta['actor_sha256'], '所选路径模型权重摘要不匹配')
     require(meta['method']==method and meta['seed']==training_seed and meta['phase']=='formal'
         and meta['trained_episodes']==row['episode'] and meta['sources']==seal['sources']
@@ -48,7 +49,7 @@ def model_record(method, training_seed=11):
 def scene_records():
     return [dict(id=f"signal-routes:{r['parent_terrain']}:{r['mechanism']}",
         name=('三路径开发' if r['split']=='development' else '三路径训练')+f" / {r['parent_terrain']} / {r['mechanism']}",
-        path=r['path'],source_sha256=r['sha256'],split=r['split'],parent=r['parent_terrain'],mechanism=r['mechanism'],
+        path=str(runtime_path(r['path'])),source_sha256=r['sha256'],split=r['split'],parent=r['parent_terrain'],mechanism=r['mechanism'],
         grid=dict(shape=[20,20],dx_m=5.,axis_order=['z','x']),duration_s=900.,actual_frame_count=181,
         kind='synthetic_signal_routes_swe') for r in read(STUDY/'data/dataset.json')['cases']
         if r['split'] in ('fit','development')]

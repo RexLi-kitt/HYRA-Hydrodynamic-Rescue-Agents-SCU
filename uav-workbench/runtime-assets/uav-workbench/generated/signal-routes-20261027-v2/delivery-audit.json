@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "audit_tool_sha256": "f62ffcf70ca060a1ac45a47b304c1f2339cdb008ab4653b23e45891d2d77a113",
+  "expanded_rows": 1944,
+  "model_failure_and_time_rows": 1728,
+  "parent_aggregated_methods": 11,
+  "mechanism_paired_contrasts": 12,
+  "directional_scoring_rows": 684,
+  "mean_direction_reversals": 36,
+  "source_snapshot_files": 33,
+  "figure_files": [
+    "paired-effects.png",
+    "paired-effects.svg",
+    "training-curves.png",
+    "training-curves.svg"
+  ],
+  "report_sha256": "7ca2cf61c4f609b9351c12fa963f99b682c7f5f5731a66f0265243e636ae0127",
+  "supplemental_sha256": "e6d0c070d2855cf501b83a05b227ebd1eef7c28c5485002a2fe5dfdceff7615a",
+  "expanded_csv_sha256": "ee5ab727c4614a372b629f478fc19c40a6ce6bb11fd9ecb56349dc83c7533048",
+  "independent_completion_audit_sha256": "a5e26f8779edf5c22aed39ecb7c789ba8da09a70d0faf2083fb71dabe2e8654d"
+}

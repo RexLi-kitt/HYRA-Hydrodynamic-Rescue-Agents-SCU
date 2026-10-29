@@ -3,6 +3,8 @@
 Development validation is a CLI-only check of four existing prototype models;
 it cannot publish a model, use holdout parents, or write web history.
 """
+from runtime_assets import canonical_sources
+import os
 import argparse
 import json
 import time
@@ -11,6 +13,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from console_scale100_contract import (ROOT, FORMAL, BACKEND, TASKS, LABELS,
     default_config, digest, read, require, validate, scene_records, model_record)
+import sys
+sys.path.insert(0, str(ROOT / 'runtime-assets/frozen-sources/uav-workbench'))
 from scale100_train import torch, np, FloodCase, ScaleEnv, config, rollout
 from scale100_backend import make_actor, validate_meta
 from scale100_development import legal_rule
@@ -94,7 +98,7 @@ def assemble(checked, actor=None, meta=None, development=False, *, environment=N
 
 def load_model(folder, task, group, seed, formal):
     meta = read(folder / 'actor.json')
-    validate_meta(meta, BACKEND)
+    validate_meta({**meta, 'sources': {name.replace('/', os.sep): value for name, value in canonical_sources(meta['sources']).items()}}, BACKEND)
     require((meta['task'], meta['method'], meta['seed'], meta['formal'])
             == (TASKS[task], group, seed, formal), '检查点任务、组别、种子或训练阶段不匹配')
     require(meta['config'] == default_config(task, group, seed)

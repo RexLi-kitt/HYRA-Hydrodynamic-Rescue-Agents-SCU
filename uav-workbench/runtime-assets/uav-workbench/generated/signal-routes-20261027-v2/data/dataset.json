@@ -1,0 +1,3338 @@
+{
+  "schema": "hyra-signal-routes-dataset-v1",
+  "cases": [
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7101-slow.zip",
+      "sha256": "7c325bee1606cc6b7edbe503ca721d6696bdbecd1307224dea252b14bef0d6fe",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7101,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7101",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          1.317334197493804
+        ],
+        [
+          600,
+          0.5269336789975216
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          10,
+          14
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7101-rapid.zip",
+      "sha256": "211a14239afee5dba920c6fe977326df9b899978bcead845618ae17244d26ccb",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7101,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7101",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.317334197493804
+        ],
+        [
+          150,
+          0.5269336789975216
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          10,
+          14
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7102-slow.zip",
+      "sha256": "64ef9a58a115d2cfb7daf4865f2850256829f26312ecc56e7027dfd29f6848b8",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7102,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7102",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.010555444680032
+        ],
+        [
+          600,
+          0.8042221778720129
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          3,
+          5
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7102-rapid.zip",
+      "sha256": "ac2f2fb805b35a74129ebd900779d51f995b57d1aef2647ab8582f06e3069ffb",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7102,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7102",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.010555444680032
+        ],
+        [
+          150,
+          0.8042221778720129
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          3,
+          5
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7103-slow.zip",
+      "sha256": "28f2429e1bdbb9746926e455820b8bc13f2a75e370ffd4d3c429dc2338fcd647",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7103,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7103",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.815680970777888
+        ],
+        [
+          600,
+          1.1262723883111552
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          11
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7103-rapid.zip",
+      "sha256": "10fcda2db0a79746baa6b2dbabad4a1463b9ff9555fe40461b27a72df08d6c41",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7103,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7103",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.815680970777888
+        ],
+        [
+          150,
+          1.1262723883111552
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          11
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7104-slow.zip",
+      "sha256": "7b87c883c3974dbfa081c35bc3580f3aa3763db7bb664e919f56ea648ddd7614",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7104,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7104",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.5795360607417033
+        ],
+        [
+          600,
+          1.0318144242966814
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7104-rapid.zip",
+      "sha256": "ef7c75bd1b2b805b3ef5e3cbb1265cb62d31301f10a8447392d710f9426d582e",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7104,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7104",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.5795360607417033
+        ],
+        [
+          150,
+          1.0318144242966814
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7105-slow.zip",
+      "sha256": "8e5a435396955aaf518547f8689c454a4a028f03376999d712a4a029090406ca",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7105,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7105",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          1.750867149707621
+        ],
+        [
+          600,
+          0.7003468598830485
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          3,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7105-rapid.zip",
+      "sha256": "dbe8e86f6acda8d784b6d8f997c000dbdbf439b617e1a7ad6d6286e8d815e764",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7105,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7105",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.750867149707621
+        ],
+        [
+          150,
+          0.7003468598830485
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          3,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7106-slow.zip",
+      "sha256": "7eb33dfc630b529c0ecc71300570cbfd33a2b3f84f6c5901032599a9a0dda386",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7106,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7106",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          1.8771067567805282
+        ],
+        [
+          600,
+          0.7508427027122113
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          14,
+          9
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\fit-7106-rapid.zip",
+      "sha256": "3d98e4b5401968e7bfd5f071b59060f0e669a97272445bd14c82e48dd9989560",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7106,
+      "split": "fit",
+      "parent_terrain": "signal-parent-7106",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.8771067567805282
+        ],
+        [
+          150,
+          0.7508427027122113
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          14,
+          9
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\development-7201-slow.zip",
+      "sha256": "1ec562c7f55b56228f0927b3a43e090eeb3880ffe5edc51929b9d1ff5d3faac0",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7201,
+      "split": "development",
+      "parent_terrain": "signal-parent-7201",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          1.8270795450538415
+        ],
+        [
+          600,
+          0.7308318180215366
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          12
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\development-7201-rapid.zip",
+      "sha256": "2f8979d233e474cf72edd1a1b553fcfd5d555e5c66311464f9bfcf7f027d3ea4",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7201,
+      "split": "development",
+      "parent_terrain": "signal-parent-7201",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.8270795450538415
+        ],
+        [
+          150,
+          0.7308318180215366
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          12
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\development-7202-slow.zip",
+      "sha256": "ab62378e8712e54b0259df353cb2bdf8e1d7f33515237fa84e9b9060d994eb02",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7202,
+      "split": "development",
+      "parent_terrain": "signal-parent-7202",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.7679379941292277
+        ],
+        [
+          600,
+          1.107175197651691
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          9
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\development-7202-rapid.zip",
+      "sha256": "5300b7372b858e6f07ce91b0c320b95d9eecb95a1605652df4fe1a97de1f7170",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7202,
+      "split": "development",
+      "parent_terrain": "signal-parent-7202",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.7679379941292277
+        ],
+        [
+          150,
+          1.107175197651691
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          9
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\development-7203-slow.zip",
+      "sha256": "439b0433500d272da0d683e39eec74e0b06a2afd714dd8732b4d30aff7ca45af",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7203,
+      "split": "development",
+      "parent_terrain": "signal-parent-7203",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.8603449302815753
+        ],
+        [
+          600,
+          1.1441379721126301
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          14,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\development-7203-rapid.zip",
+      "sha256": "72c2415515e88c6eed328317d82bbc84d403a81badd47912c07b1c3aaecf2d93",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7203,
+      "split": "development",
+      "parent_terrain": "signal-parent-7203",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.8603449302815753
+        ],
+        [
+          150,
+          1.1441379721126301
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          14,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7301-slow.zip",
+      "sha256": "d5a7db4dec1658262fde685b1ca4070d04754cda15b80c13367a7bf9a8820a5c",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7301,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7301",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.5167864055777347
+        ],
+        [
+          600,
+          1.006714562231094
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          12,
+          16
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7301-rapid.zip",
+      "sha256": "f0b018f2d64105f03aea94c7503d5411af4f7398fe553bb3d6d2527526950a3c",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7301,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7301",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.5167864055777347
+        ],
+        [
+          150,
+          1.006714562231094
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          12,
+          16
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7301-double.zip",
+      "sha256": "2ae622cbc65089dbd8a27b5ed3bf2a0c640180d88fdab87db39e183f85f2e8d1",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7301,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7301",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.5167864055777347
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          1.7617504839044142
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          12,
+          16
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7302-slow.zip",
+      "sha256": "49dca68d3bd2d3705fc3a3a503da26987b4120765f9efb5b0145ff7805f45d20",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7302,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7302",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          1.2066784833959001
+        ],
+        [
+          600,
+          0.48267139335836007
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          6,
+          6
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7302-rapid.zip",
+      "sha256": "53af1099b377cb08afdb3fecc4414fa2d7bd209290cb2c8d44c07a11b233933f",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7302,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7302",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.2066784833959001
+        ],
+        [
+          150,
+          0.48267139335836007
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          6,
+          6
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7302-double.zip",
+      "sha256": "b62cebe1c321fe66a73cc8016fb4a263019cf87c9040b4dcf94b73fdab7e408d",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7302,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7302",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.2066784833959001
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          0.84467493837713
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          6,
+          6
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7303-slow.zip",
+      "sha256": "cebb598108d3a8e787020815a73533c6bcb00f02c378fd3f13ccd5502edaa7a6",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7303,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7303",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          1.4185834523674719
+        ],
+        [
+          600,
+          0.5674333809469888
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          14
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7303-rapid.zip",
+      "sha256": "70226f5af6c707479bf93d57bd85b8dd8b7186797ed82a32504a9007f35686dd",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7303,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7303",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.4185834523674719
+        ],
+        [
+          150,
+          0.5674333809469888
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          14
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7303-double.zip",
+      "sha256": "5130b0972cdd39c8781d03902f88db2c8cf355dc44d5cbee27d9d5e7c5dcb7d6",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7303,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7303",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          1.4185834523674719
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          0.9930084166572303
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          14
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7304-slow.zip",
+      "sha256": "6c25e1664728b00ad9c0ce2630b3786075df40e136cc3328391b9d4ac484755d",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7304,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7304",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.0932878599664133
+        ],
+        [
+          600,
+          0.8373151439865654
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          3
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7304-rapid.zip",
+      "sha256": "13c87219e6b8cfda6a391b3c0053273a242d663850c061d63820e3eec49e744d",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7304,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7304",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.0932878599664133
+        ],
+        [
+          150,
+          0.8373151439865654
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          3
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7304-double.zip",
+      "sha256": "3fb5627d6eb7fe87aca9ce69a0cd1b4ba15be6c2093d56363f39d362ad6569dc",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7304,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7304",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.0932878599664133
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          1.4653015019764892
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          3
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7305-slow.zip",
+      "sha256": "95dc8a42650d321ad21246491e153ce8061b84e55f0cab454feaee90003530e2",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7305,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7305",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.093322571471174
+        ],
+        [
+          600,
+          0.8373290285884697
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          5,
+          7
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7305-rapid.zip",
+      "sha256": "868f5ca34a6d02196a7bae6e603d9af646c9b0e043060f4b38a8e3975627d7de",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7305,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7305",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.093322571471174
+        ],
+        [
+          150,
+          0.8373290285884697
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          5,
+          7
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7305-double.zip",
+      "sha256": "453d4b607ce1b4ec1ff72bdf635094aa9a8f41ad2b116a2a7431bafec1b088b3",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7305,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7305",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.093322571471174
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          1.4653258000298217
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          5,
+          7
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7306-slow.zip",
+      "sha256": "6929073886b6c1b2715c8e61d6840c42e95473c3cea68586ba749e56b7dcea9c",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7306,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7306",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.4043153526052476
+        ],
+        [
+          600,
+          0.9617261410420991
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          3
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7306-rapid.zip",
+      "sha256": "bb8c9bc13e668830da33695b85ab1043f70b920784ff5f2d072ab2fd233c1a4c",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7306,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7306",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.4043153526052476
+        ],
+        [
+          150,
+          0.9617261410420991
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          3
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7306-double.zip",
+      "sha256": "288098b9a2ad448e89ccd0117e2815d5387e43b4cca65a472f81398b40488f88",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7306,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7306",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.4043153526052476
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          1.6830207468236733
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          13,
+          3
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7307-slow.zip",
+      "sha256": "379d4605d4da15221cc4194724469d2a8cfa176ee3e68a6f9e1f103d22672d26",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7307,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7307",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.0528928320462247
+        ],
+        [
+          600,
+          0.8211571328184899
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          6
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7307-rapid.zip",
+      "sha256": "c1758e86b22f1cf5a6daa399d9bcb6063cdffa76e07309db7cf66c867852f0c2",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7307,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7307",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.0528928320462247
+        ],
+        [
+          150,
+          0.8211571328184899
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          6
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7307-double.zip",
+      "sha256": "08caa11985679d04f7921ac8a53b74e3e8aae25bade1ba799ae47e2df95e4bb8",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7307,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7307",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.0528928320462247
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          1.4370249824323573
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          7,
+          6
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7308-slow.zip",
+      "sha256": "72632a4313641f1a7178277f0ea9afe8a47bf68094832e76db042c17161bf60e",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7308,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7308",
+      "mechanism": "slow",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          300,
+          2.7547786939388694
+        ],
+        [
+          600,
+          1.1019114775755479
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          8,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7308-rapid.zip",
+      "sha256": "008e31a22c3375a3cad1cb67c09eca6888d52923964af4fb4cdebd09c681cd04",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7308,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7308",
+      "mechanism": "rapid",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.7547786939388694
+        ],
+        [
+          150,
+          1.1019114775755479
+        ],
+        [
+          300,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          8,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\holdout-7308-double.zip",
+      "sha256": "6138ce4e3320ef27aded526005b3d04b9a722926eb1e54dd6c8b8329b511afc8",
+      "schema": "hyra-signal-routes-event-v1",
+      "seed": 7308,
+      "split": "holdout",
+      "parent_terrain": "signal-parent-7308",
+      "mechanism": "double",
+      "source_schedule": [
+        [
+          0,
+          0.0
+        ],
+        [
+          50,
+          2.7547786939388694
+        ],
+        [
+          150,
+          0.0
+        ],
+        [
+          450,
+          1.9283450857572084
+        ],
+        [
+          600,
+          0.0
+        ],
+        [
+          900,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          8,
+          8
+        ]
+      ],
+      "duration_s": 900.0,
+      "grid": {
+        "shape": [
+          20,
+          20
+        ],
+        "dx_m": 5.0,
+        "axis_order": [
+          "z",
+          "x"
+        ]
+      },
+      "frame_count": 181,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 2,
+        "time_integrator": "rk2",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 0.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "solver_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "generator_sha256": "ced844fbed293296c81fc30837f450c32d192c86f42773426657a341542a522b",
+      "scope": "synthetic SWE, not calibrated real flood"
+    }
+  ],
+  "split_unit": "parent_terrain",
+  "registration": {
+    "schema": "hyra-signal-routes-v1",
+    "date": "2026-10-27",
+    "status": "registered_not_results",
+    "tasks": {
+      "primary": "E2",
+      "regression": "E1_zero_source"
+    },
+    "methods": [
+      "Braw",
+      "Bpost",
+      "R1",
+      "R2",
+      "R3",
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "fixed": {
+      "shape": [
+        20,
+        20
+      ],
+      "dx_m": 5,
+      "n_agents": 2,
+      "targets": 5,
+      "step_s": 5,
+      "service_s": 10,
+      "service_depth_limit_m": 0.08,
+      "service_speed_limit_m_s": 0.3,
+      "observation_channels": 21,
+      "actions": 8,
+      "auxiliary_data_weight": 0,
+      "auxiliary_physics_weight": 0
+    },
+    "split": {
+      "fit": [
+        7101,
+        7102,
+        7103,
+        7104,
+        7105,
+        7106
+      ],
+      "development": [
+        7201,
+        7202,
+        7203
+      ],
+      "holdout": [
+        7301,
+        7302,
+        7303,
+        7304,
+        7305,
+        7306,
+        7307,
+        7308
+      ],
+      "unit": "parent terrain",
+      "fit_mechanisms": [
+        "slow",
+        "rapid"
+      ],
+      "holdout_mechanisms": [
+        "slow",
+        "rapid",
+        "double"
+      ]
+    },
+    "hydrographs": {
+      "slow": [
+        [
+          0,
+          0
+        ],
+        [
+          300,
+          1
+        ],
+        [
+          600,
+          0.4
+        ],
+        [
+          900,
+          0
+        ]
+      ],
+      "rapid": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          1
+        ],
+        [
+          150,
+          0.4
+        ],
+        [
+          300,
+          0
+        ],
+        [
+          900,
+          0
+        ]
+      ],
+      "double": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          1
+        ],
+        [
+          150,
+          0
+        ],
+        [
+          450,
+          0.7
+        ],
+        [
+          600,
+          0
+        ],
+        [
+          900,
+          0
+        ]
+      ]
+    },
+    "inference": {
+      "coupling": 0.35,
+      "exact_observations": true,
+      "feature_scales": [
+        0.08,
+        0.3,
+        0.08,
+        60
+      ],
+      "covariance_diagnostics_only": true,
+      "hidden_targets_allowed": false,
+      "water_permutation": "joint h/u/v/age within arrived cells; same rule train/eval"
+    },
+    "selection": {
+      "durations_s": [
+        900,
+        600,
+        450
+      ],
+      "rule_best_rescue_range": [
+        0.2,
+        0.9
+      ],
+      "require_service_interruptions": true,
+      "fallback_duration_s": 900,
+      "checkpoint_order": [
+        "rescue_fraction",
+        "first_coverage_auc",
+        "current_correct_coverage_auc",
+        "earlier_checkpoint"
+      ]
+    },
+    "pilot": {
+      "seeds": [
+        11
+      ],
+      "episodes": 128
+    },
+    "formal": {
+      "seeds": [
+        11,
+        29,
+        47
+      ],
+      "episodes": 1024,
+      "updates": 1021,
+      "checkpoints": [
+        256,
+        512,
+        1024
+      ],
+      "jobs": 24
+    },
+    "evaluation": {
+      "scenario_seeds": [
+        11,
+        29,
+        47
+      ],
+      "primary": "rescue_fraction",
+      "independent_parents": 8,
+      "cluster_bootstrap": 10000,
+      "primary_comparisons": [
+        "R1-Bpost",
+        "R2-Bpost",
+        "R3-Bpost"
+      ],
+      "holm_alpha": 0.05
+    },
+    "interpretation": [
+      "static personnel; no advection claim",
+      "initial-depth-conditioned target placement may convey a location prior",
+      "synthetic diagnostics do not establish a real sensor mechanism",
+      "SAR and quadratic CRF equivalence must be disclosed",
+      "budget does not establish convergence"
+    ]
+  },
+  "holdout_scores_accessed": false,
+  "reused_from": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-20261027\\data\\dataset.json",
+  "original_manifest_sha256": "7f03457a50db82ccd7c062d97ab8849d75e4a338f07ec0efb86785e4e9918f60"
+}

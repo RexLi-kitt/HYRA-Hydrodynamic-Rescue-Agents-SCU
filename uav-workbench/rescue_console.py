@@ -1,6 +1,7 @@
 """Registered-scene and checkpoint contract for the independent rescue page."""
 from dataclasses import asdict
 import json,math,zipfile
+from runtime_assets import runtime_path
 from pathlib import Path
 import numpy as np
 from sur_rescue.hydraulics import metadata,file_digest
@@ -11,7 +12,7 @@ MODELS={'rescue:QMIX8':'QMIX8','rescue:Sur-QMIX8':'Sur-QMIX8'}
 def sources():return {p.name:file_digest(p) for p in sorted((ROOT/'sur_rescue').glob('*.py'))}
 def model_record(method):
     if method not in MODELS:raise ValueError('Unknown eight-action checkpoint')
-    folder=ROOT/'generated/sur-rescue-pilot'/(MODELS[method]+'-s11')
+    folder=runtime_path(ROOT/'generated/sur-rescue-pilot'/(MODELS[method]+'-s11'))
     meta=json.loads((folder/'actor.json').read_text(encoding='utf-8'))
     if meta['n_actions']!=8 or meta['image_shape']!=[9,5,5] or meta['action_names']!=list(ACTIONS):raise ValueError('Checkpoint is not a nine-channel/eight-action model')
     if meta['sources']!=sources() or meta['actor_sha256']!=file_digest(folder/'actor.pt'):raise ValueError('Rescue checkpoint/source changed')
