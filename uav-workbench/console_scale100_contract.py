@@ -15,6 +15,7 @@ TASKS = {'exploration': 'E1', 'exploration_rescue': 'E2'}
 LABELS = {'B0': 'QMIX', 'B1': 'GMRF + QMIX', 'B2': 'Sur-QMIX',
           'B3': 'GMRF + Sur-QMIX', 'D': 'GMRF + Sur-QMIX + Data',
           'P': 'GMRF + Sur-QMIX + Physics'}
+ACTIVE_GROUPS = ('B3', 'D', 'P')
 ACTIONS = ('west', 'east', 'north', 'south', 'northwest', 'southwest',
            'northeast', 'southeast')
 BACKEND = 'aux_resilient_v4'
@@ -126,7 +127,7 @@ def validate(data):
             '包含未知100米工作台参数')
     task, group, mode = (data.get(k) for k in ('task', 'group', 'mode'))
     task_code(task)
-    require(group in LABELS and mode in ('rule', 'model'), '组别或执行方式无效')
+    require(group in ACTIVE_GROUPS and mode in ('rule', 'model'), '组别或执行方式无效')
     values = data.get('config', {})
     require(isinstance(values, dict), '任务配置必须是对象')
     expected = default_config(task, group, values.get('seed', 11))
@@ -169,4 +170,4 @@ def catalog():
                              auxiliary='data' if g == 'D' else 'physics' if g == 'P' else 'none',
                              tasks={t: dict(ready=ready, reason=reason)
                                                       for t in TASKS})
-                        for g, label in LABELS.items()])
+                        for g, label in LABELS.items() if g in ACTIVE_GROUPS])

@@ -42,11 +42,11 @@ class HttpChecks(unittest.TestCase):
         return dict(scene=scene['id'], task=task, group='P', mode='rule', training_seed=29,
                     config=default_config(task, 'P', seed=47))
 
-    def test_catalog_has_both_profiles_and_all_twelve_capabilities(self):
+    def test_catalog_has_both_profiles_and_three_active_groups(self):
         self.assertEqual(self.get('/api/console-version')['action_count'], 8)
         primary = self.get('/api/workbench/scale100/catalog')
         self.assertEqual(primary['profile'], 'scale100')
-        self.assertEqual(len(primary['groups']), 6)
+        self.assertEqual([g['id'] for g in primary['groups']], ['B3', 'D', 'P'])
         self.assertEqual(primary['default_training_seed'], 11)
         self.assertEqual(primary['defaults']['exploration']['duration_s'], 900)
         self.assertTrue(all(set(g['tasks']) == {'exploration', 'exploration_rescue'}

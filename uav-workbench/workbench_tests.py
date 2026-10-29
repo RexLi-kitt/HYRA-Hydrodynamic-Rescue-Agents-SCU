@@ -35,10 +35,10 @@ class WorkbenchTests(unittest.TestCase):
         r=env.result();self.assertTrue(math.isfinite(r['summary']['time_average_correct_coverage']));self.assertEqual(len(r['snapshots']),1)
         with self.assertRaises(ValueError):ExplorationConfig(n_targets=1).validate(source)
         with self.assertRaises(ValueError):make_env(source,'unknown',{})
-    def test_exactly_six_groups_and_task_matched_capabilities(self):
-        c=catalog();self.assertEqual([g['id'] for g in c['groups']],['B0','B1','B2','B3','D','P'])
+    def test_active_groups_and_task_matched_capabilities(self):
+        c=catalog();self.assertEqual([g['id'] for g in c['groups']],['B3','D','P'])
         self.assertEqual(len(c['tasks']),2);self.assertTrue(all(not g['tasks']['exploration']['ready'] for g in c['groups']))
-        self.assertEqual([g['id'] for g in c['groups'] if g['tasks']['exploration_rescue']['ready']],['B1','B3'])
+        self.assertEqual([g['id'] for g in c['groups'] if g['tasks']['exploration_rescue']['ready']],['B3'])
         self.assertEqual(len(c['actions']),8)
     def test_rule_checks_are_never_attributed_to_selected_model_group(self):
         c=catalog();job=validate(dict(scene='existing-demo',task='exploration',group='P',mode='rule',config=c['defaults']['exploration']))

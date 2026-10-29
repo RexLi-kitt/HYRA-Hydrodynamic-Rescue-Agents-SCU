@@ -10,6 +10,7 @@ from rescue_console import model_record as pilot_record
 ROOT=Path(__file__).resolve().parent
 TASKS={'exploration':'自主探索','exploration_rescue':'探索—搜救'}
 LABELS={'B0':'QMIX','B1':'GMRF + QMIX','B2':'Sur-QMIX','B3':'GMRF + Sur-QMIX','D':'GMRF + Sur-QMIX + Data','P':'GMRF + Sur-QMIX + Physics'}
+ACTIVE_GROUPS=('B3','D','P')
 PILOTS={'B1':'rescue:QMIX8','B3':'rescue:Sur-QMIX8'}
 
 def group_record(group):
@@ -21,6 +22,7 @@ def catalog():
     if {r['id'] for r in plan['method_specs']}!=set(LABELS):raise ValueError('六组实验登记与工作台不一致')
     for spec in plan['method_specs']:
         id_=spec['id'];ready=False;checkpoint=None
+        if id_ not in ACTIVE_GROUPS:continue
         if id_ in PILOTS:
             try:
                 _,m=group_record(id_);ready=True;checkpoint=dict(seed=m['seed'],episodes=m['trained_episodes'],actor_sha256=m['actor_sha256'],config=m['config'])
@@ -33,7 +35,7 @@ def catalog():
     return dict(version='hyra-eight-workbench-v3',tasks=[dict(id=k,label=v) for k,v in TASKS.items()],groups=groups,
         actions=list(ACTIONS),default_task='exploration',default_group='B3',default_mode='rule',
         defaults=dict(exploration=asdict(ExplorationConfig()),exploration_rescue=asdict(RescueConfig())),
-        scope='八方向工程工作台。规则核查不计入六组模型结果；现有模型仅完成12回合贯通训练。')
+        scope='八方向工程工作台。规则核查不计入模型结果；现有模型仅完成12回合贯通训练。')
 
 def registered_scenes():
     from hyra_uav.experiments import available_scenes
@@ -61,7 +63,7 @@ def validate(data):
     if not isinstance(data,dict):raise ValueError('任务参数必须是对象')
     if set(data)-{'scene','task','group','mode','config'}:raise ValueError('包含未知工作台参数')
     task=data.get('task');group=data.get('group');mode=data.get('mode')
-    if task not in TASKS or group not in LABELS or mode not in ('rule','model'):raise ValueError('请选择有效任务、六组之一及运行方式')
+    if task not in TASKS or group not in ACTIVE_GROUPS or mode not in ('rule','model'):raise ValueError('请选择有效任务、B3/D/P组别及运行方式')
     scene=next((s for s in registered_scenes() if s['id']==data.get('scene')),None)
     if scene is None:raise ValueError('洪水过程不存在，请刷新列表')
     values=data.get('config',{})

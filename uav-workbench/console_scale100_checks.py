@@ -27,9 +27,9 @@ class ContractChecks(unittest.TestCase):
         with self.assertRaises(ValueError):
             contract.validate(data)
 
-    def test_rule_has_no_model_attribution_for_all_twelve_choices(self):
+    def test_rule_has_no_model_attribution_for_active_choices(self):
         for task in contract.TASKS:
-            for group in contract.LABELS:
+            for group in contract.ACTIVE_GROUPS:
                 data = self.payload(task, group)
                 data['config'] = dict(seed=47)
                 result = contract.validate(data)
@@ -38,6 +38,12 @@ class ContractChecks(unittest.TestCase):
                 self.assertEqual(result['config']['seed'], 47)
                 self.assertEqual(result['training_seed'], 11)
                 self.assertEqual(result['config']['n_targets'], 0 if task == 'exploration' else 5)
+
+    def test_catalog_and_requests_only_allow_three_active_groups(self):
+        self.assertEqual([g['id'] for g in contract.catalog()['groups']], ['B3', 'D', 'P'])
+        for group in ('B0', 'B1', 'B2'):
+            with self.subTest(group=group), self.assertRaises(ValueError):
+                contract.validate(self.payload(group=group))
 
     def test_wrong_environment_is_rejected(self):
         for key, value in dict(duration_s=250, step_s=10, sense_width=7,
@@ -60,7 +66,7 @@ class ContractChecks(unittest.TestCase):
 
     def test_unreleased_models_cannot_run(self):
         for task in contract.TASKS:
-            for group in contract.LABELS:
+            for group in contract.ACTIVE_GROUPS:
                 data = self.payload(task, group)
                 data['mode'] = 'model'
                 # Independent of whether a release is published in a later run.

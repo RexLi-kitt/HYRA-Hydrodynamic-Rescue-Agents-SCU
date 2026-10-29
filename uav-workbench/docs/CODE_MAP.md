@@ -9,6 +9,7 @@
 | 页面、HTTP状态及下载入口 | [server.py](../hyra_workbench/server.py) | 路由、请求大小与来源检查、错误响应、仅本机监听 |
 | 场景属于哪一研究方案 | [profiles.py](../hyra_workbench/profiles.py) | 同一登记表对应场景前缀、原契约和执行脚本；无训练导入 |
 | 执行、并发和运行日志 | [jobs.py](../hyra_workbench/jobs.py) | 原契约校验、一次一项任务、独立Python进程、失败日志、回放摘要 |
+| 大范围水情规则原型执行 | [large_flood_jobs.py](../hyra_workbench/large_flood_jobs.py) | 参数校验、共享任务锁、子进程和回放地址 |
 | 工作区与页面资源位置 | [paths.py](../hyra_workbench/paths.py) | 按文件位置定位，避免依赖调用目录 |
 | 桌面快捷方式与旧导入 | [console_app.py](../console_app.py)、[console_scale100_app.py](../console_scale100_app.py) | 保留旧入口，转入同一现行实现 |
 | 页面内容、交互和样式 | [HTML](../console-static/workbench-scale100.html)、[JS](../console-static/workbench-scale100.js)、[CSS](../console-static/workbench.css) | 当前实际提供的三份页面资源；本次未更改内容 |
@@ -40,7 +41,7 @@
 | `scale100_publish.py`、`scale100_report.py`、`scale100_round_completion.py` | 已登记发布、报告及当轮证据封装 |
 | `tools/` | 按用途查[工具导航](../tools/README.md) |
 
-这些研究文件暂不整体搬目录：已有模型元数据、源码清单和封存归档按相对路径及摘要核对，部分脚本还按自身文件位置寻找输入。移动或改写需要作为新的研究版本登记。本次将可独立整理的现行HTTP实现集中到新包，保留原研究文件的字节与路径。
+这些研究文件暂不整体搬目录：已有模型元数据、源码清单和封存归档按相对路径及摘要核对，部分脚本还按自身文件位置寻找输入。移动或改写需要作为新的研究版本登记。现行HTTP实现集中在应用包；历史复现应使用对应轮次的冻结源码和依赖。
 
 旧封装脚本服务于对应历史轮次；历史归档里的HTTP实现是当时的完整版本。本次新应用的源码清单另见[核验记录](evidence/20261029-code-cleanup/verification.json)，不要将新包与旧归档混装后称为原轮次复现。
 

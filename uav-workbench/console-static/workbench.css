@@ -2,3 +2,15 @@
 
 /* Keep the coordinate bar outside the actual grid so edge agents stay visible. */
 .main-map-wrap{aspect-ratio:auto;min-height:0}#mainMap{height:auto;aspect-ratio:1}.empty-state{position:relative;inset:auto;aspect-ratio:1;height:auto;min-height:280px}.map-coordinate{position:static;border-top:1px solid #c8d6df}
+
+/* HyRA visual identity: navy, flood-blue and quiet control surfaces. */
+:root{--ink:#102846;--muted:#607689;--line:#d4e0e8;--teal:#087c91;color:var(--ink);background:#edf3f6;font-family:"Microsoft YaHei UI","Segoe UI",sans-serif}
+.app-header{height:76px;padding:0 32px;background:#fff;box-shadow:0 2px 12px #0b29400a}
+.brand{gap:15px}.brand-logo{display:block;width:150px;height:65px;object-fit:contain}.brand>span{font-weight:600;letter-spacing:.04em}
+.header-right{gap:20px}.flood-link{font-weight:600;color:#22536c}.flood-link:hover{color:#008da3}
+.workspace{grid-template-columns:310px minmax(0,1fr)}.setup-rail{padding:27px 23px;background:#f8fbfc;border-right:1px solid #d4e1e8}
+.setup-section{border-bottom-color:#dbe7eb}.setup-section h2{font-size:13px;letter-spacing:.02em}.group-choice:has(input:checked){background:#e4f3f5;box-shadow:inset 3px 0 #00a8bd}.primary{background:#0b5266;border-color:#0b5266;padding:13px}.primary:hover:not(:disabled){background:#08798b}
+main{padding:30px 34px}.mission-heading h2{font-size:26px;font-weight:700}.selection-badge{background:#e6f5f6;border-color:#b8dce0}.group-inspector{border-radius:8px;border-color:#d7e4e9;box-shadow:0 3px 12px #16405209}.metrics{background:#fff;border:1px solid #d7e4e9;border-radius:8px;margin:14px 0 22px;padding:17px 20px}.metrics strong{color:#123755;font-size:25px}.main-map-wrap{border:1px solid #bdced8;border-radius:8px;background:#dce8ed;box-shadow:0 8px 25px #133b4e0c}.map-coordinate{background:#f9fcfd}.field-column figure{padding:12px;background:#fff;border:1px solid #d7e4e9;border-radius:8px}.field-column canvas{border-radius:3px}.playback button{border-color:#c3d7df}.map-tabs button[aria-pressed=true]{color:#087c91;border-color:#00adbf}
+@media(max-width:1150px){.workspace{grid-template-columns:280px minmax(0,1fr)}}
+@media(max-width:720px){.app-header{height:auto;min-height:67px;padding:6px 14px;flex-wrap:wrap}.brand-logo{width:112px;height:52px}.header-right{gap:12px}.workspace{display:block}.metrics{padding:14px 10px}.flood-link{font-size:10px}}
+.workbench-switch{display:flex;align-items:center;gap:4px;background:#edf4f6;border:1px solid #d7e6eb;border-radius:6px;padding:3px}.workbench-switch button{border:0;background:transparent;color:#607b8a;font-size:12px;padding:7px 12px;border-radius:4px;white-space:nowrap}.workbench-switch button[aria-pressed=true]{background:white;color:#087c91;font-weight:650;box-shadow:0 1px 4px #092f4212}.large-workspace iframe{display:block;width:100%;height:calc(100vh - 76px);border:0;background:#edf3f6}@media(max-width:720px){.app-header{gap:2px}.header-right{flex-wrap:wrap}.workbench-switch button{font-size:10px;padding:6px}.large-workspace iframe{height:calc(100vh - 72px)}}

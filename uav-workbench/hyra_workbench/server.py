@@ -7,8 +7,9 @@ from urllib.parse import urlparse
 
 from hyra_uav.web import Handler as ArtifactHandler
 from . import profiles
+from .large_flood_jobs import run_large_flood
 from .jobs import JobBusy, JobRunner
-from .paths import STATIC
+from .paths import STATIC, ROOT
 
 JOBS = JobRunner()
 VERSION = 'hyra-eight-workbench-v5'
@@ -24,6 +25,12 @@ STATIC_ROUTES = {
     '/rescue.js': ('workbench-scale100.js', 'text/javascript; charset=utf-8'),
     '/style.css': ('workbench.css', 'text/css; charset=utf-8'),
     '/rescue.css': ('workbench.css', 'text/css; charset=utf-8'),
+    '/large-flood.css': ('large-flood.css', 'text/css; charset=utf-8'),
+    '/large-flood.js': ('large-flood.js', 'text/javascript; charset=utf-8'),
+    '/hyra-logo-light.svg': ('hyra-logo-light.svg', 'image/svg+xml'),
+    '/hyra-logo-dark.svg': ('hyra-logo-dark.svg', 'image/svg+xml'),
+    '/workbench-switch.js': ('workbench-switch.js', 'text/javascript; charset=utf-8'),
+    '/hyra.ico': ('hyra.ico', 'image/x-icon'),
 }
 
 
@@ -31,6 +38,15 @@ class Handler(ArtifactHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         try:
+            if path == '/large-flood':
+                return self.reply((STATIC / 'large-flood.html').read_bytes(), content_type='text/html; charset=utf-8')
+            if path.startswith('/large-flood-runs/'):
+                name = path.removeprefix('/large-flood-runs/')
+                if len(name) == 17 and name.endswith('.json') and all(c in '0123456789abcdef' for c in name[:12]):
+                    file = ROOT / 'generated/large-flood/runs' / name
+                    if file.is_file():
+                        return self.reply(file.read_bytes())
+                return self.reply(dict(error='回放不存在'), 404)
             if path == '/api/console-version':
                 return self.reply(dict(version=VERSION, action_count=8,
                                        profiles=[p.name for p in profiles.PROFILES]))
@@ -52,6 +68,8 @@ class Handler(ArtifactHandler):
             return self.reply(dict(error=str(error)), 400)
 
     def do_POST(self):
+        if urlparse(self.path).path == '/api/large-flood/run':
+            return run_large_flood(self, JOBS)
         if urlparse(self.path).path != '/api/workbench/run':
             return self.reply(dict(error='旧运行入口已停用，请使用八方向工作台'), 410)
         origin = self.headers.get('Origin')
@@ -70,6 +88,7 @@ class Handler(ArtifactHandler):
             return self.reply(dict(error='回放生成超时，未得到完整结果'), 504)
         except Exception as error:
             return self.reply(dict(error=str(error)), 500)
+
 
 
 def serve(port=8767):

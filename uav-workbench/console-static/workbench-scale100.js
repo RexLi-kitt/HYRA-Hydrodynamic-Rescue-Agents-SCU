@@ -6,11 +6,12 @@ const statuses={move:'移动中',boundary:'边界受阻',obstacle:'障碍受阻'
 const pct=v=>v==null?'—':`${(v*100).toFixed(1)}%`;
 const selected=name=>document.querySelector(`input[name="${name}"]:checked`)?.value;
 const group=()=>catalog?.groups.find(g=>g.id===selected('group'));
+const displayGroup=id=>isRoutes()?id:({B3:'A',D:'B',P:'C'}[id]||id);
 const scene=()=>scenes.find(s=>s.id===$('sceneSelect').value);
 const isRoutes=()=>scene()?.kind==='synthetic_signal_routes_swe';
 const isScale=()=>['synthetic_scale100_swe','synthetic_signal_routes_swe'].includes(scene()?.kind);
 function activateScene(reset=false){const next=isRoutes()?routeCatalog:isScale()?primaryCatalog:legacyCatalog;const changed=catalog!==next;catalog=next;if(reset||changed){setConfig(catalog.defaults[selected('task')]);if(!isScale())clampDuration();}fillGroups();controls();}
-function requestedConfig(){const task=selected('task'),g=selected('group');const basic={step_s:5,duration_s:Number($('duration').value),sense_width:5,service_s:Number($('service').value),n_targets:task==='exploration'?0:Number($('targets').value),obstacle_fraction:Number($('obstacles').value)/100,seed:Number($('seed').value)};return isScale()?{...basic,n_agents:2,task:task==='exploration'?'E1':'E2',representation:['B0','B2'].includes(g)?'raw':'gmrf',service_depth_limit_m:.08,service_speed_limit_m_s:.3}:basic;}
+function requestedConfig(){const task=selected('task');const basic={step_s:5,duration_s:Number($('duration').value),sense_width:5,service_s:Number($('service').value),n_targets:task==='exploration'?0:Number($('targets').value),obstacle_fraction:Number($('obstacles').value)/100,seed:Number($('seed').value)};return isScale()?{...basic,n_agents:2,task:task==='exploration'?'E1':'E2',representation:'gmrf',service_depth_limit_m:.08,service_speed_limit_m_s:.3}:basic;}
 
 function node(tag,text,className){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(className)e.className=className;return e;}
 async function api(path,body){const response=await fetch(path,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{});const value=await response.json();if(!response.ok)throw Error(value.error||`请求失败 ${response.status}`);return value;}
@@ -18,8 +19,8 @@ function status(message,error=false){$('runStatus').textContent=message;$('runSt
 function payload(){return {scene:$('sceneSelect').value,task:selected('task'),group:selected('group'),mode:selected('mode'),config:requestedConfig(),...(isScale()?{training_seed:Number($('trainingSeed').value)}:{})};}
 function signature(value){return JSON.stringify(value,(_,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b))):v);}
 function fillGroups(){const current=catalog.groups.some(g=>g.id===selected('group'))?selected('group'):catalog.default_group;const labels=[];
- for(const g of catalog.groups){const label=node('label',undefined,'group-choice'),radio=node('input');radio.type='radio';radio.name='group';radio.value=g.id;radio.id=`group-${g.id}`;radio.checked=g.id===current;label.append(radio,node('span',g.id,'choice-code'));
-  const title=node('span',g.label,'choice-name');const subtitle=g.description|| (g.id==='B0'?'原始观测基线':g.id==='B1'?'检验GMRF空间编码':g.id==='B2'?'检验惊奇增强':g.id==='B3'?'联合基础方法':g.id==='D'?'共同数据监督':'水动力物理约束');title.append(node('small',subtitle));label.append(title,node('span','','choice-status'));labels.push(label);
+ for(const g of catalog.groups){const label=node('label',undefined,'group-choice'),radio=node('input');radio.type='radio';radio.name='group';radio.value=g.id;radio.id=`group-${g.id}`;radio.checked=g.id===current;label.append(radio,node('span',displayGroup(g.id),'choice-code'));
+  const title=node('span',g.label,'choice-name');const subtitle=g.description||({B3:'联合基础方法',D:'共同数据监督',P:'水动力物理约束'}[g.id]||'');title.append(node('small',subtitle));label.append(title,node('span','','choice-status'));labels.push(label);
  }$('groupList').replaceChildren(...labels);
 }
 function setConfig(c){$('duration').value=c.duration_s;$('seed').value=c.seed;$('targets').value=c.n_targets||5;$('service').value=c.service_s;$('obstacles').value=c.obstacle_fraction*100;}
@@ -39,12 +40,12 @@ function controls(){
  if(isScale()){const p=catalog.training_progress;$('trainingProgress').textContent=catalog.released?(isRoutes()?'三路径模型已完成24项训练、1944项评价与独立验收。':'正式模型已完成训练、留出评价与回放复核。'):`正式训练累计完成 ${p.completed}/${p.expected} 项；模型尚未发布，可先运行规则核查。`;}
  $('scopeText').textContent=isRoutes()?'三路径仅提供100米探索—搜救模型。本轮R1/R3拟合为零耦合；R2为标量均值校正，未证实方向性或可靠施救增益。这里运行的是已封存模型，交互回放不计入正式评价。':isScale()?'100×100米，双机、900秒、5秒一步；直向1米/秒，对角约1.41米/秒。场景种子生成本次任务；模型训练种子选择已有权重。人员、水流与障碍均为合成场景；施救阈值仅为实验条件。交互运行不计入正式评价。':'当前使用所选洪水过程的原始网格。已有32×32搜救模型为12回合工程检查点；大地图可运行规则核查。100米正式模型不用于未经验证的其他尺度。';
  for(const input of document.querySelectorAll('input[name="task"],input[name="group"],input[name="mode"]'))input.disabled=busy;
- $('studyProfile').disabled=busy;document.querySelector('input[name=task][value=exploration]').disabled=busy||isRoutes();$('groupCount').textContent=isRoutes()?'三条路径 + 基线与对照':'六组共同对照';$('groupHelp').textContent=isRoutes()?'选择R1、R2或R3运行对应冻结模型。下方保留共同基线与水情置乱对照。':'组别可随时选择。能否运行模型取决于当前任务的检查点状态。';$('sceneSelect').disabled=busy;$('refreshScenes').disabled=busy;$('exportConfig').disabled=busy||!s;
+ $('studyProfile').disabled=busy;document.querySelector('input[name=task][value=exploration]').disabled=busy||isRoutes();$('groupCount').textContent=isRoutes()?'三条路径 + 基线与对照':'A / B / C';$('groupHelp').textContent=isRoutes()?'选择R1、R2或R3运行对应冻结模型。下方保留共同基线与水情置乱对照。':'组别可随时选择。能否运行模型取决于当前任务的检查点状态。';$('sceneSelect').disabled=busy;$('refreshScenes').disabled=busy;$('exportConfig').disabled=busy||!s;
  $('applyCheckpoint').hidden=!locked||isScale();$('applyCheckpoint').disabled=busy;
  $('parameterSummary').textContent=`${$('duration').value}秒 / 5秒一步`;
  if(s)$('sceneMeta').textContent=`${s.grid.shape.join('×')}格 · ${s.grid.dx_m}米格距 · 实际过程${s.duration_s}秒${s.duration_s<250?'。短过程仅适合接口核查。':'。保持原网格。'}`;
  for(const label of $('groupList').querySelectorAll('.group-choice')){const data=catalog.groups.find(x=>x.id===label.querySelector('input').value),badge=label.querySelector('.choice-status');const ready=data.tasks[task].ready&&(isScale()||(s?.grid.shape.join(',')==='32,32'&&s.grid.dx_m===5&&s.duration_s>=250));badge.textContent=ready?(isScale()?'已发布':'工程模型'):(isScale()?'训练/评价中':'无匹配模型');badge.classList.toggle('pilot',ready);}
- $('selectedGroupId').textContent=g?.id||'';$('selectedGroupLabel').textContent=g?.label||'';
+ $('selectedGroupId').textContent=g?displayGroup(g.id):'';$('selectedGroupLabel').textContent=g?.label||'';
  const tags=g?.tags|| (g?[g.representation==='dual_gmrf'?'双层GMRF':'同源原始观测',g.surprise?'惊奇增强':'基础QMIX',g.auxiliary==='none'?'无辅助':g.auxiliary==='data'?'数据辅助':'数据 + 物理约束']:[]);
  $('componentTags').replaceChildren(...tags.map(x=>node('span',x)));
  let runnable=!!s&&!!g,reason=cap?.reason||'';if(!isScale()&&!cap?.ready)reason='当前原始网格没有匹配的组别模型；100米模型仅用于登记的20×20场景。';
@@ -75,7 +76,7 @@ async function loadReplay(url,id){const value=await api(url);if(value.schema!=='
  for(const [id,name] of [['downloadReplay','replay'],['downloadActions','actions'],['downloadObservations','observations'],['downloadAudit','audit']])$(id).href=`/runs/${runId}/${name}.json`;
  $('missionTitle').textContent=value.task_label;$('missionDescription').textContent=value.execution.mode==='rule'?'当前回放使用八向规则，记录实际探索、观测和任务交互。':value.execution.model_formal?'当前回放使用经过统一预算训练与独立评价的所选组模型。':'当前回放使用八动作工程检查点，尚未验证策略收敛。';
  $('selectionBadge').textContent=value.execution.mode==='rule'?'实际运行：规则核查':`实际运行：${value.group}${value.execution.model_formal?'模型':'工程模型'}`;
- $('resultScope').textContent=value.execution.mode==='rule'?'规则核查，未计入六组模型结果':value.execution.model_formal?`训练种子 ${value.execution.training_seed} / 场景种子 ${value.execution.scenario_seed} / 选中第${value.execution.selected_episode}回合；本次为交互回放`:'12回合工程检查点，未计入正式实验';
+ $('resultScope').textContent=value.execution.mode==='rule'?'规则核查，未计入模型结果':value.execution.model_formal?`训练种子 ${value.execution.training_seed} / 场景种子 ${value.execution.scenario_seed} / 选中第${value.execution.selected_episode}回合；本次为交互回放`:'12回合工程检查点，未计入正式实验';
  $('provenance').textContent=`${value.scene.name} / ${value.task_label} / ${value.method} / 过程 ${value.source_sha256.slice(0,12)}${value.execution.actor_sha256?' / 模型 '+value.execution.actor_sha256.slice(0,12):''} / 运行 ${runId}`;
  $('signalMapTitle').textContent=value.execution.signal_route?(value.execution.signal_route==='Braw'?'实际采集信号':'人员信号后验 · '+value.execution.signal_route):'人员信号 GMRF';$('signalHint').textContent=value.execution.signal_route&&value.execution.signal_route!=='Braw'?'策略使用的后验均值；估计不刷新实采记录':value.task==='exploration'?'自主探索无人员信号源':'实际采集记录对应的信号诊断';
  render();dirtyNotice();
