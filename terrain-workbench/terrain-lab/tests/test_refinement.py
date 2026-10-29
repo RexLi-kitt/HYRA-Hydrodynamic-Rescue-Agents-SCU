@@ -143,7 +143,8 @@ class RefinementTests(unittest.TestCase):
         self.assertEqual(world.meta['refinement']['minimum_cell_width_m'],s.dx)
         self.assertNotIn('M_mesh',world.snapshot())
         self.assertNotIn('refinement_level',world.snapshot()['M_base'])
-        with tempfile.TemporaryDirectory(dir=ROOT/'.runtime') as tmp:
+        # Export fixtures need no repository-local writes.
+        with tempfile.TemporaryDirectory(prefix='hyra-refinement-') as tmp:
             root=Path(tmp);reply=map_sessions.browser_scene(root,'mesh-test',world,pack_threshold=0)
             self.assertNotIn('M_mesh',reply)
             result=map_sessions.run(root,'mesh-test',world,lambda **_:None,lambda:False)

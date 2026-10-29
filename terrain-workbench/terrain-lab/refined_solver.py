@@ -15,6 +15,9 @@ class RefinedFloodSolver(FloodSolver):
     @classmethod
     def from_solver(cls,solver,mask):
         if solver.time!=0:raise ValueError('加密网格必须在模拟开始前建立')
+        # These experimental closures exist only in the native-grid flux path.
+        if solver.open_boundary_mode != 'outflow_only' or solver.wall_flux_mode != 'hydrostatic':
+            raise ValueError('Refined mesh does not support experimental open_boundary_mode or wall_flux_mode; use the native grid')
         obj=cls.__new__(cls);obj.__dict__=solver.__dict__.copy()
         obj.mesh=m=LeafMesh(mask,solver.dx,solver.boundary)
         p=m.parent
@@ -229,6 +232,7 @@ class RefinedFloodSolver(FloodSolver):
         if not all(np.isfinite(v) and v>=0 for v in (dt,rain,infiltration,inflow)) or dt==0:raise ValueError('Invalid step or forcing')
         if inflow and (source is None or len(source)!=2 or not all(isinstance(v,(int,np.integer)) and 0<=v<n for v,n in zip(source,self.h.shape)) or self.solid[source]):
             raise ValueError('Inflow requires a valid non-solid source cell')
+        if self.steps == 0: self._record_speed_peak()
         self.source_rate=self._scheduled_rate(self.time);self.external_rate=self._external_rate(self.time)
         self._leaf_drag(.5*dt);initial={k:self.leaf[k].copy() for k in ('h','mx','mz')};before=dict(self.balance)
         inlet0,states0=self.boundary_forcing();flux0,adjust0=self._transport(dt,inlet0)
@@ -260,6 +264,7 @@ class RefinedFloodSolver(FloodSolver):
         np.maximum(self.leaf['maximum'],h,out=self.leaf['maximum'])
         if not all(np.isfinite(self.leaf[k]).all() for k in ('h','mx','mz')):raise RuntimeError('Non-finite refined hydraulic state')
         self.time+=dt;self.steps+=1;d=self.diagnostics
+        self._record_speed_peak()
         d['min_dt_s']=dt if d['min_dt_s'] is None else min(d['min_dt_s'],dt);d['max_dt_s']=max(d['max_dt_s'],dt)
         self.qx=m.face_projection(self.face_mass_flux,1);self.qy=m.face_projection(self.face_mass_flux,0);self._sync()
 

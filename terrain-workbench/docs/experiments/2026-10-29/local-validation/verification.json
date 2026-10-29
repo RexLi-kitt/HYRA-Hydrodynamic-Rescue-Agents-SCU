@@ -1,0 +1,62 @@
+{
+  "checks": {
+    "complete": true,
+    "finite": true,
+    "nonnegative": true,
+    "mass_residual_below_1e_6": true,
+    "no_numerical_added_water": true,
+    "all_40_points": true,
+    "saved_fields_finite": true,
+    "saved_depth_nonnegative": true
+  },
+  "common_direction_points": 37,
+  "common_direction_mae_coarse": 26.7106373882729,
+  "common_direction_mae_fine": 24.667583780102564,
+  "largest_degradations": [
+    {
+      "id": "16-F",
+      "observed": 1.1,
+      "coarse": 1.6753887398215122,
+      "fine": 2.3409954897389533,
+      "coarse_depth": 0.3475490890693808,
+      "fine_depth": 0.2542147444564218,
+      "absolute_error_change": 0.6656067499174412
+    },
+    {
+      "id": "14-G",
+      "observed": 0.9,
+      "coarse": 1.593154388134372,
+      "fine": 2.229086445750047,
+      "coarse_depth": 0.7212628142869676,
+      "fine_depth": 0.4713476042579543,
+      "absolute_error_change": 0.6359320576156754
+    },
+    {
+      "id": "16-H",
+      "observed": 1.2,
+      "coarse": 1.0229735368796395,
+      "fine": 0.6241731390780271,
+      "coarse_depth": 0.2679057741085288,
+      "fine_depth": 0.04513111635984809,
+      "absolute_error_change": 0.39880039780161247
+    },
+    {
+      "id": "15-H",
+      "observed": 1.5,
+      "coarse": 2.365836841253654,
+      "fine": 2.646824158870999,
+      "coarse_depth": 0.3714236567913274,
+      "fine_depth": 0.3095008798893618,
+      "absolute_error_change": 0.28098731761734497
+    },
+    {
+      "id": "22-D",
+      "observed": 0.6,
+      "coarse": 1.3492626676089705,
+      "fine": 1.5530161288493096,
+      "coarse_depth": 1.0191590543057758,
+      "fine_depth": 1.0146405266111815,
+      "absolute_error_change": 0.2037534612403391
+    }
+  ]
+}

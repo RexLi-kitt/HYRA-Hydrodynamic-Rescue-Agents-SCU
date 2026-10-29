@@ -31,12 +31,9 @@ def run(args,source,provenance,factor,n):
     folder=args.output/f'f{factor}-n{n:g}{variant}';folder.mkdir(parents=True,exist_ok=True)
     world=map_sessions.create(LAB,server.describe(tid),scene);solver=world.solver
     points=merewether.observations(source);ymax=solver.h.shape[0]*solver.dx
-    indices=[(int((ymax-p['y_m'])/solver.dx),int(p['x_m']/solver.dx)) for p in points]
-    iz,ix=np.array(indices).T
-    if any(not 0<=z<solver.h.shape[0] or not 0<=x<solver.h.shape[1] for z,x in indices):raise ValueError('Measured point outside imported DEM')
-    stage=np.loadtxt(source/'merewether.stage',skiprows=1)
-    sz=(ymax-stage[:,1]).astype(float)//solver.dx;sx=stage[:,0]//solver.dx
-    sz,sx=sz.astype(int),sx.astype(int)
+    iz,ix=merewether.measurement_indices([(p['x_m'],p['y_m']) for p in points],solver.h.shape,solver.dx)
+    stage=np.atleast_2d(np.loadtxt(source/'merewether.stage',skiprows=1))
+    sz,sx=merewether.measurement_indices(stage[:,:2],solver.h.shape,solver.dx)
     maxima=np.zeros(len(points));umax=np.zeros(len(points));vmax=umax.copy();max_at=umax.copy()
     max_h=umax.copy();records=[];frames=[];previous_h=None;checks=[];steady_count=0
     checkpoint_step=max(1,args.duration/8);next_frame=0;last_print=0;last_checkpoint=0
@@ -137,7 +134,7 @@ def run(args,source,provenance,factor,n):
         rows.append(dict(**p,model_max_speed_m_s=float(maxima[i]),model_u_at_max_m_s=float(umax[i]),
             model_v_at_max_m_s=float(vmax[i]),speed_error_m_s=float(maxima[i]-p['speed_m_s']),
             direction_error_deg=delta,time_of_model_max_s=float(max_at[i]),max_depth_m=float(max_h[i]),
-            sampled_bed_m=float(solver.bed[indices[i]]),grid_row=int(iz[i]),grid_col=int(ix[i])))
+            sampled_bed_m=float(solver.bed[iz[i],ix[i]]),grid_row=int(iz[i]),grid_col=int(ix[i])))
     err=np.array([r['speed_error_m_s'] for r in rows]);directions=[abs(r['direction_error_deg']) for r in rows if r['direction_error_deg'] is not None]
     balance=solver.summary()['balance'];complete=bool(abs(solver.time-args.duration)<1e-7)
     result=dict(factor=factor,dx_m=solver.dx,shape=list(solver.h.shape),n=n,duration_s=solver.time,requested_duration_s=args.duration,
