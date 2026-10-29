@@ -1,0 +1,112 @@
+{
+  "schema": "hyra-sur-adaptation-preflight-design-v1",
+  "status": "design recorded before any new policy training; freeze executable hashes after trainer implementation",
+  "purpose": "engineering and resource validation, not original-paper performance reproduction or confirmatory physics study",
+  "methods": [
+    "QMIX",
+    "Sur-QMIX-adapted"
+  ],
+  "seeds": [
+    11
+  ],
+  "training_episodes_per_method": 12,
+  "training_joint_steps_per_method": 720,
+  "total_training_joint_steps": 1440,
+  "evaluation_events": [
+    "slow",
+    "rapid",
+    "async"
+  ],
+  "evaluation_episodes_per_method": 3,
+  "total_evaluation_joint_steps": 360,
+  "data": [
+    {
+      "id": "slow",
+      "path": "fixtures/slow/map-result.zip",
+      "sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b",
+      "role": "previously seen engineering development only"
+    },
+    {
+      "id": "rapid",
+      "path": "fixtures/rapid/map-result.zip",
+      "sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83",
+      "role": "previously seen engineering development only"
+    },
+    {
+      "id": "async",
+      "path": "fixtures/async/map-result.zip",
+      "sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa",
+      "role": "previously seen engineering development only"
+    }
+  ],
+  "n_agents": 2,
+  "config": {
+    "speed_m_s": 2.5,
+    "angular_speed_deg_s": 9.0,
+    "range_m": 25.0,
+    "fov_deg": 90.0,
+    "action_s": 10.0,
+    "sample_s": 5.0,
+    "duration_s": 600.0,
+    "history_length": 4,
+    "age_weight": 0.5
+  },
+  "team": {
+    "separation_m": 2.0,
+    "distance_cost_per_m": 2e-05,
+    "turn_cost_per_s": 2e-05,
+    "collision_cost": 0.005
+  },
+  "starts": "(0,0,heading0), (0,(nz-1)*dx,heading0), identical across groups",
+  "actor": {
+    "image_shape": [
+      16,
+      7,
+      7
+    ],
+    "pose_dim": 6,
+    "n_actions": 4,
+    "embed": 32,
+    "hidden": 64,
+    "cnn_channels": [
+      16,
+      16
+    ],
+    "shared_weights": true
+  },
+  "mixer": {
+    "source": "unmodified pinned PyMARL QMixer",
+    "mixing_embed": 32,
+    "hypernet_hidden": 64,
+    "hypernet_layers": 2,
+    "state": "training-only pooled depth8x8 + static bed8x8 + each agent normalized xy/sin/cos + normalized physical time"
+  },
+  "training": {
+    "optimizer": "RMSprop",
+    "lr": 0.0001,
+    "alpha": 0.99,
+    "eps": 1e-05,
+    "gamma": 0.99,
+    "batch_episodes": 4,
+    "replay_capacity_episodes": 32,
+    "updates_per_episode_after_warmup": 1,
+    "target_update_every_optimizer_steps": 4,
+    "gradient_norm_clip": 10,
+    "recurrent_training": "full 60-decision sequences, valid masks exclude padding from TD and Sur normalization",
+    "epsilon": "linear from1.0 to0.1 over12 episodes",
+    "double_q": true,
+    "cutoff": "finite task horizon: no bootstrap beyond600s although API marks time cutoff as truncated",
+    "surprise": "training current-Q branch only; no higher-order gradient; fixed unit ones direction; clean action selection and targets"
+  },
+  "checkpoint": "save actor,target,mixer,optimizer,replay,episode/step counters,numpy RNG and torch CPU/CUDA RNG; planned stop after6 and resume through12; no extra training episodes",
+  "selection": "last registered checkpoint only; no development sweeps and no heldout selection",
+  "acceptance": [
+    "joint clocks and collision tests",
+    "hidden-current/future actor invariance",
+    "Sur finite-difference gradient and clean execution",
+    "finite TD and parameter updates in both groups",
+    "checkpoint action roundtrip and exact optimizer/RNG/replay resume test",
+    "actual capacity, environment/update counts, wall time and peak CPU/GPU memory archived"
+  ],
+  "limits": "One seed and12 episodes only verify execution and resource feasibility. Formal multi-seed physics study requires separate preregistration, new mother terrains and genuinely new forcing shapes; no efficacy claim from this preflight."
+}

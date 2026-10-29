@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "health": [
+    {
+      "url": "http://127.0.0.1:8766/maps.html",
+      "status": 200,
+      "bytes": 24261
+    },
+    {
+      "url": "http://127.0.0.1:8767/",
+      "status": 200,
+      "bytes": 5640
+    },
+    {
+      "url": "http://127.0.0.1:8768/",
+      "status": 200,
+      "bytes": 2919
+    }
+  ],
+  "browser": "Actual in-app browser,local127.0.0.1",
+  "actions": [
+    "example actual121frame loading",
+    "local file chooser successfully loaded actual file before earlier interruption",
+    "time0/300/600matches original replay",
+    "next/previous5s frame",
+    "play/pause with clock advancement",
+    "390x844responsive layout,scrollWidth=clientWidth=390",
+    "viewport reset,tab kept as deliverable",
+    "no console errors or warnings"
+  ],
+  "snapshots": {
+    "fit-qmix-600.png": "08f4212b9c51c16609ea99af04e66bb59ba55a26c15c122b2998516470629a49",
+    "fit-qmix-300.png": "65f43a4168047634e25838f4caaf96b3a7e0b6f7677b8270d8929ab3acb9ea14",
+    "fit-qmix-300-mobile.png": "ed038ae7e81ee082f6fc23d0a81bd5047716a1760972afaa039a6712aa1d25e4"
+  },
+  "validator": {
+    "status": "passed",
+    "valid_frames": 121,
+    "n_agents": 2,
+    "cases": [
+      {
+        "name": "future timestamp",
+        "rejected": true,
+        "error": "观测时间戳与记录状态不一致。"
+      },
+      {
+        "name": "single-agent schema",
+        "rejected": true,
+        "error": "请选择双机回放 JSON；原单机回放格式不能在此页打开。"
+      },
+      {
+        "name": "missing true frame",
+        "rejected": true,
+        "error": "回放缺少对应的实际帧或共享地图。"
+      },
+      {
+        "name": "unknown refreshed",
+        "rejected": true,
+        "error": "观测时间戳与记录状态不一致。"
+      },
+      {
+        "name": "invalid paid cost",
+        "rejected": true,
+        "error": "回放行动成本记录无效。"
+      }
+    ],
+    "app_sha256": "f6769a482e3818a0bbe04499617bb459f77e5404bdbe8c1e167c3bc6338fb179",
+    "input_sha256": "f10e6d3276c01606332b09d7e04c54990930df5b6fdc87f193c1c6fad6f4b899",
+    "scope": "Actual JS validation routine executed with DOM listener stubs; browser initial/final screenshots and local-file load are separate evidence"
+  },
+  "scientific_scope": "Fit-only engineering demonstration,not extra independent hydraulic events or confirmation efficacy"
+}

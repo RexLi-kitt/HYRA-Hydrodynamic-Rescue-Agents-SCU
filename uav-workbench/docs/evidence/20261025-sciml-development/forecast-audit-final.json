@@ -1,0 +1,4547 @@
+{
+  "status": "passed",
+  "rows": 9720,
+  "reports": [
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.0916922949254513e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "95149bbc2ee2cf461ec10474a7dfb96a7a53b27002582c6a712af6c2f59da1f2",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 6.673508323729038e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "0f4fb02e98a5c65e091753836a34b0f9a763cbac385d5896db10e6004deebdd4",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.0599691197276115e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a49af6443e114ba467fd179ffcd1d3338662992b12ae6e0aa5b175ef48c91cda",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.6408739611506462e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "37313dd8f3f2d5c6ab3c8df24bcaee01bf7ed1b8d308a41e0388271d2904ffdf",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.0675285011529922e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "6a90b2fb205fc95ef065c4c12e1575b3d3be74eddcf505a4778b687576117c63",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 8.183997124433517e-08,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "1343f5aa74d000be216d31d57c7c1a55a4b9cbb9984786ffe1b09149e3a9857e",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.7658749129623175e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "cb3db060ee41614a2d7897b043030767fd764c08fd56feb36083a6ddd6b5f5d0",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.66247171163559e-08,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3a25841306f7b4bce5012eaae0f67ec0b9884bce0b2a071edd1762dc28733fd3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.66247171163559e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a047c737cdf83a9b4d08441c98f97425d3d0e0c6c7d532e96f51f84aa58317f5",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.9802246242761612e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "fe58545eca9c42495aa68088abd98416c9801896e99b6faec7b59866f384910d",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.128646545112133e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f9f27db0b3a90873068d1c279108ef866be09eb60f80fdd2301cd64597610d7c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.9941944628953934e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "b135d5328d8450972e615134595afb8d363421ff35814a2c01e577a2332fa437",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.0826701074838638e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "6b86d8c20b058b9e11a3afd983d82be593a036b81cefae53c05e330e0efca690",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.564621925354004e-07,
+        "physical_rate_loss": 2.7939677238464355e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "e49a1d64a245c233059cbcc0c900bd0dadaeaa26fbed0183e129cd0f7e69ddf1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.564621925354004e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "ed00477e057fa98112047d8c7b09ba237d16a40fb566ac6448a0e36cce9b3126",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.9185245037078857e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "49677b6be768831370eb7a4255ed2388ef465f55fb1756f551cace80ea1be9fc",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.700245775282383e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "5f16a2448d715db9202dea8de161ca186c8fd425f97a68199f7d82f9e360cb58",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.700245775282383e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "012e91db28e29ddcbc02656a0cf13a3fd144794e380efbdd687c8ffc1e18ca98",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3606116883456707e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "c36053a9b0a6a04fe9290589315bf3afaf11d586e43340a2690bab8992d36a9d",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.9968941817060113e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "177f20b376b21509f6b765e5605d767425e1d29a1b466c419b02d85786feef08",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.0582228899002075e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "7525ac7e520e8b3b222a403528ec9b108b99a7c61e6195f89e1bd57f30bf70e7",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.7031561583280563e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f4afeb4f1becff177ddf3b0d4cb954153b29b091bd57a388c0b6dd0908e52fa8",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.2863893061876297e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "ac1f70a2e06ac4b67545f077a74a4e74b501ac0840bebdd91e055faa221f7652",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1341762728989124e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "2c8b8f784fa2f00a44e980fd3b7922f6444c668508b0075d0018c2febc804cb9",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.154609870165586e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "1db8aa251db1fce4187c45e85b93371695c55799d2491b0af2e44e21ed91938f",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.534414857625961e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "dd0ce35d50848a35bb90cdc688ad6f27eaba1fa177223a5f09d455f577b9af75",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.534414857625961e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "27f42ce0d5e30f74636130262647fe99a2d109c090d6ed45f11ce4ed8c0d4111",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "ada91dc49c851cc901cd6fe1779c14f348b90e2e8e541fc54c8849c3f84de6c9",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.628657966852188e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3379841364d28e60f5feef0c52387e98103cfd46c889b7f56a8811c0f7c191f3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.3066316973418e-07,
+        "physical_rate_loss": 2.9802322387695312e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "4dd9b8d0144a42119c61868aa2e5899acd379113036a6246ff82e32c01abfb77",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.243376553058624e-08,
+        "physical_rate_loss": 2.9802322387695312e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "819ca30415db459390f100c446617747b70d58e93618fff4c6708607a3a37833",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.7345882952213287e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "30a953c6d3bae715a215e706f055acaeb5284f6f1f788368ea9acf492e1105c1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.671724021434784e-07,
+        "physical_rate_loss": 2.9802322387695312e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3083ac8a8b94e8653ce976a4d6fb7457453acd7170369c6945448e013b95dff9",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.1007144823670387e-07,
+        "physical_rate_loss": 2.9802322387695312e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "660483d3fef6f9c1b0847e46ea154929b1cf31df714204b6a84c5e668b2daeb9",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1871452443301678e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "0d5df92424e7930ee7ca6cb26cb4fc20ca3f8111d79445cae33a1c314aa9f79b",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.292792148888111e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "9f4831addd904a08af0052e47f36d9ea6fa794b317598e28c934ba99155675c2",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.292792148888111e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "23058a5f8677f7800d3a0a645b0724a2e49436988328f079472f27ce21a221dc",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.8835999071598053e-07,
+        "physical_rate_loss": 2.9802322387695312e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "92ace396adfe6834a4b8e4019a54358af949ea29f807603b18e9b4d06db248d3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3562461137771606e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "b364b67088d7ba7d14391880ec559c895df259c6a280c9a8e9922cbf6a1e1509",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.4319160729646683e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3d2b806130146e2aad1445f621a1671da213bd47d144fe5c636e4b042a0a0b2c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.644948497414589e-07,
+        "physical_rate_loss": 5.960464477539063e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a51b7c78c098ca15476b1872c1b62d406ffd1347077cc52647a753ee386d8cc1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.1851232051849365e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "40c14d01e22a175450fa5962847ae2ed80e79ab9d6e83ae41523ed686fd32d16",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3544998839497566e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "95a7458a843d4e06296411757e01ae273079e8e1bb3f85148a5895cf79662e0e",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.0867446437478065e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f5ed0a373cce08e7557d552446e85d0728ca931121fee63c31b158f0c62e8f06",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3818574845790863e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "8df66f3b4d2fa4300a39e706dbb4ed7832ad1c4abe8ddf098346fb72af6546ac",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3818574845790863e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "22a630b48cb5a0368d67abf4a60e78780a139b92c43e5453500e6d1d0662c8e7",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.9441358745098114e-07,
+        "physical_rate_loss": 5.960464477539063e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "8024a6ff999013ae998794ed94b0af87633ceb36d566050f1d47427fe5388c3b",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3550819605588913e-07,
+        "physical_rate_loss": 2.9802322387695312e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f6393b26a71051d7cc98e58f725d266fe69b7162ba9481250527570bb4575548",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.8352875486016273e-07,
+        "physical_rate_loss": 2.9802322387695312e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "e6afae09e6fdab000c792e2367d0b2776474ad066878ac8a1a9488f2f63f0780",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.417938619852066e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "fc3edd330d04ad136a397417cd3647ce94ff6da155fa3c9d2cf052b8a8d454e1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.157168298959732e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f2aa95afb424c37a860f97885f7a6df48f5feb73dd3ae0829d833cde9e147c2b",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.064633347094059e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "d87e6145493b0e6ac1c50ae2e9ce605fc1e45bcbc64c310bc03988d93d5fc204",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.574662746861577e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "df55e124e74036ba380f49de96fdb38429cae66d386f5b5593391db87e66f4c2",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.09837856143713e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "40c1e64c247cf3ba0d5acf1fbbf35da777f9e4d623b87662fb7a1416c4c9c204",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.09837856143713e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3e1a0adeaa874e99a7aff22e0df3f00107ff2c966119d1e21736c1829b77edd7",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "889bdffe480e4246550bed6cfa31827a4787339b29eace96a1b7740054e78686",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.0595249477773905e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "54e229790835a87bd05addba83bde9e7b9d6e7d5e051ea8f3a6d37bf74c18b0c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.762527972459793e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "465fa79d20a53083e2e352dc60a31865965db6459a3d40ae0e025fecb15b146f",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2266613086685538e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "d1cb7b5725119cad76acefe9a6b494fda51dd5550fb354d5f2096978725f93c8",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5739351511001587e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "5304279c2ccdd1df32ff97d6bcfc596fc222ffab5d80ab78679afae55fae1169",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.538727130740881e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "4d99c74f55edf43bd525cdf101e95cc409fa0198044becc1896e27d73a8958f2",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1315569281578064e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "19cf1c3a614a0e6984fa286cbeb56622877125f2527a4b88f88f9c0b3a9dcf6c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.359791874885559e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "87978ac22645fb570214709da7b6d5d4cfc6df65cec14c9590cbbfbf0c0671cc",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.0395888239145279e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "05bc00fe8b3f5286a5d62b3c86cb7ccca16b6e2e1823c51aab8adca28249d905",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.0395888239145279e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "8d20bb9d26805de0147aa020f038ba2cf502540cc28ebd1ab46bb65ec4d94d22",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3463508114218712e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "562273c477643e910c3b4da3585f3abf85638233979a71284858aa0eb3b70bb8",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.9674189388751984e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "07a900e6c8994103ebbaf1232da339e701ac0b294db33c9173cc57d869b9c5c1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.560555003583431e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3b1dbb9eb5f633a593e624846b2c30852d0c3de92ebdcce122a152b11ef150c1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.9994331523776054e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "1fd301c57f14adf33c71cc89a5765387519442e523de04fbe5e07f42c897434d",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2171298041939735e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "b42b38d00b9140c78f8e8953ad5e95c360351bcd5cba0d2e8c5465d816942e96",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.903980202972889e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "2d5c45721af1653793a0a6caa3c21f38576e5f6d65b4dfa0880de2d7b7d37521",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.8760329112410545e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f20cfdb2fcc068a150b1a03a578b17fbd59f0407cafabf2f419397ec83d7c508",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.773951225914061e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "247cfa32f20947fc1a13885c242f5cca25e795a172994bca4f7f2f29b108906a",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.773951225914061e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "86edd307c4dc92924115b061c11cf03b6d49082cb36aba691ab1771d8437002a",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2479798644781113e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "851c0e1450ba30df7b45d66a4e0131b5a3fc19b92f6d21be01e30afe3ac15511",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.6350531950592995e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "efbff20ddf9981527dc81edf42a8225567896dca14dc85f3f301dc9e1e60e0d4",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.340239007025957e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "1c2720042609af38d25da0ec6c2c0f1220b073967ce9b46817ce252e165bc905",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.0849907994270325e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "32ab2a0a22007311b32fe3760c131f7a09e790efcb1338ad1581157269fb334f",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1897645890712738e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "481ba0740c2b028beeefbae105ef4b864791e2d792a33fec25b839300ab36305",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.587904989719391e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "b479230b3d7223e66ade2bbeb726e0b6d83136e6b04ff45123960b6f545e807d",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1862721294164658e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "9614e1943544800f02735dd401904832d71ff94509bf67aa3eb745156c133ae6",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2666063159704208e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f8040408230c9481417dc4ea2c45e0a06ae91cf247223d4c7111266b4649c86c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2666063159704208e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "4243e2bd01c3162dc86ba82868d8ef9be15416349f275b7cc999a99adf6bddb4",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "bbfa5c9b150b61df7293d342709be07e1b679f957ae2467aa1754b7197cd9c94",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.0244548320770264e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "57eca352fcfc3c855026eeb20e088a9309969f410a424f078d4b06490973509e",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.4365650713443756e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "7abf3e44d574714006c2726e1f6ea7dbbe801a119a7b684ce54c665ad71bcb26",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.4365650713443756e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "654cc3720c2acde21b9e403b2b654682ea467f985dac3b6c451235582fd3b6a4",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.825453162193298e-08,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "92fe74ff5c52036f80d06c183add78543497862a49f6dd18c18ea2a6159b5d43",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.8998980522155762e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3180de5d7287ad789a68938ae7b8a4cfb86f007bf7e9ca81f75bf7a3a43930e1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.8998980522155762e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "43517101779c34390edfc1e917516145875633d0fe24542a575e4d11a0cb1b89",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 7.707421900704503e-08,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a28747d472ec47f921171c91785b354240628f12424d37205d9b3f9d0b608458",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1776864994317293e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "1ca4fc71e6b7da6e025d758c8124b2482dd2d462ed3cbbc0774aa874a09dc09d",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1776864994317293e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a9f25f5a8d1e3918750c449e3692ceb5a442b8cc92f48b31423121e0a4f69d10",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.4086330085992813e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a741fc798bc7f31630fa27aca457859ea58685bfd847787475f8d64ff920bc55",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5390105545520782e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "8b9f028a23f8e4b65278f62b5bb74eafa84986eeb44eaad42eb15bc9a420f9eb",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5390105545520782e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "7f46de76beadb0d62b1c98b53a0b0e66cc2fa2d20101189d7bda6ace1e3e250c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.474997356534004e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "9152ecefb798316892bece204d04aae2c3250d763822d007a0bbd15826ac21fc",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.423767000436783e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "23a5075f453a055e182979263146e43d674fd017e875cc5319dcf9fe9456efa9",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.423767000436783e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "824c4d1611895fd0aad8f53f8dcb6190df6759d482125b98c14a92b3b1e33593",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.6205012798309326e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "d7faa38752c8b300c625773a6c7dedd804f36a70df8dcd9a87d6a70c032be915",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.94646418094635e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "2ed7e6573c27ea7688a735d741db95c89a927801843186a3444ca84ac3e331ec",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.94646418094635e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "31fad79efdb5177e517db3f0db32e4a0aec8640963d3882c45698ba5c1efe398",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5855766832828522e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "fe19df5f04f8748fd6051b2186c00d8f93211c8ecd4589c1b5872a0e255bd608",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.0157312974333763e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f3e335d3b9456c80e02eab1f67b0f00c4557df46365e9811cb17ddaa58645315",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.6231206245720387e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "48dba5a343cd9ad29b02b35c9ea995ede91dffd9be32692d5d6e1837cd2eecfb",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.782318577170372e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "997f422cef5c1774f02ffd47b11db474d96368a3376b5f89b3d1db272482c1e3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.407461240887642e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "d80d254f9a1c70f3691937826f2cbf14a99ca4dd80cc2d772f59579bdb603878",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5459954738616943e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "09f2eacefc4505e8628d13de9847278cbe82dcadb76e89bf90391380a5adbf68",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 8.541974239051342e-08,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "cffda3a0fab587984ca19793ef5caa07fcf0af6ead84a9ca9a7162e967655a62",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.206790329888463e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "ccf9fca2c10312089d4dd62d73e8cf989b1060f5ee417beee706af78ef0119b3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.206790329888463e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "0cde8dfea4efe18135df47aef06e937cff0f5decf9fd1a5138b5501d673980c9",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "8320cf9ff3a8f0e69028572a18b6ec1b1f5df90bf6ebc73e2a26423c5cf33562",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.399610821157694e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "54c88b0bc43be881b95fe26bf92b2bbadf700f9f958ffbf5d49bea5c2c3b1de1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.878943294286728e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "0d654cce2620faa94787fbe6e91c9cf9eeb99c91309c06bdbe4f7345171fc2db",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.878943294286728e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "3ef9d2fb1c16850596a48b5880d46a694934c327a3dacc3f7bbade9c3faf05c3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.825392246246338e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "59a8a44c8ec14585521a771656193fb53744367a1e38e81348c2cfbe13ea720b",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5366822481155396e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f290275a1fc3c524bc1758b85611962e9584782663c0bac081a16aa74be6006b",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.1443702280521393e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "91b16691892cf32a3b106dcedcd4f621f1ecd6e46f3a1f31295659ef3f24fde4",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.3224780559539795e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "ce9f19bf2fcdaa8ec28192ca9005020837d60c4a55d07d9b92033fbd52701cc1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.7666025087237358e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "7bdf1e23d51394d73e4522306378a3b74e6b0268cde5fa08d2fb751bd0ae9758",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.7666025087237358e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "243f95946b0262bb35bb60351e90bd2854ba633b7f1811a32aa51bde85fcd8ea",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.259912434965372e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "73c4af81ce25d25cc548c09631b843e14c03e7d9d9bf267e5bc02d327c9a0504",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.3440225049853325e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f2ee85e207be94f3416ebb43cd0219cbd1bd05bdd4842e9d872d8368672e52d4",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.544831320643425e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "57e83f12d2453b10893c66427a8fb3c84ca4d846f76b01b3500142fb6d34279c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2677704691886902e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "c447c26529b54f70796cebf62f7508eaa1ddc4189c82714b93f28defe85e4dc3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.2177194952964783e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "90f867abcd388855281f83f07edcf72c8c0fb9e453604e4a0d6535fef87cd6da",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.19675712287426e-07,
+        "physical_rate_loss": 1.4901161193847656e-08,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "375f27c3a854dca061ec9143ca09f05fa0ebe1769924135435697502e8360b33",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1106021702289581e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "bd36d861f7a2808e09e26cebbc9deb310cbf68787f2d6fcd539e80adb3f0b425",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5001569408923388e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "ba68f486668c18a5a838e4b98d4bd26e9c92fdd4cac39944340334a5e6b63710",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5001569408923388e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "7245ea7374eb63f506a76e9debd6f5e37e567387525b75e5d7d837698b2dfe8e",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.07220034301281e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "059c1f430110ef755f0ed232d207fe4fba19e28cc067b386bb97653f8211b31d",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.250744728371501e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "20f4f274678a24342cd763918c244e2afe222d7013264f92f28628e67a5a2b22",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2910535335540771e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "c9e6a65b36a887ae621643ee79c5d71882054a01e9eee6be6b1208314adc2cfe",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.182197593152523e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "185755e461fc1cc9ad05b82733bdc53d65a9b4e1035a5045bd84b27d4a07ab80",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.0780134946107864e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "434ad29e4669d76460e805d1bbb18935ee382316751aaebce37a466b42e28103",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1098745744675398e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "7467d56457c89b0849c222b6aa843a9645cce3d22c0e2bd11632a5832cf3aafa",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.94646418094635e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "0f0e608a2bfe8d4a328871364f29b34cd53de45643691f59f830aa47c3771f59",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1827796697616577e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "7a4cd07ccb367ef42dc7f1b547db93b63b5bdc5f16e7f91ace97972ddbb6be73",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1827796697616577e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "d8f2f8f405f2b7498771e0f8a7948e5e7a09e8be890aa26fb2bbf459672813ce",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "6c968ee4464818467d504ad64d5e57a9810117d1f60ec67173908cc8d2c85e69",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.941225491464138e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a0a5c390607829190d002690cb1d68f046aede325ee5ac235c9194d408042c0c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.2293457984924316e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f21ed53ae145b8daafb260d244ad0678961d40864a61de71ffa02d8ae09cb728",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.99564965441823e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "2fd56693752097cba317b094ba50796bb56f3200d8234965891759eaa9dbe21e",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "0698722777c4ce9b50a72c4aff0622787d7fbb90ebbfe74c1b7fe964d7e3740b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.7974525690078735e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "c76c1d1361abb07768c6d0d35a13ea46b642d131dd72058e7c474bbeebe4f332",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.952292561531067e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "bda023877ab8af415e04d48e57d68c715777b0f01c50d08d40160ed0447d457d",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.621673047542572e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "2f51dc7cf41e7504d53ef233b08066f354a9e80967800b227cfeb5ebe3cd2682",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "d80cd56908602368d5c6b7d4504ce51fcdfabc5fb170b972823432148e83dc23"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.7695128917694092e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "566d7e6fd7949afb5d149622c8c83e33a8b46f6e3a1f8456d512a8440adb65b8",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.4365650713443756e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "99e3bd342b7abc7a2d67542668782073d47fba325b2dfc02557e2b7efd91a8b0",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "constricted-neck-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.4365650713443756e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "4c1dff09e97f1a841c888e5fa6b14607fef21c0ea5649f21dcf7f937a37c4ae8",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "7681da214e06439a8a959d76310d2b1c39a189517153d73463ff401862065941"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2415770217776299e-07,
+        "physical_rate_loss": 9.313225746154785e-10,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "f2c97808768064b9e588e500b5bb858803bcbacefd4b09c74de7022caa679933",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.5643461160361767e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "a8c5c44d2b29253b56f442853f3512cee915a318cf1b8e4c16f0886bee9f8ce3",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5337718650698662e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "fb067b405ed6fbddd8b5ad726d38c8730a6e71ca99af3a54f6d1fefde2c62025",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "5b1af535519320a833f76f5b42132ef65376fd37c3ce678b04c35b4e85448d56"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 3.229361027479172e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "9e69514ddd5e8b28a8ebe8f2e172f996cac11e2dc7d22d6348f1112456b165de",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.353917807340622e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "58b9d275ad503293c027a0dd601b6a99358084b2968c5422de6d3aae56abaab5",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.353917807340622e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "6c6ae9bb365c1075f2595847b5a8501ef29bf4418e1fcb64e893463b513e30e1",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "500a5407cbc8e2ac03b2f31fdded9b613ad4856aaf210bbff853ad71464aee6b"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.6629928722977638e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "be7af611e3239a2986770c90f1a60686238ca5cce4b7ecda5d0936771232d5f2",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.912711352109909e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "e6634e08a965fa8fede510fc2ef40ee649bec8c431c4de72737854b9e73978df",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "branching-gully-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.912711352109909e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "6a9def25cc54fc91c99e01e4ff549c415dd73737da02a50a2e6fdf322830eeff",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "2bc9f2969911c7ca463d0e36654dbce41f634bcd68b6ea047324ad2705fee5fe"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.6472844183444977e-07,
+        "physical_rate_loss": 3.725290298461914e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "ec47e7af34a920ecaaf3407004236827645a42c0523789a256d7f036904376f6",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5436671674251556e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "bddf38b7e1bba81ef0e6cb5f3142143ed426eb3d91d9372476bd426eba0e380c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-late-surge-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.791639417409897e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "33b5c6055e6cfe328a4697addc6017296900cde81044f9cbc2a275cf93f4f17c",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "38317f7c22b5170b006b2ae1e23e691ae2e2d8023820d854aec6a59b03e71c02"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 2.2060703486204147e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "2d034e7906c70b4ce4e42f0c1b3e2cf572d4b3302059eddcb9ec1d7a67afeeff",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5844125300645828e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "67e8d8c01a4b803696dd09788446a72a6fa2f668cf19441c96f48a26c261f93a",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-gapped-train-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.5366822481155396e-07,
+        "physical_rate_loss": 7.450580596923828e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "9eda798560054df35f5fd01519922bfc57f5b163df7b53b629e5bd98f854fd60",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "dd505b6fa01ee01b68e1a5ab5d5190c239ba1da92600f81d6e25c51c7d2101ed"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R0",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 1.1565862223505974e-07,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "ff1da8b405190265bee5a52e7a85cbf1ec4e1ca4fd40955037ba7634d7c9faf9",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R1",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.301584213972092e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "288f9427d609c5d0c04d05bfee98091b19459568bcb674e54c43c3ab13eef7d2",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    },
+    {
+      "status": "passed",
+      "rows": 60,
+      "case": "diagonal-islands-compound-recession-v0",
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "route": "R2",
+      "maximum_absolute_score_disagreement": {
+        "unknown_cells": 0,
+        "stale_cells": 0,
+        "future_h_mae_m": 0,
+        "future_h_unknown_mae_m": 0,
+        "future_wet_classbalanced_error": 0,
+        "future_momentum_mae_m2_s": 0,
+        "current_h_mae_m": 0,
+        "supervised_loss": 9.301584213972092e-08,
+        "physical_rate_loss": 1.862645149230957e-09,
+        "absolute_volume_rate_residual_m3_s": 0,
+        "future_h_stale_mae_m": 0
+      },
+      "input_sha256": "492485a9f48e38420bfb1347b9b63715168ed8c2250a875b04654f829573b224",
+      "audit_sources": {
+        "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+        "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+      },
+      "model_sha256": "f703f5b60361e51d2f9846a3380f17d30d061ee38137a81d7cd7ffe9b37528e7",
+      "source_sha256": "8508db6334465f54adb556de8a821d72aa029f057374f42a33ccb3755e892397"
+    }
+  ],
+  "audit_sources": {
+    "tools\\audit_sciml_forecasts.py": "1b0dc174f99089a108054488f0aaec12d3e049b549add9f2fabc6a54003ab3d0",
+    "tools\\audit_team_replays.py": "40164ad7e1cbaaeb7948e50a22b36d2afc98c9b517f9a5483531d35bee34ec29"
+  },
+  "note": "absolute_volume_rate_residual is the absolute spatially summed depth-rate discrepancy times cell area; opposite local discrepancies can cancel. The separate physical_rate_loss scores all three local equations."
+}

@@ -1,0 +1,23 @@
+{
+  "maximum_rounds": 1,
+  "rounds": [
+    {
+      "round": 1,
+      "output": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1",
+      "state": "completed",
+      "formal_plan_sha256": "7a0fb1f89878e76d43c8682c4555f34e612e6cd38325c88d50036c58c3692ecb",
+      "gate_passed": false,
+      "summary_sha256": "93ba8e4abad01748b8c1d5176f6824783e267e5a0e7e9aaa74ffeda735deb18f",
+      "audit_sha256": {
+        "training": "247944c1e409f7224572687e3e47ef4952b7ed5212a432734f4fc7a02a1c317f",
+        "transition": "fb828efa22055e09a4108e22b03b38c0dd22ceb3379f17400ff3f4768f7602b5",
+        "trajectory": "88b7db4db27dbe2c5f51bb4232ee0f6ca1a2e53ef782c742584f848c26ec0352",
+        "forecast": "5b746b809d137b59135bc6c1b84b0c5d67fde380696aa2de4337e45dc8a20dbc",
+        "data": "aab38feee39ce5b75c4985c96358ebe0c3e38753253f403187fc3311b76a141c",
+        "statistics": "581dc66b700e55a11bb22a6a3ccb0bef08048e5cfd3d650cb92e08fcb70e18d0",
+        "targets": "b68b26d36570459acbe19ace7aa1cb3548c30df80fc5338b31767bcfe7b7f984"
+      },
+      "decision": "Single independent mechanism round closed with negative closed-loop result;no further training/tuning/mechanism rounds"
+    }
+  ]
+}

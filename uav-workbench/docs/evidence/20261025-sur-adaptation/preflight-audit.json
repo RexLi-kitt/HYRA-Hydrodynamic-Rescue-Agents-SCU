@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "methods": [
+    {
+      "method": "QMIX",
+      "training_transitions_rebuilt": 720,
+      "evaluation_episodes_rebuilt": 3,
+      "all_greedy_actions_from_clean_actor_reproduced": true,
+      "target_schedule_verified": true,
+      "capacity": {
+        "actor": 61508,
+        "mixer": 32769,
+        "state_dim": 137
+      }
+    },
+    {
+      "method": "Sur-QMIX-adapted",
+      "training_transitions_rebuilt": 720,
+      "evaluation_episodes_rebuilt": 3,
+      "all_greedy_actions_from_clean_actor_reproduced": true,
+      "target_schedule_verified": true,
+      "capacity": {
+        "actor": 61508,
+        "mixer": 32769,
+        "state_dim": 137
+      }
+    }
+  ],
+  "training_joint_steps": 1440,
+  "evaluation_joint_steps": 360,
+  "source_sha256": {
+    "hyra_learning/__init__.py": "d2905bf94cecb2eb5e716d0228986ffef2a302446735edfe4a2507ceff65fdc3",
+    "hyra_learning/networks.py": "4129faeac51ed70fbb9507833e65d7e6ad757759c112da4af4576cc36b31eeb0",
+    "hyra_learning/observations.py": "b4c838cc0c83ed49ad4cac0f127d0df39028205e4233c238ba9c6f4ae8b4e9e3",
+    "hyra_learning/runtime.py": "851236f914120da0737fae1299dc68625206ac2e4071bb718b3599e10edd1d7d",
+    "hyra_learning/team_env.py": "3a7350b5a6e69481e0a490b1ac43ca3efcaf50ed901fbb233338dcaa514455aa",
+    "hyra_learning/training.py": "2cc9b20bfb0da763cbb2970229328492c10644c1eda2c9c50a6a38282072664d",
+    "hyra_learning/vendor/__init__.py": "7dc55a4aed8f717c6714f6a78a6bd3747a6386260e3bc3fd84c22e9cc804a73f",
+    "hyra_learning/vendor/PYMARL_LICENSE": "a1e4522979cd422b42d0b464072eb7d0d218651659f56bf09f8c147384e3f105",
+    "hyra_learning/vendor/pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "hyra_learning/vendor/SOURCE.json": "ed9272a6d69a78cecc1a86b5a654b006a1d7c7a841b56b0d79b3c6a66b949eb3",
+    "hyra_uav/__init__.py": "0683d7b07196d7bd0a6b64ac241ce74c3dc4dd55875b5c35b7122593d7babdca",
+    "hyra_uav/core.py": "5a186e75e49c2b660b20f7af508930674639061a19772eeaa9ac3bbf5d906d46",
+    "hyra_uav/diagnostic.py": "13ff2723e1a7d67f4e65c06b80664919c96fad82fdb70e40761b02e64dc534eb",
+    "hyra_uav/experiments.py": "b78a35e665fd76293546aa1f2046829062f5a28916f4baafaf4cc67c7cd10a54",
+    "hyra_uav/interfaces.py": "b3e62a5aee7aaafa176261e006fa3b727fc53f46a46175ef51163f156dab6937",
+    "hyra_uav/nonlinear.py": "d8f463ec87a5765b0595c310466b9ec423ae9e3f4e8b19dda50b9a7cfa69c55c",
+    "hyra_uav/policies.py": "a8a5267e1ed1185a44a9862b9d266feb9047929666f607762e16c7f54d05113b",
+    "hyra_uav/relations.py": "d7d6280a85fb1c4b012817db8647460490cd2fdd76431cfd8296d6b78c115191",
+    "hyra_uav/reporting.py": "ada798af83290ae0cf94804bd4d24a3a98a27f7340285dff0e8c385284b918d2",
+    "hyra_uav/scales.py": "8185c9f32f775d889167507e1e158ef36a168fff4dc242b84b34536267754f62",
+    "hyra_uav/strong_features.py": "ccfb338595e06295d0b914f90e24daca6f43bfd8a7584b239758699d087b47c2",
+    "hyra_uav/strong_study.py": "f2be7eec8d406e66e9fec9f839012d3580ffa9c3bf85402912ee41c6776f5e98",
+    "hyra_uav/web.py": "e56111dd261e93f65a1a2da4389bac3d15bec02ce9ef3325990789850b67710a",
+    "learning.py": "939bbca78b3d6ec2edb760cc66aa61a21d24001c22ef735519ac76dcb13a3b3f",
+    "learning_configs/sur_preflight_20261025.json": "aac6ec2deb3f9dfbbcbc833f8e728ce102adceb741b51dce3da6cac905bfcda5"
+  },
+  "checks": [
+    "all training images and poses rebuilt from legal union observations",
+    "all current training states rebuilt separately from actor encoding",
+    "all finite-horizon terminal flags and rewards",
+    "target update after optimizer step8",
+    "all greedy evaluation actions, actual-frame observations and snapshots",
+    "same actual core actor/mixer capacity and completed budget"
+  ],
+  "limitation": "Previously seen engineering fixtures and one seed; no policy effectiveness or physical-learning conclusion.",
+  "auditor_sha256": "a78ede6e86ce2b2899deba211d114ecdc377c04ac29a9cd0620e0376ed998f7a"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "case": "confluence-runnels-rectangular-v0",
+  "rows": 60,
+  "actor": "random-engineering-only",
+  "evaluator_sha256": "68ba2460a8cab5da31b412f7e50fac3ca5dc9fc1447ac2ddec5d6a6195935178",
+  "training_truth_accessor": "blocked",
+  "holdout_used": false,
+  "explanation": "Actual fit-only rule trajectory and label scoring, no efficacy conclusion"
+}

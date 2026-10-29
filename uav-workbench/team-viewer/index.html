@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HyRA · 双机回放</title><link rel="stylesheet" href="/style.css"></head>
+<body><main>
+<header><div><span class="wordmark">HyRA</span><h1>双机回放</h1><p>同一时刻，看水情变化与共享地图。</p></div><div class="open-tools"><button id="example">载入工程演示</button><label class="file-button">打开本地回放<input id="file" type="file" accept=".json,application/json"></label></div></header>
+<p id="message" role="status">打开两机回放 JSON，或载入已完成的拟合集工程演示。</p>
+<section class="clock" aria-label="回放时间控制"><button id="play" disabled>播放</button><button id="previous" aria-label="上一帧" disabled>上一帧</button><input id="time" type="range" min="0" max="120" value="0" aria-label="回放时刻" disabled><button id="next" aria-label="下一帧" disabled>下一帧</button><output id="clock">0 / 600 秒</output><label>速度 <select id="speed" aria-label="播放速度"><option value="5">5×</option><option value="20" selected>20×</option><option value="60">60×</option></select></label></section>
+<section class="maps"><article><h2>实际水情 <span>离线评价真值</span></h2><canvas id="truth" width="640" height="640" aria-label="实际水情与两机轨迹"></canvas></article><article><h2>共享认知 <span>仅保留实际观测</span></h2><canvas id="belief" width="640" height="640" aria-label="共享认知地图与两机轨迹"></canvas></article></section>
+<div class="legend"><span><i class="wet"></i>淹没</span><span><i class="dry"></i>干燥</span><span><i class="unknown"></i>未观测</span><span><i class="a"></i>无人机 1</span><span><i class="b"></i>无人机 2</span><span><i class="wrong"></i>记录已失准</span><label><input id="paths" type="checkbox" checked>飞行轨迹</label><label><input id="sensing" type="checkbox" checked>本帧实际观测</label></div>
+<section class="measures" aria-label="当前回放指标"><div><span>当前正确覆盖</span><strong id="quality">—</strong><small>淹没 / 干燥类别均衡</small></div><div><span>未知区域</span><strong id="unknown">—</strong><small id="error">已知区错误 —</small></div><div><span>实际飞行距离</span><strong id="distance">—</strong><small id="turn">转向 —</small></div><div><span>变化发现</span><strong id="changes">—</strong><small id="collision">碰撞 —</small></div></section>
+<section class="record"><h2>本次记录</h2><p id="record">尚未载入回放。</p><p id="cell">将指针移到地图上，查看格点的记录时刻。</p><p class="explanation">实际水情只供离线查看；预测不会替代实际观测。这里显示的工程演示不计入确认性留出结果。</p></section>
+</main><script src="/app.js"></script></body></html>

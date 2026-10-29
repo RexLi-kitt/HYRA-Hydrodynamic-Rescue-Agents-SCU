@@ -1,0 +1,31 @@
+{
+  "case": "confluence-runnels-rectangular-v0",
+  "route": "R0",
+  "status": "passed",
+  "frames": 121,
+  "observations": 242,
+  "actions": 60,
+  "metrics": {
+    "time_average_correct_coverage": 0.5370897780146087,
+    "motion_cost": 0.05220000000000001,
+    "return_": 0.48488977801460864,
+    "distance_m": 2350.0,
+    "turn_s": 260.0,
+    "collision_events": 0,
+    "final": {
+      "correct_coverage": 0.8837890625,
+      "unknown_fraction": 0.0,
+      "observed_error_rate": 0.1162109375,
+      "first_coverage": 1.0
+    }
+  },
+  "secondary": {
+    "change_count": 1732,
+    "undiscovered_change_fraction": 0.34988452655889146,
+    "restricted_change_delay_s": 106.91108545034642,
+    "time_average_unknown_fraction": 0.24137369791666666,
+    "union_continuous_gap_median_s": 5.0,
+    "saved_per_agent_continuous_gap_median_s": 5.0
+  },
+  "holdout_used": false
+}

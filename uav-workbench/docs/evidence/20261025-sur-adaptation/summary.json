@@ -1,0 +1,179 @@
+{
+  "status": "completed",
+  "methods": [
+    {
+      "method": "QMIX",
+      "state": "completed",
+      "episodes": 12,
+      "training_joint_steps": 720,
+      "updates": 9,
+      "evaluation_joint_steps": 180,
+      "capacity": {
+        "actor": 61508,
+        "mixer": 32769,
+        "state_dim": 137
+      },
+      "segments": [
+        {
+          "first_episode": 0,
+          "last_episode": 6,
+          "elapsed_s": 2.853108900017105,
+          "memory": {
+            "working_set_bytes": 1943056384,
+            "process_peak_working_set_bytes": 1946759168,
+            "scope": "process-wide native working set, peak includes prior methods in this process",
+            "cuda_peak_allocated_bytes": 77740544,
+            "cuda_peak_reserved_bytes": 98566144
+          }
+        },
+        {
+          "first_episode": 6,
+          "last_episode": 12,
+          "elapsed_s": 3.3667011000216007,
+          "memory": {
+            "working_set_bytes": 1943658496,
+            "process_peak_working_set_bytes": 1949896704,
+            "scope": "process-wide native working set, peak includes prior methods in this process",
+            "cuda_peak_allocated_bytes": 77740544,
+            "cuda_peak_reserved_bytes": 98566144
+          }
+        }
+      ],
+      "evaluations": [
+        {
+          "event": "slow",
+          "time_average_correct_coverage": 0.10004639594728452,
+          "distance_m": 264.999999998,
+          "turn_s": 840.0,
+          "collision_events": 0,
+          "final": {
+            "correct_coverage": 0.23082298136645962,
+            "unknown_fraction": 0.849609375,
+            "observed_error_rate": 0.35714285714285715,
+            "first_coverage": 0.150390625
+          },
+          "return_": 0.07794639594732453,
+          "steps": 60
+        },
+        {
+          "event": "rapid",
+          "time_average_correct_coverage": 0.11369073766850836,
+          "distance_m": 264.999999998,
+          "turn_s": 840.0,
+          "collision_events": 0,
+          "final": {
+            "correct_coverage": 0.150390625,
+            "unknown_fraction": 0.849609375,
+            "observed_error_rate": 0.0,
+            "first_coverage": 0.150390625
+          },
+          "return_": 0.09159073766854839,
+          "steps": 60
+        },
+        {
+          "event": "async",
+          "time_average_correct_coverage": 0.09047889961746951,
+          "distance_m": 264.999999998,
+          "turn_s": 840.0,
+          "collision_events": 0,
+          "final": {
+            "correct_coverage": 0.150390625,
+            "unknown_fraction": 0.849609375,
+            "observed_error_rate": 0.0,
+            "first_coverage": 0.150390625
+          },
+          "return_": 0.06837889961750952,
+          "steps": 60
+        }
+      ],
+      "limitation": "Engineering preflight only: one seed, seen fixtures, twelve episodes. No effectiveness conclusion."
+    },
+    {
+      "method": "Sur-QMIX-adapted",
+      "state": "completed",
+      "episodes": 12,
+      "training_joint_steps": 720,
+      "updates": 9,
+      "evaluation_joint_steps": 180,
+      "capacity": {
+        "actor": 61508,
+        "mixer": 32769,
+        "state_dim": 137
+      },
+      "segments": [
+        {
+          "first_episode": 0,
+          "last_episode": 6,
+          "elapsed_s": 2.4546466000610963,
+          "memory": {
+            "working_set_bytes": 2057527296,
+            "process_peak_working_set_bytes": 2061238272,
+            "scope": "process-wide native working set, peak includes prior methods in this process",
+            "cuda_peak_allocated_bytes": 77740544,
+            "cuda_peak_reserved_bytes": 98566144
+          }
+        },
+        {
+          "first_episode": 6,
+          "last_episode": 12,
+          "elapsed_s": 3.338676100014709,
+          "memory": {
+            "working_set_bytes": 2070138880,
+            "process_peak_working_set_bytes": 2076385280,
+            "scope": "process-wide native working set, peak includes prior methods in this process",
+            "cuda_peak_allocated_bytes": 77740544,
+            "cuda_peak_reserved_bytes": 98566144
+          }
+        }
+      ],
+      "evaluations": [
+        {
+          "event": "slow",
+          "time_average_correct_coverage": 0.14616345138733805,
+          "distance_m": 287.499999998,
+          "turn_s": 860.0,
+          "collision_events": 0,
+          "final": {
+            "correct_coverage": 0.2656314699792961,
+            "unknown_fraction": 0.7158203125,
+            "observed_error_rate": 0.07903780068728522,
+            "first_coverage": 0.2841796875
+          },
+          "return_": 0.12321345138737806,
+          "steps": 60
+        },
+        {
+          "event": "rapid",
+          "time_average_correct_coverage": 0.21143265772085004,
+          "distance_m": 435.0,
+          "turn_s": 710.0,
+          "collision_events": 0,
+          "final": {
+            "correct_coverage": 0.2958984375,
+            "unknown_fraction": 0.6689453125,
+            "observed_error_rate": 0.10619469026548672,
+            "first_coverage": 0.3310546875
+          },
+          "return_": 0.18853265772084998,
+          "steps": 60
+        },
+        {
+          "event": "async",
+          "time_average_correct_coverage": 0.16846309723335143,
+          "distance_m": 435.0,
+          "turn_s": 710.0,
+          "collision_events": 0,
+          "final": {
+            "correct_coverage": 0.3310546875,
+            "unknown_fraction": 0.6689453125,
+            "observed_error_rate": 0.0,
+            "first_coverage": 0.3310546875
+          },
+          "return_": 0.1455630972333514,
+          "steps": 60
+        }
+      ],
+      "limitation": "Engineering preflight only: one seed, seen fixtures, twelve episodes. No effectiveness conclusion."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "workbench_url": "http://127.0.0.1:8767/",
+  "version": "hyra-eight-workbench-v5",
+  "route_model_bindings_verified": 24,
+  "worker_checks_passed": 11,
+  "http_checks_passed": 6,
+  "http_checks_skipped": 1,
+  "http_skip_reason": "legacy unpublished test skipped because its real release exists; explicit contract rejection still checked",
+  "frozen_evaluator_comparison": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\signal-routes-console-checks\\c0029e38dd034ac8bdf2e5ba68bb333c\\verification.json",
+  "http_model_run_ids": {
+    "R1": "4278f89fc7f6",
+    "R2": "b1c04160a987",
+    "R3": "45d2e1b69e93"
+  },
+  "browser_model_run_id": "d183f0963c55",
+  "browser_checks": [
+    "three routes visible and selectable",
+    "profile switches to E2/model",
+    "actual R2 model succeeds",
+    "posterior map correctly labeled",
+    "no stale replay warning",
+    "no page console errors"
+  ],
+  "source_sha256": {
+    "console_signal_routes_contract.py": "49358987d66894cc2ae06922e6b1abfc326b326710ddf05637873826543ab20e",
+    "console_signal_routes_runner.py": "665b57594db963e9219c880748a2e59ce4a087be2bf4092596db3880add71d0a",
+    "console_signal_routes_checks.py": "3a4e0c80e7eba940ce52e6487f13636ab912424ce921935acd326c5590cb377e",
+    "console_scale100_app.py": "b9894fd4727d5264e89b4cd62df3b68a9310099d38b53d29030b2fea566db1f6",
+    "console_scale100_runner.py": "f52e9ad5a5c24e1f0675f7d72ec4c88e674db91d5dcd6b9f9e8c768b03cbfb9c",
+    "console-static/workbench-scale100.html": "8536fe6030958bd0a5925fcfc44d4c68534257e2180a149bb8b4a8189b31bffc",
+    "console-static/workbench-scale100.js": "a1e0153a1df5299532a7bda18475c3e449262351f06802753732c00690127b1f"
+  },
+  "frozen_study_sources_unchanged": true,
+  "images": [
+    "signal-routes-options.jpg",
+    "signal-routes-workbench.jpg"
+  ]
+}

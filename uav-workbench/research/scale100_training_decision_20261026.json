@@ -1,0 +1,167 @@
+{
+  "schema": "hyra-scale100-training-readiness-decision-v1",
+  "status": "ready_for_formal",
+  "updated_at": 1792998098.1969006,
+  "formal_training_started": true,
+  "selected_training_backend": "aux_resilient_v4",
+  "episodes_per_job": 1024,
+  "reason": "All original12 pilot jobs and selected-revision4 paired task jobs complete; matched initialization, full trajectories, fit-only prior, persistent shared gradients, both matched-input diagnostics and split-process recovery verified. Formal comparison is needed to judge task benefit.",
+  "evidence": "generated/scale100-budget-pilot-20261026/E1-matched-forecast.json",
+  "observed": {
+    "D": {
+      "current_h_mae_m": 0.18196582611192735,
+      "microstep_h_mae_m": 0.18247346946021967,
+      "microstep_h_rmse_m": 0.18766479507872932,
+      "microstep_hu_mae_m2_s": 0.011132638019166495,
+      "microstep_hv_mae_m2_s": 0.011020978781999204,
+      "data_normalized_mse": 0.04934922520790184,
+      "local_physics_normalized_mse": 0.003249994662933444,
+      "volume_residual_abs_mean_m3": 5.076418646594934,
+      "known_fraction": 0.847587718513974,
+      "known_h_mae_m": 0.1823895032468595,
+      "unknown_h_mae_m": 0.20100611282719505
+    },
+    "P": {
+      "current_h_mae_m": 0.18223894923402553,
+      "microstep_h_mae_m": 0.1826699702886113,
+      "microstep_h_rmse_m": 0.18783141385044969,
+      "microstep_hu_mae_m2_s": 0.009864172832876966,
+      "microstep_hv_mae_m2_s": 0.009748664227101887,
+      "data_normalized_mse": 0.04910817088788016,
+      "local_physics_normalized_mse": 0.00217486750906366,
+      "volume_residual_abs_mean_m3": 4.310227701538487,
+      "known_fraction": 0.847587718513974,
+      "known_h_mae_m": 0.18260962921276427,
+      "unknown_h_mae_m": 0.20125947892665863
+    },
+    "legal_memory_persistence": {
+      "current_h_mae_m": 0.013313571838743724,
+      "microstep_h_mae_m": 0.013348428036184296,
+      "microstep_h_rmse_m": 0.020613824740346325,
+      "microstep_hu_mae_m2_s": 0.0011614961692605888,
+      "microstep_hv_mae_m2_s": 0.0011968766300828736,
+      "data_normalized_mse": 0.0008093691253554681,
+      "local_physics_normalized_mse": 1.7865549566203411e-06,
+      "volume_residual_abs_mean_m3": 0.3032484525128415,
+      "known_fraction": 0.847587718513974,
+      "known_h_mae_m": 0.008211455915847503,
+      "unknown_h_mae_m": 0.048354684789147645
+    }
+  },
+  "next_required": [
+    "Finish original12x256ep pilot and retain every outcome",
+    "Complete matched D/P auxiliary optimization diagnostics for both tasks",
+    "Verify head fit, shared gradients, actual task outcomes and common-input comparison",
+    "Choose and validate a formal backend and common budget using development only",
+    "Only then freeze and execute36 paired formal jobs; keep holdout out of choices"
+  ],
+  "history": [
+    {
+      "status": "not_ready_auxiliary_underfit",
+      "reason": "Original E1 auxiliary heads still have about0.182m depth MAE and fit data loss about0.043 after256 episodes; lower physics residual does not establish useful hydraulic reconstruction or task improvement",
+      "updated_at": 1792993359.4194403
+    },
+    {
+      "status": "not_ready_optimizer_precision_validation",
+      "reason": "v2 E1 D/P depth error about0.042m remains close to fit-mean constant; fit-only fixed-feature probe isolates small-gradient damping by auxiliary RMSprop eps1e-5. Validate eps1e-8 while keeping policy/main settings and all v2 controls unchanged.",
+      "updated_at": 1792994564.6793578
+    },
+    {
+      "status": "not_ready_auxiliary_activation_validation",
+      "reason": "v3 E1 Physics decoder has zero active ReLU units and zero data/physics latent gradients in12/12 fit-only audited states; validate LeakyReLU auxiliary decoder before formalizing scientific-ML representation claims",
+      "updated_at": 1792996447.6090066
+    }
+  ],
+  "precision_evidence": {
+    "probe": "generated/scale100-aux-tuning-20261026/head-fit-probe.json",
+    "fit_only_probe_results": {
+      "rmsprop_1e-5": {
+        "optimizer": "rmsprop_1e-5",
+        "update": 256,
+        "data_normalized_mse": 0.001064320094883442,
+        "h_mae_m": 0.020928338170051575,
+        "elapsed_s": 0.6286078999983147
+      },
+      "rmsprop_1e-8": {
+        "optimizer": "rmsprop_1e-8",
+        "update": 256,
+        "data_normalized_mse": 9.885194594971836e-05,
+        "h_mae_m": 0.005519887898117304,
+        "elapsed_s": 0.5252301000291482
+      },
+      "adam_1e-8": {
+        "optimizer": "adam_1e-8",
+        "update": 256,
+        "data_normalized_mse": 5.1936884119641036e-05,
+        "h_mae_m": 0.00430753268301487,
+        "elapsed_s": 0.4846286999527365
+      }
+    },
+    "matched_v2_forecast": "generated/scale100-aux-tuning-20261026/E1-matched-forecast.json",
+    "matched_v2_depth_mae_m": {
+      "D": 0.041763894194573686,
+      "P": 0.04237133578250283,
+      "fit_mean_constant": 0.042179555092987264
+    },
+    "next_queue": "generated/scale100-aux-precision-20261026/queue.json"
+  },
+  "activation_evidence": {
+    "path": "generated/scale100-aux-precision-20261026/head-activity-probe.json",
+    "summary": {
+      "D": {
+        "states": 12,
+        "states_with_zero_active_units": 0,
+        "states_with_zero_data_gradient": 0,
+        "states_with_zero_physics_gradient": 0,
+        "mean_positive_fraction": 0.040364583333333336
+      },
+      "P": {
+        "states": 12,
+        "states_with_zero_active_units": 12,
+        "states_with_zero_data_gradient": 12,
+        "states_with_zero_physics_gradient": 12,
+        "mean_positive_fraction": 0.0
+      }
+    },
+    "next_queue": "generated/scale100-aux-resilient-20261026/queue.json",
+    "next_required": "same-budget paired task/forecast evaluation, persistent shared gradients, recovery and primary learning curves"
+  },
+  "training_sources": {
+    "scale100_env.py": "7f2a7b9e2b02da0caa5b18d4616af17ed63de7290d1a9ecb5bcb76bc64e122cb",
+    "scale100_train.py": "03da12d250cefcbb710eb6e7e15673a0384b9d5467bf15ad1569f33d29f1c153",
+    "hyra_learning\\physics.py": "30231600636d7e445e1c53606390ffc3f2f7f1b67ac764a8e64c793356cf2a63",
+    "hyra_learning\\vendor\\pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "sur_rescue\\__init__.py": "2367ec82a76dc58d31265e1f353357059ac25850b68c6552a1b64e9daf5366dc",
+    "sur_rescue\\environment.py": "18393738567bcbee0a10b638d84681f72efc3d57e871a15bacd2644616e03f4d",
+    "sur_rescue\\gmrf.py": "47dcaff21dc6b998f2efb500ac37526bdb6c2e168411f5cea5c46c2981a2032b",
+    "sur_rescue\\hydraulics.py": "8cced7d3e73d6064d6ed270d9fce5565ad3f97af4c4391db1655ac56b40f402d",
+    "sur_rescue\\learning.py": "e3d88d83b8d11fa59a587dafc4e4d2f91dc33408e9d90c0d2e5a89ce0a1ed086",
+    "scale100_aux_resilient.py": "1bd2f5270a942097ba27a1b039a751fc8d1265a6dce25a5cc5047845aef1301a"
+  },
+  "budget_rationale": "Fixed1024 episodes and1021 optimizer updates for each of36 fresh runs. Development64/128/256 greedy curves show continued coverage learning and nonmonotonic rescue performance;256 episodes do not establish stability. Use four times the validated pilot budget as a bounded first matched study, not a convergence claim. Three equal selection opportunities at256/512/1024, heldout data unused. Choose the LeakyReLU auxiliary implementation for persistent gradients and numerical validity, not because of a selected favorable task score; retain all earlier variants and negative findings.",
+  "readiness_evidence": {
+    "original_review": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-budget-pilot-20261026\\review.json",
+      "sha256": "9aa6ed4f3f5d5e4e89510f2256eec1179dd832791be17dc971ccb0ddaee57900"
+    },
+    "selected_revision_review": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-aux-resilient-20261026\\review.json",
+      "sha256": "aa5b1af7a806fd1d6a865b23df5dbf43953182333cbff405c90aeabb1f3ca210"
+    },
+    "controls_ready": true,
+    "gradient_paths_live": {
+      "E1-D-s11": true,
+      "E1-P-s11": true,
+      "E2-D-s11": true,
+      "E2-P-s11": true
+    }
+  },
+  "unresolved_scientific_questions": [
+    "Auxiliary depth generalization remains limited on the one development parent; this is not a successful hydraulic-forecast claim",
+    "Physics increment versus matched Data and task benefit are unproven until paired unseen evaluation",
+    "Only three fit and two heldout procedural parents; conclusions remain conditional on this small synthetic regime",
+    "No strict original-paper performance reproduction or real-rescue safety claim"
+  ],
+  "formal_plan": "generated/scale100-formal-20261026/plan.json",
+  "formal_plan_sha256": "b1a4456c57ef34873ed85b21b5cecbb6c6cc7d77e23a575e82fc7e7d04862de0"
+}

@@ -1,0 +1,13 @@
+test_clean_actor_roundtrip_and_virtual_forward_does_not_advance_hidden_twice (test_networks.NetworkTests.test_clean_actor_roundtrip_and_virtual_forward_does_not_advance_hidden_twice) ... ok
+test_cuda_forward_and_backward_if_available (test_networks.NetworkTests.test_cuda_forward_and_backward_if_available) ... ok
+test_mixer_is_monotone_and_auxiliary_gradient_can_reach_actor (test_networks.NetworkTests.test_mixer_is_monotone_and_auxiliary_gradient_can_reach_actor) ... ok
+test_sur_is_train_only_and_valid_padding_does_not_change_it (test_networks.NetworkTests.test_sur_is_train_only_and_valid_padding_does_not_change_it) ... ok
+test_virtual_embedding_gradient_matches_finite_difference (test_networks.NetworkTests.test_virtual_embedding_gradient_matches_finite_difference) ... ok
+test_optimizer_replay_and_rng_resume_produce_same_next_update (test_training.TrainingTests.test_optimizer_replay_and_rng_resume_produce_same_next_update) ... ok
+test_padding_cannot_enter_td_or_sur_normalization (test_training.TrainingTests.test_padding_cannot_enter_td_or_sur_normalization) ... ok
+test_process_native_memory_is_measured (test_training.TrainingTests.test_process_native_memory_is_measured) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.834s
+
+OK

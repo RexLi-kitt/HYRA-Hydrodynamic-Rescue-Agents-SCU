@@ -7,6 +7,9 @@ __pycache__/
 **/run/
 **/generated/
 **/.runtime/
+# Per-checkout active study registry; published copies live with result evidence.
+uav-workbench/research/rounds.json
+uav-workbench/research/sciml_rounds.json
 terrain-workbench/terrain-lab/current.json
 terrain-workbench/terrain-lab/exports/
 

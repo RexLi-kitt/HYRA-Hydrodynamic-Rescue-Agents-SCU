@@ -1,0 +1,61 @@
+{
+  "schema": "hyra-scale100-formal-forecast-protocol-v1",
+  "formal_plan_sha256": "b1a4456c57ef34873ed85b21b5cecbb6c6cc7d77e23a575e82fc7e7d04862de0",
+  "source_sha256": {
+    "scale100_formal_forecasts.py": "22ab1a4e46f6775f88e1c5d3d5cc468ec6a0f9af3ead99400f2e73fb8320630e",
+    "scale100_resilient_forecast.py": "ab46486d3a9a240327d3898e6c59d9560ccc09c94f68df14544be12e65b6c0ce",
+    "scale100_rules.py": "34ba026ced69bf2b1109d4a645163d84d121eceb10730b0f69bdae989dc739da",
+    "scale100_development.py": "e082e9420b278d00e6d30c61f7fbf1f55ed74465f4224bc31f8d112380fa6579"
+  },
+  "tasks": [
+    "E1",
+    "E2"
+  ],
+  "methods": [
+    "D",
+    "P"
+  ],
+  "training_seeds": [
+    11,
+    29,
+    47
+  ],
+  "scenario_seeds": [
+    11,
+    29,
+    47
+  ],
+  "decision_indices": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180
+  ],
+  "baselines": [
+    "legal_memory_persistence",
+    "fit_mean_constant",
+    "truth_current_persistence_oracle"
+  ],
+  "reference_policy": "water_aware",
+  "max_training_episodes": 1024,
+  "models": "all sealed task-selected D/P models; no forecast selection",
+  "aggregation": "equal parent means after within-parent time/scenario/training-seed averaging",
+  "scoring_horizon": "actual accepted internal solver microstep; no long-horizon forecast",
+  "guard": "all36 selected and all252 policy trials fully reaudited before holdout diagnostics",
+  "new_training_or_policy_selection": false
+}

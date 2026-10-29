@@ -1,0 +1,88 @@
+{
+  "schema": "hyra-dual-task-readiness-v1",
+  "date": "2026-10-26",
+  "scope": "read-only interface counterfactual; artificial all-dry/all-wet values are not hydrodynamic evidence",
+  "confirmed_requirements": {
+    "environment_representation": "dual GMRF: environment structure + personnel signal",
+    "policy": "Sur-QMIX, eight directions",
+    "tasks": [
+      "exploration",
+      "exploration_rescue"
+    ],
+    "new_research": "scientific machine learning with hydrodynamic constraints"
+  },
+  "available": {
+    "eight_action_models": [
+      {
+        "method": "QMIX8",
+        "n_actions": 8,
+        "image_shape": [
+          9,
+          5,
+          5
+        ],
+        "episodes": 12,
+        "updates": 9,
+        "source_hash_verified": true
+      },
+      {
+        "method": "Sur-QMIX8",
+        "n_actions": 8,
+        "image_shape": [
+          9,
+          5,
+          5
+        ],
+        "episodes": 12,
+        "updates": 9,
+        "source_hash_verified": true
+      }
+    ],
+    "sar_solver_verified": true,
+    "eight_action_joint_motion_verified": true,
+    "short_large_grid_rule_interface_verified": [
+      256,
+      256
+    ]
+  },
+  "gaps": {
+    "pure_exploration_mode": true,
+    "pure_exploration_rejection": "Invalid synthetic scenario",
+    "current_actor_omits_hydraulic_observation_values": true,
+    "current_rescue_reward_ignores_hydraulic_state": true,
+    "physics_auxiliary_for_new_eight_action_network_not_implemented": true,
+    "long_large_grid_policy_performance_not_validated": true
+  },
+  "counterfactual_rows": [
+    {
+      "step": 1,
+      "actor_observations_identical": true,
+      "reward_dry": 0.610546875,
+      "reward_wet": 0.610546875,
+      "mission_rewards_identical": true
+    },
+    {
+      "step": 2,
+      "actor_observations_identical": true,
+      "reward_dry": -1.069225852866816,
+      "reward_wet": -1.069225852866816,
+      "mission_rewards_identical": true
+    },
+    {
+      "step": 3,
+      "actor_observations_identical": true,
+      "reward_dry": -1.4500302058390826,
+      "reward_wet": -1.4500302058390826,
+      "mission_rewards_identical": true
+    },
+    {
+      "step": 4,
+      "actor_observations_identical": true,
+      "reward_dry": -11.544115571732803,
+      "reward_wet": -11.544115571732803,
+      "mission_rewards_identical": true
+    }
+  ],
+  "frozen_scientific_sources_unchanged": 35,
+  "status": "engineering_foundation_available; two-task physical study requires new implementation and preregistration"
+}

@@ -1,0 +1,278 @@
+{
+  "dataset_sha256": "fd31f6285bd31836cc4841d9c3f670fe8c12196d240bd6130a6ced801191b750",
+  "split": "development",
+  "parent": "procedural-parent-401",
+  "rows": [
+    {
+      "task": "E1",
+      "rule": "frontier",
+      "seed": 11,
+      "return_": 0.8000000000000894,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7304530192982251,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 740.3553390593274,
+        "collision_events": 107,
+        "first_90_s": 285.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "frontier",
+      "seed": 29,
+      "return_": 40.75000000000001,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7153029214515314,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1820.7106781186549,
+        "collision_events": 0,
+        "first_90_s": 235.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "frontier",
+      "seed": 47,
+      "return_": 46.0,
+      "metrics": {
+        "current_correct_coverage_auc": 0.763457293628684,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1816.5685424949238,
+        "collision_events": 0,
+        "first_90_s": 265.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "sweep_refresh",
+      "seed": 11,
+      "return_": 57.7,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7973516800527326,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1909.7665940288725,
+        "collision_events": 0,
+        "first_90_s": 330.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "sweep_refresh",
+      "seed": 29,
+      "return_": 59.19999999999999,
+      "metrics": {
+        "current_correct_coverage_auc": 0.8094767030919097,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1899.4112549695444,
+        "collision_events": 0,
+        "first_90_s": 340.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "sweep_refresh",
+      "seed": 47,
+      "return_": 59.79999999999997,
+      "metrics": {
+        "current_correct_coverage_auc": 0.8179173029957364,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1913.9087296526034,
+        "collision_events": 0,
+        "first_90_s": 305.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "water_aware",
+      "seed": 11,
+      "return_": 61.900000000000006,
+      "metrics": {
+        "current_correct_coverage_auc": 0.8091926224945327,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1913.9087296526034,
+        "collision_events": 0,
+        "first_90_s": 240.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "water_aware",
+      "seed": 29,
+      "return_": 59.65000000000001,
+      "metrics": {
+        "current_correct_coverage_auc": 0.8369956635771536,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1930.4772721475267,
+        "collision_events": 0,
+        "first_90_s": 215.0
+      }
+    },
+    {
+      "task": "E1",
+      "rule": "water_aware",
+      "seed": 47,
+      "return_": 57.55,
+      "metrics": {
+        "current_correct_coverage_auc": 0.8142468241020409,
+        "first_coverage": 1.0,
+        "rescued": 0,
+        "targets": 0,
+        "distance_m": 1920.1219330881997,
+        "collision_events": 0,
+        "first_90_s": 245.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "frontier",
+      "seed": 11,
+      "return_": 16.450000000000145,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7139696846175977,
+        "first_coverage": 0.96,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 642.426406871193,
+        "collision_events": 113,
+        "first_90_s": 295.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "frontier",
+      "seed": 29,
+      "return_": 76.09999999999997,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7585860448543408,
+        "first_coverage": 1.0,
+        "rescued": 5,
+        "targets": 5,
+        "distance_m": 1789.3502884254442,
+        "collision_events": 0,
+        "first_90_s": 305.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "frontier",
+      "seed": 47,
+      "return_": 64.1,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7417411033519721,
+        "first_coverage": 0.9875,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 1803.4924240491753,
+        "collision_events": 0,
+        "first_90_s": 240.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "sweep_refresh",
+      "seed": 11,
+      "return_": 15.700000000000136,
+      "metrics": {
+        "current_correct_coverage_auc": 0.6626816858208155,
+        "first_coverage": 0.8525,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 698.9949493661168,
+        "collision_events": 109,
+        "first_90_s": null
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "sweep_refresh",
+      "seed": 29,
+      "return_": 21.90000000000014,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7123426101979861,
+        "first_coverage": 0.92,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 769.7056274847716,
+        "collision_events": 104,
+        "first_90_s": 350.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "sweep_refresh",
+      "seed": 47,
+      "return_": 67.20000000000003,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7633664089363013,
+        "first_coverage": 0.9825,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 1822.132034355965,
+        "collision_events": 0,
+        "first_90_s": 325.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "water_aware",
+      "seed": 11,
+      "return_": 71.50000000000003,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7316178436097464,
+        "first_coverage": 1.0,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 1987.8174593052065,
+        "collision_events": 0,
+        "first_90_s": 290.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "water_aware",
+      "seed": 29,
+      "return_": 77.19999999999999,
+      "metrics": {
+        "current_correct_coverage_auc": 0.767248074131312,
+        "first_coverage": 1.0,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 1912.4011537017784,
+        "collision_events": 0,
+        "first_90_s": 230.0
+      }
+    },
+    {
+      "task": "E2",
+      "rule": "water_aware",
+      "seed": 47,
+      "return_": 76.75000000000006,
+      "metrics": {
+        "current_correct_coverage_auc": 0.7933170559386089,
+        "first_coverage": 1.0,
+        "rescued": 4,
+        "targets": 5,
+        "distance_m": 1948.4671708797607,
+        "collision_events": 0,
+        "first_90_s": 255.0
+      }
+    }
+  ],
+  "scope": "candidate forcing diagnosis, no holdout policy evaluation"
+}

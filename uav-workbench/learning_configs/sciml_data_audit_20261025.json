@@ -1,0 +1,21 @@
+{
+  "schema": "hyra-sciml-data-audit-v1",
+  "status": "registered before field-label audit and auxiliary training",
+  "expected_preconfirmation_cases": 12,
+  "checks": [
+    "process and auxiliary input hashes",
+    "actual5s frames vs training conservative fields",
+    "60 current sources and short internal rate labels",
+    "0.01s maximum accepted rate-label step",
+    "parent and forcing split isolation",
+    "no confirmation water generated"
+  ],
+  "normalized_rate_mean_absolute_error_max": 0.001,
+  "instrumentation_control": {
+    "case": "confluence-runnels-rectangular-v0",
+    "max_frame_mean_depth_absolute_error_m": 0.01,
+    "max_frame_wet_label_disagreement": 0.02,
+    "description": "same solver without inserted short label step; control checks that the short-step sampling instrumentation does not materially change5s task fields under these registered development tolerances"
+  },
+  "bounds": "report all depth and wet-cell velocities relative to auxiliary head bounds; never delete difficult cells or cases to satisfy a model"
+}

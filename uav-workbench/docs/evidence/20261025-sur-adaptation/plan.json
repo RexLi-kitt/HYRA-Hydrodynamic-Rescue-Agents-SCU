@@ -1,0 +1,148 @@
+{
+  "schema": "hyra-sur-adaptation-preflight-design-v1",
+  "status": "executable_preregistered_before_first_training",
+  "purpose": "engineering and resource validation, not original-paper performance reproduction or confirmatory physics study",
+  "methods": [
+    "QMIX",
+    "Sur-QMIX-adapted"
+  ],
+  "seeds": [
+    11
+  ],
+  "training_episodes_per_method": 12,
+  "training_joint_steps_per_method": 720,
+  "total_training_joint_steps": 1440,
+  "evaluation_events": [
+    "slow",
+    "rapid",
+    "async"
+  ],
+  "evaluation_episodes_per_method": 3,
+  "total_evaluation_joint_steps": 360,
+  "data": [
+    {
+      "id": "slow",
+      "path": "fixtures/slow/map-result.zip",
+      "sha256": "09e5bbd94d63ecb276f52ede0d6c6fe1df68b47dd46c2420f19325e9f2bfbc1b",
+      "role": "previously seen engineering development only"
+    },
+    {
+      "id": "rapid",
+      "path": "fixtures/rapid/map-result.zip",
+      "sha256": "12e781c643187d6cd0d5ab9ccfc5966319cfeecddee4a29789a95416f6c23f83",
+      "role": "previously seen engineering development only"
+    },
+    {
+      "id": "async",
+      "path": "fixtures/async/map-result.zip",
+      "sha256": "ef3b81d0af7a37752e74c467351f9687a6e254b050354d25817a10300c3b0faa",
+      "role": "previously seen engineering development only"
+    }
+  ],
+  "n_agents": 2,
+  "config": {
+    "speed_m_s": 2.5,
+    "angular_speed_deg_s": 9.0,
+    "range_m": 25.0,
+    "fov_deg": 90.0,
+    "action_s": 10.0,
+    "sample_s": 5.0,
+    "duration_s": 600.0,
+    "history_length": 4,
+    "age_weight": 0.5
+  },
+  "team": {
+    "separation_m": 2.0,
+    "distance_cost_per_m": 2e-05,
+    "turn_cost_per_s": 2e-05,
+    "collision_cost": 0.005
+  },
+  "starts": "(0,0,heading0), (0,(nz-1)*dx,heading0), identical across groups",
+  "actor": {
+    "image_shape": [
+      16,
+      7,
+      7
+    ],
+    "pose_dim": 6,
+    "n_actions": 4,
+    "embed": 32,
+    "hidden": 64,
+    "cnn_channels": [
+      16,
+      16
+    ],
+    "shared_weights": true
+  },
+  "mixer": {
+    "source": "unmodified pinned PyMARL QMixer",
+    "mixing_embed": 32,
+    "hypernet_hidden": 64,
+    "hypernet_layers": 2,
+    "state": "training-only pooled depth8x8 + static bed8x8 + each agent normalized xy/sin/cos + normalized physical time"
+  },
+  "training": {
+    "optimizer": "RMSprop",
+    "lr": 0.0001,
+    "alpha": 0.99,
+    "eps": 1e-05,
+    "gamma": 0.99,
+    "batch_episodes": 4,
+    "replay_capacity_episodes": 32,
+    "updates_per_episode_after_warmup": 1,
+    "target_update_every_optimizer_steps": 4,
+    "gradient_norm_clip": 10,
+    "recurrent_training": "full 60-decision sequences, valid masks exclude padding from TD and Sur normalization",
+    "epsilon": "linear from1.0 to0.1 over12 episodes",
+    "double_q": true,
+    "cutoff": "finite task horizon: no bootstrap beyond600s although API marks time cutoff as truncated",
+    "surprise": "training current-Q branch only; no higher-order gradient; fixed unit ones direction; clean action selection and targets"
+  },
+  "checkpoint": "save actor,target,mixer,optimizer,replay,episode/step counters,numpy RNG and torch CPU/CUDA RNG; planned stop after6 and resume through12; no extra training episodes",
+  "selection": "last registered checkpoint only; no development sweeps and no heldout selection",
+  "acceptance": [
+    "joint clocks and collision tests",
+    "hidden-current/future actor invariance",
+    "Sur finite-difference gradient and clean execution",
+    "finite TD and parameter updates in both groups",
+    "checkpoint action roundtrip and exact optimizer/RNG/replay resume test",
+    "actual capacity, environment/update counts, wall time and peak CPU/GPU memory archived"
+  ],
+  "limits": "One seed and12 episodes only verify execution and resource feasibility. Formal multi-seed physics study requires separate preregistration, new mother terrains and genuinely new forcing shapes; no efficacy claim from this preflight.",
+  "source_sha256": {
+    "hyra_learning/__init__.py": "d2905bf94cecb2eb5e716d0228986ffef2a302446735edfe4a2507ceff65fdc3",
+    "hyra_learning/networks.py": "4129faeac51ed70fbb9507833e65d7e6ad757759c112da4af4576cc36b31eeb0",
+    "hyra_learning/observations.py": "b4c838cc0c83ed49ad4cac0f127d0df39028205e4233c238ba9c6f4ae8b4e9e3",
+    "hyra_learning/runtime.py": "851236f914120da0737fae1299dc68625206ac2e4071bb718b3599e10edd1d7d",
+    "hyra_learning/team_env.py": "3a7350b5a6e69481e0a490b1ac43ca3efcaf50ed901fbb233338dcaa514455aa",
+    "hyra_learning/training.py": "2cc9b20bfb0da763cbb2970229328492c10644c1eda2c9c50a6a38282072664d",
+    "hyra_learning/vendor/__init__.py": "7dc55a4aed8f717c6714f6a78a6bd3747a6386260e3bc3fd84c22e9cc804a73f",
+    "hyra_learning/vendor/PYMARL_LICENSE": "a1e4522979cd422b42d0b464072eb7d0d218651659f56bf09f8c147384e3f105",
+    "hyra_learning/vendor/pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "hyra_learning/vendor/SOURCE.json": "ed9272a6d69a78cecc1a86b5a654b006a1d7c7a841b56b0d79b3c6a66b949eb3",
+    "hyra_uav/__init__.py": "0683d7b07196d7bd0a6b64ac241ce74c3dc4dd55875b5c35b7122593d7babdca",
+    "hyra_uav/core.py": "5a186e75e49c2b660b20f7af508930674639061a19772eeaa9ac3bbf5d906d46",
+    "hyra_uav/diagnostic.py": "13ff2723e1a7d67f4e65c06b80664919c96fad82fdb70e40761b02e64dc534eb",
+    "hyra_uav/experiments.py": "b78a35e665fd76293546aa1f2046829062f5a28916f4baafaf4cc67c7cd10a54",
+    "hyra_uav/interfaces.py": "b3e62a5aee7aaafa176261e006fa3b727fc53f46a46175ef51163f156dab6937",
+    "hyra_uav/nonlinear.py": "d8f463ec87a5765b0595c310466b9ec423ae9e3f4e8b19dda50b9a7cfa69c55c",
+    "hyra_uav/policies.py": "a8a5267e1ed1185a44a9862b9d266feb9047929666f607762e16c7f54d05113b",
+    "hyra_uav/relations.py": "d7d6280a85fb1c4b012817db8647460490cd2fdd76431cfd8296d6b78c115191",
+    "hyra_uav/reporting.py": "ada798af83290ae0cf94804bd4d24a3a98a27f7340285dff0e8c385284b918d2",
+    "hyra_uav/scales.py": "8185c9f32f775d889167507e1e158ef36a168fff4dc242b84b34536267754f62",
+    "hyra_uav/strong_features.py": "ccfb338595e06295d0b914f90e24daca6f43bfd8a7584b239758699d087b47c2",
+    "hyra_uav/strong_study.py": "f2be7eec8d406e66e9fec9f839012d3580ffa9c3bf85402912ee41c6776f5e98",
+    "hyra_uav/web.py": "e56111dd261e93f65a1a2da4389bac3d15bec02ce9ef3325990789850b67710a",
+    "learning.py": "939bbca78b3d6ec2edb760cc66aa61a21d24001c22ef735519ac76dcb13a3b3f",
+    "learning_configs/sur_preflight_20261025.json": "aac6ec2deb3f9dfbbcbc833f8e728ce102adceb741b51dce3da6cac905bfcda5"
+  },
+  "runtime": {
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "torch": "2.14.0+cu130",
+    "device": "cuda",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU"
+  }
+}

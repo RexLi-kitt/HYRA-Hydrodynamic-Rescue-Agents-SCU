@@ -1,0 +1,641 @@
+{
+  "schema": "hyra-scale100-preflight-v1",
+  "operator_verified_actual_steps": 32,
+  "operator_max_abs_error": 2.7755575615628914e-17,
+  "operator_subset": "closed/Rusanov/MUSCL/RK2, Manning .035, volumetric scheduled sources",
+  "actor_water_memory_exactly_reconstructed": true,
+  "actor_input_channels": 21,
+  "permission_schema": "9 structural + local/global h,u,v,valid,age (10) + local/global public static bed (2)",
+  "personnel_service_limits": {
+    "depth_m": 0.08,
+    "speed_m_s": 0.3,
+    "scope": "synthetic service feasibility threshold; no claim about human safety or flight feasibility"
+  },
+  "cases": [
+    {
+      "split": "fit",
+      "parent": "procedural-parent-101",
+      "personnel_service_opportunities": [
+        {
+          "seed": 11,
+          "personnel": [
+            {
+              "cell": [
+                4,
+                5
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                19,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                0,
+                13
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                17,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        },
+        {
+          "seed": 29,
+          "personnel": [
+            {
+              "cell": [
+                13,
+                12
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                3,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        },
+        {
+          "seed": 47,
+          "personnel": [
+            {
+              "cell": [
+                18,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                17,
+                3
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                10,
+                15
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                9
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "split": "fit",
+      "parent": "procedural-parent-211",
+      "personnel_service_opportunities": [
+        {
+          "seed": 11,
+          "personnel": [
+            {
+              "cell": [
+                4,
+                5
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                19,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 41,
+              "switches": 1
+            },
+            {
+              "cell": [
+                0,
+                13
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                17,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 75,
+              "switches": 1
+            }
+          ]
+        },
+        {
+          "seed": 29,
+          "personnel": [
+            {
+              "cell": [
+                13,
+                12
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                3,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        },
+        {
+          "seed": 47,
+          "personnel": [
+            {
+              "cell": [
+                18,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 38,
+              "switches": 1
+            },
+            {
+              "cell": [
+                17,
+                3
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                10,
+                15
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                9
+              ],
+              "initial_feasible": false,
+              "safe_frames": 180,
+              "switches": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "split": "fit",
+      "parent": "procedural-parent-307",
+      "personnel_service_opportunities": [
+        {
+          "seed": 11,
+          "personnel": [
+            {
+              "cell": [
+                4,
+                5
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                19,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                0,
+                13
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                17,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        },
+        {
+          "seed": 29,
+          "personnel": [
+            {
+              "cell": [
+                13,
+                12
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                3,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        },
+        {
+          "seed": 47,
+          "personnel": [
+            {
+              "cell": [
+                18,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                17,
+                3
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                10,
+                15
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                9
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "split": "development",
+      "parent": "procedural-parent-401",
+      "personnel_service_opportunities": [
+        {
+          "seed": 11,
+          "personnel": [
+            {
+              "cell": [
+                4,
+                5
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                19,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                0,
+                13
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                17,
+                14
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        },
+        {
+          "seed": 29,
+          "personnel": [
+            {
+              "cell": [
+                13,
+                12
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                3,
+                8
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                1,
+                1
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        },
+        {
+          "seed": 47,
+          "personnel": [
+            {
+              "cell": [
+                18,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                17,
+                3
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                12,
+                16
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                10,
+                15
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            },
+            {
+              "cell": [
+                15,
+                9
+              ],
+              "initial_feasible": true,
+              "safe_frames": 181,
+              "switches": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "formal_training_started": false
+}

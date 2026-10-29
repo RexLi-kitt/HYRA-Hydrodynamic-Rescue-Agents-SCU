@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "environment_tests": 4,
+  "network_tests": 5,
+  "all_numpy_tests": 37,
+  "environment_command": "bundled Python3.12 -m unittest discover -s tests -v",
+  "network_command": "D:/Scripts/python.exe -m unittest discover -s learning_tests -v",
+  "network_results": [
+    "CPU finite-difference gradient",
+    "Sur valid-padding invariance and train-only guard",
+    "actor checkpoint roundtrip",
+    "QMIX mixer monotonicity and auxiliary gradient path",
+    "CUDA forward and backward"
+  ],
+  "source_sha256": {
+    "hyra_learning/__init__.py": "d2905bf94cecb2eb5e716d0228986ffef2a302446735edfe4a2507ceff65fdc3",
+    "hyra_learning/networks.py": "4129faeac51ed70fbb9507833e65d7e6ad757759c112da4af4576cc36b31eeb0",
+    "hyra_learning/observations.py": "b4c838cc0c83ed49ad4cac0f127d0df39028205e4233c238ba9c6f4ae8b4e9e3",
+    "hyra_learning/runtime.py": "851236f914120da0737fae1299dc68625206ac2e4071bb718b3599e10edd1d7d",
+    "hyra_learning/team_env.py": "3a7350b5a6e69481e0a490b1ac43ca3efcaf50ed901fbb233338dcaa514455aa",
+    "hyra_learning/vendor/__init__.py": "7dc55a4aed8f717c6714f6a78a6bd3747a6386260e3bc3fd84c22e9cc804a73f",
+    "hyra_learning/vendor/pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18"
+  },
+  "limitation": "Unit and interface evidence only; no current-task policy training or physics model experiment yet."
+}

@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "frames": 121,
+  "observations": 242,
+  "actions": 60,
+  "metrics": {
+    "time_average_correct_coverage": 0.5370897780146087,
+    "motion_cost": 0.05220000000000001,
+    "return_": 0.48488977801460864,
+    "distance_m": 2350.0,
+    "turn_s": 260.0,
+    "collision_events": 0,
+    "final": {
+      "correct_coverage": 0.8837890625,
+      "unknown_fraction": 0.0,
+      "observed_error_rate": 0.1162109375,
+      "first_coverage": 1.0
+    }
+  },
+  "secondary": {
+    "change_count": 1732,
+    "undiscovered_change_fraction": 0.34988452655889146,
+    "restricted_change_delay_s": 106.91108545034642,
+    "time_average_unknown_fraction": 0.24137369791666666,
+    "union_continuous_gap_median_s": 5.0,
+    "saved_per_agent_continuous_gap_median_s": 5.0
+  },
+  "case": "confluence-runnels-rectangular-v0",
+  "family": "confluence-runnels",
+  "forcing_family": "rectangular",
+  "method": "R0",
+  "seed": null,
+  "input_sha256": "9fd8cc5ce8736c59412b02195638a9e2d5e55379960bcaf39adb758129f023d4",
+  "source_sha256": "b46199c68dff2d0afd2ef1c6e39c38008516d5dbb95acf067267bf2af46ca192",
+  "model_sha256": null,
+  "all_actions_reproduced_from_independent_legal_views": true,
+  "holdout_used": false
+}

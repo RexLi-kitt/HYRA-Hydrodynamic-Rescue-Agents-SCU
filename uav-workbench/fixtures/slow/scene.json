@@ -1,0 +1,1 @@
+{"id":"slow","name":"缓变：均匀降雨积水","family":"synthetic-shallow-basin","kind":"synthetic_hydraulic_development","recipe":{"id":"slow","name":"缓变：均匀降雨积水","family":"synthetic-shallow-basin","rain":600,"infiltration":0,"sources":{},"drains":0},"note":"合成浅水方程开发过程，未用真实洪水率定；三种机制不构成充分泛化样本"}

@@ -1,0 +1,1912 @@
+{
+  "status": "passed",
+  "completed_jobs": 12,
+  "jobs": [
+    {
+      "method": "QMIX",
+      "seed": 11,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0107-d9cada01.pt",
+          "sha256": "ced5edeeacb99d502373f42dfc8cd035dbecc221c46f68600afa0ba5fbd416b4",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0207-daa43454.pt",
+          "sha256": "134fb30952b277f341ac7a5f7d7a25d2f31051a6fa708b89a32982ce6bf4f3e2",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0307-2ff1c0b4.pt",
+          "sha256": "3f49920a358184942d679d47218b1ed9f9d5e39c4a539bbe502f89e413d72814",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0407-7ac53c8c.pt",
+          "sha256": "327f21eeb653924321e6d6a8fd48f25168d83e1543191ec25a4f77c8b937a94c",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0507-020a5e78.pt",
+          "sha256": "1fa82789f75ecb5635bfdb527a78eb113bef7607d2c5bba02767067c6e95cc90",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0607-f0aba765.pt",
+          "sha256": "28209197686cda80b33094befcc282fdeae1a004a3f7758ccafc2d85efdb1436",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0707-82b66ebe.pt",
+          "sha256": "a3bc96c9a84004a42fbf2f8a8b1df49b702274729d94de6a73d55bc9451224a1",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0807-503247d7.pt",
+          "sha256": "22bc73960a6b8d87db16544a5d6c1cfe325d5208f930eab3fbb3f4b8f11a8a72",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-0907-a13bc20d.pt",
+          "sha256": "6b7dbb009394b1f032a08449168a6d12b75333f55ddb7728f29d8a9ca4032aa0",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1007-78b7260e.pt",
+          "sha256": "970a1e358ef32126169b9585aa6006dd9cc7a3f281f0e1fd43b37a51f5f89ae5",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1107-0af6d56b.pt",
+          "sha256": "a6202f819606ee1a34d1b044b824fd98e6503f8b1e2533970b8c7dbbd30735b6",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1207-0bb36884.pt",
+          "sha256": "2647e9a1c02d2776b068569da64fec974026dc6561cbc485ba12758986499e3e",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1307-788953a7.pt",
+          "sha256": "4e689d1a4eee1b4204d8b503c416dfbda68a8c367116495e04c1800fb07634a1",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1407-8f7d4966.pt",
+          "sha256": "2a3b9d4ca90b7806304b3d8d152006ba8a376b7e7a01ddcd763a803c94332665",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1507-ed4a74ca.pt",
+          "sha256": "e900d297c3a8d854a33c7bb6e5ff5f012c1da07666d1818bf1747fd4e14331d3",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1607-9ee96214.pt",
+          "sha256": "5bbc54e93cb6b53ebf406a12be994a852d8c7750347df3ea77d1555247beebee",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1707-59309518.pt",
+          "sha256": "37a750980c9765a3aa03d0741a20531f45960d9671d08ad1c7b99a1c3c63ac9c",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1807-e060efb6.pt",
+          "sha256": "573d68cae89255c9882236012076b07b5689b2864d45f735d5f417b8b90f070e",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s11\\recoveries\\recovery-1907-95dd8566.pt",
+          "sha256": "f8739f51dab52fa1a611f2868b7e2810dfeaf60d42fe857bb8ab45fe1d870750",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "QMIX",
+      "seed": 29,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0107-c61d8d5d.pt",
+          "sha256": "39702e736fa6903c3914f6be3c7cc9fcad37661a6b7c2088bf2815ed2110ac04",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0207-615bc0e9.pt",
+          "sha256": "abe52b01232a753b53f200f971837ceaea1936f2c6dd94d6e1cba9bed36207c7",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0307-1119db28.pt",
+          "sha256": "30a22c0de888ec154ed3d0aaa0251b8690f54d6d4761c805b19248a177edf1c4",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0407-41ffeb0d.pt",
+          "sha256": "213a87076b6948f5ff203ad78a6090deca9d5b8546cfc93f46da391d1aed2d82",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0507-79f0200c.pt",
+          "sha256": "3d2361fb59e4abe532322cf21091890f69021bdc931da43874ef512596babf61",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0607-cabe6d0c.pt",
+          "sha256": "6ea8df385d89c76c4523d6ed5ca8857aaa8f4cc90ed2c28aaa8b45fa87083705",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0707-4a538ea9.pt",
+          "sha256": "1dc69a6d5ffab4b4991fef85b68344e641b41df870e2f0e7f60b872fc1870541",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0807-dc290f5e.pt",
+          "sha256": "b188167ac64c88728aac8d903aac2f1cca874f7bb09f73af452de1177ecca4bd",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-0907-f52cc8d7.pt",
+          "sha256": "01447c995e1fa8e6dc35f084eb61e7f6d75d54566c740a549c6a0f92bd4963c9",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1007-6aa1518c.pt",
+          "sha256": "6ceef974611a1bdbcce488adeea1cf05039e452e826eac536c298be1d545afb2",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1107-b1140e17.pt",
+          "sha256": "14ba407d609ef8e7bd743d0c6f0c32c8cbfd8d90542d993d5f6de9165edf68f8",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1207-daec9e3c.pt",
+          "sha256": "3781c91a4b04c719063cbbf490cb6ace0a1e8115a52f209cb41ea014a51d80f7",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1307-86770a87.pt",
+          "sha256": "5d1c73c33a2c26dacb45d80f0e35e1e3312798fbca4d96a9f431e1659b89c217",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1407-aef2e1f8.pt",
+          "sha256": "47ac66ea617db8d308c3ed87cee3857a6c75d2660965b762dde04c9416a783cc",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1507-700086a2.pt",
+          "sha256": "7be47fd4a3f0700a0cb147a3529b7aec373537e67e02faef9632242a52635e81",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1607-626d2e7b.pt",
+          "sha256": "c80236d0c04f879fceb0674ccb7ecb46d34f5e4ad965c3c924543e151ee3d718",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1707-fbb59a13.pt",
+          "sha256": "6de0b93c5c7f9a0600823beacd5f7883170b4c7aa7aede07aa26e6be10df1198",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1807-5c02ec09.pt",
+          "sha256": "a1ac285e67e0cf16c59c78d1d2cbddf2904608092ac561cb5dba15199fc153d5",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s29\\recoveries\\recovery-1907-72eb5732.pt",
+          "sha256": "26220874e6abb5de519db22ed1481cfda413610d989fc6e7c034c67410ab2295",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "QMIX",
+      "seed": 47,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0107-25b48e30.pt",
+          "sha256": "0586ae01b64663b732f8aa244242fcfaa0da5ded7d40c3a622cf4099087f00ae",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0207-4b987e72.pt",
+          "sha256": "5c4fb6882b575c9d2df4b7ca8b99301e852fa6ff0849907943ae50ee50ad8e53",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0307-07fd34b0.pt",
+          "sha256": "0f2d389c795dbdb560f18fc69bdee97579229dad31786e77c9fc318349750793",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0407-d17dda22.pt",
+          "sha256": "4a787fc7a9969544de22673369af7679c5fdb4f69a7bd0490735496402d28334",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0507-c9c2d83c.pt",
+          "sha256": "b5539b4e1ab5a13e239fc6e5b776973d2f79637ba09cee7f8b1447b43f37504a",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0607-d387b843.pt",
+          "sha256": "3b4d3419ae42c31060ca5cd397918636ae40993a333f278598d9f678eb718656",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0707-08dffd82.pt",
+          "sha256": "935be9775fa51ffc024d87d8e3a39366f857ab4837c49b5b45e4eb18d42e032b",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0807-6a84ca41.pt",
+          "sha256": "0c3bac3f9d1b78a7d06b2ea364606ae813ee44fd1ba7e44eb655e082061dffde",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-0907-7ccedce0.pt",
+          "sha256": "f7a489c3a37005516b88fddfab58ca12556bdc54b13a6c4f290137fb53288462",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1007-24cb979e.pt",
+          "sha256": "21f3717dd27177217054d4735b40b2360dcb29dd48055eb91f597cb64ff8b630",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1107-fdb54d72.pt",
+          "sha256": "f991a4adf31f32be0eff7960e0007850f89b4d738fd5eeac76ea55b185584f76",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1207-4f6223a3.pt",
+          "sha256": "fbdc7480e4d067369d0bdc14cd162451fe205db34e3aa8a4bc9b0b135d4dda5d",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1307-115ddee1.pt",
+          "sha256": "deb340a1ed5f6e5744eb3b2d88db2ee8ab5609722f164f4881e3de7f596c0339",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1407-ffa7ef0f.pt",
+          "sha256": "ce003eaadd03463d53a151d6c47bbda7c7c43924980c5bf4bf134ab55ee6030e",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1507-7ee63b7b.pt",
+          "sha256": "e8427d0b76abedb553619bc3057f87fcaabef24767208311dd794247e8186f69",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1607-1866b29e.pt",
+          "sha256": "62dac206bf822a57a90c189bd05d6e228e43bcbcc08146ecc5ef6401c92feca4",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1707-d56e8c7c.pt",
+          "sha256": "1922faf0c95f4f2454780edb031379e755b2f63aea84a6d149f803920872cdf3",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1807-3ac697eb.pt",
+          "sha256": "f8393125e100e98cd26d0c5aa25ee0af5bd56879dd523a748eceeab1a62d4297",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\QMIX-s47\\recoveries\\recovery-1907-6d7fb62c.pt",
+          "sha256": "3376d83c3cb607f22bcc87ee47f1771780b4fb78ab673a7bc6e640d816dc7c81",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX",
+      "seed": 11,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0107-e50940e7.pt",
+          "sha256": "1ca744244becb67fd3d5fa559ad9eb9daafc30d9520e41f0e09a29d97dec6ba9",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0207-eb47998a.pt",
+          "sha256": "c7bb3b0775812606d86d42b95e159ae64d16c6776b847d6dfc3eae401eb88c63",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0307-5c2f8414.pt",
+          "sha256": "7e393e0a387f1f1cdc4e85fc6850a06ace802980d1e416e8b7c30ee436627162",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0407-ef410b6b.pt",
+          "sha256": "08a41c671c8586a7165d530069d469337066598654e44a3a4f57487e817bd043",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0507-536b63fa.pt",
+          "sha256": "d3d61d872c907cae43172451ec33d86815afc62f6cf4a37daf93dec951186cdf",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0607-21266739.pt",
+          "sha256": "393b7f06556ec7a1b9a1472a19c2cd1302db372a459dbe46da1a1d86b71b57c0",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0707-4bfa0af8.pt",
+          "sha256": "54b9980aaf0cfc22ceed70343c3ae17610085ebc71bf2c014451911a9a63be3d",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0807-4c5bd1f3.pt",
+          "sha256": "9a35e26b371f6cdfcb613901afb9b41bc480839a41d37c41723c1886a89f0f2b",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-0907-b8e54052.pt",
+          "sha256": "df9ad7720cb560d402bba8789ed7099e09baad471d0398c1cbc1bce62b773867",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1007-72a99b23.pt",
+          "sha256": "469c6aa61e6a57748dd5c11b677afc4fbf64881625171a91c08f3376fd91a8e8",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1107-e8945e78.pt",
+          "sha256": "ed2fc59f19b19dbdc39419b6fc1314b6530536d044b521567ae7d301fee7f27b",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1207-e7552c25.pt",
+          "sha256": "5472172153bfb34b91c15e16a9ba411469cad770d44875ccdf0037cda2cfd487",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1307-d02615a0.pt",
+          "sha256": "4bd035bd862b6495cdafaa064cedce73ca2c6f06648da976636ab449efcbc9f0",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1407-59e070f6.pt",
+          "sha256": "ec6e8663950b266cbbdbf9037650ecfc0061587c059905ba9e733f9cc275e798",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1507-eaf71241.pt",
+          "sha256": "1773759988a43bbf1172c1969329478de0ecdcb1882eeedf53f1ff4f11d72f51",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1607-729bd22e.pt",
+          "sha256": "e24d54f2d3425a78710b4a6bc32dc8c7682a19f4ff9afe0a73867fd454235622",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1707-43d6ca6f.pt",
+          "sha256": "466ef9fb502bc28e79a1bbe7da38000e9e14a69eab4a75ad864dd69a94d220c6",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1807-20142d20.pt",
+          "sha256": "e00cbf13ef8713b1cd49fdc0a21932db8d162ccf6b53566e7558bd9716f1b79f",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s11\\recoveries\\recovery-1907-6a927252.pt",
+          "sha256": "5ee4d2dab3e137f3630ec79613eab5ab1ea570933117461b54cabed75bcd46a5",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX",
+      "seed": 29,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0107-c9e44194.pt",
+          "sha256": "2ed463fc01a31f99925c1a3251579b61329caf5c3476c5e771466d6f0e65cbbd",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0207-c967b02e.pt",
+          "sha256": "d073e238c823e502952421f7276a0af9dfc56a8ceae0fa5d5fe982b0960cdc2a",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0307-c8faa33c.pt",
+          "sha256": "91a1c988135e36ecd2b39f9a0437184d3f829bd46f9f128196e01cab4e992042",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0407-ccd2c142.pt",
+          "sha256": "df32dad2f849aac33a70f13dbaf653b68658aaf8f08700a66ce5a1959b79fa8b",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0507-f48100eb.pt",
+          "sha256": "7200a981070bd8d3d6c642c1b06441438ed331ab068332e508ff72c1904d2f72",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0607-07746781.pt",
+          "sha256": "da3ea70e071089333be31887c9b0b705196d3f37f9b36a8d5347ce061216dd25",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0707-39fd2f80.pt",
+          "sha256": "a02f7bdfb8390f1834cb0a1820ed3be8fe9d6943eba580fd60b77d62b5617721",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0807-12174fdb.pt",
+          "sha256": "1a99b2d8b315e737e385adcfbf5f046a0aeadd7d49a5499d1e626e58c718978d",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-0907-d00b00fd.pt",
+          "sha256": "6061ec0cd3976823ae40ebf9a05d061436674c2bd5c79e857808077cd1659b3a",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1007-2e826002.pt",
+          "sha256": "103d1cf4776cefde4867eb97db28af95a3aaa31ee970e63406519aba87968f68",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1107-d74b5efa.pt",
+          "sha256": "9441e92fcec6ae12c71640d678bd89a28a6f98d893e6e0947ee1e4d7dada7228",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1207-95e563c5.pt",
+          "sha256": "a2aaf38e3f0b9d9ec18f14241eaae9d3d47a075b300c7157a670279b89f5f78f",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1307-103fb6e7.pt",
+          "sha256": "749bf38e3f94987cd1b1b3c5a6f1de327795905e23be9c84f9b08e57bfa00b58",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1407-4fe969dd.pt",
+          "sha256": "89aac829bb8b6403952d43b5de0f453c004df7519890a392465db725488302cb",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1507-fdbecc9a.pt",
+          "sha256": "d96d51c8688833bf123c133f2ee3cac7235718ca96904009c8be0773a2adb4a7",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1607-22861d51.pt",
+          "sha256": "7b3ab9710700b328149d26407db4dae1d397b135177f594268808aefda9c7e18",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1707-ac81a5e8.pt",
+          "sha256": "5b581bf15990849a0d5261d9e699435e313313ad63f9d58ea994701b50d7f821",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1807-6bea6fdd.pt",
+          "sha256": "60992888cacf3ed09f08d66442b165b622e0c93fcb5245e0204deb0961064a8a",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s29\\recoveries\\recovery-1907-474de2f4.pt",
+          "sha256": "c907b0f3e9309136f7808a1b21a8dee89d8c8c4d2dc02ca63b9e68a77deb6cd0",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX",
+      "seed": 47,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0107-74e1de5b.pt",
+          "sha256": "dd372a44cb2f29c65c544b6bd11f444d0c0d7c06f89f5e27f0ac412b9ab3123d",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0207-391b8612.pt",
+          "sha256": "61f0f1a25d4b3b8c9035dad4b5964ee3931cda78ef82f8c01659f41cabf0c30a",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0307-0f250306.pt",
+          "sha256": "d3aaee7d1ec66cc9451462f65a618aa7eec313cd1ae410445af539793b873491",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0407-bb9a8790.pt",
+          "sha256": "ee2a89a9b61e5c9cbf558bdae32e7056a37579d8dba3dd37f59cd3a9024b42af",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0507-534d66fd.pt",
+          "sha256": "ba6a56814e84bc4021328b9efeb0ec7c4872c46dbdbfaaa53c8eada1399d3def",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0607-6c03fb15.pt",
+          "sha256": "13e66758cc56032981428676d9842103115e61c88080518d25916b9c0a588ca8",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0707-6994802f.pt",
+          "sha256": "bdbc6c1391e2c19fdf0d613cf3829e1fb53be04403c23af15f15daa4c370db01",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0807-3304ded0.pt",
+          "sha256": "8417fd0dc4ebfc0004281c52a10839dd4f62b97c6819b3b2108f225f42cef49e",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-0907-8ac09ca1.pt",
+          "sha256": "4fd1c7a86a1f07668efef8f8a4d65518afbaf395da32124fa713c496da4c1f0e",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1007-76c0e871.pt",
+          "sha256": "c3750fd818e93bda87f4396e6c9a61496e86699513b0dd506b945e5e7d6f3135",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1107-d646449c.pt",
+          "sha256": "726a61b021fe92e1d79e4e610e8eee9f738ac5775345e9e85ce5bd582fd87f9f",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1207-8128534c.pt",
+          "sha256": "31b5fe859231d76de0ea60b2e6996ba4b03c0310e22115d5b2f3fc4366c6f0b8",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1307-31bef1ba.pt",
+          "sha256": "19cf62d274b84cca803670e4aac8262c831d950982064f78e25adc53f8a1b3c2",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1407-75998e7d.pt",
+          "sha256": "27a7ed9cb988cf3a85b919ff7e3182b888e2633ac26bb5ae9a40b266704c746d",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1507-691d69f8.pt",
+          "sha256": "b86dd4b6f20b62dc6c26480de17a19a32ea3167fafb3dd11a4abf6e1dc8d091f",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1607-6410e1ed.pt",
+          "sha256": "1ecd88de374a43d388dd42f01686b6e013233c692de63f91d4b20f70e5d87510",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1707-c0197468.pt",
+          "sha256": "e610e1e4ca7341beb5fe069b3db77abf97112efc4fca74d439f12a5b06f0e3c0",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1807-6df16974.pt",
+          "sha256": "dd20c7b806ce3e1fd8965bcd6e7ba8492bdcaeac3285f36b1cbec88fcf71f1bd",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-s47\\recoveries\\recovery-1907-e045610c.pt",
+          "sha256": "e5bb41e3f1eab27ff1e8b8bf683a2e8368d6ba2f3c88a5e13e738c93693f6a52",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX+Data",
+      "seed": 11,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0107-1acaaf66.pt",
+          "sha256": "a29ef89f4dd8dbbe6b6d796828a437c5ff55fd0df9480e11281da5fb05490c72",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0207-d9bfe93b.pt",
+          "sha256": "ddfa923f34510a3605cfe233d32f0cee1d45dcfa452d34dbebc5f4b97e41f7f1",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0307-255f0208.pt",
+          "sha256": "cc31231ac8839404909559552d9605947486e895f20bdd6fcd998f4e7d88a187",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0407-1f06e9df.pt",
+          "sha256": "f884f55eda22b2f98bad92e19f2e6d70c59e6a2e7cdb28f5c4d607ae5e28f514",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0507-e253d35f.pt",
+          "sha256": "38bdbebf60502c5802df4f327969c464437bd3dc6af2751e519c25ecd7f382e3",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0607-d15dc04d.pt",
+          "sha256": "fbe4ca922f879f2877ec1e8a3d11c4d8337805025717df7254ebc50ec2888686",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0707-14341646.pt",
+          "sha256": "211ef0c4e842f4eee7c1fa9054e465a84e39bcc44013878208c652ab4a19b455",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0807-dfee2792.pt",
+          "sha256": "55bd98f0430435c4a0e68ba57a10671398488f8641402abf435ebbc5f9f65e87",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-0907-cb3768d6.pt",
+          "sha256": "12c8674c6ee02eed4d1a61f00bb1c1a0db3ab86a527ff9534d4909941628a5d7",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1007-65252830.pt",
+          "sha256": "acace4d28bc5cadefb54ea851fbb146e8dfc88f591972819e9e0ee0be58b0c7e",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1107-640feff3.pt",
+          "sha256": "8723367979b187b4cea1f6ff19bd022f0d27b0b7e54e86a571faf68857872c54",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1207-95d03118.pt",
+          "sha256": "ff754b48f7f04f8cc8f3afcaa9efd991375ae9ea46a98cf410013e848abe2c0d",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1307-0056c533.pt",
+          "sha256": "488706c59c0aab46e173144410a659e47951b25952488855eba132d98a88d8f8",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1407-a91c7dc4.pt",
+          "sha256": "11aab6cbeed1cc5a222610a42e2f0e6703f0327b3b735728d0b095249c798940",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1507-139b513a.pt",
+          "sha256": "cffc6ce35b0779e5202ba902579e1f515ef76153afeca5907e500c1790eff1e3",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1607-4d2c38da.pt",
+          "sha256": "79d232116d87de155573bd97ec67948ffb6dc6f7ce0a60bab4383f611279a1c6",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1707-c5ccaf78.pt",
+          "sha256": "59ccfffff0220769c2aa469f12ef3aae501695f3d2648cfce05564705e000afa",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1807-d72da1b2.pt",
+          "sha256": "e5bfc6aacdaeceb1ba1d082acf9bcc75f285e3cd9b0528829f99f75c050a423d",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s11\\recoveries\\recovery-1907-581b8ddc.pt",
+          "sha256": "ec9280e94d80565348e619ad514b5d3fa3b95b55d72aa61f326bfad8e445f388",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX+Data",
+      "seed": 29,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0107-003cceff.pt",
+          "sha256": "6be8695dca693c593dd7aa935ef512637230ccba7df792a9699b32ffee64ba62",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0207-4ad7685f.pt",
+          "sha256": "b263b5076e45591c38662f574d5c99b02e7cc12bda51dc440cc2f78ac816216a",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0307-b44db6e3.pt",
+          "sha256": "c5338e7c4d283566f96f5868edf4dc4df9d6211fbc25bdf0f82995f8bad61fea",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0407-6b645375.pt",
+          "sha256": "d71047b416184c30e5e3ca2827549f4ec72fe3e7efcf01f9788222de504ce0f3",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0507-2ccd2307.pt",
+          "sha256": "7f64238c29059f88c8f0123fff0b65facca1788219eee1b704747eb178821e17",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0607-4d5a1d07.pt",
+          "sha256": "c30d317fd528cf187d3f636208bf396b8a8692919c60e9944c6365b3ddf5568f",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0707-300acfb0.pt",
+          "sha256": "e67d5698738be664ff24a9795e4d1cb9473bef35e48822898661b6da8bc57548",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0807-734f46c2.pt",
+          "sha256": "a4fcdeaa3e4c5f6df8d54498ca7d24d0fb69d9fe519c1626c806d08e602000e8",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-0907-12d950ba.pt",
+          "sha256": "644cc593fb380defcad988ec4eb7265669b426285e5ed7fcb3c3736f129c8b65",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1007-0ef909fa.pt",
+          "sha256": "230f96a80e88c5d1632e7573077f40d79493773afc18dedde67cae5d0de10e10",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1107-45100571.pt",
+          "sha256": "04874da283784d21d5d902c2ceb426a47459cb5ef78255e41135b41405d74857",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1207-61da37e8.pt",
+          "sha256": "484491f26921fa3609624f0dd5876a9113924e1784d73d27a36ce7d1a9ab97fe",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1307-f90d8c41.pt",
+          "sha256": "f567c2cbf00233ebd5245894ada3632b82acc940a9322463360c0d449a7cd8e0",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1407-55c8888d.pt",
+          "sha256": "30672edc6c49c935db42716c245152bf54e92e789e8ada3f868c823a6aa11941",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1507-bb9de3e5.pt",
+          "sha256": "960f70dd53c27092b3ef7139df7e2857ba64d513c845ab0a9d0d5ed88ac3a9de",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1607-3bc8c416.pt",
+          "sha256": "9654157adbabb80223629e2ecf061766a9fb6f8b1c3d23d65a1df8117bebadff",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1707-bc20b8e9.pt",
+          "sha256": "7662d7cfa82f41e3a9d622ce320243e9a269ab5043173329d095b0140b49de45",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1807-c541f7ee.pt",
+          "sha256": "06cbfb811738b5c808abee6b38d511e5e465daa019b9bc7eda3f1595d4877f15",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s29\\recoveries\\recovery-1907-2a327c17.pt",
+          "sha256": "010793755740d19cdfc8fba31d964d7d1f8563079fdf20155711f0ce557381b6",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX+Data",
+      "seed": 47,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0107-2b1978a6.pt",
+          "sha256": "f3626bc38c2c2f5df72abd51d11c961f62f30450ce1c59965886ec16e54f4e8d",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0207-e5d9d15d.pt",
+          "sha256": "039109edef42e0d27c113e4e3e3c43fea972fe587d352fe09fd1b5a4b4abb160",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0307-4da244cc.pt",
+          "sha256": "90f3cc33360bb46d98b6c911b784fc94dcdbc42c87d91a26b7cb568778818395",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0407-47673f3b.pt",
+          "sha256": "f1927be0394204509aa0fb70bc35c4ecbcbbd16e4701714311f90231ad64771a",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0507-85d0bf7c.pt",
+          "sha256": "4f52b7e50ae05ab5c39a535d1594f9767aac1d2e9b153b454c156dd4fcc5ea93",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0607-2dd95b03.pt",
+          "sha256": "70ad0b12323a2e10e445632013ef27c4094b45e1d8f3cb8d4c5338ddb4e6db41",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0707-27136e82.pt",
+          "sha256": "afbc5b4dc022966ea6193fc6a71024a949b544bb9482f212088fb8c0025c89f3",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0807-63f2f821.pt",
+          "sha256": "087d78c2f36890e29a4cc07d594f55538956db165aa823fd43d6b317e421ff66",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-0907-986fc4c0.pt",
+          "sha256": "90f60adf582594db71824d82ef76cab63b007efa63c9f0a29b18b92d2f8f5ced",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1007-5ad0b72e.pt",
+          "sha256": "3261220773867e81e4661fbf853de567a62c8f1091e58bad483f1f33c1b46c7a",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1107-4d28dedc.pt",
+          "sha256": "e9cc8da14437330dada7de8c791c0dbe4684024e97fec3969638063c40970992",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1207-75211919.pt",
+          "sha256": "702949f5da2958f8055a1694a8be2b7e64059c69ae7413dff43d81d19484510a",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1307-b12f9c92.pt",
+          "sha256": "419633cb40ddb7e1d004dac5e66bfb32d0624f5762cb50f1f3145ead7f794eb5",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1407-d13d111d.pt",
+          "sha256": "f7c10364909900c4f46f067c73b023a56a677d4d8f37bc070f2fb7b480d93767",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1507-e60767ec.pt",
+          "sha256": "67011a33dd1cba5066571b2bb3c3bf9a9ad8f8b107fc3da47b73e1b316ba71ad",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1607-b127a4d3.pt",
+          "sha256": "bd95ece47e41041d302a3a087891e37e4de673c0ae7e7be67a7cfd5dbaacc33e",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1707-296dee7d.pt",
+          "sha256": "c04df04a295592697f98bd9a054ecf48c8dc3ce65d843a75ad7ba4efb9e7989e",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1807-1a49a207.pt",
+          "sha256": "c706d954ef72afb1aeda09c5b37759f60a990ef29ef0565a05d415c296651e9b",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Data-s47\\recoveries\\recovery-1907-a4460cc3.pt",
+          "sha256": "0cdc7c2c44e4068fc0bf62c81e74e14e8d7f174dc0d373fef1347e22e409043e",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX+Physics",
+      "seed": 11,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0107-81cb75b3.pt",
+          "sha256": "df7c8e1e47144a6b8f65f6fe4f44a1b5cf1e96b359cfcf1c131f00dddde3d0ba",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0207-a7866641.pt",
+          "sha256": "d55fd6e2f0064a36f5449f07d28c4c3f1f5295e9b4ad34a19eae96e8fb84fced",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0307-92c89e21.pt",
+          "sha256": "2edaaa99a32b7317ebdd6e589326c1a7e3ad12970a62cb43aab708c8613ba4bb",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0407-0edbb013.pt",
+          "sha256": "28b086f8896e7f63f1d38e10e8d3eb600af5a80445232e537b6dc0d37b921393",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0507-2a9efbef.pt",
+          "sha256": "da841db0a82bab968fbcd4d62827bcbb5fbd36b13dd2e5093bdf276e4d4fb9f5",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0607-ca6fe5d6.pt",
+          "sha256": "5dd09e0201401faf5e0dc72c7f8007e3c83197e2aa968e3aa0e6a8896682e506",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0707-7b66c1fc.pt",
+          "sha256": "08fb464e0d2965e5bae0e4b43f5325c832f4be141e212ae91ea99fc3aff295ef",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0807-c70aa47f.pt",
+          "sha256": "da134525e0e7011fb29404769269a11cb37ca6b72dc27f9590fa454132b309fb",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-0907-85c7dba5.pt",
+          "sha256": "94f9285b0a7a592f895d8e25295f9b63ac958f5ad086b83160f0199fd0174974",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1007-badd94e2.pt",
+          "sha256": "5162a1dd2742f5a455ba80673306978a7b3e4c5c5351f684cdfd09a94660a643",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1107-d9b7f8be.pt",
+          "sha256": "c3b8c2668994a275014ae467bff18cc35e0f76434cb36c519a61b2fc80433eea",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1207-d0d91754.pt",
+          "sha256": "e2e1c50f47ce8148c7cdd240ba4877fd1cc5234cf6bc865dc42a05e5e639ec5b",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1307-0c87a73a.pt",
+          "sha256": "23b78dadca0ba4736f358568202a440b3c7b16cd41d65731520844096a533f95",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1407-b1dc24c4.pt",
+          "sha256": "4783ed9720e8dcf0b58662f48bee6869666e5e5757f3192c105997db89386ff0",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1507-566c79a3.pt",
+          "sha256": "af558a8fd666d0f4697130a8bff84e88586f3de6ceb9e01d044e36ed16e0a311",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1607-b771b16c.pt",
+          "sha256": "9d2d594d5457dcd6954e973f053e7a389cc9025f36f2b4cf6ade4d4294e8551b",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1707-5135b8ff.pt",
+          "sha256": "fe2066a70628af6a831bf493f16eb7bc1cd95119c992cc3d7fcda51759942099",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1807-5b9fd451.pt",
+          "sha256": "eea1b042dd914f23b4df8015f8c2117746ace354f3ed7f76542d706e945fc635",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s11\\recoveries\\recovery-1907-e892fae4.pt",
+          "sha256": "34beb8f444391f8ee444aa9e0f2202378f4b8715d48a7235afc1b6ddfc6aeeaf",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX+Physics",
+      "seed": 29,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0107-492440b7.pt",
+          "sha256": "09a7d497f70caade39702b36845cf0f6877ec4b712bde20035722c3ae4711a97",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0207-c13e9546.pt",
+          "sha256": "d7d3eb1be9d9d821702967badf717fed0d7476cbcdd2e2e096b076f9c2de3e14",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0307-dd19eb37.pt",
+          "sha256": "915eb931cb2012838922a7d16676b66097d535d074a59914a419967994167d23",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0407-5f2ae9b9.pt",
+          "sha256": "64096b2d707d08f6b3883364b3b3418765b516f7faa6fa6f1e89d4f58094a075",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0507-4eeefdb9.pt",
+          "sha256": "c4f28f770db8229872cfc2630bcb0c40bebc2237a8d2243be32c7fb54a02d5a0",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0607-d0712c6e.pt",
+          "sha256": "80e54bdabe6f7146a9eff1ad11bd2107e0bd31320f97e3d3414880104fb01515",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0707-ed8a963c.pt",
+          "sha256": "4f56457d24b708c97291acef8cc6a05d935ff1e91abf7f8516a940ca6d0c9931",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0807-13d0d987.pt",
+          "sha256": "11f2847de295606f285a95f727fe0d5ab9ba7cb84e20a60cbd3ee734f63df044",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-0907-79bcdd19.pt",
+          "sha256": "a3753103cbde3557691481fef8d3529c40ec8246ffe588c6f31049fa698adcb2",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1007-d4b1d9ea.pt",
+          "sha256": "2e5bb263de6f8e1afdf85498c22910627513fcc158a3a05292db3fcf9290fba5",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1107-61578e98.pt",
+          "sha256": "2c8f7316b35f8beedfb3b734af6b7240c08a4009bf35da0c0874ed341f431c55",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1207-5d788e08.pt",
+          "sha256": "d64b9f3d7e71af3a5a7b25202649c3d3c3c644532bce6cd67f3dd9ad11296728",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1307-799bba99.pt",
+          "sha256": "01ac34c444ca546024e9adb280d0bae9fd2251526585bd17bc1ea412d7d2d673",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1407-419c5471.pt",
+          "sha256": "dea477ce1fa761f54a43405492cffa434316ebb6bbb0f88682c42f35048afae1",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1507-a1cadc04.pt",
+          "sha256": "e626b034f1fa41a0cd29c565500503d646bafb8d7b7f34f2224e5eadbd5d2d4b",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1607-944913f2.pt",
+          "sha256": "79f642efac13a363e29478743ccf38f1e307173df1f368c1658ee5fc33ae2c59",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1707-60fe3727.pt",
+          "sha256": "f533529db0a39d5a4420d30f06ff92ebee59e88b72a8ede33a4d064ff2982963",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1807-90773def.pt",
+          "sha256": "dd2b132fd1ddd3720656c0c14a203cd072ec5618da159e4c997a2aa0671fba62",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s29\\recoveries\\recovery-1907-09640de5.pt",
+          "sha256": "2a6895f80922a1b24bbb5d3ad013812d58d33462b5b7eb0521daddb351327aaa",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    },
+    {
+      "method": "Sur-QMIX+Physics",
+      "seed": 47,
+      "status": "passed",
+      "target_copy_updates": 19,
+      "copy_references": [
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0107-eabe94eb.pt",
+          "sha256": "d8ffea05a9ba3fd90810ec9b86b767d5e62d17337916edaf8df5e30eba1a9084",
+          "episode": 107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0207-71617dc9.pt",
+          "sha256": "a1c959ddb315c568d60fe14120c6fcd8467cc51e8e4ef0ccfaed839016bfc558",
+          "episode": 207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0307-3b5f3f08.pt",
+          "sha256": "e4aef9c136c0f7244e5c93828fa02223c93eaec4b9e83fabb7a5ded69a1730df",
+          "episode": 307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0407-631c1aad.pt",
+          "sha256": "ed1db2ffa8d0d98d40b941368df37e803242ab27d484da8cbbb7c90080183d67",
+          "episode": 407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0507-48bf5847.pt",
+          "sha256": "598a4cbf28b88c642034ecaaea55eeca7c01de215ee0cc9b64aa34282259ec72",
+          "episode": 507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0607-228143fd.pt",
+          "sha256": "e8bd09a498d5dd03e41cc723b09b98e7bef2c0095b00f5d584c801c8b8b6b527",
+          "episode": 607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0707-79111d9e.pt",
+          "sha256": "48bd678bd89078dbeeea4c08571d8aef1f724bb554cd32494955d3a8c3b10902",
+          "episode": 707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0807-03a7d9e2.pt",
+          "sha256": "86de0fc60d8091bee91644ae825a494b150d1e6697ccc58ff9c0b90384b022ed",
+          "episode": 807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-0907-57d614ac.pt",
+          "sha256": "0c3c0fd6da1d72882fe11f92e2f84eb402588386bdbea3f6b0d74f298782f802",
+          "episode": 907
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1007-8685e3f9.pt",
+          "sha256": "a8ed74f6a2d970d88334f51555ad87c21c3fc7130bf420ca54272c0062e817a2",
+          "episode": 1007
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1107-478c39d0.pt",
+          "sha256": "cafe7b5b882f56b50d7755ae3f4ad052315626fcf7aa92599c2270cddbfef003",
+          "episode": 1107
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1207-b0d319c5.pt",
+          "sha256": "8f547543a9ed2d90a1acb35aea63d50033f7fb8a4ce47d9b88a65cb9c0721d66",
+          "episode": 1207
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1307-98ed05a9.pt",
+          "sha256": "945f37735ddd16a8cd65f2ab0514adc8feb20cc7d9480e9b4f62fe674315f6ea",
+          "episode": 1307
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1407-c9a94366.pt",
+          "sha256": "cc5dd93ecebf636aeafdd9d4202ae026e3d51520f7a124ed260afe68bcf259d0",
+          "episode": 1407
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1507-df33ceec.pt",
+          "sha256": "6ff10faf0011d9ab9951ea7ea6a63c40e35d9b339e543b7f39f95d18e79e8fe0",
+          "episode": 1507
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1607-e249d9b6.pt",
+          "sha256": "c5cd9e77683e66a4c5571b53bdcf92b78ea932dcad8f10bcee4c49b70c20eb8b",
+          "episode": 1607
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1707-a9fd36db.pt",
+          "sha256": "251f071842e95240b7ee47eaeec032bf4aae310500150cf473a568700f3ef582",
+          "episode": 1707
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1807-b6978490.pt",
+          "sha256": "a6feb02169cc31bc0533a9bdf621f5542be493198ab43ec2e250404eadf08864",
+          "episode": 1807
+        },
+        {
+          "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\sciml-round1\\formal\\Sur-QMIX-Physics-s47\\recoveries\\recovery-1907-f3b96010.pt",
+          "sha256": "aa9480e2ee60c6d6eed6a87fc74b2ebd7ec7ca740a56c795befe6273602c2c72",
+          "episode": 1907
+        }
+      ],
+      "actual_milestones": [
+        {
+          "episode": 200,
+          "last_target_copy_update": 100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 400,
+          "last_target_copy_update": 300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 600,
+          "last_target_copy_update": 500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 800,
+          "last_target_copy_update": 700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1000,
+          "last_target_copy_update": 900,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1200,
+          "last_target_copy_update": 1100,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1400,
+          "last_target_copy_update": 1300,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1600,
+          "last_target_copy_update": 1500,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 1800,
+          "last_target_copy_update": 1700,
+          "auxiliary_rng_exact": true
+        },
+        {
+          "episode": 2000,
+          "last_target_copy_update": 1900,
+          "auxiliary_rng_exact": true
+        }
+      ],
+      "optimizer": "all current parameters at expected update count and frozen RMSprop settings"
+    }
+  ],
+  "seed_initial_weight_parity": [
+    {
+      "seed": 11,
+      "available_methods": [
+        "QMIX",
+        "Sur-QMIX",
+        "Sur-QMIX+Data",
+        "Sur-QMIX+Physics"
+      ],
+      "initial_core_weights_identical": true
+    },
+    {
+      "seed": 29,
+      "available_methods": [
+        "QMIX",
+        "Sur-QMIX",
+        "Sur-QMIX+Data",
+        "Sur-QMIX+Physics"
+      ],
+      "initial_core_weights_identical": true
+    },
+    {
+      "seed": 47,
+      "available_methods": [
+        "QMIX",
+        "Sur-QMIX",
+        "Sur-QMIX+Data",
+        "Sur-QMIX+Physics"
+      ],
+      "initial_core_weights_identical": true
+    }
+  ],
+  "auditor_sha256": "9d4d92ebcbc1345262ae613db0ef1725d88f1cb30ebdb5634741b0562d7a9eb9",
+  "formal_plan_sha256": "7a0fb1f89878e76d43c8682c4555f34e612e6cd38325c88d50036c58c3692ecb"
+}

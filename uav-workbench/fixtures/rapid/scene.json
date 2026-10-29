@@ -1,0 +1,1 @@
+{"id":"rapid","name":"局部快速变化：短时来水","family":"synthetic-sloped-basin","kind":"synthetic_hydraulic_development","recipe":{"id":"rapid","name":"局部快速变化：短时来水","family":"synthetic-sloped-basin","rain":0,"infiltration":0,"sources":{"0":[[0,0],[100,30],[220,0]]},"drains":0.04},"note":"合成浅水方程开发过程，未用真实洪水率定；三种机制不构成充分泛化样本"}

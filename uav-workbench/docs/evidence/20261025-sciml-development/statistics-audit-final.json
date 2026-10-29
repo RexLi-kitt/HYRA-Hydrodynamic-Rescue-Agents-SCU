@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "event_method_rows": 36,
+  "policy_episodes": 108,
+  "rule_episodes": 27,
+  "forecast_rows": 9720,
+  "criteria": {
+    "mean_Physics_Data": false,
+    "mean_Physics_Sur": false,
+    "simultaneous_positive_events": false,
+    "each_forcing_positive": false,
+    "collision_increase": true,
+    "motion_cost_increase": true
+  },
+  "gate_passed": false,
+  "na_unknown_rows": 1620,
+  "na_stale_rows": 972,
+  "summary_sha256": "93ba8e4abad01748b8c1d5176f6824783e267e5a0e7e9aaa74ffeda735deb18f",
+  "auditor_sha256": "f02b0ff910d8c07e9474602ad04bdb607a12e4bbb0aa03f378e451debcddcdb4",
+  "aggregation": "time -> common route -> training seed -> event; event/parent/forcing dependence retained"
+}
