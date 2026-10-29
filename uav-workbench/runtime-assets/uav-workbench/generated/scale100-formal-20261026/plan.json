@@ -1,0 +1,444 @@
+{
+  "schema": "hyra-scale100-formal-plan-v1",
+  "frozen_at": 1792998098.3589172,
+  "budget_frozen": true,
+  "formal_training_started": false,
+  "episodes_per_job": 1024,
+  "updates_per_job": 1021,
+  "maximum_joint_decisions": 6635520,
+  "methods": [
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "D",
+    "P"
+  ],
+  "tasks": [
+    "E1",
+    "E2"
+  ],
+  "training_seeds": [
+    11,
+    29,
+    47
+  ],
+  "evaluation_scenario_seeds": [
+    11,
+    29,
+    47
+  ],
+  "development_checkpoints": [
+    256,
+    512,
+    1024
+  ],
+  "inputs": [
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\fit-101.zip",
+      "sha256": "2733589012f0bc06951a1dfd296829d7aebf903bf741ac76e245a4a4df120e5a",
+      "split": "fit",
+      "parent_terrain": "procedural-parent-101"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\fit-211.zip",
+      "sha256": "784977ee38dd34dbc5966c76a64e1973b502cbb283c88a1bcd904f3a29b85db2",
+      "split": "fit",
+      "parent_terrain": "procedural-parent-211"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\fit-307.zip",
+      "sha256": "6f257978fe7570f769ca85972e09d392ea7887eba92e731a61493709289fe6d5",
+      "split": "fit",
+      "parent_terrain": "procedural-parent-307"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\development-401.zip",
+      "sha256": "9dc7eeeb7ffea0954a7d8a8f7e7f1d4d53bb171ef25decafbddf3741fc84f798",
+      "split": "development",
+      "parent_terrain": "procedural-parent-401"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\holdout-503.zip",
+      "sha256": "c469ddaa3e551cab0a049e73c59bc8716c2255516ef57cfc1808b1f237ffc203",
+      "split": "holdout",
+      "parent_terrain": "procedural-parent-503"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\holdout-601.zip",
+      "sha256": "5ebd7753a95640b3e458b2375e395b563c90e5b5c3d8b34f30582488f122ea26",
+      "split": "holdout",
+      "parent_terrain": "procedural-parent-601"
+    }
+  ],
+  "dataset_path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\dataset.json",
+  "dataset_sha256": "fd31f6285bd31836cc4841d9c3f670fe8c12196d240bd6130a6ced801191b750",
+  "training_sources": {
+    "scale100_env.py": "7f2a7b9e2b02da0caa5b18d4616af17ed63de7290d1a9ecb5bcb76bc64e122cb",
+    "scale100_train.py": "03da12d250cefcbb710eb6e7e15673a0384b9d5467bf15ad1569f33d29f1c153",
+    "hyra_learning\\physics.py": "30231600636d7e445e1c53606390ffc3f2f7f1b67ac764a8e64c793356cf2a63",
+    "hyra_learning\\vendor\\pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "sur_rescue\\__init__.py": "2367ec82a76dc58d31265e1f353357059ac25850b68c6552a1b64e9daf5366dc",
+    "sur_rescue\\environment.py": "18393738567bcbee0a10b638d84681f72efc3d57e871a15bacd2644616e03f4d",
+    "sur_rescue\\gmrf.py": "47dcaff21dc6b998f2efb500ac37526bdb6c2e168411f5cea5c46c2981a2032b",
+    "sur_rescue\\hydraulics.py": "8cced7d3e73d6064d6ed270d9fce5565ad3f97af4c4391db1655ac56b40f402d",
+    "sur_rescue\\learning.py": "e3d88d83b8d11fa59a587dafc4e4d2f91dc33408e9d90c0d2e5a89ce0a1ed086",
+    "scale100_aux_resilient.py": "1bd2f5270a942097ba27a1b039a751fc8d1265a6dce25a5cc5047845aef1301a"
+  },
+  "controller_source_sha256": "3f9b4b305a0567b7789d2b15c1eb33552e8654e97f530e3957fc141d70ec7bd8",
+  "audit_source_sha256": "5610eef569bd37b6063384f634a8542939817c1174a0832b06d2abb43532b825",
+  "pilot_review_path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\pilot-review.json",
+  "pilot_review_sha256": "6ed07b268aef817a25b88e979e32b0a5de3015f8971b548e22438a574ca875a6",
+  "budget_rationale": "Fixed1024 episodes and1021 optimizer updates for each of36 fresh runs. Development64/128/256 greedy curves show continued coverage learning and nonmonotonic rescue performance;256 episodes do not establish stability. Use four times the validated pilot budget as a bounded first matched study, not a convergence claim. Three equal selection opportunities at256/512/1024, heldout data unused. Choose the LeakyReLU auxiliary implementation for persistent gradients and numerical validity, not because of a selected favorable task score; retain all earlier variants and negative findings.",
+  "selection": {
+    "E1": [
+      "first_coverage_auc",
+      "balanced_current_correct_coverage_auc",
+      "earlier_checkpoint"
+    ],
+    "E2": [
+      "rescue_fraction",
+      "first_coverage_auc",
+      "balanced_current_correct_coverage_auc",
+      "earlier_checkpoint"
+    ],
+    "scope": "greedy development only; all methods and seeds have the same three opportunities"
+  },
+  "primary_metrics": {
+    "E1": "first_coverage_auc",
+    "E2": "rescue_fraction"
+  },
+  "physics_secondary_metric": "balanced_current_correct_coverage_auc",
+  "comparison_order": [
+    "P versus D: physical-constraint increment",
+    "P versus B3: full auxiliary increment",
+    "B0/B1/B2/B3 factorial contrasts: structural encoding and Sur"
+  ],
+  "holdout_policy_evaluated": false,
+  "scope": "paired synthetic 100m/900s task study; 2 holdout parents do not establish broad real-flood generalization",
+  "jobs": [
+    {
+      "id": "E1-B0-s11",
+      "task": "E1",
+      "method": "B0",
+      "seed": 11
+    },
+    {
+      "id": "E2-B0-s11",
+      "task": "E2",
+      "method": "B0",
+      "seed": 11
+    },
+    {
+      "id": "E1-B1-s11",
+      "task": "E1",
+      "method": "B1",
+      "seed": 11
+    },
+    {
+      "id": "E2-B1-s11",
+      "task": "E2",
+      "method": "B1",
+      "seed": 11
+    },
+    {
+      "id": "E1-B2-s11",
+      "task": "E1",
+      "method": "B2",
+      "seed": 11
+    },
+    {
+      "id": "E2-B2-s11",
+      "task": "E2",
+      "method": "B2",
+      "seed": 11
+    },
+    {
+      "id": "E1-B3-s11",
+      "task": "E1",
+      "method": "B3",
+      "seed": 11
+    },
+    {
+      "id": "E2-B3-s11",
+      "task": "E2",
+      "method": "B3",
+      "seed": 11
+    },
+    {
+      "id": "E1-D-s11",
+      "task": "E1",
+      "method": "D",
+      "seed": 11
+    },
+    {
+      "id": "E2-D-s11",
+      "task": "E2",
+      "method": "D",
+      "seed": 11
+    },
+    {
+      "id": "E1-P-s11",
+      "task": "E1",
+      "method": "P",
+      "seed": 11
+    },
+    {
+      "id": "E2-P-s11",
+      "task": "E2",
+      "method": "P",
+      "seed": 11
+    },
+    {
+      "id": "E1-B0-s29",
+      "task": "E1",
+      "method": "B0",
+      "seed": 29
+    },
+    {
+      "id": "E2-B0-s29",
+      "task": "E2",
+      "method": "B0",
+      "seed": 29
+    },
+    {
+      "id": "E1-B1-s29",
+      "task": "E1",
+      "method": "B1",
+      "seed": 29
+    },
+    {
+      "id": "E2-B1-s29",
+      "task": "E2",
+      "method": "B1",
+      "seed": 29
+    },
+    {
+      "id": "E1-B2-s29",
+      "task": "E1",
+      "method": "B2",
+      "seed": 29
+    },
+    {
+      "id": "E2-B2-s29",
+      "task": "E2",
+      "method": "B2",
+      "seed": 29
+    },
+    {
+      "id": "E1-B3-s29",
+      "task": "E1",
+      "method": "B3",
+      "seed": 29
+    },
+    {
+      "id": "E2-B3-s29",
+      "task": "E2",
+      "method": "B3",
+      "seed": 29
+    },
+    {
+      "id": "E1-D-s29",
+      "task": "E1",
+      "method": "D",
+      "seed": 29
+    },
+    {
+      "id": "E2-D-s29",
+      "task": "E2",
+      "method": "D",
+      "seed": 29
+    },
+    {
+      "id": "E1-P-s29",
+      "task": "E1",
+      "method": "P",
+      "seed": 29
+    },
+    {
+      "id": "E2-P-s29",
+      "task": "E2",
+      "method": "P",
+      "seed": 29
+    },
+    {
+      "id": "E1-B0-s47",
+      "task": "E1",
+      "method": "B0",
+      "seed": 47
+    },
+    {
+      "id": "E2-B0-s47",
+      "task": "E2",
+      "method": "B0",
+      "seed": 47
+    },
+    {
+      "id": "E1-B1-s47",
+      "task": "E1",
+      "method": "B1",
+      "seed": 47
+    },
+    {
+      "id": "E2-B1-s47",
+      "task": "E2",
+      "method": "B1",
+      "seed": 47
+    },
+    {
+      "id": "E1-B2-s47",
+      "task": "E1",
+      "method": "B2",
+      "seed": 47
+    },
+    {
+      "id": "E2-B2-s47",
+      "task": "E2",
+      "method": "B2",
+      "seed": 47
+    },
+    {
+      "id": "E1-B3-s47",
+      "task": "E1",
+      "method": "B3",
+      "seed": 47
+    },
+    {
+      "id": "E2-B3-s47",
+      "task": "E2",
+      "method": "B3",
+      "seed": 47
+    },
+    {
+      "id": "E1-D-s47",
+      "task": "E1",
+      "method": "D",
+      "seed": 47
+    },
+    {
+      "id": "E2-D-s47",
+      "task": "E2",
+      "method": "D",
+      "seed": 47
+    },
+    {
+      "id": "E1-P-s47",
+      "task": "E1",
+      "method": "P",
+      "seed": 47
+    },
+    {
+      "id": "E2-P-s47",
+      "task": "E2",
+      "method": "P",
+      "seed": 47
+    }
+  ],
+  "runtime": {
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "torch": "2.14.0+cu130",
+    "device": "cpu",
+    "threads": 1,
+    "deterministic_algorithms": true
+  },
+  "worker_source_sha256": "bc033adf78cc5c658aa1e2b11471dcc43ffb3857d7c7e947b23864c06d1501cd",
+  "max_concurrent_workers": 3,
+  "parallel_controller_sha256": "d4f51ec2b4a68485b763c41675e708912aeb49677f519a62e046e866b223e8b6",
+  "scheduling": "independent one-thread learners; at most3 concurrent workers, memory guard reserves1.5GiB plus0.8GiB per worker; identical data/steps/selection",
+  "training_backend": "aux_resilient_v4",
+  "backend_adapter_sha256": "e156507b681b273b6ba9477369134196167a3b4475b9f0d13c45c471b74ce0aa",
+  "auxiliary_review_path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\auxiliary-review.json",
+  "auxiliary_review_sha256": "aa5b1af7a806fd1d6a865b23df5dbf43953182333cbff405c90aeabb1f3ca210",
+  "matched_forecast_evidence": {
+    "E1": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\E1-matched-forecast.json",
+      "sha256": "a2ec124e082f86a7613e675ca481b41dc9abe2420bb4654818a68deb516920b5"
+    },
+    "E2": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\E2-matched-forecast.json",
+      "sha256": "9ca3a59672995dbc03e58c175059b735c6b67e2c541aa3a347f8b9b0ff2afb76"
+    }
+  },
+  "method_decision_path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\method-decision.json",
+  "method_decision_sha256": "9caec021eea9c26f4232540be694b388bdf14def48de9f0cadc619ca22f666e9",
+  "inherited_sources": {
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\flood_numerics.py": "506b5f1b421c913b2cd1788bbe4bc7807ddea7fdaa42c13c3b68e55f62775140",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\flood_run.py": "1f19a2b5bca97dc1e809371de1b4bb475aa1bc73dd981cc413a649b68762c8bd",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\flood_solver.py": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\map_sessions.py": "6adbed25248a651fa54e2b35a32d7315c8d965c13a6266f7954bd27c5041c731",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\multilayer.py": "5f4830cf9fb7d29d36e0a0c366dc4b4aa5f7b80ecc0836abee126e4689997df7",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\__init__.py": "d2905bf94cecb2eb5e716d0228986ffef2a302446735edfe4a2507ceff65fdc3",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\networks.py": "4129faeac51ed70fbb9507833e65d7e6ad757759c112da4af4576cc36b31eeb0",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\observations.py": "b4c838cc0c83ed49ad4cac0f127d0df39028205e4233c238ba9c6f4ae8b4e9e3",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\physics.py": "30231600636d7e445e1c53606390ffc3f2f7f1b67ac764a8e64c793356cf2a63",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\runtime.py": "851236f914120da0737fae1299dc68625206ac2e4071bb718b3599e10edd1d7d",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\sciml_data.py": "ea6fdaa66790062eefab143e69c9622706c8a7fb496faddd04abab1508bd926a",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\sciml_study.py": "5e4e372945656927b35fb97d49e5393d075e9f34b470ac284c8dc8e329004b16",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\team_env.py": "3a7350b5a6e69481e0a490b1ac43ca3efcaf50ed901fbb233338dcaa514455aa",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\team_rules.py": "a00af06a93fdf0e83dbef4297cb6dc9252ff5d2883b0eb3e8b987bdd64d7e5a9",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\training.py": "0a14cffbda48233c97593a429768a4820c4d35d67314b89febe0780f84becc96",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\vendor\\__init__.py": "7dc55a4aed8f717c6714f6a78a6bd3747a6386260e3bc3fd84c22e9cc804a73f",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\vendor\\PYMARL_LICENSE": "a1e4522979cd422b42d0b464072eb7d0d218651659f56bf09f8c147384e3f105",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\vendor\\pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\vendor\\SOURCE.json": "ed9272a6d69a78cecc1a86b5a654b006a1d7c7a841b56b0d79b3c6a66b949eb3",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_learning\\world_model.py": "8bcac6fd2a3f9a9a36db283704bd6b49d7b781434c612c24d5669df5e97a708a",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\__init__.py": "0683d7b07196d7bd0a6b64ac241ce74c3dc4dd55875b5c35b7122593d7babdca",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\core.py": "5a186e75e49c2b660b20f7af508930674639061a19772eeaa9ac3bbf5d906d46",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\diagnostic.py": "13ff2723e1a7d67f4e65c06b80664919c96fad82fdb70e40761b02e64dc534eb",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\experiments.py": "b78a35e665fd76293546aa1f2046829062f5a28916f4baafaf4cc67c7cd10a54",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\interfaces.py": "b3e62a5aee7aaafa176261e006fa3b727fc53f46a46175ef51163f156dab6937",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\nonlinear.py": "d8f463ec87a5765b0595c310466b9ec423ae9e3f4e8b19dda50b9a7cfa69c55c",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\policies.py": "a8a5267e1ed1185a44a9862b9d266feb9047929666f607762e16c7f54d05113b",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\relations.py": "d7d6280a85fb1c4b012817db8647460490cd2fdd76431cfd8296d6b78c115191",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\reporting.py": "ada798af83290ae0cf94804bd4d24a3a98a27f7340285dff0e8c385284b918d2",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\scales.py": "8185c9f32f775d889167507e1e158ef36a168fff4dc242b84b34536267754f62",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\strong_features.py": "ccfb338595e06295d0b914f90e24daca6f43bfd8a7584b239758699d087b47c2",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\strong_study.py": "f2be7eec8d406e66e9fec9f839012d3580ffa9c3bf85402912ee41c6776f5e98",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\hyra_uav\\web.py": "e56111dd261e93f65a1a2da4389bac3d15bec02ce9ef3325990789850b67710a",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\learning.py": "939bbca78b3d6ec2edb760cc66aa61a21d24001c22ef735519ac76dcb13a3b3f",
+    "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\learning_configs\\sciml_round1_design_20261025.json": "03865b21d26a478c7a6bafc89634de7f16f4ff991926c6a410568830fa298378"
+  },
+  "evidence_files": {
+    "pilot-review.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\pilot-review.json",
+      "sha256": "6ed07b268aef817a25b88e979e32b0a5de3015f8971b548e22438a574ca875a6"
+    },
+    "method-decision.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\method-decision.json",
+      "sha256": "9caec021eea9c26f4232540be694b388bdf14def48de9f0cadc619ca22f666e9"
+    },
+    "auxiliary-review.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\auxiliary-review.json",
+      "sha256": "aa5b1af7a806fd1d6a865b23df5dbf43953182333cbff405c90aeabb1f3ca210"
+    },
+    "auxiliary-recovery.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\auxiliary-recovery.json",
+      "sha256": "695536f0b99f8ad85306f072e4497714daf00e806d52117b1d9185786f424f06"
+    },
+    "E1-matched-forecast.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\E1-matched-forecast.json",
+      "sha256": "a2ec124e082f86a7613e675ca481b41dc9abe2420bb4654818a68deb516920b5"
+    },
+    "E2-matched-forecast.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\E2-matched-forecast.json",
+      "sha256": "9ca3a59672995dbc03e58c175059b735c6b67e2c541aa3a347f8b9b0ff2afb76"
+    },
+    "original-plan-before-bootstrap-fix.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\original-plan-before-bootstrap-fix.json",
+      "sha256": "2f4366f29e0bd2ffc447d51d22742fa6fb4f5f54f54a037b2ea2023816700f0d"
+    },
+    "first-startup-failure.log": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\first-startup-failure.log",
+      "sha256": "d33172652290964576c6dab153f9a1a7d524eb2d8073e0b5cbbe94cb0b606d80"
+    },
+    "bootstrap-amendment.json": {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\bootstrap-amendment.json",
+      "sha256": "73b3b661e1fdcad2f08e082b819990a81d9c997e29b7ac3a5fc1382f5cf070dd"
+    }
+  },
+  "pretraining_amendment": {
+    "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\uav-workbench\\generated\\scale100-formal-20261026\\evidence\\bootstrap-amendment.json",
+    "sha256": "73b3b661e1fdcad2f08e082b819990a81d9c997e29b7ac3a5fc1382f5cf070dd"
+  }
+}

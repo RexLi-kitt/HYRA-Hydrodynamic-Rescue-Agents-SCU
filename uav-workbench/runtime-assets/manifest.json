@@ -1,0 +1,1107 @@
+{
+  "schema": "hyra-workbench-runtime-v1",
+  "files": [
+    {
+      "path": "terrain-workbench/terrain-lab/generated/scale100-dynamic-900s-20261026/development-401.zip",
+      "bytes": 3704225,
+      "sha256": "9dc7eeeb7ffea0954a7d8a8f7e7f1d4d53bb171ef25decafbddf3741fc84f798"
+    },
+    {
+      "path": "terrain-workbench/terrain-lab/generated/scale100-dynamic-900s-20261026/fit-101.zip",
+      "bytes": 3818293,
+      "sha256": "2733589012f0bc06951a1dfd296829d7aebf903bf741ac76e245a4a4df120e5a"
+    },
+    {
+      "path": "terrain-workbench/terrain-lab/generated/scale100-dynamic-900s-20261026/fit-211.zip",
+      "bytes": 3352500,
+      "sha256": "784977ee38dd34dbc5966c76a64e1973b502cbb283c88a1bcd904f3a29b85db2"
+    },
+    {
+      "path": "terrain-workbench/terrain-lab/generated/scale100-dynamic-900s-20261026/fit-307.zip",
+      "bytes": 4103773,
+      "sha256": "6f257978fe7570f769ca85972e09d392ea7887eba92e731a61493709289fe6d5"
+    },
+    {
+      "path": "terrain-workbench/terrain-lab/generated/scale100-dynamic-900s-20261026/holdout-503.zip",
+      "bytes": 4105668,
+      "sha256": "c469ddaa3e551cab0a049e73c59bc8716c2255516ef57cfc1808b1f237ffc203"
+    },
+    {
+      "path": "terrain-workbench/terrain-lab/generated/scale100-dynamic-900s-20261026/holdout-601.zip",
+      "bytes": 3513169,
+      "sha256": "5ebd7753a95640b3e458b2375e395b563c90e5b5c3d8b34f30582488f122ea26"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B0-s11/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "fe1f262dfa7cf3e5409f2c74585bd4062defdd1f55dbea6230ae90cff655aec5"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B0-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "0feed9863d8ef19fe038b4050f1dc3b4dfc01b3eee2d15d0e1ea83511e30e447"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B0-s29/selected/actor.json",
+      "bytes": 3493,
+      "sha256": "04ae6044ec86a539bf1eb187f283315639837a482a930c1bbeb8036cceb8cd83"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B0-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "b8c1cdb1f5d7b024190a0c50eb7eb1fa47cc7df68cc608e7c159255cec958209"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B0-s47/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "5b06d3cfe24daa3903f50aae4fb88d51defa14eed281c40af7017439a11886c9"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B0-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "f9008c5ae0932b3ef5abd6336de0e7cb4598274e9bd28683211f25021e5c73b2"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B1-s11/selected/actor.json",
+      "bytes": 3497,
+      "sha256": "5534d72db94a536de1b5e6208611777f8522f484944d7703c0a6348c70ecb040"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B1-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "232b4604430d54ba1398481b825a8bfa33ac7a77ba8f3166dbb0d12b5db8be0b"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B1-s29/selected/actor.json",
+      "bytes": 3494,
+      "sha256": "227cef69262aabcb9898c527c617e87aa59e7e39b467e856e8f7223e22c2985b"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B1-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "82aa17312153f7f7ba331bf25e65fcab1bc46b9f7b9f74b6d266d7cfd682b094"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B1-s47/selected/actor.json",
+      "bytes": 3497,
+      "sha256": "e63bdbe11ef9e77977731e2b71ef554c69ea2b80ff536cd479ccbaddadf26f5c"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B1-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "5be04dafaca2145eab00775be7f2c795b45c824cdb271c1cc671e602904ca866"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B2-s11/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "7b178135bd7a9bcdeac6eb5ec090f85f62723a0b73767b3908b4fbfa2cd4513c"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B2-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "d7030028f9b23212fdbaee8ab59e4520bdd72f8c3df96f640bb767b25e2505f4"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B2-s29/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "ff1091e581d8fa53366fda17a52cae586eabf8afcbaf44564a93ca14d285edf3"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B2-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "67842fae79a0e01a7922afd637963b1d3bd6b43fb9a36a80e527a4fe7b34bcfa"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B2-s47/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "ff1f8353dcbf52f97836755a883328e537404519aab948b10015e517ccce9c0c"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B2-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "88779f98f62bd52f11e84cfee3d0077aeb6991729198616a0954f7eddb6dbabb"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B3-s11/selected/actor.json",
+      "bytes": 3497,
+      "sha256": "8a87fed12e7ec31bbb31bf45db1e6029cbb74bc5d5e9a8c7181c8b4cb6866271"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B3-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "c64fb9ed8de26d83d07193c06e27c6257cd576297e8c2ea9f2ed3994b5849291"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B3-s29/selected/actor.json",
+      "bytes": 3497,
+      "sha256": "31a598362f6ac0596deba448795309dfdf9a8ed92a876eb06bb5a9113097f877"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B3-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "34e7b3b89480d25b0fd50d45a6672c43ba9d1c0666c2b5b855e57d2a4de61416"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B3-s47/selected/actor.json",
+      "bytes": 3497,
+      "sha256": "f331f2ccbce9be4f58a0e3e0385163ebfe4677d963da375623b67afc69ae5552"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-B3-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "142ed5785f07a27e4d45cbbf4ae4de90fc5a26dbe55e69bbaf9326ea88023785"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-D-s11/selected/actor.json",
+      "bytes": 3493,
+      "sha256": "26ce1cb95aabc5bda486c2e31070612bfe850cb3c99dd1feb24c62d5451f75f1"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-D-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "1c7dbebe8bedd84483be17ae511e52b5fed22b431382503b7e11295f95712a2a"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-D-s29/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "f00141a63a6c8520e88912bed8bf0529b3478c01c3d9ead2e77167efa5489521"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-D-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "e6b6591b991a7f8f910672ef1af7e4be5c5fbab6a2569c367051228d1b3eca5e"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-D-s47/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "0f2cd53ea43c414be5a8ee3074a789895855e797fd2fcd82923ded5ac33020fd"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-D-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "4291688019086cce48b4a10735aaab4ae45dbe35bfc6a2478bb98e945c652bb2"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-P-s11/selected/actor.json",
+      "bytes": 3493,
+      "sha256": "ae95abfc9470d1869a1a6a32f3698efcd339e4b5860774c26bcd0069aa9bb001"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-P-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "648f9703398545425a95c69593c306e207dc7d8486f27f074c3102d7c4adec48"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-P-s29/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "facfd9786891381e034834a4ee69ad5117e580af1fdfdb74428b239667c97bb8"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-P-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "f821efe13d36c3d18c27de7da6aa8ba156f1c44a3d8eb508b4a5f02f300ed592"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-P-s47/selected/actor.json",
+      "bytes": 3496,
+      "sha256": "753a61be6c7100ee7c6a58da0cc6add6c61a11ba1081797142bbed783acb0738"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E1-P-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "45c0a1e3a130ef360efc26897972543c77ce4bff28a9f4979ce6df6457b5e0e8"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B0-s11/selected/actor.json",
+      "bytes": 3520,
+      "sha256": "24f85c8cf77ec58d5bc1615378913a10e91af3161b18a1244beb664e4e43686c"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B0-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "fd1b037486aa4d6b82de14557dc93a8c12ebec9226624587aeaea820ceb65247"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B0-s29/selected/actor.json",
+      "bytes": 3517,
+      "sha256": "64d94541844e90a45ac0492a8d6e80ae543a4b37ee47efd735224a787ca9258d"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B0-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "50af1af69d0942c3f7a8dd4b8584543bbc3e4e6175058ca71f59e8d1cc6e908d"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B0-s47/selected/actor.json",
+      "bytes": 3517,
+      "sha256": "27701261bc488f80d301f94447bad69fba31f2bdb14fd6b4f8b8203a39f05227"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B0-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "966ab1a78e365394608a510aad598ea3fae8a6c6090f7762dfa78899f9229cf1"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B1-s11/selected/actor.json",
+      "bytes": 3521,
+      "sha256": "3cb63146c9efbe66af0c03e1a6d0abe3d596e585807c4824944d6c039b23c16f"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B1-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "f516446464b863035a6cb7df72db1378cfb3b2a90f15062fb50d0e5a0ddea2a7"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B1-s29/selected/actor.json",
+      "bytes": 3521,
+      "sha256": "389246d771d9f2d056e8071d1dfdf3f1e5099445920169baacb56fc519cfd1d5"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B1-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "24efa3f1a5ad3aaf19697447083fc1233cdc372b6b55c55a1ba753be7ffeb15c"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B1-s47/selected/actor.json",
+      "bytes": 3518,
+      "sha256": "d6d3fca3c0cdc1b881ab69ae8656db41adf7eaf86995427ce8c1daf957130908"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B1-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "84c7516e8241268b6bd96f4c43cc06a344de5a8e5ffe1cd15d4a58f9af282b41"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B2-s11/selected/actor.json",
+      "bytes": 3520,
+      "sha256": "3905dcc5ecd4ac925cb17e038c1576f1ade7537b0cc4875780ccc3273f6d6641"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B2-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "19f3081a00021fd54ce1d0c967378d9d1732f62895a104e92167a4314626d36b"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B2-s29/selected/actor.json",
+      "bytes": 3517,
+      "sha256": "d44072cb86c4b0e35f3418d92455711082465fec86f6502240cd38a06d1619db"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B2-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "61770bec6bd28e075d69d79384ed7b0ad1dbf0da24144926a8e0029e18500db0"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B2-s47/selected/actor.json",
+      "bytes": 3520,
+      "sha256": "a756c474456dc6985dfe40cca5ece431ee2314f972bea6b7557f07fde26b1cee"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B2-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "b0b47c4ba9427f8dde52179268287d839bb3e09d39311aa14f21a288419abf8d"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B3-s11/selected/actor.json",
+      "bytes": 3521,
+      "sha256": "86fe823e85ef89d8c2df83ba7508d612bf61f5188bb3463b5f14ad01ce507b23"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B3-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "fbbc08a976980374813dbb23ba53a094e7e17293490999cff6fe860df8bbe2eb"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B3-s29/selected/actor.json",
+      "bytes": 3521,
+      "sha256": "8dd8e58da133af17a1a180e38152419886213c6d844d5ad4a61bbe89f36b5184"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B3-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "436c092fe752521117ee366bb548bfb5b9478341dcf253ce336ad3b0d1510fb3"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B3-s47/selected/actor.json",
+      "bytes": 3518,
+      "sha256": "dee0d1723ffb7aa466089fed4222fc63578f3ee370d024eb2767206769fdf963"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-B3-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "6d85cd8143089eae621b81e6e87dc7f4656a0713932c29a3e458854c66aa15ab"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-D-s11/selected/actor.json",
+      "bytes": 3517,
+      "sha256": "a9aaf03e3b8215aa2647db4d339e402278c7effd7773c115f0d35ac8c3be8e25"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-D-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "acef98393f3cda594308943b588474344c18a61ca7ab4745a8d9a704854f7bb6"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-D-s29/selected/actor.json",
+      "bytes": 3520,
+      "sha256": "e345ff4ff913a37ef968cdd9e1a5370f68d5e5d34428e5d7f20642e481d11edc"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-D-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "7cf43afb22e467f7aaaea82f6e926050f4a9f748feaa6037c5d4232d8c0b65bb"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-D-s47/selected/actor.json",
+      "bytes": 3517,
+      "sha256": "7283451905acc61863c5f3b2384c29cd2e1e15f86a2fac610eb07b46749b21d1"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-D-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "5151f9d42b4134edf9fc9d89f2d96f1f3c0abd2b24525dbb41e5e80bafad40d3"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-P-s11/selected/actor.json",
+      "bytes": 3517,
+      "sha256": "bcf2450b4a20585a7ff82eda3d7b1deedb54bae4bc86f0cf2f3612a3dfd2436a"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-P-s11/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "0175c6a8735fe5fcecc71ea3c4fb22f0cf3804da713923b9879a2c7f2ffcfb5e"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-P-s29/selected/actor.json",
+      "bytes": 3517,
+      "sha256": "10f31dbda544e7b0467338fe2efa5130bf2dadf2dfa9465894f52e7ed90f051a"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-P-s29/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "19d45644e45739619d53b9cf79acc0f11021ad19f393874f046aa2da402f25c4"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-P-s47/selected/actor.json",
+      "bytes": 3520,
+      "sha256": "78702acb84ee71fad8e6da236dece22abc23f8f61dd59f8c4604e963aa179e5a"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/E2-P-s47/selected/actor.pt",
+      "bytes": 1683751,
+      "sha256": "e367915176c88d5e17d5f3c6f8806f3b4faa7d6d5ac4afc52e48f61990cf8466"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/plan.json",
+      "bytes": 20635,
+      "sha256": "b1a4456c57ef34873ed85b21b5cecbb6c6cc7d77e23a575e82fc7e7d04862de0"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-formal-20261026/queue.json",
+      "bytes": 1021,
+      "sha256": "b93b9b5e1509b1be9365332ad0c8026c2fe3a8f90d3b15fcdc5bdc47ad99c74a"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-heldout-20261026/release-audit.json",
+      "bytes": 119648,
+      "sha256": "d53cfd1c6996ed9310c07d8a7c32d727b4a955650a5c4540ce586bbde708acbe"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-heldout-20261026/results.json",
+      "bytes": 737858,
+      "sha256": "6982928ea95730c1b19f1961267d92a61a4b0babafbc99f190f2591bf90c6df1"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-heldout-20261026/sealed-models.json",
+      "bytes": 15423,
+      "sha256": "5c3c2659187b208b6b324ae1d2212e592ab10f756310f355989cb7648430abfb"
+    },
+    {
+      "path": "uav-workbench/generated/scale100-heldout-20261026/status.json",
+      "bytes": 273,
+      "sha256": "dc9af3e51a71a9a44716825ecdf4a603a15e9595c834e192bf84fd142b152fb9"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/development-7201-rapid.zip",
+      "bytes": 4072547,
+      "sha256": "2f8979d233e474cf72edd1a1b553fcfd5d555e5c66311464f9bfcf7f027d3ea4"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/development-7201-slow.zip",
+      "bytes": 3844307,
+      "sha256": "1ec562c7f55b56228f0927b3a43e090eeb3880ffe5edc51929b9d1ff5d3faac0"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/development-7202-rapid.zip",
+      "bytes": 4006230,
+      "sha256": "5300b7372b858e6f07ce91b0c320b95d9eecb95a1605652df4fe1a97de1f7170"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/development-7202-slow.zip",
+      "bytes": 3733210,
+      "sha256": "ab62378e8712e54b0259df353cb2bdf8e1d7f33515237fa84e9b9060d994eb02"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/development-7203-rapid.zip",
+      "bytes": 4257763,
+      "sha256": "72c2415515e88c6eed328317d82bbc84d403a81badd47912c07b1c3aaecf2d93"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/development-7203-slow.zip",
+      "bytes": 4061259,
+      "sha256": "439b0433500d272da0d683e39eec74e0b06a2afd714dd8732b4d30aff7ca45af"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7101-rapid.zip",
+      "bytes": 3616992,
+      "sha256": "211a14239afee5dba920c6fe977326df9b899978bcead845618ae17244d26ccb"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7101-slow.zip",
+      "bytes": 3372134,
+      "sha256": "7c325bee1606cc6b7edbe503ca721d6696bdbecd1307224dea252b14bef0d6fe"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7102-rapid.zip",
+      "bytes": 3718460,
+      "sha256": "ac2f2fb805b35a74129ebd900779d51f995b57d1aef2647ab8582f06e3069ffb"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7102-slow.zip",
+      "bytes": 3465373,
+      "sha256": "64ef9a58a115d2cfb7daf4865f2850256829f26312ecc56e7027dfd29f6848b8"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7103-rapid.zip",
+      "bytes": 4222951,
+      "sha256": "10fcda2db0a79746baa6b2dbabad4a1463b9ff9555fe40461b27a72df08d6c41"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7103-slow.zip",
+      "bytes": 3944757,
+      "sha256": "28f2429e1bdbb9746926e455820b8bc13f2a75e370ffd4d3c429dc2338fcd647"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7104-rapid.zip",
+      "bytes": 3974587,
+      "sha256": "ef7c75bd1b2b805b3ef5e3cbb1265cb62d31301f10a8447392d710f9426d582e"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7104-slow.zip",
+      "bytes": 3665864,
+      "sha256": "7b87c883c3974dbfa081c35bc3580f3aa3763db7bb664e919f56ea648ddd7614"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7105-rapid.zip",
+      "bytes": 4050258,
+      "sha256": "dbe8e86f6acda8d784b6d8f997c000dbdbf439b617e1a7ad6d6286e8d815e764"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7105-slow.zip",
+      "bytes": 3871178,
+      "sha256": "8e5a435396955aaf518547f8689c454a4a028f03376999d712a4a029090406ca"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7106-rapid.zip",
+      "bytes": 4130309,
+      "sha256": "3d98e4b5401968e7bfd5f071b59060f0e669a97272445bd14c82e48dd9989560"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/fit-7106-slow.zip",
+      "bytes": 4034193,
+      "sha256": "7eb33dfc630b529c0ecc71300570cbfd33a2b3f84f6c5901032599a9a0dda386"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7301-double.zip",
+      "bytes": 4034778,
+      "sha256": "2ae622cbc65089dbd8a27b5ed3bf2a0c640180d88fdab87db39e183f85f2e8d1"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7301-rapid.zip",
+      "bytes": 4036439,
+      "sha256": "f0b018f2d64105f03aea94c7503d5411af4f7398fe553bb3d6d2527526950a3c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7301-slow.zip",
+      "bytes": 3710109,
+      "sha256": "d5a7db4dec1658262fde685b1ca4070d04754cda15b80c13367a7bf9a8820a5c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7302-double.zip",
+      "bytes": 3166911,
+      "sha256": "b62cebe1c321fe66a73cc8016fb4a263019cf87c9040b4dcf94b73fdab7e408d"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7302-rapid.zip",
+      "bytes": 3229695,
+      "sha256": "53af1099b377cb08afdb3fecc4414fa2d7bd209290cb2c8d44c07a11b233933f"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7302-slow.zip",
+      "bytes": 3226458,
+      "sha256": "49dca68d3bd2d3705fc3a3a503da26987b4120765f9efb5b0145ff7805f45d20"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7303-double.zip",
+      "bytes": 4011763,
+      "sha256": "5130b0972cdd39c8781d03902f88db2c8cf355dc44d5cbee27d9d5e7c5dcb7d6"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7303-rapid.zip",
+      "bytes": 4040686,
+      "sha256": "70226f5af6c707479bf93d57bd85b8dd8b7186797ed82a32504a9007f35686dd"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7303-slow.zip",
+      "bytes": 3888648,
+      "sha256": "cebb598108d3a8e787020815a73533c6bcb00f02c378fd3f13ccd5502edaa7a6"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7304-double.zip",
+      "bytes": 3436498,
+      "sha256": "3fb5627d6eb7fe87aca9ce69a0cd1b4ba15be6c2093d56363f39d362ad6569dc"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7304-rapid.zip",
+      "bytes": 3451941,
+      "sha256": "13c87219e6b8cfda6a391b3c0053273a242d663850c061d63820e3eec49e744d"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7304-slow.zip",
+      "bytes": 3376307,
+      "sha256": "6c25e1664728b00ad9c0ce2630b3786075df40e136cc3328391b9d4ac484755d"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7305-double.zip",
+      "bytes": 3340963,
+      "sha256": "453d4b607ce1b4ec1ff72bdf635094aa9a8f41ad2b116a2a7431bafec1b088b3"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7305-rapid.zip",
+      "bytes": 3342100,
+      "sha256": "868f5ca34a6d02196a7bae6e603d9af646c9b0e043060f4b38a8e3975627d7de"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7305-slow.zip",
+      "bytes": 3310960,
+      "sha256": "95dc8a42650d321ad21246491e153ce8061b84e55f0cab454feaee90003530e2"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7306-double.zip",
+      "bytes": 3678610,
+      "sha256": "288098b9a2ad448e89ccd0117e2815d5387e43b4cca65a472f81398b40488f88"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7306-rapid.zip",
+      "bytes": 3727725,
+      "sha256": "bb8c9bc13e668830da33695b85ab1043f70b920784ff5f2d072ab2fd233c1a4c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7306-slow.zip",
+      "bytes": 3288770,
+      "sha256": "6929073886b6c1b2715c8e61d6840c42e95473c3cea68586ba749e56b7dcea9c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7307-double.zip",
+      "bytes": 3869807,
+      "sha256": "08caa11985679d04f7921ac8a53b74e3e8aae25bade1ba799ae47e2df95e4bb8"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7307-rapid.zip",
+      "bytes": 3916008,
+      "sha256": "c1758e86b22f1cf5a6daa399d9bcb6063cdffa76e07309db7cf66c867852f0c2"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7307-slow.zip",
+      "bytes": 3718018,
+      "sha256": "379d4605d4da15221cc4194724469d2a8cfa176ee3e68a6f9e1f103d22672d26"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7308-double.zip",
+      "bytes": 4217049,
+      "sha256": "6138ce4e3320ef27aded526005b3d04b9a722926eb1e54dd6c8b8329b511afc8"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7308-rapid.zip",
+      "bytes": 4232819,
+      "sha256": "008e31a22c3375a3cad1cb67c09eca6888d52923964af4fb4cdebd09c681cd04"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027/data/holdout-7308-slow.zip",
+      "bytes": 4066985,
+      "sha256": "72632a4313641f1a7178277f0ea9afe8a47bf68094832e76db042c17161bf60e"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/completion-audit.json",
+      "bytes": 20645,
+      "sha256": "a5e26f8779edf5c22aed39ecb7c789ba8da09a70d0faf2083fb71dabe2e8654d"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/confirmation/results.json",
+      "bytes": 1666585,
+      "sha256": "548fbfd45c719ceebc77e074085e4586d7fb44a782e4aa37d70908f252abf622"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/data/dataset.json",
+      "bytes": 99686,
+      "sha256": "f902f1e3782e29b2f54bdd36256f6ed5635874ef9ae2446f1f188305fdb74a0c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/delivery-audit.json",
+      "bytes": 878,
+      "sha256": "a1cfd48d6f5592c5ce097d09e85af3019f1b7cda4397adc7ea225358b6585530"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/finalization-status.json",
+      "bytes": 4928,
+      "sha256": "7e887b22baeeea9e76c338fdb441a36032e12bf5012df98691e195e1830e8023"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Bpost-s11/actor-1024.json",
+      "bytes": 5439,
+      "sha256": "3556ce08f541610c79dec48398581914424c2e23fcc98efcc41b3929c9c92f48"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Bpost-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "edc52a9601f37e83f24def165c01860d44f375197068bd1195a79d3d803619a2"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Bpost-s29/actor-1024.json",
+      "bytes": 5439,
+      "sha256": "6b979769b8158c61cc0fcb3392b6a1cb2d50b88097ce371c6354237ef0075f4d"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Bpost-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "5ac4eeb744ad8fc32a0640866cbe39c3982697a17af1bb545323384bc1e2a4f1"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Bpost-s47/actor-1024.json",
+      "bytes": 5439,
+      "sha256": "5de941a91fa96f2f7b85932426234cc7331000ce265c0f2fd6b275022f89427a"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Bpost-s47/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "397b4a1592f3dbe74da1b5c3e1a7b11493c2774440adc8d2f87824f51020e801"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Braw-s11/actor-1024.json",
+      "bytes": 5438,
+      "sha256": "1471709c79c67797e5f678bbd04e53b7675b4527c68bb80f4fad6ae605ba2c72"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Braw-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "9f5618556feda0636e546b8c894f1f6fc7b9dc7576c7c64b576abe6c42ac8b2a"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Braw-s29/actor-1024.json",
+      "bytes": 5438,
+      "sha256": "ba8dce552141ab4a2f968864884f75193bf6dfd78a4e93abc36f78fa45381798"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Braw-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "86b5efe71de3b86eddfe86efd4bfe56a258707d7c6b3a17c71483fb6c46df728"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Braw-s47/actor-0512.json",
+      "bytes": 5436,
+      "sha256": "a9f69fac27f7ed0da0f16533a51856b6bc86cbf944fe59a183d202ef0ed17fdb"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/Braw-s47/actor-0512.pt",
+      "bytes": 1683701,
+      "sha256": "2b2d0787dff20336118c45ff40668036bee431bd0376ea5745b49effbf9f4dbe"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C1-s11/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "c2d069b9114fd0443c08c11f16bee0622de44552d7d2b037ca965774ffa045ce"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C1-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "edc52a9601f37e83f24def165c01860d44f375197068bd1195a79d3d803619a2"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C1-s29/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "6458593c04a9b621a44bd0ca3404ab47661815e03b64194ca58d0f3a47768462"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C1-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "5ac4eeb744ad8fc32a0640866cbe39c3982697a17af1bb545323384bc1e2a4f1"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C1-s47/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "b5c783de9e88101ea277e171fd4183b0a6c1551e88989e098d5236830bd1dbc0"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C1-s47/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "397b4a1592f3dbe74da1b5c3e1a7b11493c2774440adc8d2f87824f51020e801"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C2-s11/actor-1024.json",
+      "bytes": 5485,
+      "sha256": "10cc6b937bd9690e4692ff20d7bdf3eddc777eb1190e5ab2629c52e76a31fc5b"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C2-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "7a085c38bb8ef0687226b83de8ef7b9f7c8c6a53194d839c5dfa42c314a74f06"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C2-s29/actor-1024.json",
+      "bytes": 5485,
+      "sha256": "f3182aa9126ec064c4ceaf7ccee30a0a82d2f5586b7643377fd9df9292e34a37"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C2-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "af36d458ad0f150c983c0726efdadeec85fe557050cd44061ebcc5ed5f7dd927"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C2-s47/actor-1024.json",
+      "bytes": 5485,
+      "sha256": "c27129ac92ee883ff591eb4e92dba5ae68a17b36ad07dc4ce15f5932d422e53c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C2-s47/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "cbe21171b28f0cd4b17116f2cf4efb7fcb8774a09417306734d38ab217514077"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C3-s11/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "aaef31cadb01ddea9ee1f1af787e3c5706b71a90f687dcfc15f189fad8cb2b4a"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C3-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "edc52a9601f37e83f24def165c01860d44f375197068bd1195a79d3d803619a2"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C3-s29/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "21848b547ba1ebb9c2f991385704a1291f50d0a6c2d5c3052425aea420917393"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C3-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "5ac4eeb744ad8fc32a0640866cbe39c3982697a17af1bb545323384bc1e2a4f1"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C3-s47/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "d635c2ca343d5bfe0ef44b8638e1124cb5fed8a3620dbf2d3ef80ebf8443db40"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/C3-s47/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "397b4a1592f3dbe74da1b5c3e1a7b11493c2774440adc8d2f87824f51020e801"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R1-s11/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "41f10e86147dcfaa7d3f176fd0e613ad841f66c0ecb021d8b04b7cd7ff8a18ee"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R1-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "edc52a9601f37e83f24def165c01860d44f375197068bd1195a79d3d803619a2"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R1-s29/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "83990107d0ea31c16f4f057f6deb7e6aec4ef7f8a97a639afb04854d3b9bcd4c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R1-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "5ac4eeb744ad8fc32a0640866cbe39c3982697a17af1bb545323384bc1e2a4f1"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R1-s47/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "c03fa9e8dcf7903018bf7b02682e1c7809ad455a7b2ab898ff2c6ac2e01b5b1f"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R1-s47/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "397b4a1592f3dbe74da1b5c3e1a7b11493c2774440adc8d2f87824f51020e801"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R2-s11/actor-1024.json",
+      "bytes": 5498,
+      "sha256": "15aca8cae915bf375b2b140e881aa9a32230bcde2738b03bb0873ed122613098"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R2-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "e91fb981c4fec7e18b9f2d5e508bfdc94474e26a4f537adbf9360c0446973ac0"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R2-s29/actor-1024.json",
+      "bytes": 5498,
+      "sha256": "80361dd7480382471824002cc263b563086339969fb901aca5358dc957d3272c"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R2-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "6dbbdd508d8adfed52f76214cb4e50974fc9b963995cf51ea0aa4752f0460c4e"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R2-s47/actor-1024.json",
+      "bytes": 5498,
+      "sha256": "c23c5105b94683ef9d26a85b7309ebf849125073f8587245774251d6c7d47e59"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R2-s47/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "344f27c67ff2d6492c9ac3b1ea56cd4272c972a3c07698e30b3edca4373e5b81"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R3-s11/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "f3f9177d0560ab3b007a80ce2827615303c1bfdde757222c32a76612d91fcf18"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R3-s11/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "edc52a9601f37e83f24def165c01860d44f375197068bd1195a79d3d803619a2"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R3-s29/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "b73453590720ec1c8c6ad55759269895d8c7dddcc960689e7cd531bab2c51ff9"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R3-s29/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "5ac4eeb744ad8fc32a0640866cbe39c3982697a17af1bb545323384bc1e2a4f1"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R3-s47/actor-1024.json",
+      "bytes": 5436,
+      "sha256": "946d57a8bc3234ce5b0456e9ad451b32d706402d3329fa97381f1797e343bd79"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/formal/R3-s47/actor-1024.pt",
+      "bytes": 1683701,
+      "sha256": "397b4a1592f3dbe74da1b5c3e1a7b11493c2774440adc8d2f87824f51020e801"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/parameters.json",
+      "bytes": 6422,
+      "sha256": "54731010cbe3bd0b3566da43d35915f48b782ebe2ce5b28be68ec00ccd248bae"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/report.md",
+      "bytes": 8974,
+      "sha256": "7ca2cf61c4f609b9351c12fa963f99b682c7f5f5731a66f0265243e636ae0127"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/sealed-models.json",
+      "bytes": 47146,
+      "sha256": "9cd1fd3e522bf0f6c5650a4d9cb8c338d9df937480edb8cb0c86685fe0288132"
+    },
+    {
+      "path": "uav-workbench/generated/signal-routes-20261027-v2/status.json",
+      "bytes": 193,
+      "sha256": "29c7f12e133fdd8400b451b6f6b3f93c4dc8ea93e117cee7672d4fe55baddd25"
+    },
+    {
+      "path": "uav-workbench/generated/sur-rescue-pilot/QMIX8-s11/actor.json",
+      "bytes": 1271,
+      "sha256": "fb7b93e6f6e8398e578e6b286bb09d8de2a09c1b5638a1cc1587e7ec0c6c49e5"
+    },
+    {
+      "path": "uav-workbench/generated/sur-rescue-pilot/QMIX8-s11/actor.pt",
+      "bytes": 198156,
+      "sha256": "aa2b6edf3757310154d0d76320737f8a7795a44f67686f7a14fd48ab87d7b37a"
+    },
+    {
+      "path": "uav-workbench/generated/sur-rescue-pilot/Sur-QMIX8-s11/actor.json",
+      "bytes": 1275,
+      "sha256": "0a2ea1b6cf304f8577d0a5080792828b3768b8ae1e4a35a382594cee01411dd8"
+    },
+    {
+      "path": "uav-workbench/generated/sur-rescue-pilot/Sur-QMIX8-s11/actor.pt",
+      "bytes": 198156,
+      "sha256": "a048df2bd8d51992dab43161052a75adc5fcd3b8853f28cf1c42b52758eef7cc"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "path": "frozen-sources/terrain-workbench/terrain-lab/flood_solver.py",
+      "sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+      "bytes": 49296
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/__init__.py",
+      "sha256": "d2905bf94cecb2eb5e716d0228986ffef2a302446735edfe4a2507ceff65fdc3",
+      "bytes": 74
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/networks.py",
+      "sha256": "4129faeac51ed70fbb9507833e65d7e6ad757759c112da4af4576cc36b31eeb0",
+      "bytes": 3978
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/observations.py",
+      "sha256": "b4c838cc0c83ed49ad4cac0f127d0df39028205e4233c238ba9c6f4ae8b4e9e3",
+      "bytes": 2555
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/physics.py",
+      "sha256": "30231600636d7e445e1c53606390ffc3f2f7f1b67ac764a8e64c793356cf2a63",
+      "bytes": 10864
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/runtime.py",
+      "sha256": "851236f914120da0737fae1299dc68625206ac2e4071bb718b3599e10edd1d7d",
+      "bytes": 497
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/sciml_data.py",
+      "sha256": "ea6fdaa66790062eefab143e69c9622706c8a7fb496faddd04abab1508bd926a",
+      "bytes": 10848
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/sciml_study.py",
+      "sha256": "5e4e372945656927b35fb97d49e5393d075e9f34b470ac284c8dc8e329004b16",
+      "bytes": 17751
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/team_env.py",
+      "sha256": "3a7350b5a6e69481e0a490b1ac43ca3efcaf50ed901fbb233338dcaa514455aa",
+      "bytes": 9138
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/team_rules.py",
+      "sha256": "a00af06a93fdf0e83dbef4297cb6dc9252ff5d2883b0eb3e8b987bdd64d7e5a9",
+      "bytes": 3543
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/training.py",
+      "sha256": "0a14cffbda48233c97593a429768a4820c4d35d67314b89febe0780f84becc96",
+      "bytes": 19380
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/vendor/pymarl_qmix.py",
+      "sha256": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+      "bytes": 2505
+    },
+    {
+      "path": "frozen-sources/uav-workbench/hyra_learning/world_model.py",
+      "sha256": "8bcac6fd2a3f9a9a36db283704bd6b49d7b781434c612c24d5669df5e97a708a",
+      "bytes": 8335
+    },
+    {
+      "path": "frozen-sources/uav-workbench/scale100_aux_resilient.py",
+      "sha256": "1bd2f5270a942097ba27a1b039a751fc8d1265a6dce25a5cc5047845aef1301a",
+      "bytes": 10230
+    },
+    {
+      "path": "frozen-sources/uav-workbench/scale100_development.py",
+      "sha256": "e082e9420b278d00e6d30c61f7fbf1f55ed74465f4224bc31f8d112380fa6579",
+      "bytes": 5247
+    },
+    {
+      "path": "frozen-sources/uav-workbench/scale100_env.py",
+      "sha256": "7f2a7b9e2b02da0caa5b18d4616af17ed63de7290d1a9ecb5bcb76bc64e122cb",
+      "bytes": 10233
+    },
+    {
+      "path": "frozen-sources/uav-workbench/scale100_rules.py",
+      "sha256": "34ba026ced69bf2b1109d4a645163d84d121eceb10730b0f69bdae989dc739da",
+      "bytes": 3438
+    },
+    {
+      "path": "frozen-sources/uav-workbench/scale100_train.py",
+      "sha256": "03da12d250cefcbb710eb6e7e15673a0384b9d5467bf15ad1569f33d29f1c153",
+      "bytes": 13380
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/__init__.py",
+      "sha256": "05a00282305d1a91591d8225ecaee3420d5a1da9dca09b369c719b3a71e95479",
+      "bytes": 397
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/belief.py",
+      "sha256": "70ee7c01e960fcce36651ed719ba0bb14ec40bdf8b25154ae4b24918034097df",
+      "bytes": 10969
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/checks.py",
+      "sha256": "42e218f3c121445221c256e044851b1636678f3b1be360ba2b0313c993bfbfd7",
+      "bytes": 10566
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/common.py",
+      "sha256": "1567803753b67639a0b029926d6b925eb25038f2070e0f3cc298032705498c7c",
+      "bytes": 3947
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/data.py",
+      "sha256": "0c401e534cb5211da8f34a78a05ecd607ce97a33c0e7f3049681b70bb2533b87",
+      "bytes": 6010
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/environment.py",
+      "sha256": "95c1e96578e8beb84f3d8d71e4ff50429071da6ba227098acd2b6d2700112c3d",
+      "bytes": 2461
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/evaluate.py",
+      "sha256": "8ea3b7880cf770b4359931d6679370e68d8505bb8d58d5d6cd1049cc2512a24a",
+      "bytes": 13432
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/offline.py",
+      "sha256": "70fe12f4144b9346ac7592bf252699ee3a47b73944f403408a30c749e56783e7",
+      "bytes": 8956
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/run.py",
+      "sha256": "f32e6709413989c2af3df6e359a475aa2140b57788d4823c26218fcc30a1474d",
+      "bytes": 7772
+    },
+    {
+      "path": "frozen-sources/uav-workbench/signal_routes/train.py",
+      "sha256": "6ffb022e19b3bed9b51e23e95702d198170270676e3e30cc5310be2ed1d7ae1c",
+      "bytes": 6036
+    },
+    {
+      "path": "frozen-sources/uav-workbench/sur_rescue/__init__.py",
+      "sha256": "2367ec82a76dc58d31265e1f353357059ac25850b68c6552a1b64e9daf5366dc",
+      "bytes": 78
+    },
+    {
+      "path": "frozen-sources/uav-workbench/sur_rescue/environment.py",
+      "sha256": "18393738567bcbee0a10b638d84681f72efc3d57e871a15bacd2644616e03f4d",
+      "bytes": 15620
+    },
+    {
+      "path": "frozen-sources/uav-workbench/sur_rescue/gmrf.py",
+      "sha256": "47dcaff21dc6b998f2efb500ac37526bdb6c2e168411f5cea5c46c2981a2032b",
+      "bytes": 4314
+    },
+    {
+      "path": "frozen-sources/uav-workbench/sur_rescue/hydraulics.py",
+      "sha256": "8cced7d3e73d6064d6ed270d9fce5565ad3f97af4c4391db1655ac56b40f402d",
+      "bytes": 2629
+    },
+    {
+      "path": "frozen-sources/uav-workbench/sur_rescue/learning.py",
+      "sha256": "e3d88d83b8d11fa59a587dafc4e4d2f91dc33408e9d90c0d2e5a89ce0a1ed086",
+      "bytes": 12048
+    }
+  ]
+}

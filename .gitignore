@@ -20,3 +20,8 @@ terrain-workbench/terrain-lab/exports/
 **/hydrology-terrain.i32.*.tmp
 **/river-network.json
 **/river-network-graph.json
+
+# Published runtime inputs are versioned; new runs stay in generated/.
+!/uav-workbench/runtime-assets/**
+/uav-workbench/runtime-assets/**/__pycache__/
+/uav-workbench/runtime-assets/**/*.pyc

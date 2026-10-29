@@ -1,7 +1,11 @@
 """UI-only adapter; frozen study sources, parameters and checkpoints stay intact."""
+from runtime_assets import canonical_sources
 import argparse
 from dataclasses import replace
 import json
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'runtime-assets/frozen-sources/uav-workbench'))
 import signal_routes
 import numpy as np
 import torch
@@ -33,7 +37,7 @@ def execute_job(job):
         result['execution']['scope']='三路径场景上的独立规则核查；不执行所选路径模型'
         return result
     path,meta,selected=model_record(checked['group'],checked['training_seed'])
-    require(meta['sources']==sources(), '冻结训练源码与当前估计器不匹配')
+    require(canonical_sources(meta['sources'])==canonical_sources(sources()), '冻结训练源码与当前估计器不匹配')
     p=Parameters(**read(STUDY/'parameters.json')['parameters'][checked['group']])
     source=FloodCase(checked['scene']['path'])
     env=RecordedRouteEnv(source,replace(config('E2','B3',checked['config']['seed']),duration_s=900.),checked['group'],p)

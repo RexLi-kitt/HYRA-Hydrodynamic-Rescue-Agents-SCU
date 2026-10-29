@@ -1,0 +1,84 @@
+{
+  "schema": "hyra-scale100-aux-resilient-v4",
+  "model_family": "same_actor_aux_resilient_v4",
+  "phase": "formal",
+  "task": "E2",
+  "method": "B0",
+  "seed": 47,
+  "episodes": 1024,
+  "config": {
+    "step_s": 5.0,
+    "duration_s": 900.0,
+    "sense_width": 5,
+    "service_s": 10.0,
+    "n_targets": 5,
+    "obstacle_fraction": 0.1,
+    "seed": 47,
+    "n_agents": 2,
+    "task": "E2",
+    "representation": "raw",
+    "service_depth_limit_m": 0.08,
+    "service_speed_limit_m_s": 0.3
+  },
+  "sources": {
+    "scale100_env.py": "7f2a7b9e2b02da0caa5b18d4616af17ed63de7290d1a9ecb5bcb76bc64e122cb",
+    "scale100_train.py": "03da12d250cefcbb710eb6e7e15673a0384b9d5467bf15ad1569f33d29f1c153",
+    "hyra_learning\\physics.py": "30231600636d7e445e1c53606390ffc3f2f7f1b67ac764a8e64c793356cf2a63",
+    "hyra_learning\\vendor\\pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "sur_rescue\\__init__.py": "2367ec82a76dc58d31265e1f353357059ac25850b68c6552a1b64e9daf5366dc",
+    "sur_rescue\\environment.py": "18393738567bcbee0a10b638d84681f72efc3d57e871a15bacd2644616e03f4d",
+    "sur_rescue\\gmrf.py": "47dcaff21dc6b998f2efb500ac37526bdb6c2e168411f5cea5c46c2981a2032b",
+    "sur_rescue\\hydraulics.py": "8cced7d3e73d6064d6ed270d9fce5565ad3f97af4c4391db1655ac56b40f402d",
+    "sur_rescue\\learning.py": "e3d88d83b8d11fa59a587dafc4e4d2f91dc33408e9d90c0d2e5a89ce0a1ed086",
+    "scale100_aux_resilient.py": "1bd2f5270a942097ba27a1b039a751fc8d1265a6dce25a5cc5047845aef1301a"
+  },
+  "dataset_sha256": "fd31f6285bd31836cc4841d9c3f670fe8c12196d240bd6130a6ced801191b750",
+  "fit_cases": [
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\fit-101.zip",
+      "sha256": "2733589012f0bc06951a1dfd296829d7aebf903bf741ac76e245a4a4df120e5a",
+      "parent": "procedural-parent-101"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\fit-211.zip",
+      "sha256": "784977ee38dd34dbc5966c76a64e1973b502cbb283c88a1bcd904f3a29b85db2",
+      "parent": "procedural-parent-211"
+    },
+    {
+      "path": "D:\\HyRA\\warehouse\\HYRA-Hydrodynamic-Rescue-Agents-SCU\\terrain-workbench\\terrain-lab\\generated\\scale100-dynamic-900s-20261026\\fit-307.zip",
+      "sha256": "6f257978fe7570f769ca85972e09d392ea7887eba92e731a61493709289fe6d5",
+      "parent": "procedural-parent-307"
+    }
+  ],
+  "fit_only_prior_U": [
+    0.06786951477266265,
+    0.0007905225290238596,
+    0.0003566917796292058
+  ],
+  "observation_channels": 21,
+  "actions": 8,
+  "discount": 0.99,
+  "lr": 0.0001,
+  "auxiliary_head_lr": 0.001,
+  "auxiliary_head_eps": 1e-08,
+  "auxiliary_activation": "leaky_relu_0.05",
+  "batch_episodes": 4,
+  "replay_episodes": 32,
+  "target_update_steps": 50,
+  "data_weight": 1.0,
+  "physics_weight": 1.0,
+  "formal": true,
+  "trained_episodes": 512,
+  "updates": 509,
+  "actor_sha256": "966ab1a78e365394608a510aad598ea3fae8a6c6090f7762dfa78899f9229cf1",
+  "total_training_episodes_executed": 1024,
+  "selected_episode": 512,
+  "selection_data_split": "development",
+  "selection_rule": [
+    "rescue_fraction",
+    "first_coverage_auc",
+    "balanced_current_correct_coverage_auc",
+    "earlier_checkpoint"
+  ],
+  "formal_plan_sha256": "b1a4456c57ef34873ed85b21b5cecbb6c6cc7d77e23a575e82fc7e7d04862de0"
+}

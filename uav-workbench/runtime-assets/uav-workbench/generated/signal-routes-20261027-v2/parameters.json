@@ -1,0 +1,267 @@
+{
+  "schema": "hyra-signal-parameters-v1",
+  "parameters": {
+    "Braw": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    },
+    "Bpost": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    },
+    "R1": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    },
+    "R2": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        1.1301526453774784,
+        0.20951146056980716,
+        -0.32337027918319455,
+        0.833152032361751
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    },
+    "R3": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    },
+    "C1": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    },
+    "C2": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        0.05624486637789363,
+        0.05041282086305342,
+        -0.30876424820291043,
+        2.0
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    },
+    "C3": {
+      "mean": 0.40972129039495614,
+      "scale": 0.3249445312508062,
+      "alpha": 0.0,
+      "kappa": 0.0,
+      "beta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "strength": 0.0,
+      "cross": 0.0,
+      "feature_mean": [
+        0.013533750906767329,
+        0.04007120181174623,
+        0.0015418460220898884,
+        24.87797791981406
+      ],
+      "feature_scale": [
+        0.022924985688610566,
+        0.08774190790855842,
+        0.0017847898316423996,
+        29.95462504376555
+      ]
+    }
+  },
+  "fit_records_sha256": "cb9b2d67a3db6676df575b6b5ddbcf280b2ebaa0b97b9481afcf73293a0a6409",
+  "fit_only": true,
+  "condition": "original",
+  "objective": "conditional marginal signal NLL incl logdet, plus .001 L2",
+  "optimization": [
+    {
+      "method": "R1",
+      "objective": 0.2927939725662993,
+      "iterations": 5,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "null_selected": true
+    },
+    {
+      "method": "R2",
+      "objective": 0.2847981726755767,
+      "iterations": 7,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "null_selected": false
+    },
+    {
+      "method": "R3",
+      "objective": 0.2927939725662993,
+      "iterations": 4,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "null_selected": true
+    },
+    {
+      "method": "C1",
+      "objective": 0.2927939725662993,
+      "iterations": 4,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "null_selected": true
+    },
+    {
+      "method": "C2",
+      "objective": 0.2809414367505613,
+      "iterations": 7,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "null_selected": false
+    },
+    {
+      "method": "C3",
+      "objective": 0.2927939725662993,
+      "iterations": 4,
+      "optimizer_success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "null_selected": true
+    }
+  ]
+}

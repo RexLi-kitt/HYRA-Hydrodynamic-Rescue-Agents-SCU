@@ -1,0 +1,581 @@
+{
+  "schema": "hyra-signal-routes-v2",
+  "passed": true,
+  "scope": "full registered v2 study; bounded synthetic evidence",
+  "audit_tool_sha256": "9f7c8f65f7072cdff5d4a440bee764b7aed1db7ecef8d526bb8ddb12e341aff3",
+  "sources": {
+    "terrain-workbench\\terrain-lab\\flood_solver.py": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+    "uav-workbench\\hyra_learning\\__init__.py": "d2905bf94cecb2eb5e716d0228986ffef2a302446735edfe4a2507ceff65fdc3",
+    "uav-workbench\\hyra_learning\\networks.py": "4129faeac51ed70fbb9507833e65d7e6ad757759c112da4af4576cc36b31eeb0",
+    "uav-workbench\\hyra_learning\\observations.py": "b4c838cc0c83ed49ad4cac0f127d0df39028205e4233c238ba9c6f4ae8b4e9e3",
+    "uav-workbench\\hyra_learning\\physics.py": "30231600636d7e445e1c53606390ffc3f2f7f1b67ac764a8e64c793356cf2a63",
+    "uav-workbench\\hyra_learning\\runtime.py": "851236f914120da0737fae1299dc68625206ac2e4071bb718b3599e10edd1d7d",
+    "uav-workbench\\hyra_learning\\sciml_data.py": "ea6fdaa66790062eefab143e69c9622706c8a7fb496faddd04abab1508bd926a",
+    "uav-workbench\\hyra_learning\\sciml_study.py": "5e4e372945656927b35fb97d49e5393d075e9f34b470ac284c8dc8e329004b16",
+    "uav-workbench\\hyra_learning\\team_env.py": "3a7350b5a6e69481e0a490b1ac43ca3efcaf50ed901fbb233338dcaa514455aa",
+    "uav-workbench\\hyra_learning\\team_rules.py": "a00af06a93fdf0e83dbef4297cb6dc9252ff5d2883b0eb3e8b987bdd64d7e5a9",
+    "uav-workbench\\hyra_learning\\training.py": "0a14cffbda48233c97593a429768a4820c4d35d67314b89febe0780f84becc96",
+    "uav-workbench\\hyra_learning\\vendor\\pymarl_qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "uav-workbench\\hyra_learning\\world_model.py": "8bcac6fd2a3f9a9a36db283704bd6b49d7b781434c612c24d5669df5e97a708a",
+    "uav-workbench\\scale100_aux_resilient.py": "1bd2f5270a942097ba27a1b039a751fc8d1265a6dce25a5cc5047845aef1301a",
+    "uav-workbench\\scale100_development.py": "e082e9420b278d00e6d30c61f7fbf1f55ed74465f4224bc31f8d112380fa6579",
+    "uav-workbench\\scale100_env.py": "7f2a7b9e2b02da0caa5b18d4616af17ed63de7290d1a9ecb5bcb76bc64e122cb",
+    "uav-workbench\\scale100_rules.py": "34ba026ced69bf2b1109d4a645163d84d121eceb10730b0f69bdae989dc739da",
+    "uav-workbench\\scale100_train.py": "03da12d250cefcbb710eb6e7e15673a0384b9d5467bf15ad1569f33d29f1c153",
+    "uav-workbench\\signal_routes\\__init__.py": "05a00282305d1a91591d8225ecaee3420d5a1da9dca09b369c719b3a71e95479",
+    "uav-workbench\\signal_routes\\belief.py": "70ee7c01e960fcce36651ed719ba0bb14ec40bdf8b25154ae4b24918034097df",
+    "uav-workbench\\signal_routes\\checks.py": "42e218f3c121445221c256e044851b1636678f3b1be360ba2b0313c993bfbfd7",
+    "uav-workbench\\signal_routes\\common.py": "1567803753b67639a0b029926d6b925eb25038f2070e0f3cc298032705498c7c",
+    "uav-workbench\\signal_routes\\data.py": "0c401e534cb5211da8f34a78a05ecd607ce97a33c0e7f3049681b70bb2533b87",
+    "uav-workbench\\signal_routes\\environment.py": "95c1e96578e8beb84f3d8d71e4ff50429071da6ba227098acd2b6d2700112c3d",
+    "uav-workbench\\signal_routes\\evaluate.py": "8ea3b7880cf770b4359931d6679370e68d8505bb8d58d5d6cd1049cc2512a24a",
+    "uav-workbench\\signal_routes\\offline.py": "70fe12f4144b9346ac7592bf252699ee3a47b73944f403408a30c749e56783e7",
+    "uav-workbench\\signal_routes\\run.py": "f32e6709413989c2af3df6e359a475aa2140b57788d4823c26218fcc30a1474d",
+    "uav-workbench\\signal_routes\\train.py": "6ffb022e19b3bed9b51e23e95702d198170270676e3e30cc5310be2ed1d7ae1c",
+    "uav-workbench\\sur_rescue\\__init__.py": "2367ec82a76dc58d31265e1f353357059ac25850b68c6552a1b64e9daf5366dc",
+    "uav-workbench\\sur_rescue\\environment.py": "18393738567bcbee0a10b638d84681f72efc3d57e871a15bacd2644616e03f4d",
+    "uav-workbench\\sur_rescue\\gmrf.py": "47dcaff21dc6b998f2efb500ac37526bdb6c2e168411f5cea5c46c2981a2032b",
+    "uav-workbench\\sur_rescue\\hydraulics.py": "8cced7d3e73d6064d6ed270d9fce5565ad3f97af4c4391db1655ac56b40f402d",
+    "uav-workbench\\sur_rescue\\learning.py": "e3d88d83b8d11fa59a587dafc4e4d2f91dc33408e9d90c0d2e5a89ce0a1ed086"
+  },
+  "training_jobs": [
+    {
+      "method": "Braw",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "afc4c00310da0f954c17c6cd832b270e1c3b8eb5b611aca7d67610c57da8444e"
+    },
+    {
+      "method": "Braw",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "e889c3fceef3303a6e8454f86c8a470e036570d62a5fa68c93b01a22b4155d0a"
+    },
+    {
+      "method": "Braw",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "c2cbaedeeb72477ea8ff2b6232b7c018891f7a1b0645d6de597a3d1612115399"
+    },
+    {
+      "method": "Bpost",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "904c4d6f3e9a4f549de48eef183bea2d435dd6a60a1aa798ecc170ab0f7d2a77"
+    },
+    {
+      "method": "Bpost",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "809d3bcb9321d11c706a575335e55c3d17848ea4d7ff284c4aa07a08046ebeaa"
+    },
+    {
+      "method": "Bpost",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "846ceda72f1845695a763389a7a89b69b3ea8dbf503923a128febc5b5621059c"
+    },
+    {
+      "method": "R1",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "904c4d6f3e9a4f549de48eef183bea2d435dd6a60a1aa798ecc170ab0f7d2a77"
+    },
+    {
+      "method": "R1",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "809d3bcb9321d11c706a575335e55c3d17848ea4d7ff284c4aa07a08046ebeaa"
+    },
+    {
+      "method": "R1",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "846ceda72f1845695a763389a7a89b69b3ea8dbf503923a128febc5b5621059c"
+    },
+    {
+      "method": "R2",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "13286650a3f46945f28400db681907fd47cccc0f23c2e5fde03bfba669d249be"
+    },
+    {
+      "method": "R2",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "ebae2ffa0955bba5b374b36173b4d12004d4d0c33b90685ffd36f99035923f98"
+    },
+    {
+      "method": "R2",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "997607ece32fed76ed4b4adef500ac2cca3210303d1f41eee3fd333fbc79e5cb"
+    },
+    {
+      "method": "R3",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "904c4d6f3e9a4f549de48eef183bea2d435dd6a60a1aa798ecc170ab0f7d2a77"
+    },
+    {
+      "method": "R3",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "809d3bcb9321d11c706a575335e55c3d17848ea4d7ff284c4aa07a08046ebeaa"
+    },
+    {
+      "method": "R3",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "846ceda72f1845695a763389a7a89b69b3ea8dbf503923a128febc5b5621059c"
+    },
+    {
+      "method": "C1",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "904c4d6f3e9a4f549de48eef183bea2d435dd6a60a1aa798ecc170ab0f7d2a77"
+    },
+    {
+      "method": "C1",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "809d3bcb9321d11c706a575335e55c3d17848ea4d7ff284c4aa07a08046ebeaa"
+    },
+    {
+      "method": "C1",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "846ceda72f1845695a763389a7a89b69b3ea8dbf503923a128febc5b5621059c"
+    },
+    {
+      "method": "C2",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "3884cc52641414f247d85d1191c564f256ce730048605eb4da60282fae94a8a2"
+    },
+    {
+      "method": "C2",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "6d42e893b3b8c116d09e12738da06a51bf138b5c882cf5824031e7c968595f01"
+    },
+    {
+      "method": "C2",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "760355126063694ae5f41efc3ff02261a4eab41434cf897991245867bb99d576"
+    },
+    {
+      "method": "C3",
+      "seed": 11,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "904c4d6f3e9a4f549de48eef183bea2d435dd6a60a1aa798ecc170ab0f7d2a77"
+    },
+    {
+      "method": "C3",
+      "seed": 29,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "809d3bcb9321d11c706a575335e55c3d17848ea4d7ff284c4aa07a08046ebeaa"
+    },
+    {
+      "method": "C3",
+      "seed": 47,
+      "episodes": 1024,
+      "updates": 1021,
+      "actor_sha256": "846ceda72f1845695a763389a7a89b69b3ea8dbf503923a128febc5b5621059c"
+    }
+  ],
+  "completed_formal_jobs": 24,
+  "completed_pilot_jobs": 8,
+  "confirmation_model_replays": 1728,
+  "rule_evaluations": 216,
+  "independent_parents": 8,
+  "data": {
+    "passed": true,
+    "events": 42,
+    "split_parents": {
+      "fit": 6,
+      "development": 3,
+      "holdout": 8
+    },
+    "full_numerical_events": 42,
+    "actual_frames_checked": 7602,
+    "max_internal_step_error": 2.7755575615628914e-17,
+    "holdout_numerical_content_read": true,
+    "performance_scored": false,
+    "checked": [
+      {
+        "parent": "signal-parent-7101",
+        "mechanism": "slow",
+        "split": "fit",
+        "sha256": "7c325bee1606cc6b7edbe503ca721d6696bdbecd1307224dea252b14bef0d6fe"
+      },
+      {
+        "parent": "signal-parent-7101",
+        "mechanism": "rapid",
+        "split": "fit",
+        "sha256": "211a14239afee5dba920c6fe977326df9b899978bcead845618ae17244d26ccb"
+      },
+      {
+        "parent": "signal-parent-7102",
+        "mechanism": "slow",
+        "split": "fit",
+        "sha256": "64ef9a58a115d2cfb7daf4865f2850256829f26312ecc56e7027dfd29f6848b8"
+      },
+      {
+        "parent": "signal-parent-7102",
+        "mechanism": "rapid",
+        "split": "fit",
+        "sha256": "ac2f2fb805b35a74129ebd900779d51f995b57d1aef2647ab8582f06e3069ffb"
+      },
+      {
+        "parent": "signal-parent-7103",
+        "mechanism": "slow",
+        "split": "fit",
+        "sha256": "28f2429e1bdbb9746926e455820b8bc13f2a75e370ffd4d3c429dc2338fcd647"
+      },
+      {
+        "parent": "signal-parent-7103",
+        "mechanism": "rapid",
+        "split": "fit",
+        "sha256": "10fcda2db0a79746baa6b2dbabad4a1463b9ff9555fe40461b27a72df08d6c41"
+      },
+      {
+        "parent": "signal-parent-7104",
+        "mechanism": "slow",
+        "split": "fit",
+        "sha256": "7b87c883c3974dbfa081c35bc3580f3aa3763db7bb664e919f56ea648ddd7614"
+      },
+      {
+        "parent": "signal-parent-7104",
+        "mechanism": "rapid",
+        "split": "fit",
+        "sha256": "ef7c75bd1b2b805b3ef5e3cbb1265cb62d31301f10a8447392d710f9426d582e"
+      },
+      {
+        "parent": "signal-parent-7105",
+        "mechanism": "slow",
+        "split": "fit",
+        "sha256": "8e5a435396955aaf518547f8689c454a4a028f03376999d712a4a029090406ca"
+      },
+      {
+        "parent": "signal-parent-7105",
+        "mechanism": "rapid",
+        "split": "fit",
+        "sha256": "dbe8e86f6acda8d784b6d8f997c000dbdbf439b617e1a7ad6d6286e8d815e764"
+      },
+      {
+        "parent": "signal-parent-7106",
+        "mechanism": "slow",
+        "split": "fit",
+        "sha256": "7eb33dfc630b529c0ecc71300570cbfd33a2b3f84f6c5901032599a9a0dda386"
+      },
+      {
+        "parent": "signal-parent-7106",
+        "mechanism": "rapid",
+        "split": "fit",
+        "sha256": "3d98e4b5401968e7bfd5f071b59060f0e669a97272445bd14c82e48dd9989560"
+      },
+      {
+        "parent": "signal-parent-7201",
+        "mechanism": "slow",
+        "split": "development",
+        "sha256": "1ec562c7f55b56228f0927b3a43e090eeb3880ffe5edc51929b9d1ff5d3faac0"
+      },
+      {
+        "parent": "signal-parent-7201",
+        "mechanism": "rapid",
+        "split": "development",
+        "sha256": "2f8979d233e474cf72edd1a1b553fcfd5d555e5c66311464f9bfcf7f027d3ea4"
+      },
+      {
+        "parent": "signal-parent-7202",
+        "mechanism": "slow",
+        "split": "development",
+        "sha256": "ab62378e8712e54b0259df353cb2bdf8e1d7f33515237fa84e9b9060d994eb02"
+      },
+      {
+        "parent": "signal-parent-7202",
+        "mechanism": "rapid",
+        "split": "development",
+        "sha256": "5300b7372b858e6f07ce91b0c320b95d9eecb95a1605652df4fe1a97de1f7170"
+      },
+      {
+        "parent": "signal-parent-7203",
+        "mechanism": "slow",
+        "split": "development",
+        "sha256": "439b0433500d272da0d683e39eec74e0b06a2afd714dd8732b4d30aff7ca45af"
+      },
+      {
+        "parent": "signal-parent-7203",
+        "mechanism": "rapid",
+        "split": "development",
+        "sha256": "72c2415515e88c6eed328317d82bbc84d403a81badd47912c07b1c3aaecf2d93"
+      },
+      {
+        "parent": "signal-parent-7301",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "d5a7db4dec1658262fde685b1ca4070d04754cda15b80c13367a7bf9a8820a5c"
+      },
+      {
+        "parent": "signal-parent-7301",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "f0b018f2d64105f03aea94c7503d5411af4f7398fe553bb3d6d2527526950a3c"
+      },
+      {
+        "parent": "signal-parent-7301",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "2ae622cbc65089dbd8a27b5ed3bf2a0c640180d88fdab87db39e183f85f2e8d1"
+      },
+      {
+        "parent": "signal-parent-7302",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "49dca68d3bd2d3705fc3a3a503da26987b4120765f9efb5b0145ff7805f45d20"
+      },
+      {
+        "parent": "signal-parent-7302",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "53af1099b377cb08afdb3fecc4414fa2d7bd209290cb2c8d44c07a11b233933f"
+      },
+      {
+        "parent": "signal-parent-7302",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "b62cebe1c321fe66a73cc8016fb4a263019cf87c9040b4dcf94b73fdab7e408d"
+      },
+      {
+        "parent": "signal-parent-7303",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "cebb598108d3a8e787020815a73533c6bcb00f02c378fd3f13ccd5502edaa7a6"
+      },
+      {
+        "parent": "signal-parent-7303",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "70226f5af6c707479bf93d57bd85b8dd8b7186797ed82a32504a9007f35686dd"
+      },
+      {
+        "parent": "signal-parent-7303",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "5130b0972cdd39c8781d03902f88db2c8cf355dc44d5cbee27d9d5e7c5dcb7d6"
+      },
+      {
+        "parent": "signal-parent-7304",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "6c25e1664728b00ad9c0ce2630b3786075df40e136cc3328391b9d4ac484755d"
+      },
+      {
+        "parent": "signal-parent-7304",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "13c87219e6b8cfda6a391b3c0053273a242d663850c061d63820e3eec49e744d"
+      },
+      {
+        "parent": "signal-parent-7304",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "3fb5627d6eb7fe87aca9ce69a0cd1b4ba15be6c2093d56363f39d362ad6569dc"
+      },
+      {
+        "parent": "signal-parent-7305",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "95dc8a42650d321ad21246491e153ce8061b84e55f0cab454feaee90003530e2"
+      },
+      {
+        "parent": "signal-parent-7305",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "868f5ca34a6d02196a7bae6e603d9af646c9b0e043060f4b38a8e3975627d7de"
+      },
+      {
+        "parent": "signal-parent-7305",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "453d4b607ce1b4ec1ff72bdf635094aa9a8f41ad2b116a2a7431bafec1b088b3"
+      },
+      {
+        "parent": "signal-parent-7306",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "6929073886b6c1b2715c8e61d6840c42e95473c3cea68586ba749e56b7dcea9c"
+      },
+      {
+        "parent": "signal-parent-7306",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "bb8c9bc13e668830da33695b85ab1043f70b920784ff5f2d072ab2fd233c1a4c"
+      },
+      {
+        "parent": "signal-parent-7306",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "288098b9a2ad448e89ccd0117e2815d5387e43b4cca65a472f81398b40488f88"
+      },
+      {
+        "parent": "signal-parent-7307",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "379d4605d4da15221cc4194724469d2a8cfa176ee3e68a6f9e1f103d22672d26"
+      },
+      {
+        "parent": "signal-parent-7307",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "c1758e86b22f1cf5a6daa399d9bcb6063cdffa76e07309db7cf66c867852f0c2"
+      },
+      {
+        "parent": "signal-parent-7307",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "08caa11985679d04f7921ac8a53b74e3e8aae25bade1ba799ae47e2df95e4bb8"
+      },
+      {
+        "parent": "signal-parent-7308",
+        "mechanism": "slow",
+        "split": "holdout",
+        "sha256": "72632a4313641f1a7178277f0ea9afe8a47bf68094832e76db042c17161bf60e"
+      },
+      {
+        "parent": "signal-parent-7308",
+        "mechanism": "rapid",
+        "split": "holdout",
+        "sha256": "008e31a22c3375a3cad1cb67c09eca6888d52923964af4fb4cdebd09c681cd04"
+      },
+      {
+        "parent": "signal-parent-7308",
+        "mechanism": "double",
+        "split": "holdout",
+        "sha256": "6138ce4e3320ef27aded526005b3d04b9a722926eb1e54dd6c8b8329b511afc8"
+      }
+    ]
+  },
+  "independent_statistics": {
+    "passed": true,
+    "independent_parents": [
+      "signal-parent-7301",
+      "signal-parent-7302",
+      "signal-parent-7303",
+      "signal-parent-7304",
+      "signal-parent-7305",
+      "signal-parent-7306",
+      "signal-parent-7307",
+      "signal-parent-7308"
+    ],
+    "comparisons": 9,
+    "matched_controls": [
+      "R1-C1",
+      "R2-C2",
+      "R3-C3"
+    ],
+    "bootstrap_replicates": 10000,
+    "sign_flip_patterns": 256,
+    "holm_family": [
+      "R1-Bpost",
+      "R2-Bpost",
+      "R3-Bpost"
+    ]
+  },
+  "independent_raw_saved_action_replays": {
+    "passed": true,
+    "model_runs": 1728,
+    "actual_sensor_records": 625536,
+    "decisions": 311040,
+    "physical_case_layouts": 72,
+    "raw_signals_water_timestamps_events_and_rewards_equal": true,
+    "neural_policy_recomputed": false,
+    "selection_changed": false
+  },
+  "independent_rule_replays": {
+    "passed": true,
+    "rule_runs": 216,
+    "actual_task_metrics_equal": true
+  },
+  "selected_effects": {
+    "R1": {
+      "fitted_zero_effect": true,
+      "max_fit_mean_difference_from_Bpost": 0.0,
+      "coefficients": {
+        "alpha": 0.0,
+        "kappa": 0.0,
+        "beta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "strength": 0.0,
+        "cross": 0.0
+      },
+      "interpretation": "zero-effect result; do not claim active physics"
+    },
+    "R2": {
+      "fitted_zero_effect": false,
+      "max_fit_mean_difference_from_Bpost": 0.30443936702504815,
+      "coefficients": {
+        "alpha": 0.0,
+        "kappa": 0.0,
+        "beta": [
+          1.1301526453774784,
+          0.20951146056980716,
+          -0.32337027918319455,
+          0.833152032361751
+        ],
+        "strength": 0.0,
+        "cross": 0.0
+      },
+      "interpretation": "nonzero fitted candidate; benefit unproven"
+    },
+    "R3": {
+      "fitted_zero_effect": true,
+      "max_fit_mean_difference_from_Bpost": 0.0,
+      "coefficients": {
+        "alpha": 0.0,
+        "kappa": 0.0,
+        "beta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "strength": 0.0,
+        "cross": 0.0
+      },
+      "interpretation": "zero-effect result; do not claim active physics"
+    }
+  },
+  "supplemental_preflight_sha256": "61e799dc979bd3e1fc990d627895620909768841550d2748b3ff29cbde544862",
+  "report_sha256": "7ca2cf61c4f609b9351c12fa963f99b682c7f5f5731a66f0265243e636ae0127",
+  "results_sha256": "548fbfd45c719ceebc77e074085e4586d7fb44a782e4aa37d70908f252abf622"
+}

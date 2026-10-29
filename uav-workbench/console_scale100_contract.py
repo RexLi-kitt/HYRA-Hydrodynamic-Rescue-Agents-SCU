@@ -3,13 +3,15 @@
 Formal models remain unavailable until a separately audited release exists.
 There are no Torch, NumPy, training, or evaluator imports in this module.
 """
+from runtime_assets import runtime_path
+
 import hashlib
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-FORMAL = ROOT / 'generated/scale100-formal-20261026'
-HELDOUT = ROOT / 'generated/scale100-heldout-20261026'
+FORMAL = runtime_path(ROOT / 'generated/scale100-formal-20261026')
+HELDOUT = runtime_path(ROOT / 'generated/scale100-heldout-20261026')
 RELEASE = ROOT / 'research/scale100-workbench-release-20261026.json'
 TASKS = {'exploration': 'E1', 'exploration_rescue': 'E2'}
 LABELS = {'B0': 'QMIX', 'B1': 'GMRF + QMIX', 'B2': 'Sur-QMIX',
@@ -61,7 +63,7 @@ def scene_records():
     return [dict(id='scale100:' + row['parent_terrain'],
                  name=('开发验证' if row['split'] == 'development' else '训练场景')
                       + ' / ' + row['parent_terrain'],
-                 path=row['path'], source_sha256=row['sha256'],
+                 path=str(runtime_path(row['path'])), source_sha256=row['sha256'],
                  split=row['split'], parent=row['parent_terrain'],
                  grid=dict(shape=[20, 20], dx_m=5., axis_order=['z', 'x']),
                  duration_s=900., actual_frame_count=181,

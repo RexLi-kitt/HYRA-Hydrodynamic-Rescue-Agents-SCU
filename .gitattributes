@@ -1,0 +1,5 @@
+*.py text eol=lf
+# Frozen inputs, metadata and source seals must retain their exact bytes.
+uav-workbench/runtime-assets/** -text -diff
+uav-workbench/runtime-assets/manifest.json text eol=lf diff
+uav-workbench/runtime-assets/README.md text eol=lf diff
