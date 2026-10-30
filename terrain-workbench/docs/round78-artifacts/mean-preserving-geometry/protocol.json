@@ -1,0 +1,23 @@
+{
+  "status": "geometry-only candidate prepared, no hydrodynamic run or adoption",
+  "baseline": "author2023 archived DG2 mean/slope arrays",
+  "single_factor": "Raster-to-DG2 bed representation over every cell, same affine coordinates/domain; solver and physical inputs untouched.",
+  "hypothesis": "Using raw cell entries as corner nodes changes cell mean and channel face levels. Alternative interprets original cell value as DG2 mean, not certified true cell-average bathymetry.",
+  "formula": "Z0=raw cell value; Z1x=minmod(Zi-Zi-1,Zi+1-Zi)/(2sqrt3); Z1y=minmod(Znorth-Zi,Zi-Zsouth)/(2sqrt3); respective perimeter slopes=0. No tuning coefficient.",
+  "not_changed": [
+    "source positions and hydrographs",
+    "domain, grid header and observation coordinates",
+    "roughness",
+    "solver formulas and defaults",
+    "archive and every old bad result"
+  ],
+  "criteria": [
+    "Mean arrays exactly original raw raster",
+    "Finite, planar slopes exact on interior affine field",
+    "Each face value stays between the central and axial-neighbour extrema",
+    "All3 channel-mask source-to-outlet static thresholds no higher than baseline, at least one strictly lower; otherwise reject this geometric mechanism"
+  ],
+  "cost": "One static preprocessing and full mask audit; no long solve. Follow with limited static-water/dynamic compatibility gates only if geometry criteria pass.",
+  "rejection": "No real-world improvement claim from lower geometric barrier. Do not alter source cells alone, widen channels by guesswork, move gauges, or fit thresholds. Poor hydrodynamic conservation/well-balance rejects candidate.",
+  "open_issue": "This does not restore measured river widths or resolve author-cell-vs-node intent. Geometry candidate is not production or a verified field setup."
+}

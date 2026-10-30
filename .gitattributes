@@ -3,3 +3,6 @@
 uav-workbench/runtime-assets/** -text -diff
 uav-workbench/runtime-assets/manifest.json text eol=lf diff
 uav-workbench/runtime-assets/README.md text eol=lf diff
+
+# Preserve archived evidence bytes and their published SHA256 hashes.
+terrain-workbench/docs/round*-artifacts/** -text

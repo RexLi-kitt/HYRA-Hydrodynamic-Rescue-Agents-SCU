@@ -1,0 +1,21 @@
+{
+  "archive": {
+    "all_marks": 263,
+    "invalid_polynomial_cells": 36,
+    "raw_requests_rejected": 36,
+    "mean_samples_exact": true,
+    "stage18_matches_serialized_means": true,
+    "corner_min": -0.016223542004289743
+  },
+  "mean_preserving": {
+    "all_marks": 263,
+    "invalid_polynomial_cells": 2,
+    "raw_requests_rejected": 2,
+    "mean_samples_exact": true,
+    "stage18_matches_serialized_means": true,
+    "corner_min": -0.001048777392435184
+  },
+  "guard_checks": 7,
+  "scope": "No change to numerical fields, station files, historical scoring or production defaults",
+  "field_passes_added": 0
+}

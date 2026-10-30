@@ -18,6 +18,7 @@ import merewether
 import server
 import map_sessions
 from multilayer import json_safe
+from benchmark_restart import restore_audit_metadata
 
 
 def write(path,value):path.write_text(json.dumps(json_safe(value),ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
@@ -26,8 +27,11 @@ def write(path,value):path.write_text(json.dumps(json_safe(value),ensure_ascii=F
 def run(args,source,provenance,factor,n):
     started=time.perf_counter();expired=lambda:time.perf_counter()-started>args.wall_budget
     tid,scene=merewether.make_case(LAB,source,factor,n,args.aggregation,layered=args.layered)
-    scene['flood'].update(duration_s=args.duration,frames=9)
+    flux_method=getattr(args, 'flux_method', 'rusanov')
+    if flux_method not in ('rusanov', 'knp', 'hllc'):raise ValueError('Unsupported flux method')
+    scene['flood'].update(duration_s=args.duration,frames=9,flux_method=flux_method)
     variant='-layered-v1' if args.layered else ('' if args.aggregation=='max' else '-'+args.aggregation)
+    if flux_method != 'rusanov':variant += '-'+flux_method
     folder=args.output/f'f{factor}-n{n:g}{variant}';folder.mkdir(parents=True,exist_ok=True)
     world=map_sessions.create(LAB,server.describe(tid),scene);solver=world.solver
     points=merewether.observations(source);ymax=solver.h.shape[0]*solver.dx
@@ -43,21 +47,23 @@ def run(args,source,provenance,factor,n):
         u,v=solver.velocity();filename=f'frame-{len(frames):03d}.f32'
         np.stack([solver.h,u,v,solver.maximum]).astype('<f4').tofile(frame_dir/filename)
         frames.append(dict(index=len(frames),url=f'/generated/{sid}/maps/{filename}',**solver.summary()))
-    config=dict(terrain_id=tid,scenario=scene,source=provenance,comparison='independent measured maximum velocity vectors',
+    config=dict(flux_method=flux_method,terrain_id=tid,scenario=scene,source=provenance,comparison='independent measured maximum velocity vectors',
         sampling=dict(interval_s=args.sample_interval,velocity_minimum_depth_m=.01,method='containing-cell conserved state',
                       direction='observed Mod_Angle in x/y; solver z points south, so v_north=-mz/h'),
         roughness=world.meta.get('imported',{}).get('roughness'),wall_budget_s=args.wall_budget,
         terrain_representation='separate ground and inferred impermeable obstacles' if args.layered else args.aggregation+' elevation',
         obstacle_layers=world.meta.get('imported',{}).get('obstacle_layers'),
-        code_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path(__file__),LAB/'raster_import.py',LAB/'merewether.py',LAB/'obstacle_layers.py',LAB/'flood_solver.py',LAB/'flood_acceleration.py']})
+        code_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path(__file__),LAB/'raster_import.py',LAB/'merewether.py',LAB/'obstacle_layers.py',LAB/'flood_solver.py',LAB/'flood_acceleration.py',LAB/'flood_numerics.py',LAB/'benchmark_restart.py']})
     prior_wall=0.
     if args.resume:
         previous=json.loads((folder/'result.json').read_text(encoding='utf-8'))
         old_config=json.loads((folder/'config.json').read_text(encoding='utf-8'))
+        if old_config.get('flux_method','rusanov') != flux_method:
+            raise ValueError('Cannot resume with a different flux method')
         if previous['complete']:raise ValueError('Saved observation window is already complete')
         if previous['requested_duration_s']!=args.duration or previous['n']!=n or previous['factor']!=factor:
             raise ValueError('Resume requires identical time window, roughness and grid')
-        for name in ['flood_solver.py','flood_acceleration.py']:
+        for name in (['flood_solver.py','flood_acceleration.py','flood_numerics.py'] if flux_method=='hllc' else ['flood_solver.py','flood_acceleration.py']):
             if old_config['code_sha256'][name]!=config['code_sha256'][name]:raise ValueError('Cannot resume after numerical solver changes')
         if old_config['sampling']!=config['sampling'] or old_config['source']['files']!=config['source']['files']:
             raise ValueError('Cannot resume with different source data or observation sampling')
@@ -74,13 +80,19 @@ def run(args,source,provenance,factor,n):
                 np.testing.assert_array_equal(saved['solid'],solver.solid)
                 np.testing.assert_array_equal(saved['wall_x'],solver.wall_x)
                 np.testing.assert_array_equal(saved['wall_y'],solver.wall_y)
+            if solver.hllc_face_audit is not None:
+                for i,a in enumerate(solver.hllc_face_audit):
+                    key=f'hllc_audit_axis_{i}'
+                    if key not in saved or saved[key].shape!=a.shape or (saved[key]<0).any():
+                        raise ValueError('HLLC checkpoint lacks valid face audit maps')
+                    a[:]=saved[key]
             for name,key in [('h','depth'),('mx','mx'),('mz','mz'),('maximum','maximum_depth')]:
                 getattr(solver,name)[:]=saved[key]
         replay=json.loads((frame_dir/'replay.json').read_text(encoding='utf-8'))
         frames=replay['process']['frames'];last=frames[-1]
-        solver.time=float(previous['duration_s']);solver.steps=last['steps']
-        solver.balance=dict(previous['balance']);solver.diagnostics=dict(last['diagnostics'])
-        solver.external_volume_by_id=dict(last['external_inflow_by_id_m3'])
+        if last['time_s'] != previous['duration_s']:
+            raise ValueError('Checkpoint frame time does not match saved result')
+        restore_audit_metadata(solver, last)
         records=json.loads((folder/'series.json').read_text(encoding='utf-8'))
         maxima=np.array([p['model_max_speed_m_s'] for p in previous['points']])
         umax=np.array([p['model_u_at_max_m_s'] for p in previous['points']])
@@ -137,14 +149,14 @@ def run(args,source,provenance,factor,n):
             sampled_bed_m=float(solver.bed[iz[i],ix[i]]),grid_row=int(iz[i]),grid_col=int(ix[i])))
     err=np.array([r['speed_error_m_s'] for r in rows]);directions=[abs(r['direction_error_deg']) for r in rows if r['direction_error_deg'] is not None]
     balance=solver.summary()['balance'];complete=bool(abs(solver.time-args.duration)<1e-7)
-    result=dict(factor=factor,dx_m=solver.dx,shape=list(solver.h.shape),n=n,duration_s=solver.time,requested_duration_s=args.duration,
+    result=dict(flux_method=flux_method,factor=factor,dx_m=solver.dx,shape=list(solver.h.shape),n=n,duration_s=solver.time,requested_duration_s=args.duration,
         complete=complete,budget_hit=budget_hit,wall_s=prior_wall+time.perf_counter()-started,
         segment_wall_s=time.perf_counter()-started,quasi_steady=steady_count>=3,
         metrics=dict(speed_rmse_m_s=float(np.sqrt(np.mean(err**2))),speed_mae_m_s=float(abs(err).mean()),speed_bias_m_s=float(err.mean()),
             direction_mae_deg=float(np.mean(directions)) if directions else None,direction_points=len(directions),
             measured_points=len(points),model_dry_points=int(np.count_nonzero(max_h<.01))),
         metrics_status='full 800 s observed-maximum comparison' if complete and args.duration==800 else 'partial-window diagnostic; not full benchmark validation',
-        balance=balance,finite=bool(np.isfinite(solver.h).all() and np.isfinite(solver.mx).all() and np.isfinite(solver.mz).all()),
+        hllc_audit=solver.hllc_audit_summary(),balance=balance,finite=bool(np.isfinite(solver.h).all() and np.isfinite(solver.mx).all() and np.isfinite(solver.mz).all()),
         nonnegative=bool((solver.h>=0).all()),steady_checks=checks,points=rows,
         replay_id=sid,terrain_id=tid,water_level_validation='not scored: observation values unavailable, only sampling coordinates supplied')
     write(folder/'result.json',result);write(folder/'series.json',records)
@@ -152,7 +164,8 @@ def run(args,source,provenance,factor,n):
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     np.savez_compressed(folder/'final.npz',bed=solver.bed,depth=solver.h,mx=solver.mx,mz=solver.mz,
                         maximum_depth=solver.maximum,n=solver.manning,solid=solver.solid,
-                        wall_x=solver.wall_x,wall_y=solver.wall_y)
+                        wall_x=solver.wall_x,wall_y=solver.wall_y,
+                        **({f'hllc_audit_axis_{i}':a for i,a in enumerate(solver.hllc_face_audit)} if solver.hllc_face_audit is not None else {}))
     map_sessions.save_process(LAB,sid,world,frames)
     render(folder,result,solver,points,records,ymax)
     print(json.dumps(dict(stage='done',**{k:result[k] for k in ['factor','n','duration_s','complete','wall_s','metrics','balance']})),flush=True)
@@ -190,6 +203,7 @@ def main():
     p.add_argument('--source',type=Path,default=LAB/'.runtime/merewether/source')
     p.add_argument('--output',type=Path,default=LAB/'.runtime/merewether/results')
     p.add_argument('--factor',type=int,default=4)
+    p.add_argument('--flux-method',choices=['rusanov','knp','hllc'],default='rusanov',help='Single-factor numerical flux comparison; defaults unchanged')
     p.add_argument('--manning',type=float,default=.042)
     p.add_argument('--aggregation',choices=['mean','max'],default='max')
     p.add_argument('--layered',action='store_true',help='Separate inferred obstacle footprint from fluid ground (experimental v1)')

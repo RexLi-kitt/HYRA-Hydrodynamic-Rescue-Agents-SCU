@@ -31,7 +31,7 @@ class FloodSolver:
         n = np.broadcast_to(np.asarray(manning, dtype=np.float64), self.h.shape)
         if boundary not in ('ocean', 'open', 'closed', 'periodic') or not np.isfinite(n).all() or (n < 0).any():
             raise ValueError('Invalid boundary or Manning coefficient')
-        if (flux_method not in ('rusanov', 'knp') or spatial_order not in (1, 2)
+        if (flux_method not in ('rusanov', 'knp', 'hllc') or spatial_order not in (1, 2)
                 or isinstance(spatial_order, bool) or time_integrator not in ('euler', 'rk2')
                 or low_froude not in (0, 1, 2) or isinstance(low_froude, bool)
                 or not np.isfinite(cfl) or not 0 < cfl <= .45
@@ -40,6 +40,8 @@ class FloodSolver:
                 or not np.isfinite(max_timestep) or max_timestep <= 0
                 or not isinstance(max_steps, int) or isinstance(max_steps, bool) or max_steps < 1):
             raise ValueError('Invalid numerical configuration')
+        if flux_method == 'hllc' and low_froude != 0:
+            raise ValueError('Experimental HLLC requires low_froude=0')
         self.flux_method, self.spatial_order = flux_method, int(spatial_order)
         self.time_integrator, self.low_froude = time_integrator, int(low_froude)
         self.cfl, self.limiter_theta = float(cfl), float(limiter_theta)
@@ -93,6 +95,9 @@ class FloodSolver:
         self.solid = np.zeros_like(self.h, dtype=bool)
         self.wall_x = np.zeros((nz,nx+1),dtype=bool)
         self.wall_y = np.zeros((nz+1,nx),dtype=bool)
+        self.hllc_face_audit = ([np.zeros((4,nz+1,nx),dtype=np.int64),
+                                 np.zeros((4,nz,nx+1),dtype=np.int64)]
+                                if self.flux_method=='hllc' else None)
         self.structures = None
         self.structure_warmup = False
         self.drain_capacity = np.zeros_like(self.h)
@@ -284,6 +289,8 @@ class FloodSolver:
     def start_scenario(self):
         """Use the warmed state as t=0 without losing momentum or source rates."""
         self.initial = self.h.copy(); self.maximum = self.h.copy()
+        if self.hllc_face_audit is not None:
+            for counts in self.hllc_face_audit: counts.fill(0)
         self.time = 0.0; self.steps = 0
         self.peak_speed_m_s = 0.0; self.peak_speed_time_s = 0.0
         self._record_speed_peak()
@@ -520,7 +527,8 @@ class FloodSolver:
                 self.sea_level if self.sea_level is not None else 0.,
                 self.sea_edges[names[0]],self.sea_edges[names[1]],
                 a['fraction'],b['fraction'],a['q'],b['q'],a['advective_x'],b['advective_x'],a['advective_z'],b['advective_z'],
-                0 if self.flux_method=='rusanov' else 1,self.low_froude)
+                {'rusanov':0,'knp':1,'hllc':2}[self.flux_method],self.low_froude,
+                self.hllc_face_audit[axis] if self.hllc_face_audit is not None else None)
             mass,advx,advz,pressure,cl,cr,speed=fields
             face = self._structure_flux(axis,dict(zip(('mass','advx','advz','pressure','corr_l','corr_r','speed'),fields)))
             if details:
@@ -550,9 +558,15 @@ class FloodSolver:
         jump = (br-bl)+(offset_r-offset_l)
         dl = np.maximum(0., hl-np.maximum(jump, 0.))
         dr = np.maximum(0., hr-np.maximum(-jump, 0.))
+        audit = np.zeros_like(self.hllc_face_audit[axis]) if self.hllc_face_audit is not None else None
         mass, advx, advz, pressure, speed = face_flux(
             dl, dr, ul, vl, ur, vr, normal=(1., 0.) if axis == 1 else (0., 1.),
-            method=self.flux_method, low_froude=self.low_froude)
+            method=self.flux_method, low_froude=self.low_froude, audit=audit)
+        if audit is not None:
+            audit[:,self._blocked_faces(axis)] = 0
+            if axis == 1: audit[:,:,[0,-1]] = 0
+            else: audit[:,[0,-1],:] = 0
+            self.hllc_face_audit[axis] += audit
         # Extrapolated ghost states already passed through the selected face flux.
         # Keep that flux, including inward transport; no outflow-only override.
         if self.boundary in ('open', 'ocean') and self.open_boundary_mode == 'outflow_only':
@@ -841,6 +855,13 @@ class FloodSolver:
             if progress is not None and time.perf_counter()-last_report>=1.:
                 progress(self)
                 last_report=time.perf_counter()
+
+    def hllc_audit_summary(self):
+        if self.hllc_face_audit is None: return None
+        counts = sum((a.sum(axis=(1,2)) for a in self.hllc_face_audit), np.zeros(4,dtype=np.int64))
+        return dict(scope='unblocked interior Riemann evaluations before structures; includes RK stages and explicit diagnostic flux calls; excludes outer faces',
+                    counts=dict(zip(('contact','dry_hll','small_star_hll','vacuum_hll'),map(int,counts))),
+                    total=int(counts.sum()), fallback=int(counts[1:].sum()))
 
     def summary(self):
         u, v = self.velocity()

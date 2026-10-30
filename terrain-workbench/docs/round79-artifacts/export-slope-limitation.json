@@ -1,0 +1,14 @@
+{
+  "source": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\round77\\lisflood8-rk-ledger\\swe\\dg2.cpp",
+  "sha256": "741ef4420a9ac5ba5b899882e4713c24241a74c32e51b13a6ee3103c09a25359",
+  "stage_limiter_lines": [
+    532,
+    578
+  ],
+  "minimum_exported_face_depth_m": {
+    "archive": -0.005009061252372576,
+    "mean_preserving": -0.001048777392435184
+  },
+  "interpretation": "Raw terminal coefficients not positivity-limited before export; flux stages limit beforehand. Mean positivity does not establish admissible exported reconstruction.",
+  "action": "Audit/define consistent sampling before regional interpretation; no silent clipping or claim full polynomial positivity."
+}
