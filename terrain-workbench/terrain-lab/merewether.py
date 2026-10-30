@@ -128,3 +128,21 @@ def make_case(root,folder,factor=4,manning=.042,method='max',*,layered=False):
     (target.parent/'observations.json').write_text(json.dumps(observations(folder),indent=2),encoding='utf-8')
     if layered:np.savez_compressed(target.parent/'native-obstacle-layers.npz',**{k:v for k,v in layer_data.items() if isinstance(v,np.ndarray)})
     return tid,scene
+
+
+def measurement_indices(points_xy, shape, dx):
+    """Map local x/east,y/north metres to rows/columns; reject outside samples.
+
+    The imported Merewether grid uses x>=0 and southward distance>=0,
+    with the far east/south faces excluded, matching containing-cell sampling.
+    """
+    points=np.asarray(points_xy,dtype=float)
+    if points.ndim!=2 or points.shape[1]!=2 or not np.isfinite(points).all():
+        raise ValueError('Measurement coordinates must be finite x/y pairs')
+    if not np.isfinite(dx) or dx<=0:raise ValueError('Grid spacing must be positive')
+    nz,nx=shape
+    grid=np.column_stack(((nz*dx-points[:,1])/dx,points[:,0]/dx))
+    if np.any(grid<0) or np.any(grid[:,0]>=nz) or np.any(grid[:,1]>=nx):
+        raise ValueError('Measured point outside imported DEM')
+    indices=np.floor(grid).astype(np.intp)
+    return indices[:,0],indices[:,1]

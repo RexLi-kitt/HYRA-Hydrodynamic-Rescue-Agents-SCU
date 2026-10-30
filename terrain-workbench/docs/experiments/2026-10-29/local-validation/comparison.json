@@ -1,0 +1,404 @@
+{
+  "coarse_metrics": {
+    "speed_rmse_m_s": 0.72067067183773,
+    "speed_mae_m_s": 0.5783013848042727,
+    "speed_bias_m_s": 0.22407880798712437,
+    "direction_mae_deg": 26.7106373882729,
+    "direction_points": 37,
+    "measured_points": 40,
+    "model_dry_points": 2
+  },
+  "fine_metrics": {
+    "speed_rmse_m_s": 0.6590639325676693,
+    "speed_mae_m_s": 0.5289142617277127,
+    "speed_bias_m_s": 0.1984158365249073,
+    "direction_mae_deg": 24.211618028663768,
+    "direction_points": 38,
+    "measured_points": 40,
+    "model_dry_points": 1
+  },
+  "improved": 20,
+  "degraded": 19,
+  "fine_wall_s": 690.4893158000004,
+  "balance": {
+    "initial_m3": 0.0,
+    "rainfall_m3": 0.0,
+    "inflow_m3": 0.0,
+    "baseflow_m3": 0.0,
+    "infiltration_m3": 0.0,
+    "outflow_m3": 5428.696262628882,
+    "sea_inflow_m3": 0.0,
+    "sea_outflow_m3": 0.0,
+    "drainage_m3": 0.0,
+    "scheduled_inflow_m3": 0.0,
+    "external_inflow_m3": 15759.359999999991,
+    "numerical_adjustment_m3": 0.0,
+    "current_m3": 10330.663737371126,
+    "residual_m3": 1.6370904631912708e-11,
+    "corrected_residual_m3": 1.6370904631912708e-11
+  },
+  "finite": true,
+  "nonnegative": true,
+  "points": [
+    {
+      "id": "14-F",
+      "observed": 0.8,
+      "coarse": 2.7708240065426932,
+      "fine": 0.9301051975155755,
+      "coarse_depth": 0.3790368208186395,
+      "fine_depth": 0.28424841331434925,
+      "absolute_error_change": -1.8407188090271176
+    },
+    {
+      "id": "14-G",
+      "observed": 0.9,
+      "coarse": 1.593154388134372,
+      "fine": 2.229086445750047,
+      "coarse_depth": 0.7212628142869676,
+      "fine_depth": 0.4713476042579543,
+      "absolute_error_change": 0.6359320576156754
+    },
+    {
+      "id": "14-H",
+      "observed": 0.8,
+      "coarse": 1.8522137893111295,
+      "fine": 1.7664145963771127,
+      "coarse_depth": 0.475700846507511,
+      "fine_depth": 0.3986083519548054,
+      "absolute_error_change": -0.08579919293401672
+    },
+    {
+      "id": "14-I",
+      "observed": 1.4,
+      "coarse": 1.7527840286519494,
+      "fine": 1.8177796486330005,
+      "coarse_depth": 0.5633141605208265,
+      "fine_depth": 0.4966803722102465,
+      "absolute_error_change": 0.06499561998105108
+    },
+    {
+      "id": "14-J",
+      "observed": 1.7,
+      "coarse": 2.4086472269859107,
+      "fine": 2.3784424106671236,
+      "coarse_depth": 0.32168986049257975,
+      "fine_depth": 0.29349727533739867,
+      "absolute_error_change": -0.03020481631878713
+    },
+    {
+      "id": "15-D",
+      "observed": 0.7,
+      "coarse": 1.4624987840348285,
+      "fine": 1.0656826451331767,
+      "coarse_depth": 0.33436757564346337,
+      "fine_depth": 0.28473258758001574,
+      "absolute_error_change": -0.3968161389016518
+    },
+    {
+      "id": "15-E",
+      "observed": 1.1,
+      "coarse": 1.0180385880123524,
+      "fine": 0.8507323537859817,
+      "coarse_depth": 0.711516253619924,
+      "fine_depth": 0.632289642254281,
+      "absolute_error_change": 0.1673062342263707
+    },
+    {
+      "id": "15-F",
+      "observed": 1.4,
+      "coarse": 2.022618535510866,
+      "fine": 2.030865454046355,
+      "coarse_depth": 0.3871980830452269,
+      "fine_depth": 0.4731915269291727,
+      "absolute_error_change": 0.0082469185354892
+    },
+    {
+      "id": "15-H",
+      "observed": 1.5,
+      "coarse": 2.365836841253654,
+      "fine": 2.646824158870999,
+      "coarse_depth": 0.3714236567913274,
+      "fine_depth": 0.3095008798893618,
+      "absolute_error_change": 0.28098731761734497
+    },
+    {
+      "id": "15-I",
+      "observed": 1.3,
+      "coarse": 1.2887886203033243,
+      "fine": 1.2869823472978186,
+      "coarse_depth": 0.8308048658695177,
+      "fine_depth": 0.7052256530785053,
+      "absolute_error_change": 0.0018062730055057319
+    },
+    {
+      "id": "15-J",
+      "observed": 1.2,
+      "coarse": 0.6988550366187358,
+      "fine": 1.0276703742266586,
+      "coarse_depth": 0.521059473745437,
+      "fine_depth": 0.619606801871875,
+      "absolute_error_change": -0.3288153376079228
+    },
+    {
+      "id": "16-D",
+      "observed": 1.2,
+      "coarse": 1.4859802767930173,
+      "fine": 1.3274710041164244,
+      "coarse_depth": 0.6905792713157531,
+      "fine_depth": 0.6429769016745647,
+      "absolute_error_change": -0.15850927267659287
+    },
+    {
+      "id": "16-E",
+      "observed": 1.5,
+      "coarse": 1.6949307871441037,
+      "fine": 1.8803886794126525,
+      "coarse_depth": 0.5181378362668072,
+      "fine_depth": 0.4829906448057042,
+      "absolute_error_change": 0.1854578922685488
+    },
+    {
+      "id": "16-F",
+      "observed": 1.1,
+      "coarse": 1.6753887398215122,
+      "fine": 2.3409954897389533,
+      "coarse_depth": 0.3475490890693808,
+      "fine_depth": 0.2542147444564218,
+      "absolute_error_change": 0.6656067499174412
+    },
+    {
+      "id": "16-H",
+      "observed": 1.2,
+      "coarse": 1.0229735368796395,
+      "fine": 0.6241731390780271,
+      "coarse_depth": 0.2679057741085288,
+      "fine_depth": 0.04513111635984809,
+      "absolute_error_change": 0.39880039780161247
+    },
+    {
+      "id": "16-K",
+      "observed": 1.2,
+      "coarse": 0.0,
+      "fine": 0.29112204255093704,
+      "coarse_depth": 0.0,
+      "fine_depth": 0.014795357066275959,
+      "absolute_error_change": -0.2911220425509371
+    },
+    {
+      "id": "17-D",
+      "observed": 1.2,
+      "coarse": 1.2240414930744623,
+      "fine": 1.1684674297776345,
+      "coarse_depth": 0.8478588372172864,
+      "fine_depth": 0.7821380622084658,
+      "absolute_error_change": 0.007491077147903091
+    },
+    {
+      "id": "17-E",
+      "observed": 0.6,
+      "coarse": 1.4963571982724504,
+      "fine": 1.6038289973088498,
+      "coarse_depth": 0.7023975895589134,
+      "fine_depth": 0.6407550643497824,
+      "absolute_error_change": 0.10747179903639925
+    },
+    {
+      "id": "17-J",
+      "observed": 1.1,
+      "coarse": 0.6672817476297291,
+      "fine": 0.8918810380774893,
+      "coarse_depth": 0.10026354298103159,
+      "fine_depth": 0.1404352363486177,
+      "absolute_error_change": -0.22459929044776017
+    },
+    {
+      "id": "18-D",
+      "observed": 1.2,
+      "coarse": 1.4718043847451223,
+      "fine": 1.5526616464116823,
+      "coarse_depth": 0.8345829423403097,
+      "fine_depth": 0.7516035365864333,
+      "absolute_error_change": 0.08085726166655993
+    },
+    {
+      "id": "18-F",
+      "observed": 0.4,
+      "coarse": 1.2332973072967035,
+      "fine": 1.2272151745200601,
+      "coarse_depth": 0.5538493324945936,
+      "fine_depth": 0.5228971414714754,
+      "absolute_error_change": -0.006082132776643379
+    },
+    {
+      "id": "18-G",
+      "observed": 0.8,
+      "coarse": 1.039862434580237,
+      "fine": 0.5884946173609692,
+      "coarse_depth": 0.2926717967782674,
+      "fine_depth": 0.2544310797189106,
+      "absolute_error_change": -0.02835705194120608
+    },
+    {
+      "id": "18-J",
+      "observed": 1.2,
+      "coarse": 0.364910812103268,
+      "fine": 0.722455064082144,
+      "coarse_depth": 0.020960182940832302,
+      "fine_depth": 0.06375792741562034,
+      "absolute_error_change": -0.35754425197887596
+    },
+    {
+      "id": "19-D",
+      "observed": 1.2,
+      "coarse": 1.778215580981479,
+      "fine": 1.8343891932931147,
+      "coarse_depth": 0.9498753464415672,
+      "fine_depth": 0.8247142019062754,
+      "absolute_error_change": 0.056173612311635646
+    },
+    {
+      "id": "19-F",
+      "observed": 1.1,
+      "coarse": 1.1164441939714727,
+      "fine": 0.9866493024643692,
+      "coarse_depth": 0.48816769663719256,
+      "fine_depth": 0.49692706894869754,
+      "absolute_error_change": 0.09690650356415831
+    },
+    {
+      "id": "19-I",
+      "observed": 1.4,
+      "coarse": 0.6899033387752818,
+      "fine": 0.737352518966376,
+      "coarse_depth": 0.07284073619061601,
+      "fine_depth": 0.07637123689436483,
+      "absolute_error_change": -0.04744918019109423
+    },
+    {
+      "id": "19-J",
+      "observed": 1.6,
+      "coarse": 0.0,
+      "fine": 0.0,
+      "coarse_depth": 1.962250763503377e-06,
+      "fine_depth": 0.0004570109752278763,
+      "absolute_error_change": 0.0
+    },
+    {
+      "id": "20-D",
+      "observed": 0.9,
+      "coarse": 1.8159270334799957,
+      "fine": 1.545877183048451,
+      "coarse_depth": 0.7457283400597957,
+      "fine_depth": 0.7736204359692076,
+      "absolute_error_change": -0.2700498504315447
+    },
+    {
+      "id": "20-F",
+      "observed": 0.4,
+      "coarse": 0.5971458083759478,
+      "fine": 0.2882859754599451,
+      "coarse_depth": 0.5612589208380027,
+      "fine_depth": 0.4979740166745613,
+      "absolute_error_change": -0.08543178383589284
+    },
+    {
+      "id": "20-G",
+      "observed": 0.6,
+      "coarse": 0.8833151567044915,
+      "fine": 0.8971982680593442,
+      "coarse_depth": 0.2465330766085182,
+      "fine_depth": 0.2497210830667545,
+      "absolute_error_change": 0.013883111354852762
+    },
+    {
+      "id": "20-H",
+      "observed": 1.5,
+      "coarse": 0.8956247762183316,
+      "fine": 0.8569638983116721,
+      "coarse_depth": 0.16301398705990994,
+      "fine_depth": 0.13770532389181842,
+      "absolute_error_change": 0.03866087790665951
+    },
+    {
+      "id": "21-C",
+      "observed": 0.9,
+      "coarse": 1.8330384087137526,
+      "fine": 1.3900508597156505,
+      "coarse_depth": 0.5065518022939184,
+      "fine_depth": 0.508795502990318,
+      "absolute_error_change": -0.4429875489981021
+    },
+    {
+      "id": "21-D",
+      "observed": 0.7,
+      "coarse": 1.7767468177229901,
+      "fine": 1.6983437775859118,
+      "coarse_depth": 0.911726993774177,
+      "fine_depth": 0.9503050007357143,
+      "absolute_error_change": -0.07840304013707833
+    },
+    {
+      "id": "21-G",
+      "observed": 1.5,
+      "coarse": 0.7307473871091631,
+      "fine": 0.9351528339883569,
+      "coarse_depth": 0.3407600752513087,
+      "fine_depth": 0.34038741739971246,
+      "absolute_error_change": -0.20440544687919382
+    },
+    {
+      "id": "21-H",
+      "observed": 0.8,
+      "coarse": 0.8030516717473916,
+      "fine": 0.7336485605155117,
+      "coarse_depth": 0.1511070987360787,
+      "fine_depth": 0.14553411010865241,
+      "absolute_error_change": 0.06329976773709678
+    },
+    {
+      "id": "21-I",
+      "observed": 0.0,
+      "coarse": 0.2694272016246455,
+      "fine": 0.20479696059367858,
+      "coarse_depth": 0.02091885179076178,
+      "fine_depth": 0.013352665481996435,
+      "absolute_error_change": -0.06463024103096693
+    },
+    {
+      "id": "22-C",
+      "observed": 0.9,
+      "coarse": 1.112392583853831,
+      "fine": 0.9614960929483726,
+      "coarse_depth": 0.6016316268474715,
+      "fine_depth": 0.6120232251539321,
+      "absolute_error_change": -0.15089649090545854
+    },
+    {
+      "id": "22-D",
+      "observed": 0.6,
+      "coarse": 1.3492626676089705,
+      "fine": 1.5530161288493096,
+      "coarse_depth": 1.0191590543057758,
+      "fine_depth": 1.0146405266111815,
+      "absolute_error_change": 0.2037534612403391
+    },
+    {
+      "id": "22-E",
+      "observed": 0.6,
+      "coarse": 0.43842462000720717,
+      "fine": 0.8573632961411933,
+      "coarse_depth": 0.659865733404748,
+      "fine_depth": 0.6979924121689134,
+      "absolute_error_change": 0.09578791614840054
+    },
+    {
+      "id": "22-H",
+      "observed": 0.6,
+      "coarse": 1.0623965088899596,
+      "fine": 1.0063086563153623,
+      "coarse_depth": 0.21937826766630877,
+      "fine_depth": 0.23296742174766977,
+      "absolute_error_change": -0.05608785257459736
+    }
+  ]
+}

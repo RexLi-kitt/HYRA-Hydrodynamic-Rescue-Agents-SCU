@@ -1,0 +1,1 @@
+本目录保存第21/25轮完整800秒Merewether对照的结果和全部40点；来源为Zenodo 6914888实验室观测换算到原型尺度。未包含大型DEM、生成场景或最终场文件。复现使用benchmarks/run_merewether.py，--factor 8或4 --layered --duration 800 --manning .042。默认算法未变，0.7m仍有1个漏淹点；不宣称现场验证通过。诊断脚本round23依赖先前round21保存状态及生成回放，不是独立测试入口。其他轮报告中outputs路径属于本地研究记录，不包含在此PR。
