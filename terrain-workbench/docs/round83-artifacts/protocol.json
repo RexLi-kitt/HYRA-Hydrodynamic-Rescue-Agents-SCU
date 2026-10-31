@@ -1,0 +1,9 @@
+{
+  "baseline": "round77 immutable CPU64; round81 failed at2179.0073s",
+  "change": "isolated full-domain RK attempt/reject/restore; no flux/geometry/roughness change",
+  "acceptance": "finite nonnegative Euler means in both SSP stages before committing any cell of each stage; snapshot nine original fields, rederive boundary and flux arrays; defer source and step audit until acceptance",
+  "backtracking": "at most8 attempts; min(half previous dt,0.9*local frozen depletion bound) and recompute all state-dependent quantities, never reuse old flux as prediction truth",
+  "limits": "same no-rain/no-restart/positive-QFIX-QVAR/OMP1 scope; decline production; below1e-10s or retry cap saves preattempt fields and exits",
+  "gate": "3 no-rejection regression cases and source-corner retry case before one2400sCarlisle run,15minwallcap; all original observations preserved",
+  "status": "prepared; not field validated"
+}

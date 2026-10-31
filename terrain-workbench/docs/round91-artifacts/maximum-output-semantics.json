@@ -1,0 +1,584 @@
+{
+  "purpose": "audit event-maximum output semantics before full-event scoring, without reading running simulation fields",
+  "configuration_hashes_unchanged": true,
+  "depth_accumulation_floor_m": 0.001,
+  "zero_recorded_max_meaning": "never recorded above 0.001 m; may contain thinner water; NOT proof of mathematically zero depth or observed dry land",
+  "maximum_updated": "every accepted step under this configuration; massint 1e-9 and mint_hk OFF",
+  "maximum_resets": "both maxint and saveint_max OFF; six-hour regular saves do not reset maximum",
+  "scoring_thresholds_unchanged_m": [
+    0.01,
+    0.1,
+    0.3
+  ],
+  "not_a_model_change": true,
+  "existing_completed_7200s_regression": [
+    {
+      "file": "check-0000.wdb",
+      "sha256": "01ec481567b9109d70ee70e8bb5e26e5af405c996d582b5be617fc24e51c4107",
+      "cells_above_accumulation_floor": 23,
+      "recorded_max_below_saved_depth_cells": 0
+    },
+    {
+      "file": "check-0001.wdb",
+      "sha256": "68b413cfe2c188e16cd4a7637c84974ba3075354725c16c33fc9d0daeca126ee",
+      "cells_above_accumulation_floor": 2936,
+      "recorded_max_below_saved_depth_cells": 0
+    },
+    {
+      "file": "check-0002.wdb",
+      "sha256": "e480ea574cba09b3adc09d5ab8d3388f543f93f075ffe82d64e147b297096648",
+      "cells_above_accumulation_floor": 8521,
+      "recorded_max_below_saved_depth_cells": 0
+    },
+    {
+      "file": "check-0003.wdb",
+      "sha256": "2488e42cfd3fb4fdea7e889ec0ddd7132bcf2f8f43aa549538460480b4f8ed77",
+      "cells_above_accumulation_floor": 14235,
+      "recorded_max_below_saved_depth_cells": 0
+    },
+    {
+      "file": "check-0004.wdb",
+      "sha256": "abbf34197e37c06c71b4e369e47638fc82d2509c67dfc8737441196a4bef7565",
+      "cells_above_accumulation_floor": 19608,
+      "recorded_max_below_saved_depth_cells": 0
+    }
+  ],
+  "source": [
+    {
+      "file": "lisflood.cpp",
+      "sha256": "33d58c359183370da4126e6d8e9151716f6aad0ea35a569e402846e0a643b3dc",
+      "lines": [
+        {
+          "line": 165,
+          "text": "\tParSolver.SolverAccuracy = C(1e-4);"
+        },
+        {
+          "line": 166,
+          "text": "\tParSolver.dynsw = 0; // Switch for full dynamic steady state (1) or diffusive steady state (0)"
+        },
+        {
+          "line": 167,
+          "text": "\tParSolver.DepthThresh = C(1e-3);"
+        },
+        {
+          "line": 168,
+          "text": "\tParSolver.MomentumThresh = C(1e-2);"
+        },
+        {
+          "line": 169,
+          "text": "\tParSolver.MaxHflow = C(10.0);"
+        },
+        {
+          "line": 170,
+          "text": "\tParSolver.Hds = C(0.0);"
+        }
+      ]
+    },
+    {
+      "file": "lisflood.cpp",
+      "sha256": "33d58c359183370da4126e6d8e9151716f6aad0ea35a569e402846e0a643b3dc",
+      "lines": [
+        {
+          "line": 224,
+          "text": "\tSimStates.comp_out = OFF;"
+        },
+        {
+          "line": 225,
+          "text": "\tSimStates.chainagecalc = ON;"
+        },
+        {
+          "line": 226,
+          "text": "\tSimStates.mint_hk = OFF;"
+        },
+        {
+          "line": 227,
+          "text": "\tSimStates.Roe = OFF;"
+        }
+      ]
+    },
+    {
+      "file": "lisflood.cpp",
+      "sha256": "33d58c359183370da4126e6d8e9151716f6aad0ea35a569e402846e0a643b3dc",
+      "lines": [
+        {
+          "line": 252,
+          "text": "\tSimStates.DamMode = OFF;"
+        },
+        {
+          "line": 253,
+          "text": "\tSimStates.DammaskRead = OFF;"
+        },
+        {
+          "line": 254,
+          "text": "\tSimStates.saveint_max = OFF;"
+        },
+        {
+          "line": 255,
+          "text": "\tSimStates.maxint = OFF;"
+        },
+        {
+          "line": 256,
+          "text": "\tSimStates.ChanMaskRead = OFF;"
+        }
+      ]
+    },
+    {
+      "file": "lisflood2/sgm_fast.cpp",
+      "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+      "lines": [
+        {
+          "line": 3203,
+          "text": "\t\t\tfor (int i = row_start; i < row_end; i++)"
+        },
+        {
+          "line": 3204,
+          "text": "\t\t\t{"
+        },
+        {
+          "line": 3205,
+          "text": "\t\t\t\tindex = grid_row_index + i;"
+        },
+        {
+          "line": 3206,
+          "text": "\t\t\t\tif (h_grid[index] > depth_thresh)"
+        },
+        {
+          "line": 3207,
+          "text": "\t\t\t\t{"
+        },
+        {
+          "line": 3208,
+          "text": "\t\t\t\t\tif (initHtm_grid[index] == NULLVAL)"
+        },
+        {
+          "line": 3209,
+          "text": "\t\t\t\t\t\tinitHtm_grid[index] = current_time_hours;"
+        },
+        {
+          "line": 3210,
+          "text": ""
+        },
+        {
+          "line": 3211,
+          "text": "\t\t\t\t\ttotalHtm_grid[index] += delta_time_hours;"
+        },
+        {
+          "line": 3212,
+          "text": "\t\t\t\t\t// Update maximum water depths, and time of maximum (in hours)"
+        },
+        {
+          "line": 3213,
+          "text": "\t\t\t\t\tmaxHtm_grid[index] = (h_grid[index] > maxH_grid[index]) ? current_time_hours : maxHtm_grid[index];"
+        },
+        {
+          "line": 3214,
+          "text": "\t\t\t\t\tmaxH_grid[index] = (h_grid[index] > maxH_grid[index]) ? h_grid[index] : maxH_grid[index];"
+        },
+        {
+          "line": 3215,
+          "text": "\t\t\t\t}"
+        },
+        {
+          "line": 3216,
+          "text": "\t\t\t}"
+        },
+        {
+          "line": 3217,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "file": "lisflood2/sgm_fast.cpp",
+      "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+      "lines": [
+        {
+          "line": 3944,
+          "text": "\tNUMERIC_TYPE time_next = curr_time + delta_time;"
+        },
+        {
+          "line": 3945,
+          "text": "\tif (time_next >= Parptr->MassTotal || Statesptr->mint_hk == OFF)"
+        },
+        {
+          "line": 3946,
+          "text": "\t{"
+        },
+        {
+          "line": 3947,
+          "text": "\t\tNUMERIC_TYPE delta_time_hours = delta_time / C(3600.0);"
+        },
+        {
+          "line": 3948,
+          "text": "\t\tNUMERIC_TYPE current_time_hours = time_next / C(3600.0);"
+        },
+        {
+          "line": 3949,
+          "text": ""
+        },
+        {
+          "line": 3950,
+          "text": "#pragma omp for schedule(static) nowait"
+        },
+        {
+          "line": 3951,
+          "text": "\t\tfor (int block_index = 0; block_index < wet_dry_bounds->block_count; block_index++)"
+        },
+        {
+          "line": 3952,
+          "text": "\t\t{"
+        },
+        {
+          "line": 3953,
+          "text": "\t\t\tSGC2_Inundation_block(block_index, grid_cols, grid_rows, grid_cols_padded,"
+        },
+        {
+          "line": 3954,
+          "text": "\t\t\t\tdepth_thresh,"
+        },
+        {
+          "line": 3955,
+          "text": "\t\t\t\tcurrent_time_hours,"
+        },
+        {
+          "line": 3956,
+          "text": "\t\t\t\tdelta_time_hours,"
+        },
+        {
+          "line": 3957,
+          "text": "\t\t\t\th_grid,"
+        },
+        {
+          "line": 3958,
+          "text": "\t\t\t\tsub_grid_layout_rows, sub_grid_state_rows,"
+        },
+        {
+          "line": 3959,
+          "text": "\t\t\t\twet_dry_bounds,"
+        },
+        {
+          "line": 3960,
+          "text": "\t\t\t\tinitHtm_grid,"
+        },
+        {
+          "line": 3961,
+          "text": "\t\t\t\ttotalHtm_grid,"
+        },
+        {
+          "line": 3962,
+          "text": "\t\t\t\tmaxH_grid,"
+        },
+        {
+          "line": 3963,
+          "text": "\t\t\t\tmaxHtm_grid);"
+        },
+        {
+          "line": 3964,
+          "text": "\t\t}"
+        }
+      ]
+    },
+    {
+      "file": "lisflood2/sgm_fast.cpp",
+      "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+      "lines": [
+        {
+          "line": 4628,
+          "text": "\t\t\t\t// export maximum depth interval"
+        },
+        {
+          "line": 4629,
+          "text": "\t\t\t\tif (Statesptr->maxint == ON && curr_time >= Parptr->maxintTotal)"
+        },
+        {
+          "line": 4630,
+          "text": "\t\t\t\t{"
+        },
+        {
+          "line": 4631,
+          "text": "\t\t\t\t\t// update h to be 'depth' above sub-grid-channel"
+        },
+        {
+          "line": 4632,
+          "text": "\t\t\t\t\tfor (int j = 0; j < grid_rows; j++)"
+        },
+        {
+          "line": 4633,
+          "text": "\t\t\t\t\t{"
+        },
+        {
+          "line": 4634,
+          "text": "\t\t\t\t\t\tfor (int i = 0; i < grid_cols; i++)"
+        },
+        {
+          "line": 4635,
+          "text": "\t\t\t\t\t\t{"
+        },
+        {
+          "line": 4636,
+          "text": "\t\t\t\t\t\t\tint index_padded = i + j * grid_cols_padded;"
+        },
+        {
+          "line": 4637,
+          "text": "\t\t\t\t\t\t\tint index = i + j * grid_cols;"
+        },
+        {
+          "line": 4638,
+          "text": "\t\t\t\t\t\t\tNUMERIC_TYPE temp = maxH_grid[index_padded] + SGC_BankFullHeight_grid[index_padded];"
+        },
+        {
+          "line": 4639,
+          "text": "\t\t\t\t\t\t\t// depth in channel or above flood plain = h + BankFullHeight (should not be negative)"
+        },
+        {
+          "line": 4640,
+          "text": "\t\t\t\t\t\t\t// note previous version just dumped the wd with no depth_thresh truncation"
+        },
+        {
+          "line": 4641,
+          "text": "\t\t\t\t\t\t\tif (temp <= depth_thresh)"
+        },
+        {
+          "line": 4642,
+          "text": "\t\t\t\t\t\t\t\ttemp = C(0.0);"
+        },
+        {
+          "line": 4643,
+          "text": "\t\t\t\t\t\t\ttmp_grid1[index] = temp;"
+        },
+        {
+          "line": 4644,
+          "text": "\t\t\t\t\t\t}"
+        },
+        {
+          "line": 4645,
+          "text": "\t\t\t\t\t}"
+        },
+        {
+          "line": 4646,
+          "text": "\t\t\t\t\twrite_grid(Fnameptr->resrootname, Parptr->maxintcount,"
+        },
+        {
+          "line": 4647,
+          "text": "\t\t\t\t\t\tNETCDF_IGNORE, \".wd_max\","
+        },
+        {
+          "line": 4648,
+          "text": "\t\t\t\t\t\ttmp_grid1, grid_cols, grid_rows, Parptr->blx, Parptr->bly, Parptr->dx, &Statesptr->output_params);"
+        },
+        {
+          "line": 4649,
+          "text": ""
+        },
+        {
+          "line": 4650,
+          "text": ""
+        },
+        {
+          "line": 4651,
+          "text": "\t\t\t\t\t// update h to be 'depth' above sub-grid-channel"
+        },
+        {
+          "line": 4652,
+          "text": "\t\t\t\t\tfor (int j = 0; j < grid_rows; j++)"
+        },
+        {
+          "line": 4653,
+          "text": "\t\t\t\t\t{"
+        },
+        {
+          "line": 4654,
+          "text": "\t\t\t\t\t\tfor (int i = 0; i < grid_cols; i++)"
+        },
+        {
+          "line": 4655,
+          "text": "\t\t\t\t\t\t{"
+        },
+        {
+          "line": 4656,
+          "text": "\t\t\t\t\t\t\tint index_padded = i + j * grid_cols_padded;"
+        },
+        {
+          "line": 4657,
+          "text": "\t\t\t\t\t\t\tint index = i + j * grid_cols;"
+        },
+        {
+          "line": 4658,
+          "text": "\t\t\t\t\t\t\tmaxH_grid[index_padded] = C(0.0); // rests max depth to zero at save interval"
+        },
+        {
+          "line": 4659,
+          "text": "\t\t\t\t\t\t}"
+        },
+        {
+          "line": 4660,
+          "text": "\t\t\t\t\t}"
+        }
+      ]
+    },
+    {
+      "file": "lisflood2/sgm_fast.cpp",
+      "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+      "lines": [
+        {
+          "line": 4704,
+          "text": "\t\t\t\t\t// if regular output includes max reset max"
+        },
+        {
+          "line": 4705,
+          "text": "\t\t\t\t\tif (Statesptr->saveint_max == ON)"
+        },
+        {
+          "line": 4706,
+          "text": "\t\t\t\t\t{"
+        },
+        {
+          "line": 4707,
+          "text": "\t\t\t\t\t\t// update h to be 'depth' above sub-grid-channel"
+        },
+        {
+          "line": 4708,
+          "text": "\t\t\t\t\t\tfor (int j = 0; j < grid_rows; j++)"
+        },
+        {
+          "line": 4709,
+          "text": "\t\t\t\t\t\t{"
+        },
+        {
+          "line": 4710,
+          "text": "\t\t\t\t\t\t\tfor (int i = 0; i < grid_cols; i++)"
+        },
+        {
+          "line": 4711,
+          "text": "\t\t\t\t\t\t\t{"
+        },
+        {
+          "line": 4712,
+          "text": "\t\t\t\t\t\t\t\tint index_padded = i + j * grid_cols_padded;"
+        },
+        {
+          "line": 4713,
+          "text": "\t\t\t\t\t\t\t\tint index = i + j * grid_cols;"
+        },
+        {
+          "line": 4714,
+          "text": "\t\t\t\t\t\t\t\tmaxH_grid[index_padded] = C(0.0); // rests max depth to zero at save interval"
+        },
+        {
+          "line": 4715,
+          "text": "\t\t\t\t\t\t\t}"
+        },
+        {
+          "line": 4716,
+          "text": "\t\t\t\t\t\t}"
+        },
+        {
+          "line": 4717,
+          "text": "\t\t\t\t\t}"
+        },
+        {
+          "line": 4718,
+          "text": "\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "file": "lisflood2/sgm_fast.cpp",
+      "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+      "lines": [
+        {
+          "line": 4858,
+          "text": "\t//output final output"
+        },
+        {
+          "line": 4859,
+          "text": "\tWriteOutput(Fnameptr, grid_cols, grid_rows, grid_cols_padded,"
+        },
+        {
+          "line": 4860,
+          "text": "\t\tdepth_thresh, "
+        },
+        {
+          "line": 4861,
+          "text": "\t\ttmp_grid1,"
+        },
+        {
+          "line": 4862,
+          "text": "\t\tinitHtm_grid, totalHtm_grid, maxH_grid, maxHtm_grid,"
+        },
+        {
+          "line": 4863,
+          "text": "\t\tmaxVc_grid, maxVc_height_grid, maxHazard_grid,"
+        },
+        {
+          "line": 4864,
+          "text": "\t\tVx_max_grid, Vy_max_grid,"
+        },
+        {
+          "line": 4865,
+          "text": "\t\tdem_grid, SGC_BankFullHeight_grid,"
+        },
+        {
+          "line": 4866,
+          "text": "\t\tStatesptr, Parptr, &Statesptr->output_params);"
+        },
+        {
+          "line": 4867,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "file": "lisflood2/lis2_output.cpp",
+      "sha256": "7b823139197c102b35a7ed5b34bbefa635a63ef79fbb07781707852ef53a30ff",
+      "lines": [
+        {
+          "line": 506,
+          "text": "\t\t\tinitHtm_grid, tmp_grid, grid_cols, grid_rows, grid_cols_padded, Parptr->blx, Parptr->bly, Parptr->dx, output_params);"
+        },
+        {
+          "line": 507,
+          "text": "\t\t// Write total inundation time"
+        },
+        {
+          "line": 508,
+          "text": "\t\twrite_grid(Fnameptr->resrootname, -1,"
+        },
+        {
+          "line": 509,
+          "text": "\t\t\tNETCDF_IGNORE, \".totaltm\","
+        },
+        {
+          "line": 510,
+          "text": "\t\t\ttotalHtm_grid, tmp_grid, grid_cols, grid_rows, grid_cols_padded, Parptr->blx, Parptr->bly, Parptr->dx, output_params);"
+        },
+        {
+          "line": 511,
+          "text": "\t\t// Write maximum depth"
+        },
+        {
+          "line": 512,
+          "text": "\t\twrite_grid(Fnameptr->resrootname, -1,"
+        },
+        {
+          "line": 513,
+          "text": "\t\t\tNETCDF_IGNORE,"
+        },
+        {
+          "line": 514,
+          "text": "\t\t\t\".max\", maxH_grid, tmp_grid, grid_cols, grid_rows, grid_cols_padded, Parptr->blx, Parptr->bly, Parptr->dx, output_params);"
+        },
+        {
+          "line": 515,
+          "text": ""
+        },
+        {
+          "line": 516,
+          "text": "\t\tfor (int j = 0; j < grid_rows; j++)"
+        }
+      ]
+    }
+  ],
+  "full_event_unscored": true,
+  "production_adopted": false
+}

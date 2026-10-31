@@ -1,0 +1,9 @@
+{
+  "observed_date": "2026-10-30",
+  "cpu": {"name": "Intel(R) Core(TM) i9-14900HX", "physical_cores": 24, "logical_processors": 32},
+  "gpu_nvidia_smi": {"name": "NVIDIA GeForce RTX 5060 Laptop GPU", "memory_total_MiB": 8151, "driver_version": "573.24"},
+  "provenance": "Read-only Win32_Processor and nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader",
+  "caveat": "Win32_VideoController AdapterRAM returned about4GiB; use explicit nvidia-smi total instead. No driver changes or CUDA installs performed.",
+  "current_candidate": "CPU64 OMP1 only; scalar-function correction and transactional retries not ported or validated onGPU. GPU presence alone does not prove supported toolchain or speedup.",
+  "next_acceleration_gate": "Inventory existing CUDA/compiler compatibility, identify exact candidate paths needing parity, benchmark a representative fixed case and validate all emitted fields and water/source ledgers. No claim of10x orP100-equivalent acceleration from thesis."
+}

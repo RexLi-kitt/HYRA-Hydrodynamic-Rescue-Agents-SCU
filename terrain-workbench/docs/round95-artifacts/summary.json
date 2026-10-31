@@ -1,0 +1,641 @@
+{
+  "target_id": 2031,
+  "target_cells": 1457,
+  "target_area_m2": 36425,
+  "crop": [
+    339890,
+    554720,
+    340450,
+    555285
+  ],
+  "saved_frames": 12,
+  "same_frame_union_potential_cells": 680,
+  "same_frame_never_potential_cells": 777,
+  "asynchronous_max_potential_cells": 779,
+  "asynchronous_max_never_potential_cells": 678,
+  "all_target_marks": [
+    {
+      "fid": 12,
+      "E": 340074.603,
+      "N": 554981.302,
+      "observed_peak_masl": 17.525,
+      "cell_bed_masl": 19.65999984741211,
+      "model_max_depth_m": 0.0,
+      "any_snapshot_static_reachable": false,
+      "max_only_static_reachable": false
+    },
+    {
+      "fid": 17,
+      "E": 340331.244,
+      "N": 555047.859,
+      "observed_peak_masl": 17.537,
+      "cell_bed_masl": 16.899999618530273,
+      "model_max_depth_m": 0.0,
+      "any_snapshot_static_reachable": true,
+      "max_only_static_reachable": true
+    },
+    {
+      "fid": 18,
+      "E": 340306.502,
+      "N": 555053.263,
+      "observed_peak_masl": 17.214,
+      "cell_bed_masl": 17.09000015258789,
+      "model_max_depth_m": 0.0,
+      "any_snapshot_static_reachable": true,
+      "max_only_static_reachable": true
+    },
+    {
+      "fid": 20,
+      "E": 340056.883,
+      "N": 555070.29,
+      "observed_peak_masl": 17.406,
+      "cell_bed_masl": 22.68000030517578,
+      "model_max_depth_m": 0.0,
+      "any_snapshot_static_reachable": false,
+      "max_only_static_reachable": false
+    },
+    {
+      "fid": 25,
+      "E": 340082.681,
+      "N": 555112.683,
+      "observed_peak_masl": 17.363,
+      "cell_bed_masl": 16.540000915527344,
+      "model_max_depth_m": 0.0,
+      "any_snapshot_static_reachable": true,
+      "max_only_static_reachable": true
+    },
+    {
+      "fid": 26,
+      "E": 340009.942,
+      "N": 555179.256,
+      "observed_peak_masl": 17.205,
+      "cell_bed_masl": 25.670000076293945,
+      "model_max_depth_m": 0.0,
+      "any_snapshot_static_reachable": false,
+      "max_only_static_reachable": false
+    }
+  ],
+  "frames": [
+    {
+      "file": "check-0000.wdb",
+      "nominal_output_time_s": 0,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 0,
+      "reference_iterations": 0,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0001.wdb",
+      "nominal_output_time_s": 21600,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 565,
+      "reference_iterations": 127,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0002.wdb",
+      "nominal_output_time_s": 43200,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 565,
+      "reference_iterations": 127,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0003.wdb",
+      "nominal_output_time_s": 64800,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 868,
+      "reference_iterations": 128,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0004.wdb",
+      "nominal_output_time_s": 86400,
+      "available_target_cells": 1,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 1021,
+      "reference_iterations": 214,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0005.wdb",
+      "nominal_output_time_s": 108000,
+      "available_target_cells": 680,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 1702,
+      "reference_iterations": 214,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": true,
+          "local_depth_m": 0.0,
+          "available_stage_masl": 17.35576910666971
+        },
+        {
+          "fid": 18,
+          "static_reachable": true,
+          "local_depth_m": 0.0,
+          "available_stage_masl": 17.35576910666971
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": true,
+          "local_depth_m": 0.0,
+          "available_stage_masl": 17.35576910666971
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0006.wdb",
+      "nominal_output_time_s": 129600,
+      "available_target_cells": 5,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 1434,
+      "reference_iterations": 204,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0007.wdb",
+      "nominal_output_time_s": 151200,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 1167,
+      "reference_iterations": 127,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0008.wdb",
+      "nominal_output_time_s": 172800,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 943,
+      "reference_iterations": 126,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0009.wdb",
+      "nominal_output_time_s": 194400,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 943,
+      "reference_iterations": 126,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0010.wdb",
+      "nominal_output_time_s": 216000,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 943,
+      "reference_iterations": 126,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    },
+    {
+      "file": "check-0011.wdb",
+      "nominal_output_time_s": 237600,
+      "available_target_cells": 0,
+      "actual_target_above_0_1": 0,
+      "local_wet_seeds": 943,
+      "reference_iterations": 124,
+      "marks": [
+        {
+          "fid": 12,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 17,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 18,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 20,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 25,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        },
+        {
+          "fid": 26,
+          "static_reachable": false,
+          "local_depth_m": 0.0,
+          "available_stage_masl": null
+        }
+      ]
+    }
+  ],
+  "physical_changes": false,
+  "new_accuracy_score": false,
+  "all_old_misses_retained": true,
+  "limits": [
+    "If no static route is available even under this relaxation, current local source stages and terrain do not permit this assumed static wet connection; this cannot distinguish wrong terrain from insufficient forcing.",
+    "If accessible but hydraulically missed, investigate time, volume, friction and transport before blaming a sealed terrain barrier. This is not proof of solver bug.",
+    "Snapshot absence cannot exclude between-frame transient opportunity; asynchronous maxima do not prove real concurrent supply.",
+    "No hydraulic candidate adopted without independent physical evidence. No change to88.56% or0.1m original scoring."
+  ]
+}

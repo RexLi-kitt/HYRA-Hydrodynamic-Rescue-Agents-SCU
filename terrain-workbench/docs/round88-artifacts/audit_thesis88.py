@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib
+R=Path(r'C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round88')
+index=json.loads((R/'thesis-index.json').read_text())
+data={'source':{k:index[k] for k in ['url','sha256','bytes','pages']},'visual_checks_pdf_pages':[135,139],'evidence_type':'author thesis; methods/configuration provenance and software comparisons, not new independent measurements',
+ 'findings':[
+ {'id':'outlet','pdf_pages':[109,135],'finding':'Chapters3/4 state free outflow, whereas original archived carlisle.bci specifies west HVAR downstream. This confirms the unresolved discrepancy rather than selecting a configuration.','closed':False},
+ {'id':'clock','pdf_pages':[134,139],'finding':'Chapter4 text says45h while Figure4.7 time axes extend to70h; archive sim_time164000s=45.5556h. No verified mapping to absolute UTC or common event interval obtained. Do not stretch, offset or crop traces to fit.','closed':False},
+ {'id':'observations','pdf_pages':[135,139],'finding':'Text mentions8 sample points and named gauges; Figure4.5 caption/map and Figure4.7 have6. Figure4.7 black reference is full-resolution2D model, not a field observation curve. Do not digitize it as truth or claim additional measured gauge series.','closed':False},
+ {'id':'calibration','pdf_pages':[109,135],'finding':'183 maximum marks used for roughness calibration; cannot treat their resulting fit as independent holdout validation. All263 local survey records remain preserved.','closed':False},
+ {'id':'gpu','pdf_pages':[134,149],'finding':'Performance reported for a GPU SGC/nonuniform model on TeslaP100. It is a different solver/discretization and hardware; no measured speedup for this isolated DG2 CPU candidate follows.','closed':False}],
+ 'input_changes':[],'field_passes_added':0,
+ 'needed_primary_files':['Exact archive revision/run configuration identifying HVAR versus FREE outlet','Start timestamp, timezone, any warm-up and padding for all four boundary series','Downstream HVAR vertical datum and whether values are stage or depth','Documented initial water state and calibrated spatial roughness assignment','Raw gauge series and coordinates for named sites with provenance; distinguish measured data and full-resolution reference model','Original max-extent valid survey footprint and known-dry coverage; do not label outside polygons dry automatically'],
+ 'stop_conditions':'Do not select alternative boundary/time by score; no external contact sent. Keep numerical conditional tests separate from validated field reproduction.'}
+(R/'thesis-evidence-audit.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+print('Saved provenance audit; no input claims closed or changed.')

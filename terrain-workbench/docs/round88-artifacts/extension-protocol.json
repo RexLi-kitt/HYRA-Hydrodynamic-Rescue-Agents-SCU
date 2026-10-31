@@ -1,0 +1,10 @@
+{
+  "baseline": "round87 candidate2400CFL.33 plus round86/cfl0165 early600 prefix; old round83/85 pair retained",
+  "candidate_exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771",
+  "single_change_from_round83": "same isolated friction code as round87; single paired parameter CFL.33->.165",
+  "extension": "600->2400s same output300; no restart supported, first600 rerun is necessary prefix and must match stored fields/accepted steps, not counted as new independent evidence",
+  "gate": "finite nonnegative all8 H, finite q, accepted time/source/boundary ledger and total water error<1e-5; early600 fields and accepted steps must match bitwise",
+  "comparison": "all8 frames of candidate .33/.165 pair versus old83/85 pair; fixed thresholds1e-6/.001/.01, all differences retained; no field accuracy or convergence theorem claim",
+  "cost": "one serial run,900s wall limit,no automatic restart",
+  "next": "Complete this paired sensitivity branch; no further CFL sweep. Use full-frame adverse outcomes to decide next mechanism/input evidence work; no automatic full event."
+}

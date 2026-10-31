@@ -1,0 +1,76 @@
+{
+  "state": "completed",
+  "exit_code": 0,
+  "wall_s": 329.44288609999785,
+  "field_passes_added": 0,
+  "production_adopted": false,
+  "accepted_steps": 5387,
+  "end_s": 2400.0,
+  "minimum_dt": 0.00938118446413758,
+  "median_dt": 0.47622923576030046,
+  "max_dt": 0.5,
+  "rejections": 5,
+  "stage_counts": {
+    "1": 4,
+    "2": 1
+  },
+  "first_rejection_s": 2182.3421372331236,
+  "max_attempt": 2,
+  "snapshots": [
+    {
+      "file": "check-0000.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 2777.3400000003003,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0001.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 11109.3599999995,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0002.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 24996.0600000003,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0003.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 41660.0000000001,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0004.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 58323.7399999999,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0005.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 74987.280000001,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0006.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 91658.46999999961,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0007.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 108345.16000000019,
+      "momentum_finite": true
+    }
+  ],
+  "source_m3": 108345.16,
+  "boundary_net_m3": 0.0,
+  "source_times_equal": true,
+  "boundary_times_equal": true,
+  "mass_max_interval_error": 1.3824e-10,
+  "independent_balance_error_m3": 1.8917489796876907e-10,
+  "internal_gate_pass": true
+}

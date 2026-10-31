@@ -1,0 +1,31 @@
+{
+  "wall_s": 27.941095099995437,
+  "commands": [
+    [
+      "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+      "-S",
+      "C:\\Users\\Lenovo\\Documents\\ChatGPT\\\u65e0\u4eba\u673a\u96c6\u7fa4\u641c\u6551\u5927\u521b\\outputs\\round83\\lisflood8-rk-retry",
+      "-B",
+      "C:\\Users\\Lenovo\\Documents\\ChatGPT\\\u65e0\u4eba\u673a\u96c6\u7fa4\u641c\u6551\u5927\u521b\\outputs\\round83\\build-rk-retry-cpu64",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-D_CONFIG=C:\\Users\\Lenovo\\Documents\\ChatGPT\\\u65e0\u4eba\u673a\u96c6\u7fa4\u641c\u6551\u5927\u521b\\outputs\\round65\\cpu64.cmake",
+      "-DCMAKE_CUDA_COMPILER=NOTFOUND"
+    ],
+    [
+      "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+      "--build",
+      "C:\\Users\\Lenovo\\Documents\\ChatGPT\\\u65e0\u4eba\u673a\u96c6\u7fa4\u641c\u6551\u5927\u521b\\outputs\\round83\\build-rk-retry-cpu64",
+      "--config",
+      "Release",
+      "--target",
+      "lisflood",
+      "--parallel",
+      "1"
+    ]
+  ],
+  "source_sha256": "78c491b05ef168c1c232a6b0731a6e1847645d80acad97838c5ae18877a56982",
+  "exe_sha256": "039269203d57cd2a0f82c6f817fe9476e97bbb191eee6695f7e3ac8e9f5bc55a"
+}

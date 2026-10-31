@@ -1,0 +1,15 @@
+{
+  "source_sha256": "94284f297238c9b74336029f4de501a0f14fe32434212430802ab6f39581e537",
+  "source_srs": 27700,
+  "destination_srs": 27700,
+  "polygons": 5,
+  "polygons_intersecting_domain": 3,
+  "reported_maximum_inundation_fully_covered_cells": 217464,
+  "edge_intersection_ambiguous_cells": 9318,
+  "outside_unknown_cells": 354279,
+  "total_cells": 581061,
+  "all263_marks_retained": true,
+  "marks_inside_fixed_grid": 263,
+  "geometry_no_simulation_read": true,
+  "field_passes_added": 0
+}

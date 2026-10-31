@@ -1,0 +1,10 @@
+{
+  "single_change": "dg2::friction local frozen-depth ODE, replace componentwise diagonal denominators by shared exact vector damping; retain caller, thresholds, n=.06, source, flux, boundaries, RK retry and production default.",
+  "formula": "dq/dt=-g*n^2*|q|*q/h^(7/3); fixed h,n gives q1=q0/(1+dt*g*n^2*|q0|/h^(7/3)). Scope is local friction substep only, not exact coupled SWE.",
+  "operator_gate": "compiled function agrees independent analytic vector formula; preserves direction <=1e-10 degree; semigroup relative1e-12 on fixed H active cells, zero n identity, dissipative finite.",
+  "coupled_gate": "3 unchanged n=0 controls agree available fields and accepted steps; two predeclared 600s Carlisle runs cfl .33/.165 dtmax1, all inputs and output times300/600 frozen; finite nonnegative fields/source and water balance.",
+  "paired_sensitivity": "compare both CFLs at300 and600, all3 thresholds as before, whole-domain depth L1/max, full masks. If sensitivity grows or failures occur do not promote candidate or hide the adverse result. Decreased sensitivity alone is not field validation.",
+  "cost": "build<=240s per command, each600s run<=300s wall; serial, no restart; no whole2400 repeat",
+  "field_passes_added": 0,
+  "production_adopted": false
+}

@@ -1,0 +1,29 @@
+{
+  "exe_sha256": "039269203d57cd2a0f82c6f817fe9476e97bbb191eee6695f7e3ac8e9f5bc55a",
+  "field_passes_added": 0,
+  "full_window_cost_planning": {
+    "full_duration_s": 164000,
+    "short_duration_s": 2400,
+    "linear_wall_hours_nonforecast": 10.487762657731475,
+    "caveat": "Linear throughput extrapolation only; inundated area, CFL and rejection frequency will change. Not a completion-time promise.",
+    "restart_supported": false,
+    "threads_supported": 1,
+    "next_gate": "Decide bounded complete-window cost and recoverable state strategy before launching; no blind whole-run restart."
+  },
+  "baseline_dt_quantiles": [
+    0.003726773599214629,
+    0.3683197158043269,
+    0.47575745417993426,
+    0.5343967596528914,
+    1.0
+  ],
+  "candidate_dt_quantiles": [
+    0.023787772257605866,
+    0.19470369928905176,
+    0.240551365978454,
+    0.2698160491095785,
+    1.0
+  ],
+  "median_dt_ratio": 0.505617650054677,
+  "step_count_ratio": 1.9195817490494296
+}

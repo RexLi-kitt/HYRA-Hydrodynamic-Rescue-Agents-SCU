@@ -1,0 +1,31 @@
+{
+  "flood_platform_unittest": {
+    "passed": 26,
+    "failed": 0,
+    "command": "python -m unittest discover -s flood-platform/tests -v"
+  },
+  "negative_flux_replay": {
+    "passed": true,
+    "checks": {
+      "rhs_matches_trace": true,
+      "prediction_matches_trace": true,
+      "decimal_balance_matches": true,
+      "all_four_faces_positive": true,
+      "recorded_raw_faces_match": true,
+      "source_increment_zero": true,
+      "all_four_fluxes_outward": true,
+      "dt_exceeds_frozen_drain_bound": true,
+      "below_bound_nonnegative": true,
+      "above_bound_negative": true
+    }
+  },
+  "python_ast_parse": "all copied Python scripts passed",
+  "not_run": [
+    "Full hydraulic runs; unchanged research inputs and expensive archived experiments.",
+    "Terrain-workbench suite; no production terrain code changed."
+  ],
+  "initial_test_command_note": "pytest module not installed; used project documented unittest runner, no dependency changes.",
+  "archived_git_blob_byte_checks": 216,
+  "non_archive_whitespace_check": "passed",
+  "archive_whitespace": "115 legacy trailing-space/EOF warnings retained to preserve frozen evidence bytes; CRLF recognized as line endings."
+}

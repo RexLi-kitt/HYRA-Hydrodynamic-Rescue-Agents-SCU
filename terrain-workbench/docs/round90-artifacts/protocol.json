@@ -1,0 +1,26 @@
+{
+  "case": "Kabir5m corrected identity Run7.bdy=2005 Run1.csv",
+  "purpose": "original acceleration+SGC-enable startup and input mass audit; not field validation",
+  "duration_s": 60,
+  "caps_s": [
+    2,
+    1
+  ],
+  "wall_timeout_each_s": 180,
+  "OMP_NUM_THREADS": 1,
+  "unchanged": [
+    "DEM",
+    "23 point locations",
+    "original three hydrographs",
+    "n .055",
+    "FREE .0006",
+    "drycheckoff",
+    "acceleration",
+    "sgc_enable",
+    "dry initial state"
+  ],
+  "numerical_gate": "finite nonnegative saved H; mass residual and prescribed inlet quadrature discrepancy explained; failures retained, no automatic retry",
+  "expected_source": "independent CSV piecewise linear total; left-endpoint quadrature error bounded by max slope*T*cap/2; roundoff tolerance 1e-5 m3",
+  "scope": "No DG2 friction/RK retry applied in this backend; no restart claim, fast checkpoint is commented out in source",
+  "exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771"
+}

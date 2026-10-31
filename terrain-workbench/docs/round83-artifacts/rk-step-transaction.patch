@@ -1,0 +1,176 @@
+--- a/swe/dg2.cpp
++++ b/swe/dg2.cpp
+@@ -45,6 +45,56 @@
+         double(q2.in),double(q2.out),double(point_in),double(point_out));
+ }
+ 
++
++// Isolated experiment: whole-domain RK attempt, no negative-depth clipping.
++struct RejectRK { int stage, i, j; NUMERIC_TYPE proposed; };
++static NUMERIC_TYPE pending_source_volume=C(0.0);
++static int pending_source_iterations=0;
++struct SavedFlow83 {
++    std::vector<NUMERIC_TYPE*> fields;
++    std::vector<std::vector<NUMERIC_TYPE>> saved;
++    SavedFlow83(Pars* p,Arrays* a):fields{a->H,a->HU,a->HV,a->H1x,a->HU1x,a->HV1x,a->H1y,a->HU1y,a->HV1y} {
++        const int n=p->xsz*p->ysz;
++        for(auto f:fields)saved.emplace_back(f,f+n);
++    }
++    void restore(){for(size_t n=0;n<fields.size();n++)std::copy(saved[n].begin(),saved[n].end(),fields[n]);}
++    void dump(const char* path,Pars* p,Solver* s)const {
++        FILE* f=fopen(path,"wb");if(!f){perror(path);exit(53);}
++        const int dims[3]={p->xsz,p->ysz,9};fwrite(dims,sizeof(int),3,f);
++        const double clock[2]={double(s->t),double(s->Tstep)};fwrite(clock,sizeof(double),2,f);
++        for(const auto& v:saved)fwrite(v.data(),sizeof(NUMERIC_TYPE),v.size(),f);
++        fclose(f);
++    }
++};
++static std::vector<dg2::Increment> checked_increments83(int stage,Pars* p,Solver* s,
++    Arrays* a,dg2::FlowCoefficients const& u) {
++    std::vector<dg2::Increment> incs(p->xsz*p->ysz);
++    bool bad=false;int bi=0,bj=0;
++    NUMERIC_TYPE next_dt=C(0.5)*s->Tstep;
++    for(int j=0;j<p->ysz;j++)for(int i=0;i<p->xsz;i++){
++        int k=j*p->xsz+i;auto& v=incs[k];dg2::L(p,s,a,i,j,u,v);
++        const NUMERIC_TYPE euler=u.H[k]+s->Tstep*v.H;
++        const NUMERIC_TYPE final=stage==1?euler:C(0.5)*(a->H[k]+euler);
++        const NUMERIC_TYPE vals[]={v.H,v.HU,v.HV,v.H1x,v.HU1x,v.HV1x,v.H1y,v.HU1y,v.HV1y,
++          euler,final,u.HU[k]+s->Tstep*v.HU,u.HV[k]+s->Tstep*v.HV};
++        bool finite=true;for(auto x:vals)finite=finite&&std::isfinite(double(x));
++        // Both forward-Euler substeps must be admissible before SSP averaging.
++        if(!finite || euler<C(0.0) || final<C(0.0)){
++            if(!bad){bi=i;bj=j;}bad=true;
++            if(std::isfinite(double(v.H)) && v.H<C(0.0) && u.H[k]>C(0.0))
++                next_dt=(std::min)(next_dt,C(0.9)*u.H[k]/(-v.H));
++        }
++    }
++    if(bad)throw RejectRK{stage,bi,bj,next_dt};
++    return incs;
++}
++static void commit_source_audit83(Solver* s,BoundCs* b){
++    if(b->numPS<=0)return;
++    static FILE* f=fopen("accepted_source_volumes.txt","w");
++    if(!f){perror("accepted_source_volumes.txt");exit(47);}
++    fprintf(f,"%.17g %.17g %.17g %d\n",double(s->t),double(s->Tstep),double(pending_source_volume),pending_source_iterations);
++}
++
+ struct TracePointSource { int index; NUMERIC_TYPE before, delta; };
+ static std::vector<TracePointSource> trace_point_sources;
+ 
+@@ -80,7 +130,7 @@
+ }
+ 
+ static void accepted_positive_point_step(Pars* p, Solver* s, BoundCs* b,
+-                                        Arrays* a)
++                                        Arrays* a, NUMERIC_TYPE retry_cap)
+ {
+     std::map<int, NUMERIC_TYPE> initial_h;
+     for(int k=0;k<b->numPS;k++) {
+@@ -89,7 +139,7 @@
+         initial_h.emplace(j*p->xsz+i,a->H[j*p->xsz+i]);
+     }
+     dg2::update_boundary_values(p,s,b,a);
+-    NUMERIC_TYPE dt=dg2::Tstep_from_cfl(p,s,a);
++    NUMERIC_TYPE dt=(std::min)(retry_cap,dg2::Tstep_from_cfl(p,s,a));
+     dt=(std::min)(dt,s->Sim_Time-s->t);
+     dt=(std::min)(dt,p->MassTotal-s->t);
+     dt=(std::min)(dt,p->SaveTotal-s->t);
+@@ -122,9 +172,7 @@
+             trace_point_sources.clear();
+             for(const auto& item:initial_h)trace_point_sources.push_back({item.first,item.second,a->H[item.first]-item.second});
+             accumulate_point_flux_stats(b,total_volume/dt);
+-            static FILE* source_audit=fopen("accepted_source_volumes.txt","w");
+-            if(!source_audit){perror("accepted_source_volumes.txt");exit(47);}
+-            fprintf(source_audit,"%.17g %.17g %.17g %d\n",double(s->t),double(dt),double(total_volume),attempt+1);
++            pending_source_volume=total_volume;pending_source_iterations=attempt+1;
+             return;
+         }
+         dt=C(0.9)*allowed;
+@@ -249,10 +297,15 @@
+     if (!step_audit) { perror("accepted_timesteps.txt"); exit(EXIT_FAILURE); }
+ 	while (Solverptr->t < Solverptr->Sim_Time)
+ 	{	
+-		zero_flux_stats(BCptr);
+-
++        SavedFlow83 saved83(Parptr,Arrptr);
++        NUMERIC_TYPE retry_cap83=Solverptr->InitTstep;
++        bool accepted83=false;
++        for(int attempt83=0;attempt83<8;attempt83++){
++        saved83.restore();zero_flux_stats(BCptr);
++        pending_source_volume=C(0.0);pending_source_iterations=0;
++        try {
+         if (BCptr->numPS > 0) {
+-            accepted_positive_point_step(Parptr, Solverptr, BCptr, Arrptr);
++            accepted_positive_point_step(Parptr, Solverptr, BCptr, Arrptr,retry_cap83);
+             if (Parptr->limit_slopes == ON) Solverptr->maxH = maxH(Parptr, Arrptr);
+         } else {
+         if (Parptr->limit_slopes == ON) Solverptr->maxH = maxH(Parptr, Arrptr);
+@@ -268,9 +321,10 @@
+         Solverptr->Tstep = (std::min)(Solverptr->Tstep, Solverptr->Sim_Time - Solverptr->t);
+         Solverptr->Tstep = (std::min)(Solverptr->Tstep, Parptr->MassTotal - Solverptr->t);
+         Solverptr->Tstep = (std::min)(Solverptr->Tstep, Parptr->SaveTotal - Solverptr->t);
++        Solverptr->Tstep=(std::min)(Solverptr->Tstep,retry_cap83);
+         if (!(Solverptr->Tstep > C(0.0))) { fprintf(stderr, "Nonpositive event step\n"); exit(EXIT_FAILURE); }
+         }
+-        fprintf(step_audit, "%.17g %.17g\n", double(Solverptr->t), double(Solverptr->Tstep));
++
+ 		if (verbose == ON) printf("t=%f\tdt=%f\n", Solverptr->t, Solverptr->Tstep);
+ 
+ 		apply_friction(Parptr, Solverptr, Arrptr);
+@@ -281,6 +335,20 @@
+ 
+         update_max_field(Parptr, Arrptr);
+ 		accumulate_rk_boundary_stats(Solverptr,BCptr,boundary_rk1,boundary_rk2);
++        commit_source_audit83(Solverptr,BCptr);
++        fprintf(step_audit,"%.17g %.17g\n",double(Solverptr->t),double(Solverptr->Tstep));
++        accepted83=true;break;
++        }catch(const RejectRK& r){
++            static FILE* f=fopen("rejected_rk_attempts.txt","w");
++            if(!f){perror("rejected_rk_attempts.txt");exit(52);}
++            fprintf(f,"%.17g %.17g %d %d %d %d %.17g\n",double(Solverptr->t),double(Solverptr->Tstep),attempt83+1,r.stage,r.i,r.j,double(r.proposed));fflush(f);
++            if(attempt83==0)saved83.dump("last-rejection-prestate.bin",Parptr,Solverptr);
++            retry_cap83=r.proposed;
++            if(!std::isfinite(double(retry_cap83)) || retry_cap83<C(1e-10) || !(Solverptr->t+retry_cap83>Solverptr->t))break;
++        }
++        }
++        if(!accepted83){saved83.dump("retry-exhausted-prestate.bin",Parptr,Solverptr);saved83.restore();fprintf(stderr,"RK retry limit; complete preattempt fields saved\n");exit(51);}
++
+ 
+ 		if (Solverptr->t > C(0.0))
+ 		{
+@@ -536,14 +604,14 @@
+ 	update_fluxes(Parptr, Solverptr, Arrptr, U);
+ 	update_fluxes_on_boundaries(Parptr, Solverptr, BCptr, Arrptr, U);
+ 
++    const auto increments83=checked_increments83(1,Parptr,Solverptr,Arrptr,U);
++
+ #pragma omp parallel for
+ 	for (int j=0; j<Parptr->ysz; j++)
+ 	{
+ 		for(int i=0; i<Parptr->xsz; i++)
+ 		{
+-			Increment U_inc = {};
+-			L(Parptr, Solverptr, Arrptr, i, j, U, U_inc);
+-            trace_negative_update(1,Parptr,Solverptr,Arrptr,BCptr,U,i,j,U_inc);
++            const Increment& U_inc=increments83[j*Parptr->xsz+i];
+ 
+ 			update_intermediate_coefficients(
+ 					Parptr, Solverptr, Arrptr, i, j, U_inc);
+@@ -582,14 +650,14 @@
+ 	update_fluxes(Parptr, Solverptr, Arrptr, U_int);
+ 	update_fluxes_on_boundaries(Parptr, Solverptr, BCptr, Arrptr, U_int);
+ 
++    const auto increments83=checked_increments83(2,Parptr,Solverptr,Arrptr,U_int);
++
+ #pragma omp parallel for
+ 	for (int j=0; j<Parptr->ysz; j++)
+ 	{
+ 		for(int i=0; i<Parptr->xsz; i++)
+ 		{
+-			Increment U_inc = {};
+-			L(Parptr, Solverptr, Arrptr, i, j, U_int, U_inc);
+-            trace_negative_update(2,Parptr,Solverptr,Arrptr,BCptr,U_int,i,j,U_inc);
++            const Increment& U_inc=increments83[j*Parptr->xsz+i];
+ 
+ 			update_final_coefficients(
+ 					Parptr, Solverptr, Arrptr, i, j, U_inc);

@@ -1,0 +1,652 @@
+{
+  "source_commit": "fc7584c14635f1585f427d187ac1b9182e809444",
+  "base_commit": "5c8462ac6f4c2c4999163e8f4c84c3fa543d7cca",
+  "included_sha256": {
+    "terrain-workbench/docs/HYRA现实贴合证据与改进工作表-20261029.md": "34f5cda4dc33571fee91a1f520ae56b42c3a21acdcc444b0eca1c0369dd55eca",
+    "terrain-workbench/docs/HYRA累计更改日志.md": "8dd4a94f0d1ca37c3e77c0f68ffa5fc630e6294baf299f2805f69e3cb5b2e163",
+    "terrain-workbench/docs/HYRA自动续作进度.md": "74b1cfa2fac68efda7cb66c4d454fd5c72e5a80d21a6f4950fc59c863e28ece2",
+    "flood-platform/benchmarks/audit_negative_flux82.py": "1d04b2deafaafa0e793c25c9d4890e223ce8fbf208ed0559a5c6570bbc71dc16",
+    "terrain-workbench/docs/audit-round82-20261030.md": "fb1f1346c7f0076ff7ea70ff8f0dfc075d0e789c656c0f501f7ca0dd6d0739b5",
+    "terrain-workbench/docs/audit-round83-20261030.md": "79572391172af433046d43fcf4aeeda6d9aebd689b44c3f4f1a7443472b01937",
+    "terrain-workbench/docs/audit-round84-20261030.md": "8b7c297d002304fd33314e611cac635835d8320535c989127907230fd9fd301b",
+    "terrain-workbench/docs/audit-round85-20261030.md": "a7fc450150dd0a15d7f8ecacb50c567420419f249a9361a77a4b118fefcfaf5d",
+    "terrain-workbench/docs/audit-round86-20261030.md": "edd7b3645ec6a48b580e4c04e9d097524aa728c435975de1e9adb29d9c067f55",
+    "terrain-workbench/docs/audit-round87-20261030.md": "359265e8f72f583950d43c14d4768e94cd5e4f7050e97db1d99cf7d208774f68",
+    "terrain-workbench/docs/audit-round88-20261030.md": "e5e4a1858946d7136fa70597aa022ba89b816287ce3bbbc7246cccc26e08191e",
+    "terrain-workbench/docs/audit-round89-20261031.md": "a091be54a2e2b17b2e9689a15b48f845dcc1f007f33ed42709629236b39c8faf",
+    "terrain-workbench/docs/audit-round90-20261031.md": "10b19714aae60172b08128a37c2abe133e48b74e4f5021985f883a1701426da5",
+    "terrain-workbench/docs/audit-round91-building-source-20261031.md": "97917469acafbb27f835c562faabb93d30e6b5ece4e78be034bcb2c46fe4b230",
+    "terrain-workbench/docs/audit-round91-complete-20261031.md": "b886ba9b927dc8b97d85dbcd8edca49d81bda5820c93bd235a672500cfd12463",
+    "terrain-workbench/docs/audit-round91-independent-mass-20261031.md": "6290242a08a1cfa2335f22b7d899746ee3f941c3cbaa2f0ba3ae7bab99ebcb74",
+    "terrain-workbench/docs/audit-round91-observation-compatibility-20261031.md": "42baff8c1bb2aad48d2fad8495f07e55d8c2dbc0afec416b9af13e07b705cc82",
+    "terrain-workbench/docs/audit-round91-official-context-20261031.md": "9500828955e7ed348d5274ba6974fd23995530eef1f1bdd60e6a2b83fcea51cb",
+    "terrain-workbench/docs/audit-round91-output-semantics-20261031.md": "3ab106215f3e4171d44861dbc1bec4fd89295fff3e064999fba1382e8b955cc6",
+    "terrain-workbench/docs/audit-round91-terrain-evidence-20261031.md": "069a6c3871ae0e70808b9e3dd46c47900ed7c176b319b363965ea7ae9686c1ed",
+    "terrain-workbench/docs/audit-round92-missed-regions-20261031.md": "777f96417a30d65bbf87000621e66f0c46be92224905a92b7b3a76a80c3062dc",
+    "terrain-workbench/docs/audit-round93-structure-anchors-20261031.md": "b349a10d95723a8a5ea0197a4381ef0b79333a953118046a17cf5fa64a85227c",
+    "terrain-workbench/docs/audit-round94-historical-data-gap-20261031.md": "aab5253f7a82656c36f7d32a4b3f8b98e2dc75b958d8ef86a6f0f958eef49916",
+    "terrain-workbench/docs/audit-round95-southern-head-paths-20261031.md": "72e9260c6bc2535aba5f755950486128816458c5cc837d08d51ba83889279192",
+    "terrain-workbench/docs/round82-artifacts/audit-round82-20261030.md": "fb1f1346c7f0076ff7ea70ff8f0dfc075d0e789c656c0f501f7ca0dd6d0739b5",
+    "terrain-workbench/docs/round82-artifacts/audit_negative_flux82.py": "1d04b2deafaafa0e793c25c9d4890e223ce8fbf208ed0559a5c6570bbc71dc16",
+    "terrain-workbench/docs/round82-artifacts/flux-replay.json": "1b843fc651846dc0a06ca398b676e22ba187c56fdaacfdc12dddef145026acd7",
+    "terrain-workbench/docs/round82-artifacts/manifest.json": "e1ee77d48f7f8c90468a1b37f068dac1b50c71485b07d15bd086c2f849125aab",
+    "terrain-workbench/docs/round82-artifacts/negative-depth.jsonl": "b3539a71906ce517b6a5f6c00d12a9a57a630ce16d71cf85eb63869cab415ca4",
+    "terrain-workbench/docs/round83-artifacts/audit-round83-20261030.md": "79572391172af433046d43fcf4aeeda6d9aebd689b44c3f4f1a7443472b01937",
+    "terrain-workbench/docs/round83-artifacts/build.json": "2463a03ed38dd6ea1a8ea6d0730a8e3d75cd042715ab8e4bba445220cfd7a5cc",
+    "terrain-workbench/docs/round83-artifacts/build.log": "91d2a43e23a32cace9dc8670439c5477cb449a28c17ca8b83243e58ea99ddcc3",
+    "terrain-workbench/docs/round83-artifacts/build_retry83.py": "aa08c07b0b585811554a7fcb2f00eca3030966f5db700cd6fe122b6d6dcf63d9",
+    "terrain-workbench/docs/round83-artifacts/controls.json": "b7b9048b8bc4dac0fb124e10a5c5f566ac15edbb0ca7cab067fd4547dcc58025",
+    "terrain-workbench/docs/round83-artifacts/independent-verification.json": "48e17bda17165f966ffc241435863f37a6228c5282d3318e386da6415d44bc3f",
+    "terrain-workbench/docs/round83-artifacts/manifest.json": "654fd3145d669e632924e55d6d1234f227996c062ac5ed80683288ccae7f5814",
+    "terrain-workbench/docs/round83-artifacts/protocol.json": "8e4b91d63e1cb76af5d9a3300df209eca3a1b4bb498f03a866b7d156558c8b0f",
+    "terrain-workbench/docs/round83-artifacts/publish_retry83.py": "17c8415c89a86dbc1b207ee15bdb27109f3a41b081ed47179c8980d351514f36",
+    "terrain-workbench/docs/round83-artifacts/rk-step-transaction.patch": "8a5ae315f7240910597bfd6b64c5274cfe676001442ca1e35416223199c76d13",
+    "terrain-workbench/docs/round83-artifacts/run_retry83.py": "4819cf9e9ff72f284814ba3293ef6034a463a558965b575cff30402555e05589",
+    "terrain-workbench/docs/round83-artifacts/status.json": "949fd72ebe25c6956e57db5df0a4fc81bfeac08e79e618c4e4532b502ee07017",
+    "terrain-workbench/docs/round83-artifacts/test_retry83.py": "abe549171b09cad125efc4a64698ca823f08c70d313834cfea2d8382580372eb",
+    "terrain-workbench/docs/round83-artifacts/verify_retry83.py": "78451cbf0de675b623ac465cb3384ec0972acdf610cbade70f80291cc53ef73d",
+    "terrain-workbench/docs/round84-artifacts/analyze_sensitivity84.py": "145504ed49668349f23804c2f02f018197b04bd125d59f34f7e82e8f224f6132",
+    "terrain-workbench/docs/round84-artifacts/audit-round84-20261030.md": "8b7c297d002304fd33314e611cac635835d8320535c989127907230fd9fd301b",
+    "terrain-workbench/docs/round84-artifacts/comparison.json": "c794ae0e022211622d412367643a3e5c59ef21fc924ae7a5a9d8d9dff9c75749",
+    "terrain-workbench/docs/round84-artifacts/configuration-hashes.json": "0ccedcae9ec595be7be9c396eb1ae1bcd626cae11aff2c9ef7124f199a74961a",
+    "terrain-workbench/docs/round84-artifacts/manifest.json": "70cf266e4375947d8a1132bff2ee60911fc1fee23241564a6666d84357246245",
+    "terrain-workbench/docs/round84-artifacts/protocol.json": "326f1bf6f1b6bf75093d752810189a8b9595c1730d716341780f61e0c7bd4888",
+    "terrain-workbench/docs/round84-artifacts/publish_sensitivity84.py": "c0b6905d071710ad702d73aed295a95d10743a154fa7bd5f6cd7281c6b7259b8",
+    "terrain-workbench/docs/round84-artifacts/run_sensitivity84.py": "d0c23773a8cffb1c77d7ea0cee576482656d0fa0f45099e60f06bb501e86db31",
+    "terrain-workbench/docs/round84-artifacts/status.json": "caf8d5d3085416cecac0ff461fa88581d30dcfcfc6329eb3e0a27eb893e3d630",
+    "terrain-workbench/docs/round84-artifacts/time-sensitivity-2400s.png": "a93989f224a4236b9cbe28bb27604ef4650128ad5b6e9f2fec11b89593657b79",
+    "terrain-workbench/docs/round85-artifacts/actual-step-sensitivity.png": "c98b105aeb28cce61b355f9e7d0834da96e3934c5f41d8f974e5b565ad735080",
+    "terrain-workbench/docs/round85-artifacts/analyze_sensitivity85.py": "6140fed84d2a8686e5b92ace7bc4a4115b74af01d4848b9bc01953536ce248bb",
+    "terrain-workbench/docs/round85-artifacts/audit-round85-20261030.md": "a7fc450150dd0a15d7f8ecacb50c567420419f249a9361a77a4b118fefcfaf5d",
+    "terrain-workbench/docs/round85-artifacts/comparison.json": "83bbf4001c93184126d7bd6f32a6c47b9268e4f3b7afb21dbd14720e257f5b64",
+    "terrain-workbench/docs/round85-artifacts/configuration-hashes.json": "b9cf6ab8e77063f4fa9406f85f61f4d8c3e438e0d19799101637a9a0f738dee4",
+    "terrain-workbench/docs/round85-artifacts/independent-step-verification.json": "366938be2c0dd7bb15fdbf9b8b2865f10bb7f61c52bc469ed6f18ec5ffeffab8",
+    "terrain-workbench/docs/round85-artifacts/manifest.json": "fb8b6784aa0d399f4b6e5ba70b58fe15797f755227d392bb549bb0041e7a074d",
+    "terrain-workbench/docs/round85-artifacts/protocol.json": "d207ee12a3e8376897c93cabb50a82ca803a125077f9d52e1268f2147f5a9d5e",
+    "terrain-workbench/docs/round85-artifacts/publish_sensitivity85.py": "a7b6a6c0d8aafad42642d661fcc562edfa1c48af68b04373c963609cf72ba278",
+    "terrain-workbench/docs/round85-artifacts/run_sensitivity85.py": "e94d8d8d62ff9e95c0af4f94b56bc7e9f1dc06b23d38375a383bc9a9cf58defd",
+    "terrain-workbench/docs/round85-artifacts/status.json": "4f75447836dd465bb60a78df2b77ceb1ace81efd92498f257cd4d0252d43d5af",
+    "terrain-workbench/docs/round86-artifacts/CMakeLists.txt": "22fa5627cd9045bd4d83f4ddbfa3e09f6536b0859bb7befa3db1ea8079936448",
+    "terrain-workbench/docs/round86-artifacts/analyze_friction86.py": "257965fe8945ea77632d243751b72b1c6ebf652cdf2aa9b5c0030399b9ea47ff",
+    "terrain-workbench/docs/round86-artifacts/audit-round86-20261030.md": "edd7b3645ec6a48b580e4c04e9d097524aa728c435975de1e9adb29d9c067f55",
+    "terrain-workbench/docs/round86-artifacts/build.log": "24878797c5a403c201cf2ca40257cbc0d5556afe5a8dfe369c3842d570b0f1b2",
+    "terrain-workbench/docs/round86-artifacts/candidate-build.json": "b9c6dc6d3fa5765cf4bd62fe3cc5792c84176f92090b56c88be278b7c1d5e4c8",
+    "terrain-workbench/docs/round86-artifacts/candidate-build.log": "5db3f6b2c60ad1bb5db924783cea587fd5ffe4239c6dba5395f7053d34a3ff0b",
+    "terrain-workbench/docs/round86-artifacts/candidate-probe-build.log": "b8449435c66d34217ea0d5ab212cc76ac42f8c817654b8cf334a954ea93da2e0",
+    "terrain-workbench/docs/round86-artifacts/candidate-protocol.json": "a232ab5fc01ba276584cb49f383cb85e3fdc6f723352cd3329bece909de743b0",
+    "terrain-workbench/docs/round86-artifacts/candidate_friction86.py": "19de28414db9a78f9cd4fcfdace9ca822eac9c441367125755cdd5a7a697ca9c",
+    "terrain-workbench/docs/round86-artifacts/controls.json": "6c89d2b8ccbdbca8e848e1a42f162324a4601a93500a39d4f660708a2e0331dd",
+    "terrain-workbench/docs/round86-artifacts/coupled-comparison.json": "04d7b3f4c35fd5eafae57eb5f15004517c8098d830793884922f1095bf169b1b",
+    "terrain-workbench/docs/round86-artifacts/diagnose_routing86.py": "3ba43d30a0025f1503c72bd4d689acb1c40f327f45f7ba858e77ab902c0e6557",
+    "terrain-workbench/docs/round86-artifacts/diagnosis.json": "3b907c328efbd88583108339e0815112d3a748c5785676903948a3008ebdcd12",
+    "terrain-workbench/docs/round86-artifacts/friction_probe.cpp": "712375b9e7498935891ac1088b11eb34d4ac9c50977ba9c8b2566373379400a4",
+    "terrain-workbench/docs/round86-artifacts/isotropic-friction.patch": "3f57fce5849986b997d97eeeed64900ddd9551bad9c33bf91a78f1988dc18867",
+    "terrain-workbench/docs/round86-artifacts/literature-source.json": "f6f425e6b71638d73947606657b2386d6379ee1085dc1855d52069f909ddb7ad",
+    "terrain-workbench/docs/round86-artifacts/manifest.json": "7af07577849165acaeab9474e0edb3a560eeebc61be5dc3a3ed1e0cbfe0953ca",
+    "terrain-workbench/docs/round86-artifacts/operator-verification.json": "5dbad341206d7162dc8afe662a397ef36434403af455fb0e63c13e6e3be5d60f",
+    "terrain-workbench/docs/round86-artifacts/protocol.json": "672a0d66dfae6f3b7a4468880162d17dc6db19eb52090fdca8a951193635b6d1",
+    "terrain-workbench/docs/round86-artifacts/publish_friction86.py": "44c48f44b4e8514fecbf1e4763d215f40bf0093104ce2bb5049e6ca0f4dc2ec1",
+    "terrain-workbench/docs/round86-artifacts/runs.json": "4e66b58e17c59b17981b73bd7da6e22723e5c90f94b0453c72984ad2a18b1c6f",
+    "terrain-workbench/docs/round86-artifacts/source-and-field-hashes.json": "c8e56f7f996ad303d68ef66f73c251e3f0d23dde495f7ccf1081585dbf15b3e3",
+    "terrain-workbench/docs/round86-artifacts/status.json": "a2a8f5495ae8ac7ef5ed7dfe6d06987142e96542a6e9456f01a7a2c51db0119b",
+    "terrain-workbench/docs/round87-artifacts/analyze_extension87.py": "a58c7da6925caee69776c4bc57f62530b0a2c94c8640cf2415f5e26c24d34bab",
+    "terrain-workbench/docs/round87-artifacts/audit-round87-20261030.md": "359265e8f72f583950d43c14d4768e94cd5e4f7050e97db1d99cf7d208774f68",
+    "terrain-workbench/docs/round87-artifacts/extend_friction87.py": "2928e4ca0e1a3803758fe5ecf9cdc95593387bfbfe664f1da7573b66c077fafd",
+    "terrain-workbench/docs/round87-artifacts/extension-comparison.json": "be32db0b0662c60c7785863277f4508d40c6c67e096a73cf4e2235f199aaa99b",
+    "terrain-workbench/docs/round87-artifacts/extension-hashes.json": "83fcec6cefec44e8854023112dde0038a318b9c6a3ce8c3562c71fbfc68b5ed2",
+    "terrain-workbench/docs/round87-artifacts/extension-protocol.json": "94b6780ee30093eacb533ce8ed4c65da63b6359ba1ae8ea8051d8cd880043a1b",
+    "terrain-workbench/docs/round87-artifacts/input-evidence-attempts.json": "bbe5caf397f29ee6838f5c92408e6bf471a74ecbb1bad5d55e1dee87bce33f24",
+    "terrain-workbench/docs/round87-artifacts/manifest.json": "3aa6cb3d1c58c6010741bd361024deff9abee88fab00c2198a0bfb510299ccfa",
+    "terrain-workbench/docs/round87-artifacts/protocol.json": "c763b8ff61d8af1c47510d4d9a3691768d7b934aa20927ce287797de7ea9e989",
+    "terrain-workbench/docs/round87-artifacts/publish_extension87.py": "77b17cb833abd2d5c94783fa1a2f6be645f259c040c6fb89e699a0b35abdeb31",
+    "terrain-workbench/docs/round87-artifacts/regress_friction87.py": "d3498a06cf5077d317a1fa8546a626634e1171dd93adb2e9d1b5ce925531bd23",
+    "terrain-workbench/docs/round87-artifacts/regressions.json": "5373b3cf49ddfa780be1d4b1318559906786eb72683bd03ba6dd7c2f9665c654",
+    "terrain-workbench/docs/round87-artifacts/status.json": "cae9648935d5e0054437a46b631a7f8a2c45438b7754e9cd6ae28340144b630d",
+    "terrain-workbench/docs/round88-artifacts/all-adverse-comparisons.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "terrain-workbench/docs/round88-artifacts/analyze_friction88.py": "5a2ce7bdf490371ccc8873c4f41946a27f1ffbbe13043dd7a19f18de25f60b27",
+    "terrain-workbench/docs/round88-artifacts/audit-round88-20261030.md": "e5e4a1858946d7136fa70597aa022ba89b816287ce3bbbc7246cccc26e08191e",
+    "terrain-workbench/docs/round88-artifacts/audit_thesis88.py": "6229d79ada001cc661b250d07924c418483b2c819aae207d34de7347a5400671",
+    "terrain-workbench/docs/round88-artifacts/coupled-comparison.json": "a66e3496b419cd6cc9d2980e773b6823594a757c4772172fd45e9a8fd322893c",
+    "terrain-workbench/docs/round88-artifacts/extend_friction88.py": "97561cf3ed08fdaccacc3f575e470dbf98f3dd6f3257eda36a565e7a3345f3ca",
+    "terrain-workbench/docs/round88-artifacts/extension-hashes.json": "1397c178d5e8f1067c4293ac1441228662ffe4c06ebb8c78f60e41de11ba7f45",
+    "terrain-workbench/docs/round88-artifacts/extension-protocol.json": "ccd21a067b7d3e9ecf86dd6ae698a9bd86e386bd0527e82921fa209a6e869d3c",
+    "terrain-workbench/docs/round88-artifacts/hardware88.json": "966c11f53d4598255ded166f64519bd6ad177cc78952f215da377bc2929b28a8",
+    "terrain-workbench/docs/round88-artifacts/manifest.json": "d4361898167051462ebe9c3ac295768a43a7ffe83b0d355308116003e9c996d6",
+    "terrain-workbench/docs/round88-artifacts/publish_pair88.py": "5544757c338182d09645cdebf29eb3121c2bc99b2df681322f40d2fc94f9a206",
+    "terrain-workbench/docs/round88-artifacts/read_thesis88.py": "786c224a5ad741170862cf17daeac9936a60fbcc259796511b5d66b0b101b307",
+    "terrain-workbench/docs/round88-artifacts/status.json": "f0b9850a2ada1d62002747f6ef6947d7a7932adbf4f12954a455c9b4c2c1f8e5",
+    "terrain-workbench/docs/round88-artifacts/thesis-evidence-audit.json": "62eab75fe322f0b3e1a07d52d1fb90f01e4a1067986279838f8d9d5a2f301628",
+    "terrain-workbench/docs/round88-artifacts/thesis-index.json": "80926cfecac8a73b992ee588642844b220926f75fe421fabd236753bcd9814ef",
+    "terrain-workbench/docs/round89-artifacts/acquire_kabir89.py": "ce25c87fd487f2d3de1318b991a9d5e2a33c25dfdd3aabb74c935deedf065bda",
+    "terrain-workbench/docs/round89-artifacts/all-run-fingerprints.json": "5f9718b12d9bc67afd83b77e209e228d18fded72452f11bf4e04b6a35fbf3185",
+    "terrain-workbench/docs/round89-artifacts/audit-round89-20261031.md": "a091be54a2e2b17b2e9689a15b48f845dcc1f007f33ed42709629236b39c8faf",
+    "terrain-workbench/docs/round89-artifacts/audit_kabir89.py": "35a9b36c5bee210d2f900bcaf0efa93e40814792ca11cff661228b870558ab1b",
+    "terrain-workbench/docs/round89-artifacts/download-manifest.json": "effeeaacc92e8f4f12982282d2e010e2ac5b1f481358fd562b7031133130c13e",
+    "terrain-workbench/docs/round89-artifacts/fingerprint_kabir89.py": "aba366878a50f6694783c215c2179f211ddf257c3552f7bfc3dad6e1be5fd54c",
+    "terrain-workbench/docs/round89-artifacts/input-audit.json": "36497eba113a8f1aa4251f9a214f3fc0b40e8b2537ccdbc7ce519fd08d771860",
+    "terrain-workbench/docs/round89-artifacts/new-case-contract.json": "af42dba3cd68f1cc9edbe8ed8c4f2154c628cb08f69ddf63d8709be7792d1fdc",
+    "terrain-workbench/docs/round89-artifacts/protocol.json": "bc25419871932e82f77f061e3ce797e717fe835064642af4b56c355ca335e59c",
+    "terrain-workbench/docs/round89-artifacts/publish_inputs89.py": "8d076528e989a8f0a80811bb161aa74570f489825ed24c81430c8ac31f8ff4c7",
+    "terrain-workbench/docs/round89-artifacts/repository-tree.json": "735703e30f2fc601686e079dc74a253c66589b8cb9b34b2f0edb62cb290f1016",
+    "terrain-workbench/docs/round89-artifacts/source-notes.json": "bbc466268cc368635558104d99d1be08494ab622224fcb51eb02864d7ba4389f",
+    "terrain-workbench/docs/round90-artifacts/all-marks-fixed-domain.json": "5fbdf079ca3213a3c41ce4de22a491593108f38d453926019f441fd148400baa",
+    "terrain-workbench/docs/round90-artifacts/analyze_start90.py": "4fd44f0043ea25efa83825564c491e7851cafc97776063f6f5a8cb772c234a19",
+    "terrain-workbench/docs/round90-artifacts/audit-round90-20261031.md": "10b19714aae60172b08128a37c2abe133e48b74e4f5021985f883a1701426da5",
+    "terrain-workbench/docs/round90-artifacts/cost-analysis.json": "45138210896c4eeb85192ec0c03195becd7915cbb394338711a704a41f1e68ac",
+    "terrain-workbench/docs/round90-artifacts/cost-protocol.json": "287fa47b89d716ada4be15a9445c4341ec878ea47ddc826b9d21e657235afdfb",
+    "terrain-workbench/docs/round90-artifacts/cost-status.json": "825329e8ad0478deb93b2f3e37b97a51d941651e7f3170b729decbf50b01f625",
+    "terrain-workbench/docs/round90-artifacts/cost_kabir90.py": "d716d1c568c1daf14b5cbee5c43696d8a5d6d55ce8e4952cb3c35de6162ffe92",
+    "terrain-workbench/docs/round90-artifacts/finish_audit90.py": "7933ab23af1cf8ba9ccb695794c60c1392a8ccb5cfdc2388037f8abb8c109064",
+    "terrain-workbench/docs/round90-artifacts/observation-protocol.json": "165a6878575838451e82546474066b2040ef089e07fc2331836646747fddb314",
+    "terrain-workbench/docs/round90-artifacts/observation-registration.json": "abf769ff3c7814996a0fd6ef0c57f4fca595ef35f9034af027c7cf79b5fc6748",
+    "terrain-workbench/docs/round90-artifacts/parallel-protocol.json": "27f74680759113c228ef5527947f3dd40c17d14c81829778133293553c065bad",
+    "terrain-workbench/docs/round90-artifacts/parallel-status.json": "eb40eb8e609953105e62fdc0b8d3d707c3cb6cb50e35176ead78e699e15fd99c",
+    "terrain-workbench/docs/round90-artifacts/parallel_kabir90.py": "c9a399cafef4aa7dc573aee120759ae8a6b926cec82d03b39253ae03fab29354",
+    "terrain-workbench/docs/round90-artifacts/protocol.json": "b978a29d0f30c32e457b92319e55fc3a2a61d94bfd530a297cce35b9d0546ecb",
+    "terrain-workbench/docs/round90-artifacts/publish_path90.py": "d95f29bafa19b6fec2e1b40030bb97c78a7cd6a8f365e62adb89ca7f85fd6cbe",
+    "terrain-workbench/docs/round90-artifacts/register_observation90.py": "10e4f5dda6115c6a3c2becee9f4b63c56aac821c6b00b99ce588e2b81139b1f2",
+    "terrain-workbench/docs/round90-artifacts/run_kabir90.py": "e78ae88b45d629e684585f1d68f140a0bdc8ec22d526732a84a259568664bbac",
+    "terrain-workbench/docs/round90-artifacts/source-path-evidence.json": "560a9cc2fb866470949b99bed724aefa4648077263ee19ff73fc23730bc31b26",
+    "terrain-workbench/docs/round90-artifacts/startup-analysis.json": "8aa4f67d32ecb4a42caf7035439d5329e3e4433cfbf9ee26571c34f48db1ca07",
+    "terrain-workbench/docs/round90-artifacts/status.json": "64ecf8cb76c9aa9a5bc9d9ac88672db9c3239daf97848e81ef2a4e7d8f6b8efd",
+    "terrain-workbench/docs/round91-artifacts/acquire_buildings91.py": "1fbfc9cf7c90f46d862fdd9792ffe81a637461df38c9f0d29fcc34eda5ab2af2",
+    "terrain-workbench/docs/round91-artifacts/all263-elevation-compatibility.json": "2527efb652b75e7f7ea637a0578adff875fc871ed95b12d6b3dcb470c6805774",
+    "terrain-workbench/docs/round91-artifacts/all263-mark-comparison-with-source.json": "ea1657ddd036947be7958ad14351a19e49806ec5a98c7fa2064b41a47ddb3aaf",
+    "terrain-workbench/docs/round91-artifacts/all263-mark-comparison.json": "b63ac9eb49ff1556aa946ef30b99257b3ae7035a8a2e407c8be0aec4547b7fe2",
+    "terrain-workbench/docs/round91-artifacts/analyze_full91.before-output-audit.py": "82cafcdd181bfc3ff67ffd2e3da64a17f2e7f2b4c10db06c86c791b82e524947",
+    "terrain-workbench/docs/round91-artifacts/analyze_full91.py": "22f8f2bb654cd6217f908de1d43472dec5d08b74cef2adad1ea3995fb3781a0a",
+    "terrain-workbench/docs/round91-artifacts/audit-round91-complete-20261031.md": "b886ba9b927dc8b97d85dbcd8edca49d81bda5820c93bd235a672500cfd12463",
+    "terrain-workbench/docs/round91-artifacts/audit_full_mass91.py": "7e094dd14ee97af81ba05877d2e4d667f56c52a3ab1bbcac5f5d8cec54571fdd",
+    "terrain-workbench/docs/round91-artifacts/audit_max_output91.py": "f0e6fe1faa15ebbeb5a8bd953daa2dffa9964958d2fc2ef949ac23038c9d191d",
+    "terrain-workbench/docs/round91-artifacts/audit_observation_sources91.py": "229a210a1d988061fbf4f990ec33e5c5908b3b2811b8e0f70ce31f0311c27914",
+    "terrain-workbench/docs/round91-artifacts/building-acquisition-first-failure.json": "6457018c71c22a4ccca4fcd624f9789a2e9e87255848da3039e3ae64ac370e84",
+    "terrain-workbench/docs/round91-artifacts/building-acquisition-status.json": "e6363aeee120523f5df4116f86dc5f77266d530e52505cc531c39f43d8841058",
+    "terrain-workbench/docs/round91-artifacts/complete-raw-hashes.json": "1614e8aa244634fb1bf99ff85c6ed6e96ec0363c2a89b7fecbc571ef853dda3f",
+    "terrain-workbench/docs/round91-artifacts/completion-artifact-hashes.json": "ac5cf84ab4b7040c50e96152b33b75221215635584d9f7b32b23b9f2ce143e93",
+    "terrain-workbench/docs/round91-artifacts/delivery-qa.json": "c969d5325345ad3891e96eb12373217b3d93f99cb9dea7955036a2f6c8277e1f",
+    "terrain-workbench/docs/round91-artifacts/finish_full91.before-mass-audit.py": "24624e9715f4509d74a694d1bf078fcff58dafcb8dc5f8ae75c6a3a713997838",
+    "terrain-workbench/docs/round91-artifacts/finish_full91.py": "9199d6b42bf094d0325ec6cd21918be45b3dfd06ddf6dffcd4f35accfc3ef236",
+    "terrain-workbench/docs/round91-artifacts/full-event-observation-comparison.png": "be03022d95d06ca66fbfc849308ce34f562e782ca4d1d63c42559f63ba0c32a4",
+    "terrain-workbench/docs/round91-artifacts/independent-completion-verification.json": "71bd94e5f7755e48470308d9cbfb6f9c92f6a994c5f965d67dae8b64362b82a2",
+    "terrain-workbench/docs/round91-artifacts/independent-full-mass-budget.json": "69060154aa8714ee8c998b6b00548bf448e17e56f629cfa0696111d246371449",
+    "terrain-workbench/docs/round91-artifacts/independent-mass-startup-check.json": "3fa1bc044f11f59651875b7184e3073dd2122633398c56e02b457fbbb25300f4",
+    "terrain-workbench/docs/round91-artifacts/maximum-outline-comparison.json": "0ca30d9a0bf9e5b94100afa1d9f8864a1e7b66247fa449c52fcc497251f84047",
+    "terrain-workbench/docs/round91-artifacts/maximum-output-semantics.json": "c2e72d205f9c249ccb6d7711628fd702c49f5db08fe1c1d3367bc031039ed699",
+    "terrain-workbench/docs/round91-artifacts/numerical-verification.json": "a80f1e81ac3bccd97f001991c86957fb4b892db675fa048d5d8a587519e33a09",
+    "terrain-workbench/docs/round91-artifacts/observation-compatibility-hashes.json": "71fa12017f40d319a14938275eaa77fd6383478a2a6530d3e377ef050e95e3d3",
+    "terrain-workbench/docs/round91-artifacts/observation-source-compatibility.json": "78944a8cf6a20e43a8da55034a40b40f3c928329ae36deac5ac90e78f7540c66",
+    "terrain-workbench/docs/round91-artifacts/official-event-context.json": "b8d697fc4c4a7e5323a2e87e079151378ca8bf5c030c3950e519b4747fc4f30f",
+    "terrain-workbench/docs/round91-artifacts/official_context91.py": "5abf39f05641800b78e91e88d4228c1bf5406ad61950c7728f4948b899955783",
+    "terrain-workbench/docs/round91-artifacts/postprocess-recovery.json": "0e262469f08b912dcf66514642581eb9089e431c54ef42c936a5c2c454fb8237",
+    "terrain-workbench/docs/round91-artifacts/prepare_scoring91.py": "cf54d72e53a41368d1d611538c79c22acd8a355b2174226c4be2430a906d27fa",
+    "terrain-workbench/docs/round91-artifacts/protocol.json": "85ebd24b9ab88dc895d5ec9b475b7e06e919b571b60351a534ac68745d34e247",
+    "terrain-workbench/docs/round91-artifacts/publish_source_audit91.py": "6f42f5b4b640f6f1df1bf8e5379d1f07725d90623bfd641be7f875dc459b9d03",
+    "terrain-workbench/docs/round91-artifacts/run_full91.py": "384dbc9352aed544a829f6b54e0619b014f9034cdae1339299fe686f2cf1b3e2",
+    "terrain-workbench/docs/round91-artifacts/scoring-preparation-hashes.json": "c912bf826cbbcf3c91572fd74e14dcff465056d7b01ae8c2d9f9c41b4ebbf67e",
+    "terrain-workbench/docs/round91-artifacts/status.json": "a37ba37bff5060860980ac6777d6e9e05ad224fb4a5887d476183ef29b8157a1",
+    "terrain-workbench/docs/round91-artifacts/terrain-evidence-hashes.json": "b31f978743ec996e9f7aae11a4bc4ec6bb27aa0ca47c7846b7c0e63090363e78",
+    "terrain-workbench/docs/round91-artifacts/terrain-literature-evidence.json": "636418aa702e6509b03cc1db581704bd3e112a4d950579461405046c32b51a92",
+    "terrain-workbench/docs/round91-artifacts/terrain_evidence91.py": "132fa3859a18cc1393b4cebca287cfa94ee130727305e1a638eea8f0903bfc86",
+    "terrain-workbench/docs/round91-artifacts/运行登记-待收尾.md": "3da5c349eb967c19cbc81db5e11f3934388235792ff8f7fe27e94fb221256d60",
+    "terrain-workbench/docs/round92-artifacts/all-miss-components.json": "8ec500cbf843926e6a64b0be6d437651f9c0b5aab5a8c4ff3c78bd957b72b1cf",
+    "terrain-workbench/docs/round92-artifacts/all263-diagnostic.json": "b15c246010bf4561a362fc1695457fd7ef29213b77e4d9c0f70b302754842e72",
+    "terrain-workbench/docs/round92-artifacts/all32-minimax-paths.json": "89ca1143334d553d03bcf728a3b6fbd3f0a753faa58d6035851f98a4e38ff82d",
+    "terrain-workbench/docs/round92-artifacts/artifact-hashes.json": "a7965fdfc3be71e3ea16ab998b55edf16970b85303e87f1437ce7548e97446ab",
+    "terrain-workbench/docs/round92-artifacts/audit-round92-missed-regions-20261031.md": "777f96417a30d65bbf87000621e66f0c46be92224905a92b7b3a76a80c3062dc",
+    "terrain-workbench/docs/round92-artifacts/delivery-qa.json": "ac00875e328a280282a35ada11a2851628985cffed7325a623e76a49782df165",
+    "terrain-workbench/docs/round92-artifacts/diagnose_misses92.py": "e2995e1d1214771ea2778dc968ecc244d89a642950c6c404ad2410256c7612cc",
+    "terrain-workbench/docs/round92-artifacts/independent-verification.json": "fb9b495589f04371e2c64d7f5f49456963d91541164936a9ca356e0f74884c10",
+    "terrain-workbench/docs/round92-artifacts/mirror-verification.json": "c2534c4024ab925f95216ffbe77340bd4b04bd53da780266497ed9b2d9237693",
+    "terrain-workbench/docs/round92-artifacts/miss-diagnosis.png": "ace456bd3fe0e53ec2b0b25b3a536d2c53fd4701420b9eac602d6aba598b69b7",
+    "terrain-workbench/docs/round92-artifacts/path-protocol.json": "82e69bd779be9f6ba0b9d0e591d4c6b253e1517d680497aa90f7d6acd7207a59",
+    "terrain-workbench/docs/round92-artifacts/path-summary.json": "75a1b6db3145b4bcf688833f1950f9cb1787880eb622c5df9aa3bf0a5f3ed53f",
+    "terrain-workbench/docs/round92-artifacts/path_probe92.py": "3ae7512f524ff9a2fe904d7ad646aacf712189a19eb76d726634fc79ea8ac2de",
+    "terrain-workbench/docs/round92-artifacts/protocol.json": "9760899f34378326432fe42f4dec0f8b4609d095b50ab8d433ef7738c5767a7f",
+    "terrain-workbench/docs/round92-artifacts/publish92.py": "91c1ebc5a3d2842f083c7138e7264a521a1ffaf836ab595d580cf33766a295a8",
+    "terrain-workbench/docs/round92-artifacts/registered-diagnose_misses92.py": "76e32d9e135f58013896825e28037a5822eac227a00cca9cbaae95e05249d9ff",
+    "terrain-workbench/docs/round92-artifacts/repair-decision.json": "6047d3e0640511d3429828ded39e26b3fce22c2f0669a181b03132f8d8048b4a",
+    "terrain-workbench/docs/round92-artifacts/source-evidence.json": "1b6a6e6339c99861eedf107edd1cc17f0fa9251b49bdd8647bace64d715cfb7d",
+    "terrain-workbench/docs/round92-artifacts/sources92.py": "c6af5faa3481995ac63940449f89776d5fdcf730a0b1f9d65fec8adc73fb6923",
+    "terrain-workbench/docs/round92-artifacts/summary.json": "f53328569cc4c19df56513d629204a4689d9c2438ad2d43f7c7c03785dc968de",
+    "terrain-workbench/docs/round92-artifacts/verify92.py": "2881a1b16d6afb0096eac02cd99109d60d66ae09af22506ebcb36f32b90f350c",
+    "terrain-workbench/docs/round93-artifacts/anchors93.py": "9435d1ea2e2bff0892b455f27bebdf5e2b96efe4dbb8509109737ca259e7f086",
+    "terrain-workbench/docs/round93-artifacts/artifact-hashes.json": "822138d8e32cc09de3aacb1585aeea5f3f8f52c06fcaccf3dfb359bddde4674c",
+    "terrain-workbench/docs/round93-artifacts/audit-round93-structure-anchors-20261031.md": "b349a10d95723a8a5ea0197a4381ef0b79333a953118046a17cf5fa64a85227c",
+    "terrain-workbench/docs/round93-artifacts/coordinate-verification.json": "da134ed9515fa286786a2c04acc19c611becd0746efe9a6f3bbf53cd346a444b",
+    "terrain-workbench/docs/round93-artifacts/independent-structure-anchors.json": "f2d82c915cf6874c15c71cfa855a67d11f9ee4ed1e9874dce1cf70e7ed398fcc",
+    "terrain-workbench/docs/round93-artifacts/mirror-verification.json": "ab530dc179003028b5c4b1de79b5fae6d526ef52584c26025c2b283e6e311394",
+    "terrain-workbench/docs/round93-artifacts/protocol.json": "5dff7164bbb49c544edcc7c302f72f804c99d951d14b0c8c07a78aeec3b735a8",
+    "terrain-workbench/docs/round93-artifacts/publish93.py": "c13d42078fd6ee8f1acc0e817350fb0c5bc89b355213d5978b266dd731b4f939",
+    "terrain-workbench/docs/round93-artifacts/source-pages.json": "8280a3c0d2bebe1494c1cc13799220c2282193f0b0a12584b15b9a43408dbf79",
+    "terrain-workbench/docs/round94-artifacts/artifact-hashes.json": "ada76a263caea12c380f409454e3b43bcb965c303d1a83ff02af0567792bdbfa",
+    "terrain-workbench/docs/round94-artifacts/audit-round94-historical-data-gap-20261031.md": "ba4e21126bd367c39956fc039f1fcc0608c608a7da97ada092a44d9a030dbce9",
+    "terrain-workbench/docs/round94-artifacts/event-map-audit-hashes.json": "d65f25ca9c9e58b8c590d9c05acef2e46b7428f077d25686948efc13cadc33aa",
+    "terrain-workbench/docs/round94-artifacts/event-map-audit.json": "f2bd9a1bd872c4999d406d21afd69092875a50eba64b9050b40ba935e3dce040",
+    "terrain-workbench/docs/round94-artifacts/package-manifest.json": "8d7f562320d637d8d2b7498f77619321d278cdf696806f6a8704b1b5a39de8c1",
+    "terrain-workbench/docs/round94-artifacts/package_gap94.py": "7010c928a005381df1aafdea53f3825acb392f6951b203da45b1fafa6d39aa7e",
+    "terrain-workbench/docs/round94-artifacts/retrieval-and-gap.json": "5bf8c749c5247cb841de3269c511eb6ade43f43b2855ecc3b415648e7c4dcf5b",
+    "terrain-workbench/docs/round94-artifacts/targeted-data-request.json": "0baa75c04bc7b95039ee17c0c4169fbdd4e4649cc69604a546600711da1b7787",
+    "terrain-workbench/docs/round94-artifacts/给Dot的提示词与摘要.md": "45401dc7342e497993f4a6954cac608d46c1ef777e4be145cfa9f842e33799d2",
+    "terrain-workbench/docs/round95-artifacts/artifact-hashes.json": "223ede9246530b16fd02a73d65fed3a01874c0d4757b4a12a57ffdca85c91f61",
+    "terrain-workbench/docs/round95-artifacts/audit-round95-southern-head-paths-20261031.md": "72e9260c6bc2535aba5f755950486128816458c5cc837d08d51ba83889279192",
+    "terrain-workbench/docs/round95-artifacts/diagnose_south95.py": "1effd16fee86470f7143d9c8fb529720032b77f03a328837b8ee98165cf96a77",
+    "terrain-workbench/docs/round95-artifacts/get_ihe95.py": "ad200c02756a47fef9aa101da5a296b3a7c1dedd080badca87fb3958b737099d",
+    "terrain-workbench/docs/round95-artifacts/independent-verification.json": "299f545d163e4ab6eef9be8eb5eeed50ce914a65975b802d59d608b1fff22af1",
+    "terrain-workbench/docs/round95-artifacts/mirror-verification.json": "5bda076d51f663c7aed36f33124b9737a378f0f9f20769823ca72078013dd427",
+    "terrain-workbench/docs/round95-artifacts/protocol.json": "67304ab231fba541e2a219418f99ca720932d5b34b586a1de0b7645e7687a2f6",
+    "terrain-workbench/docs/round95-artifacts/register95.py": "2a1dcb7e7872bb8b39d30883d226332190a629727ad6eecb11af7e7d959711f6",
+    "terrain-workbench/docs/round95-artifacts/route-witnesses.json": "02c837e3a0a7235c250d29ff87ed4887ae378e42f18ca76ce319e43816d5ec61",
+    "terrain-workbench/docs/round95-artifacts/shortest-static-witnesses.json": "f4d2d62865746f19a7906b1d8d525499b7420152cb365646758865784dbc9e11",
+    "terrain-workbench/docs/round95-artifacts/shortest_south95.py": "d2e472f2667e2ca1c2fdc72975af4a46a521f6b5b5ad65a73b077feb876e9a42",
+    "terrain-workbench/docs/round95-artifacts/source-gates.json": "0347924bea65d286a4af1de37d4273a6af573d43853af79d6072eb821164aee2",
+    "terrain-workbench/docs/round95-artifacts/south-static-access.png": "e9786271fc7c8e0e7e9301538159d76a3739e471cdbc92620d739c4846b3f5e3",
+    "terrain-workbench/docs/round95-artifacts/summary.json": "f04e04a052850440d68ff22e6efb3db7bfab18121371742b4e104ec1e2110fbd",
+    "terrain-workbench/docs/round95-artifacts/trace_south95.py": "2c6005f0be6d6c77f5242908404f4189b45b54957c8f9896a2089654d44044c1",
+    "flood-platform/README.md": "71b5105cb458b8b77c21ebf0ceb0fe61f1ce489fc949486be96d744dcb7d9c41"
+  },
+  "excluded_retained_locally": [
+    {
+      "path": "terrain-workbench/docs/round82-artifacts/lisflood.cpp",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "33d58c359183370da4126e6d8e9151716f6aad0ea35a569e402846e0a643b3dc"
+    },
+    {
+      "path": "terrain-workbench/docs/round82-artifacts/pars.cpp",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "2d5feef88e5b553d40e98c7e1c3e13d4fc82a2c473e997480ef50f6dbf34c3e7"
+    },
+    {
+      "path": "terrain-workbench/docs/round82-artifacts/swe_dg2.cpp",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "741ef4420a9ac5ba5b899882e4713c24241a74c32e51b13a6ee3103c09a25359"
+    },
+    {
+      "path": "terrain-workbench/docs/round82-artifacts/swe_dg2_modifiedvars.cpp",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "4d17d8661c40dbb0db982a300eec12b4b3d1504dcb20c85a0be4d3f148f33473"
+    },
+    {
+      "path": "terrain-workbench/docs/round83-artifacts/dg2-candidate.cpp",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "78c491b05ef168c1c232a6b0731a6e1847645d80acad97838c5ae18877a56982"
+    },
+    {
+      "path": "terrain-workbench/docs/round83-artifacts/raw-experiments.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "8cffe3a2842ce31f63f0ba43297f234c8da9926718b342d6924e1c0dc8263a84"
+    },
+    {
+      "path": "terrain-workbench/docs/round84-artifacts/full-mask-comparisons.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "78bbec233b1897510687fe4bffef68f07a06299e6f8e25369dba373a8a71cc59"
+    },
+    {
+      "path": "terrain-workbench/docs/round84-artifacts/raw-experiment.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "f2086ce4aa07c51899a6f8ab580623a3b6c0a42716a505380a1c03d79ace976d"
+    },
+    {
+      "path": "terrain-workbench/docs/round85-artifacts/full-mask-comparisons.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "d04c58bd46452f3a197945e60c201193c355cf723dc427a883eb8c7215bb1326"
+    },
+    {
+      "path": "terrain-workbench/docs/round85-artifacts/raw-experiment.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "ac80c0c63ea098a54b58f722778eb3dff32f5c4bcdef5988a2084856995a6e92"
+    },
+    {
+      "path": "terrain-workbench/docs/round86-artifacts/candidate-source.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "4e2b84728336054609d7d93d0059860bb6cb85f4836b1ab054dd953f8defe66c"
+    },
+    {
+      "path": "terrain-workbench/docs/round86-artifacts/coupled-full-comparisons.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "ce8a12f6f37dfc7c6189562823df2d8bab074ad7113b9753056de32d42a44914"
+    },
+    {
+      "path": "terrain-workbench/docs/round86-artifacts/full-diagnostics.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "e828688ab7ae2da09e51df67cc4bfc5e79d2e9e4057397595647d16097782e10"
+    },
+    {
+      "path": "terrain-workbench/docs/round86-artifacts/raw-experiments.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "012bb7687049ab73e796f76a06bef11115da006e6eae921bdfa95f81ed7408e3"
+    },
+    {
+      "path": "terrain-workbench/docs/round87-artifacts/full-extension-comparison.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "00ccef5e53a699286197aed04e464f8d4e13cd3775b95d13c7fb53f8c0ac591a"
+    },
+    {
+      "path": "terrain-workbench/docs/round87-artifacts/raw-experiments.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "23cb984f3eaa60afffa7d0ccb23a263a907ec75824cb9066c0e28eb4b5964076"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/Rong-2024-thesis.pdf",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "5355c7548df26bc2b67610431a4feb788d60bb2cb2f6bed07da8dd793c1ff283"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/coupled-full-comparisons.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "9b07765af1f1a5789ff5511f2ad022a41bdf2ccb8630cf7cab7854d59d294e05"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/raw-experiment.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "1d616b63c80687779dfa891707597308503c5f6b946bda8be5dde1322a0f7a77"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-012.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "efe1a40b9929e82a014c7a1d5ecf1e9ce7af112d201af1d046757520c0eb1b27"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-017.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "3abe3b7ac461e84040d46c51b6270098dd21c52e7fe0aef2182efe4b02171696"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-108.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "7379297cdfbb1ec2472b182c560597e19454534517f4b49369fdbee17c88e737"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-109.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "328f6c0d619b70d444455bd657be614f488b3554e20334094eb415bab476d29e"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-110.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "434e82699bef9bcd2127e460cb9d3e7858359d584d75df604823d092ff68ac1a"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-134.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "ea0c68ea7032f1684ca9e3701b72803c4e742964d936ba2420db2b446e5513bc"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-135.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "a95ab96a3e96f3698ccdff48cbd164052acf3454997d90e93c1219fec091e2b1"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-138.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "7c26c17533ef6dce7f8ad46902699a5bf45fcd314eb2ec2e56679a0b7aeed16d"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-140.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "fc4338627c601f4501256144d3d47506abea758be31a6ba64d9288020cca09cc"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-141.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "82b9d31761509822be070381eedbe82ea749409d687982eb2d561a041eb5cc27"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-149.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "7bb5c0d77c5be5bf01770e1e5b8326f19c94f92bf766490df282eb0b13de39eb"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-210.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "1f9a849ed150dcb65a3a7495e77558ba5970d1d4011198c26734d22729c79b87"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-229.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "ee3a68be75b5842407f8de63450f245d91a65e4de59ddcdce924d699d92d8f3c"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page-237.txt",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "a9ed1fa61159998357c25930d043a43fae215122526d661783bfe3ebe6d4a56f"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page135.png",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "ccadb5b5741ebcfc90dea192dbfcf6d34fc28f3f0c9d0719f5e76926c9df7194"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page139.png",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "35c9d08df25c9d155bac96d64686bb99c192543ecf76dacc0ada05d46b8226b2"
+    },
+    {
+      "path": "terrain-workbench/docs/round88-artifacts/thesis-page140.png",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "35cf73dfb87e9261695a2b1cdbbaa760d19cb49cde2f42fa1b47d1a593028a5a"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Carlisle_5m.asc",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "a175a51a668472b17ba4bc0f7be56a18048a080030d13e13f1cf28e4fbc9e018"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/README.md",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "ce1bf2ab329d3a29d18972848612b98fc1ebce129932be5413409db79def875d"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run1.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "0003e7aa361af7723d4171c47a5d2e1665b1d7dfae9395ff2960c2a09c184997"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run2.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "2448a7750da9bc454c6c3636a8ff8c026918858799c421be6c55cc33f84a0fa2"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run3.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "28d972148298c3896137a05c3cdb2c72048b84469600771a737472ac73455351"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run4.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "f0fcf53f6a989fe560acc6e2e02a07a0cc1a1b4a86760ec98e77314bb4e3a481"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run5.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "0dea4df9a9ffa2e0e220de1ed856d9889ac4651e3fb1d3e4628fd08e4cf5eac0"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run6.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "06c67b49364198167ffdfdfb1b57067d2b6e8588efd7309a0e0e766d1ed1fbce"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run7.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "4a4873f5f7cba59f5db5268994fcb7d16c1269ad00c6dbfe6e6ec47def01fa00"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run8.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "4bba955a612a4511f24bd3373b13159f65232957992c26d9a97bff143b87592c"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/Upstream_Flows_Run9.csv",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "53e8bdbeddbe0c0b90475c7c3ee0f809aca31a594e2b75242761fbdc2e0c205f"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle.bci",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "f427f6e3db7e462593081bdafc681ac4f6f6e933fba8724d285e302b9f3257e0"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run1.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "21eeb3ac8a97d65389c8a53b9bdd427c956549dd7d2274d743af5b3b37684f1b"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run1.par",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "6f921b064f69d1d2caf2976ad88adcc47b2cf2b218ce5fa4b4976482d438bd44"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run2.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "3d7a9d6f220797919e580ea437ce852fc9c3cf6813579c4984f85d4268430056"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run3.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "71707437fb6474019467b3d0380c48a418c57f28e9d94f8ab838dc3fdfea5fca"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run4.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "b09c15d41f993516ebe1d71a40f64ec590b824d8c9434c455ca693e6e7b8b8c8"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run5.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "c8bdee0e301516726045d81e5550f261bd49832f33e4f087321d88b55e2d3948"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run6.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "571fe2214a7e8b5e47a930c9d0d0c2cc5397284fc3e24d6a69267318f92a6333"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run7.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "717f654d40f1b22fbdb460455e7285c6078cfd636179ebda10749ceccb10c0cc"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run8.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "6bc9c0f2293dbe4cc5bee8704489011ab5f2a5c1431fa5385b0aaea1e8d79401"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/carlisle_run9.bdy",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "8ac8f23eb8dd851dca7d9762851ca49706e808ab1c5a41f32cd3483a40ade272"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/validation_locations_18Points.cpg",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/validation_locations_18Points.dbf",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "08d119d7c08f8c392b55f92adb5ea37c774ed8fa5e0fc34d0c5f650f3c626350"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/validation_locations_18Points.prj",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "adb67f69470f6b906fce8be1b76747ad242283eaeb949583205c506ae17be2e9"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/validation_locations_18Points.qpj",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "20831de4c23729068be7b81c3eb29fe4b48f5b93d9251180e78e981ce99813e6"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/validation_locations_18Points.shp",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "0adc4ca5a101d757940a9e51b66d5eb04954eab3e80c184ea3bbf4da1e793a27"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/original/validation_locations_18Points.shx",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "1fd32bac55c1bca8859bb232dc1da4f10c1460e8cf7fdcd800bb79446e6ec65a"
+    },
+    {
+      "path": "terrain-workbench/docs/round89-artifacts/unaltered-series-comparison.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "97df63a31749e5dbd8e41d31b0868c788812626c9581757b9294063d046e243a"
+    },
+    {
+      "path": "terrain-workbench/docs/round90-artifacts/observation-footprint-mask.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "7a0f71fe7902fa524d9908d8d349d98e9b457e1b1a0c693d7cc1e070af0808e2"
+    },
+    {
+      "path": "terrain-workbench/docs/round90-artifacts/raw-cases.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "16012424c93d55dd504a873377415610480f158a0fec7d4443d13bf11249cc3e"
+    },
+    {
+      "path": "terrain-workbench/docs/round91-artifacts/Carlisle-recovery-debrief.pdf",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "b39eae7b3b055a59aeeb2dc80014a08e444a781a4bf75da86f1b76609bf67ab7"
+    },
+    {
+      "path": "terrain-workbench/docs/round91-artifacts/EA-2005-retrospective.html",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "f9b22beb98c0ff0728f7dc6c4528a3779bd4f427f55602e740bcd9262804a956"
+    },
+    {
+      "path": "terrain-workbench/docs/round91-artifacts/FD2321-TR1.pdf",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "dc02e9c05cbe29bfb24d734763d8f7be88659e2b659db81e7dcf9ac81c226477"
+    },
+    {
+      "path": "terrain-workbench/docs/round91-artifacts/full-classification.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "f5e0350899660737b9765b253c120a2d9b06307834dd09be586850b700092161"
+    },
+    {
+      "path": "terrain-workbench/docs/round91-artifacts/full-event-raw.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "bd57c8e99f1931ae8b298f87f7d3e779a63b0adebb5220f71ce3ef533e89bfde"
+    },
+    {
+      "path": "terrain-workbench/docs/round91-artifacts/individual-observation-masks.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "c889f1a4ff386c873f7f8f3109320dbac32cf94270b599d2ae303c310490d7a5"
+    },
+    {
+      "path": "terrain-workbench/docs/round92-artifacts/EA2005-reprinted-in-HIA2011.pdf",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "5d7873eb3e7ca97c63abcf65942e080c008df71e7e0755ad000c6aad62684850"
+    },
+    {
+      "path": "terrain-workbench/docs/round92-artifacts/SEAMLESS-Carlisle.html",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "09e80c1f9a856322c9eaaf5948f0c6b8ed7c62f96b2ac6c8e3cfc2ecdcd275db"
+    },
+    {
+      "path": "terrain-workbench/docs/round92-artifacts/all-miss-diagnostics.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "4f5e237a5faa8fd237258f9c5743847fddbf46d2a3754c6239e21ceb001f2220"
+    },
+    {
+      "path": "terrain-workbench/docs/round93-artifacts/Cumbria-FOI-2016-1020.pdf",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "8eb693da7d9b4d3eacf43d6be64965b56a66cd6c3ac123eb6a696d9c6df9401d"
+    },
+    {
+      "path": "terrain-workbench/docs/round94-artifacts/EA2005-event-map-0.jpg",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "32865675e79cd0a5b39f4b38355edd089af045108c1d0021df43d0036701d4f4"
+    },
+    {
+      "path": "terrain-workbench/docs/round94-artifacts/HYRA漏淹定点求助包-20261031.zip",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "db66049bd8ef575009cdabe438f362986ebe3770d54fe31bf09cab16a2652ebd"
+    },
+    {
+      "path": "terrain-workbench/docs/round95-artifacts/southern-static-reachability.npz",
+      "reason": "Local raw data, third-party source/document/image or binary archive; retain locally, not part of review snapshot.",
+      "sha256": "6af1ed5f3af9f45104a7c6cef436deda2847434cf253591a9f0e13b37f40cf9a"
+    }
+  ],
+  "python_ast_parse": "passed",
+  "credential_pattern_scan": "no matches; not exhaustive",
+  "scope": "Only current authored research tooling/evidence through round95. Original artifacts manifests remain full local manifests and may reference omitted files."
+}

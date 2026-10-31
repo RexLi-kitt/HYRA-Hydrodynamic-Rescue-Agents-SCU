@@ -1,0 +1,18 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- The CXX compiler identification is MSVC 19.44.35219.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (2.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Lenovo/Documents/ChatGPT/无人机集群搜救大创/outputs/round86/candidate-probe/build
+适用于 .NET Framework MSBuild 版本 17.14.23+b0019275e
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/Lenovo/Documents/ChatGPT/无人机集群搜救大创/outputs/round86/candidate-probe/CMakeLists.txt
+  friction_probe.cpp
+  friction_probe.vcxproj -> C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round86\candidate-probe\build\Release\friction_probe.exe
+  C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round86\candidate-probe\build\Release\friction_probe.exe: message: deploying dependencies
+  Building Custom Rule C:/Users/Lenovo/Documents/ChatGPT/无人机集群搜救大创/outputs/round86/candidate-probe/CMakeLists.txt

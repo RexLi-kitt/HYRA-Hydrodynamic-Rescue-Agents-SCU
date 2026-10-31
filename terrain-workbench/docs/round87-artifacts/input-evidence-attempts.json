@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-30",
+  "local_metadata": "round73/zenodo7064320.json: test parameter files; no absolute UTC/datum metadata",
+  "attempts": [
+    {
+      "url": "https://centaur.reading.ac.uk/35476/1/2012ei000475%252E1.pdf",
+      "outcome": "access denied; no bypass"
+    },
+    {
+      "url": "https://journals.ametsoc.org/view/journals/eint/17/6/2012ei000475.1.xml",
+      "outcome": "403; no bypass"
+    },
+    {
+      "url": "https://research-information.bris.ac.uk/ws/portalfiles/portal/430852101/Final_Copy_2024_10_15_Rong_Y_T_PhD.pdf",
+      "outcome": "web tool content-length limit; needed body not verified"
+    }
+  ],
+  "input_changed": false,
+  "epoch_closed": false
+}
