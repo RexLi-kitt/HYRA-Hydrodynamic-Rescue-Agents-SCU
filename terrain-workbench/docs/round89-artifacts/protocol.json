@@ -1,0 +1,15 @@
+{
+  "objective": "Audit separate author-published 5m Carlisle 2005 Run1 input package before any simulation or scoring",
+  "revision": "eadfc848a6d37cb3476da2fe6ec7087262d9ef54",
+  "unchanged_existing_cases": true,
+  "checks": [
+    "Git blob and length",
+    "finite DEM/grid and CRS",
+    "source points and unit-width aggregation",
+    "CSV vs bdy value/time identity",
+    "event start publication linkage",
+    "initial/outlet/configuration completeness"
+  ],
+  "rejection": "Do not silently replace original 10m inputs or assign this epoch to other archives; unclosed contracts prevent field scoring",
+  "simulation_started": false
+}

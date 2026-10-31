@@ -1,0 +1,42 @@
+{
+  "state": "completed",
+  "exit_code": 0,
+  "wall_s": 13.979003599997668,
+  "frames": [
+    {
+      "name": "check-0000.wdb",
+      "max_abs_h_difference_m": 0.0,
+      "volume_difference_m3": 0.0,
+      "finite_nonnegative": true
+    },
+    {
+      "name": "check-0001.wdb",
+      "max_abs_h_difference_m": 0.0,
+      "volume_difference_m3": 0.0,
+      "finite_nonnegative": true
+    },
+    {
+      "name": "check-0002.wdb",
+      "max_abs_h_difference_m": 0.0,
+      "volume_difference_m3": 0.0,
+      "finite_nonnegative": true
+    },
+    {
+      "name": "check-0003.wdb",
+      "max_abs_h_difference_m": 0.0,
+      "volume_difference_m3": 0.0,
+      "finite_nonnegative": true
+    },
+    {
+      "name": "check-0004.wdb",
+      "max_abs_h_difference_m": 0.0,
+      "volume_difference_m3": 0.0,
+      "finite_nonnegative": true
+    }
+  ],
+  "step_columns_equal": true,
+  "sum_abs_mass_residual_m3": 1.075879534025414e-05,
+  "equivalence": true,
+  "speedup_vs_same_case": 2.6540699939448653,
+  "use_four_for_reference": true
+}

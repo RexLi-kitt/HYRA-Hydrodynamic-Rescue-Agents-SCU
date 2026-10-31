@@ -1,0 +1,1071 @@
+{
+  "evidence": "paired numerical sensitivity, not independent observations",
+  "frames": [
+    {
+      "time_s": 300,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.02834618913600001,
+        "L1_depth_volume_m3": 69.103759561,
+        "net_volume_change_m3": -3.9998210906583287e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 130,
+            "a_only_wet": 8,
+            "b_only_wet": 43,
+            "changed_cells": 51
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 101,
+            "a_only_wet": 7,
+            "b_only_wet": 29,
+            "changed_cells": 36
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 79,
+            "a_only_wet": 1,
+            "b_only_wet": 4,
+            "changed_cells": 5
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.01141104929800002,
+        "L1_depth_volume_m3": 28.7054542647,
+        "net_volume_change_m3": 9.997627725688574e-11,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 219,
+            "a_only_wet": 6,
+            "b_only_wet": 2,
+            "changed_cells": 8
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 161,
+            "a_only_wet": 1,
+            "b_only_wet": 3,
+            "changed_cells": 4
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 85,
+            "a_only_wet": 2,
+            "b_only_wet": 0,
+            "changed_cells": 2
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.04725334774699999,
+        "L1_depth_volume_m3": 128.24999094330002,
+        "net_volume_change_m3": -4.999861418983342e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 133,
+            "a_only_wet": 5,
+            "b_only_wet": 92,
+            "changed_cells": 97
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 100,
+            "a_only_wet": 8,
+            "b_only_wet": 62,
+            "changed_cells": 70
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 79,
+            "a_only_wet": 1,
+            "b_only_wet": 8,
+            "changed_cells": 9
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.030318207909,
+        "L1_depth_volume_m3": 74.94903628820002,
+        "net_volume_change_m3": -3.400058012914542e-14,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 171,
+            "a_only_wet": 2,
+            "b_only_wet": 50,
+            "changed_cells": 52
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 129,
+            "a_only_wet": 1,
+            "b_only_wet": 35,
+            "changed_cells": 36
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 82,
+            "a_only_wet": 1,
+            "b_only_wet": 3,
+            "changed_cells": 4
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.5974397389627291,
+        "L1_reduction_fraction": 0.5846035809475632,
+        "changed_cells_before_after": [
+          [
+            51,
+            8
+          ],
+          [
+            36,
+            4
+          ],
+          [
+            5,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 600,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.028369655381000003,
+        "L1_depth_volume_m3": 135.73412484310006,
+        "net_volume_change_m3": 8.999484209064323e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 322,
+            "a_only_wet": 7,
+            "b_only_wet": 33,
+            "changed_cells": 40
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 245,
+            "a_only_wet": 7,
+            "b_only_wet": 45,
+            "changed_cells": 52
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 150,
+            "a_only_wet": 5,
+            "b_only_wet": 26,
+            "changed_cells": 31
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.025117816513999913,
+        "L1_depth_volume_m3": 73.44673709840006,
+        "net_volume_change_m3": -4.000372949564124e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 428,
+            "a_only_wet": 16,
+            "b_only_wet": 12,
+            "changed_cells": 28
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 329,
+            "a_only_wet": 9,
+            "b_only_wet": 7,
+            "changed_cells": 16
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 190,
+            "a_only_wet": 13,
+            "b_only_wet": 3,
+            "changed_cells": 16
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.05737373787000011,
+        "L1_depth_volume_m3": 246.3403897103001,
+        "net_volume_change_m3": 4.999232798563735e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 322,
+            "a_only_wet": 7,
+            "b_only_wet": 122,
+            "changed_cells": 129
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 246,
+            "a_only_wet": 6,
+            "b_only_wet": 92,
+            "changed_cells": 98
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 153,
+            "a_only_wet": 2,
+            "b_only_wet": 50,
+            "changed_cells": 52
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.03057856704600015,
+        "L1_depth_volume_m3": 137.52615572699997,
+        "net_volume_change_m3": -8.000551528783775e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 347,
+            "a_only_wet": 8,
+            "b_only_wet": 93,
+            "changed_cells": 101
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 286,
+            "a_only_wet": 4,
+            "b_only_wet": 50,
+            "changed_cells": 54
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 175,
+            "a_only_wet": 1,
+            "b_only_wet": 18,
+            "changed_cells": 19
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.11462384097827083,
+        "L1_reduction_fraction": 0.4588926168470915,
+        "changed_cells_before_after": [
+          [
+            40,
+            28
+          ],
+          [
+            52,
+            16
+          ],
+          [
+            31,
+            16
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 900,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.051233747741,
+        "L1_depth_volume_m3": 289.5382073752999,
+        "net_volume_change_m3": 3.001765502830267e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 578,
+            "a_only_wet": 13,
+            "b_only_wet": 80,
+            "changed_cells": 93
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 472,
+            "a_only_wet": 11,
+            "b_only_wet": 65,
+            "changed_cells": 76
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 330,
+            "a_only_wet": 6,
+            "b_only_wet": 37,
+            "changed_cells": 43
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.036635772377999976,
+        "L1_depth_volume_m3": 235.67650091460018,
+        "net_volume_change_m3": -1.8001950624624286e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 755,
+            "a_only_wet": 23,
+            "b_only_wet": 21,
+            "changed_cells": 44
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 590,
+            "a_only_wet": 16,
+            "b_only_wet": 30,
+            "changed_cells": 46
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 381,
+            "a_only_wet": 13,
+            "b_only_wet": 19,
+            "changed_cells": 32
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.084332691179,
+        "L1_depth_volume_m3": 395.45526457399995,
+        "net_volume_change_m3": 1.2001288851593017e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 586,
+            "a_only_wet": 5,
+            "b_only_wet": 192,
+            "changed_cells": 197
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 474,
+            "a_only_wet": 9,
+            "b_only_wet": 132,
+            "changed_cells": 141
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 329,
+            "a_only_wet": 7,
+            "b_only_wet": 65,
+            "changed_cells": 72
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.07024750014000003,
+        "L1_depth_volume_m3": 349.5128153739,
+        "net_volume_change_m3": -9.002187884021851e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 651,
+            "a_only_wet": 7,
+            "b_only_wet": 125,
+            "changed_cells": 132
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 531,
+            "a_only_wet": 6,
+            "b_only_wet": 89,
+            "changed_cells": 95
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 358,
+            "a_only_wet": 9,
+            "b_only_wet": 42,
+            "changed_cells": 51
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.2849288995370124,
+        "L1_reduction_fraction": 0.18602624831093229,
+        "changed_cells_before_after": [
+          [
+            93,
+            44
+          ],
+          [
+            76,
+            46
+          ],
+          [
+            43,
+            32
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 1200,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.347886300292,
+        "L1_depth_volume_m3": 956.9724610785,
+        "net_volume_change_m3": -3.0016371332930447e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 954,
+            "a_only_wet": 19,
+            "b_only_wet": 119,
+            "changed_cells": 138
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 818,
+            "a_only_wet": 13,
+            "b_only_wet": 96,
+            "changed_cells": 109
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 574,
+            "a_only_wet": 20,
+            "b_only_wet": 59,
+            "changed_cells": 79
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.08695314282400002,
+        "L1_depth_volume_m3": 489.98991533470013,
+        "net_volume_change_m3": -4.999809702539715e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1198,
+            "a_only_wet": 37,
+            "b_only_wet": 39,
+            "changed_cells": 76
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 963,
+            "a_only_wet": 24,
+            "b_only_wet": 38,
+            "changed_cells": 62
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 643,
+            "a_only_wet": 28,
+            "b_only_wet": 46,
+            "changed_cells": 74
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.08417115112500007,
+        "L1_depth_volume_m3": 702.7856187369002,
+        "net_volume_change_m3": 4.996860564210337e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 958,
+            "a_only_wet": 15,
+            "b_only_wet": 277,
+            "changed_cells": 292
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 820,
+            "a_only_wet": 11,
+            "b_only_wet": 167,
+            "changed_cells": 178
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 575,
+            "a_only_wet": 19,
+            "b_only_wet": 96,
+            "changed_cells": 115
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.335920421084,
+        "L1_depth_volume_m3": 950.6808136609,
+        "net_volume_change_m3": 2.998324678815667e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1059,
+            "a_only_wet": 14,
+            "b_only_wet": 178,
+            "changed_cells": 192
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 900,
+            "a_only_wet": 14,
+            "b_only_wet": 101,
+            "changed_cells": 115
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 618,
+            "a_only_wet": 15,
+            "b_only_wet": 71,
+            "changed_cells": 86
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.7500529835437167,
+        "L1_reduction_fraction": 0.48797908480826546,
+        "changed_cells_before_after": [
+          [
+            138,
+            76
+          ],
+          [
+            109,
+            62
+          ],
+          [
+            79,
+            74
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 1500,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.538843466019,
+        "L1_depth_volume_m3": 1941.8711105921002,
+        "net_volume_change_m3": -1.699748675143553e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1363,
+            "a_only_wet": 39,
+            "b_only_wet": 160,
+            "changed_cells": 199
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1176,
+            "a_only_wet": 25,
+            "b_only_wet": 157,
+            "changed_cells": 182
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 837,
+            "a_only_wet": 39,
+            "b_only_wet": 94,
+            "changed_cells": 133
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.08039113634900008,
+        "L1_depth_volume_m3": 599.0453667892,
+        "net_volume_change_m3": -2.000356824627403e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1712,
+            "a_only_wet": 44,
+            "b_only_wet": 73,
+            "changed_cells": 117
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1395,
+            "a_only_wet": 33,
+            "b_only_wet": 59,
+            "changed_cells": 92
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 963,
+            "a_only_wet": 39,
+            "b_only_wet": 44,
+            "changed_cells": 83
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.14832885230900006,
+        "L1_depth_volume_m3": 1006.1979971768001,
+        "net_volume_change_m3": 1.6003920411122863e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1384,
+            "a_only_wet": 18,
+            "b_only_wet": 372,
+            "changed_cells": 390
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1186,
+            "a_only_wet": 15,
+            "b_only_wet": 242,
+            "changed_cells": 257
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 856,
+            "a_only_wet": 20,
+            "b_only_wet": 146,
+            "changed_cells": 166
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.528271723453,
+        "L1_depth_volume_m3": 1947.1214599635005,
+        "net_volume_change_m3": 1.2998713216916258e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1490,
+            "a_only_wet": 33,
+            "b_only_wet": 295,
+            "changed_cells": 328
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1303,
+            "a_only_wet": 30,
+            "b_only_wet": 151,
+            "changed_cells": 181
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 900,
+            "a_only_wet": 31,
+            "b_only_wet": 107,
+            "changed_cells": 138
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.8508079963501581,
+        "L1_reduction_fraction": 0.6915112627600997,
+        "changed_cells_before_after": [
+          [
+            199,
+            117
+          ],
+          [
+            182,
+            92
+          ],
+          [
+            133,
+            83
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 1800,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.623054397729,
+        "L1_depth_volume_m3": 2490.4028444234,
+        "net_volume_change_m3": -7.996492357165152e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1710,
+            "a_only_wet": 50,
+            "b_only_wet": 189,
+            "changed_cells": 239
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1484,
+            "a_only_wet": 27,
+            "b_only_wet": 181,
+            "changed_cells": 208
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1102,
+            "a_only_wet": 35,
+            "b_only_wet": 143,
+            "changed_cells": 178
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.09346543681700004,
+        "L1_depth_volume_m3": 751.8021206993002,
+        "net_volume_change_m3": 4.998300384695398e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2183,
+            "a_only_wet": 42,
+            "b_only_wet": 85,
+            "changed_cells": 127
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1757,
+            "a_only_wet": 45,
+            "b_only_wet": 84,
+            "changed_cells": 129
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1248,
+            "a_only_wet": 43,
+            "b_only_wet": 44,
+            "changed_cells": 87
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.14360275699799996,
+        "L1_depth_volume_m3": 1301.3971110490004,
+        "net_volume_change_m3": -2.9997226924649567e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1737,
+            "a_only_wet": 23,
+            "b_only_wet": 488,
+            "changed_cells": 511
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1500,
+            "a_only_wet": 11,
+            "b_only_wet": 302,
+            "changed_cells": 313
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1128,
+            "a_only_wet": 9,
+            "b_only_wet": 163,
+            "changed_cells": 172
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.615062930195,
+        "L1_depth_volume_m3": 2577.6717993585,
+        "net_volume_change_m3": -1.7001067220689947e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 1855,
+            "a_only_wet": 44,
+            "b_only_wet": 413,
+            "changed_cells": 457
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1623,
+            "a_only_wet": 42,
+            "b_only_wet": 218,
+            "changed_cells": 260
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1193,
+            "a_only_wet": 52,
+            "b_only_wet": 99,
+            "changed_cells": 151
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.8499883201889329,
+        "L1_reduction_fraction": 0.6981202770536652,
+        "changed_cells_before_after": [
+          [
+            239,
+            127
+          ],
+          [
+            208,
+            129
+          ],
+          [
+            178,
+            87
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 2100,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.6387338793680001,
+        "L1_depth_volume_m3": 2842.3208029295997,
+        "net_volume_change_m3": -1.2002239480057852e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2154,
+            "a_only_wet": 58,
+            "b_only_wet": 237,
+            "changed_cells": 295
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1854,
+            "a_only_wet": 39,
+            "b_only_wet": 223,
+            "changed_cells": 262
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1409,
+            "a_only_wet": 33,
+            "b_only_wet": 157,
+            "changed_cells": 190
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.07855040912199995,
+        "L1_depth_volume_m3": 921.2971863895,
+        "net_volume_change_m3": 2.8999702921146675e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2723,
+            "a_only_wet": 53,
+            "b_only_wet": 105,
+            "changed_cells": 158
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 2217,
+            "a_only_wet": 43,
+            "b_only_wet": 115,
+            "changed_cells": 158
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1545,
+            "a_only_wet": 35,
+            "b_only_wet": 49,
+            "changed_cells": 84
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.20624328511099999,
+        "L1_depth_volume_m3": 1650.3104748691999,
+        "net_volume_change_m3": -2.599923054624753e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2186,
+            "a_only_wet": 26,
+            "b_only_wet": 590,
+            "changed_cells": 616
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 1877,
+            "a_only_wet": 16,
+            "b_only_wet": 383,
+            "changed_cells": 399
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1429,
+            "a_only_wet": 13,
+            "b_only_wet": 151,
+            "changed_cells": 164
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.6453353639030001,
+        "L1_depth_volume_m3": 2979.8415058047003,
+        "net_volume_change_m3": 1.5001962725465917e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2334,
+            "a_only_wet": 57,
+            "b_only_wet": 494,
+            "changed_cells": 551
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 2024,
+            "a_only_wet": 53,
+            "b_only_wet": 308,
+            "changed_cells": 361
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1503,
+            "a_only_wet": 63,
+            "b_only_wet": 91,
+            "changed_cells": 154
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.8770216961096189,
+        "L1_reduction_fraction": 0.6758644606759685,
+        "changed_cells_before_after": [
+          [
+            295,
+            158
+          ],
+          [
+            262,
+            158
+          ],
+          [
+            190,
+            84
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 2400,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.31358349514799994,
+        "L1_depth_volume_m3": 2979.9489555618998,
+        "net_volume_change_m3": -3.099476231227527e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2712,
+            "a_only_wet": 55,
+            "b_only_wet": 270,
+            "changed_cells": 325
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 2308,
+            "a_only_wet": 36,
+            "b_only_wet": 279,
+            "changed_cells": 315
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1723,
+            "a_only_wet": 26,
+            "b_only_wet": 149,
+            "changed_cells": 175
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.08687237183999996,
+        "L1_depth_volume_m3": 1084.5737421674,
+        "net_volume_change_m3": -5.399741764833266e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 3355,
+            "a_only_wet": 55,
+            "b_only_wet": 113,
+            "changed_cells": 168
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 2775,
+            "a_only_wet": 54,
+            "b_only_wet": 116,
+            "changed_cells": 170
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1859,
+            "a_only_wet": 38,
+            "b_only_wet": 40,
+            "changed_cells": 78
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.353995951557,
+        "L1_depth_volume_m3": 2606.1157074927996,
+        "net_volume_change_m3": -1.800304350041415e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2738,
+            "a_only_wet": 29,
+            "b_only_wet": 672,
+            "changed_cells": 701
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 2326,
+            "a_only_wet": 18,
+            "b_only_wet": 503,
+            "changed_cells": 521
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1724,
+            "a_only_wet": 25,
+            "b_only_wet": 173,
+            "changed_cells": 198
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.665034910118,
+        "L1_depth_volume_m3": 3432.9535216587005,
+        "net_volume_change_m3": -4.100519923611046e-09,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 2901,
+            "a_only_wet": 81,
+            "b_only_wet": 567,
+            "changed_cells": 648
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 2519,
+            "a_only_wet": 68,
+            "b_only_wet": 372,
+            "changed_cells": 440
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 1800,
+            "a_only_wet": 72,
+            "b_only_wet": 99,
+            "changed_cells": 171
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.7229689279437383,
+        "L1_reduction_fraction": 0.6360428455852887,
+        "changed_cells_before_after": [
+          [
+            325,
+            168
+          ],
+          [
+            315,
+            170
+          ],
+          [
+            175,
+            78
+          ]
+        ]
+      }
+    }
+  ],
+  "field_passes_added": 0,
+  "production_adopted": false
+}

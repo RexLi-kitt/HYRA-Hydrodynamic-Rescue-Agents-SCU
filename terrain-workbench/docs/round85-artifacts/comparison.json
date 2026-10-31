@@ -1,0 +1,388 @@
+{
+  "evidence_type": "same-model time-discretization sensitivity, not independent field observations",
+  "field_passes_added": 0,
+  "baseline": {
+    "dtmax": 1,
+    "cfl": 0.33,
+    "accepted_steps": 5260,
+    "median_dt": 0.47575745417993426,
+    "minimum_dt": 0.003726773599214629,
+    "rejections": 9,
+    "wall_s": 298.40492449999874
+  },
+  "candidate": {
+    "dtmax": 1,
+    "cfl": 0.165,
+    "accepted_steps": 10097,
+    "median_dt": 0.240551365978454,
+    "minimum_dt": 0.023787772257605866,
+    "rejections": 0,
+    "wall_s": 552.5260326999996
+  },
+  "independent_source_expected_m3": 108345.16000000002,
+  "source_error_m3": -1.4551915228366852e-11,
+  "source_interval_continuity": true,
+  "frames": [
+    {
+      "time_s": 300,
+      "baseline_sha256": "42f9ac70436353372a7d7c7d2c362a46fd776ecf3d5a0b2691d37391b8b329a5",
+      "candidate_sha256": "cf1559572abe60d9d84bcc0a414ca5a55f3dfe612177b6bb55966d9a501107d2",
+      "max_abs_depth_difference_m": 0.02834618913600001,
+      "domain_mean_abs_depth_difference_m": 4.744312596872083e-06,
+      "absolute_volume_difference_m3": 3.9998210906583287e-10,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 130,
+          "baseline_only_wet": 8,
+          "candidate_only_wet": 43,
+          "neither": 145475,
+          "union": 181,
+          "software_mask_IoU": 0.7182320441988951,
+          "changed_area_m2": 5100
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 101,
+          "baseline_only_wet": 7,
+          "candidate_only_wet": 29,
+          "neither": 145519,
+          "union": 137,
+          "software_mask_IoU": 0.7372262773722628,
+          "changed_area_m2": 3600
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 79,
+          "baseline_only_wet": 1,
+          "candidate_only_wet": 4,
+          "neither": 145572,
+          "union": 84,
+          "software_mask_IoU": 0.9404761904761905,
+          "changed_area_m2": 500
+        }
+      ]
+    },
+    {
+      "time_s": 600,
+      "baseline_sha256": "c1caaa543d54cc9a4d8d54d2de774bee7cfea1438b22a744870cf17643e53ac1",
+      "candidate_sha256": "fadd64e1e1769fba7e8975b1e940e82e69ef76953e4929ab47be3c1eee8a95bd",
+      "max_abs_depth_difference_m": 0.028369655381000003,
+      "domain_mean_abs_depth_difference_m": 9.318814524846217e-06,
+      "absolute_volume_difference_m3": 8.999484209064323e-10,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 322,
+          "baseline_only_wet": 7,
+          "candidate_only_wet": 33,
+          "neither": 145294,
+          "union": 362,
+          "software_mask_IoU": 0.8895027624309392,
+          "changed_area_m2": 4000
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 245,
+          "baseline_only_wet": 7,
+          "candidate_only_wet": 45,
+          "neither": 145359,
+          "union": 297,
+          "software_mask_IoU": 0.8249158249158249,
+          "changed_area_m2": 5200
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 150,
+          "baseline_only_wet": 5,
+          "candidate_only_wet": 26,
+          "neither": 145475,
+          "union": 181,
+          "software_mask_IoU": 0.8287292817679558,
+          "changed_area_m2": 3100
+        }
+      ]
+    },
+    {
+      "time_s": 900,
+      "baseline_sha256": "c17c9a1c79f878ccdfc41e214bf3a033501ee73698710be9af3ac32095d1edd7",
+      "candidate_sha256": "0cee1c0a02173eeb8e52de816af53c0f3ba69f9ea4231b90d129192e6e3214a9",
+      "max_abs_depth_difference_m": 0.051233747741,
+      "domain_mean_abs_depth_difference_m": 1.987822042176772e-05,
+      "absolute_volume_difference_m3": 3.001765502830267e-10,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 578,
+          "baseline_only_wet": 13,
+          "candidate_only_wet": 80,
+          "neither": 144985,
+          "union": 671,
+          "software_mask_IoU": 0.8614008941877794,
+          "changed_area_m2": 9300
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 472,
+          "baseline_only_wet": 11,
+          "candidate_only_wet": 65,
+          "neither": 145108,
+          "union": 548,
+          "software_mask_IoU": 0.8613138686131386,
+          "changed_area_m2": 7600
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 330,
+          "baseline_only_wet": 6,
+          "candidate_only_wet": 37,
+          "neither": 145283,
+          "union": 373,
+          "software_mask_IoU": 0.8847184986595175,
+          "changed_area_m2": 4300
+        }
+      ]
+    },
+    {
+      "time_s": 1200,
+      "baseline_sha256": "73e49cc12860736b8e1e0960a40f95928133ecf9115a56b0d1721cd25f3a227a",
+      "candidate_sha256": "ebcc52b97116132f6f347ab9565d85c36a1ee33a32ba9cfe1ac2002a1696648a",
+      "max_abs_depth_difference_m": 0.347886300292,
+      "domain_mean_abs_depth_difference_m": 6.570086100665266e-05,
+      "absolute_volume_difference_m3": 3.0016371332930447e-10,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 954,
+          "baseline_only_wet": 19,
+          "candidate_only_wet": 119,
+          "neither": 144564,
+          "union": 1092,
+          "software_mask_IoU": 0.8736263736263736,
+          "changed_area_m2": 13800
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 818,
+          "baseline_only_wet": 13,
+          "candidate_only_wet": 96,
+          "neither": 144729,
+          "union": 927,
+          "software_mask_IoU": 0.8824163969795038,
+          "changed_area_m2": 10900
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 574,
+          "baseline_only_wet": 20,
+          "candidate_only_wet": 59,
+          "neither": 145003,
+          "union": 653,
+          "software_mask_IoU": 0.8790199081163859,
+          "changed_area_m2": 7900
+        }
+      ]
+    },
+    {
+      "time_s": 1500,
+      "baseline_sha256": "5394986092efb968bb7bfafb7c881e2c9bdff60ac60dd13942c58f04190bd52e",
+      "candidate_sha256": "bc70340aae871e1b570e27b12407f24ee9a7d0875a22962e334200d781bf40f6",
+      "max_abs_depth_difference_m": 0.538843466019,
+      "domain_mean_abs_depth_difference_m": 0.0001333189920492187,
+      "absolute_volume_difference_m3": 1.699748675143553e-09,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 1363,
+          "baseline_only_wet": 39,
+          "candidate_only_wet": 160,
+          "neither": 144094,
+          "union": 1562,
+          "software_mask_IoU": 0.8725992317541613,
+          "changed_area_m2": 19900
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 1176,
+          "baseline_only_wet": 25,
+          "candidate_only_wet": 157,
+          "neither": 144298,
+          "union": 1358,
+          "software_mask_IoU": 0.865979381443299,
+          "changed_area_m2": 18200
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 837,
+          "baseline_only_wet": 39,
+          "candidate_only_wet": 94,
+          "neither": 144686,
+          "union": 970,
+          "software_mask_IoU": 0.8628865979381444,
+          "changed_area_m2": 13300
+        }
+      ]
+    },
+    {
+      "time_s": 1800,
+      "baseline_sha256": "130994600c4cb497b89390851707ebc8acdeeb01f42707d6581a40f08251d0b9",
+      "candidate_sha256": "9d878440569edc633b1cd20930095a87872b0ff134ece9b98ec6f0373d2521d5",
+      "max_abs_depth_difference_m": 0.623054397729,
+      "domain_mean_abs_depth_difference_m": 0.0001709783904832894,
+      "absolute_volume_difference_m3": 7.996492357165152e-10,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 1710,
+          "baseline_only_wet": 50,
+          "candidate_only_wet": 189,
+          "neither": 143707,
+          "union": 1949,
+          "software_mask_IoU": 0.8773730118009235,
+          "changed_area_m2": 23900
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 1484,
+          "baseline_only_wet": 27,
+          "candidate_only_wet": 181,
+          "neither": 143964,
+          "union": 1692,
+          "software_mask_IoU": 0.8770685579196218,
+          "changed_area_m2": 20800
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 1102,
+          "baseline_only_wet": 35,
+          "candidate_only_wet": 143,
+          "neither": 144376,
+          "union": 1280,
+          "software_mask_IoU": 0.8609375,
+          "changed_area_m2": 17800
+        }
+      ]
+    },
+    {
+      "time_s": 2100,
+      "baseline_sha256": "8de6ae452210490f9c74a1f7a42c3cac7c683f8215695001b30a119acaf32789",
+      "candidate_sha256": "f966276e8057db919dd7af8093593cac692eef969a7c5060340f0c5246dad197",
+      "max_abs_depth_difference_m": 0.6387338793680001,
+      "domain_mean_abs_depth_difference_m": 0.00019513928728851537,
+      "absolute_volume_difference_m3": 1.2002239480057852e-09,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 2154,
+          "baseline_only_wet": 58,
+          "candidate_only_wet": 237,
+          "neither": 143207,
+          "union": 2449,
+          "software_mask_IoU": 0.879542670477746,
+          "changed_area_m2": 29500
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 1854,
+          "baseline_only_wet": 39,
+          "candidate_only_wet": 223,
+          "neither": 143540,
+          "union": 2116,
+          "software_mask_IoU": 0.8761814744801513,
+          "changed_area_m2": 26200
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 1409,
+          "baseline_only_wet": 33,
+          "candidate_only_wet": 157,
+          "neither": 144057,
+          "union": 1599,
+          "software_mask_IoU": 0.8811757348342715,
+          "changed_area_m2": 19000
+        }
+      ]
+    },
+    {
+      "time_s": 2400,
+      "baseline_sha256": "c3c88b18365e754aa97c564f99a0ea41d26a52c7aa4fa7e1b63364cffd890bc1",
+      "candidate_sha256": "57254893b91e03184a79bbd431240712f8f4b9245bf62c4e0c2fa0c8592020ff",
+      "max_abs_depth_difference_m": 0.31358349514799994,
+      "domain_mean_abs_depth_difference_m": 0.00020458813612634562,
+      "absolute_volume_difference_m3": 3.099476231227527e-09,
+      "wet_mask_comparisons": [
+        {
+          "threshold_m": 1e-06,
+          "both_wet": 2712,
+          "baseline_only_wet": 55,
+          "candidate_only_wet": 270,
+          "neither": 142619,
+          "union": 3037,
+          "software_mask_IoU": 0.8929864998353638,
+          "changed_area_m2": 32500
+        },
+        {
+          "threshold_m": 0.001,
+          "both_wet": 2308,
+          "baseline_only_wet": 36,
+          "candidate_only_wet": 279,
+          "neither": 143033,
+          "union": 2623,
+          "software_mask_IoU": 0.8799085017155929,
+          "changed_area_m2": 31500
+        },
+        {
+          "threshold_m": 0.01,
+          "both_wet": 1723,
+          "baseline_only_wet": 26,
+          "candidate_only_wet": 149,
+          "neither": 143758,
+          "union": 1898,
+          "software_mask_IoU": 0.9077976817702845,
+          "changed_area_m2": 17500
+        }
+      ]
+    }
+  ],
+  "first_saved_wet_frame_comparisons": [
+    {
+      "threshold_m": 1e-06,
+      "both_ever_wet": 2712,
+      "baseline_only_ever_wet": 55,
+      "candidate_only_ever_wet": 270,
+      "same_first_saved_frame": 2085,
+      "candidate_earlier_saved_frame": 479,
+      "candidate_later_saved_frame": 148,
+      "max_abs_saved_frame_time_difference_s": 1500,
+      "not_subframe_arrival_time": true
+    },
+    {
+      "threshold_m": 0.001,
+      "both_ever_wet": 2312,
+      "baseline_only_ever_wet": 36,
+      "candidate_only_ever_wet": 278,
+      "same_first_saved_frame": 1761,
+      "candidate_earlier_saved_frame": 430,
+      "candidate_later_saved_frame": 121,
+      "max_abs_saved_frame_time_difference_s": 1500,
+      "not_subframe_arrival_time": true
+    },
+    {
+      "threshold_m": 0.01,
+      "both_ever_wet": 1723,
+      "baseline_only_ever_wet": 26,
+      "candidate_only_ever_wet": 150,
+      "same_first_saved_frame": 1302,
+      "candidate_earlier_saved_frame": 299,
+      "candidate_later_saved_frame": 122,
+      "max_abs_saved_frame_time_difference_s": 1200,
+      "not_subframe_arrival_time": true
+    }
+  ],
+  "claims_not_supported": [
+    "No calibrated truth threshold for wetness",
+    "No two-step convergence claim",
+    "No global real-world accuracy percentage",
+    "2400s is not the full event"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "purpose": "Locate stored early routing differences and test fixed-depth isotropic-friction direction invariance. No solver rerun, calibration or production change.",
+  "times_s": [
+    300,
+    600
+  ],
+  "thresholds_m": [
+    1e-06,
+    0.001,
+    0.01
+  ],
+  "groups": "all cells assigned to nearest original source in Euclidean distance; this is diagnostic grouping, not traced river catchments. Additional archived width>0 mask is nominal SGC channel metadata, not observed water.",
+  "friction_probe": "Extract unchanged dg2::friction function, compile CPU64 minimal harness; apply one actual baseline post-output timestep versus two half steps and exact constant-depth Manning ODE on every active saved cell. Do not claim isolated response explains full routing.",
+  "invariants": "zero roughness identity, isotropic drag preserves momentum direction; exact fixed-depth solution has semigroup property; finite dissipative outputs.",
+  "decision": "If invariants fail, report reproducible operator defect with magnitude, then propose bounded isolated candidate. If no material effect, retain failure evidence and inspect source/limiter coupling instead. No automatic full run.",
+  "cost": "two existing fields per model, tiny harness build/run <=120s each; no heavy hydrodynamic run",
+  "field_passes_added": 0
+}

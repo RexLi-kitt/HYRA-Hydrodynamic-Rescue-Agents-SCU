@@ -1,0 +1,53 @@
+{
+  "closed": {
+    "exit_code": 0,
+    "wall_s": 0.06991929999639979,
+    "exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771",
+    "initial_volume_m3": 240.0,
+    "final_volume_m3": 240.0,
+    "min_depth_m": 1.0,
+    "finite_nonnegative": true,
+    "steps": 26,
+    "end_s": 0.5,
+    "total_ledger_residual_m3": 0.0,
+    "max_interval_residual_m3": 0.0,
+    "negative_trace_present": false,
+    "mean_bitwise_identical": true,
+    "steps_bitwise_identical": true,
+    "passed": true
+  },
+  "drain_E": {
+    "exit_code": 0,
+    "wall_s": 0.03469729999778792,
+    "exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771",
+    "initial_volume_m3": 240.0,
+    "final_volume_m3": 236.34577107330963,
+    "min_depth_m": 0.853074684382084,
+    "finite_nonnegative": true,
+    "steps": 26,
+    "end_s": 0.5,
+    "total_ledger_residual_m3": 1.7430140000000003e-13,
+    "max_interval_residual_m3": 3.1941e-13,
+    "negative_trace_present": false,
+    "mean_bitwise_identical": true,
+    "steps_bitwise_identical": true,
+    "passed": true
+  },
+  "point_and_outlet": {
+    "exit_code": 0,
+    "wall_s": 0.03416009999637026,
+    "exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771",
+    "initial_volume_m3": 240.0,
+    "final_volume_m3": 236.35077107316272,
+    "min_depth_m": 0.853074677448644,
+    "finite_nonnegative": true,
+    "steps": 26,
+    "end_s": 0.5,
+    "total_ledger_residual_m3": 1.965000000000001e-14,
+    "max_interval_residual_m3": 1.5943e-13,
+    "negative_trace_present": false,
+    "mean_bitwise_identical": true,
+    "steps_bitwise_identical": true,
+    "passed": true
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "file": "actual-step-sensitivity.png",
+    "sha256": "c98b105aeb28cce61b355f9e7d0834da96e3934c5f41d8f974e5b565ad735080",
+    "bytes": 84958
+  },
+  {
+    "file": "analyze_sensitivity85.py",
+    "sha256": "6140fed84d2a8686e5b92ace7bc4a4115b74af01d4848b9bc01953536ce248bb",
+    "bytes": 4658
+  },
+  {
+    "file": "audit-round85-20261030.md",
+    "sha256": "a7fc450150dd0a15d7f8ecacb50c567420419f249a9361a77a4b118fefcfaf5d",
+    "bytes": 6810
+  },
+  {
+    "file": "comparison.json",
+    "sha256": "83bbf4001c93184126d7bd6f32a6c47b9268e4f3b7afb21dbd14720e257f5b64",
+    "bytes": 12944
+  },
+  {
+    "file": "configuration-hashes.json",
+    "sha256": "b9cf6ab8e77063f4fa9406f85f61f4d8c3e438e0d19799101637a9a0f738dee4",
+    "bytes": 1761
+  },
+  {
+    "file": "full-mask-comparisons.npz",
+    "sha256": "d04c58bd46452f3a197945e60c201193c355cf723dc427a883eb8c7215bb1326",
+    "bytes": 43743
+  },
+  {
+    "file": "independent-step-verification.json",
+    "sha256": "366938be2c0dd7bb15fdbf9b8b2865f10bb7f61c52bc469ed6f18ec5ffeffab8",
+    "bytes": 996
+  },
+  {
+    "file": "protocol.json",
+    "sha256": "d207ee12a3e8376897c93cabb50a82ca803a125077f9d52e1268f2147f5a9d5e",
+    "bytes": 1441
+  },
+  {
+    "file": "publish_sensitivity85.py",
+    "sha256": "a7b6a6c0d8aafad42642d661fcc562edfa1c48af68b04373c963609cf72ba278",
+    "bytes": 11041
+  },
+  {
+    "file": "raw-experiment.zip",
+    "sha256": "ac80c0c63ea098a54b58f722778eb3dff32f5c4bcdef5988a2084856995a6e92",
+    "bytes": 4795574
+  },
+  {
+    "file": "run_sensitivity85.py",
+    "sha256": "e94d8d8d62ff9e95c0af4f94b56bc7e9f1dc06b23d38375a383bc9a9cf58defd",
+    "bytes": 4991
+  },
+  {
+    "file": "status.json",
+    "sha256": "4f75447836dd465bb60a78df2b77ceb1ace81efd92498f257cd4d0252d43d5af",
+    "bytes": 1776
+  }
+]

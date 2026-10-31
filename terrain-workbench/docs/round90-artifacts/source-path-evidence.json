@@ -1,0 +1,666 @@
+[
+  {
+    "file": "pars.cpp",
+    "sha256": "2d5feef88e5b553d40e98c7e1c3e13d4fc82a2c473e997480ef50f6dbf34c3e7",
+    "lines": [
+      {
+        "line": 730,
+        "text": "\tif (read_empty_param(param_name, line_number, param_value_ptr, \"SGC_enable\", verbose, mode))"
+      },
+      {
+        "line": 731,
+        "text": "\t{"
+      },
+      {
+        "line": 732,
+        "text": "\t\t// enables the sgm_fast optimized version, without necessarily having any channels"
+      },
+      {
+        "line": 733,
+        "text": "\t\tStatesptr->SGC = ON;"
+      },
+      {
+        "line": 734,
+        "text": "\t\tStatesptr->acceleration = ON; // sug-grid channels only work with acceleration model so ensure its in this model."
+      },
+      {
+        "line": 735,
+        "text": "\t\tStatesptr->adaptive_ts = OFF;"
+      },
+      {
+        "line": 736,
+        "text": "\t\tStatesptr->qlim = OFF;"
+      },
+      {
+        "line": 737,
+        "text": "\t\tif (verbose == ON) printf(\"Using sub-grid channels and acceleration formulation\\n\");"
+      }
+    ]
+  },
+  {
+    "file": "pars.cpp",
+    "sha256": "2d5feef88e5b553d40e98c7e1c3e13d4fc82a2c473e997480ef50f6dbf34c3e7",
+    "lines": [
+      {
+        "line": 658,
+        "text": "\tif (read_empty_param(param_name, line_number, param_value_ptr, \"drycheckoff\", verbose, mode))"
+      },
+      {
+        "line": 659,
+        "text": "\t{ // turns DryCheck off use at own risk!"
+      },
+      {
+        "line": 660,
+        "text": "\t\tStatesptr->drychecking = OFF;"
+      },
+      {
+        "line": 661,
+        "text": "\t\tif (verbose == ON) printf(\"DryCheck is off\\n\");"
+      },
+      {
+        "line": 662,
+        "text": "\t\treturn;"
+      },
+      {
+        "line": 663,
+        "text": "\t}"
+      }
+    ]
+  },
+  {
+    "file": "input.cpp",
+    "sha256": "0f1bccf06529bfa4dc4668dcb4ba334e67f72c53969c4d1fb7500cdd2ee86d25",
+    "lines": [
+      {
+        "line": 1306,
+        "text": "\tFILE *fp = LoadDomainGeometry(Fnameptr->demfilename, Parptr, verbose,"
+      },
+      {
+        "line": 1307,
+        "text": "\t\t\t no_data_value);"
+      },
+      {
+        "line": 1308,
+        "text": ""
+      },
+      {
+        "line": 1309,
+        "text": "\t// allocate memory for arrays, Note the () at the end ensures all elements are initialised to zero"
+      },
+      {
+        "line": 1310,
+        "text": "\tArrptr->H = memory_allocate_zero_numeric_legacy(Parptr->xsz*Parptr->ysz);"
+      },
+      {
+        "line": 1311,
+        "text": "\t// If Roe==on allocate memory (JN/IV) "
+      },
+      {
+        "line": 1312,
+        "text": "\tif (Statesptr->Roe == ON)"
+      },
+      {
+        "line": 1313,
+        "text": "\t{"
+      },
+      {
+        "line": 1314,
+        "text": "\t\tArrptr->HU = memory_allocate_zero_numeric_legacy(Parptr->xsz*Parptr->ysz);"
+      }
+    ]
+  },
+  {
+    "file": "input.cpp",
+    "sha256": "0f1bccf06529bfa4dc4668dcb4ba334e67f72c53969c4d1fb7500cdd2ee86d25",
+    "lines": [
+      {
+        "line": 2155,
+        "text": "{"
+      },
+      {
+        "line": 2156,
+        "text": "\tFILE *fp;"
+      },
+      {
+        "line": 2157,
+        "text": "\tint i, j;"
+      },
+      {
+        "line": 2158,
+        "text": "\tchar dum[80];"
+      },
+      {
+        "line": 2159,
+        "text": "\tNUMERIC_TYPE no_data_value = -9999, tmp;"
+      },
+      {
+        "line": 2160,
+        "text": ""
+      },
+      {
+        "line": 2161,
+        "text": "\tif (strlen(Fnameptr->SGCwidthfilename) == 0 && strlen(Fnameptr->SGCbankfilename) == 0)"
+      },
+      {
+        "line": 2162,
+        "text": "\t{"
+      },
+      {
+        "line": 2163,
+        "text": "\t\tif (verbose == ON) printf(\"Creating empty SGCwidth and bed arrays\\t\");"
+      },
+      {
+        "line": 2164,
+        "text": "\t\tmemset(Arrptr->SGCwidth, 0, sizeof(NUMERIC_TYPE)*(Parptr->xsz)*(Parptr->ysz));"
+      },
+      {
+        "line": 2165,
+        "text": "\t\tmemcpy(Arrptr->SGCz, Arrptr->DEM, sizeof(NUMERIC_TYPE)*(Parptr->xsz)*(Parptr->ysz));"
+      },
+      {
+        "line": 2166,
+        "text": "\t}"
+      },
+      {
+        "line": 2167,
+        "text": "\telse"
+      },
+      {
+        "line": 2168,
+        "text": "\t{"
+      },
+      {
+        "line": 2169,
+        "text": "\t\tfp = fopen_or_die(Fnameptr->SGCbankfilename, \"r\", \"Loading SGCbank \", verbose);"
+      },
+      {
+        "line": 2170,
+        "text": ""
+      }
+    ]
+  },
+  {
+    "file": "lisflood.cpp",
+    "sha256": "33d58c359183370da4126e6d8e9151716f6aad0ea35a569e402846e0a643b3dc",
+    "lines": [
+      {
+        "line": 453,
+        "text": ""
+      },
+      {
+        "line": 454,
+        "text": "\tif (SimStates.SGC == ON) LoadSGC(Fnameptr, Parptr, Arrptr, Statesptr, verbosemode); // load sub grid channels"
+      },
+      {
+        "line": 455,
+        "text": "\tif (SimStates.SGC == ON && SimStates.SGCchanprams == ON) LoadSGCChanPrams(Fnameptr, Statesptr, Parptr, SGCptr, verbosemode); // This loads the parameters for the SGC group information"
+      },
+      {
+        "line": 456,
+        "text": "\tif (SimStates.SGC == ON) CalcSGCz(Fnameptr, Statesptr, Parptr, Arrptr, SGCptr, verbosemode);"
+      },
+      {
+        "line": 457,
+        "text": ""
+      },
+      {
+        "line": 458,
+        "text": "\tif (SimStates.startfile == ON)"
+      },
+      {
+        "line": 459,
+        "text": "    {"
+      },
+      {
+        "line": 460,
+        "text": "        LoadStart(Fnameptr, Statesptr, Parptr, Arrptr, SGCptr, verbosemode);"
+      },
+      {
+        "line": 461,
+        "text": "        if (SimStates.startq2d == ON)"
+      },
+      {
+        "line": 462,
+        "text": "        {"
+      },
+      {
+        "line": 463,
+        "text": "            LoadStartQ2D(Fnameptr, Parptr, Arrptr, verbosemode);"
+      },
+      {
+        "line": 464,
+        "text": "        }"
+      },
+      {
+        "line": 465,
+        "text": "    }"
+      },
+      {
+        "line": 466,
+        "text": "\tif (SimStates.binarystartfile == ON) LoadBinaryStart(Fnameptr, Statesptr, Parptr, Arrptr, SGCptr, verbosemode);"
+      },
+      {
+        "line": 467,
+        "text": ""
+      }
+    ]
+  },
+  {
+    "file": "lisflood.cpp",
+    "sha256": "33d58c359183370da4126e6d8e9151716f6aad0ea35a569e402846e0a643b3dc",
+    "lines": [
+      {
+        "line": 733,
+        "text": "\t//start simulation"
+      },
+      {
+        "line": 734,
+        "text": "\ttime(&ParSolver.time_start);"
+      },
+      {
+        "line": 735,
+        "text": "\tif (Statesptr->SGC == ON) // SGC output"
+      },
+      {
+        "line": 736,
+        "text": "\t{"
+      },
+      {
+        "line": 737,
+        "text": "\t\tFast_MainStart(Fnameptr, &Fps, Statesptr, Parptr, Solverptr, BCptr, Stageptr, CSTypePtr, Arrptr, SGCptr, ChannelSegmentsVecPtr, Damptr, verbosemode); //Damptr added by FEOL"
+      },
+      {
+        "line": 738,
+        "text": "\t\t//IterateQ(Fnameptr, &Fps, Statesptr, Parptr, Solverptr, BCptr, Stageptr, CSTypePtr, Arrptr, SGCptr, RiversIndexVecPtr, RiversIndexPtr, ChannelSegmentsVecPtr, verbose);"
+      },
+      {
+        "line": 739,
+        "text": "\t}"
+      },
+      {
+        "line": 740,
+        "text": "\telse if (Statesptr->fv1 == ON)"
+      }
+    ]
+  },
+  {
+    "file": "lisflood2/sgm_fast.cpp",
+    "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+    "lines": [
+      {
+        "line": 2378,
+        "text": "\t\tint ps_x = ps_info.ws_cell.sg_cell_x[ws_index];"
+      },
+      {
+        "line": 2379,
+        "text": "\t\tint ps_y = ps_info.ws_cell.sg_cell_y[ws_index];"
+      },
+      {
+        "line": 2380,
+        "text": "\t\t// location in vector"
+      },
+      {
+        "line": 2381,
+        "text": "\t\tgrid_index = ps_info.ws_cell.sg_cell_grid_index_lookup[ws_index];"
+      },
+      {
+        "line": 2382,
+        "text": "\t\t// different boundary conditions"
+      },
+      {
+        "line": 2383,
+        "text": "\t\tswitch (ps_info.Ident[ws_index])"
+      },
+      {
+        "line": 2384,
+        "text": "\t\t{"
+      },
+      {
+        "line": 2385,
+        "text": "\t\t\t//NOTE HVAR and HFIX applied after update H"
+      },
+      {
+        "line": 2386,
+        "text": "\t\tcase QVAR5: //QVAR ps.Val already set to the interpolated value"
+      },
+      {
+        "line": 2387,
+        "text": "\t\tcase QFIX4:"
+      },
+      {
+        "line": 2388,
+        "text": "\t\t\tdV = ps_info.Val[ws_index] * Q_multiplier * delta_time; // QFIX // Calculate change in volume"
+      },
+      {
+        "line": 2389,
+        "text": "\t\t\tbreak;"
+      },
+      {
+        "line": 2390,
+        "text": "\t\tcase FREE6:"
+      },
+      {
+        "line": 2391,
+        "text": "\t\t\th = h_grid[grid_index] + ps_info.ws_cell.sg_cell_SGC_BankFullHeight[ws_index];"
+      },
+      {
+        "line": 2392,
+        "text": "\t\t\tif (h > depth_thresh)"
+      },
+      {
+        "line": 2393,
+        "text": "\t\t\t{"
+      },
+      {
+        "line": 2394,
+        "text": "\t\t\t\tNUMERIC_TYPE cell_width = getmin(dx_col[ps_y], dy_col[ps_y]);"
+      }
+    ]
+  },
+  {
+    "file": "lisflood2/sgm_fast.cpp",
+    "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+    "lines": [
+      {
+        "line": 3019,
+        "text": ""
+      },
+      {
+        "line": 3020,
+        "text": "\tNUMERIC_TYPE block_Hmax = C(0.0);"
+      },
+      {
+        "line": 3021,
+        "text": ""
+      },
+      {
+        "line": 3022,
+        "text": "\tNUMERIC_TYPE Q_multiplier = C(1.0); // for volume point sources"
+      },
+      {
+        "line": 3023,
+        "text": "\t// CCS Multiplier for Q inputs. If using regular grid, Qs are specified as m^2 and need to be multiplied by dx; "
+      },
+      {
+        "line": 3024,
+        "text": "\t// if using lat-long Qs are specified in m^3 and therefore multiplier is C(1.) Note intialised above as C(1.0)."
+      },
+      {
+        "line": 3025,
+        "text": "\tif (Statesptr->latlong == OFF) Q_multiplier = Parptr->dx;"
+      },
+      {
+        "line": 3026,
+        "text": ""
+      },
+      {
+        "line": 3027,
+        "text": "\tSubGridFlowLookup * sg_cell_flow_lookup = sub_grid_layout->flow_info.sg_cell_flow_lookup;"
+      },
+      {
+        "line": 3028,
+        "text": "\tconst NUMERIC_TYPE * sg_cell_SGC_BankFullHeight = sub_grid_layout->cell_info.sg_cell_SGC_BankFullHeight;"
+      }
+    ]
+  },
+  {
+    "file": "lisflood2/sgm_fast.cpp",
+    "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+    "lines": [
+      {
+        "line": 3714,
+        "text": "\t\t{"
+      },
+      {
+        "line": 3715,
+        "text": "\t\t\tconst int ps_count = ps_layout->ps_row_count[j];"
+      },
+      {
+        "line": 3716,
+        "text": "\t\t\tconst int row_cols_padded = ps_layout->row_cols_padded;"
+      },
+      {
+        "line": 3717,
+        "text": "\t\t\tconst int row_start = j * row_cols_padded;"
+      },
+      {
+        "line": 3718,
+        "text": "\t\t\tWaterSource ps_info = ps_layout->ps_info;"
+      },
+      {
+        "line": 3719,
+        "text": "\t\t\tfor (int i = 0; i < ps_count; i++)"
+      },
+      {
+        "line": 3720,
+        "text": "\t\t\t{"
+      },
+      {
+        "line": 3721,
+        "text": "\t\t\t\tint ws_index = row_start + i;"
+      },
+      {
+        "line": 3722,
+        "text": "\t\t\t\tif (ps_info.timeSeries[ws_index] != NULL)"
+      },
+      {
+        "line": 3723,
+        "text": "\t\t\t\t{"
+      },
+      {
+        "line": 3724,
+        "text": "\t\t\t\t\tps_info.Val[ws_index] = InterpolateTimeSeries(ps_info.timeSeries[ws_index], curr_time);"
+      },
+      {
+        "line": 3725,
+        "text": "\t\t\t\t}"
+      },
+      {
+        "line": 3726,
+        "text": "\t\t\t}"
+      },
+      {
+        "line": 3727,
+        "text": "\t\t}"
+      },
+      {
+        "line": 3728,
+        "text": ""
+      },
+      {
+        "line": 3729,
+        "text": "\t\t// SGC_BCs updates the Q flow at the boundaries"
+      }
+    ]
+  },
+  {
+    "file": "lisflood2/sgm_fast.cpp",
+    "sha256": "f22ef30338f6c15d6bbdbcd4a5af29d04802de5857fb59850b8706fe9ebb1c5b",
+    "lines": [
+      {
+        "line": 4613,
+        "text": "\t\t\t\t\t}"
+      },
+      {
+        "line": 4614,
+        "text": ""
+      },
+      {
+        "line": 4615,
+        "text": "\t\t\t\t\t// Checkpointing"
+      },
+      {
+        "line": 4616,
+        "text": "\t\t\t\t\t//if (Statesptr->checkpoint == ON)"
+      },
+      {
+        "line": 4617,
+        "text": "\t\t\t\t\t//{"
+      },
+      {
+        "line": 4618,
+        "text": "\t\t\t\t\t//\t//iteration time"
+      },
+      {
+        "line": 4619,
+        "text": "\t\t\t\t\t//\ttime(&Solverptr->time_check);"
+      },
+      {
+        "line": 4620,
+        "text": "\t\t\t\t\t//\tSolverptr->itrn_time_now = Solverptr->itrn_time + difftime(Solverptr->time_check, Solverptr->time_start);"
+      },
+      {
+        "line": 4621,
+        "text": "\t\t\t\t\t//\tif (Solverptr->itrn_time_now >= Parptr->nextcheck)"
+      },
+      {
+        "line": 4622,
+        "text": "\t\t\t\t\t//\t{"
+      },
+      {
+        "line": 4623,
+        "text": "\t\t\t\t\t//\t\tWriteCheckpoint(Fnameptr, Statesptr, Parptr, Solverptr, BCptr, ChannelSegments, Arrptr, verbose);"
+      },
+      {
+        "line": 4624,
+        "text": "\t\t\t\t\t//\t\tParptr->nextcheck = Solverptr->itrn_time_now + (Parptr->checkfreq * 3600.0);"
+      },
+      {
+        "line": 4625,
+        "text": "\t\t\t\t\t//\t}"
+      },
+      {
+        "line": 4626,
+        "text": "\t\t\t\t\t//}"
+      },
+      {
+        "line": 4627,
+        "text": "\t\t\t\t}"
+      }
+    ]
+  },
+  {
+    "file": "lisflood2/file_tool.cpp",
+    "sha256": "dea34290fc1a0bc5a6f01d8c949cbbfc401da38150bddd4965024f002432b8e7",
+    "lines": [
+      {
+        "line": 661,
+        "text": "\tfprintf(fp, \"NODATA_value  %\" NUM_FMT\"\\n\", NULLVAL);"
+      },
+      {
+        "line": 662,
+        "text": ""
+      },
+      {
+        "line": 663,
+        "text": "\tfor (j = 0; j < grid_rows; j++)"
+      },
+      {
+        "line": 664,
+        "text": "\t{"
+      },
+      {
+        "line": 665,
+        "text": "\t\tfor (i = 0; i < grid_cols; i++)"
+      },
+      {
+        "line": 666,
+        "text": "\t\t{"
+      },
+      {
+        "line": 667,
+        "text": "\t\t\tfprintf(fp, \"%.3\" NUM_FMT\"\\t\", data[i + j*(grid_cols_padded)]);"
+      },
+      {
+        "line": 668,
+        "text": "\t\t}"
+      },
+      {
+        "line": 669,
+        "text": "\t\tfprintf(fp, \"\\n\");"
+      },
+      {
+        "line": 670,
+        "text": "\t}"
+      }
+    ]
+  },
+  {
+    "file": "lisflood2/file_tool.cpp",
+    "sha256": "dea34290fc1a0bc5a6f01d8c949cbbfc401da38150bddd4965024f002432b8e7",
+    "lines": [
+      {
+        "line": 690,
+        "text": ""
+      },
+      {
+        "line": 691,
+        "text": "\tconst NUMERIC_TYPE nullval = NULLVAL;"
+      },
+      {
+        "line": 692,
+        "text": "\t//TODO check if need to be consistent with old version - or can add header for double/float"
+      },
+      {
+        "line": 693,
+        "text": "\t// float version won't be compatible with old version"
+      },
+      {
+        "line": 694,
+        "text": "\t//fwrite(&sizeofNUMERIC_TYPE, sizeof(int), 1, fp);"
+      },
+      {
+        "line": 695,
+        "text": ""
+      },
+      {
+        "line": 696,
+        "text": "\tfwrite(&grid_cols, sizeof(int), 1, fp);"
+      },
+      {
+        "line": 697,
+        "text": "\tfwrite(&grid_rows, sizeof(int), 1, fp);"
+      },
+      {
+        "line": 698,
+        "text": "\tfwrite(&xllcorner, sizeof(NUMERIC_TYPE), 1, fp);"
+      },
+      {
+        "line": 699,
+        "text": "\tfwrite(&yllcorner, sizeof(NUMERIC_TYPE), 1, fp);"
+      },
+      {
+        "line": 700,
+        "text": "\tfwrite(&cell_size, sizeof(NUMERIC_TYPE), 1, fp);"
+      },
+      {
+        "line": 701,
+        "text": "\tfwrite(&nullval, sizeof(NUMERIC_TYPE), 1, fp);"
+      },
+      {
+        "line": 702,
+        "text": ""
+      },
+      {
+        "line": 703,
+        "text": "\tfor (j = 0; j < grid_rows; j++)"
+      },
+      {
+        "line": 704,
+        "text": "\t{"
+      },
+      {
+        "line": 705,
+        "text": "\t\tint row_start_index = j * grid_cols_padded;"
+      },
+      {
+        "line": 706,
+        "text": "\t\tfwrite(data + row_start_index, sizeof(NUMERIC_TYPE), grid_cols, fp);"
+      },
+      {
+        "line": 707,
+        "text": "\t}"
+      }
+    ]
+  }
+]

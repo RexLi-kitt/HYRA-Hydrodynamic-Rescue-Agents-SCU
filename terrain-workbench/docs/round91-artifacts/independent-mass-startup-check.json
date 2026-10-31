@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "all_steps_recorded": true,
+    "strictly_increasing_times": true,
+    "finite_mass": true,
+    "inflow_matches_independent_csv_with_print_precision": true,
+    "integral_budget_within_conservative_print_bound": true,
+    "no_rain_loss_used": true
+  },
+  "gate": true,
+  "actual_end_s": 7200.369,
+  "steps": 10565,
+  "independent_left_inflow_m3": 943738.9117820078,
+  "continuous_csv_inflow_m3": 943817.2986018943,
+  "left_vs_continuous_difference_m3": -78.38681988650933,
+  "outflow_from_every_step_printed_rate_m3": 0.0,
+  "last_printed_volume_m3": 943740.0,
+  "independent_budget_residual_m3": -1.0882179922191426,
+  "conservative_precision_bound_m3": 9.145552843017342,
+  "precision_bound_terms_m3": {
+    "source_time": 0.4733438942220001,
+    "outflow_time": 0.0,
+    "outflow_rate_rounding": 3.6001845,
+    "bdy_csv_export": 0.07200369000000001,
+    "volume_print": 5.0,
+    "sum_abs_internal_residual": 1.075879534025414e-05
+  },
+  "max_qin_csv_difference_m3_s": 0.0005584309717932001,
+  "qin_precision_bound_m3_s": 0.000580511899983889,
+  "source_sha256": "0003e7aa361af7723d4171c47a5d2e1665b1d7dfae9395ff2960c2a09c184997",
+  "mass_sha256": "84a51524b09c64e35a55c84cf53c682dbea4b0a52e389af71d7f32a59353f3d4",
+  "limits": [
+    "dry initial state and no rain/infiltration/evaporation as this archived configuration",
+    "uses every-step printed time/rate precision bounds, not exact boundary volume instrumentation",
+    "passes internal accounting only; no observational accuracy or full-time field positivity claim"
+  ]
+}

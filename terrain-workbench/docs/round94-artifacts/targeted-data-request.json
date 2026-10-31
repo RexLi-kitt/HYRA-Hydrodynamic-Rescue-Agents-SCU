@@ -1,0 +1,65 @@
+{
+  "crs": "EPSG:27700; coordinates metres; elevations require explicit vertical datum matching ODN/mASL.",
+  "targets": [
+    {
+      "name": "South missed cluster2031",
+      "bbox": [
+        339990,
+        554820,
+        340350,
+        555185
+      ],
+      "bottleneck": [
+        340152.5,
+        555117.5
+      ],
+      "nearby2016_assets": [
+        "Rome Street Rly No6 (340113,555150)",
+        "Rome Street Arches(340145,555204)"
+      ],
+      "needed": [
+        "Pre2005 bare-ground/rail embankment and wall cross-sections",
+        "Openings and culvert/underpass invert/width/height",
+        "Location/time/size of2005 gasworks wall damage if historically linked"
+      ]
+    },
+    {
+      "name": "Marks45/47/48 shared bottleneck",
+      "point": [
+        341272.5,
+        555622.5
+      ],
+      "raster_crest_m": 17.100000381469727,
+      "needed": [
+        "Independent historical terrain and passage geometry at this point",
+        "Do not identify as Botcherby bridge; selected register bridge is537.65m away"
+      ]
+    },
+    {
+      "name": "Mark107 bottleneck",
+      "point": [
+        339702.5,
+        555937.5
+      ],
+      "raster_crest_m": 15.710000038146973,
+      "needed": [
+        "Independent historical terrain and underground/surface links",
+        "Do not identify as bridge from proximity alone"
+      ]
+    }
+  ],
+  "all78_incompatible_marks": "Included in all263-diagnostic.json via head_compatibility and model wet flag; retain complete263 table.",
+  "minimum_acceptable_data": [
+    "Original date/event association, horizontal/vertical datum and source location",
+    "Existing/pre-works vs proposed/new structure clearly distinguished",
+    "Dimensions/ground/crest/invert measurements with uncertainty",
+    "For added source: observed or independently justified hydrograph, timing and mass accounting"
+  ],
+  "reject": [
+    "Bed heights chosen from floodmark residuals",
+    "Universal water-level or river-flow increase chosen to fit",
+    "2016 assets or2007-2010 new defences used as2005 geometry",
+    "Excluding buildings/failed points from frozen score"
+  ],
+  "minimum_followup": "One independently supported local geometry/structure candidate, full fixed-window comparison, all original wet evidence and internal accounting retained. No justified candidate yet."
+}

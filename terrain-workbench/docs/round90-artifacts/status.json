@@ -1,0 +1,57 @@
+{
+  "state": "completed",
+  "runs": [
+    {
+      "cap_s": 2,
+      "exit_code": 0,
+      "wall_s": 1.0856171999985236,
+      "frames": [
+        {
+          "name": "check-0000.wd",
+          "finite": true,
+          "minimum_h": 0.0,
+          "volume_m3": 4.625
+        },
+        {
+          "name": "check-0001.wd",
+          "finite": true,
+          "minimum_h": 0.0,
+          "volume_m3": 81.80000000000001
+        },
+        {
+          "name": "check-0002.wd",
+          "finite": true,
+          "minimum_h": 0.0,
+          "volume_m3": 190.075
+        }
+      ],
+      "finite_nonnegative_frames": true
+    },
+    {
+      "cap_s": 1,
+      "exit_code": 0,
+      "wall_s": 1.161118500000157,
+      "frames": [
+        {
+          "name": "check-0000.wd",
+          "finite": true,
+          "minimum_h": 0.0,
+          "volume_m3": 2.3
+        },
+        {
+          "name": "check-0001.wd",
+          "finite": true,
+          "minimum_h": 0.0,
+          "volume_m3": 82.37500000000001
+        },
+        {
+          "name": "check-0002.wd",
+          "finite": true,
+          "minimum_h": 0.0,
+          "volume_m3": 190.85000000000002
+        }
+      ],
+      "finite_nonnegative_frames": true
+    }
+  ]
+}

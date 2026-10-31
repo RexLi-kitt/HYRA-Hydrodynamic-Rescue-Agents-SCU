@@ -1,0 +1,273 @@
+{
+  "evidence": "paired numerical sensitivity, not independent observations",
+  "frames": [
+    {
+      "time_s": 300,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.02834618913600001,
+        "L1_depth_volume_m3": 69.103759561,
+        "net_volume_change_m3": -3.9998210906583287e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 130,
+            "a_only_wet": 8,
+            "b_only_wet": 43,
+            "changed_cells": 51
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 101,
+            "a_only_wet": 7,
+            "b_only_wet": 29,
+            "changed_cells": 36
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 79,
+            "a_only_wet": 1,
+            "b_only_wet": 4,
+            "changed_cells": 5
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.01141104929800002,
+        "L1_depth_volume_m3": 28.7054542647,
+        "net_volume_change_m3": 9.997627725688574e-11,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 219,
+            "a_only_wet": 6,
+            "b_only_wet": 2,
+            "changed_cells": 8
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 161,
+            "a_only_wet": 1,
+            "b_only_wet": 3,
+            "changed_cells": 4
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 85,
+            "a_only_wet": 2,
+            "b_only_wet": 0,
+            "changed_cells": 2
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.04725334774699999,
+        "L1_depth_volume_m3": 128.24999094330002,
+        "net_volume_change_m3": -4.999861418983342e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 133,
+            "a_only_wet": 5,
+            "b_only_wet": 92,
+            "changed_cells": 97
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 100,
+            "a_only_wet": 8,
+            "b_only_wet": 62,
+            "changed_cells": 70
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 79,
+            "a_only_wet": 1,
+            "b_only_wet": 8,
+            "changed_cells": 9
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.030318207909,
+        "L1_depth_volume_m3": 74.94903628820002,
+        "net_volume_change_m3": -3.400058012914542e-14,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 171,
+            "a_only_wet": 2,
+            "b_only_wet": 50,
+            "changed_cells": 52
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 129,
+            "a_only_wet": 1,
+            "b_only_wet": 35,
+            "changed_cells": 36
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 82,
+            "a_only_wet": 1,
+            "b_only_wet": 3,
+            "changed_cells": 4
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.5974397389627291,
+        "L1_reduction_fraction": 0.5846035809475632,
+        "changed_cells_before_after": [
+          [
+            51,
+            8
+          ],
+          [
+            36,
+            4
+          ],
+          [
+            5,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "time_s": 600,
+      "old_cfl_pair": {
+        "max_abs_depth_m": 0.028369655381000003,
+        "L1_depth_volume_m3": 135.73412484310006,
+        "net_volume_change_m3": 8.999484209064323e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 322,
+            "a_only_wet": 7,
+            "b_only_wet": 33,
+            "changed_cells": 40
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 245,
+            "a_only_wet": 7,
+            "b_only_wet": 45,
+            "changed_cells": 52
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 150,
+            "a_only_wet": 5,
+            "b_only_wet": 26,
+            "changed_cells": 31
+          }
+        ]
+      },
+      "new_cfl_pair": {
+        "max_abs_depth_m": 0.025117816513999913,
+        "L1_depth_volume_m3": 73.44673709840006,
+        "net_volume_change_m3": -4.000372949564124e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 428,
+            "a_only_wet": 16,
+            "b_only_wet": 12,
+            "changed_cells": 28
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 329,
+            "a_only_wet": 9,
+            "b_only_wet": 7,
+            "changed_cells": 16
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 190,
+            "a_only_wet": 13,
+            "b_only_wet": 3,
+            "changed_cells": 16
+          }
+        ]
+      },
+      "change_at_cfl033": {
+        "max_abs_depth_m": 0.05737373787000011,
+        "L1_depth_volume_m3": 246.3403897103001,
+        "net_volume_change_m3": 4.999232798563735e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 322,
+            "a_only_wet": 7,
+            "b_only_wet": 122,
+            "changed_cells": 129
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 246,
+            "a_only_wet": 6,
+            "b_only_wet": 92,
+            "changed_cells": 98
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 153,
+            "a_only_wet": 2,
+            "b_only_wet": 50,
+            "changed_cells": 52
+          }
+        ]
+      },
+      "change_at_cfl0165": {
+        "max_abs_depth_m": 0.03057856704600015,
+        "L1_depth_volume_m3": 137.52615572699997,
+        "net_volume_change_m3": -8.000551528783775e-10,
+        "masks": [
+          {
+            "threshold_m": 1e-06,
+            "both_wet": 347,
+            "a_only_wet": 8,
+            "b_only_wet": 93,
+            "changed_cells": 101
+          },
+          {
+            "threshold_m": 0.001,
+            "both_wet": 286,
+            "a_only_wet": 4,
+            "b_only_wet": 50,
+            "changed_cells": 54
+          },
+          {
+            "threshold_m": 0.01,
+            "both_wet": 175,
+            "a_only_wet": 1,
+            "b_only_wet": 18,
+            "changed_cells": 19
+          }
+        ]
+      },
+      "sensitivity_change": {
+        "max_abs_depth_reduction_fraction": 0.11462384097827083,
+        "L1_reduction_fraction": 0.4588926168470915,
+        "changed_cells_before_after": [
+          [
+            40,
+            28
+          ],
+          [
+            52,
+            16
+          ],
+          [
+            31,
+            16
+          ]
+        ]
+      }
+    }
+  ],
+  "field_passes_added": 0,
+  "production_adopted": false
+}

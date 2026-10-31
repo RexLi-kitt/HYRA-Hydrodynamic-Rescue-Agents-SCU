@@ -1,0 +1,16 @@
+{
+  "scope": "all author-archived Carlisle2005 maximum-outline polygons intersecting fixed Kabir5m grid; existing five polygons and all263 marks preserved",
+  "registered_before_full_event_simulation": true,
+  "observational_units": "whole 5m cell footprints fully covered by the reported event-maximum outline union; partially intersected cells separately boundary-ambiguous; outside outline is unknown, NOT dry",
+  "classification_indicator": "maximum simulated depth >0.1m following archived round68 extent.py analysis indicator; additional 0.01m and0.3m classifications reported as fixed sensitivity, not selected for score",
+  "limits": [
+    "0.1m is an analysis indicator, not personal/vehicle safety",
+    "outline precision has no calibrated uncertainty bound; edge ambiguity is geometric only",
+    "source polygons may contain permanent channels; does not prove newly flooded dry land",
+    "no known-dry evidence, so cannot infer false alarms, overall accuracy, IoU or verified route accessibility",
+    "no observed arrival/recession maps here; maximum map only",
+    "other qualitative requirements remain unverified, cannot be deleted for pass"
+  ],
+  "pass_rule": "report every pre-registered fully covered cell as supported or missed using fixed main indicator; any miss prevents all-consistent result; boundary and external unknowns preserved, not in correct-count",
+  "no_existing_simulation_fields_read": true
+}

@@ -1,0 +1,16 @@
+{
+  "all13_real_fields_independent_methods_exactly_equal": true,
+  "tiny_barrier_tests": [
+    {
+      "sill": 1.0,
+      "passed": true
+    },
+    {
+      "sill": 3.0,
+      "passed": true
+    }
+  ],
+  "all_input_hashes_verified": true,
+  "all1457_target_cells_retained": true,
+  "all263_records_unchanged": true
+}

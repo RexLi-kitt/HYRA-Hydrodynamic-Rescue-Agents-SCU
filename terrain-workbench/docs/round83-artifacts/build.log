@@ -1,0 +1,282 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- The C compiler identification is MSVC 19.44.35219.0
+-- The CXX compiler identification is MSVC 19.44.35219.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_C: -openmp (found version "2.0")
+-- Found OpenMP_CXX: -openmp (found version "2.0")
+-- Found OpenMP: TRUE (found version "2.0")
+-- Configuring done (9.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Lenovo/Documents/ChatGPT/无人机集群搜救大创/outputs/round83/build-rk-retry-cpu64
+适用于 .NET Framework MSBuild 版本 17.14.23+b0019275e
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/Lenovo/Documents/ChatGPT/无人机集群搜救大创/outputs/round83/lisflood8-rk-retry/CMakeLists.txt
+  lisflood.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/lisflood.cpp”)
+  
+  ch_flow.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/ch_flow.cpp”)
+  
+  chkpnt.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/chkpnt.cpp”)
+  
+  fp_acc.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/fp_acc.cpp”)
+  
+  fp_flow.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/fp_flow.cpp”)
+  
+  fp_trent.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/fp_trent.cpp”)
+  
+  infevap.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/infevap.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\infevap.cpp(133,21): warning C4101: “south”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\infevap.cpp(133,32): warning C4101: “west”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\infevap.cpp(133,27): warning C4101: “east”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\infevap.cpp(133,15): warning C4101: “north”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  iterateq.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/iterateq.cpp”)
+  
+  pars.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/pars.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\pars.cpp(1031,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\pars.cpp(1048,22): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  por_flow.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/por_flow.cpp”)
+  
+  sgc.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/sgc.cpp”)
+  
+  util.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/util.cpp”)
+  
+  utility.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/utility.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\utility.cpp(15,33): warning C4267: “+=”: 从“size_t”转换到“long”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\utility.cpp(28,33): warning C4267: “+=”: 从“size_t”转换到“long”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\utility.cpp(67,21): warning C4267: “+=”: 从“size_t”转换到“long”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\utility.cpp(94,21): warning C4267: “+=”: 从“size_t”转换到“long”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  weir_flow.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/weir_flow.cpp”)
+  
+  DataTypes.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/lisflood2/DataTypes.cpp”)
+  
+  file_tool.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/lisflood2/file_tool.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\file_tool.cpp(516,15): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\file_tool.cpp(522,15): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\file_tool.cpp(563,15): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\file_tool.cpp(612,15): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  lis2_output.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/lisflood2/lis2_output.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lis2_output.cpp(87,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lis2_output.cpp(300,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lis2_output.cpp(360,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lis2_output.cpp(385,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lis2_output.cpp(417,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  lisflood_processing.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/lisflood2/lisflood_processing.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(144,9): warning C4068: 未知的杂注“novector” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(196,9): warning C4068: 未知的杂注“novector” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(477,9): warning C4068: 未知的杂注“novector” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(718,18): warning C4101: “ws_cell”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(755,18): warning C4101: “ws_cell”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(843,18): warning C4101: “source_index”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(1170,22): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(1189,70): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(2008,34): warning C4101: “max_wx”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(2008,42): warning C4101: “max_wy”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(2008,18): warning C4101: “max_dx”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\lisflood_processing.cpp(2008,26): warning C4101: “max_dy”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  sgm_fast.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/lisflood2/sgm_fast.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(718,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(719,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(728,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(729,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(738,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(944,37): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(966,20): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1053,24): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1093,15): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1302,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1365,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1467,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1468,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1547,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1619,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1620,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1714,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1715,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1727,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1728,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1741,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1742,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1830,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1831,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1842,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1843,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1854,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1855,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1913,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1914,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1959,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(1960,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2007,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2008,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2044,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2045,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2555,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2556,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2639,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2807,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2828,29): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2828,25): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2833,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(2897,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3201,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3202,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3233,9): warning C4068: 未知的杂注“ivdep” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3183,8): warning C4101: “i”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3458,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3465,9): warning C4068: 未知的杂注“simd” [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3580,22): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood2\sgm_fast.cpp(3629,22): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  windows_ext.cpp
+  正在生成代码...
+  正在编译...
+  rain.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/rain/rain.cpp”)
+  
+  dg2.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/dg2.cpp”)
+  
+  flux.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/flux.cpp”)
+  
+  fv1.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/fv1.cpp”)
+  
+  hll.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/hll.cpp”)
+  
+  stats.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/stats.cpp”)
+  
+  dg2_output.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/dg2/dg2_output.cpp”)
+  
+  friction.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/dg2/friction.cpp”)
+  
+  slope_limiter.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/dg2/slope_limiter.cpp”)
+  
+  正在生成代码...
+  boundary.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/boundary.cpp”)
+  
+  input.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/input.cpp”)
+  
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(346,41): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(359,42): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(803,51): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(851,30): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(1209,6): warning C4101: “i”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(1303,9): warning C4101: “j”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(1834,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(1863,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(1958,17): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(1921,25): warning C4101: “units”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(2082,18): warning C4101: “units”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(2082,7): warning C4101: “buff”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(2102,18): warning C4101: “units”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(2101,12): warning C4101: “ndata”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(2102,7): warning C4101: “buff”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(2101,9): warning C4101: “j”: 未引用的局部变量 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\input.cpp(2410,20): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  output.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/output.cpp”)
+  
+  boundary.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/boundary.cpp”)
+  
+  fields.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/fields.cpp”)
+  
+  input.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/input.cpp”)
+  
+  output.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/output.cpp”)
+  
+  modifiedvars.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/fv1/modifiedvars.cpp”)
+  
+  fields.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/dg2/fields.cpp”)
+  
+  modifiedvars.cpp
+C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\lisflood8-rk-retry\lisflood.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\lisflood.vcxproj]
+  (编译源文件“../lisflood8-rk-retry/swe/dg2/modifiedvars.cpp”)
+  
+  lisflood.vcxproj -> C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\Release\lisflood.exe
+  C:\Users\Lenovo\Documents\ChatGPT\无人机集群搜救大创\outputs\round83\build-rk-retry-cpu64\Release\lisflood.exe: message: deploying dependencies

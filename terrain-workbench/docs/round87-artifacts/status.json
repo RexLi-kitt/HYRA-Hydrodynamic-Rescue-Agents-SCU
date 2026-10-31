@@ -1,0 +1,71 @@
+{
+  "state": "completed",
+  "exit_code": 0,
+  "wall_s": 279.6532312999989,
+  "exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771",
+  "production_adopted": false,
+  "field_passes_added": 0,
+  "accepted_steps": 5168,
+  "end_s": 2400.0,
+  "median_dt": 0.4789802796704816,
+  "minimum_dt": 0.022444652295007472,
+  "rejections": 0,
+  "frames": [
+    {
+      "file": "check-0000.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 2777.3399999999006,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0001.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 11109.3599999997,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0002.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 24996.0600000009,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0003.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 41660.0000000006,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0004.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 58323.740000001395,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0005.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 74987.2799999981,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0006.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 91658.46999999741,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0007.wd",
+      "finite_nonnegative": true,
+      "volume_m3": 108345.1600000011,
+      "momentum_finite": true
+    }
+  ],
+  "source_m3": 108345.16,
+  "boundary_net_m3": 0.0,
+  "balance_error_m3": 1.0913936421275139e-09,
+  "source_times_equal": true,
+  "boundary_times_equal": true,
+  "early_steps_bitwise_equal": true,
+  "early_all_fields_byte_equal": true,
+  "internal_gate_pass": true
+}

@@ -1,0 +1,47 @@
+{
+  "state": "completed",
+  "field_passes_added": 0,
+  "rejection_stage_counts": {
+    "1": 8,
+    "2": 1
+  },
+  "stage2_retry_observed": true,
+  "matching_original_attempt_prefix_rows": 4644,
+  "steps_contiguous": true,
+  "positive_steps": true,
+  "independent_source_expected_m3": 108345.16,
+  "actual_source_m3": 108345.16,
+  "source_integral_error_m3": 0.0,
+  "rejection_snapshot": {
+    "nx": 476,
+    "ny": 306,
+    "fields": 9,
+    "t_s": 2206.5529233801635,
+    "attempted_dt_s": 0.30729129260956545,
+    "all_coefficients_finite": true,
+    "mean_nonnegative": true,
+    "bytes": 10487260,
+    "not_an_executable_restart": true
+  },
+  "regression_export_bytes_equal": {
+    "closed": {
+      "check-0000.elev": true,
+      "check-0000.wd": true,
+      "check-0000.wd1x": true,
+      "check-0000.wd1y": true
+    },
+    "drain_E": {
+      "check-0000.elev": true,
+      "check-0000.wd": true,
+      "check-0000.wd1x": true,
+      "check-0000.wd1y": true
+    },
+    "point_and_outlet": {
+      "check-0000.elev": true,
+      "check-0000.wd": true,
+      "check-0000.wd1x": true,
+      "check-0000.wd1y": true
+    }
+  },
+  "independent_gate_pass": true
+}
