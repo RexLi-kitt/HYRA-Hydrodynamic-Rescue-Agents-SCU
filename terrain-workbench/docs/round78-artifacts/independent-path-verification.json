@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "source": "upstream1",
+      "representation": "raw",
+      "threshold_m": 10.319,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream1",
+      "representation": "archive_dg2",
+      "threshold_m": 12.611,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream1",
+      "representation": "candidate",
+      "threshold_m": 10.319,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream2",
+      "representation": "raw",
+      "threshold_m": 18.039,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream2",
+      "representation": "archive_dg2",
+      "threshold_m": 20.0195,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream2",
+      "representation": "candidate",
+      "threshold_m": 18.039,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream3",
+      "representation": "raw",
+      "threshold_m": 13.518,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream3",
+      "representation": "archive_dg2",
+      "threshold_m": 16.5725,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    },
+    {
+      "source": "upstream3",
+      "representation": "candidate",
+      "threshold_m": 13.518,
+      "connected_at_threshold": true,
+      "disconnected_below_threshold": true,
+      "passed": true
+    }
+  ],
+  "all9_passed": true,
+  "method": "Thresholded breadth-first graph reachability independently checks minimax Dijkstra results, still static channel-mask geometry only.",
+  "boundary_diagnostic": {
+    "curve_rows": 274,
+    "curve_value_min": 3.456,
+    "curve_value_max": 8.992,
+    "original_time_span_s": [
+      0.0,
+      245700.0
+    ],
+    "western_raw_bed_min_m": 5.76,
+    "western_channel_rows": [
+      117
+    ],
+    "western_channel_beds_m": [
+      5.76
+    ],
+    "note": "HVAR spans both below and above lowest western bed; cannot dismiss specified level as always dry or assume it equivalent to free outlet. Absolute datum/epoch still unresolved."
+  }
+}

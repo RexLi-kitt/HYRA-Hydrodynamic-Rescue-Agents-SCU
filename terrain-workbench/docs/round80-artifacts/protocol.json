@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Negative raw terminal polynomial does not necessarily affect current mean-value station outputs; audit consumers before changing solver.",
+  "default": "cell_mean with explicit support and raw polynomial flag",
+  "rejection": "raw_polynomial rejects entire cell if any corner negative; no clipping or observed wetness inference",
+  "tests": [
+    "all original263 coordinates retained",
+    "all negative-polynomial cells reject raw mode",
+    "all263 default samples exactly mean values",
+    "finite/shape/negative mean/outside/header checks"
+  ],
+  "scope": "offline reference-backend reader only, not wired into production UI, no solver runs",
+  "field_passes_added": 0
+}

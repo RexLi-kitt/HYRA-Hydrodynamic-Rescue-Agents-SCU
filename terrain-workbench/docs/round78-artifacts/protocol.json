@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-30",
+  "inputs": "Read author2023 archive grids and independent round68 observation files, unchanged. No hydrodynamic run or scoring against model output.",
+  "hypothesis": "Original raw raster and DG2 coefficients may have different channel elevations, planar face barriers and spatial support; distinguish mean shifts from face-level channel connectivity before proposing geometry changes.",
+  "method": [
+    "Reproduce the published-code NE/NW/SE/SW conversion exactly, including edge repetition",
+    "All width>0 channel cells retained; 4-neighbour and8-neighbour topology separate",
+    "Runtime DG2 perimeter slope zeroing and reconstructed interface heights follow saved source",
+    "Static minimax face barrier to west boundary on channel mask is geometric only, not arrival time/discharge or full floodplain flow",
+    "Save unshifted source profiles, all channel cells, all outline/domain intersections, all263 watermarks"
+  ],
+  "predefined_source_sections": "For all3 original source cells, both row and column profiles +/-20 grid cells, no inferred cross-flow orientation or discharge capacity claim.",
+  "checks": [
+    "No source file hash changes",
+    "Original affine header and native27700 outline coordinates, no reprojection of outlines",
+    "All5 outlines and263 marks retained including outside-domain",
+    "Implementation checked against direct four-corner formulas and simple nonuniform planar examples"
+  ],
+  "decision": "Do not replace bed or move gauges based on score. If differences change static connectivity, register a spatial-support/geometry candidate; if not, reject this as sufficient explanation. Verify SGC units and version before considering it.",
+  "cost": "One light geometry/coverage audit and scientific plots, no repeat60s/800s or new long computation.",
+  "limit": "This tests representational differences, not which DEM is physically correct. Unknown bank/epoch/outlet/initial-state provenance remains unresolved. No field qualitative pass added."
+}

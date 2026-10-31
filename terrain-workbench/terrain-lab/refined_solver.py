@@ -3,8 +3,10 @@
 Coarse/fine interfaces are split into physical subfaces; each Riemann flux is
 computed once and enters both neighbors with opposite signs and its true length.
 The base grid is an area/volume projection for editing and legacy display only.
-Subcells inherit the supplied parent topography; no new terrain is invented.
+Subcells inherit parent topography by default; optional aligned fine elevations
+are supported only for fresh dry interior terrain (no obstacle-mask changes).
 """
+from copy import deepcopy
 import numpy as np
 from flood_solver import FloodSolver,G,DRY
 from flood_numerics import face_flux
@@ -13,16 +15,47 @@ from refined_mesh import LeafMesh
 
 class RefinedFloodSolver(FloodSolver):
     @classmethod
-    def from_solver(cls,solver,mask):
-        if solver.time!=0:raise ValueError('加密网格必须在模拟开始前建立')
+    def from_solver(cls,solver,mask,*,fine_bed=None,fine_dx=None):
+        if solver.time!=0 or solver.steps!=0:raise ValueError('加密网格必须在模拟开始前建立')
+        mask=np.asarray(mask,bool)
+        if mask.shape!=solver.h.shape:raise ValueError('Refinement mask must match parent grid')
+        if (fine_bed is None)!=(fine_dx is None):raise ValueError('Fine terrain requires both elevations and spacing')
+        fine=None
+        if fine_bed is not None:
+            fine=np.asarray(fine_bed,dtype=float)
+            if (fine.shape!=tuple(2*n for n in solver.h.shape) or not np.isfinite(fine).all()
+                    or not isinstance(fine_dx,(int,float,np.integer,np.floating))
+                    or isinstance(fine_dx,(bool,np.bool_)) or not np.isfinite(fine_dx)
+                    or not np.isclose(fine_dx,solver.dx/2,rtol=1e-12,atol=0)):
+                raise ValueError('Fine terrain must be finite, aligned 2:1, with half parent spacing')
+            if any(np.any(getattr(solver,k)!=0) for k in ('h','mx','mz','initial','maximum')):
+                raise ValueError('Fine terrain currently requires a fresh dry state')
+            if solver.structures is not None and solver.structures.compiled:
+                raise ValueError('Fine terrain with hydraulic structures is not supported')
+            # Boundary forcing still uses parent geometry; keep it unchanged.
+            changed=(fine!=np.repeat(np.repeat(solver.bed,2,axis=0),2,axis=1)).reshape(
+                solver.h.shape[0],2,solver.h.shape[1],2).any(axis=(1,3)) & mask
+            if changed[0].any() or changed[-1].any() or changed[:,0].any() or changed[:,-1].any():
+                raise ValueError('Fine terrain changes must stay away from outer boundary parents')
         # These experimental closures exist only in the native-grid flux path.
         if solver.open_boundary_mode != 'outflow_only' or solver.wall_flux_mode != 'hydrostatic':
             raise ValueError('Refined mesh does not support experimental open_boundary_mode or wall_flux_mode; use the native grid')
-        obj=cls.__new__(cls);obj.__dict__=solver.__dict__.copy()
+        obj=cls.__new__(cls)
+        # Each simulation owns its mutable state, forcing and audit histories.
+        # The acceleration module is stateless code and cannot be deep-copied.
+        obj.__dict__=deepcopy(solver.__dict__, {id(solver.acceleration): solver.acceleration})
         obj.mesh=m=LeafMesh(mask,solver.dx,solver.boundary)
         p=m.parent
         obj.leaf={key:getattr(solver,base).ravel()[p].copy() for key,base in
             [('h','h'),('mx','mx'),('mz','mz'),('bed','bed'),('maximum','maximum'),('initial','initial')]}
+        obj.terrain_representation='inherited_parent'
+        if fine is not None:
+            selected=m.child>=0
+            zz=2*(p[selected]//m.shape[1])+m.child[selected]//2
+            xx=2*(p[selected]%m.shape[1])+m.child[selected]%2
+            obj.leaf['bed'][selected]=fine[zz,xx]
+            obj.bed=m.project(obj.leaf['bed'])
+            obj.terrain_representation='aligned_fine_bed_dry_start_experimental'
         obj.face_mass_flux=np.zeros(len(m.left))
         obj._setup_geometry();obj._sync()
         return obj
@@ -152,7 +185,8 @@ class RefinedFloodSolver(FloodSolver):
         m=self.mesh;h=self.leaf['h']
         mass,ax,az,pressure,cl,cr,speed,hl,hr,bl,br=self._fluxes(inlets)
         outgoing=m.sum_left(np.maximum(mass,0)*m.length)+m.sum_right(np.maximum(-mass,0)*m.length)
-        theta=np.minimum(1,np.divide(h*m.area,dt*outgoing,out=np.ones_like(h),where=outgoing>0))
+        available=h*m.area;requested=dt*outgoing
+        theta=np.divide(available,requested,out=np.ones_like(h),where=requested>available)
         donor=np.where(mass>=0,np.where(m.lv,theta[m.l],1),np.where(m.rv,theta[m.r],1))
         for a in (mass,ax,az):a*=donor
         new_h=h-dt*m.divergence(mass)/m.area
@@ -274,7 +308,7 @@ class RefinedFloodSolver(FloodSolver):
 
     def numerical_config(self):
         result=super().numerical_config()
-        result.update(mesh='static_2_to_1_leaf_squares',limiter='least_squares_Barth_Jespersen',
+        result.update(terrain_representation=self.terrain_representation,mesh='static_2_to_1_leaf_squares',limiter='least_squares_Barth_Jespersen',
             source_integration='synchronized_SSP_stages; area_weighted_sources; Strang_Manning',
             bed_source='cell_face_trapezoid_and_hydrostatic_face_corrections')
         return result

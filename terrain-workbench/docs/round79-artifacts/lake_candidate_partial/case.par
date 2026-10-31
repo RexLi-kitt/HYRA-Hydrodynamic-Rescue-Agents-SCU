@@ -1,0 +1,11 @@
+DEMfile bed.asc
+startfile water.asc
+dirroot results
+resroot check
+dg2
+sim_time 3
+initial_tstep .02
+massint 1
+saveint 3
+fpfric 0
+output_precision 15

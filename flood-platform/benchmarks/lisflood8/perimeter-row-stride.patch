@@ -1,0 +1,27 @@
+--- a/swe/dg2/slope_limiter.cpp
++++ b/swe/dg2/slope_limiter.cpp
+@@ -36,18 +36,18 @@
+ 		// north
+ 		{
+ 			const int j = 0;
+-			U.H1y[j*Parptr->ysz + i] = -Arrptr->DEM1y[j*Parptr->xsz + i];
+-            U.HU1y[j*Parptr->ysz + i] = C(0.0);
+-            U.HV1y[j*Parptr->ysz + i] = C(0.0);
++			U.H1y[j*Parptr->xsz + i] = -Arrptr->DEM1y[j*Parptr->xsz + i];
++            U.HU1y[j*Parptr->xsz + i] = C(0.0);
++            U.HV1y[j*Parptr->xsz + i] = C(0.0);
+ 		}
+ 
+ 		// south
+ 		for (int i=0; i<Parptr->xsz; i++)
+ 		{
+ 			const int j = Parptr->ysz-1;
+-			U.H1y[j*Parptr->ysz + i] = -Arrptr->DEM1y[j*Parptr->xsz + i];
+-            U.HU1y[j*Parptr->ysz + i] = C(0.0);
+-            U.HV1y[j*Parptr->ysz + i] = C(0.0);
++			U.H1y[j*Parptr->xsz + i] = -Arrptr->DEM1y[j*Parptr->xsz + i];
++            U.HU1y[j*Parptr->xsz + i] = C(0.0);
++            U.HV1y[j*Parptr->xsz + i] = C(0.0);
+ 		}
+ 	}
+ }

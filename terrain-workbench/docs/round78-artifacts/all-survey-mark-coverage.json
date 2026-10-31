@@ -1,0 +1,7103 @@
+[
+  {
+    "source_attributes": {
+      "fid": 1,
+      "E": 339911.9613,
+      "N": 554705.0773,
+      "Z": 17.5438,
+      "DEM_Z": 0,
+      "dem_2m": 18.9475,
+      "dem_5m": 18.61,
+      "dem_10m": 18.6923,
+      "dem_15m": 18.58,
+      "dem_25m": 18.34
+    },
+    "x_epsg3035": 3495500.730336692,
+    "y_epsg3035": 3605171.5166737223,
+    "original_EN_to_geometry_difference_m": 5.6650140604919e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      305,
+      142
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 2,
+      "E": 339985.952,
+      "N": 554717.048,
+      "Z": 17.771,
+      "DEM_Z": 0,
+      "dem_2m": 17.6474,
+      "dem_5m": 16.74,
+      "dem_10m": 16.2926,
+      "dem_15m": 17.89,
+      "dem_25m": 16.74
+    },
+    "x_epsg3035": 3495575.58884848,
+    "y_epsg3035": 3605171.104202172,
+    "original_EN_to_geometry_difference_m": 5.6650140604919e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      304,
+      149
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 3,
+      "E": 339979.8569,
+      "N": 554718.3638,
+      "Z": 17.8245,
+      "DEM_Z": 0,
+      "dem_2m": 16.19,
+      "dem_5m": 16.19,
+      "dem_10m": 14.7027,
+      "dem_15m": 16.19,
+      "dem_25m": 16.74
+    },
+    "x_epsg3035": 3495569.811642476,
+    "y_epsg3035": 3605173.4127394515,
+    "original_EN_to_geometry_difference_m": 5.6650140604919e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      304,
+      148
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 4,
+      "E": 339996.366,
+      "N": 554734.994,
+      "Z": 17.796,
+      "DEM_Z": 0,
+      "dem_2m": 17.8527,
+      "dem_5m": 17.23,
+      "dem_10m": 17.0739,
+      "dem_15m": 16.26,
+      "dem_25m": 15.706
+    },
+    "x_epsg3035": 3495588.875679775,
+    "y_epsg3035": 3605187.1141089434,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      302,
+      150
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 5,
+      "E": 339990.2469,
+      "N": 554737.4793,
+      "Z": 17.8126,
+      "DEM_Z": 0,
+      "dem_2m": 16.7795,
+      "dem_5m": 16.11,
+      "dem_10m": 16.3284,
+      "dem_15m": 16.26,
+      "dem_25m": 15.706
+    },
+    "x_epsg3035": 3495583.272678079,
+    "y_epsg3035": 3605190.582223227,
+    "original_EN_to_geometry_difference_m": 3.259629011154175e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      302,
+      150
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 6,
+      "E": 339992.3484,
+      "N": 554740.9839,
+      "Z": 17.7786,
+      "DEM_Z": 0,
+      "dem_2m": 16.19,
+      "dem_5m": 16.19,
+      "dem_10m": 16.3284,
+      "dem_15m": 15.703,
+      "dem_25m": 15.706
+    },
+    "x_epsg3035": 3495585.934141926,
+    "y_epsg3035": 3605193.697515635,
+    "original_EN_to_geometry_difference_m": 1.041250292910165e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      301,
+      150
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 7,
+      "E": 339940.8225,
+      "N": 554789.3546,
+      "Z": 17.5601,
+      "DEM_Z": 0,
+      "dem_2m": 18.925,
+      "dem_5m": 17.94,
+      "dem_10m": 17.9852,
+      "dem_15m": 17.94,
+      "dem_25m": 17.78
+    },
+    "x_epsg3035": 3495543.396288128,
+    "y_epsg3035": 3605250.0179639617,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 2.1950026340811215,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      297,
+      145
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 8,
+      "E": 340008.1521,
+      "N": 554845.386,
+      "Z": 17.3596,
+      "DEM_Z": 0,
+      "dem_2m": 16.07,
+      "dem_5m": 16.07,
+      "dem_10m": 14.4812,
+      "dem_15m": 16.14,
+      "dem_25m": 16.1
+    },
+    "x_epsg3035": 3495619.1511327573,
+    "y_epsg3035": 3605294.2446765886,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      291,
+      151
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 9,
+      "E": 340008.108,
+      "N": 554857.9157,
+      "Z": 17.4758,
+      "DEM_Z": 0,
+      "dem_2m": 16.2,
+      "dem_5m": 16.2,
+      "dem_10m": 15.2441,
+      "dem_15m": 16.14,
+      "dem_25m": 17.07
+    },
+    "x_epsg3035": 3495621.227229839,
+    "y_epsg3035": 3605306.632806449,
+    "original_EN_to_geometry_difference_m": 4.293184940373938e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      290,
+      151
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 10,
+      "E": 340008.1286,
+      "N": 554857.9233,
+      "Z": 17.483,
+      "DEM_Z": 0,
+      "dem_2m": 16.2,
+      "dem_5m": 16.2,
+      "dem_10m": 15.2441,
+      "dem_15m": 16.14,
+      "dem_25m": 17.07
+    },
+    "x_epsg3035": 3495621.2487932993,
+    "y_epsg3035": 3605306.6369080814,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      290,
+      151
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 11,
+      "E": 339999.1853,
+      "N": 554904.8658,
+      "Z": 17.0538,
+      "DEM_Z": 0,
+      "dem_2m": 13.006,
+      "dem_5m": 15.32,
+      "dem_10m": 14.2509,
+      "dem_15m": 13.081,
+      "dem_25m": 13.127
+    },
+    "x_epsg3035": 3495620.386100397,
+    "y_epsg3035": 3605354.5012579374,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      285,
+      150
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 12,
+      "E": 340074.603,
+      "N": 554981.302,
+      "Z": 17.525,
+      "DEM_Z": 0,
+      "dem_2m": 16.935,
+      "dem_5m": 19.66,
+      "dem_10m": 18.5738,
+      "dem_15m": 16.58,
+      "dem_25m": 16.63
+    },
+    "x_epsg3035": 3495707.554379119,
+    "y_epsg3035": 3605417.5521234865,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      277,
+      158
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 13,
+      "E": 339946.6703,
+      "N": 554987.9525,
+      "Z": 17.0282,
+      "DEM_Z": 0,
+      "dem_2m": 16.6014,
+      "dem_5m": 16.54,
+      "dem_10m": 18.478,
+      "dem_15m": 16.54,
+      "dem_25m": 22.28
+    },
+    "x_epsg3035": 3495582.7472872017,
+    "y_epsg3035": 3605445.288875324,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      277,
+      145
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 14,
+      "E": 340274.741,
+      "N": 555020.559,
+      "Z": 17.13,
+      "DEM_Z": 0,
+      "dem_2m": 16.8575,
+      "dem_5m": 16.98,
+      "dem_10m": 16.802,
+      "dem_15m": 17.03,
+      "dem_25m": 17.36
+    },
+    "x_epsg3035": 3495911.2035810193,
+    "y_epsg3035": 3605423.2314752564,
+    "original_EN_to_geometry_difference_m": 5.14339703004214e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 25.173178697926083,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      273,
+      178
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 15,
+      "E": 340274.743,
+      "N": 555020.566,
+      "Z": 17.134,
+      "DEM_Z": 0,
+      "dem_2m": 16.8575,
+      "dem_5m": 16.98,
+      "dem_10m": 16.802,
+      "dem_15m": 17.03,
+      "dem_25m": 17.36
+    },
+    "x_epsg3035": 3495911.2067338764,
+    "y_epsg3035": 3605423.238061191,
+    "original_EN_to_geometry_difference_m": 4.748831981413797e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 25.170816656087478,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      273,
+      178
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 16,
+      "E": 340295.314,
+      "N": 555029.76,
+      "Z": 17.275,
+      "DEM_Z": 0,
+      "dem_2m": 17.0725,
+      "dem_5m": 17.28,
+      "dem_10m": 16.9971,
+      "dem_15m": 16.83,
+      "dem_25m": 17.27
+    },
+    "x_epsg3035": 3495933.01135017,
+    "y_epsg3035": 3605428.9194908454,
+    "original_EN_to_geometry_difference_m": 4.293184940373938e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 14.699512483541378,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      273,
+      180
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 17,
+      "E": 340331.244,
+      "N": 555047.859,
+      "Z": 17.537,
+      "DEM_Z": 0,
+      "dem_2m": 17.7975,
+      "dem_5m": 16.9,
+      "dem_10m": 17.164,
+      "dem_15m": 17.49,
+      "dem_25m": 17.31
+    },
+    "x_epsg3035": 3495971.4412020063,
+    "y_epsg3035": 3605440.8590592965,
+    "original_EN_to_geometry_difference_m": 2.7939677238464355e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      271,
+      184
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 18,
+      "E": 340306.502,
+      "N": 555053.263,
+      "Z": 17.214,
+      "DEM_Z": 0,
+      "dem_2m": 17.195,
+      "dem_5m": 17.09,
+      "dem_10m": 16.993,
+      "dem_15m": 16.89,
+      "dem_25m": 16.76
+    },
+    "x_epsg3035": 3495948.000220038,
+    "y_epsg3035": 3605450.292229857,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      270,
+      181
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 19,
+      "E": 340296.701,
+      "N": 555070.015,
+      "Z": 17.306,
+      "DEM_Z": 0,
+      "dem_2m": 17.86,
+      "dem_5m": 17.41,
+      "dem_10m": 17.1282,
+      "dem_15m": 17.49,
+      "dem_25m": 16.59
+    },
+    "x_epsg3035": 3495941.1862715823,
+    "y_epsg3035": 3605468.4666680284,
+    "original_EN_to_geometry_difference_m": 7.508562643358995e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 7.010683690481188,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      268,
+      180
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 20,
+      "E": 340056.883,
+      "N": 555070.29,
+      "Z": 17.406,
+      "DEM_Z": 0,
+      "dem_2m": 18.4075,
+      "dem_5m": 22.68,
+      "dem_10m": 23.3969,
+      "dem_15m": 22.04,
+      "dem_25m": 16.66
+    },
+    "x_epsg3035": 3495705.1647966877,
+    "y_epsg3035": 3605508.414383758,
+    "original_EN_to_geometry_difference_m": 6.124817970192947e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      268,
+      156
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 21,
+      "E": 340279.025,
+      "N": 555073.676,
+      "Z": 17.271,
+      "DEM_Z": 0,
+      "dem_2m": 17.245,
+      "dem_5m": 16.55,
+      "dem_10m": 16.5214,
+      "dem_15m": 17.4,
+      "dem_25m": 16.59
+    },
+    "x_epsg3035": 3495924.405959964,
+    "y_epsg3035": 3605475.008530026,
+    "original_EN_to_geometry_difference_m": 7.04673395977428e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 7.778294606483225,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      268,
+      178
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 22,
+      "E": 340242.044,
+      "N": 555084.221,
+      "Z": 17.2,
+      "DEM_Z": 0,
+      "dem_2m": 17.965,
+      "dem_5m": 16.66,
+      "dem_10m": 16.5278,
+      "dem_15m": 16.55,
+      "dem_25m": 17.44
+    },
+    "x_epsg3035": 3495889.787024132,
+    "y_epsg3035": 3605491.5464565875,
+    "original_EN_to_geometry_difference_m": 6.667254987767131e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 8.647171754553996,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      267,
+      175
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 23,
+      "E": 340228.453,
+      "N": 555088.327,
+      "Z": 17.197,
+      "DEM_Z": 0,
+      "dem_2m": 17.6025,
+      "dem_5m": 16.52,
+      "dem_10m": 16.8034,
+      "dem_15m": 17.48,
+      "dem_25m": 17.44
+    },
+    "x_epsg3035": 3495877.103120344,
+    "y_epsg3035": 3605497.852193934,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 8.947709615252826,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      267,
+      173
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 24,
+      "E": 339996.174,
+      "N": 555107.791,
+      "Z": 17.458,
+      "DEM_Z": 0,
+      "dem_2m": 16.39,
+      "dem_5m": 16.5,
+      "dem_10m": 15.7158,
+      "dem_15m": 15.24,
+      "dem_25m": 14.811
+    },
+    "x_epsg3035": 3495651.7488967194,
+    "y_epsg3035": 3605555.513562062,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      265,
+      150
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 25,
+      "E": 340082.681,
+      "N": 555112.683,
+      "Z": 17.363,
+      "DEM_Z": 0,
+      "dem_2m": 17.21,
+      "dem_5m": 16.54,
+      "dem_10m": 15.7282,
+      "dem_15m": 16.5,
+      "dem_25m": 17.39
+    },
+    "x_epsg3035": 3495737.7306727935,
+    "y_epsg3035": 3605546.0355975605,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      264,
+      159
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 26,
+      "E": 340009.942,
+      "N": 555179.256,
+      "Z": 17.205,
+      "DEM_Z": 0,
+      "dem_2m": 18.1775,
+      "dem_5m": 25.67,
+      "dem_10m": 26.0327,
+      "dem_15m": 25.88,
+      "dem_25m": 25.72
+    },
+    "x_epsg3035": 3495677.3908183337,
+    "y_epsg3035": 3605623.851601483,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      258,
+      151
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 27,
+      "E": 340011.695,
+      "N": 555254.501,
+      "Z": 16.806,
+      "DEM_Z": 0,
+      "dem_2m": 14.475,
+      "dem_5m": 14.488,
+      "dem_10m": 15.2427,
+      "dem_15m": 12.328,
+      "dem_25m": 14.513
+    },
+    "x_epsg3035": 3495691.845144058,
+    "y_epsg3035": 3605697.9124768935,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 8.08014199115524,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      250,
+      152
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 28,
+      "E": 340076.379,
+      "N": 555274.268,
+      "Z": 15.889,
+      "DEM_Z": 0,
+      "dem_2m": 16.3925,
+      "dem_5m": 20.24,
+      "dem_10m": 18.5176,
+      "dem_15m": 19.85,
+      "dem_25m": 15.68
+    },
+    "x_epsg3035": 3495758.8615274057,
+    "y_epsg3035": 3605706.7431339105,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.2202433147641158,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      248,
+      158
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 29,
+      "E": 340037.611,
+      "N": 555275.301,
+      "Z": 16.829,
+      "DEM_Z": 0,
+      "dem_2m": 16.725,
+      "dem_5m": 16.4,
+      "dem_10m": 16.382,
+      "dem_15m": 16.25,
+      "dem_25m": 16.33
+    },
+    "x_epsg3035": 3495720.8745045313,
+    "y_epsg3035": 3605714.177720742,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      248,
+      154
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 30,
+      "E": 341297.283,
+      "N": 555326.821,
+      "Z": 17.855,
+      "DEM_Z": 0,
+      "dem_2m": 17.715,
+      "dem_5m": 17.79,
+      "dem_10m": 17.8625,
+      "dem_15m": 18.88,
+      "dem_25m": 17.88
+    },
+    "x_epsg3035": 3496969.568537548,
+    "y_epsg3035": 3605556.677559846,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      243,
+      280
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 31,
+      "E": 339993.908,
+      "N": 555347.2,
+      "Z": 16.958,
+      "DEM_Z": 0,
+      "dem_2m": 16.8925,
+      "dem_5m": 16.12,
+      "dem_10m": 16.2551,
+      "dem_15m": 16.12,
+      "dem_25m": 16.41
+    },
+    "x_epsg3035": 3495690.0177277387,
+    "y_epsg3035": 3605792.4526592237,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      241,
+      150
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 32,
+      "E": 341357.877,
+      "N": 555381.533,
+      "Z": 17.732,
+      "DEM_Z": 0,
+      "dem_2m": 17.7025,
+      "dem_5m": 17.9,
+      "dem_10m": 17.8122,
+      "dem_15m": 17.74,
+      "dem_25m": 17.79
+    },
+    "x_epsg3035": 3497038.4709439203,
+    "y_epsg3035": 3605600.7138013705,
+    "original_EN_to_geometry_difference_m": 5.6650140604919e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      237,
+      286
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 33,
+      "E": 341515.936,
+      "N": 555425.035,
+      "Z": 16.426,
+      "DEM_Z": 0,
+      "dem_2m": 16.34,
+      "dem_5m": 16.42,
+      "dem_10m": 16.5779,
+      "dem_15m": 16.89,
+      "dem_25m": 16.45
+    },
+    "x_epsg3035": 3497201.418772675,
+    "y_epsg3035": 3605617.5475186794,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 2.2651125824809375,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      233,
+      302
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 34,
+      "E": 339972.255,
+      "N": 555440.562,
+      "Z": 16.557,
+      "DEM_Z": 0,
+      "dem_2m": 15.645,
+      "dem_5m": 15.66,
+      "dem_10m": 15.3456,
+      "dem_15m": 15.45,
+      "dem_25m": 15.8
+    },
+    "x_epsg3035": 3495684.497046178,
+    "y_epsg3035": 3605888.2875389983,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      231,
+      148
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 35,
+      "E": 339955.066,
+      "N": 555457.659,
+      "Z": 15.962,
+      "DEM_Z": 0,
+      "dem_2m": 15.6775,
+      "dem_5m": 16.05,
+      "dem_10m": 16.0052,
+      "dem_15m": 16.04,
+      "dem_25m": 15.27
+    },
+    "x_epsg3035": 3495670.4690949847,
+    "y_epsg3035": 3605908.025157182,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      230,
+      146
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 36,
+      "E": 341509.183,
+      "N": 555548.885,
+      "Z": 16.396,
+      "DEM_Z": 0,
+      "dem_2m": 15.99,
+      "dem_5m": 15.85,
+      "dem_10m": 15.8414,
+      "dem_15m": 15.77,
+      "dem_25m": 15.78
+    },
+    "x_epsg3035": 3497215.7229350177,
+    "y_epsg3035": 3605741.042236026,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      221,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 37,
+      "E": 341507.84,
+      "N": 555549.925,
+      "Z": 16.441,
+      "DEM_Z": 0,
+      "dem_2m": 15.8625,
+      "dem_5m": 15.85,
+      "dem_10m": 15.8414,
+      "dem_15m": 15.77,
+      "dem_25m": 15.78
+    },
+    "x_epsg3035": 3497214.576861173,
+    "y_epsg3035": 3605742.2920726957,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      221,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 38,
+      "E": 341568.211,
+      "N": 555555.909,
+      "Z": 16.299,
+      "DEM_Z": 0,
+      "dem_2m": 13.181,
+      "dem_5m": 13.181,
+      "dem_10m": 12.992,
+      "dem_15m": 13.181,
+      "dem_25m": 13.181
+    },
+    "x_epsg3035": 3497275.0166770257,
+    "y_epsg3035": 3605738.2163820616,
+    "original_EN_to_geometry_difference_m": 2.7939677238464355e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      220,
+      307
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 39,
+      "E": 341668.324,
+      "N": 555565.64,
+      "Z": 15.511,
+      "DEM_Z": 0,
+      "dem_2m": 15.5875,
+      "dem_5m": 15.83,
+      "dem_10m": 16.9933,
+      "dem_15m": 15.22,
+      "dem_25m": 19.16
+    },
+    "x_epsg3035": 3497375.211321953,
+    "y_epsg3035": 3605731.2676640414,
+    "original_EN_to_geometry_difference_m": 5.309355562083134e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      219,
+      317
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 40,
+      "E": 339667.4441,
+      "N": 555574.0777,
+      "Z": 14.61,
+      "DEM_Z": 0,
+      "dem_2m": 14.5925,
+      "dem_5m": 14.49,
+      "dem_10m": 14.3071,
+      "dem_15m": 15.37,
+      "dem_25m": 14.55
+    },
+    "x_epsg3035": 3495407.039512289,
+    "y_epsg3035": 3606070.64509378,
+    "original_EN_to_geometry_difference_m": 1.4725502860585132e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      218,
+      117
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 41,
+      "E": 341281.448,
+      "N": 555591.782,
+      "Z": 16.056,
+      "DEM_Z": 0,
+      "dem_2m": 15.9925,
+      "dem_5m": 16.12,
+      "dem_10m": 16.0972,
+      "dem_15m": 16.07,
+      "dem_25m": 16.14
+    },
+    "x_epsg3035": 3496998.8041481827,
+    "y_epsg3035": 3605821.1083549606,
+    "original_EN_to_geometry_difference_m": 4.679838019013819e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      216,
+      279
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 42,
+      "E": 339590.4664,
+      "N": 555592.9071,
+      "Z": 14.74,
+      "DEM_Z": 0,
+      "dem_2m": 17.3825,
+      "dem_5m": 14.77,
+      "dem_10m": 15.4446,
+      "dem_15m": 14.76,
+      "dem_25m": 14.88
+    },
+    "x_epsg3035": 3495334.4510589186,
+    "y_epsg3035": 3606101.9860043786,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      216,
+      110
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 43,
+      "E": 341536.632,
+      "N": 555596.997,
+      "Z": 16.45,
+      "DEM_Z": 0,
+      "dem_2m": 16.17,
+      "dem_5m": 15.99,
+      "dem_10m": 16.1055,
+      "dem_15m": 16.58,
+      "dem_25m": 15.43
+    },
+    "x_epsg3035": 3497250.8820855697,
+    "y_epsg3035": 3605784.0406553103,
+    "original_EN_to_geometry_difference_m": 2.08250058582033e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      216,
+      304
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 44,
+      "E": 341255.76,
+      "N": 555612.779,
+      "Z": 16.377,
+      "DEM_Z": 0,
+      "dem_2m": 15.9725,
+      "dem_5m": 16.6,
+      "dem_10m": 16.2766,
+      "dem_15m": 20.63,
+      "dem_25m": 16.71
+    },
+    "x_epsg3035": 3496977.0697267517,
+    "y_epsg3035": 3605846.105819652,
+    "original_EN_to_geometry_difference_m": 4.679838019013819e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 21.25185037679143,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      214,
+      276
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 45,
+      "E": 341255.395,
+      "N": 555615.809,
+      "Z": 16.462,
+      "DEM_Z": 0,
+      "dem_2m": 16.57,
+      "dem_5m": 15.99,
+      "dem_10m": 16.8634,
+      "dem_15m": 20.63,
+      "dem_25m": 16.71
+    },
+    "x_epsg3035": 3496977.2230195086,
+    "y_epsg3035": 3605849.1601841566,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 19.254302677911333,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      214,
+      276
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 46,
+      "E": 340003.763,
+      "N": 555616.699,
+      "Z": 15.313,
+      "DEM_Z": 0,
+      "dem_2m": 15.215,
+      "dem_5m": 15.4,
+      "dem_10m": 15.1283,
+      "dem_15m": 15.24,
+      "dem_25m": 15.51
+    },
+    "x_epsg3035": 3495745.3091462515,
+    "y_epsg3035": 3606057.118591417,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 2.1229879586185243,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      214,
+      151
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 47,
+      "E": 341258.613,
+      "N": 555619.588,
+      "Z": 16.568,
+      "DEM_Z": 0,
+      "dem_2m": 16.315,
+      "dem_5m": 15.99,
+      "dem_10m": 16.8634,
+      "dem_15m": 20.63,
+      "dem_25m": 16.71
+    },
+    "x_epsg3035": 3496981.0300193857,
+    "y_epsg3035": 3605852.3618320515,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 14.311029721649849,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      214,
+      276
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 48,
+      "E": 341268.001,
+      "N": 555629.817,
+      "Z": 16.547,
+      "DEM_Z": 0,
+      "dem_2m": 15.82,
+      "dem_5m": 15.85,
+      "dem_10m": 17.1857,
+      "dem_15m": 19.0,
+      "dem_25m": 16.71
+    },
+    "x_epsg3035": 3496992.0017366796,
+    "y_epsg3035": 3605860.9159580874,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.2062921577778292,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      213,
+      277
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 49,
+      "E": 341273.822,
+      "N": 555635.705,
+      "Z": 16.589,
+      "DEM_Z": 0,
+      "dem_2m": 16.6475,
+      "dem_5m": 18.57,
+      "dem_10m": 18.0664,
+      "dem_15m": 19.0,
+      "dem_25m": 25.35
+    },
+    "x_epsg3035": 3496998.7278352855,
+    "y_epsg3035": 3605865.7708602007,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      212,
+      278
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 50,
+      "E": 341160.319,
+      "N": 555644.382,
+      "Z": 16.053,
+      "DEM_Z": 0,
+      "dem_2m": 16.52,
+      "dem_5m": 16.52,
+      "dem_10m": 16.5374,
+      "dem_15m": 16.39,
+      "dem_25m": 16.52
+    },
+    "x_epsg3035": 3496888.4668030334,
+    "y_epsg3035": 3605893.1238752143,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 5.345209445698904,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      211,
+      267
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 51,
+      "E": 341242.707,
+      "N": 555647.268,
+      "Z": 15.973,
+      "DEM_Z": 0,
+      "dem_2m": 15.9025,
+      "dem_5m": 16.18,
+      "dem_10m": 17.5807,
+      "dem_15m": 23.98,
+      "dem_25m": 16.32
+    },
+    "x_epsg3035": 3496970.0552874887,
+    "y_epsg3035": 3605882.3443952794,
+    "original_EN_to_geometry_difference_m": 5.6650140604919e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      211,
+      275
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 52,
+      "E": 341873.37,
+      "N": 555652.715,
+      "Z": 16.204,
+      "DEM_Z": 0,
+      "dem_2m": 16.2825,
+      "dem_5m": 21.54,
+      "dem_10m": 19.5009,
+      "dem_15m": 16.2,
+      "dem_25m": 16.33
+    },
+    "x_epsg3035": 3497591.7836790807,
+    "y_epsg3035": 3605783.381460812,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.8264467346775355,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      210,
+      338
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 53,
+      "E": 341870.796,
+      "N": 555655.614,
+      "Z": 16.195,
+      "DEM_Z": 0,
+      "dem_2m": 16.645,
+      "dem_5m": 18.89,
+      "dem_10m": 16.6975,
+      "dem_15m": 15.63,
+      "dem_25m": 15.8
+    },
+    "x_epsg3035": 3497589.7403310863,
+    "y_epsg3035": 3605786.671866613,
+    "original_EN_to_geometry_difference_m": 9.359676038027639e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      210,
+      338
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 54,
+      "E": 341584.52,
+      "N": 555656.699,
+      "Z": 16.085,
+      "DEM_Z": 0,
+      "dem_2m": 16.16,
+      "dem_5m": 15.26,
+      "dem_10m": 15.4653,
+      "dem_15m": 15.16,
+      "dem_25m": 16.04
+    },
+    "x_epsg3035": 3497308.1215556394,
+    "y_epsg3035": 3605835.1095340024,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      210,
+      309
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 55,
+      "E": 341878.014,
+      "N": 555659.341,
+      "Z": 16.176,
+      "DEM_Z": 0,
+      "dem_2m": 16.18,
+      "dem_5m": 15.81,
+      "dem_10m": 16.6975,
+      "dem_15m": 16.09,
+      "dem_25m": 16.09
+    },
+    "x_epsg3035": 3497597.476045306,
+    "y_epsg3035": 3605789.1602889337,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      210,
+      338
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 56,
+      "E": 341617.161,
+      "N": 555662.496,
+      "Z": 16.154,
+      "DEM_Z": 0,
+      "dem_2m": 12.968,
+      "dem_5m": 12.968,
+      "dem_10m": 12.7567,
+      "dem_15m": 12.967,
+      "dem_25m": 12.961
+    },
+    "x_epsg3035": 3497341.233135761,
+    "y_epsg3035": 3605835.4370355867,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      209,
+      312
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 57,
+      "E": 341882.952,
+      "N": 555662.778,
+      "Z": 16.167,
+      "DEM_Z": 0,
+      "dem_2m": 16.1075,
+      "dem_5m": 16.09,
+      "dem_10m": 16.1986,
+      "dem_15m": 16.09,
+      "dem_25m": 16.09
+    },
+    "x_epsg3035": 3497602.9183278875,
+    "y_epsg3035": 3605791.739397322,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      209,
+      339
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 58,
+      "E": 341582.411,
+      "N": 555663.03,
+      "Z": 16.073,
+      "DEM_Z": 0,
+      "dem_2m": 15.99,
+      "dem_5m": 15.16,
+      "dem_10m": 15.4653,
+      "dem_15m": 15.16,
+      "dem_25m": 16.04
+    },
+    "x_epsg3035": 3497307.1165422895,
+    "y_epsg3035": 3605841.714192779,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      209,
+      309
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 59,
+      "E": 341307.706,
+      "N": 555667.9,
+      "Z": 16.486,
+      "DEM_Z": 0,
+      "dem_2m": 16.2475,
+      "dem_5m": 24.65,
+      "dem_10m": 23.3043,
+      "dem_15m": 15.5,
+      "dem_25m": 15.51
+    },
+    "x_epsg3035": 3497037.528713978,
+    "y_epsg3035": 3605891.976911055,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      209,
+      281
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 60,
+      "E": 341581.962,
+      "N": 555672.314,
+      "Z": 16.126,
+      "DEM_Z": 0,
+      "dem_2m": 15.5823,
+      "dem_5m": 15.43,
+      "dem_10m": 15.5854,
+      "dem_15m": 15.54,
+      "dem_25m": 16.04
+    },
+    "x_epsg3035": 3497308.245152126,
+    "y_epsg3035": 3605850.962084499,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      208,
+      309
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 61,
+      "E": 341585.652,
+      "N": 555680.892,
+      "Z": 16.069,
+      "DEM_Z": 0,
+      "dem_2m": 15.742,
+      "dem_5m": 15.87,
+      "dem_10m": 15.6975,
+      "dem_15m": 15.54,
+      "dem_25m": 15.72
+    },
+    "x_epsg3035": 3497313.328643524,
+    "y_epsg3035": 3605858.8275593547,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      207,
+      309
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 62,
+      "E": 341585.825,
+      "N": 555681.251,
+      "Z": 16.079,
+      "DEM_Z": 0,
+      "dem_2m": 15.742,
+      "dem_5m": 15.87,
+      "dem_10m": 15.6975,
+      "dem_15m": 15.54,
+      "dem_25m": 15.72
+    },
+    "x_epsg3035": 3497313.5596727096,
+    "y_epsg3035": 3605859.153666984,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      207,
+      309
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 63,
+      "E": 342377.128,
+      "N": 555681.963,
+      "Z": 16.243,
+      "DEM_Z": 0,
+      "dem_2m": 15.93,
+      "dem_5m": 21.7,
+      "dem_10m": 17.5086,
+      "dem_15m": 16.03,
+      "dem_25m": 15.71
+    },
+    "x_epsg3035": 3498092.618525584,
+    "y_epsg3035": 3605728.931445881,
+    "original_EN_to_geometry_difference_m": 7.508562643358995e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 9.482416818355734,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      207,
+      388
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 64,
+      "E": 339453.406,
+      "N": 555684.108,
+      "Z": 14.63,
+      "DEM_Z": 0,
+      "dem_2m": 14.595,
+      "dem_5m": 14.77,
+      "dem_10m": 14.353,
+      "dem_15m": 14.92,
+      "dem_25m": 14.4
+    },
+    "x_epsg3035": 3495214.9627135377,
+    "y_epsg3035": 3606214.778548297,
+    "original_EN_to_geometry_difference_m": 5.309355562083134e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 3.3404371755930966,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      207,
+      96
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 65,
+      "E": 341849.163,
+      "N": 555686.549,
+      "Z": 16.135,
+      "DEM_Z": 0,
+      "dem_2m": 16.185,
+      "dem_5m": 15.29,
+      "dem_10m": 15.3536,
+      "dem_15m": 15.5,
+      "dem_25m": 15.51
+    },
+    "x_epsg3035": 3497573.6787220053,
+    "y_epsg3035": 3605820.818269329,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      207,
+      335
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 66,
+      "E": 341590.438,
+      "N": 555688.501,
+      "Z": 16.082,
+      "DEM_Z": 0,
+      "dem_2m": 15.8508,
+      "dem_5m": 15.86,
+      "dem_10m": 15.9144,
+      "dem_15m": 15.75,
+      "dem_25m": 15.72
+    },
+    "x_epsg3035": 3497319.3270799606,
+    "y_epsg3035": 3605865.554219098,
+    "original_EN_to_geometry_difference_m": 5.14339703004214e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      207,
+      310
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 67,
+      "E": 341306.299,
+      "N": 555690.388,
+      "Z": 16.477,
+      "DEM_Z": 0,
+      "dem_2m": 15.6975,
+      "dem_5m": 15.38,
+      "dem_10m": 15.8278,
+      "dem_15m": 15.61,
+      "dem_25m": 15.61
+    },
+    "x_epsg3035": 3497039.948042107,
+    "y_epsg3035": 3605914.4303199025,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      206,
+      281
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 68,
+      "E": 341988.903,
+      "N": 555694.132,
+      "Z": 16.105,
+      "DEM_Z": 0,
+      "dem_2m": 16.04,
+      "dem_5m": 15.86,
+      "dem_10m": 15.9743,
+      "dem_15m": 15.86,
+      "dem_25m": 15.86
+    },
+    "x_epsg3035": 3497712.517984807,
+    "y_epsg3035": 3605805.190328962,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 5.922398062424354,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      206,
+      349
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 69,
+      "E": 341596.882,
+      "N": 555696.555,
+      "Z": 16.076,
+      "DEM_Z": 0,
+      "dem_2m": 15.7064,
+      "dem_5m": 15.7,
+      "dem_10m": 15.8468,
+      "dem_15m": 15.75,
+      "dem_25m": 15.72
+    },
+    "x_epsg3035": 3497327.03288817,
+    "y_epsg3035": 3605872.4462645357,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      206,
+      310
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 70,
+      "E": 340995.523,
+      "N": 555698.273,
+      "Z": 15.891,
+      "DEM_Z": 0,
+      "dem_2m": 15.7575,
+      "dem_5m": 16.34,
+      "dem_10m": 15.2445,
+      "dem_15m": 15.99,
+      "dem_25m": 16.03
+    },
+    "x_epsg3035": 3496735.3635421894,
+    "y_epsg3035": 3605973.639700387,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      206,
+      250
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 71,
+      "E": 341290.061,
+      "N": 555698.706,
+      "Z": 16.529,
+      "DEM_Z": 0,
+      "dem_2m": 15.365,
+      "dem_5m": 15.37,
+      "dem_10m": 15.4307,
+      "dem_15m": 15.63,
+      "dem_25m": 17.23
+    },
+    "x_epsg3035": 3497025.3710093116,
+    "y_epsg3035": 3605925.336023443,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      206,
+      280
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 72,
+      "E": 341601.912,
+      "N": 555705.632,
+      "Z": 16.056,
+      "DEM_Z": 0,
+      "dem_2m": 15.6688,
+      "dem_5m": 15.67,
+      "dem_10m": 15.2196,
+      "dem_15m": 15.71,
+      "dem_25m": 17.08
+    },
+    "x_epsg3035": 3497333.5198589233,
+    "y_epsg3035": 3605880.583095621,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      205,
+      311
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 73,
+      "E": 341274.248,
+      "N": 555711.273,
+      "Z": 16.498,
+      "DEM_Z": 0,
+      "dem_2m": 15.5375,
+      "dem_5m": 18.85,
+      "dem_10m": 16.7659,
+      "dem_15m": 23.94,
+      "dem_25m": 15.41
+    },
+    "x_epsg3035": 3497011.9311491554,
+    "y_epsg3035": 3605940.36988883,
+    "original_EN_to_geometry_difference_m": 4.679838019013819e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      204,
+      278
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 74,
+      "E": 341228.614,
+      "N": 555715.745,
+      "Z": 16.459,
+      "DEM_Z": 0,
+      "dem_2m": 15.42,
+      "dem_5m": 15.33,
+      "dem_10m": 19.2448,
+      "dem_15m": 15.47,
+      "dem_25m": 15.34
+    },
+    "x_epsg3035": 3496967.766941362,
+    "y_epsg3035": 3605952.3389300425,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      204,
+      273
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 75,
+      "E": 341380.851,
+      "N": 555720.862,
+      "Z": 16.571,
+      "DEM_Z": 0,
+      "dem_2m": 15.2525,
+      "dem_5m": 18.38,
+      "dem_10m": 18.2781,
+      "dem_15m": 15.45,
+      "dem_25m": 15.31
+    },
+    "x_epsg3035": 3497118.490200363,
+    "y_epsg3035": 3605932.207197789,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      203,
+      289
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 76,
+      "E": 340920.9,
+      "N": 555728.398,
+      "Z": 15.939,
+      "DEM_Z": 0,
+      "dem_2m": 15.9,
+      "dem_5m": 15.94,
+      "dem_10m": 16.1351,
+      "dem_15m": 21.65,
+      "dem_25m": 22.55
+    },
+    "x_epsg3035": 3496667.003325927,
+    "y_epsg3035": 3606015.752903845,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      203,
+      243
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 77,
+      "E": 339291.396,
+      "N": 555728.841,
+      "Z": 14.638,
+      "DEM_Z": 0,
+      "dem_2m": 14.565,
+      "dem_5m": 14.62,
+      "dem_10m": 15.11,
+      "dem_15m": 21.87,
+      "dem_25m": 15.0
+    },
+    "x_epsg3035": 3495063.054204254,
+    "y_epsg3035": 3606285.7829179685,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      203,
+      80
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 78,
+      "E": 341257.056,
+      "N": 555729.41,
+      "Z": 16.5,
+      "DEM_Z": 0,
+      "dem_2m": 15.55,
+      "dem_5m": 15.35,
+      "dem_10m": 16.3237,
+      "dem_15m": 15.6,
+      "dem_25m": 15.41
+    },
+    "x_epsg3035": 3496998.0761367464,
+    "y_epsg3035": 3605961.1356843035,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      203,
+      276
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 79,
+      "E": 341265.347,
+      "N": 555750.374,
+      "Z": 16.556,
+      "DEM_Z": 0,
+      "dem_2m": 15.8,
+      "dem_5m": 15.11,
+      "dem_10m": 21.9365,
+      "dem_15m": 15.11,
+      "dem_25m": 21.16
+    },
+    "x_epsg3035": 3497009.7840868076,
+    "y_epsg3035": 3605980.4786620406,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      200,
+      277
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 80,
+      "E": 341619.175,
+      "N": 555751.055,
+      "Z": 16.37,
+      "DEM_Z": 0,
+      "dem_2m": 15.8175,
+      "dem_5m": 20.14,
+      "dem_10m": 20.3877,
+      "dem_15m": 15.61,
+      "dem_25m": 22.77
+    },
+    "x_epsg3035": 3497358.197417909,
+    "y_epsg3035": 3605922.6097212182,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      200,
+      312
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 81,
+      "E": 341624.525,
+      "N": 555762.504,
+      "Z": 16.512,
+      "DEM_Z": 0,
+      "dem_2m": 15.5575,
+      "dem_5m": 15.62,
+      "dem_10m": 17.4586,
+      "dem_15m": 19.32,
+      "dem_25m": 15.49
+    },
+    "x_epsg3035": 3497365.4006753503,
+    "y_epsg3035": 3605933.0373952417,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      199,
+      313
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 82,
+      "E": 341586.484,
+      "N": 555765.3,
+      "Z": 15.909,
+      "DEM_Z": 0,
+      "dem_2m": 15.995,
+      "dem_5m": 15.67,
+      "dem_10m": 19.8807,
+      "dem_15m": 22.95,
+      "dem_25m": 15.67
+    },
+    "x_epsg3035": 3497328.427178992,
+    "y_epsg3035": 3605942.0941783157,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      199,
+      309
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 83,
+      "E": 341361.771,
+      "N": 555765.935,
+      "Z": 16.513,
+      "DEM_Z": 0,
+      "dem_2m": 15.25,
+      "dem_5m": 15.03,
+      "dem_10m": 14.7635,
+      "dem_15m": 21.9,
+      "dem_25m": 15.03
+    },
+    "x_epsg3035": 3497107.3335331082,
+    "y_epsg3035": 3605979.9010877013,
+    "original_EN_to_geometry_difference_m": 3.839941346661803e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      199,
+      287
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 84,
+      "E": 342120.845,
+      "N": 555768.473,
+      "Z": 16.146,
+      "DEM_Z": 0,
+      "dem_2m": 16.0775,
+      "dem_5m": 16.13,
+      "dem_10m": 16.0922,
+      "dem_15m": 16.13,
+      "dem_25m": 16.05
+    },
+    "x_epsg3035": 3497854.974893246,
+    "y_epsg3035": 3605856.816494281,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 6.0304121027073965,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      199,
+      363
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 85,
+      "E": 341804.816,
+      "N": 555771.491,
+      "Z": 16.146,
+      "DEM_Z": 0,
+      "dem_2m": 15.755,
+      "dem_5m": 15.34,
+      "dem_10m": 15.2118,
+      "dem_15m": 15.11,
+      "dem_25m": 15.21
+    },
+    "x_epsg3035": 3497544.394613762,
+    "y_epsg3035": 3605912.0875462233,
+    "original_EN_to_geometry_difference_m": 7.04673395977428e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      198,
+      331
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 86,
+      "E": 341310.923,
+      "N": 555773.636,
+      "Z": 16.73,
+      "DEM_Z": 0,
+      "dem_2m": 15.475,
+      "dem_5m": 23.1,
+      "dem_10m": 16.7869,
+      "dem_15m": 15.17,
+      "dem_25m": 15.17
+    },
+    "x_epsg3035": 3497058.5830554115,
+    "y_epsg3035": 3605995.923434985,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      198,
+      282
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 87,
+      "E": 342175.426,
+      "N": 555790.699,
+      "Z": 16.167,
+      "DEM_Z": 0,
+      "dem_2m": 16.3675,
+      "dem_5m": 22.03,
+      "dem_10m": 20.4353,
+      "dem_15m": 15.82,
+      "dem_25m": 15.96
+    },
+    "x_epsg3035": 3497912.463155904,
+    "y_epsg3035": 3605869.7473112587,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      196,
+      368
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 88,
+      "E": 341630.072,
+      "N": 555799.066,
+      "Z": 16.428,
+      "DEM_Z": 0,
+      "dem_2m": 15.5925,
+      "dem_5m": 22.0,
+      "dem_10m": 17.1153,
+      "dem_15m": 22.06,
+      "dem_25m": 15.55
+    },
+    "x_epsg3035": 3497377.046316897,
+    "y_epsg3035": 3605968.2468351927,
+    "original_EN_to_geometry_difference_m": 1.4725502860585132e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      196,
+      314
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 89,
+      "E": 341810.063,
+      "N": 555799.873,
+      "Z": 16.167,
+      "DEM_Z": 0,
+      "dem_2m": 15.48,
+      "dem_5m": 15.13,
+      "dem_10m": 15.2186,
+      "dem_15m": 15.24,
+      "dem_25m": 15.23
+    },
+    "x_epsg3035": 3497554.3611158,
+    "y_epsg3035": 3605939.2638686965,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      196,
+      332
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 90,
+      "E": 339231.742,
+      "N": 555801.072,
+      "Z": 14.691,
+      "DEM_Z": 0,
+      "dem_2m": 14.695,
+      "dem_5m": 17.68,
+      "dem_10m": 15.2124,
+      "dem_15m": 16.25,
+      "dem_25m": 14.78
+    },
+    "x_epsg3035": 3495016.5526775094,
+    "y_epsg3035": 3606367.0248011025,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 4.521381673640665,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      195,
+      74
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 91,
+      "E": 341655.424,
+      "N": 555801.616,
+      "Z": 16.503,
+      "DEM_Z": 0,
+      "dem_2m": 15.9495,
+      "dem_5m": 15.65,
+      "dem_10m": 16.0301,
+      "dem_15m": 15.85,
+      "dem_25m": 15.84
+    },
+    "x_epsg3035": 3497402.433522596,
+    "y_epsg3035": 3605966.571913695,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      195,
+      316
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 92,
+      "E": 341655.453,
+      "N": 555806.972,
+      "Z": 16.07,
+      "DEM_Z": 0,
+      "dem_2m": 15.4005,
+      "dem_5m": 15.37,
+      "dem_10m": 15.2118,
+      "dem_15m": 15.4,
+      "dem_25m": 15.68
+    },
+    "x_epsg3035": 3497403.3681655517,
+    "y_epsg3035": 3605971.859422149,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      195,
+      316
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 93,
+      "E": 341655.521,
+      "N": 555807.902,
+      "Z": 16.495,
+      "DEM_Z": 0,
+      "dem_2m": 15.4005,
+      "dem_5m": 15.37,
+      "dem_10m": 15.2118,
+      "dem_15m": 15.4,
+      "dem_25m": 15.68
+    },
+    "x_epsg3035": 3497403.5924347867,
+    "y_epsg3035": 3605972.7671117126,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      195,
+      316
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 94,
+      "E": 341704.341,
+      "N": 555814.064,
+      "Z": 16.211,
+      "DEM_Z": 0,
+      "dem_2m": 15.1815,
+      "dem_5m": 14.53,
+      "dem_10m": 15.2804,
+      "dem_15m": 14.53,
+      "dem_25m": 13.92
+    },
+    "x_epsg3035": 3497452.691963492,
+    "y_epsg3035": 3605970.7783406265,
+    "original_EN_to_geometry_difference_m": 7.123247972120696e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      194,
+      321
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 95,
+      "E": 341704.291,
+      "N": 555814.074,
+      "Z": 16.212,
+      "DEM_Z": 0,
+      "dem_2m": 15.1815,
+      "dem_5m": 14.53,
+      "dem_10m": 15.2804,
+      "dem_15m": 14.53,
+      "dem_25m": 13.92
+    },
+    "x_epsg3035": 3497452.644436589,
+    "y_epsg3035": 3605970.796494437,
+    "original_EN_to_geometry_difference_m": 4.748831981413797e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      194,
+      321
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 96,
+      "E": 341657.318,
+      "N": 555814.235,
+      "Z": 16.084,
+      "DEM_Z": 0,
+      "dem_2m": 15.374,
+      "dem_5m": 15.4,
+      "dem_10m": 15.2118,
+      "dem_15m": 15.4,
+      "dem_25m": 15.68
+    },
+    "x_epsg3035": 3497406.4327321737,
+    "y_epsg3035": 3605978.7274780944,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      194,
+      316
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 97,
+      "E": 341657.936,
+      "N": 555816.772,
+      "Z": 16.496,
+      "DEM_Z": 0,
+      "dem_2m": 15.3756,
+      "dem_5m": 15.39,
+      "dem_10m": 15.7736,
+      "dem_15m": 15.4,
+      "dem_25m": 15.68
+    },
+    "x_epsg3035": 3497407.4702694044,
+    "y_epsg3035": 3605981.132057193,
+    "original_EN_to_geometry_difference_m": 4.293184940373938e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      194,
+      316
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 98,
+      "E": 341516.646,
+      "N": 555818.031,
+      "Z": 16.534,
+      "DEM_Z": 0,
+      "dem_2m": 17.1125,
+      "dem_5m": 22.64,
+      "dem_10m": 21.9945,
+      "dem_15m": 15.63,
+      "dem_25m": 17.33
+    },
+    "x_epsg3035": 3497268.6013101237,
+    "y_epsg3035": 3606005.7530833995,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      194,
+      302
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 99,
+      "E": 342302.629,
+      "N": 555818.975,
+      "Z": 16.11,
+      "DEM_Z": 0,
+      "dem_2m": 16.1175,
+      "dem_5m": 16.32,
+      "dem_10m": 15.807,
+      "dem_15m": 16.2,
+      "dem_25m": 16.2
+    },
+    "x_epsg3035": 3498042.4623210956,
+    "y_epsg3035": 3605876.640225785,
+    "original_EN_to_geometry_difference_m": 8.49752109073785e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      194,
+      381
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 100,
+      "E": 341661.922,
+      "N": 555828.246,
+      "Z": 16.071,
+      "DEM_Z": 0,
+      "dem_2m": 15.5308,
+      "dem_5m": 15.51,
+      "dem_10m": 15.5737,
+      "dem_15m": 15.66,
+      "dem_25m": 15.68
+    },
+    "x_epsg3035": 3497413.335084724,
+    "y_epsg3035": 3605991.8101060884,
+    "original_EN_to_geometry_difference_m": 1.4725502860585132e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      193,
+      317
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 101,
+      "E": 341662.257,
+      "N": 555829.379,
+      "Z": 16.5,
+      "DEM_Z": 0,
+      "dem_2m": 15.5378,
+      "dem_5m": 15.51,
+      "dem_10m": 15.5737,
+      "dem_15m": 15.66,
+      "dem_25m": 15.68
+    },
+    "x_epsg3035": 3497413.856524159,
+    "y_epsg3035": 3605992.874205086,
+    "original_EN_to_geometry_difference_m": 7.04673395977428e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      193,
+      317
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 102,
+      "E": 339766.585,
+      "N": 555831.651,
+      "Z": 15.185,
+      "DEM_Z": 0,
+      "dem_2m": 14.0425,
+      "dem_5m": 19.13,
+      "dem_10m": 19.3429,
+      "dem_15m": 16.85,
+      "dem_25m": 14.34
+    },
+    "x_epsg3035": 3495548.2037759745,
+    "y_epsg3035": 3606308.7554985173,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      192,
+      127
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 103,
+      "E": 341643.888,
+      "N": 555832.81,
+      "Z": 16.222,
+      "DEM_Z": 0,
+      "dem_2m": 17.4225,
+      "dem_5m": 15.46,
+      "dem_10m": 15.0502,
+      "dem_15m": 15.61,
+      "dem_25m": 15.49
+    },
+    "x_epsg3035": 3497396.355021113,
+    "y_epsg3035": 3605999.303636832,
+    "original_EN_to_geometry_difference_m": 4.679838019013819e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      192,
+      315
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 104,
+      "E": 341528.362,
+      "N": 555838.616,
+      "Z": 16.548,
+      "DEM_Z": 0,
+      "dem_2m": 15.2275,
+      "dem_5m": 22.31,
+      "dem_10m": 20.5409,
+      "dem_15m": 21.79,
+      "dem_25m": 14.98
+    },
+    "x_epsg3035": 3497283.6166624594,
+    "y_epsg3035": 3606024.1548417523,
+    "original_EN_to_geometry_difference_m": 5.6650140604919e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      192,
+      303
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 105,
+      "E": 342263.704,
+      "N": 555859.727,
+      "Z": 16.175,
+      "DEM_Z": 0,
+      "dem_2m": 17.0,
+      "dem_5m": 21.72,
+      "dem_10m": 17.9998,
+      "dem_15m": 21.52,
+      "dem_25m": 15.69
+    },
+    "x_epsg3035": 3498011.0397004294,
+    "y_epsg3035": 3605923.3479606304,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      190,
+      377
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 106,
+      "E": 341726.297,
+      "N": 555864.424,
+      "Z": 16.205,
+      "DEM_Z": 0,
+      "dem_2m": 13.98,
+      "dem_5m": 14.64,
+      "dem_10m": 14.1764,
+      "dem_15m": 14.29,
+      "dem_25m": 14.77
+    },
+    "x_epsg3035": 3497482.8244896876,
+    "y_epsg3035": 3606016.9067131947,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      189,
+      323
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 107,
+      "E": 339846.264,
+      "N": 555868.812,
+      "Z": 14.858,
+      "DEM_Z": 0,
+      "dem_2m": 15.0775,
+      "dem_5m": 14.26,
+      "dem_10m": 14.1835,
+      "dem_15m": 14.28,
+      "dem_25m": 14.05
+    },
+    "x_epsg3035": 3495632.923364237,
+    "y_epsg3035": 3606332.2925292635,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 4.767705098503125,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      189,
+      135
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 108,
+      "E": 342412.227,
+      "N": 555872.447,
+      "Z": 16.13,
+      "DEM_Z": 0,
+      "dem_2m": 15.99,
+      "dem_5m": 14.89,
+      "dem_10m": 14.8251,
+      "dem_15m": 14.82,
+      "dem_25m": 14.92
+    },
+    "x_epsg3035": 3498159.3941893964,
+    "y_epsg3035": 3605911.342200772,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      188,
+      392
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 109,
+      "E": 341527.98,
+      "N": 555873.854,
+      "Z": 16.274,
+      "DEM_Z": 0,
+      "dem_2m": 15.2225,
+      "dem_5m": 17.49,
+      "dem_10m": 14.8711,
+      "dem_15m": 14.89,
+      "dem_25m": 14.83
+    },
+    "x_epsg3035": 3497289.2020087824,
+    "y_epsg3035": 3606059.037007348,
+    "original_EN_to_geometry_difference_m": 7.580416554631528e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      188,
+      303
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 110,
+      "E": 342415.018,
+      "N": 555880.098,
+      "Z": 16.375,
+      "DEM_Z": 0,
+      "dem_2m": 16.33,
+      "dem_5m": 15.04,
+      "dem_10m": 15.1948,
+      "dem_15m": 15.52,
+      "dem_25m": 21.6
+    },
+    "x_epsg3035": 3498163.4359503863,
+    "y_epsg3035": 3605918.4403912295,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      187,
+      392
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 111,
+      "E": 342416.027,
+      "N": 555884.021,
+      "Z": 16.371,
+      "DEM_Z": 0,
+      "dem_2m": 15.4575,
+      "dem_5m": 15.04,
+      "dem_10m": 15.1948,
+      "dem_15m": 15.52,
+      "dem_25m": 21.6
+    },
+    "x_epsg3035": 3498165.092864124,
+    "y_epsg3035": 3605922.149776563,
+    "original_EN_to_geometry_difference_m": 8.896446402437426e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      187,
+      392
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 112,
+      "E": 341674.893,
+      "N": 555892.698,
+      "Z": 16.812,
+      "DEM_Z": 0,
+      "dem_2m": 15.735,
+      "dem_5m": 15.22,
+      "dem_10m": 19.7782,
+      "dem_15m": 24.44,
+      "dem_25m": 15.13
+    },
+    "x_epsg3035": 3497437.0070413603,
+    "y_epsg3035": 3606053.3495135345,
+    "original_EN_to_geometry_difference_m": 7.580416554631528e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      186,
+      318
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 113,
+      "E": 341578.899,
+      "N": 555895.023,
+      "Z": 16.078,
+      "DEM_Z": 0,
+      "dem_2m": 14.975,
+      "dem_5m": 14.92,
+      "dem_10m": 14.326,
+      "dem_15m": 14.74,
+      "dem_25m": 21.66
+    },
+    "x_epsg3035": 3497342.906518071,
+    "y_epsg3035": 3606071.5295116906,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      186,
+      308
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 114,
+      "E": 339692.013,
+      "N": 555897.592,
+      "Z": 15.284,
+      "DEM_Z": 0,
+      "dem_2m": 14.4375,
+      "dem_5m": 19.55,
+      "dem_10m": 18.9039,
+      "dem_15m": 19.24,
+      "dem_25m": 19.59
+    },
+    "x_epsg3035": 3495485.953416369,
+    "y_epsg3035": 3606386.2502333843,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      186,
+      120
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 115,
+      "E": 340902.578,
+      "N": 555900.513,
+      "Z": 15.91,
+      "DEM_Z": 0,
+      "dem_2m": 15.9025,
+      "dem_5m": 15.98,
+      "dem_10m": 15.7923,
+      "dem_15m": 15.85,
+      "dem_25m": 16.21
+    },
+    "x_epsg3035": 3496678.085013452,
+    "y_epsg3035": 3606188.8530219006,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 6.369825529921345,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      185,
+      241
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 116,
+      "E": 339115.0,
+      "N": 555902.997,
+      "Z": 14.823,
+      "DEM_Z": 0,
+      "dem_2m": 14.7925,
+      "dem_5m": 15.11,
+      "dem_10m": 15.0753,
+      "dem_15m": 14.91,
+      "dem_25m": 15.11
+    },
+    "x_epsg3035": 3494918.8796297237,
+    "y_epsg3035": 3606487.0524422834,
+    "original_EN_to_geometry_difference_m": 8.49752109073785e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.6540467685633877,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      185,
+      62
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 117,
+      "E": 342303.801,
+      "N": 555906.351,
+      "Z": 16.537,
+      "DEM_Z": 0,
+      "dem_2m": 16.0,
+      "dem_5m": 19.77,
+      "dem_10m": 17.1226,
+      "dem_15m": 17.86,
+      "dem_25m": 14.97
+    },
+    "x_epsg3035": 3498058.3978927312,
+    "y_epsg3035": 3605962.7829750394,
+    "original_EN_to_geometry_difference_m": 2.9451005721170265e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      185,
+      381
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 118,
+      "E": 339338.547,
+      "N": 555909.643,
+      "Z": 14.785,
+      "DEM_Z": 0,
+      "dem_2m": 12.875,
+      "dem_5m": 13.21,
+      "dem_10m": 13.2168,
+      "dem_15m": 13.0,
+      "dem_25m": 13.24
+    },
+    "x_epsg3035": 3495140.054309527,
+    "y_epsg3035": 3606456.6359424163,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      185,
+      84
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 119,
+      "E": 341590.334,
+      "N": 555940.504,
+      "Z": 15.54,
+      "DEM_Z": 0,
+      "dem_2m": 14.63,
+      "dem_5m": 14.64,
+      "dem_10m": 16.0893,
+      "dem_15m": 14.65,
+      "dem_25m": 14.59
+    },
+    "x_epsg3035": 3497361.8570904494,
+    "y_epsg3035": 3606114.5776739595,
+    "original_EN_to_geometry_difference_m": 4.748831981413797e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      181,
+      310
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 120,
+      "E": 341534.902,
+      "N": 555943.186,
+      "Z": 15.818,
+      "DEM_Z": 0,
+      "dem_2m": 16.16,
+      "dem_5m": 20.45,
+      "dem_10m": 16.2005,
+      "dem_15m": 14.89,
+      "dem_25m": 14.87
+    },
+    "x_epsg3035": 3497307.745100812,
+    "y_epsg3035": 3606126.3992468175,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      181,
+      304
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 121,
+      "E": 342588.361,
+      "N": 555963.924,
+      "Z": 16.028,
+      "DEM_Z": 0,
+      "dem_2m": 16.08,
+      "dem_5m": 15.3,
+      "dem_10m": 15.3799,
+      "dem_15m": 15.3,
+      "dem_25m": 15.98
+    },
+    "x_epsg3035": 3498348.2523279097,
+    "y_epsg3035": 3605972.587831193,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.9286285229405598,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      179,
+      409
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 122,
+      "E": 339537.341,
+      "N": 555975.929,
+      "Z": 14.781,
+      "DEM_Z": 0,
+      "dem_2m": 15.5149,
+      "dem_5m": 14.51,
+      "dem_10m": 16.2435,
+      "dem_15m": 15.16,
+      "dem_25m": 13.91
+    },
+    "x_epsg3035": 3495346.9529499006,
+    "y_epsg3035": 3606489.245554282,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      178,
+      104
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 123,
+      "E": 339495.792,
+      "N": 555981.522,
+      "Z": 14.733,
+      "DEM_Z": 0,
+      "dem_2m": 14.5561,
+      "dem_5m": 14.72,
+      "dem_10m": 14.4859,
+      "dem_15m": 14.38,
+      "dem_25m": 14.6
+    },
+    "x_epsg3035": 3495306.999962094,
+    "y_epsg3035": 3606501.6460275664,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      177,
+      100
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 124,
+      "E": 339540.501,
+      "N": 555992.156,
+      "Z": 14.909,
+      "DEM_Z": 0,
+      "dem_2m": 16.2992,
+      "dem_5m": 15.9,
+      "dem_10m": 15.951,
+      "dem_15m": 15.9,
+      "dem_25m": 15.71
+    },
+    "x_epsg3035": 3495352.8087217137,
+    "y_epsg3035": 3606504.7569192536,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 10.028546405153664,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      176,
+      105
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 125,
+      "E": 342889.425,
+      "N": 556032.282,
+      "Z": 16.18,
+      "DEM_Z": 0,
+      "dem_2m": 16.1475,
+      "dem_5m": 16.14,
+      "dem_10m": 16.7439,
+      "dem_15m": 15.84,
+      "dem_25m": 15.82
+    },
+    "x_epsg3035": 3498656.1781153637,
+    "y_epsg3035": 3605990.317906555,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 55.92036479046046,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      172,
+      439
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 126,
+      "E": 342893.625,
+      "N": 556039.209,
+      "Z": 16.253,
+      "DEM_Z": 0,
+      "dem_2m": 16.2125,
+      "dem_5m": 15.87,
+      "dem_10m": 15.9744,
+      "dem_15m": 15.84,
+      "dem_25m": 15.82
+    },
+    "x_epsg3035": 3498661.484412076,
+    "y_epsg3035": 3605996.467542953,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 50.37872388981431,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      172,
+      440
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 127,
+      "E": 341806.697,
+      "N": 556063.75,
+      "Z": 16.397,
+      "DEM_Z": 0,
+      "dem_2m": 13.56,
+      "dem_5m": 13.56,
+      "dem_10m": 12.7729,
+      "dem_15m": 13.65,
+      "dem_25m": 14.75
+    },
+    "x_epsg3035": 3497595.6893764054,
+    "y_epsg3035": 3606200.5594659913,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      169,
+      331
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 128,
+      "E": 343014.761,
+      "N": 556065.351,
+      "Z": 16.143,
+      "DEM_Z": 0,
+      "dem_2m": 16.27,
+      "dem_5m": 15.98,
+      "dem_10m": 16.0384,
+      "dem_15m": 15.98,
+      "dem_25m": 15.98
+    },
+    "x_epsg3035": 3498785.1509985896,
+    "y_epsg3035": 3606002.2548994008,
+    "original_EN_to_geometry_difference_m": 7.04673395977428e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 26.59285366727156,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      169,
+      452
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 129,
+      "E": 341188.293,
+      "N": 556081.737,
+      "Z": 16.137,
+      "DEM_Z": 0,
+      "dem_2m": 15.3575,
+      "dem_5m": 14.44,
+      "dem_10m": 14.66,
+      "dem_15m": 14.33,
+      "dem_25m": 14.54
+    },
+    "x_epsg3035": 3496989.99282719,
+    "y_epsg3035": 3606320.6503019948,
+    "original_EN_to_geometry_difference_m": 7.508562643358995e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      167,
+      269
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 130,
+      "E": 343037.559,
+      "N": 556091.2,
+      "Z": 16.214,
+      "DEM_Z": 0,
+      "dem_2m": 16.215,
+      "dem_5m": 16.12,
+      "dem_10m": 16.0835,
+      "dem_15m": 16.09,
+      "dem_25m": 16.12
+    },
+    "x_epsg3035": 3498811.966032298,
+    "y_epsg3035": 3606024.0240734033,
+    "original_EN_to_geometry_difference_m": 5.309355562083134e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 5.165794657322749,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      166,
+      454
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 131,
+      "E": 339588.755,
+      "N": 556092.519,
+      "Z": 15.1497,
+      "DEM_Z": 0,
+      "dem_2m": 15.63,
+      "dem_5m": 14.18,
+      "dem_10m": 14.1257,
+      "dem_15m": 14.85,
+      "dem_25m": 14.18
+    },
+    "x_epsg3035": 3495417.2869920847,
+    "y_epsg3035": 3606595.94393596,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      166,
+      109
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 132,
+      "E": 339588.688,
+      "N": 556092.54,
+      "Z": 15.1653,
+      "DEM_Z": 0,
+      "dem_2m": 15.63,
+      "dem_5m": 14.18,
+      "dem_10m": 14.1257,
+      "dem_15m": 14.85,
+      "dem_25m": 14.18
+    },
+    "x_epsg3035": 3495417.2245926145,
+    "y_epsg3035": 3606595.975771045,
+    "original_EN_to_geometry_difference_m": 5.607304432798315e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      166,
+      109
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 133,
+      "E": 339595.374,
+      "N": 556107.672,
+      "Z": 15.1659,
+      "DEM_Z": 0,
+      "dem_2m": 15.0575,
+      "dem_5m": 15.03,
+      "dem_10m": 14.8888,
+      "dem_15m": 15.12,
+      "dem_25m": 14.5
+    },
+    "x_epsg3035": 3495426.3660017326,
+    "y_epsg3035": 3606609.821784482,
+    "original_EN_to_geometry_difference_m": 7.508562643358995e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      165,
+      110
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 134,
+      "E": 340741.862,
+      "N": 556128.036,
+      "Z": 15.832,
+      "DEM_Z": 0,
+      "dem_2m": 15.8025,
+      "dem_5m": 15.7,
+      "dem_10m": 15.9499,
+      "dem_15m": 15.7,
+      "dem_25m": 16.21
+    },
+    "x_epsg3035": 3496558.372814009,
+    "y_epsg3035": 3606440.261398647,
+    "original_EN_to_geometry_difference_m": 3.725290298461914e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      163,
+      225
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 135,
+      "E": 343054.842,
+      "N": 556129.12,
+      "Z": 16.246,
+      "DEM_Z": 0,
+      "dem_2m": 16.265,
+      "dem_5m": 16.07,
+      "dem_10m": 16.0835,
+      "dem_15m": 16.07,
+      "dem_25m": 16.86
+    },
+    "x_epsg3035": 3498835.394390422,
+    "y_epsg3035": 3606058.6331373383,
+    "original_EN_to_geometry_difference_m": 3.259629011154175e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      163,
+      456
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 136,
+      "E": 339598.609,
+      "N": 556132.024,
+      "Z": 15.0907,
+      "DEM_Z": 0,
+      "dem_2m": 15.1025,
+      "dem_5m": 14.8,
+      "dem_10m": 14.6707,
+      "dem_15m": 14.98,
+      "dem_25m": 14.27
+    },
+    "x_epsg3035": 3495433.6701931744,
+    "y_epsg3035": 3606633.349162591,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      162,
+      110
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 137,
+      "E": 339598.36,
+      "N": 556153.678,
+      "Z": 15.1586,
+      "DEM_Z": 0,
+      "dem_2m": 15.225,
+      "dem_5m": 14.67,
+      "dem_10m": 14.508,
+      "dem_15m": 15.02,
+      "dem_25m": 14.27
+    },
+    "x_epsg3035": 3495437.0884408513,
+    "y_epsg3035": 3606654.787006056,
+    "original_EN_to_geometry_difference_m": 1.041250292910165e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      160,
+      110
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 138,
+      "E": 339602.422,
+      "N": 556162.665,
+      "Z": 15.2187,
+      "DEM_Z": 0,
+      "dem_2m": 15.1425,
+      "dem_5m": 14.82,
+      "dem_10m": 15.0859,
+      "dem_15m": 15.02,
+      "dem_25m": 15.56
+    },
+    "x_epsg3035": 3495442.6073080683,
+    "y_epsg3035": 3606662.995167867,
+    "original_EN_to_geometry_difference_m": 6.667254987767131e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      159,
+      111
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 139,
+      "E": 343078.672,
+      "N": 556175.147,
+      "Z": 16.271,
+      "DEM_Z": 0,
+      "dem_2m": 16.36,
+      "dem_5m": 16.0,
+      "dem_10m": 15.9749,
+      "dem_15m": 16.16,
+      "dem_25m": 17.64
+    },
+    "x_epsg3035": 3498866.639065032,
+    "y_epsg3035": 3606100.169420303,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      158,
+      458
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 140,
+      "E": 343078.671,
+      "N": 556175.159,
+      "Z": 16.264,
+      "DEM_Z": 0,
+      "dem_2m": 16.36,
+      "dem_5m": 16.0,
+      "dem_10m": 15.9749,
+      "dem_15m": 16.16,
+      "dem_25m": 17.64
+    },
+    "x_epsg3035": 3498866.6401108215,
+    "y_epsg3035": 3606100.1814429774,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      158,
+      458
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 141,
+      "E": 343081.528,
+      "N": 556180.217,
+      "Z": 16.33,
+      "DEM_Z": 0,
+      "dem_2m": 16.1675,
+      "dem_5m": 15.97,
+      "dem_10m": 16.0219,
+      "dem_15m": 15.87,
+      "dem_25m": 15.79
+    },
+    "x_epsg3035": 3498870.308205075,
+    "y_epsg3035": 3606104.7065218366,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      157,
+      459
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 142,
+      "E": 339593.39,
+      "N": 556220.859,
+      "Z": 14.8456,
+      "DEM_Z": 0,
+      "dem_2m": 14.535,
+      "dem_5m": 13.59,
+      "dem_10m": 13.3893,
+      "dem_15m": 13.68,
+      "dem_25m": 13.68
+    },
+    "x_epsg3035": 3495443.561673864,
+    "y_epsg3035": 3606721.991818907,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 3.05711141710273,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      153,
+      110
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 143,
+      "E": 340332.869,
+      "N": 556237.775,
+      "Z": 15.974,
+      "DEM_Z": 0,
+      "dem_2m": 15.9875,
+      "dem_5m": 15.88,
+      "dem_10m": 15.5411,
+      "dem_15m": 23.11,
+      "dem_25m": 16.51
+    },
+    "x_epsg3035": 3496174.3393036732,
+    "y_epsg3035": 3606616.363208107,
+    "original_EN_to_geometry_difference_m": 2.7939677238464355e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      152,
+      184
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 144,
+      "E": 343095.971,
+      "N": 556238.868,
+      "Z": 16.333,
+      "DEM_Z": 0,
+      "dem_2m": 16.1275,
+      "dem_5m": 15.38,
+      "dem_10m": 15.2861,
+      "dem_15m": 15.34,
+      "dem_25m": 15.08
+    },
+    "x_epsg3035": 3498894.4482800723,
+    "y_epsg3035": 3606160.269778658,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      152,
+      460
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 145,
+      "E": 343096.095,
+      "N": 556243.401,
+      "Z": 16.441,
+      "DEM_Z": 0,
+      "dem_2m": 16.5375,
+      "dem_5m": 15.56,
+      "dem_10m": 15.2861,
+      "dem_15m": 15.34,
+      "dem_25m": 15.08
+    },
+    "x_epsg3035": 3498895.337244452,
+    "y_epsg3035": 3606164.728318737,
+    "original_EN_to_geometry_difference_m": 5.14339703004214e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      151,
+      460
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 146,
+      "E": 340652.725,
+      "N": 556248.748,
+      "Z": 15.956,
+      "DEM_Z": 0,
+      "dem_2m": 14.9075,
+      "dem_5m": 17.93,
+      "dem_10m": 15.9446,
+      "dem_15m": 17.93,
+      "dem_25m": 14.76
+    },
+    "x_epsg3035": 3496491.051142802,
+    "y_epsg3035": 3606574.2859076876,
+    "original_EN_to_geometry_difference_m": 6.124817970192947e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      151,
+      216
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 147,
+      "E": 339887.975,
+      "N": 556268.516,
+      "Z": 15.2634,
+      "DEM_Z": 0,
+      "dem_2m": 15.145,
+      "dem_5m": 14.84,
+      "dem_10m": 14.635,
+      "dem_15m": 14.84,
+      "dem_25m": 14.84
+    },
+    "x_epsg3035": 3495741.6024146937,
+    "y_epsg3035": 3606720.3449834497,
+    "original_EN_to_geometry_difference_m": 3.390065342784169e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.2559801009947162,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      149,
+      139
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 148,
+      "E": 343101.528,
+      "N": 556268.933,
+      "Z": 16.302,
+      "DEM_Z": 0,
+      "dem_2m": 16.23,
+      "dem_5m": 15.59,
+      "dem_10m": 15.7971,
+      "dem_15m": 14.93,
+      "dem_25m": 16.8
+    },
+    "x_epsg3035": 3498905.004944355,
+    "y_epsg3035": 3606189.057515559,
+    "original_EN_to_geometry_difference_m": 3.725290298461914e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      149,
+      461
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 149,
+      "E": 343104.371,
+      "N": 556279.14,
+      "Z": 16.349,
+      "DEM_Z": 0,
+      "dem_2m": 16.3525,
+      "dem_5m": 14.9,
+      "dem_10m": 15.399,
+      "dem_15m": 14.56,
+      "dem_25m": 16.8
+    },
+    "x_epsg3035": 3498909.5303845783,
+    "y_epsg3035": 3606198.6726334044,
+    "original_EN_to_geometry_difference_m": 7.123247972120696e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      148,
+      461
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 150,
+      "E": 341532.161,
+      "N": 556280.32,
+      "Z": 16.013,
+      "DEM_Z": 0,
+      "dem_2m": 12.8775,
+      "dem_5m": 12.83,
+      "dem_10m": 13.4438,
+      "dem_15m": 14.48,
+      "dem_25m": 12.41
+    },
+    "x_epsg3035": 3497362.082701331,
+    "y_epsg3035": 3606459.9773136973,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      147,
+      304
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 151,
+      "E": 341434.676,
+      "N": 556292.746,
+      "Z": 15.952,
+      "DEM_Z": 0,
+      "dem_2m": 14.042,
+      "dem_5m": 12.85,
+      "dem_10m": 12.403,
+      "dem_15m": 12.85,
+      "dem_25m": 10.474
+    },
+    "x_epsg3035": 3497268.223428926,
+    "y_epsg3035": 3606488.384942716,
+    "original_EN_to_geometry_difference_m": 2.7939677238464355e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      146,
+      294
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 152,
+      "E": 343111.117,
+      "N": 556296.948,
+      "Z": 16.28,
+      "DEM_Z": 0,
+      "dem_2m": 16.2325,
+      "dem_5m": 15.84,
+      "dem_10m": 15.9443,
+      "dem_15m": 16.01,
+      "dem_25m": 16.01
+    },
+    "x_epsg3035": 3498919.1838244144,
+    "y_epsg3035": 3606215.1524853026,
+    "original_EN_to_geometry_difference_m": 6.124817970192947e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      146,
+      462
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 153,
+      "E": 343118.226,
+      "N": 556304.575,
+      "Z": 16.256,
+      "DEM_Z": 0,
+      "dem_2m": 16.2425,
+      "dem_5m": 15.94,
+      "dem_10m": 15.9443,
+      "dem_15m": 15.45,
+      "dem_25m": 16.01
+    },
+    "x_epsg3035": 3498927.4721497623,
+    "y_epsg3035": 3606221.512427247,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      145,
+      462
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 154,
+      "E": 339710.469,
+      "N": 556307.481,
+      "Z": 15.021,
+      "DEM_Z": 0,
+      "dem_2m": 15.3825,
+      "dem_5m": 15.92,
+      "dem_10m": 14.1614,
+      "dem_15m": 14.64,
+      "dem_25m": 13.2
+    },
+    "x_epsg3035": 3495573.4642890627,
+    "y_epsg3035": 3606788.214284406,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.49663751965152675,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      145,
+      122
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 155,
+      "E": 340367.168,
+      "N": 556307.523,
+      "Z": 15.605,
+      "DEM_Z": 0,
+      "dem_2m": 15.66,
+      "dem_5m": 16.1,
+      "dem_10m": 15.6361,
+      "dem_15m": 16.1,
+      "dem_25m": 15.47
+    },
+    "x_epsg3035": 3496219.901977109,
+    "y_epsg3035": 3606679.607307047,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 4.118025723868747,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      145,
+      187
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 156,
+      "E": 339574.268,
+      "N": 556312.592,
+      "Z": 14.9952,
+      "DEM_Z": 0,
+      "dem_2m": 15.1125,
+      "dem_5m": 14.03,
+      "dem_10m": 14.108,
+      "dem_15m": 14.08,
+      "dem_25m": 14.25
+    },
+    "x_epsg3035": 3495440.257978751,
+    "y_epsg3035": 3606815.7981636976,
+    "original_EN_to_geometry_difference_m": 1.4725502860585132e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.17108821507436497,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      144,
+      108
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 157,
+      "E": 339629.886,
+      "N": 556321.021,
+      "Z": 15.0118,
+      "DEM_Z": 0,
+      "dem_2m": 14.91,
+      "dem_5m": 13.61,
+      "dem_10m": 13.5314,
+      "dem_15m": 13.76,
+      "dem_25m": 16.56
+    },
+    "x_epsg3035": 3495496.4321812186,
+    "y_epsg3035": 3606814.925333931,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 2.52471013566137,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      143,
+      113
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 158,
+      "E": 343135.154,
+      "N": 556325.873,
+      "Z": 16.272,
+      "DEM_Z": 0,
+      "dem_2m": 16.2525,
+      "dem_5m": 16.04,
+      "dem_10m": 15.8555,
+      "dem_15m": 16.25,
+      "dem_25m": 16.32
+    },
+    "x_epsg3035": 3498947.7390209013,
+    "y_epsg3035": 3606239.7559696827,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 4.875964676913818,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      143,
+      464
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 159,
+      "E": 343148.485,
+      "N": 556339.054,
+      "Z": 16.239,
+      "DEM_Z": 0,
+      "dem_2m": 16.2475,
+      "dem_5m": 16.2,
+      "dem_10m": 15.949,
+      "dem_15m": 15.92,
+      "dem_25m": 15.72
+    },
+    "x_epsg3035": 3498963.0918183154,
+    "y_epsg3035": 3606250.574283417,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 17.50592716299317,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      142,
+      465
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 160,
+      "E": 343160.15,
+      "N": 556351.211,
+      "Z": 16.237,
+      "DEM_Z": 0,
+      "dem_2m": 16.2075,
+      "dem_5m": 16.18,
+      "dem_10m": 16.2236,
+      "dem_15m": 16.02,
+      "dem_25m": 16.33
+    },
+    "x_epsg3035": 3498976.6313954093,
+    "y_epsg3035": 3606260.6564466227,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 28.526375010624008,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      140,
+      467
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 161,
+      "E": 343176.009,
+      "N": 556358.633,
+      "Z": 16.267,
+      "DEM_Z": 0,
+      "dem_2m": 16.685,
+      "dem_5m": 15.49,
+      "dem_10m": 15.4598,
+      "dem_15m": 15.88,
+      "dem_25m": 17.74
+    },
+    "x_epsg3035": 3498993.4983897167,
+    "y_epsg3035": 3606265.3659917037,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 43.963878597048314,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      140,
+      468
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 162,
+      "E": 338851.301,
+      "N": 556364.16,
+      "Z": 13.9523,
+      "DEM_Z": 0,
+      "dem_2m": 13.665,
+      "dem_5m": 15.83,
+      "dem_10m": 17.0418,
+      "dem_15m": 12.8,
+      "dem_25m": 12.82
+    },
+    "x_epsg3035": 3494737.3233406264,
+    "y_epsg3035": 3606986.3619623715,
+    "original_EN_to_geometry_difference_m": 8.49752109073785e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.8877589558569602,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      139,
+      36
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 163,
+      "E": 341316.731,
+      "N": 556364.286,
+      "Z": 15.911,
+      "DEM_Z": 0,
+      "dem_2m": 15.525,
+      "dem_5m": 15.59,
+      "dem_10m": 15.6898,
+      "dem_15m": 14.56,
+      "dem_25m": 14.56
+    },
+    "x_epsg3035": 3497164.2249607947,
+    "y_epsg3035": 3606578.588691776,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      139,
+      282
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 164,
+      "E": 343175.768,
+      "N": 556398.94,
+      "Z": 16.493,
+      "DEM_Z": 0,
+      "dem_2m": 16.0,
+      "dem_5m": 14.96,
+      "dem_10m": 14.8193,
+      "dem_15m": 14.85,
+      "dem_25m": 17.84
+    },
+    "x_epsg3035": 3499000.080447207,
+    "y_epsg3035": 3606305.2331830533,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 40.943362943182905,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      136,
+      468
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 165,
+      "E": 340099.995,
+      "N": 556434.968,
+      "Z": 15.2063,
+      "DEM_Z": 0,
+      "dem_2m": 15.16,
+      "dem_5m": 13.67,
+      "dem_10m": 13.1806,
+      "dem_15m": 13.77,
+      "dem_25m": 12.39
+    },
+    "x_epsg3035": 3495978.4675125103,
+    "y_epsg3035": 3606849.7404028783,
+    "original_EN_to_geometry_difference_m": 7.508562643358995e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      132,
+      160
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 166,
+      "E": 343171.652,
+      "N": 556500.883,
+      "Z": 16.363,
+      "DEM_Z": 0,
+      "dem_2m": 16.2375,
+      "dem_5m": 14.64,
+      "dem_10m": 15.6986,
+      "dem_15m": 14.64,
+      "dem_25m": 14.69
+    },
+    "x_epsg3035": 3499013.2759436974,
+    "y_epsg3035": 3606406.644009768,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 36.557635254513876,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      125,
+      468
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 167,
+      "E": 342509.957,
+      "N": 556552.271,
+      "Z": 16.074,
+      "DEM_Z": 0,
+      "dem_2m": 14.13,
+      "dem_5m": 14.14,
+      "dem_10m": 14.0337,
+      "dem_15m": 14.19,
+      "dem_25m": 13.97
+    },
+    "x_epsg3035": 3498370.610543952,
+    "y_epsg3035": 3606566.9077616963,
+    "original_EN_to_geometry_difference_m": 6.212696462928473e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      120,
+      401
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 168,
+      "E": 341489.418,
+      "N": 556567.421,
+      "Z": 16.071,
+      "DEM_Z": 0,
+      "dem_2m": 16.03,
+      "dem_5m": 16.23,
+      "dem_10m": 16.3018,
+      "dem_15m": 16.09,
+      "dem_25m": 16.23
+    },
+    "x_epsg3035": 3497368.5802166034,
+    "y_epsg3035": 3606750.7356409975,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      119,
+      299
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 169,
+      "E": 341290.764,
+      "N": 556567.617,
+      "Z": 15.857,
+      "DEM_Z": 0,
+      "dem_2m": 15.79,
+      "dem_5m": 15.06,
+      "dem_10m": 15.6035,
+      "dem_15m": 15.35,
+      "dem_25m": 13.35
+    },
+    "x_epsg3035": 3497173.0639755647,
+    "y_epsg3035": 3606783.7977960305,
+    "original_EN_to_geometry_difference_m": 1.4725502860585132e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      119,
+      280
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 170,
+      "E": 341502.396,
+      "N": 556568.683,
+      "Z": 16.074,
+      "DEM_Z": 0,
+      "dem_2m": 16.035,
+      "dem_5m": 15.84,
+      "dem_10m": 15.6197,
+      "dem_15m": 14.76,
+      "dem_25m": 15.38
+    },
+    "x_epsg3035": 3497381.5689135278,
+    "y_epsg3035": 3606749.835334211,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      119,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 171,
+      "E": 341494.86,
+      "N": 556568.977,
+      "Z": 16.057,
+      "DEM_Z": 0,
+      "dem_2m": 16.0625,
+      "dem_5m": 16.18,
+      "dem_10m": 16.2965,
+      "dem_15m": 16.09,
+      "dem_25m": 16.23
+    },
+    "x_epsg3035": 3497374.200422954,
+    "y_epsg3035": 3606751.3727184334,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      119,
+      300
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 172,
+      "E": 341505.889,
+      "N": 556577.389,
+      "Z": 16.082,
+      "DEM_Z": 0,
+      "dem_2m": 16.2975,
+      "dem_5m": 15.95,
+      "dem_10m": 16.0417,
+      "dem_15m": 15.95,
+      "dem_25m": 15.38
+    },
+    "x_epsg3035": 3497386.480250506,
+    "y_epsg3035": 3606757.859840157,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      118,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 173,
+      "E": 343164.829,
+      "N": 556580.65,
+      "Z": 16.385,
+      "DEM_Z": 0,
+      "dem_2m": 16.645,
+      "dem_5m": 13.89,
+      "dem_10m": 14.411,
+      "dem_15m": 14.07,
+      "dem_25m": 14.24
+    },
+    "x_epsg3035": 3499020.0549771553,
+    "y_epsg3035": 3606486.590647362,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.634523119590408,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      117,
+      467
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 174,
+      "E": 341511.392,
+      "N": 556580.828,
+      "Z": 16.086,
+      "DEM_Z": 0,
+      "dem_2m": 16.0925,
+      "dem_5m": 15.57,
+      "dem_10m": 15.7457,
+      "dem_15m": 15.95,
+      "dem_25m": 15.96
+    },
+    "x_epsg3035": 3497392.479079797,
+    "y_epsg3035": 3606760.3474262366,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      117,
+      302
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 175,
+      "E": 341290.117,
+      "N": 556587.995,
+      "Z": 15.852,
+      "DEM_Z": 0,
+      "dem_2m": 15.9825,
+      "dem_5m": 14.76,
+      "dem_10m": 15.6451,
+      "dem_15m": 16.42,
+      "dem_25m": 13.62
+    },
+    "x_epsg3035": 3497175.874734312,
+    "y_epsg3035": 3606804.04047675,
+    "original_EN_to_geometry_difference_m": 6.667254987767131e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      117,
+      280
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 176,
+      "E": 340991.354,
+      "N": 556590.401,
+      "Z": 16.413,
+      "DEM_Z": 0,
+      "dem_2m": 13.49,
+      "dem_5m": 13.29,
+      "dem_10m": 13.4861,
+      "dem_15m": 13.42,
+      "dem_25m": 13.19
+    },
+    "x_epsg3035": 3496882.188343723,
+    "y_epsg3035": 3606855.849538536,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      116,
+      250
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 177,
+      "E": 341506.303,
+      "N": 556593.519,
+      "Z": 16.09,
+      "DEM_Z": 0,
+      "dem_2m": 15.9825,
+      "dem_5m": 16.25,
+      "dem_10m": 16.4316,
+      "dem_15m": 16.25,
+      "dem_25m": 15.96
+    },
+    "x_epsg3035": 3497389.616736223,
+    "y_epsg3035": 3606773.7294811956,
+    "original_EN_to_geometry_difference_m": 1.4725502860585132e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      116,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 178,
+      "E": 341509.719,
+      "N": 556599.697,
+      "Z": 16.057,
+      "DEM_Z": 0,
+      "dem_2m": 16.0575,
+      "dem_5m": 16.4,
+      "dem_10m": 16.5061,
+      "dem_15m": 16.25,
+      "dem_25m": 15.96
+    },
+    "x_epsg3035": 3497394.0245793425,
+    "y_epsg3035": 3606779.2687955657,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      116,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 179,
+      "E": 341284.376,
+      "N": 556600.737,
+      "Z": 15.864,
+      "DEM_Z": 0,
+      "dem_2m": 16.0,
+      "dem_5m": 14.27,
+      "dem_10m": 14.5189,
+      "dem_15m": 14.77,
+      "dem_25m": 13.62
+    },
+    "x_epsg3035": 3497172.379214092,
+    "y_epsg3035": 3606817.5808066376,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      115,
+      279
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 180,
+      "E": 341617.98,
+      "N": 556605.475,
+      "Z": 16.037,
+      "DEM_Z": 0,
+      "dem_2m": 13.0225,
+      "dem_5m": 11.79,
+      "dem_10m": 11.9904,
+      "dem_15m": 12.57,
+      "dem_25m": 12.64
+    },
+    "x_epsg3035": 3497501.571325574,
+    "y_epsg3035": 3606767.065506292,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      115,
+      312
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 181,
+      "E": 341283.441,
+      "N": 556614.966,
+      "Z": 15.897,
+      "DEM_Z": 0,
+      "dem_2m": 15.82,
+      "dem_5m": 15.3,
+      "dem_10m": 15.5821,
+      "dem_15m": 14.77,
+      "dem_25m": 15.34
+    },
+    "x_epsg3035": 3497173.866162897,
+    "y_epsg3035": 3606831.795271269,
+    "original_EN_to_geometry_difference_m": 4.6566128730773926e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      114,
+      279
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 182,
+      "E": 339938.349,
+      "N": 556631.745,
+      "Z": 15.041,
+      "DEM_Z": 0,
+      "dem_2m": 14.98,
+      "dem_5m": 13.81,
+      "dem_10m": 13.0787,
+      "dem_15m": 12.61,
+      "dem_25m": 13.98
+    },
+    "x_epsg3035": 3495852.6403396334,
+    "y_epsg3035": 3607070.921974648,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      112,
+      144
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 183,
+      "E": 339935.103,
+      "N": 556652.085,
+      "Z": 14.915,
+      "DEM_Z": 0,
+      "dem_2m": 14.75,
+      "dem_5m": 14.16,
+      "dem_10m": 13.5771,
+      "dem_15m": 13.09,
+      "dem_25m": 13.98
+    },
+    "x_epsg3035": 3495852.886304197,
+    "y_epsg3035": 3607091.557209562,
+    "original_EN_to_geometry_difference_m": 5.14339703004214e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      110,
+      144
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 184,
+      "E": 343155.583,
+      "N": 556659.015,
+      "Z": 16.396,
+      "DEM_Z": 0,
+      "dem_2m": 16.2325,
+      "dem_5m": 15.48,
+      "dem_10m": 14.9738,
+      "dem_15m": 14.94,
+      "dem_25m": 16.18
+    },
+    "x_epsg3035": 3499024.21174148,
+    "y_epsg3035": 3606565.5528766755,
+    "original_EN_to_geometry_difference_m": 6.585445079827193e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      110,
+      466
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 185,
+      "E": 339933.464,
+      "N": 556661.159,
+      "Z": 14.981,
+      "DEM_Z": 0,
+      "dem_2m": 14.765,
+      "dem_5m": 13.78,
+      "dem_10m": 14.1764,
+      "dem_15m": 14.33,
+      "dem_25m": 15.36
+    },
+    "x_epsg3035": 3495852.8081126,
+    "y_epsg3035": 3607100.794503282,
+    "original_EN_to_geometry_difference_m": 3.725290298461914e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      109,
+      144
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 186,
+      "E": 341326.964,
+      "N": 556661.798,
+      "Z": 15.879,
+      "DEM_Z": 0,
+      "dem_2m": 15.915,
+      "dem_5m": 15.38,
+      "dem_10m": 15.8622,
+      "dem_15m": 14.89,
+      "dem_25m": 15.71
+    },
+    "x_epsg3035": 3497224.6322613535,
+    "y_epsg3035": 3606870.869123641,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      109,
+      283
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 187,
+      "E": 341333.729,
+      "N": 556667.938,
+      "Z": 15.848,
+      "DEM_Z": 0,
+      "dem_2m": 15.8575,
+      "dem_5m": 15.32,
+      "dem_10m": 15.2839,
+      "dem_15m": 14.89,
+      "dem_25m": 15.71
+    },
+    "x_epsg3035": 3497232.330337403,
+    "y_epsg3035": 3606875.8167835777,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      109,
+      284
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 188,
+      "E": 340063.873,
+      "N": 556678.139,
+      "Z": 15.376,
+      "DEM_Z": 0,
+      "dem_2m": 14.6925,
+      "dem_5m": 14.81,
+      "dem_10m": 15.1416,
+      "dem_15m": 14.93,
+      "dem_25m": 14.24
+    },
+    "x_epsg3035": 3495984.0507584596,
+    "y_epsg3035": 3607095.9967712862,
+    "original_EN_to_geometry_difference_m": 2.9451005721170265e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      108,
+      157
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 189,
+      "E": 340064.21,
+      "N": 556678.417,
+      "Z": 14.609,
+      "DEM_Z": 0,
+      "dem_2m": 14.5075,
+      "dem_5m": 14.81,
+      "dem_10m": 15.1416,
+      "dem_15m": 14.93,
+      "dem_25m": 14.24
+    },
+    "x_epsg3035": 3495984.429522577,
+    "y_epsg3035": 3607096.215710162,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      108,
+      157
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 190,
+      "E": 341332.766,
+      "N": 556678.689,
+      "Z": 15.807,
+      "DEM_Z": 0,
+      "dem_2m": 15.85,
+      "dem_5m": 14.49,
+      "dem_10m": 14.7681,
+      "dem_15m": 13.81,
+      "dem_25m": 15.71
+    },
+    "x_epsg3035": 3497233.2013080604,
+    "y_epsg3035": 3606886.599242824,
+    "original_EN_to_geometry_difference_m": 5.6650140604919e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      108,
+      284
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 191,
+      "E": 339921.145,
+      "N": 556681.497,
+      "Z": 15.005,
+      "DEM_Z": 0,
+      "dem_2m": 14.8225,
+      "dem_5m": 14.64,
+      "dem_10m": 14.6187,
+      "dem_15m": 13.85,
+      "dem_25m": 15.12
+    },
+    "x_epsg3035": 3495844.1226189784,
+    "y_epsg3035": 3607122.9288630774,
+    "original_EN_to_geometry_difference_m": 6.124817970192947e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      107,
+      143
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 192,
+      "E": 341361.826,
+      "N": 556686.738,
+      "Z": 15.899,
+      "DEM_Z": 0,
+      "dem_2m": 15.85,
+      "dem_5m": 15.79,
+      "dem_10m": 15.4679,
+      "dem_15m": 16.5,
+      "dem_25m": 15.3
+    },
+    "x_epsg3035": 3497263.168930253,
+    "y_epsg3035": 3606889.744349084,
+    "original_EN_to_geometry_difference_m": 2.7939677238464355e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      107,
+      287
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 193,
+      "E": 339913.056,
+      "N": 556688.759,
+      "Z": 15.041,
+      "DEM_Z": 0,
+      "dem_2m": 14.9775,
+      "dem_5m": 13.39,
+      "dem_10m": 14.8755,
+      "dem_15m": 13.85,
+      "dem_25m": 15.12
+    },
+    "x_epsg3035": 3495837.3887250475,
+    "y_epsg3035": 3607131.4428325426,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      107,
+      142
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 194,
+      "E": 341372.711,
+      "N": 556689.13,
+      "Z": 15.89,
+      "DEM_Z": 0,
+      "dem_2m": 15.9025,
+      "dem_5m": 15.66,
+      "dem_10m": 15.3702,
+      "dem_15m": 16.7,
+      "dem_25m": 15.3
+    },
+    "x_epsg3035": 3497274.2885114136,
+    "y_epsg3035": 3606890.3069055853,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      107,
+      288
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 195,
+      "E": 341336.351,
+      "N": 556690.559,
+      "Z": 15.83,
+      "DEM_Z": 0,
+      "dem_2m": 15.895,
+      "dem_5m": 13.25,
+      "dem_10m": 13.7064,
+      "dem_15m": 13.77,
+      "dem_25m": 13.25
+    },
+    "x_epsg3035": 3497238.738522108,
+    "y_epsg3035": 3606897.734897512,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      106,
+      284
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 196,
+      "E": 341377.676,
+      "N": 556691.949,
+      "Z": 15.847,
+      "DEM_Z": 0,
+      "dem_2m": 15.9275,
+      "dem_5m": 15.13,
+      "dem_10m": 15.3702,
+      "dem_15m": 14.39,
+      "dem_25m": 16.17
+    },
+    "x_epsg3035": 3497279.652854377,
+    "y_epsg3035": 3606892.2708841357,
+    "original_EN_to_geometry_difference_m": 4.748831981413797e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      106,
+      288
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 197,
+      "E": 341341.013,
+      "N": 556693.289,
+      "Z": 15.828,
+      "DEM_Z": 0,
+      "dem_2m": 15.9275,
+      "dem_5m": 15.01,
+      "dem_10m": 16.2266,
+      "dem_15m": 13.77,
+      "dem_25m": 13.25
+    },
+    "x_epsg3035": 3497243.7895417553,
+    "y_epsg3035": 3606899.6610693904,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      106,
+      285
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 198,
+      "E": 343149.447,
+      "N": 556700.382,
+      "Z": 16.518,
+      "DEM_Z": 0,
+      "dem_2m": 16.3375,
+      "dem_5m": 14.71,
+      "dem_10m": 14.1063,
+      "dem_15m": 13.89,
+      "dem_25m": 13.56
+    },
+    "x_epsg3035": 3499025.170378075,
+    "y_epsg3035": 3606607.4428361724,
+    "original_EN_to_geometry_difference_m": 7.679882693323606e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      105,
+      465
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 199,
+      "E": 339876.857,
+      "N": 556718.97,
+      "Z": 15.011,
+      "DEM_Z": 0,
+      "dem_2m": 14.8725,
+      "dem_5m": 13.2,
+      "dem_10m": 13.2858,
+      "dem_15m": 11.79,
+      "dem_25m": 15.92
+    },
+    "x_epsg3035": 3495806.8670147657,
+    "y_epsg3035": 3607167.283696155,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      104,
+      138
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 200,
+      "E": 340088.34,
+      "N": 556719.273,
+      "Z": 15.255,
+      "DEM_Z": 0,
+      "dem_2m": 14.8875,
+      "dem_5m": 16.63,
+      "dem_10m": 17.9621,
+      "dem_15m": 16.95,
+      "dem_25m": 16.63
+    },
+    "x_epsg3035": 3496015.0944627123,
+    "y_epsg3035": 3607132.59370443,
+    "original_EN_to_geometry_difference_m": 3.390065342784169e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      104,
+      159
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 201,
+      "E": 339832.164,
+      "N": 556748.977,
+      "Z": 15.059,
+      "DEM_Z": 0,
+      "dem_2m": 15.0325,
+      "dem_5m": 14.3,
+      "dem_10m": 15.3334,
+      "dem_15m": 12.5,
+      "dem_25m": 13.34
+    },
+    "x_epsg3035": 3495767.949631126,
+    "y_epsg3035": 3607204.32828869,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      101,
+      134
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 202,
+      "E": 339831.206,
+      "N": 556749.374,
+      "Z": 15.066,
+      "DEM_Z": 0,
+      "dem_2m": 14.8175,
+      "dem_5m": 14.3,
+      "dem_10m": 15.3334,
+      "dem_15m": 12.5,
+      "dem_25m": 13.34
+    },
+    "x_epsg3035": 3495767.073778264,
+    "y_epsg3035": 3607204.879067233,
+    "original_EN_to_geometry_difference_m": 1.041250292910165e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      101,
+      134
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 203,
+      "E": 339807.395,
+      "N": 556767.118,
+      "Z": 15.08,
+      "DEM_Z": 0,
+      "dem_2m": 14.875,
+      "dem_5m": 14.27,
+      "dem_10m": 14.7428,
+      "dem_15m": 15.5,
+      "dem_25m": 15.0
+    },
+    "x_epsg3035": 3495746.6371496604,
+    "y_epsg3035": 3607226.351578855,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      99,
+      131
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 204,
+      "E": 343137.686,
+      "N": 556772.649,
+      "Z": 16.457,
+      "DEM_Z": 0,
+      "dem_2m": 16.2825,
+      "dem_5m": 14.72,
+      "dem_10m": 14.2021,
+      "dem_15m": 16.29,
+      "dem_25m": 14.56
+    },
+    "x_epsg3035": 3499025.819836437,
+    "y_epsg3035": 3606680.795766979,
+    "original_EN_to_geometry_difference_m": 9.041506722079403e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      98,
+      464
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 205,
+      "E": 340121.243,
+      "N": 556776.359,
+      "Z": 14.915,
+      "DEM_Z": 0,
+      "dem_2m": 15.2375,
+      "dem_5m": 16.52,
+      "dem_10m": 16.0344,
+      "dem_15m": 13.8,
+      "dem_25m": 17.94
+    },
+    "x_epsg3035": 3496057.141155346,
+    "y_epsg3035": 3607183.5572305922,
+    "original_EN_to_geometry_difference_m": 8.03856016212705e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      98,
+      163
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 206,
+      "E": 341790.293,
+      "N": 556804.249,
+      "Z": 16.066,
+      "DEM_Z": 0,
+      "dem_2m": 16.1268,
+      "dem_5m": 15.83,
+      "dem_10m": 14.8892,
+      "dem_15m": 15.83,
+      "dem_25m": 13.56
+    },
+    "x_epsg3035": 3497704.821709224,
+    "y_epsg3035": 3606934.964253787,
+    "original_EN_to_geometry_difference_m": 2.5076627764545864e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      95,
+      330
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 207,
+      "E": 341760.609,
+      "N": 556813.089,
+      "Z": 16.014,
+      "DEM_Z": 0,
+      "dem_2m": 15.9947,
+      "dem_5m": 15.66,
+      "dem_10m": 15.6176,
+      "dem_15m": 16.12,
+      "dem_25m": 16.12
+    },
+    "x_epsg3035": 3497677.0971682165,
+    "y_epsg3035": 3606948.6105835647,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.44734501150161105,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      94,
+      327
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 208,
+      "E": 340146.663,
+      "N": 556819.439,
+      "Z": 16.102,
+      "DEM_Z": 0,
+      "dem_2m": 13.18,
+      "dem_5m": 15.07,
+      "dem_10m": 15.9905,
+      "dem_15m": 16.39,
+      "dem_25m": 18.73
+    },
+    "x_epsg3035": 3496089.4522683327,
+    "y_epsg3035": 3607221.919307301,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      94,
+      165
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 209,
+      "E": 343128.03,
+      "N": 556822.539,
+      "Z": 16.476,
+      "DEM_Z": 0,
+      "dem_2m": 16.7675,
+      "dem_5m": 14.86,
+      "dem_10m": 14.2507,
+      "dem_15m": 14.55,
+      "dem_25m": 17.3
+    },
+    "x_epsg3035": 3499024.7555214055,
+    "y_epsg3035": 3606731.6897146455,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 1.1358434488926525,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      93,
+      463
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 210,
+      "E": 341745.147,
+      "N": 556829.181,
+      "Z": 15.99,
+      "DEM_Z": 0,
+      "dem_2m": 15.99,
+      "dem_5m": 15.7,
+      "dem_10m": 15.936,
+      "dem_15m": 16.27,
+      "dem_25m": 15.09
+    },
+    "x_epsg3035": 3497664.5993589703,
+    "y_epsg3035": 3606967.06947467,
+    "original_EN_to_geometry_difference_m": 9.041506722079403e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 19.202952582047722,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      93,
+      325
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 211,
+      "E": 341881.985,
+      "N": 556830.224,
+      "Z": 15.68,
+      "DEM_Z": 0,
+      "dem_2m": 15.89,
+      "dem_5m": 16.77,
+      "dem_10m": 16.067,
+      "dem_15m": 16.77,
+      "dem_25m": 17.54
+    },
+    "x_epsg3035": 3497799.475672835,
+    "y_epsg3035": 3606945.458890218,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      92,
+      339
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 212,
+      "E": 341690.604,
+      "N": 556841.492,
+      "Z": 16.008,
+      "DEM_Z": 0,
+      "dem_2m": 15.9325,
+      "dem_5m": 16.19,
+      "dem_10m": 15.9485,
+      "dem_15m": 16.5,
+      "dem_25m": 16.11
+    },
+    "x_epsg3035": 3497612.9915306014,
+    "y_epsg3035": 3606988.258654004,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 25.56773848462323,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      91,
+      320
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 213,
+      "E": 341648.365,
+      "N": 556842.843,
+      "Z": 15.989,
+      "DEM_Z": 0,
+      "dem_2m": 16.0425,
+      "dem_5m": 15.79,
+      "dem_10m": 15.2429,
+      "dem_15m": 16.44,
+      "dem_25m": 15.32
+    },
+    "x_epsg3035": 3497571.6411418105,
+    "y_epsg3035": 3606996.582398845,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 21.466705618939425,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      91,
+      315
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 214,
+      "E": 343123.546,
+      "N": 556849.244,
+      "Z": 16.339,
+      "DEM_Z": 0,
+      "dem_2m": 16.1525,
+      "dem_5m": 14.3,
+      "dem_10m": 14.68,
+      "dem_15m": 15.97,
+      "dem_25m": 14.5
+    },
+    "x_epsg3035": 3499024.859779964,
+    "y_epsg3035": 3606758.818816411,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 5.324946385871744,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      91,
+      463
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 215,
+      "E": 341621.459,
+      "N": 556849.274,
+      "Z": 15.998,
+      "DEM_Z": 0,
+      "dem_2m": 15.9225,
+      "dem_5m": 15.49,
+      "dem_10m": 16.1441,
+      "dem_15m": 15.84,
+      "dem_25m": 13.51
+    },
+    "x_epsg3035": 3497546.243641112,
+    "y_epsg3035": 3607007.3887249026,
+    "original_EN_to_geometry_difference_m": 7.123247972120696e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 22.959810551504983,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      91,
+      313
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 216,
+      "E": 342155.526,
+      "N": 556856.725,
+      "Z": 16.076,
+      "DEM_Z": 0,
+      "dem_2m": 16.0827,
+      "dem_5m": 16.28,
+      "dem_10m": 16.553,
+      "dem_15m": 16.86,
+      "dem_25m": 17.45
+    },
+    "x_epsg3035": 3498073.226501089,
+    "y_epsg3035": 3606926.3842028975,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      90,
+      366
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 217,
+      "E": 341607.785,
+      "N": 556859.805,
+      "Z": 16.011,
+      "DEM_Z": 0,
+      "dem_2m": 15.665,
+      "dem_5m": 14.82,
+      "dem_10m": 14.8445,
+      "dem_15m": 16.13,
+      "dem_25m": 16.59
+    },
+    "x_epsg3035": 3497534.5650486196,
+    "y_epsg3035": 3607020.05692669,
+    "original_EN_to_geometry_difference_m": 4.748831981413797e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 28.924215555446473,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      90,
+      311
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 218,
+      "E": 341959.931,
+      "N": 556859.898,
+      "Z": 15.894,
+      "DEM_Z": 0,
+      "dem_2m": 15.7325,
+      "dem_5m": 15.69,
+      "dem_10m": 16.6597,
+      "dem_15m": 16.88,
+      "dem_25m": 17.29
+    },
+    "x_epsg3035": 3497881.224306411,
+    "y_epsg3035": 3606961.8828654876,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      90,
+      346
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 219,
+      "E": 342180.943,
+      "N": 556863.594,
+      "Z": 16.076,
+      "DEM_Z": 0,
+      "dem_2m": 16.0787,
+      "dem_5m": 16.4,
+      "dem_10m": 16.6633,
+      "dem_15m": 16.4,
+      "dem_25m": 16.29
+    },
+    "x_epsg3035": 3498099.4085677834,
+    "y_epsg3035": 3606928.965922529,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      89,
+      369
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 220,
+      "E": 342113.513,
+      "N": 556865.564,
+      "Z": 16.072,
+      "DEM_Z": 0,
+      "dem_2m": 16.0225,
+      "dem_5m": 15.97,
+      "dem_10m": 16.3855,
+      "dem_15m": 15.52,
+      "dem_25m": 15.97
+    },
+    "x_epsg3035": 3498033.365358877,
+    "y_epsg3035": 3606942.0695818043,
+    "original_EN_to_geometry_difference_m": 7.970837302796398e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      89,
+      362
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 221,
+      "E": 341993.466,
+      "N": 556874.672,
+      "Z": 16.069,
+      "DEM_Z": 0,
+      "dem_2m": 16.15,
+      "dem_5m": 16.36,
+      "dem_10m": 16.3431,
+      "dem_15m": 17.1,
+      "dem_25m": 16.51
+    },
+    "x_epsg3035": 3497916.734949054,
+    "y_epsg3035": 3606970.9323568544,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      88,
+      350
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 222,
+      "E": 341584.962,
+      "N": 556883.466,
+      "Z": 15.991,
+      "DEM_Z": 0,
+      "dem_2m": 15.9275,
+      "dem_5m": 15.52,
+      "dem_10m": 15.466,
+      "dem_15m": 15.13,
+      "dem_25m": 17.08
+    },
+    "x_epsg3035": 3497516.101883243,
+    "y_epsg3035": 3607047.212711232,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 44.70055052231171,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      87,
+      309
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 223,
+      "E": 342079.341,
+      "N": 556885.604,
+      "Z": 16.041,
+      "DEM_Z": 0,
+      "dem_2m": 16.0225,
+      "dem_5m": 15.96,
+      "dem_10m": 16.1227,
+      "dem_15m": 16.44,
+      "dem_25m": 16.76
+    },
+    "x_epsg3035": 3498003.117817073,
+    "y_epsg3035": 3606967.525296164,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      87,
+      358
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 224,
+      "E": 341562.814,
+      "N": 556890.704,
+      "Z": 16.037,
+      "DEM_Z": 0,
+      "dem_2m": 16.0475,
+      "dem_5m": 16.15,
+      "dem_10m": 15.9574,
+      "dem_15m": 16.41,
+      "dem_25m": 16.15
+    },
+    "x_epsg3035": 3497495.524578207,
+    "y_epsg3035": 3607058.029180714,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 25.49157945920061,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      86,
+      307
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 225,
+      "E": 341537.812,
+      "N": 556894.157,
+      "Z": 15.955,
+      "DEM_Z": 0,
+      "dem_2m": 16.0325,
+      "dem_5m": 16.19,
+      "dem_10m": 15.778,
+      "dem_15m": 16.19,
+      "dem_25m": 16.19
+    },
+    "x_epsg3035": 3497471.4974932377,
+    "y_epsg3035": 3607065.5778926606,
+    "original_EN_to_geometry_difference_m": 1.862645149230957e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.5588936415767443,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      86,
+      304
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 226,
+      "E": 341474.568,
+      "N": 556894.592,
+      "Z": 15.94,
+      "DEM_Z": 0,
+      "dem_2m": 15.98,
+      "dem_5m": 16.31,
+      "dem_10m": 16.3064,
+      "dem_15m": 16.15,
+      "dem_25m": 16.85
+    },
+    "x_epsg3035": 3497409.315414102,
+    "y_epsg3035": 3607076.4719473585,
+    "original_EN_to_geometry_difference_m": 4.293184940373938e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      86,
+      298
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 227,
+      "E": 342022.309,
+      "N": 556904.811,
+      "Z": 16.057,
+      "DEM_Z": 0,
+      "dem_2m": 16.0425,
+      "dem_5m": 16.39,
+      "dem_10m": 16.2437,
+      "dem_15m": 16.8,
+      "dem_25m": 16.65
+    },
+    "x_epsg3035": 3497950.2265166207,
+    "y_epsg3035": 3606995.9403663594,
+    "original_EN_to_geometry_difference_m": 2.3744159907068985e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 2.354672109277674,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      85,
+      353
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 228,
+      "E": 341504.112,
+      "N": 556909.562,
+      "Z": 16.048,
+      "DEM_Z": 0,
+      "dem_2m": 15.8625,
+      "dem_5m": 16.2,
+      "dem_10m": 16.0019,
+      "dem_15m": 16.06,
+      "dem_25m": 16.42
+    },
+    "x_epsg3035": 3497440.930491432,
+    "y_epsg3035": 3607086.375575771,
+    "original_EN_to_geometry_difference_m": 8.03856016212705e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      85,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 229,
+      "E": 343106.844,
+      "N": 556910.404,
+      "Z": 16.378,
+      "DEM_Z": 0,
+      "dem_2m": 16.705,
+      "dem_5m": 15.18,
+      "dem_10m": 14.3196,
+      "dem_15m": 16.3,
+      "dem_25m": 18.03
+    },
+    "x_epsg3035": 3499018.7663481254,
+    "y_epsg3035": 3606822.0144981896,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 8.8192052782399,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      84,
+      461
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 230,
+      "E": 342043.925,
+      "N": 556912.531,
+      "Z": 16.08,
+      "DEM_Z": 0,
+      "dem_2m": 16.055,
+      "dem_5m": 15.77,
+      "dem_10m": 15.9093,
+      "dem_15m": 15.95,
+      "dem_25m": 15.94
+    },
+    "x_epsg3035": 3497972.8109362125,
+    "y_epsg3035": 3606999.991898341,
+    "original_EN_to_geometry_difference_m": 3.390065342784169e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 10.454566270960141,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      84,
+      355
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 231,
+      "E": 340234.201,
+      "N": 556954.373,
+      "Z": 16.259,
+      "DEM_Z": 0,
+      "dem_2m": 17.145,
+      "dem_5m": 18.73,
+      "dem_10m": 16.2314,
+      "dem_15m": 18.73,
+      "dem_25m": 14.52
+    },
+    "x_epsg3035": 3496198.4508385635,
+    "y_epsg3035": 3607340.7657571537,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.1818379011644888,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      80,
+      174
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 232,
+      "E": 340273.006,
+      "N": 556998.949,
+      "Z": 15.716,
+      "DEM_Z": 0,
+      "dem_2m": 15.785,
+      "dem_5m": 17.47,
+      "dem_10m": 17.2767,
+      "dem_15m": 15.82,
+      "dem_25m": 20.43
+    },
+    "x_epsg3035": 3496244.1909303637,
+    "y_epsg3035": 3607378.3913974087,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 6.256326152837853,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      76,
+      178
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 233,
+      "E": 343076.872,
+      "N": 556999.244,
+      "Z": 16.696,
+      "DEM_Z": 0,
+      "dem_2m": 16.7425,
+      "dem_5m": 15.01,
+      "dem_10m": 14.734,
+      "dem_15m": 15.18,
+      "dem_25m": 15.62
+    },
+    "x_epsg3035": 3499004.293465473,
+    "y_epsg3035": 3606914.7564621326,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 8.479697132864494,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      76,
+      458
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 234,
+      "E": 340307.501,
+      "N": 557029.068,
+      "Z": 16.148,
+      "DEM_Z": 0,
+      "dem_2m": 15.8275,
+      "dem_5m": 16.89,
+      "dem_10m": 18.3185,
+      "dem_15m": 16.89,
+      "dem_25m": 12.94
+    },
+    "x_epsg3035": 3496283.242461653,
+    "y_epsg3035": 3607402.4450143958,
+    "original_EN_to_geometry_difference_m": 4.748831981413797e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.6851914746550967,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      73,
+      181
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 235,
+      "E": 340309.136,
+      "N": 557030.84,
+      "Z": 15.648,
+      "DEM_Z": 0,
+      "dem_2m": 15.6925,
+      "dem_5m": 18.29,
+      "dem_10m": 18.3185,
+      "dem_15m": 16.89,
+      "dem_25m": 17.15
+    },
+    "x_epsg3035": 3496285.1517050164,
+    "y_epsg3035": 3607403.9254302424,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 1.7811955426940929,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      72,
+      181
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 236,
+      "E": 341455.679,
+      "N": 557057.072,
+      "Z": 15.76,
+      "DEM_Z": 0,
+      "dem_2m": 15.7825,
+      "dem_5m": 15.82,
+      "dem_10m": 15.8814,
+      "dem_15m": 15.96,
+      "dem_25m": 15.8
+    },
+    "x_epsg3035": 3497418.2116944445,
+    "y_epsg3035": 3607240.1444148496,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      70,
+      296
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 237,
+      "E": 343048.539,
+      "N": 557065.231,
+      "Z": 16.816,
+      "DEM_Z": 0,
+      "dem_2m": 17.035,
+      "dem_5m": 14.22,
+      "dem_10m": 14.1749,
+      "dem_15m": 15.19,
+      "dem_25m": 14.13
+    },
+    "x_epsg3035": 3498987.5675135306,
+    "y_epsg3035": 3606984.6462307293,
+    "original_EN_to_geometry_difference_m": 1.041250292910165e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 6.503976546222288,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      69,
+      455
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 238,
+      "E": 340527.866,
+      "N": 557118.922,
+      "Z": 15.801,
+      "DEM_Z": 0,
+      "dem_2m": 15.86,
+      "dem_5m": 16.32,
+      "dem_10m": 17.1802,
+      "dem_15m": 15.57,
+      "dem_25m": 15.13
+    },
+    "x_epsg3035": 3496515.364897922,
+    "y_epsg3035": 3607454.770639037,
+    "original_EN_to_geometry_difference_m": 1.041250292910165e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      64,
+      203
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 239,
+      "E": 343008.333,
+      "N": 557140.493,
+      "Z": 16.601,
+      "DEM_Z": 0,
+      "dem_2m": 16.98,
+      "dem_5m": 14.82,
+      "dem_10m": 14.5134,
+      "dem_15m": 15.65,
+      "dem_25m": 16.24
+    },
+    "x_epsg3035": 3498960.7233377555,
+    "y_epsg3035": 3607065.66519685,
+    "original_EN_to_geometry_difference_m": 2.3283064365386963e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      61,
+      451
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 240,
+      "E": 342993.547,
+      "N": 557165.486,
+      "Z": 16.505,
+      "DEM_Z": 0,
+      "dem_2m": 16.0875,
+      "dem_5m": 14.64,
+      "dem_10m": 15.6564,
+      "dem_15m": 14.56,
+      "dem_25m": 14.36
+    },
+    "x_epsg3035": 3498950.396952739,
+    "y_epsg3035": 3607092.8073150925,
+    "original_EN_to_geometry_difference_m": 5.206251464550825e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      59,
+      450
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 241,
+      "E": 341330.071,
+      "N": 557168.725,
+      "Z": 15.707,
+      "DEM_Z": 0,
+      "dem_2m": 15.635,
+      "dem_5m": 16.01,
+      "dem_10m": 15.8095,
+      "dem_15m": 15.78,
+      "dem_25m": 15.78
+    },
+    "x_epsg3035": 3497313.4574987316,
+    "y_epsg3035": 3607371.252036783,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      59,
+      284
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 242,
+      "E": 340634.636,
+      "N": 557184.169,
+      "Z": 15.724,
+      "DEM_Z": 0,
+      "dem_2m": 15.9375,
+      "dem_5m": 15.79,
+      "dem_10m": 15.2459,
+      "dem_15m": 14.87,
+      "dem_25m": 17.18
+    },
+    "x_epsg3035": 3496631.5051207333,
+    "y_epsg3035": 3607501.5761991953,
+    "original_EN_to_geometry_difference_m": 4.21674230049244e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 7.32056895948965,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      57,
+      214
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 243,
+      "E": 340729.782,
+      "N": 557198.516,
+      "Z": 15.768,
+      "DEM_Z": 0,
+      "dem_2m": 15.78,
+      "dem_5m": 15.41,
+      "dem_10m": 15.3879,
+      "dem_15m": 14.65,
+      "dem_25m": 14.9
+    },
+    "x_epsg3035": 3496727.5912388344,
+    "y_epsg3035": 3607500.0102612935,
+    "original_EN_to_geometry_difference_m": 7.508562643358995e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 4.004581823340918,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      56,
+      223
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 244,
+      "E": 339685.759,
+      "N": 557199.135,
+      "Z": 15.054,
+      "DEM_Z": 0,
+      "dem_2m": 15.0175,
+      "dem_5m": 15.4,
+      "dem_10m": 15.2846,
+      "dem_15m": 14.94,
+      "dem_25m": 15.08
+    },
+    "x_epsg3035": 3495699.9957304685,
+    "y_epsg3035": 3607673.356749536,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 9.337682087008258,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      56,
+      119
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 245,
+      "E": 340779.342,
+      "N": 557199.742,
+      "Z": 15.76,
+      "DEM_Z": 0,
+      "dem_2m": 15.55,
+      "dem_5m": 16.84,
+      "dem_10m": 16.7493,
+      "dem_15m": 15.12,
+      "dem_25m": 14.46
+    },
+    "x_epsg3035": 3496776.5839846046,
+    "y_epsg3035": 3607493.021747932,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 4.429184365744061,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      56,
+      228
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 246,
+      "E": 340856.083,
+      "N": 557214.448,
+      "Z": 15.737,
+      "DEM_Z": 0,
+      "dem_2m": 15.805,
+      "dem_5m": 15.72,
+      "dem_10m": 15.4889,
+      "dem_15m": 15.09,
+      "dem_25m": 16.34
+    },
+    "x_epsg3035": 3496854.613612184,
+    "y_epsg3035": 3607494.855643902,
+    "original_EN_to_geometry_difference_m": 9.313225746154785e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      54,
+      236
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 247,
+      "E": 341342.681,
+      "N": 557215.668,
+      "Z": 15.667,
+      "DEM_Z": 0,
+      "dem_2m": 15.7175,
+      "dem_5m": 15.52,
+      "dem_10m": 15.5395,
+      "dem_15m": 15.43,
+      "dem_25m": 15.45
+    },
+    "x_epsg3035": 3497333.8128875843,
+    "y_epsg3035": 3607415.5501546594,
+    "original_EN_to_geometry_difference_m": 1.041250292910165e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      54,
+      285
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 248,
+      "E": 342957.682,
+      "N": 557222.494,
+      "Z": 16.796,
+      "DEM_Z": 0,
+      "dem_2m": 16.61,
+      "dem_5m": 14.89,
+      "dem_10m": 14.568,
+      "dem_15m": 16.41,
+      "dem_25m": 15.11
+    },
+    "x_epsg3035": 3498924.737589215,
+    "y_epsg3035": 3607155.071256878,
+    "original_EN_to_geometry_difference_m": 1.3969838619232178e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      53,
+      446
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 249,
+      "E": 340910.5,
+      "N": 557226.546,
+      "Z": 15.76,
+      "DEM_Z": 0,
+      "dem_2m": 15.735,
+      "dem_5m": 15.99,
+      "dem_10m": 16.0883,
+      "dem_15m": 15.77,
+      "dem_25m": 15.35
+    },
+    "x_epsg3035": 3496910.226952248,
+    "y_epsg3035": 3607497.806149393,
+    "original_EN_to_geometry_difference_m": 7.580416554631528e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      53,
+      242
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 250,
+      "E": 340946.778,
+      "N": 557243.001,
+      "Z": 15.425,
+      "DEM_Z": 0,
+      "dem_2m": 15.4075,
+      "dem_5m": 15.75,
+      "dem_10m": 15.8198,
+      "dem_15m": 15.42,
+      "dem_25m": 16.0
+    },
+    "x_epsg3035": 3496948.7220041393,
+    "y_epsg3035": 3607508.0630111247,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": true,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      51,
+      245
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 251,
+      "E": 341393.66,
+      "N": 557254.033,
+      "Z": 15.647,
+      "DEM_Z": 0,
+      "dem_2m": 15.6825,
+      "dem_5m": 15.63,
+      "dem_10m": 15.7372,
+      "dem_15m": 15.62,
+      "dem_25m": 15.69
+    },
+    "x_epsg3035": 3497390.486345678,
+    "y_epsg3035": 3607445.0238210643,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 15.914778079899966,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      50,
+      290
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 252,
+      "E": 342932.185,
+      "N": 557258.142,
+      "Z": 16.757,
+      "DEM_Z": 0,
+      "dem_2m": 17.3175,
+      "dem_5m": 15.09,
+      "dem_10m": 16.5699,
+      "dem_15m": 14.58,
+      "dem_25m": 19.44
+    },
+    "x_epsg3035": 3498905.6703090817,
+    "y_epsg3035": 3607194.5138747045,
+    "original_EN_to_geometry_difference_m": 2.5076627764545864e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      50,
+      444
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 253,
+      "E": 341431.991,
+      "N": 557279.17,
+      "Z": 15.708,
+      "DEM_Z": 0,
+      "dem_2m": 15.7275,
+      "dem_5m": 15.71,
+      "dem_10m": 15.6757,
+      "dem_15m": 15.59,
+      "dem_25m": 16.1
+    },
+    "x_epsg3035": 3497432.471383999,
+    "y_epsg3035": 3607463.5195542215,
+    "original_EN_to_geometry_difference_m": 6.124817970192947e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 21.12738767485387,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      48,
+      294
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 254,
+      "E": 342912.231,
+      "N": 557285.565,
+      "Z": 16.626,
+      "DEM_Z": 0,
+      "dem_2m": 16.8225,
+      "dem_5m": 14.53,
+      "dem_10m": 14.9653,
+      "dem_15m": 15.78,
+      "dem_25m": 14.29
+    },
+    "x_epsg3035": 3498890.667833145,
+    "y_epsg3035": 3607224.912205006,
+    "original_EN_to_geometry_difference_m": 1.9199706733309015e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      47,
+      442
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 255,
+      "E": 341503.316,
+      "N": 557289.964,
+      "Z": 15.651,
+      "DEM_Z": 0,
+      "dem_2m": 15.69,
+      "dem_5m": 15.69,
+      "dem_10m": 15.66,
+      "dem_15m": 15.84,
+      "dem_25m": 15.93
+    },
+    "x_epsg3035": 3497504.5080820997,
+    "y_epsg3035": 3607462.3837378356,
+    "original_EN_to_geometry_difference_m": 8.957173704016648e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 58.47024813648579,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      47,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 256,
+      "E": 341461.256,
+      "N": 557291.251,
+      "Z": 15.635,
+      "DEM_Z": 0,
+      "dem_2m": 15.6725,
+      "dem_5m": 15.64,
+      "dem_10m": 15.6942,
+      "dem_15m": 15.48,
+      "dem_25m": 15.64
+    },
+    "x_epsg3035": 3497463.3231027266,
+    "y_epsg3035": 3607470.614655814,
+    "original_EN_to_geometry_difference_m": 2.83250703024595e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 30.57990279278838,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      46,
+      297
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 257,
+      "E": 342886.586,
+      "N": 557315.33,
+      "Z": 16.667,
+      "DEM_Z": 0,
+      "dem_2m": 16.725,
+      "dem_5m": 15.75,
+      "dem_10m": 15.6266,
+      "dem_15m": 14.46,
+      "dem_25m": 15.75
+    },
+    "x_epsg3035": 3498870.4595140675,
+    "y_epsg3035": 3607258.566337592,
+    "original_EN_to_geometry_difference_m": 3.754281321679498e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      44,
+      439
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 258,
+      "E": 341487.39,
+      "N": 557317.359,
+      "Z": 15.704,
+      "DEM_Z": 0,
+      "dem_2m": 15.73,
+      "dem_5m": 15.66,
+      "dem_10m": 15.6101,
+      "dem_15m": 15.74,
+      "dem_25m": 15.66
+    },
+    "x_epsg3035": 3497493.4660617225,
+    "y_epsg3035": 3607492.0879157456,
+    "original_EN_to_geometry_difference_m": 4.656612873077393e-10,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 27.25387179000995,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      44,
+      299
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 259,
+      "E": 341035.192,
+      "N": 557334.035,
+      "Z": 15.675,
+      "DEM_Z": 0,
+      "dem_2m": 15.7225,
+      "dem_5m": 15.78,
+      "dem_10m": 15.7878,
+      "dem_15m": 15.64,
+      "dem_25m": 16.2
+    },
+    "x_epsg3035": 3497051.1565782973,
+    "y_epsg3035": 3607583.3854585267,
+    "original_EN_to_geometry_difference_m": 3.2927225399135964e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": true,
+    "distance_to_outline_m": 6.226371411952267,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      42,
+      254
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 260,
+      "E": 341502.653,
+      "N": 557334.301,
+      "Z": 15.726,
+      "DEM_Z": 0,
+      "dem_2m": 15.7225,
+      "dem_5m": 15.72,
+      "dem_10m": 15.8788,
+      "dem_15m": 15.93,
+      "dem_25m": 15.63
+    },
+    "x_epsg3035": 3497511.357063909,
+    "y_epsg3035": 3607506.302932712,
+    "original_EN_to_geometry_difference_m": 3.725290298461914e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 25.918452558691786,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      42,
+      301
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 261,
+      "E": 341532.911,
+      "N": 557350.111,
+      "Z": 15.611,
+      "DEM_Z": 0,
+      "dem_2m": 15.685,
+      "dem_5m": 15.57,
+      "dem_10m": 15.604,
+      "dem_15m": 15.49,
+      "dem_25m": 16.33
+    },
+    "x_epsg3035": 3497543.8172218725,
+    "y_epsg3035": 3607516.9183389284,
+    "original_EN_to_geometry_difference_m": 2.08250058582033e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 41.80034011862364,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      40,
+      304
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 262,
+      "E": 342853.137,
+      "N": 557351.731,
+      "Z": 16.574,
+      "DEM_Z": 0,
+      "dem_2m": 16.4475,
+      "dem_5m": 15.12,
+      "dem_10m": 14.9998,
+      "dem_15m": 16.12,
+      "dem_25m": 15.3
+    },
+    "x_epsg3035": 3498843.6918930463,
+    "y_epsg3035": 3607300.068792909,
+    "original_EN_to_geometry_difference_m": 0.0,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": true,
+    "inside_settlement": false,
+    "distance_to_outline_m": 0.0,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      40,
+      436
+    ]
+  },
+  {
+    "source_attributes": {
+      "fid": 263,
+      "E": 341547.458,
+      "N": 557389.53,
+      "Z": 15.604,
+      "DEM_Z": 0,
+      "dem_2m": 15.7025,
+      "dem_5m": 15.19,
+      "dem_10m": 14.9835,
+      "dem_15m": 15.44,
+      "dem_25m": 14.79
+    },
+    "x_epsg3035": 3497564.806455767,
+    "y_epsg3035": 3607553.4613800794,
+    "original_EN_to_geometry_difference_m": 3.839941346661803e-09,
+    "Z_semantics": "surveyed_peak_water_surface_elevation_MASL_not_ground_depth",
+    "inside_outline": false,
+    "inside_settlement": false,
+    "distance_to_outline_m": 31.380187906591146,
+    "model_comparison": "unscored_no_full_event_result",
+    "inside_model_domain": true,
+    "model_cell": [
+      37,
+      305
+    ]
+  }
+]

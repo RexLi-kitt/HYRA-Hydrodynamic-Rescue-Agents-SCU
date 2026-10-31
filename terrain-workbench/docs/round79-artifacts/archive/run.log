@@ -1,0 +1,154 @@
+***************************
+ LISFLOOD-FP version 8.0.3 (double)
+_CALCULATE_Q_MODE 1.
+***************************
+
+Loading parameters... 'case.par'
+DEMfile = CarlislefixDEMwithbedDG2.asc
+bdyfile = carlisle.bdy
+bcifile = carlisle.bci
+stagefile = carlisle.stage
+dirroot = results
+resroot = check
+dg2
+Using DG2 2D SWE solver
+mint_hk
+max_Froude = 1.000
+Local inertia max V changed to Froude 1.00000 
+fpfric = 0.060
+sim_time = 60.000
+initial_tstep = 1.000
+massint = 10.000
+saveint = 60.000
+output_precision = 12
+Output precision changed to 12
+Reading parameters done.
+
+Reading command line.
+Reading command line done.
+
+
+Start Date: 30/10/2026 
+Start Time: 21:54:21 
+
+Loading DEM476x306
+BL corner	(338490.000000,554700.000000)
+NODATA_value	-9999.000000
+Done.
+
+Loading boundary condition IDs
+HVAR from bdy file downstream on W side start 554700.000000 end 557760.000000
+QVAR at point [342685.000000,557505.000000] (419,25) upstream1
+QVAR at point [341396.000000,554704.000000] (290,305) upstream2
+QVAR at point [339955.000000,554704.000000] (146,305) upstream3
+Done.
+
+Loading time varying boundary conditions
+bdy upstream1 read.
+bdy upstream2 read.
+bdy upstream3 read.
+bdy downstream read.
+Done.
+
+Porosity off
+Loading stage information Done.
+
+Loading DEM1x
+Loading DEM1y
+t=0.000000	dt=1.000000
+t=1.000000	dt=1.000000
+t=2.000000	dt=1.000000
+t=3.000000	dt=0.662176
+t=3.662176	dt=0.742271
+t=4.404447	dt=0.717651
+t=5.122098	dt=0.754043
+t=5.876141	dt=0.705463
+t=6.581603	dt=0.718107
+t=7.299711	dt=0.730687
+t=8.030398	dt=0.730526
+t=8.760924	dt=0.750122
+t=9.511045	dt=0.488955
+t=10.000000	dt=0.838719
+t=10.838719	dt=0.725097
+t=11.563816	dt=0.669776
+t=12.233592	dt=0.748346
+t=12.981938	dt=0.738617
+t=13.720555	dt=0.735548
+t=14.456103	dt=0.737607
+t=15.193709	dt=0.738207
+t=15.931917	dt=0.748949
+t=16.680865	dt=0.749535
+t=17.430401	dt=0.719126
+t=18.149527	dt=0.708401
+t=18.857927	dt=0.713557
+t=19.571485	dt=0.428515
+t=20.000000	dt=0.855635
+t=20.855635	dt=0.706901
+t=21.562536	dt=0.708018
+t=22.270554	dt=0.723511
+t=22.994065	dt=0.735752
+t=23.729817	dt=0.734531
+t=24.464348	dt=0.727972
+t=25.192320	dt=0.721088
+t=25.913408	dt=0.718118
+t=26.631526	dt=0.717352
+t=27.348878	dt=0.716393
+t=28.065271	dt=0.714882
+t=28.780153	dt=0.712849
+t=29.493002	dt=0.506998
+t=30.000000	dt=0.782466
+t=30.782466	dt=0.705613
+t=31.488080	dt=0.699860
+t=32.187940	dt=0.702876
+t=32.890816	dt=0.702986
+t=33.593802	dt=0.698043
+t=34.291845	dt=0.668966
+t=34.960811	dt=0.705196
+t=35.666007	dt=0.694963
+t=36.360970	dt=0.692850
+t=37.053820	dt=0.692536
+t=37.746356	dt=0.691860
+t=38.438216	dt=0.690434
+t=39.128651	dt=0.688603
+t=39.817254	dt=0.182746
+t=40.000000	dt=0.869991
+t=40.869991	dt=0.692725
+t=41.562716	dt=0.674557
+t=42.237273	dt=0.676613
+t=42.913887	dt=0.679539
+t=43.593426	dt=0.680166
+t=44.273591	dt=0.678870
+t=44.952461	dt=0.676615
+t=45.629076	dt=0.674471
+t=46.303546	dt=0.672839
+t=46.976385	dt=0.671552
+t=47.647937	dt=0.670334
+t=48.318272	dt=0.669058
+t=48.987329	dt=0.667718
+t=49.655048	dt=0.344952
+t=50.000000	dt=0.755343
+t=50.755343	dt=0.671999
+t=51.427342	dt=0.660400
+t=52.087742	dt=0.659938
+t=52.747680	dt=0.659892
+t=53.407572	dt=0.658961
+t=54.066533	dt=0.657523
+t=54.724056	dt=0.655884
+t=55.379939	dt=0.654252
+t=56.034192	dt=0.652798
+t=56.686989	dt=0.651561
+t=57.338551	dt=0.650445
+t=57.988995	dt=0.649318
+t=58.638313	dt=0.648112
+t=59.286425	dt=0.646833
+t=59.933258	dt=0.066742
+loop time 3.000000
+Finished.
+
+
+Finish Date: 30/10/2026 
+Finish Time: 21:54:24 
+
+
+  Total computation time: 0.05 mins
+

@@ -18,6 +18,7 @@ import merewether
 import server
 import map_sessions
 from multilayer import json_safe
+from benchmark_restart import restore_audit_metadata
 
 
 def write(path,value):path.write_text(json.dumps(json_safe(value),ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
@@ -78,9 +79,9 @@ def run(args,source,provenance,factor,n):
                 getattr(solver,name)[:]=saved[key]
         replay=json.loads((frame_dir/'replay.json').read_text(encoding='utf-8'))
         frames=replay['process']['frames'];last=frames[-1]
-        solver.time=float(previous['duration_s']);solver.steps=last['steps']
-        solver.balance=dict(previous['balance']);solver.diagnostics=dict(last['diagnostics'])
-        solver.external_volume_by_id=dict(last['external_inflow_by_id_m3'])
+        if last['time_s'] != previous['duration_s']:
+            raise ValueError('Checkpoint frame time does not match saved result')
+        restore_audit_metadata(solver, last)
         records=json.loads((folder/'series.json').read_text(encoding='utf-8'))
         maxima=np.array([p['model_max_speed_m_s'] for p in previous['points']])
         umax=np.array([p['model_u_at_max_m_s'] for p in previous['points']])

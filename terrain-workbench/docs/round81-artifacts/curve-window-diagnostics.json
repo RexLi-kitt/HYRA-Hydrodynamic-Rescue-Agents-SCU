@@ -1,0 +1,26 @@
+{
+  "upstream1": {
+    "initial": 0.0,
+    "at164000": 77.61833333333334,
+    "final": 30.5302,
+    "peak_time_s": 131400.0
+  },
+  "upstream2": {
+    "initial": 0.0,
+    "at164000": 5.40179,
+    "final": 1.45708,
+    "peak_time_s": 110700.0
+  },
+  "upstream3": {
+    "initial": 0.0,
+    "at164000": 4.608444444444444,
+    "final": 2.0802,
+    "peak_time_s": 99900.0
+  },
+  "downstream": {
+    "initial": 3.461,
+    "at164000": 7.895777777777778,
+    "final": 4.776,
+    "peak_time_s": 135900.0
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "archive": {
+    "fields": {
+      "check-0000.elev": {
+        "finite": true,
+        "min": -9999.0,
+        "max": 20.061948969536
+      },
+      "check-0000.wd": {
+        "finite": true,
+        "min": 0.0,
+        "max": 0.203169880283
+      },
+      "check-0000.wd1x": {
+        "finite": true,
+        "min": -0.064119308768,
+        "max": 0.065428109408
+      },
+      "check-0000.wd1y": {
+        "finite": true,
+        "min": -0.061238742008,
+        "max": 0.068530788623
+      }
+    },
+    "minimum_reconstructed_depth": -0.005009061252372576,
+    "input_hashes_unchanged": true,
+    "momentum_export": "not available in this unchanged configuration; no complete momentum-field verification claim"
+  },
+  "mean_preserving": {
+    "fields": {
+      "check-0000.elev": {
+        "finite": true,
+        "min": -9999.0,
+        "max": 18.128300898255
+      },
+      "check-0000.wd": {
+        "finite": true,
+        "min": 0.0,
+        "max": 0.328656936373
+      },
+      "check-0000.wd1x": {
+        "finite": true,
+        "min": -0.0,
+        "max": 0.046327234192
+      },
+      "check-0000.wd1y": {
+        "finite": true,
+        "min": -0.028453861063,
+        "max": 0.025044352049
+      }
+    },
+    "minimum_reconstructed_depth": -0.001048777392435184,
+    "input_hashes_unchanged": true,
+    "momentum_export": "not available in this unchanged configuration; no complete momentum-field verification claim"
+  },
+  "original_inputs_and_exe_unchanged": true
+}

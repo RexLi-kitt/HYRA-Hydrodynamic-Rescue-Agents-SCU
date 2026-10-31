@@ -1,0 +1,35 @@
+--- a/swe/dg2.cpp
++++ b/swe/dg2.cpp
+@@ -54,6 +54,12 @@
+ 	time_t loop_start;
+ 	time(&loop_start);
+ 
++    // HYRA adapter: exact output/end events for closed or boundary-driven cases.
++    // No rainfall/point-source cases are admitted by this adapter.
++    Parptr->MassTotal = Solverptr->t + Parptr->MassInt;
++    Parptr->SaveTotal = Solverptr->t + Parptr->SaveInt;
++    FILE* step_audit = fopen("accepted_timesteps.txt", "w");
++    if (!step_audit) { perror("accepted_timesteps.txt"); exit(EXIT_FAILURE); }
+ 	while (Solverptr->t < Solverptr->Sim_Time)
+ 	{	
+ 		zero_flux_stats(BCptr);
+@@ -68,6 +74,11 @@
+ 			Solverptr->Tstep = Tstep_from_cfl(Parptr, Solverptr, Arrptr);
+ 		}
+ 
++        Solverptr->Tstep = (std::min)(Solverptr->Tstep, Solverptr->Sim_Time - Solverptr->t);
++        Solverptr->Tstep = (std::min)(Solverptr->Tstep, Parptr->MassTotal - Solverptr->t);
++        Solverptr->Tstep = (std::min)(Solverptr->Tstep, Parptr->SaveTotal - Solverptr->t);
++        if (!(Solverptr->Tstep > C(0.0))) { fprintf(stderr, "Nonpositive event step\n"); exit(EXIT_FAILURE); }
++        fprintf(step_audit, "%.17g %.17g\n", double(Solverptr->t), double(Solverptr->Tstep));
+ 		if (verbose == ON) printf("t=%f\tdt=%f\n", Solverptr->t, Solverptr->Tstep);
+ 
+ 		apply_friction(Parptr, Solverptr, Arrptr);
+@@ -109,6 +120,7 @@
+ 		}
+ 	}
+ 
++    fclose(step_audit);
+ 	time_t loop_end;
+ 	time(&loop_end);
+ 

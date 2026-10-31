@@ -1,0 +1,48 @@
+{
+  "scope": "Conditional author-archive baseline, complete registered0..164000s; not complete recession to245700s or a validated field reproduction",
+  "evidence_class": "same-event archived input simulation, uncertain metadata retained",
+  "physical_choices": "Unchanged archived DG2 bed, HVAR west, three original unit-width sources, n=.06, dry start implied by archive. No selection by score.",
+  "numerical_choices": "round77 patched CPU64 OMP1; dt cap1 as successful round79 (archive par10), output mass300s/snapshots4100s, qoutput enabled. Exact output events affect step partition, so record accepted steps.",
+  "exe_sha256": "6288f6696a1f900ebc8dca3f2c0e6b439b24a86253fdb1b0f305641c089756c3",
+  "inputs": {
+    "carlisle.bci": "5ddab49982d6043f397a640ce01b65481e310d784b51b5cf6258d71553ce65aa",
+    "carlisle.bdy": "1a7e4ba6858b61a97466fd1d9724bbbfb315d2f46fba3dafa76f5ccf97e39726",
+    "carlisle.stage": "bc899141b78405ae3fe540323af47b6f33615ad9e2e53b62c7c328524b0ed915",
+    "CarlislefixDEMwithbedDG2.asc": "e3d557b88a44d273c13210b4a695942b64f879075657c93e1eb086acc27a98b7",
+    "CarlislefixDEMwithbedDG2.asc.raw": "7bb4597790861b121864d23218c81aef8ff8e1dd67e4bf576469eb46c9a1cc0a",
+    "CarlislefixDEMwithbedDG2.asc1x": "d814246283249fabd29f10ae83581b89a138a725dc3089e4dc2a1552c43e1b7e",
+    "CarlislefixDEMwithbedDG2.asc1y": "09edc12d7810df43862f83bafceffd40411f0464e46bddf113c95646b3d5077d",
+    "case.par": "532ee5070c78f6541eff8b132576a438a101fd03ad944ef2fa84520839da19d3"
+  },
+  "expected_source_volume_m3": {
+    "upstream1": 95004318.73333332,
+    "upstream2": 7728945.575,
+    "upstream3": 17762290.644444447
+  },
+  "internal_gate": "Finite/nonnegative means in all saved snapshots; no negative RK trace; end164000; exact integrated source; independently reconstruct volume from accepted RK boundary fluxes. Volume tolerance max(1e-4m3,1e-9 times gross accepted volume); not field accuracy.",
+  "unresolved": [
+    "epoch",
+    "HVAR vertical datum vs paper free outlet",
+    "initial-state realism",
+    "164000 truncates boundary series before245700",
+    "actual channel width support"
+  ],
+  "observations": {
+    "all_outline_ids": [
+      "1494",
+      "20431",
+      "25550",
+      "26602",
+      "4078483"
+    ],
+    "all_marks": 263,
+    "outside_or_partial": "retained unknown/uncovered, not excluded or dry",
+    "maximum_extent": "compare only model registered-window maximum; no claim event maximum equivalence without timing coverage",
+    "qualitative_acceptance": "not eligible while input correspondence unresolved; no retrospective threshold fitting",
+    "reconstruction": "cell means only; raw unbounded depth polynomials not used"
+  },
+  "cost": "one heavy process; disk132GB free at launch; anticipated hours uncertain from wet-area-dependent CFL, record progress.8h resource cap, no automatic retry.",
+  "candidate_queue": "none; do not auto-run mean-preserving candidate until baseline assessed",
+  "production_adopted": false,
+  "field_passes_added": 0
+}

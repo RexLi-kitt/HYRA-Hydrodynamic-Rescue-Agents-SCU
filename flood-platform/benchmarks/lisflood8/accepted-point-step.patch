@@ -1,0 +1,102 @@
+--- a/swe/dg2.cpp
++++ b/swe/dg2.cpp
+@@ -10,6 +10,59 @@
+ #include "hll.h"
+ #include "output.h"
+ #include <algorithm>
++#include <map>
++#include <cmath>
++
++// Experimental adapter: nonnegative QFIX/QVAR, no rain, from t=0 only.
++// q is unit-width discharge. Multiple points in a cell are summed.
++// Probe source-added H with a candidate dt, shrink to its CFL bound,
++// and commit once. Source volume and flux ledger share the accepted dt.
++static void accepted_positive_point_step(Pars* p, Solver* s, BoundCs* b,
++                                        Arrays* a)
++{
++    std::map<int, NUMERIC_TYPE> initial_h, depth_rate;
++    NUMERIC_TYPE total_q = C(0.0);
++    for (int k=0; k<b->numPS; ++k) {
++        const int i=b->xpi[k], j=b->ypi[k];
++        if (i<0 || i>=p->xsz || j<0 || j>=p->ysz) {
++            fprintf(stderr,"Point outside raster\n"); exit(EXIT_FAILURE);
++        }
++        NUMERIC_TYPE q;
++        if (b->PS_Ident[k] == QFIX4) q=b->PS_Val[k];
++        else if (b->PS_Ident[k] == QVAR5)
++            q=linear_interpolate(b->PS_TimeSeries[k],s->t);
++        else { fprintf(stderr,"Only nonnegative QFIX/QVAR supported\n"); exit(EXIT_FAILURE); }
++        if (!std::isfinite(double(q)) || q<C(0.0)) {
++            fprintf(stderr,"Nonfinite/negative point flow unsupported\n"); exit(EXIT_FAILURE);
++        }
++        const int index=j*p->xsz+i;
++        initial_h.emplace(index,a->H[index]);
++        depth_rate[index] += q*p->dx/p->dA;
++        total_q += q*p->dx;
++    }
++    dg2::update_boundary_values(p,s,b,a);
++    NUMERIC_TYPE dt=dg2::Tstep_from_cfl(p,s,a);
++    dt=(std::min)(dt,s->Sim_Time-s->t);
++    dt=(std::min)(dt,p->MassTotal-s->t);
++    dt=(std::min)(dt,p->SaveTotal-s->t);
++    for (int attempt=0; attempt<64; ++attempt) {
++        if (!(dt>C(0.0)) || !std::isfinite(double(dt))) {
++            fprintf(stderr,"Invalid point-source timestep\n"); exit(EXIT_FAILURE);
++        }
++        for (const auto& item: initial_h)
++            a->H[item.first]=item.second+depth_rate[item.first]*dt;
++        dg2::update_boundary_values(p,s,b,a);
++        const NUMERIC_TYPE allowed=dg2::Tstep_from_cfl(p,s,a);
++        if (dt<=allowed) {
++            s->Tstep=dt;
++            accumulate_point_flux_stats(b,total_q);
++            return;
++        }
++        dt=C(0.9)*allowed;  // bounded conservative retry; never add twice
++    }
++    fprintf(stderr,"Point-source CFL iteration failed\n"); exit(EXIT_FAILURE);
++}
++
+ 
+ void dg2::solve
+ (
+@@ -24,6 +77,11 @@
+ 	const int verbose
+ )
+ {
++    if (Statesptr->rainfall == ON || Statesptr->dynamicrainfall == ON ||
++        Statesptr->rainfallmask == ON || Solverptr->t != C(0.0)) {
++        fprintf(stderr,"Experimental event/point adapter excludes rain and restart\n");
++        exit(EXIT_FAILURE);
++    }
+ 	read_dem_slopes(Fnameptr, Parptr, Arrptr, verbose);
+     zero_dem_perimeter_slopes(Parptr, Arrptr);
+ 
+@@ -55,7 +113,7 @@
+ 	time(&loop_start);
+ 
+     // HYRA adapter: exact output/end events for closed or boundary-driven cases.
+-    // No rainfall/point-source cases are admitted by this adapter.
++    // Nonnegative point sources use accepted_positive_point_step; no rain/restart.
+     Parptr->MassTotal = Solverptr->t + Parptr->MassInt;
+     Parptr->SaveTotal = Solverptr->t + Parptr->SaveInt;
+     FILE* step_audit = fopen("accepted_timesteps.txt", "w");
+@@ -64,6 +122,10 @@
+ 	{	
+ 		zero_flux_stats(BCptr);
+ 
++        if (BCptr->numPS > 0) {
++            accepted_positive_point_step(Parptr, Solverptr, BCptr, Arrptr);
++            if (Parptr->limit_slopes == ON) Solverptr->maxH = maxH(Parptr, Arrptr);
++        } else {
+         if (Parptr->limit_slopes == ON) Solverptr->maxH = maxH(Parptr, Arrptr);
+         rain.update_H(Parptr, Solverptr, Arrptr);
+ 		update_point_sources(Parptr, Solverptr, BCptr, Arrptr);
+@@ -78,6 +140,7 @@
+         Solverptr->Tstep = (std::min)(Solverptr->Tstep, Parptr->MassTotal - Solverptr->t);
+         Solverptr->Tstep = (std::min)(Solverptr->Tstep, Parptr->SaveTotal - Solverptr->t);
+         if (!(Solverptr->Tstep > C(0.0))) { fprintf(stderr, "Nonpositive event step\n"); exit(EXIT_FAILURE); }
++        }
+         fprintf(step_audit, "%.17g %.17g\n", double(Solverptr->t), double(Solverptr->Tstep));
+ 		if (verbose == ON) printf("t=%f\tdt=%f\n", Solverptr->t, Solverptr->Tstep);
+ 

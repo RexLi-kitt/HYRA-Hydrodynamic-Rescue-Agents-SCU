@@ -1,0 +1,15 @@
+{
+  "session_id": 4148,
+  "status": {
+    "state": "running",
+    "pid": 40052,
+    "wrapper_pid": 23872,
+    "exit_code": null,
+    "elapsed_wall_s": 135.02226567268372,
+    "last_buffered_accepted_end_s": 1781.5776843452368,
+    "simulation_target_s": 164000,
+    "no_auto_restart": true
+  },
+  "snapshot_only": true,
+  "live_state": "status.json and actual process commandline, not this snapshot"
+}

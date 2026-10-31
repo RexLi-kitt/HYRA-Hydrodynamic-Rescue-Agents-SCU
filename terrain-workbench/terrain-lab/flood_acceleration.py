@@ -58,7 +58,7 @@ def reconstruction(h, bed, u, v, solid, wall_x, wall_y, periodic, order, theta, 
 
 @njit(cache=True, nogil=True)
 def flux_axis(h, bed, u, v, sh, sb, su, sv, blocked, axis, boundary,
-              sea_level, sea0, sea1, fraction0, fraction1, q0, q1, ax0, ax1, az0, az1, method, low_froude):
+              sea_level, sea0, sea1, fraction0, fraction1, q0, q1, ax0, ax1, az0, az1, method, low_froude, audit=None):
     nz, nx = h.shape
     shape = (nz,nx+1) if axis == 1 else (nz+1,nx)
     mass=np.empty(shape);advx=np.empty(shape);advz=np.empty(shape)
@@ -114,7 +114,7 @@ def flux_axis(h, bed, u, v, sh, sb, su, sv, blocked, axis, boundary,
                 fn=.5*(mnl*unl+mnr*unr)-.5*speed*correction*(mnr-mnl)
                 ft=.5*(mnl*utl+mnr*utr)-.5*speed*correction*(mtr-mtl)
                 p=.25*G*(dl*dl+dr*dr)
-            else:
+            elif method == 1:
                 sp=max(unl+cl,unr+cr,0.);sm=min(unl-cl,unr-cr,0.)
                 denom=sp-sm;inverse=1./denom if denom>1e-14 else 0.
                 q=(sp*mnl-sm*mnr+sp*sm*(dr-dl))*inverse
@@ -122,6 +122,35 @@ def flux_axis(h, bed, u, v, sh, sb, su, sv, blocked, axis, boundary,
                 ft=(sp*mnl*utl-sm*mnr*utr+correction*sp*sm*(mtr-mtl))*inverse
                 p=.5*G*(sp*dl*dl-sm*dr*dr)*inverse if denom>1e-14 else .25*G*(dl*dl+dr*dr)
                 speed=max(sp,-sm)
+            elif method == 2:
+                if low_froude != 0:
+                    raise ValueError('Experimental HLLC requires low_froude=0')
+                if dl == 0.: unl=utl=0.
+                if dr == 0.: unr=utr=0.
+                mnl,mnr=dl*unl,dr*unr;mtl,mtr=dl*utl,dr*utr
+                sl=min(unl-cl,unr-cr);sr=max(unl+cl,unr+cr)
+                if dl == 0.: sl=unr-2.*cr;sr=unr+cr
+                if dr == 0.: sl=unl-cl;sr=unl+2.*cl
+                sp=max(sr,0.);sm=min(sl,0.)
+                denom=sp-sm;inverse=1./denom if denom>1e-14 else 0.
+                q=(sp*mnl-sm*mnr+sp*sm*(dr-dl))*inverse
+                fn=(sp*mnl*unl-sm*mnr*unr+sp*sm*(mnr-mnl))*inverse
+                p=.5*G*(sp*dl*dl-sm*dr*dr)*inverse if denom>1e-14 else .25*G*(dl*dl+dr*dr)
+                ft=(sp*mnl*utl-sm*mnr*utr+sp*sm*(mtr-mtl))*inverse
+                hstar=(sp*dr-sm*dl-(mnr-mnl))*inverse
+                reason=0
+                if dl<=1e-8 or dr<=1e-8: reason=1
+                elif hstar<=1e-8: reason=2
+                elif unr-unl>=2.*(cl+cr): reason=3
+                if reason == 0:
+                    ft=q*(utl if q>=0. else utr)
+                # Only unblocked interior faces; edge forcing is audited in
+                # the existing boundary budget instead.
+                if audit is not None and not edge and not blocked[z,x]:
+                    audit[reason,z,x]+=1
+                speed=max(sp,-sm)
+            else:
+                raise ValueError('Unsupported flux method code')
             ax,az=(fn,ft) if axis == 1 else (-ft,fn)
             if edge:
                 iz,ix=(zr,xr) if along == 0 else (zl,xl)
