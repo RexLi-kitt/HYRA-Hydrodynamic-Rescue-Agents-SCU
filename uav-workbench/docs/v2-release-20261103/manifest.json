@@ -1,0 +1,1024 @@
+{
+  "version": 1,
+  "included": [
+    {
+      "path": "uav-workbench/experiments/flood-drop-dispatch-v1/dispatch_env.py",
+      "bytes": 6135,
+      "sha256": "b9942cd1918a663ecb6ce1d912e4320c32bd7ec312b59d4c8d6c5d580bbd3e3c"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-dispatch-v1/smoke_dispatch.py",
+      "bytes": 1551,
+      "sha256": "1b4995a2cdc5a95e34e2c8e357ea355f7487220bba73b2bb19b678a70bdb1524"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-dispatch-v1/test_dispatch.py",
+      "bytes": 2544,
+      "sha256": "105e6533d99c48beb2eed6322238a7e603a91669b50e4e368e6f5bbb98fbf289"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-dispatch-v1/train.py",
+      "bytes": 12509,
+      "sha256": "0c6ac1847a32a55c680ed815cbf9f720bfbbae99a02ec25becc8cdc141d1736a"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-external-event-v1/event_scenarios.py",
+      "bytes": 3265,
+      "sha256": "d833c4050338278561fbd99dc779671ce6d47a5ad18f700699a29eed89502f33"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-external-event-v1/train.py",
+      "bytes": 9260,
+      "sha256": "d038d9721760d4386297e7561d71a1598dea4881cf978f60fc51efa3e563caee"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-fast-window-v1/tune.py",
+      "bytes": 8719,
+      "sha256": "85703ab05cb624f084cf9039bd74e5589f0078124107900a259882b2befe1b01"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-flow-confirm-v1/confirm.py",
+      "bytes": 7781,
+      "sha256": "f101597aa2554850f7296d7f84e99ccb12d94fbe28f7c295cd5e18d77b44f25f"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-flow-fog-v1/experiment.py",
+      "bytes": 14156,
+      "sha256": "692611df0078006689124655db321dcb627522ef7f96fc140cb7a464a34f004a"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-flow-fog-v1/test_flow_fog.py",
+      "bytes": 3327,
+      "sha256": "d18ae4129fc5c36be14bd7913d1d4bcaf74d62de7aaaaee4ba771bb829c47a71"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-fog-reward-v1/fog_rollout.py",
+      "bytes": 3825,
+      "sha256": "d10be915a9f59386d2e403fa7a16c9b4c5361eca8ca78e2322d205171a23b5e8"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-fog-reward-v1/readiness.py",
+      "bytes": 2756,
+      "sha256": "2912b66910d9d536130983f8915340bd976297740edeaefe21fe0e01dbcb3a14"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-fog-reward-v1/train.py",
+      "bytes": 9670,
+      "sha256": "8e50e145da1b6dc8e9c377910b631dfccdc8164aff931d90ffbaa241ef3dcd85"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-frozen-validation-v1/test_validation.py",
+      "bytes": 2430,
+      "sha256": "510321e530cb1db3a7c6bf183a60f6532de6fd18084412b2073d06c17fcf62d9"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-frozen-validation-v1/validate.py",
+      "bytes": 13557,
+      "sha256": "77b40fcbd70987a8105452e0d8581bd66a77c0b00c78488180c97b3044bd1059"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-interaction-v1/interaction.py",
+      "bytes": 7254,
+      "sha256": "8a3587d43215349ebb367fdebbc781dd8cdd05d364dfc072af16b2b580cd36e9"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-load80-explore-v1/train_load80.py",
+      "bytes": 15199,
+      "sha256": "784ec46bb50a5f38fab6cca396cbeb03f5a8b115e52b17198b5c1e8383a3d3ba"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-load80-v1/train_load80.py",
+      "bytes": 13588,
+      "sha256": "9a2885fed7b0d05e96697e85a92a2b3e26aa94b18fea087f91a71886c8ef4bed"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-neighborhood-v1/neighborhood.py",
+      "bytes": 6207,
+      "sha256": "96b400325aedfac4ebddc6f2d2945de94c105a485f4d61faee722b3f2f96f34d"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-prediction-probe-v1/prediction_env.py",
+      "bytes": 5168,
+      "sha256": "9fb8e8519f843e6609fc2d744643775814f19f7a1413fc5d734828e0e7cb9a1e"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-prediction-probe-v1/probe.py",
+      "bytes": 7816,
+      "sha256": "1d56d68c1cab8eade1b7365e963d0208f526d90f0b5615d59f715e2d8e116014"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-pressure-v1/pressure.py",
+      "bytes": 8740,
+      "sha256": "ee4cec60e7384b7ce9c90d02b613f99614367bebfe81482702d7fdb4fb8e4884"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-pressure-v1/test_pressure.py",
+      "bytes": 2214,
+      "sha256": "7709dcefa934c1edaf52cf0a9f6c97743e979ce48c104d65c6b31ce989b16ea5"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-refloat-v1/refloat_dispatch.py",
+      "bytes": 6316,
+      "sha256": "ee778c60a8d41f0fd5afd70c859229a75d4074e988b6f0d44680e0ac84a24ff7"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-refloat-v1/refloat_environment.py",
+      "bytes": 19940,
+      "sha256": "ebf5676d8a36572cd9b299d922f2034859e0a20c4252ce7e579f66062c691158"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-refloat-v1/refloat_search.py",
+      "bytes": 482,
+      "sha256": "5f9d7c3c67bad89320a728908193d7830ffd45d2cf7b358896d550593cd88d90"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-refloat-v1/screen.py",
+      "bytes": 5429,
+      "sha256": "487182afa0211ada1bdd64c926b5c5b170e18f398bc6d9f0d75129aa66214d69"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-refloat-v1/test_refloat.py",
+      "bytes": 2731,
+      "sha256": "55632d5ebde9ac18e4460d95670c6c9978a3d23c0ea9f8b766990abdc9c269f6"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-regional-learning-v1/experiment.py",
+      "bytes": 12784,
+      "sha256": "d5e7130b430656576b9b28e768fe42e1dcca944b15025ee44fac98e0758f5a4c"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-regional-refloat-v1/experiment.py",
+      "bytes": 15458,
+      "sha256": "4831e6b901736d5fee52522740895fca60d4e073a1036c51364b6293d96b6449"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-residual-v1/metrics.py",
+      "bytes": 976,
+      "sha256": "c180a7aa613b45344c521f30855d19b6de0fe32765559793cf2778de42b535c3"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-residual-v1/residual_env.py",
+      "bytes": 972,
+      "sha256": "638daa68fd0652468da2516f63ba71ea1c982dc724c96df7f1eb26868a13543c"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-residual-v1/test_residual.py",
+      "bytes": 3205,
+      "sha256": "68c136cd7b0e27060b6775f6469d244d9f0928eb09fe3c326bea28c67e9060df"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-residual-v1/train_residual.py",
+      "bytes": 10637,
+      "sha256": "3031f9b71fc0b8d12c55d2f900f5292a9ccffabfa9c5e0999708c3e4a88cb602"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-resolution-check-v1/probe.py",
+      "bytes": 5229,
+      "sha256": "5dd11d2e213eed96daa283a15e61e9e1940e6d86d343b5d17181c3f991fd3f4a"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-probe-v1/probe.py",
+      "bytes": 6623,
+      "sha256": "1782b94bbd3015cb887e7b04257de11947f94836744d43d03f6141e530aeaff1"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-probe-v1/search_env.py",
+      "bytes": 5620,
+      "sha256": "1e60cd3c3f52cee122be4ebd03fbb97978c44b08f88eaf9bbebe9f6b6f4df76b"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-strong-default-v1/readiness.py",
+      "bytes": 3936,
+      "sha256": "a9e86f578bfb1df129a7597ddd88d4504d9e260b398c5748a079a8c2bb1959cf"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-strong-default-v1/strong_env.py",
+      "bytes": 1191,
+      "sha256": "171172503d996594cf30d74f8c52d9e879f8db3b0409ea42400634cc08dbe0d0"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-strong-default-v1/strong_rollout.py",
+      "bytes": 2706,
+      "sha256": "6f9d7caa83a39035866d3a47dd2ae73be947514ecc6fb9e00277275f2978ec2e"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-strong-default-v1/train.py",
+      "bytes": 7266,
+      "sha256": "4b2de392981fa4acee33c032ae908cf9cf6244a90f0fbac2af031ff84ff4f92a"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-threshold2-v1/train.py",
+      "bytes": 10081,
+      "sha256": "da7eff798354d2e279c9fd906f707a75927623e4214aa33fa42d482b5a0481ef"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2/environment.py",
+      "bytes": 14500,
+      "sha256": "c9bfeec59a27628931323fc6d7c5b1d528902338bf304d0a05bdfc607a0f9972"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2/pilot.py",
+      "bytes": 9593,
+      "sha256": "f8d34ac5f3ccd6e7695f7bcb5b4e24bca1d0f205090384e054d8ece09e2fabe0"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2/smoke.py",
+      "bytes": 1947,
+      "sha256": "8c4c6d138a14262e52e1905e27f7a459e88abda06da57926f803330b64a824d9"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2/test_environment.py",
+      "bytes": 4074,
+      "sha256": "51fc2f0ea9c9e115f03cff29cc030f35c005f79a7d24ae086282c57085aadc3a"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-coordination-v1/coord_rollout.py",
+      "bytes": 2729,
+      "sha256": "518cbdf3621134d78c159c2ec2e658601c659241331c6e772a624fa66c32b68f"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-coordination-v1/diagnose.py",
+      "bytes": 4183,
+      "sha256": "366afe11f315b5da8e751d94b04870c094ee747cbfc11c78a9370509b90ceda7"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-coordination-v1/repair_probe.py",
+      "bytes": 5255,
+      "sha256": "6e87efe0b3e71e6d9be80b39bd24786a88aad63627bf366a32e67a50db8fbdaf"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-coordination-v1/reservation_env.py",
+      "bytes": 4303,
+      "sha256": "0f5b503154d592038c1f79911fa475b0bc6673ef2a3716721e2926963bc5f861"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-coordination-v1/train_coordination.py",
+      "bytes": 16323,
+      "sha256": "6a96f133067f3283774ac5ebc69b92425a3c9ed2dcfbd6a3e74496f58bae0583"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-coordination-v1/training_readiness.py",
+      "bytes": 3537,
+      "sha256": "a7cf5277cd654f89229c6513db72f1382f1dc0567b9dc318716c48185d0c0a23"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-joint-v1/candidate_env.py",
+      "bytes": 7459,
+      "sha256": "d40e34ae50a36160332820f53d6d0c39ba744debedd0e6bab1ffb244f4f6fb04"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-joint-v1/readiness.py",
+      "bytes": 3474,
+      "sha256": "9ac2c8a9df92ba437724013270c2c608877f2b306100731bb7011dbda90d5096"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-joint-v1/rollout.py",
+      "bytes": 3035,
+      "sha256": "b5d7cebadecf35b6f3e73e101dfbab781e3f02f6ce726c54e3e19893c478e820"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-joint-v1/suite.py",
+      "bytes": 13594,
+      "sha256": "b18965bf9cd61898935440868a91640cd1afd88cb79f5e994c8fcca15459a552"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-v2-parameter-sweep-v1/sweep.py",
+      "bytes": 8830,
+      "sha256": "f43d8aefb7231745d4f556429d9cd6705d4a86f2565e68c67dd39793ac83450a"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-value-predictor-v1/experiment.py",
+      "bytes": 11646,
+      "sha256": "1dbeab3befd55c44e99bff37c3635672aa2b20cbc47929ac0d90943c070046d3"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-variable-v1/screen.py",
+      "bytes": 14082,
+      "sha256": "778941faba093309ce5016bd4def8fb0203943f96fc18a416778e7d10976d0b3"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-variable-v1/test_variable.py",
+      "bytes": 6025,
+      "sha256": "e70d9ac1803cce3bc5c1f4c070bc7c0f41b08f051b063740d15187be6746b01f"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-variable-v1/variable_dispatch.py",
+      "bytes": 6211,
+      "sha256": "b3e24bba96f63735b914f294d5e52cb2b9f5b5bf560ff79276577c10bf0172db"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-variable-v1/variable_environment.py",
+      "bytes": 18257,
+      "sha256": "84214322081f642c50b97aed2ded0ec28e6068060a8c7cce24fff06ea55763d7"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-visibility-step-v1/probe.py",
+      "bytes": 5087,
+      "sha256": "d3efb85a6d412203569b916b2230cb9452fb46032538554104e6d234ae853a67"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/实验报告.txt",
+      "bytes": 16326,
+      "sha256": "fc9be793585523c698ead09c6dd31b01a12fee48226fba69a29b976f7e475dd6"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/本轮结果.txt",
+      "bytes": 2257,
+      "sha256": "c3eabd4550ce901e1c2a68e3964d0c6aef306ba4bb4daa6eb93709f4aaa16397"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/paired-selected-vs-coverage.json",
+      "bytes": 7799,
+      "sha256": "02f68c90eac407e6fcd1e2042b6963b22c3cccf65c1c3669c15adb7db13c8d21"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/protocol.json",
+      "bytes": 17846,
+      "sha256": "65b3f33ee90bf64237f8441fec380d2afcf3dee3fec0b1093721302c12900764"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/readiness.json",
+      "bytes": 134,
+      "sha256": "a406ea4344ce8ddfd7de1e0e8ef4b0548e1525b09aec488839209f13c8d01bc9"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/results.jsonl",
+      "bytes": 1053096,
+      "sha256": "4cda38e084b12f8115eb8b6397b0f53fec285a024c39ee295b000dee668b05a0"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/scenarios.json",
+      "bytes": 1505168,
+      "sha256": "ff66d669348096cd08237eb4d754a4ab24026b059a5e7e605ccf8268465f5beb"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/selection.json",
+      "bytes": 497,
+      "sha256": "fe2536380bfc0ae2de252dae4426ceaccd5633e5c86e946c1674ef3d54a0212d"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/status.json",
+      "bytes": 145,
+      "sha256": "834ed24eb8cf94bc097f55af3e4a0036f6a93ff75096964605959f5acc091bc2"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/summary.json",
+      "bytes": 12413,
+      "sha256": "90acfbfd5d6eb2d02e4813b7f2ed52444a86bdc6e041659a3805d6a6b87a8c55"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/training-history.json",
+      "bytes": 6194,
+      "sha256": "12493d0a4a5846207725f102dbc91d42b67300a6913a3811c8489206b31cf11c"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-regional-refloat-20261103/run01/training-index.json",
+      "bytes": 161075,
+      "sha256": "f4139244f1f2aeec20a40ab6c24981fc3d43c29d44176da4c3c27143a78e40f3"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/readiness.json",
+      "bytes": 314,
+      "sha256": "18bc4b63ceae06e8c79c06cd34676a8925c6786356161e86bab45cc18a18cdf7"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/search-trace-diagnostic.json",
+      "bytes": 111985,
+      "sha256": "17b436ee98c515471d861c3ec7d3f368aaf485608a00b3d5c260d95945a6b7aa"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/实验报告.txt",
+      "bytes": 4922,
+      "sha256": "57a21c2afc08eed8a0b32be000a51d8eb450e537261eea30d8ad6b452fcb7213"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/本轮结果.txt",
+      "bytes": 690,
+      "sha256": "695d85704f01d1e1a31b48617929025b7ed22470118c02203126a0d4302c87e4"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/protocol.json",
+      "bytes": 8563,
+      "sha256": "10ded03759b6a6e68bc612d914a701a7721f8ba4bac9f6781d0ba61e01ac9298"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/results.jsonl",
+      "bytes": 1176869,
+      "sha256": "c67c97780d3bcb8eedc997d2c4ddc52e42b016b0c52ca3c43510e368db4b2751"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/selection.json",
+      "bytes": 14273,
+      "sha256": "20c66db774d730a46bd7a0e1f537414db5fa8d80a1712dece457c038503d94ca"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/status.json",
+      "bytes": 103,
+      "sha256": "69388f374e15b57176e333c78f4e356aaab657e70de844e34a23e7ebcc09c892"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/summary.json",
+      "bytes": 2233,
+      "sha256": "0a684f527103cca4a6a54cfa9e57e0fffc1bd3b0eb19e8e83f25055470c8679d"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/train-scenarios.json",
+      "bytes": 580854,
+      "sha256": "71235ee539ea4f27a809e788277b2594430f911774340a8d099f2be8a0538249"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/train-summary.json",
+      "bytes": 10250,
+      "sha256": "94691bf1915222f1a27f55b228d1586f63f8f6bc7df26a695ac4570bc2cd7a8a"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-fog-20261103/run01/validation-scenarios.json",
+      "bytes": 248144,
+      "sha256": "2d7cd750d308bc7917ac101eaf33664f0b8e53e61b7e3c678b653ca978725b46"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/实验报告.txt",
+      "bytes": 3995,
+      "sha256": "95a1de0565f1d80b027d469f6d0cb981edad63f15bd3ec47cfb025df51cf8569"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/本轮结果.txt",
+      "bytes": 394,
+      "sha256": "56bd0095aa9509110309e91aa56ce1abc4ca9258e0a34a72e3c2f295dc65f47d"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/run01/fields.json",
+      "bytes": 33001,
+      "sha256": "d820f182aa5274ea60cff773ac25edeff6e3bebe92fa988caf74758ac0bd3da3"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/run01/protocol.json",
+      "bytes": 6315,
+      "sha256": "1fbf05993554b415473d5c0fa345e12ad527f658558dfb7d659859cc27d322e9"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/run01/results.jsonl",
+      "bytes": 198033,
+      "sha256": "b015eb9188ad8050a9b77db8014f84f94875c0a21f75513d4e08c67593873b9a"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/run01/scenarios.json",
+      "bytes": 248798,
+      "sha256": "8717df3198ecc295c499d70322d2dad3fc530d2dbfa44a1227abf6f31acf73da"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/run01/status.json",
+      "bytes": 139,
+      "sha256": "9b5fb6cb812e1d861b3429492bd84effef968662751b44add6bd4baeb80ea886"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-flow-confirm-20261103/run01/summary.json",
+      "bytes": 5889,
+      "sha256": "a694ba09021f8fd88d644429bfec50662308a5f068b898960f883e136b257cf4"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/search-trace-diagnostic.json",
+      "bytes": 111985,
+      "sha256": "17b436ee98c515471d861c3ec7d3f368aaf485608a00b3d5c260d95945a6b7aa"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/实验报告.txt",
+      "bytes": 2041,
+      "sha256": "8a422efbb42161624f2888a31e7d1b185ef0bffab72d68703bbc2061acea1e4b"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/本轮结果.txt",
+      "bytes": 488,
+      "sha256": "f9ae3d614f1445c6ead9f106fef25af7ef8e7bb4583ebdee0b68ce93ee1f6954"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/run01/protocol.json",
+      "bytes": 4418,
+      "sha256": "321753a31c1a69798190f080f1fa09014ea10dc6ac932c5c1e42615468578007"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/run01/results.jsonl",
+      "bytes": 133466,
+      "sha256": "3500b4d85a499023a53888714df9299075cef2469af2be9b11a6404e48ad904e"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/run01/scenarios.json",
+      "bytes": 165977,
+      "sha256": "b33fd9471914e3f1bf5e9099c241b6907af9b72571fce30a1284e7ff640c3b28"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/run01/status.json",
+      "bytes": 70,
+      "sha256": "000a8e0e0b1e7cfe4a943e30232963061852b6f8b2d48f94114a5c6a39f606ce"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-visibility-step-20261103/run01/summary.json",
+      "bytes": 4240,
+      "sha256": "75b823da5a9b70aa08f51a9c46315622793b5d029401ebeb3e51ca6bd4c93a40"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/goal-check.json",
+      "bytes": 300,
+      "sha256": "fea2adf848cf8983f4daa1e4899438eec44d7da778fc60073be1aef0481d9bca"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/全部结果与结论.txt",
+      "bytes": 3646,
+      "sha256": "3538a0890aa64e534149e39c0dffc8441b09c3c3bc59a663c0152e71369e9c90"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/实验报告.txt",
+      "bytes": 3646,
+      "sha256": "3538a0890aa64e534149e39c0dffc8441b09c3c3bc59a663c0152e71369e9c90"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/run01/protocol.json",
+      "bytes": 5978,
+      "sha256": "7d0b45988c705b40f5a887f8faf4a897245763bfba66fe74b2f91a01352b93f8"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/run01/results.jsonl",
+      "bytes": 199866,
+      "sha256": "8f2c7926061638476497469b39c2307cfdc234f81775e24e29b4f66d11144ee4"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/run01/scenarios.json",
+      "bytes": 249182,
+      "sha256": "ba6c857db9270c117636e898e0d491271c0e87b3489d17e0b4c2a7dee516bc10"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/run01/status.json",
+      "bytes": 81,
+      "sha256": "150ace8bc180f1332f2f2bbda9fd05d09bb5aaa6a9b5461235711226628ae45a"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-resolution-check-20261103/run01/summary.json",
+      "bytes": 2375,
+      "sha256": "e3e7d9537ca5f0d6388f1ba8f4ea873af0658bc08c73b674c6af393a78315be8"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/实验报告.txt",
+      "bytes": 4967,
+      "sha256": "14af5892fd6c57c12c7415b8da366967df25dfba954bca672a53f893eeefffbf"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/本轮完整数据与结论.txt",
+      "bytes": 4967,
+      "sha256": "14af5892fd6c57c12c7415b8da366967df25dfba954bca672a53f893eeefffbf"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/confirmation-scenarios.json",
+      "bytes": 248507,
+      "sha256": "29d4de44978d69a75769616789eba72d95ecc1c1e5502bdeee61f86e067713f0"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/fields.json",
+      "bytes": 33001,
+      "sha256": "f4de0145e9e9171321c89f7307a5897b60f52bc3cb65f0e097a1191ff5a5b1f0"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/protocol.json",
+      "bytes": 6050,
+      "sha256": "ac6a8f7793f915640bc40c59920e5293795c55a79706df408ca207bf26509829"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/results.jsonl",
+      "bytes": 400269,
+      "sha256": "c837ff56f66e8074a47cf2ffeda16bb1e2eae0a2c3c788176d2e73774cfcc27b"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/selection.json",
+      "bytes": 2067,
+      "sha256": "18b8cb6ef02cba1556d7c41a72b2082db3f2834ecda69fc9152d86e659605bea"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/status.json",
+      "bytes": 101,
+      "sha256": "46bc4a7d29e5ee87cf01f1ec695e50c0085645a8dc516956599d3a19fd1e76eb"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/summary.json",
+      "bytes": 1478,
+      "sha256": "e1ad7a1116f82c6a71ec29b31d5aecc70401c4dedc1bc54095474d050872b341"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/train-scenarios.json",
+      "bytes": 249305,
+      "sha256": "1895e255011fed4b39b4cb535051d87e09c9e4b5e38ec06b88e2f271d1db48cd"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-fast-window-20261103/run01/train-summary.json",
+      "bytes": 2514,
+      "sha256": "d9ca2f71c68987d9e43802d224313761ca899539b216dce9ec7a139d5f64b70e"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/结果摘要.txt",
+      "bytes": 2202,
+      "sha256": "696f7ab91e477983adaf0b2bfa8c95c69e63edd73436cf162abc1f7bc98caec4"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/逐场人数全表.txt",
+      "bytes": 2757,
+      "sha256": "2189927e14954e1f5a15de29aa128a413d65993706043dc9194323ae5a5cf5f2"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/验证报告.txt",
+      "bytes": 6843,
+      "sha256": "c1b79fe0b5002c45ed0546b66afa2003f9c9528c9584eae74e199b4c3834c075"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/fields.json",
+      "bytes": 131934,
+      "sha256": "77cd2c4c19bb49a1dabdc4f40a346265023ca6b43c4773b16489cb94daf4580d"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/independence-and-completeness-audit.json",
+      "bytes": 648,
+      "sha256": "ad2926496aad763683f0e1b34f72849b68f6868471376c44a27afbd6b44c2fcc"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/leakage-audit.json",
+      "bytes": 502,
+      "sha256": "230f4ce4c624da94b4d16c8a28db9aa12d0650b2f9da8e4b321f07b6c8377cf4"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/paired-results.json",
+      "bytes": 23856,
+      "sha256": "0b095a22869be4a8ee31c18fb564b4c3e7a894a745041997e6d841067edddf86"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/protocol.json",
+      "bytes": 8210,
+      "sha256": "17a7c8d5d166a7d855466171cf9abbb980179521e6eb85898293ac9eb29663fe"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/results.jsonl",
+      "bytes": 743408,
+      "sha256": "aebc23cdc6998f8b6f4d28ad24ec37561b58662a329799fbe56d366575858466"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/scenario-lock.json",
+      "bytes": 119,
+      "sha256": "f96b5d311042d092483245f67d7af64a3d99a552fbe689c71e307cc8e57ffe26"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/scenarios.json",
+      "bytes": 1184541,
+      "sha256": "b73187f3cc2623fa6fb1eb6c0b0b84b6cbeb0b677f471601cccb71983062b122"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/status.json",
+      "bytes": 212,
+      "sha256": "d5e89da189b66296c7f2a691dab5fc5621b3430e1a4ddfe3037d9d248e133368"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/evidence/uav-frozen-validation-20261103/run01/summary.json",
+      "bytes": 10622,
+      "sha256": "6937af0d9a6346fbf1808ad3d170a362f562194a9f42fee5ed0720e92bbad5bc"
+    },
+    {
+      "path": "uav-workbench/docs/v2-release-20261103/model/gru-32.pt",
+      "bytes": 21577,
+      "sha256": "6d9338befc35bfc1ea130d9702ee1a2707317554a81b7681542d47ff1edcf143"
+    }
+  ],
+  "local_only_water": [
+    {
+      "archive": "uav-flow-confirm-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-flow-confirm-20261103\\run01\\fields\\new-map-confirmation-813001.npy",
+      "bytes": 36120128,
+      "sha256": "42c882864738c1f97a7bba267bf0cf78bb2a545fc26da5b9675c6c1c7309feb3",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-flow-confirm-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-flow-confirm-20261103\\run01\\fields\\new-map-confirmation-813002.npy",
+      "bytes": 36120128,
+      "sha256": "c7e32d969f0c12faed38718fa044dfa819ff898f47f38819c5f9c3c0237df121",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-flow-confirm-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-flow-confirm-20261103\\run01\\fields\\new-map-confirmation-813003.npy",
+      "bytes": 36120128,
+      "sha256": "0f47da83b024ac193032816f29891782f984556588a14362e1b1388f419765c6",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-flow-confirm-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-flow-confirm-20261103\\run01\\fields\\new-map-confirmation-813004.npy",
+      "bytes": 36120128,
+      "sha256": "3b7e083cf7fc4e61d558f42300ae82d54a2f7cc56144fb49de990fee3ad417e6",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-flow-confirm-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-flow-confirm-20261103\\run01\\fields\\new-map-confirmation-813005.npy",
+      "bytes": 36120128,
+      "sha256": "bc9ee722ce631ba9b97387f640329d02c0855a92e15c22adee8be9673b780f8c",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-flow-confirm-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-flow-confirm-20261103\\run01\\fields\\new-map-confirmation-813006.npy",
+      "bytes": 36120128,
+      "sha256": "171fe5edf74e1d6536f56ddaa1babdd5de143ea1ea7ac18b6f2718d12eca837b",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-fast-window-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fast-window-20261103\\run01\\fields\\new-window-confirmation-814001.npy",
+      "bytes": 36120128,
+      "sha256": "6a6f7f8a5cf38505967b6dfda4abb86dfdb132eecc16355bce605f4badd89f56",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-fast-window-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fast-window-20261103\\run01\\fields\\new-window-confirmation-814002.npy",
+      "bytes": 36120128,
+      "sha256": "a8fa407a010398d0550963d1c463d7523962c06322466180a8206f5132b58929",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-fast-window-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fast-window-20261103\\run01\\fields\\new-window-confirmation-814003.npy",
+      "bytes": 36120128,
+      "sha256": "947fd4171766bc8fabb677a90cfdcc5355ed0be56ab98988d68896fd5af41777",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-fast-window-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fast-window-20261103\\run01\\fields\\new-window-confirmation-814004.npy",
+      "bytes": 36120128,
+      "sha256": "839ac9bca966d30722c44353558d6c6247cd575148c6d7f4989a648021f8315b",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-fast-window-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fast-window-20261103\\run01\\fields\\new-window-confirmation-814005.npy",
+      "bytes": 36120128,
+      "sha256": "24f304c9b1986758e7870b4f08420ffa9f7b19250a3dbfa40c7109454d144217",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-fast-window-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fast-window-20261103\\run01\\fields\\new-window-confirmation-814006.npy",
+      "bytes": 36120128,
+      "sha256": "d466dc1d80fe75fbada393c8786f1ca331916ade16697fad450eac35a943c661",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915001-mirror_x.npy",
+      "bytes": 36120128,
+      "sha256": "2f8011caafff1e926981a70d7ca99c149f2f5d8f5852675b4f7dfdcdec8b2165",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915001-rotate90.npy",
+      "bytes": 36120128,
+      "sha256": "302ca3de9012680fc6ce7261a4b6e1cdb5522edb649cce6323df67de19a437b6",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915002-mirror_x.npy",
+      "bytes": 36120128,
+      "sha256": "9ecbd3b6075b2eb029faf5b37299f9afa6fb4703d643a88da09e8a8efb763dde",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915002-rotate90.npy",
+      "bytes": 36120128,
+      "sha256": "482fa75d54f85bff1c8ee2c47a5c4e78ab29262481f59bd026663c212c7ab0dc",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915003-mirror_x.npy",
+      "bytes": 36120128,
+      "sha256": "e82e951b623640f5b80995c74fb65ef8cc77d1ff307880c3a1e14ef5f1b83fc0",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915003-rotate90.npy",
+      "bytes": 36120128,
+      "sha256": "4778bff95b111aeb734b786dd07e9aebc06036c3b02aa6f7a1ec6f29fb24cedd",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915004-mirror_x.npy",
+      "bytes": 36120128,
+      "sha256": "79ea9774e8716e3a4fed682034448cba7aefa215e58e2c138005a278ff4842bf",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915004-rotate90.npy",
+      "bytes": 36120128,
+      "sha256": "413c2befdfa5e81c40e4121150d8e8b6c0ff75845aee0ecd739bd788a8518a0f",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915005-mirror_x.npy",
+      "bytes": 36120128,
+      "sha256": "57f75ba8974888b7af47ce3d32fe14c83caebeb652bbd10eac5f7891f9dab7e0",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915005-rotate90.npy",
+      "bytes": 36120128,
+      "sha256": "09452dd475a2f9da39a7d84e0f20358ecdc762eefcdfd0dfda4e70d7ad440591",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915006-mirror_x.npy",
+      "bytes": 36120128,
+      "sha256": "348bad0cbc6d028b3ef62e57358cad4419cb56fe419f74541363de18439ef7f5",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\915006-rotate90.npy",
+      "bytes": 36120128,
+      "sha256": "72eef87ca4a7e85240b68d7157162a7e04deed14042a50e491eea9cfca003ea8",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915001.npy",
+      "bytes": 36120128,
+      "sha256": "57107b145b41b46a5b359371fa5a44aea094a0812998638702c6ab327bb8c3af",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915002.npy",
+      "bytes": 36120128,
+      "sha256": "977b26b350be5afcf01a3dd37e61e046794e3f80d61778af28efc11b0c9dc4e0",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915003.npy",
+      "bytes": 36120128,
+      "sha256": "a2682dea2a6f3fdab7eba7d1b71ea0b1cc04bcf98f8f6b1c7ae38410b6a7bbca",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915004.npy",
+      "bytes": 36120128,
+      "sha256": "ff38bf13e2337dc220ef996c20b56f7d03675c46d7be8893f7214ce0f90a3bfa",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915005.npy",
+      "bytes": 36120128,
+      "sha256": "407380d5019f6f202ab20b083713308a47962383d921f3f3aff375c9cea604bc",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915006.npy",
+      "bytes": 36120128,
+      "sha256": "2c7666d46c9e734def70e3b4fde265be4816967373a1de32c181258f39648d5c",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915007.npy",
+      "bytes": 36120128,
+      "sha256": "3c438f742dfc28f9af7b86f6a4a24cf98aad6606d1bfb88a357a226f64d990b2",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915008.npy",
+      "bytes": 36120128,
+      "sha256": "b096b8596eb03d7236f9ec43441c3ad9a09c731b3836229927b5de18e1e6bace",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915009.npy",
+      "bytes": 36120128,
+      "sha256": "1203e5793e22493eb607867fcd473bab06c649e34a8420f217eec36af2162881",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915010.npy",
+      "bytes": 36120128,
+      "sha256": "b8f4a61375936a9d6a63ccff8a2c50f46a9a613608382b09f62eef998b936836",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915011.npy",
+      "bytes": 36120128,
+      "sha256": "e06f4a0162b294098fa6642a41470dbabceaad590fd6bb5771003f366531b53e",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915012.npy",
+      "bytes": 36120128,
+      "sha256": "51686e7c56e070d694730d91be7e1361e1a33a8d2e752f02fec95b89fc8ccd1f",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915013.npy",
+      "bytes": 36120128,
+      "sha256": "3829b7f11aca204f273e97ed060405d82a184d3f7a690e386a04a56002ac6a9c",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915014.npy",
+      "bytes": 36120128,
+      "sha256": "d36abf85ab63cbd2a0e277ed24ee63ace9c576bd42ba02f802b460c925964a82",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915015.npy",
+      "bytes": 36120128,
+      "sha256": "6488bc6596e619ae9df9f519bef78f6d1329fcb89a19cfe64bc935da5b13c733",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915016.npy",
+      "bytes": 36120128,
+      "sha256": "ef5669d224c1b014063a01620d4290c785170ef430166ec5e087c8eea7e4d6a4",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915017.npy",
+      "bytes": 36120128,
+      "sha256": "a04fd3dea969cf76d457e5697e1c5cfacab71e896fd3a3677c511762084a89a5",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915018.npy",
+      "bytes": 36120128,
+      "sha256": "12bfd3372278b8592a1e9ad07b25d33e4513b22d805088392ceaf6aca67c2276",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915019.npy",
+      "bytes": 36120128,
+      "sha256": "966ce9091bb7370500ea42777932354de88b9b8c112a4c2fdb97c1dd0c86d240",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915020.npy",
+      "bytes": 36120128,
+      "sha256": "322f7f4cb5eee5a17b8888d3e90fe5dac2b4a53c635bdb7b456305d28757131a",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915021.npy",
+      "bytes": 36120128,
+      "sha256": "aff62241101658562d6170b3bcf1fd924f00221ccef414c982e5fa96e6b071b5",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915022.npy",
+      "bytes": 36120128,
+      "sha256": "f4cb7c39611ead434f222739eaadd25ef3b765feccf5a4c511bf22ab54391b82",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915023.npy",
+      "bytes": 36120128,
+      "sha256": "02e2233d6ef048e48a7fdfbb158ff2c83e08a902ea9007ef05ff3304a6a74b5e",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    },
+    {
+      "archive": "uav-frozen-validation-20261103",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915024.npy",
+      "bytes": 36120128,
+      "sha256": "9e2d8999f1ad5a27de8236857c0db871435ad8e3232b0ba68277a1bb52833367",
+      "reason": "Raw hydraulic array retained in local archive; metadata and full outcomes included"
+    }
+  ],
+  "scope": "Immutable research snapshot. Absolute paths in original evidence are provenance, not a portable runtime configuration. All outcomes including failures retained. No production upgrade."
+}

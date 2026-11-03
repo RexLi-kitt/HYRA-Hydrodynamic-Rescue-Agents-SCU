@@ -1,0 +1,478 @@
+{
+  "status": "completed",
+  "counts": {
+    "training_layouts": 32,
+    "supervised_epochs": 64,
+    "evaluation_rollouts": 240
+  },
+  "results": {
+    "coverage100": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 334,
+        "people_total": 480,
+        "people_completion": 0.6958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 146,
+        "expired_unseen": 80,
+        "conflicts": 217
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 128,
+        "people_total": 240,
+        "people_completion": 0.5333333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 112,
+        "expired_unseen": 80,
+        "conflicts": 90
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 192,
+        "people_total": 240,
+        "people_completion": 0.8,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 48,
+        "expired_unseen": 15,
+        "conflicts": 49
+      }
+    },
+    "dispatch": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 286,
+        "people_total": 480,
+        "people_completion": 0.5958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 194,
+        "expired_unseen": 144,
+        "conflicts": 208
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 83,
+        "people_total": 240,
+        "people_completion": 0.3458333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 157,
+        "expired_unseen": 138,
+        "conflicts": 575
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 186,
+        "people_total": 240,
+        "people_completion": 0.775,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 54,
+        "expired_unseen": 21,
+        "conflicts": 138
+      }
+    },
+    "probability": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 285,
+        "people_total": 480,
+        "people_completion": 0.59375,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 195,
+        "expired_unseen": 138,
+        "conflicts": 164
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 82,
+        "people_total": 240,
+        "people_completion": 0.3416666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 158,
+        "expired_unseen": 131,
+        "conflicts": 129
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 180,
+        "people_total": 240,
+        "people_completion": 0.75,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 60,
+        "expired_unseen": 19,
+        "conflicts": 84
+      }
+    },
+    "statistic": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 318,
+        "people_total": 480,
+        "people_completion": 0.6625,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 162,
+        "expired_unseen": 106,
+        "conflicts": 262
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 103,
+        "people_total": 240,
+        "people_completion": 0.42916666666666664,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 137,
+        "expired_unseen": 103,
+        "conflicts": 163
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 188,
+        "people_total": 240,
+        "people_completion": 0.7833333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 52,
+        "expired_unseen": 12,
+        "conflicts": 132
+      }
+    },
+    "linear-0": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 286,
+        "people_total": 480,
+        "people_completion": 0.5958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 194,
+        "expired_unseen": 144,
+        "conflicts": 208
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 83,
+        "people_total": 240,
+        "people_completion": 0.3458333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 157,
+        "expired_unseen": 138,
+        "conflicts": 575
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 186,
+        "people_total": 240,
+        "people_completion": 0.775,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 54,
+        "expired_unseen": 21,
+        "conflicts": 138
+      }
+    },
+    "linear-16": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 377,
+        "people_total": 480,
+        "people_completion": 0.7854166666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 1,
+        "at_least95_rate": 0.08333333333333333,
+        "missed": 103,
+        "expired_unseen": 60,
+        "conflicts": 134
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 130,
+        "people_total": 240,
+        "people_completion": 0.5416666666666666,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 110,
+        "expired_unseen": 84,
+        "conflicts": 65
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 194,
+        "people_total": 240,
+        "people_completion": 0.8083333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 46,
+        "expired_unseen": 13,
+        "conflicts": 99
+      }
+    },
+    "linear-32": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 354,
+        "people_total": 480,
+        "people_completion": 0.7375,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 126,
+        "expired_unseen": 61,
+        "conflicts": 198
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 156,
+        "people_total": 240,
+        "people_completion": 0.65,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 84,
+        "expired_unseen": 62,
+        "conflicts": 167
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 184,
+        "people_total": 240,
+        "people_completion": 0.7666666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 56,
+        "expired_unseen": 18,
+        "conflicts": 195
+      }
+    },
+    "gru-0": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 286,
+        "people_total": 480,
+        "people_completion": 0.5958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 194,
+        "expired_unseen": 144,
+        "conflicts": 208
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 83,
+        "people_total": 240,
+        "people_completion": 0.3458333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 157,
+        "expired_unseen": 138,
+        "conflicts": 575
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 186,
+        "people_total": 240,
+        "people_completion": 0.775,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 54,
+        "expired_unseen": 21,
+        "conflicts": 138
+      }
+    },
+    "gru-16": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 378,
+        "people_total": 480,
+        "people_completion": 0.7875,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 102,
+        "expired_unseen": 51,
+        "conflicts": 308
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 154,
+        "people_total": 240,
+        "people_completion": 0.6416666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 86,
+        "expired_unseen": 52,
+        "conflicts": 352
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 200,
+        "people_total": 240,
+        "people_completion": 0.8333333333333334,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 1,
+        "at_least95_rate": 0.16666666666666666,
+        "missed": 40,
+        "expired_unseen": 12,
+        "conflicts": 54
+      }
+    },
+    "gru-32": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 377,
+        "people_total": 480,
+        "people_completion": 0.7854166666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 103,
+        "expired_unseen": 49,
+        "conflicts": 260
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 163,
+        "people_total": 240,
+        "people_completion": 0.6791666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 77,
+        "expired_unseen": 40,
+        "conflicts": 152
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 182,
+        "people_total": 240,
+        "people_completion": 0.7583333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 1,
+        "at_least95_rate": 0.16666666666666666,
+        "missed": 58,
+        "expired_unseen": 19,
+        "conflicts": 96
+      }
+    }
+  },
+  "selection": {
+    "linear": {
+      "model": "linear",
+      "epoch": 16,
+      "calibration_poisson": 0.1609387993812561,
+      "beats_constant_and_statistic": true
+    },
+    "gru": {
+      "model": "gru",
+      "epoch": 32,
+      "calibration_poisson": 0.13746267557144165,
+      "beats_constant_and_statistic": true
+    }
+  },
+  "coverage100": {
+    "view60": {
+      "cases": 12,
+      "people_supplied": 334,
+      "people_total": 480,
+      "people_completion": 0.6958333333333333,
+      "all_successes": 0,
+      "all_rate": 0.0,
+      "at_least95_successes": 0,
+      "at_least95_rate": 0.0,
+      "missed": 146,
+      "expired_unseen": 80,
+      "conflicts": 217
+    },
+    "view40": {
+      "cases": 6,
+      "people_supplied": 128,
+      "people_total": 240,
+      "people_completion": 0.5333333333333333,
+      "all_successes": 0,
+      "all_rate": 0.0,
+      "at_least95_successes": 0,
+      "at_least95_rate": 0.0,
+      "missed": 112,
+      "expired_unseen": 80,
+      "conflicts": 90
+    },
+    "view100": {
+      "cases": 6,
+      "people_supplied": 192,
+      "people_total": 240,
+      "people_completion": 0.8,
+      "all_successes": 0,
+      "all_rate": 0.0,
+      "at_least95_successes": 0,
+      "at_least95_rate": 0.0,
+      "missed": 48,
+      "expired_unseen": 15,
+      "conflicts": 49
+    }
+  },
+  "baselines_same_refloat_physics": true,
+  "selected_gru_people_gate": false,
+  "source_water_unchanged": true
+}

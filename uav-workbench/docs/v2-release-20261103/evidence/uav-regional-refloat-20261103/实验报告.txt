@@ -1,0 +1,497 @@
+再漂移与区域需求学习试验 2026-11-03
+
+用户授权先尝试。独立复制旧环境和调度层，保留旧代码与权重。新move_people区分浅滩搁浅与障碍挂靠：h<.01搁浅；重新有水且h>=2m或|v|>=1m/s必再漂移，否则按1-(1-.05)^(1/60)每秒随机再漂移。障碍挂靠保持，不改变首次落水/截止。随机数由场景seed、exposure_id、秒数确定，不随策略调用次数改变；旧输入和已接受人员全部保留。不是人体阈值验证，也未重算水动力。
+
+测试：9项再漂移回归通过，覆盖干地、深度/速度边界、随机概率、挂靠、无效人员状态、再次搁浅、随机调用顺序及完整step截止。额外旧规则关闭再漂移的2场逐步轨迹检查在screen/regression.json；概率预测可见信息隔离及GRU输入/有限输出启动检查通过。原默认未升级。
+
+阶段一：复用32TRAIN布局，旧coverage100、新coverage100、新oracle100共96回放，无DEV筛选。相对之前最多18新配置的方案，本轮先用既有32场，避免重新生成条件化落水和扩大变量。人数/窗口/视野沿用既有混合配置，逐档报告；oracle必须总人数胜且三视野人数不退步才进入预测试训。oracle不可部署，不是理论上界。
+
+阶段二仅在阶段一门槛通过后启动：在再漂移环境收集32TRAIN布局的coverage100历史，每30秒记录，100米区域当前未发现待救人数只作TRAIN标签。14个公开特征、4帧历史，12训练父场拟合、4校准，6旧DEV只报告。共享GRU14->32->1与线性56->1各32监督epoch，0/16/32保存，按校准Poisson损失选快照，不能按DEV选。CPU4线程，Adam.001，batch2048，固定seed20261103。不是64个强化学习任务。所有同条件评估保留。
+
+评价对照：新规则下重算coverage100、原最近4人调度、统计年龄/湿区预测、可见水流传播概率近似、线性0/16/32与GRU0/16/32，共10方法x24DEV=240回放。概率近似每30秒搬移区域期望数，按window衰减、N/T均匀时间先验加事件、按刚观察比例削减；它不是精确贝叶斯，也没有未来真值。旧四规划在旧规则下的成绩只作历史，不跨环境宣布提升。主指标人数，另报全员和至少95%场景。GRU需主60米胜过所有四个非神经对照且40/100不退步，才通过本批人数门槛；不保证15个百分点。
+
+为何不立刻加变量：先确认区域需求是否可预测，避免把更换场景记为学习改善。再漂移可能对当前低流速场景影响很小，必须报告实际触发次数。概率或神经预测可能因随机事件、训练轨迹与部署轨迹分布不同而失败；失败保留，不直接追加1024轮。阶段二尚需校准损失和任务人数双重判断，信息oracle收益不保证网络可实现。
+
+验证/局限：逐人守恒、投放10秒与期限、固定fall/deadline、原水场/源码哈希校验；旧水场内部诊断沿用，不代表新现实精度。单训练种子、合成水场家族、重复DEV，不是最终独立检验。未作真实气象/通信/续航/载荷扩展，未安装GPU，未推送。回退用旧variable_environment与SearchEnv；新分支独立停用即可。
+
+当前状态：{"status": "completed", "elapsed_s": 603.9689999999973, "training_layouts": 32, "supervised_epochs": 64, "evaluation_rollouts": 240}
+
+完整摘要：
+{
+  "status": "completed",
+  "counts": {
+    "training_layouts": 32,
+    "supervised_epochs": 64,
+    "evaluation_rollouts": 240
+  },
+  "results": {
+    "coverage100": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 334,
+        "people_total": 480,
+        "people_completion": 0.6958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 146,
+        "expired_unseen": 80,
+        "conflicts": 217
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 128,
+        "people_total": 240,
+        "people_completion": 0.5333333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 112,
+        "expired_unseen": 80,
+        "conflicts": 90
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 192,
+        "people_total": 240,
+        "people_completion": 0.8,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 48,
+        "expired_unseen": 15,
+        "conflicts": 49
+      }
+    },
+    "dispatch": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 286,
+        "people_total": 480,
+        "people_completion": 0.5958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 194,
+        "expired_unseen": 144,
+        "conflicts": 208
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 83,
+        "people_total": 240,
+        "people_completion": 0.3458333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 157,
+        "expired_unseen": 138,
+        "conflicts": 575
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 186,
+        "people_total": 240,
+        "people_completion": 0.775,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 54,
+        "expired_unseen": 21,
+        "conflicts": 138
+      }
+    },
+    "probability": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 285,
+        "people_total": 480,
+        "people_completion": 0.59375,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 195,
+        "expired_unseen": 138,
+        "conflicts": 164
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 82,
+        "people_total": 240,
+        "people_completion": 0.3416666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 158,
+        "expired_unseen": 131,
+        "conflicts": 129
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 180,
+        "people_total": 240,
+        "people_completion": 0.75,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 60,
+        "expired_unseen": 19,
+        "conflicts": 84
+      }
+    },
+    "statistic": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 318,
+        "people_total": 480,
+        "people_completion": 0.6625,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 162,
+        "expired_unseen": 106,
+        "conflicts": 262
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 103,
+        "people_total": 240,
+        "people_completion": 0.42916666666666664,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 137,
+        "expired_unseen": 103,
+        "conflicts": 163
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 188,
+        "people_total": 240,
+        "people_completion": 0.7833333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 52,
+        "expired_unseen": 12,
+        "conflicts": 132
+      }
+    },
+    "linear-0": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 286,
+        "people_total": 480,
+        "people_completion": 0.5958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 194,
+        "expired_unseen": 144,
+        "conflicts": 208
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 83,
+        "people_total": 240,
+        "people_completion": 0.3458333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 157,
+        "expired_unseen": 138,
+        "conflicts": 575
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 186,
+        "people_total": 240,
+        "people_completion": 0.775,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 54,
+        "expired_unseen": 21,
+        "conflicts": 138
+      }
+    },
+    "linear-16": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 377,
+        "people_total": 480,
+        "people_completion": 0.7854166666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 1,
+        "at_least95_rate": 0.08333333333333333,
+        "missed": 103,
+        "expired_unseen": 60,
+        "conflicts": 134
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 130,
+        "people_total": 240,
+        "people_completion": 0.5416666666666666,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 110,
+        "expired_unseen": 84,
+        "conflicts": 65
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 194,
+        "people_total": 240,
+        "people_completion": 0.8083333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 46,
+        "expired_unseen": 13,
+        "conflicts": 99
+      }
+    },
+    "linear-32": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 354,
+        "people_total": 480,
+        "people_completion": 0.7375,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 126,
+        "expired_unseen": 61,
+        "conflicts": 198
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 156,
+        "people_total": 240,
+        "people_completion": 0.65,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 84,
+        "expired_unseen": 62,
+        "conflicts": 167
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 184,
+        "people_total": 240,
+        "people_completion": 0.7666666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 56,
+        "expired_unseen": 18,
+        "conflicts": 195
+      }
+    },
+    "gru-0": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 286,
+        "people_total": 480,
+        "people_completion": 0.5958333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 194,
+        "expired_unseen": 144,
+        "conflicts": 208
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 83,
+        "people_total": 240,
+        "people_completion": 0.3458333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 157,
+        "expired_unseen": 138,
+        "conflicts": 575
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 186,
+        "people_total": 240,
+        "people_completion": 0.775,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 54,
+        "expired_unseen": 21,
+        "conflicts": 138
+      }
+    },
+    "gru-16": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 378,
+        "people_total": 480,
+        "people_completion": 0.7875,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 102,
+        "expired_unseen": 51,
+        "conflicts": 308
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 154,
+        "people_total": 240,
+        "people_completion": 0.6416666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 86,
+        "expired_unseen": 52,
+        "conflicts": 352
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 200,
+        "people_total": 240,
+        "people_completion": 0.8333333333333334,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 1,
+        "at_least95_rate": 0.16666666666666666,
+        "missed": 40,
+        "expired_unseen": 12,
+        "conflicts": 54
+      }
+    },
+    "gru-32": {
+      "view60": {
+        "cases": 12,
+        "people_supplied": 377,
+        "people_total": 480,
+        "people_completion": 0.7854166666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 103,
+        "expired_unseen": 49,
+        "conflicts": 260
+      },
+      "view40": {
+        "cases": 6,
+        "people_supplied": 163,
+        "people_total": 240,
+        "people_completion": 0.6791666666666667,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 0,
+        "at_least95_rate": 0.0,
+        "missed": 77,
+        "expired_unseen": 40,
+        "conflicts": 152
+      },
+      "view100": {
+        "cases": 6,
+        "people_supplied": 182,
+        "people_total": 240,
+        "people_completion": 0.7583333333333333,
+        "all_successes": 0,
+        "all_rate": 0.0,
+        "at_least95_successes": 1,
+        "at_least95_rate": 0.16666666666666666,
+        "missed": 58,
+        "expired_unseen": 19,
+        "conflicts": 96
+      }
+    }
+  },
+  "selection": {
+    "linear": {
+      "model": "linear",
+      "epoch": 16,
+      "calibration_poisson": 0.1609387993812561,
+      "beats_constant_and_statistic": true
+    },
+    "gru": {
+      "model": "gru",
+      "epoch": 32,
+      "calibration_poisson": 0.13746267557144165,
+      "beats_constant_and_statistic": true
+    }
+  },
+  "coverage100": {
+    "view60": {
+      "cases": 12,
+      "people_supplied": 334,
+      "people_total": 480,
+      "people_completion": 0.6958333333333333,
+      "all_successes": 0,
+      "all_rate": 0.0,
+      "at_least95_successes": 0,
+      "at_least95_rate": 0.0,
+      "missed": 146,
+      "expired_unseen": 80,
+      "conflicts": 217
+    },
+    "view40": {
+      "cases": 6,
+      "people_supplied": 128,
+      "people_total": 240,
+      "people_completion": 0.5333333333333333,
+      "all_successes": 0,
+      "all_rate": 0.0,
+      "at_least95_successes": 0,
+      "at_least95_rate": 0.0,
+      "missed": 112,
+      "expired_unseen": 80,
+      "conflicts": 90
+    },
+    "view100": {
+      "cases": 6,
+      "people_supplied": 192,
+      "people_total": 240,
+      "people_completion": 0.8,
+      "all_successes": 0,
+      "all_rate": 0.0,
+      "at_least95_successes": 0,
+      "at_least95_rate": 0.0,
+      "missed": 48,
+      "expired_unseen": 15,
+      "conflicts": 49
+    }
+  },
+  "baselines_same_refloat_physics": true,
+  "selected_gru_people_gate": false,
+  "source_water_unchanged": true
+}

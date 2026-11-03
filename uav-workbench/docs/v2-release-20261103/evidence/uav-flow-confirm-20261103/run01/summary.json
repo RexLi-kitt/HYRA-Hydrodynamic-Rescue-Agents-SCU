@@ -1,0 +1,270 @@
+{
+  "status": "completed",
+  "results": {
+    "coverage100": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 377,
+      "people_rate": 0.7854166666666667,
+      "all_rate": 0.0,
+      "p95_rate": 0.16666666666666666,
+      "unseen": 42,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 384,
+      "people_rate": 0.8,
+      "all_rate": 0.0,
+      "p95_rate": 0.16666666666666666,
+      "unseen": 40,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 441,
+      "people_rate": 0.91875,
+      "all_rate": 0.08333333333333333,
+      "p95_rate": 0.5,
+      "unseen": 13,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 434,
+      "people_rate": 0.9041666666666667,
+      "all_rate": 0.25,
+      "p95_rate": 0.6666666666666666,
+      "unseen": 10,
+      "refloats": 0
+    }
+  },
+  "goals": {
+    "gru-32_flowblend": {
+      "people_gap": 0.11874999999999991,
+      "p95_gap": 0.33333333333333337,
+      "all_gap": 0.08333333333333333,
+      "goal_met": true
+    },
+    "gru-16": {
+      "people_gap": 0.10416666666666663,
+      "p95_gap": 0.5,
+      "all_gap": 0.25,
+      "goal_met": true
+    }
+  },
+  "paired": {
+    "gru-32_flowblend": {
+      "coverage100": [
+        {
+          "case": "water813001-event0",
+          "people_delta": 7
+        },
+        {
+          "case": "water813001-event1",
+          "people_delta": 6
+        },
+        {
+          "case": "water813002-event0",
+          "people_delta": 11
+        },
+        {
+          "case": "water813002-event1",
+          "people_delta": 3
+        },
+        {
+          "case": "water813003-event0",
+          "people_delta": 2
+        },
+        {
+          "case": "water813003-event1",
+          "people_delta": 11
+        },
+        {
+          "case": "water813004-event0",
+          "people_delta": 2
+        },
+        {
+          "case": "water813004-event1",
+          "people_delta": 0
+        },
+        {
+          "case": "water813005-event0",
+          "people_delta": 0
+        },
+        {
+          "case": "water813005-event1",
+          "people_delta": 6
+        },
+        {
+          "case": "water813006-event0",
+          "people_delta": 13
+        },
+        {
+          "case": "water813006-event1",
+          "people_delta": 3
+        }
+      ],
+      "flow_coverage": [
+        {
+          "case": "water813001-event0",
+          "people_delta": 7
+        },
+        {
+          "case": "water813001-event1",
+          "people_delta": 6
+        },
+        {
+          "case": "water813002-event0",
+          "people_delta": 7
+        },
+        {
+          "case": "water813002-event1",
+          "people_delta": 3
+        },
+        {
+          "case": "water813003-event0",
+          "people_delta": 2
+        },
+        {
+          "case": "water813003-event1",
+          "people_delta": 11
+        },
+        {
+          "case": "water813004-event0",
+          "people_delta": 2
+        },
+        {
+          "case": "water813004-event1",
+          "people_delta": 0
+        },
+        {
+          "case": "water813005-event0",
+          "people_delta": 1
+        },
+        {
+          "case": "water813005-event1",
+          "people_delta": 2
+        },
+        {
+          "case": "water813006-event0",
+          "people_delta": 13
+        },
+        {
+          "case": "water813006-event1",
+          "people_delta": 3
+        }
+      ]
+    },
+    "gru-16": {
+      "coverage100": [
+        {
+          "case": "water813001-event0",
+          "people_delta": 11
+        },
+        {
+          "case": "water813001-event1",
+          "people_delta": 9
+        },
+        {
+          "case": "water813002-event0",
+          "people_delta": 12
+        },
+        {
+          "case": "water813002-event1",
+          "people_delta": 3
+        },
+        {
+          "case": "water813003-event0",
+          "people_delta": -16
+        },
+        {
+          "case": "water813003-event1",
+          "people_delta": 10
+        },
+        {
+          "case": "water813004-event0",
+          "people_delta": 2
+        },
+        {
+          "case": "water813004-event1",
+          "people_delta": 1
+        },
+        {
+          "case": "water813005-event0",
+          "people_delta": 1
+        },
+        {
+          "case": "water813005-event1",
+          "people_delta": 3
+        },
+        {
+          "case": "water813006-event0",
+          "people_delta": 17
+        },
+        {
+          "case": "water813006-event1",
+          "people_delta": 4
+        }
+      ],
+      "flow_coverage": [
+        {
+          "case": "water813001-event0",
+          "people_delta": 11
+        },
+        {
+          "case": "water813001-event1",
+          "people_delta": 9
+        },
+        {
+          "case": "water813002-event0",
+          "people_delta": 8
+        },
+        {
+          "case": "water813002-event1",
+          "people_delta": 3
+        },
+        {
+          "case": "water813003-event0",
+          "people_delta": -16
+        },
+        {
+          "case": "water813003-event1",
+          "people_delta": 10
+        },
+        {
+          "case": "water813004-event0",
+          "people_delta": 2
+        },
+        {
+          "case": "water813004-event1",
+          "people_delta": 1
+        },
+        {
+          "case": "water813005-event0",
+          "people_delta": 2
+        },
+        {
+          "case": "water813005-event1",
+          "people_delta": -1
+        },
+        {
+          "case": "water813006-event0",
+          "people_delta": 17
+        },
+        {
+          "case": "water813006-event1",
+          "people_delta": 4
+        }
+      ]
+    }
+  },
+  "water_parents": 6,
+  "scenes": 12,
+  "rollouts": 48,
+  "new_training_epochs": 0,
+  "source_hashes_unchanged": true
+}

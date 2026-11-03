@@ -1,0 +1,386 @@
+[
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711000-view60",
+    "gain_people": 0,
+    "baseline": 29,
+    "learned": 29
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711001-view60",
+    "gain_people": 5,
+    "baseline": 29,
+    "learned": 34
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711002-view60",
+    "gain_people": -2,
+    "baseline": 30,
+    "learned": 28
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711003-view60",
+    "gain_people": -9,
+    "baseline": 30,
+    "learned": 21
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711004-view60",
+    "gain_people": 10,
+    "baseline": 26,
+    "learned": 36
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711005-view60",
+    "gain_people": 0,
+    "baseline": 33,
+    "learned": 33
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711006-view60",
+    "gain_people": 8,
+    "baseline": 23,
+    "learned": 31
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711007-view60",
+    "gain_people": 3,
+    "baseline": 27,
+    "learned": 30
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711008-view60",
+    "gain_people": 11,
+    "baseline": 28,
+    "learned": 39
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711009-view60",
+    "gain_people": 6,
+    "baseline": 28,
+    "learned": 34
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711010-view60",
+    "gain_people": 5,
+    "baseline": 25,
+    "learned": 30
+  },
+  {
+    "model": "linear-16",
+    "panel": "view60",
+    "case": "main40-2711011-view60",
+    "gain_people": 6,
+    "baseline": 26,
+    "learned": 32
+  },
+  {
+    "model": "linear-16",
+    "panel": "view40",
+    "case": "main40-2711000-view40",
+    "gain_people": 5,
+    "baseline": 13,
+    "learned": 18
+  },
+  {
+    "model": "linear-16",
+    "panel": "view40",
+    "case": "main40-2711001-view40",
+    "gain_people": -6,
+    "baseline": 25,
+    "learned": 19
+  },
+  {
+    "model": "linear-16",
+    "panel": "view40",
+    "case": "main40-2711002-view40",
+    "gain_people": -6,
+    "baseline": 30,
+    "learned": 24
+  },
+  {
+    "model": "linear-16",
+    "panel": "view40",
+    "case": "main40-2711003-view40",
+    "gain_people": -8,
+    "baseline": 27,
+    "learned": 19
+  },
+  {
+    "model": "linear-16",
+    "panel": "view40",
+    "case": "main40-2711004-view40",
+    "gain_people": 15,
+    "baseline": 11,
+    "learned": 26
+  },
+  {
+    "model": "linear-16",
+    "panel": "view40",
+    "case": "main40-2711005-view40",
+    "gain_people": 2,
+    "baseline": 22,
+    "learned": 24
+  },
+  {
+    "model": "linear-16",
+    "panel": "view100",
+    "case": "main40-2711000-view100",
+    "gain_people": 0,
+    "baseline": 35,
+    "learned": 35
+  },
+  {
+    "model": "linear-16",
+    "panel": "view100",
+    "case": "main40-2711001-view100",
+    "gain_people": -7,
+    "baseline": 36,
+    "learned": 29
+  },
+  {
+    "model": "linear-16",
+    "panel": "view100",
+    "case": "main40-2711002-view100",
+    "gain_people": 2,
+    "baseline": 32,
+    "learned": 34
+  },
+  {
+    "model": "linear-16",
+    "panel": "view100",
+    "case": "main40-2711003-view100",
+    "gain_people": 5,
+    "baseline": 28,
+    "learned": 33
+  },
+  {
+    "model": "linear-16",
+    "panel": "view100",
+    "case": "main40-2711004-view100",
+    "gain_people": -2,
+    "baseline": 33,
+    "learned": 31
+  },
+  {
+    "model": "linear-16",
+    "panel": "view100",
+    "case": "main40-2711005-view100",
+    "gain_people": 4,
+    "baseline": 28,
+    "learned": 32
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711000-view60",
+    "gain_people": -3,
+    "baseline": 29,
+    "learned": 26
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711001-view60",
+    "gain_people": 3,
+    "baseline": 29,
+    "learned": 32
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711002-view60",
+    "gain_people": -3,
+    "baseline": 30,
+    "learned": 27
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711003-view60",
+    "gain_people": 3,
+    "baseline": 30,
+    "learned": 33
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711004-view60",
+    "gain_people": 5,
+    "baseline": 26,
+    "learned": 31
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711005-view60",
+    "gain_people": 3,
+    "baseline": 33,
+    "learned": 36
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711006-view60",
+    "gain_people": 8,
+    "baseline": 23,
+    "learned": 31
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711007-view60",
+    "gain_people": 0,
+    "baseline": 27,
+    "learned": 27
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711008-view60",
+    "gain_people": 5,
+    "baseline": 28,
+    "learned": 33
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711009-view60",
+    "gain_people": 6,
+    "baseline": 28,
+    "learned": 34
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711010-view60",
+    "gain_people": 8,
+    "baseline": 25,
+    "learned": 33
+  },
+  {
+    "model": "gru-32",
+    "panel": "view60",
+    "case": "main40-2711011-view60",
+    "gain_people": 8,
+    "baseline": 26,
+    "learned": 34
+  },
+  {
+    "model": "gru-32",
+    "panel": "view40",
+    "case": "main40-2711000-view40",
+    "gain_people": 1,
+    "baseline": 13,
+    "learned": 14
+  },
+  {
+    "model": "gru-32",
+    "panel": "view40",
+    "case": "main40-2711001-view40",
+    "gain_people": 3,
+    "baseline": 25,
+    "learned": 28
+  },
+  {
+    "model": "gru-32",
+    "panel": "view40",
+    "case": "main40-2711002-view40",
+    "gain_people": 2,
+    "baseline": 30,
+    "learned": 32
+  },
+  {
+    "model": "gru-32",
+    "panel": "view40",
+    "case": "main40-2711003-view40",
+    "gain_people": -2,
+    "baseline": 27,
+    "learned": 25
+  },
+  {
+    "model": "gru-32",
+    "panel": "view40",
+    "case": "main40-2711004-view40",
+    "gain_people": 19,
+    "baseline": 11,
+    "learned": 30
+  },
+  {
+    "model": "gru-32",
+    "panel": "view40",
+    "case": "main40-2711005-view40",
+    "gain_people": 12,
+    "baseline": 22,
+    "learned": 34
+  },
+  {
+    "model": "gru-32",
+    "panel": "view100",
+    "case": "main40-2711000-view100",
+    "gain_people": -15,
+    "baseline": 35,
+    "learned": 20
+  },
+  {
+    "model": "gru-32",
+    "panel": "view100",
+    "case": "main40-2711001-view100",
+    "gain_people": -9,
+    "baseline": 36,
+    "learned": 27
+  },
+  {
+    "model": "gru-32",
+    "panel": "view100",
+    "case": "main40-2711002-view100",
+    "gain_people": 2,
+    "baseline": 32,
+    "learned": 34
+  },
+  {
+    "model": "gru-32",
+    "panel": "view100",
+    "case": "main40-2711003-view100",
+    "gain_people": 3,
+    "baseline": 28,
+    "learned": 31
+  },
+  {
+    "model": "gru-32",
+    "panel": "view100",
+    "case": "main40-2711004-view100",
+    "gain_people": -1,
+    "baseline": 33,
+    "learned": 32
+  },
+  {
+    "model": "gru-32",
+    "panel": "view100",
+    "case": "main40-2711005-view100",
+    "gain_people": 10,
+    "baseline": 28,
+    "learned": 38
+  }
+]

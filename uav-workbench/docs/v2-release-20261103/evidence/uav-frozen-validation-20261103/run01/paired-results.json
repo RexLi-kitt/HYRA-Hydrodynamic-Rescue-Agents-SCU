@@ -1,0 +1,1082 @@
+[
+  {
+    "case": "water915001-event0",
+    "parent": "synthetic-swe-915001",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 9,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915001-event0",
+    "parent": "synthetic-swe-915001",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 10,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915001-event0-rotate90",
+    "parent": "synthetic-swe-915001",
+    "panel": "rotate90",
+    "baseline": "coverage100",
+    "people_delta": -3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915001-event0-rotate90",
+    "parent": "synthetic-swe-915001",
+    "panel": "rotate90",
+    "baseline": "flow_coverage",
+    "people_delta": -2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915001-event0-mirror_x",
+    "parent": "synthetic-swe-915001",
+    "panel": "mirror_x",
+    "baseline": "coverage100",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915001-event0-mirror_x",
+    "parent": "synthetic-swe-915001",
+    "panel": "mirror_x",
+    "baseline": "flow_coverage",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915001-event1",
+    "parent": "synthetic-swe-915001",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915001-event1",
+    "parent": "synthetic-swe-915001",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915002-event0",
+    "parent": "synthetic-swe-915002",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915002-event0",
+    "parent": "synthetic-swe-915002",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915002-event0-rotate90",
+    "parent": "synthetic-swe-915002",
+    "panel": "rotate90",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915002-event0-rotate90",
+    "parent": "synthetic-swe-915002",
+    "panel": "rotate90",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915002-event0-mirror_x",
+    "parent": "synthetic-swe-915002",
+    "panel": "mirror_x",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915002-event0-mirror_x",
+    "parent": "synthetic-swe-915002",
+    "panel": "mirror_x",
+    "baseline": "flow_coverage",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915002-event1",
+    "parent": "synthetic-swe-915002",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 6,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915002-event1",
+    "parent": "synthetic-swe-915002",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 6,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915003-event0",
+    "parent": "synthetic-swe-915003",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 10,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915003-event0",
+    "parent": "synthetic-swe-915003",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 10,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915003-event0-rotate90",
+    "parent": "synthetic-swe-915003",
+    "panel": "rotate90",
+    "baseline": "coverage100",
+    "people_delta": 1,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915003-event0-rotate90",
+    "parent": "synthetic-swe-915003",
+    "panel": "rotate90",
+    "baseline": "flow_coverage",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915003-event0-mirror_x",
+    "parent": "synthetic-swe-915003",
+    "panel": "mirror_x",
+    "baseline": "coverage100",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915003-event0-mirror_x",
+    "parent": "synthetic-swe-915003",
+    "panel": "mirror_x",
+    "baseline": "flow_coverage",
+    "people_delta": 10,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915003-event1",
+    "parent": "synthetic-swe-915003",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 11,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915003-event1",
+    "parent": "synthetic-swe-915003",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 10,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915004-event0",
+    "parent": "synthetic-swe-915004",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 0,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915004-event0",
+    "parent": "synthetic-swe-915004",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915004-event0-rotate90",
+    "parent": "synthetic-swe-915004",
+    "panel": "rotate90",
+    "baseline": "coverage100",
+    "people_delta": 1,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915004-event0-rotate90",
+    "parent": "synthetic-swe-915004",
+    "panel": "rotate90",
+    "baseline": "flow_coverage",
+    "people_delta": -2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915004-event0-mirror_x",
+    "parent": "synthetic-swe-915004",
+    "panel": "mirror_x",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915004-event0-mirror_x",
+    "parent": "synthetic-swe-915004",
+    "panel": "mirror_x",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915004-event1",
+    "parent": "synthetic-swe-915004",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 9,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915004-event1",
+    "parent": "synthetic-swe-915004",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915005-event0",
+    "parent": "synthetic-swe-915005",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915005-event0",
+    "parent": "synthetic-swe-915005",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915005-event0-rotate90",
+    "parent": "synthetic-swe-915005",
+    "panel": "rotate90",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915005-event0-rotate90",
+    "parent": "synthetic-swe-915005",
+    "panel": "rotate90",
+    "baseline": "flow_coverage",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915005-event0-mirror_x",
+    "parent": "synthetic-swe-915005",
+    "panel": "mirror_x",
+    "baseline": "coverage100",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915005-event0-mirror_x",
+    "parent": "synthetic-swe-915005",
+    "panel": "mirror_x",
+    "baseline": "flow_coverage",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915005-event1",
+    "parent": "synthetic-swe-915005",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915005-event1",
+    "parent": "synthetic-swe-915005",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915006-event0",
+    "parent": "synthetic-swe-915006",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 12,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915006-event0",
+    "parent": "synthetic-swe-915006",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 12,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915006-event0-rotate90",
+    "parent": "synthetic-swe-915006",
+    "panel": "rotate90",
+    "baseline": "coverage100",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915006-event0-rotate90",
+    "parent": "synthetic-swe-915006",
+    "panel": "rotate90",
+    "baseline": "flow_coverage",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915006-event0-mirror_x",
+    "parent": "synthetic-swe-915006",
+    "panel": "mirror_x",
+    "baseline": "coverage100",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915006-event0-mirror_x",
+    "parent": "synthetic-swe-915006",
+    "panel": "mirror_x",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915006-event1",
+    "parent": "synthetic-swe-915006",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 0,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915006-event1",
+    "parent": "synthetic-swe-915006",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 0,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915007-event0",
+    "parent": "synthetic-swe-915007",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915007-event0",
+    "parent": "synthetic-swe-915007",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915007-event1",
+    "parent": "synthetic-swe-915007",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915007-event1",
+    "parent": "synthetic-swe-915007",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 9,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915008-event0",
+    "parent": "synthetic-swe-915008",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915008-event0",
+    "parent": "synthetic-swe-915008",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915008-event1",
+    "parent": "synthetic-swe-915008",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915008-event1",
+    "parent": "synthetic-swe-915008",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915009-event0",
+    "parent": "synthetic-swe-915009",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915009-event0",
+    "parent": "synthetic-swe-915009",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915009-event1",
+    "parent": "synthetic-swe-915009",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915009-event1",
+    "parent": "synthetic-swe-915009",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915010-event0",
+    "parent": "synthetic-swe-915010",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915010-event0",
+    "parent": "synthetic-swe-915010",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915010-event1",
+    "parent": "synthetic-swe-915010",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915010-event1",
+    "parent": "synthetic-swe-915010",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915011-event0",
+    "parent": "synthetic-swe-915011",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915011-event0",
+    "parent": "synthetic-swe-915011",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915011-event1",
+    "parent": "synthetic-swe-915011",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915011-event1",
+    "parent": "synthetic-swe-915011",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915012-event0",
+    "parent": "synthetic-swe-915012",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915012-event0",
+    "parent": "synthetic-swe-915012",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 8,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915012-event1",
+    "parent": "synthetic-swe-915012",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": -8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915012-event1",
+    "parent": "synthetic-swe-915012",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": -8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915013-event0",
+    "parent": "synthetic-swe-915013",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915013-event0",
+    "parent": "synthetic-swe-915013",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 9,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915013-event1",
+    "parent": "synthetic-swe-915013",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 16,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915013-event1",
+    "parent": "synthetic-swe-915013",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 15,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915014-event0",
+    "parent": "synthetic-swe-915014",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915014-event0",
+    "parent": "synthetic-swe-915014",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915014-event1",
+    "parent": "synthetic-swe-915014",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915014-event1",
+    "parent": "synthetic-swe-915014",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 1,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915015-event0",
+    "parent": "synthetic-swe-915015",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915015-event0",
+    "parent": "synthetic-swe-915015",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915015-event1",
+    "parent": "synthetic-swe-915015",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915015-event1",
+    "parent": "synthetic-swe-915015",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915016-event0",
+    "parent": "synthetic-swe-915016",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915016-event0",
+    "parent": "synthetic-swe-915016",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915016-event1",
+    "parent": "synthetic-swe-915016",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 6,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915016-event1",
+    "parent": "synthetic-swe-915016",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 10,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915017-event0",
+    "parent": "synthetic-swe-915017",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915017-event0",
+    "parent": "synthetic-swe-915017",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915017-event1",
+    "parent": "synthetic-swe-915017",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 1,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915017-event1",
+    "parent": "synthetic-swe-915017",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915018-event0",
+    "parent": "synthetic-swe-915018",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 1,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915018-event0",
+    "parent": "synthetic-swe-915018",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915018-event1",
+    "parent": "synthetic-swe-915018",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915018-event1",
+    "parent": "synthetic-swe-915018",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915019-event0",
+    "parent": "synthetic-swe-915019",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915019-event0",
+    "parent": "synthetic-swe-915019",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915019-event1",
+    "parent": "synthetic-swe-915019",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": -4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915019-event1",
+    "parent": "synthetic-swe-915019",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": -3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915020-event0",
+    "parent": "synthetic-swe-915020",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 0,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915020-event0",
+    "parent": "synthetic-swe-915020",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 1,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915020-event1",
+    "parent": "synthetic-swe-915020",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915020-event1",
+    "parent": "synthetic-swe-915020",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915021-event0",
+    "parent": "synthetic-swe-915021",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 9,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915021-event0",
+    "parent": "synthetic-swe-915021",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915021-event1",
+    "parent": "synthetic-swe-915021",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 14,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915021-event1",
+    "parent": "synthetic-swe-915021",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 9,
+    "all_delta": 1,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915022-event0",
+    "parent": "synthetic-swe-915022",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 2,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915022-event0",
+    "parent": "synthetic-swe-915022",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 3,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915022-event1",
+    "parent": "synthetic-swe-915022",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915022-event1",
+    "parent": "synthetic-swe-915022",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915023-event0",
+    "parent": "synthetic-swe-915023",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 9,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915023-event0",
+    "parent": "synthetic-swe-915023",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 10,
+    "all_delta": 0,
+    "p95_delta": 1
+  },
+  {
+    "case": "water915023-event1",
+    "parent": "synthetic-swe-915023",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915023-event1",
+    "parent": "synthetic-swe-915023",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 12,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915024-event0",
+    "parent": "synthetic-swe-915024",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 7,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915024-event0",
+    "parent": "synthetic-swe-915024",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 8,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915024-event1",
+    "parent": "synthetic-swe-915024",
+    "panel": "main",
+    "baseline": "coverage100",
+    "people_delta": 4,
+    "all_delta": 0,
+    "p95_delta": 0
+  },
+  {
+    "case": "water915024-event1",
+    "parent": "synthetic-swe-915024",
+    "panel": "main",
+    "baseline": "flow_coverage",
+    "people_delta": 5,
+    "all_delta": 0,
+    "p95_delta": 0
+  }
+]
