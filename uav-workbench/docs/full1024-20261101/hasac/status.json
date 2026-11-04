@@ -1,0 +1,837 @@
+{
+  "status": "completed",
+  "reason": "target_reached",
+  "start_episode": 448,
+  "final_episode": 1024,
+  "added_episodes": 576,
+  "target": 1024,
+  "best_episode": 256,
+  "best_checkpoint": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt",
+  "best_validation": {
+    "episodes": [
+      {
+        "case": "validation-2101.npy",
+        "layout": 9001,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.023333333333333334,
+        "RCR": 0.95,
+        "FRT": 4,
+        "CRT": null,
+        "coverage": 0.9436,
+        "rescued": 19,
+        "discovered": 19,
+        "conflicts": 7,
+        "boundaries": 86,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 191.95200000000085,
+        "free_decisions": 1016,
+        "free_hover_fraction": 0.3454724409448819,
+        "sampled_action_surprise": 1.1933113088992637,
+        "forced_agent_steps": 184,
+        "guard_agent_steps": 1
+      },
+      {
+        "case": "validation-2101.npy",
+        "layout": 9002,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.006666666666666667,
+        "RCR": 1.0,
+        "FRT": 6,
+        "CRT": 206,
+        "coverage": 0.9647,
+        "rescued": 20,
+        "discovered": 20,
+        "conflicts": 2,
+        "boundaries": 81,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 215.37400000000073,
+        "free_decisions": 1063,
+        "free_hover_fraction": 0.21260583254938853,
+        "sampled_action_surprise": 1.2418530192559099,
+        "forced_agent_steps": 137,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2101.npy",
+        "layout": 9003,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.03,
+        "RCR": 1.0,
+        "FRT": 5,
+        "CRT": 256,
+        "coverage": 0.9517,
+        "rescued": 20,
+        "discovered": 20,
+        "conflicts": 9,
+        "boundaries": 53,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 206.71400000000023,
+        "free_decisions": 1024,
+        "free_hover_fraction": 0.2099609375,
+        "sampled_action_surprise": 1.225147574674338,
+        "forced_agent_steps": 176,
+        "guard_agent_steps": 1
+      },
+      {
+        "case": "validation-2101.npy",
+        "layout": 9004,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.03,
+        "RCR": 0.9,
+        "FRT": 6,
+        "CRT": null,
+        "coverage": 0.9688,
+        "rescued": 18,
+        "discovered": 20,
+        "conflicts": 9,
+        "boundaries": 57,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 186.2560000000007,
+        "free_decisions": 901,
+        "free_hover_fraction": 0.19311875693673697,
+        "sampled_action_surprise": 1.3209925850276545,
+        "forced_agent_steps": 299,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9001,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.01,
+        "RCR": 0.95,
+        "FRT": 4,
+        "CRT": null,
+        "coverage": 0.956,
+        "rescued": 19,
+        "discovered": 19,
+        "conflicts": 3,
+        "boundaries": 89,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 199.6000000000008,
+        "free_decisions": 1016,
+        "free_hover_fraction": 0.3671259842519685,
+        "sampled_action_surprise": 1.1597057177325871,
+        "forced_agent_steps": 184,
+        "guard_agent_steps": 1
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9002,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.0033333333333333335,
+        "RCR": 1.0,
+        "FRT": 6,
+        "CRT": 211,
+        "coverage": 0.9574,
+        "rescued": 20,
+        "discovered": 20,
+        "conflicts": 1,
+        "boundaries": 79,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 217.62800000000084,
+        "free_decisions": 1064,
+        "free_hover_fraction": 0.20018796992481203,
+        "sampled_action_surprise": 1.2521213527236665,
+        "forced_agent_steps": 136,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9003,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.03,
+        "RCR": 0.75,
+        "FRT": 5,
+        "CRT": null,
+        "coverage": 0.7755,
+        "rescued": 15,
+        "discovered": 15,
+        "conflicts": 9,
+        "boundaries": 49,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 148.99000000000032,
+        "free_decisions": 1071,
+        "free_hover_fraction": 0.19140989729225025,
+        "sampled_action_surprise": 1.2434583693102739,
+        "forced_agent_steps": 129,
+        "guard_agent_steps": 1
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9004,
+        "action_seed": 3101,
+        "ST": 300,
+        "ACC": 0.0033333333333333335,
+        "RCR": 1.0,
+        "FRT": 6,
+        "CRT": 213,
+        "coverage": 0.9092,
+        "rescued": 20,
+        "discovered": 20,
+        "conflicts": 1,
+        "boundaries": 98,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 212.8640000000006,
+        "free_decisions": 1044,
+        "free_hover_fraction": 0.25,
+        "sampled_action_surprise": 1.3215595101259678,
+        "forced_agent_steps": 156,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2101.npy",
+        "layout": 9001,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.01,
+        "RCR": 0.95,
+        "FRT": 4,
+        "CRT": null,
+        "coverage": 0.9414,
+        "rescued": 19,
+        "discovered": 19,
+        "conflicts": 3,
+        "boundaries": 78,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 201.5080000000006,
+        "free_decisions": 980,
+        "free_hover_fraction": 0.25918367346938775,
+        "sampled_action_surprise": 1.1707012169215143,
+        "forced_agent_steps": 220,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2101.npy",
+        "layout": 9002,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.0033333333333333335,
+        "RCR": 1.0,
+        "FRT": 11,
+        "CRT": 231,
+        "coverage": 0.9614,
+        "rescued": 20,
+        "discovered": 20,
+        "conflicts": 1,
+        "boundaries": 74,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 218.70800000000068,
+        "free_decisions": 969,
+        "free_hover_fraction": 0.2084623323013416,
+        "sampled_action_surprise": 1.3852121153360057,
+        "forced_agent_steps": 231,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2101.npy",
+        "layout": 9003,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.006666666666666667,
+        "RCR": 0.95,
+        "FRT": 5,
+        "CRT": null,
+        "coverage": 0.9819,
+        "rescued": 19,
+        "discovered": 19,
+        "conflicts": 2,
+        "boundaries": 78,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 205.31800000000078,
+        "free_decisions": 1013,
+        "free_hover_fraction": 0.25666337611056267,
+        "sampled_action_surprise": 1.2639329584070866,
+        "forced_agent_steps": 187,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2101.npy",
+        "layout": 9004,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.016666666666666666,
+        "RCR": 0.85,
+        "FRT": 6,
+        "CRT": null,
+        "coverage": 0.7947,
+        "rescued": 17,
+        "discovered": 17,
+        "conflicts": 5,
+        "boundaries": 72,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 174.7740000000007,
+        "free_decisions": 1051,
+        "free_hover_fraction": 0.2369172216936251,
+        "sampled_action_surprise": 1.239963325401582,
+        "forced_agent_steps": 149,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9001,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.0,
+        "RCR": 0.95,
+        "FRT": 4,
+        "CRT": null,
+        "coverage": 0.9161,
+        "rescued": 19,
+        "discovered": 19,
+        "conflicts": 0,
+        "boundaries": 93,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 204.00200000000072,
+        "free_decisions": 1044,
+        "free_hover_fraction": 0.2978927203065134,
+        "sampled_action_surprise": 1.1663568509721207,
+        "forced_agent_steps": 156,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9002,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.0,
+        "RCR": 1.0,
+        "FRT": 11,
+        "CRT": 246,
+        "coverage": 0.9658,
+        "rescued": 20,
+        "discovered": 20,
+        "conflicts": 0,
+        "boundaries": 78,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 219.9960000000006,
+        "free_decisions": 973,
+        "free_hover_fraction": 0.17985611510791366,
+        "sampled_action_surprise": 1.4238119849443192,
+        "forced_agent_steps": 227,
+        "guard_agent_steps": 0
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9003,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.02666666666666667,
+        "RCR": 0.95,
+        "FRT": 5,
+        "CRT": null,
+        "coverage": 0.9979,
+        "rescued": 19,
+        "discovered": 20,
+        "conflicts": 8,
+        "boundaries": 47,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 200.8380000000011,
+        "free_decisions": 892,
+        "free_hover_fraction": 0.19955156950672645,
+        "sampled_action_surprise": 1.285638835398071,
+        "forced_agent_steps": 308,
+        "guard_agent_steps": 2
+      },
+      {
+        "case": "validation-2201.npy",
+        "layout": 9004,
+        "action_seed": 3102,
+        "ST": 300,
+        "ACC": 0.016666666666666666,
+        "RCR": 1.0,
+        "FRT": 6,
+        "CRT": 218,
+        "coverage": 0.9454,
+        "rescued": 20,
+        "discovered": 20,
+        "conflicts": 5,
+        "boundaries": 77,
+        "task_complete": false,
+        "timed_out": true,
+        "return_sum": 209.78800000000072,
+        "free_decisions": 1038,
+        "free_hover_fraction": 0.2861271676300578,
+        "sampled_action_surprise": 1.1623393013527856,
+        "forced_agent_steps": 162,
+        "guard_agent_steps": 0
+      }
+    ],
+    "summary": {
+      "ST": 300.0,
+      "ACC": 0.013541666666666667,
+      "RCR": 0.95,
+      "coverage": 0.93321875,
+      "rescued": 19.0,
+      "FRT": {
+        "mean": 5.875,
+        "valid": 16,
+        "total": 16
+      },
+      "CRT": {
+        "mean": 225.85714285714286,
+        "valid": 7,
+        "total": 16
+      },
+      "all_rescued_fraction": 0.4375,
+      "timeout_fraction": 1.0
+    },
+    "guard": true,
+    "deterministic": false,
+    "by_action_seed": {
+      "3101": {
+        "ST": 300.0,
+        "ACC": 0.017083333333333332,
+        "RCR": 0.94375,
+        "coverage": 0.9283625,
+        "rescued": 18.875,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 221.5,
+          "valid": 4,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.5,
+        "timeout_fraction": 1.0
+      },
+      "3102": {
+        "ST": 300.0,
+        "ACC": 0.01,
+        "RCR": 0.95625,
+        "coverage": 0.938075,
+        "rescued": 19.125,
+        "FRT": {
+          "mean": 6.5,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 231.66666666666666,
+          "valid": 3,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.375,
+        "timeout_fraction": 1.0
+      }
+    },
+    "scope": "Reused development validation, not sealed50 independent test"
+  },
+  "guard": true,
+  "elapsed_s": 1548.1228910999998,
+  "validation_history": [
+    {
+      "episode": 512,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.012916666666666667,
+        "RCR": 0.909375,
+        "coverage": 0.89973125,
+        "rescued": 18.1875,
+        "FRT": {
+          "mean": 6.0,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 208.25,
+          "valid": 4,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.25,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.06875,
+        "RCR": 0.8999999999999999,
+        "coverage": 0.8927125,
+        "rescued": 18.0,
+        "FRT": {
+          "mean": 6.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 576,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.04833333333333333,
+        "RCR": 0.853125,
+        "coverage": 0.85315,
+        "rescued": 17.0625,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 223.0,
+          "valid": 2,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.125,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.00375,
+        "RCR": 0.8125,
+        "coverage": 0.8420624999999999,
+        "rescued": 16.25,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 640,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.023125,
+        "RCR": 0.94375,
+        "coverage": 0.9168499999999999,
+        "rescued": 18.875,
+        "FRT": {
+          "mean": 5.75,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 232.16666666666666,
+          "valid": 6,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.375,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.08583333333333332,
+        "RCR": 0.7875,
+        "coverage": 0.860475,
+        "rescued": 15.75,
+        "FRT": {
+          "mean": 5.5,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 704,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.013750000000000002,
+        "RCR": 0.921875,
+        "coverage": 0.91656875,
+        "rescued": 18.4375,
+        "FRT": {
+          "mean": 6.0,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 166.5,
+          "valid": 6,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.375,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.037500000000000006,
+        "RCR": 0.8875,
+        "coverage": 0.936275,
+        "rescued": 17.75,
+        "FRT": {
+          "mean": 6.0,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 223.0,
+          "valid": 1,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.125,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 768,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.049791666666666665,
+        "RCR": 0.8749999999999999,
+        "coverage": 0.85435625,
+        "rescued": 17.5,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 108.0,
+          "valid": 1,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.0625,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.2520833333333333,
+        "RCR": 0.83125,
+        "coverage": 0.812275,
+        "rescued": 16.625,
+        "FRT": {
+          "mean": 5.0,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 89.0,
+          "valid": 1,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.125,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 832,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.030625000000000003,
+        "RCR": 0.921875,
+        "coverage": 0.94056875,
+        "rescued": 18.4375,
+        "FRT": {
+          "mean": 5.75,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 137.66666666666666,
+          "valid": 3,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.1875,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.036250000000000004,
+        "RCR": 0.83125,
+        "coverage": 0.862375,
+        "rescued": 16.625,
+        "FRT": {
+          "mean": 23.5,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 896,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.006666666666666667,
+        "RCR": 0.921875,
+        "coverage": 0.9249,
+        "rescued": 18.4375,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 139.4,
+          "valid": 5,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.3125,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.07833333333333334,
+        "RCR": 0.8312499999999999,
+        "coverage": 0.8841874999999999,
+        "rescued": 16.625,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 960,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.02125,
+        "RCR": 0.9249999999999999,
+        "coverage": 0.907425,
+        "rescued": 18.5,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 162.0,
+          "valid": 3,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.1875,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.23333333333333334,
+        "RCR": 0.875,
+        "coverage": 0.8823750000000001,
+        "rescued": 17.5,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      }
+    },
+    {
+      "episode": 1024,
+      "adopted": false,
+      "best_episode": 256,
+      "sample": {
+        "ST": 300.0,
+        "ACC": 0.004583333333333333,
+        "RCR": 0.925,
+        "coverage": 0.955475,
+        "rescued": 18.5,
+        "FRT": {
+          "mean": 5.125,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 213.125,
+          "valid": 8,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.5,
+        "timeout_fraction": 1.0
+      },
+      "greedy": {
+        "ST": 300.0,
+        "ACC": 0.0225,
+        "RCR": 0.9375,
+        "coverage": 0.918725,
+        "rescued": 18.75,
+        "FRT": {
+          "mean": 5.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 80.0,
+          "valid": 2,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.25,
+        "timeout_fraction": 1.0
+      }
+    }
+  ],
+  "performance_early_stopping": false,
+  "formal_test_executed": false
+}

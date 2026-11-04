@@ -1,0 +1,16 @@
+{
+  "accessed": "2026-10-30",
+  "paper": {
+    "url": "https://gmd.copernicus.org/articles/16/3291/2023/index.html",
+    "authors": "Rong, Bates, Neal",
+    "doi": "10.5194/gmd-16-3291-2023",
+    "use": "section3.5 motivates channel-geometry audit; no inheritance of published performance"
+  },
+  "format": {
+    "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/conversion/ascii-to-raster.html",
+    "use": "lower-left-cell corner header convention only; not proof of author sampling intent"
+  },
+  "local_primary_inputs": "round73/original/Carlisle (already obtained author archive); round68 observation originals, unchanged",
+  "local_code": "round77/lisflood8-rk-ledger: preprocess/generateDG2DEM.cpp, swe/dg2/fields.cpp and modifiedvars.cpp, sgc.cpp and input.cpp; hashes in geometry-coverage-audit.json",
+  "no_external_message": true
+}

@@ -1,0 +1,20 @@
+{
+  "status": "stage_completed",
+  "joint_episode": 1024,
+  "target": 1024,
+  "best_joint_episode": 384,
+  "optimizer_updates": 512,
+  "best_summary": {
+    "n": 36,
+    "completed": 36,
+    "completion": 1.0,
+    "RCR": 1.0,
+    "coverage": 1.0,
+    "ACC": 0.006669182624997858,
+    "ST": 111.94444444444444,
+    "planner_fraction": 0.307746742749585,
+    "neural_free_fraction": 0.4168643403029879,
+    "max_conflicts": 5,
+    "unserved": 0
+  }
+}

@@ -1,0 +1,332 @@
+[
+  {
+    "model": "linear",
+    "epoch": 0,
+    "calibration_poisson": 0.22497059404850006
+  },
+  {
+    "model": "linear",
+    "epoch": 1,
+    "calibration_poisson": 0.18991510570049286
+  },
+  {
+    "model": "linear",
+    "epoch": 2,
+    "calibration_poisson": 0.18009500205516815
+  },
+  {
+    "model": "linear",
+    "epoch": 3,
+    "calibration_poisson": 0.17535565793514252
+  },
+  {
+    "model": "linear",
+    "epoch": 4,
+    "calibration_poisson": 0.17235803604125977
+  },
+  {
+    "model": "linear",
+    "epoch": 5,
+    "calibration_poisson": 0.169841006398201
+  },
+  {
+    "model": "linear",
+    "epoch": 6,
+    "calibration_poisson": 0.16765037178993225
+  },
+  {
+    "model": "linear",
+    "epoch": 7,
+    "calibration_poisson": 0.16584043204784393
+  },
+  {
+    "model": "linear",
+    "epoch": 8,
+    "calibration_poisson": 0.1646609753370285
+  },
+  {
+    "model": "linear",
+    "epoch": 9,
+    "calibration_poisson": 0.1632142812013626
+  },
+  {
+    "model": "linear",
+    "epoch": 10,
+    "calibration_poisson": 0.16250570118427277
+  },
+  {
+    "model": "linear",
+    "epoch": 11,
+    "calibration_poisson": 0.16199687123298645
+  },
+  {
+    "model": "linear",
+    "epoch": 12,
+    "calibration_poisson": 0.1612030267715454
+  },
+  {
+    "model": "linear",
+    "epoch": 13,
+    "calibration_poisson": 0.1616794764995575
+  },
+  {
+    "model": "linear",
+    "epoch": 14,
+    "calibration_poisson": 0.16071738302707672
+  },
+  {
+    "model": "linear",
+    "epoch": 15,
+    "calibration_poisson": 0.16123995184898376
+  },
+  {
+    "model": "linear",
+    "epoch": 16,
+    "calibration_poisson": 0.1609387993812561
+  },
+  {
+    "model": "linear",
+    "epoch": 17,
+    "calibration_poisson": 0.1613812893629074
+  },
+  {
+    "model": "linear",
+    "epoch": 18,
+    "calibration_poisson": 0.160946786403656
+  },
+  {
+    "model": "linear",
+    "epoch": 19,
+    "calibration_poisson": 0.16128620505332947
+  },
+  {
+    "model": "linear",
+    "epoch": 20,
+    "calibration_poisson": 0.1614498645067215
+  },
+  {
+    "model": "linear",
+    "epoch": 21,
+    "calibration_poisson": 0.1609266847372055
+  },
+  {
+    "model": "linear",
+    "epoch": 22,
+    "calibration_poisson": 0.16172462701797485
+  },
+  {
+    "model": "linear",
+    "epoch": 23,
+    "calibration_poisson": 0.1617347002029419
+  },
+  {
+    "model": "linear",
+    "epoch": 24,
+    "calibration_poisson": 0.16166283190250397
+  },
+  {
+    "model": "linear",
+    "epoch": 25,
+    "calibration_poisson": 0.1618153601884842
+  },
+  {
+    "model": "linear",
+    "epoch": 26,
+    "calibration_poisson": 0.16180114448070526
+  },
+  {
+    "model": "linear",
+    "epoch": 27,
+    "calibration_poisson": 0.16324490308761597
+  },
+  {
+    "model": "linear",
+    "epoch": 28,
+    "calibration_poisson": 0.16150999069213867
+  },
+  {
+    "model": "linear",
+    "epoch": 29,
+    "calibration_poisson": 0.16139061748981476
+  },
+  {
+    "model": "linear",
+    "epoch": 30,
+    "calibration_poisson": 0.16213975846767426
+  },
+  {
+    "model": "linear",
+    "epoch": 31,
+    "calibration_poisson": 0.1620209664106369
+  },
+  {
+    "model": "linear",
+    "epoch": 32,
+    "calibration_poisson": 0.16314350068569183
+  },
+  {
+    "model": "gru",
+    "epoch": 0,
+    "calibration_poisson": 0.22497059404850006
+  },
+  {
+    "model": "gru",
+    "epoch": 1,
+    "calibration_poisson": 0.19217202067375183
+  },
+  {
+    "model": "gru",
+    "epoch": 2,
+    "calibration_poisson": 0.15433037281036377
+  },
+  {
+    "model": "gru",
+    "epoch": 3,
+    "calibration_poisson": 0.14533251523971558
+  },
+  {
+    "model": "gru",
+    "epoch": 4,
+    "calibration_poisson": 0.1389908641576767
+  },
+  {
+    "model": "gru",
+    "epoch": 5,
+    "calibration_poisson": 0.1334707885980606
+  },
+  {
+    "model": "gru",
+    "epoch": 6,
+    "calibration_poisson": 0.12886615097522736
+  },
+  {
+    "model": "gru",
+    "epoch": 7,
+    "calibration_poisson": 0.1305675357580185
+  },
+  {
+    "model": "gru",
+    "epoch": 8,
+    "calibration_poisson": 0.1285405308008194
+  },
+  {
+    "model": "gru",
+    "epoch": 9,
+    "calibration_poisson": 0.1292780637741089
+  },
+  {
+    "model": "gru",
+    "epoch": 10,
+    "calibration_poisson": 0.13287653028964996
+  },
+  {
+    "model": "gru",
+    "epoch": 11,
+    "calibration_poisson": 0.13619017601013184
+  },
+  {
+    "model": "gru",
+    "epoch": 12,
+    "calibration_poisson": 0.12999743223190308
+  },
+  {
+    "model": "gru",
+    "epoch": 13,
+    "calibration_poisson": 0.1334356665611267
+  },
+  {
+    "model": "gru",
+    "epoch": 14,
+    "calibration_poisson": 0.13784971833229065
+  },
+  {
+    "model": "gru",
+    "epoch": 15,
+    "calibration_poisson": 0.1333381086587906
+  },
+  {
+    "model": "gru",
+    "epoch": 16,
+    "calibration_poisson": 0.1403380185365677
+  },
+  {
+    "model": "gru",
+    "epoch": 17,
+    "calibration_poisson": 0.13342437148094177
+  },
+  {
+    "model": "gru",
+    "epoch": 18,
+    "calibration_poisson": 0.13336855173110962
+  },
+  {
+    "model": "gru",
+    "epoch": 19,
+    "calibration_poisson": 0.13482943177223206
+  },
+  {
+    "model": "gru",
+    "epoch": 20,
+    "calibration_poisson": 0.13513728976249695
+  },
+  {
+    "model": "gru",
+    "epoch": 21,
+    "calibration_poisson": 0.13592790067195892
+  },
+  {
+    "model": "gru",
+    "epoch": 22,
+    "calibration_poisson": 0.13534757494926453
+  },
+  {
+    "model": "gru",
+    "epoch": 23,
+    "calibration_poisson": 0.1350497603416443
+  },
+  {
+    "model": "gru",
+    "epoch": 24,
+    "calibration_poisson": 0.13448455929756165
+  },
+  {
+    "model": "gru",
+    "epoch": 25,
+    "calibration_poisson": 0.13433104753494263
+  },
+  {
+    "model": "gru",
+    "epoch": 26,
+    "calibration_poisson": 0.13848978281021118
+  },
+  {
+    "model": "gru",
+    "epoch": 27,
+    "calibration_poisson": 0.135414257645607
+  },
+  {
+    "model": "gru",
+    "epoch": 28,
+    "calibration_poisson": 0.13694721460342407
+  },
+  {
+    "model": "gru",
+    "epoch": 29,
+    "calibration_poisson": 0.13617035746574402
+  },
+  {
+    "model": "gru",
+    "epoch": 30,
+    "calibration_poisson": 0.13803952932357788
+  },
+  {
+    "model": "gru",
+    "epoch": 31,
+    "calibration_poisson": 0.13374868035316467
+  },
+  {
+    "model": "gru",
+    "epoch": 32,
+    "calibration_poisson": 0.13746267557144165
+  }
+]

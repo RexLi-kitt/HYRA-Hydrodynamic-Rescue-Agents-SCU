@@ -1,0 +1,41 @@
+{
+  "status": "next unit only; no hydrodynamic run started in round78",
+  "candidate": "round78/mean-preserving-geometry, raw cell values retained as means, full-domain minmod slopes; not certified physical truth",
+  "hypothesis": "The archive corner averaging increases static channel barriers; preserving cell values may change source propagation and river/floodplain allocation without fitting measurements.",
+  "solver": "round77/build-rk-ledger-cpu64/Release/lisflood.exe, unchanged CPU64 OMP1",
+  "must_freeze_before_run": [
+    "executable and baseline/candidate input hashes",
+    "identical source locations, hydrographs, roughness, boundary configuration and duration",
+    "static-water and dry/partly-wet compatibility tolerances with numerical rationale",
+    "actual accepted steps, complete depth/momentum fields, source integrals and RK boundary ledger",
+    "whole-event observation objects/time/qualitative rules before inspecting new full-event output"
+  ],
+  "minimum_next_experiment": [
+    "Static-water compatibility over sloping/discontinuous beds with exactly corresponding initial depth/slope fields; do not merely copy a startfile for a different DEM.",
+    "If the numerical gate passes, one paired author-configuration short run varying only bed representation; reuse archived unchanged baseline when hashes establish equivalence. The new candidate is not an identical old rerun.",
+    "Save wet footprint/flow paths and input-volume ledger, finite/nonnegative and wall-clock cost. Short-run support is computational only, not field validation."
+  ],
+  "internal_acceptance": "No NaN/Inf or negative mean depth, no unexplained water-volume creation/loss; register floating-point-scaled tolerances before run and fail closed. No post-result threshold tuning.",
+  "field_acceptance": "All preregistered observation-supported regional/phase items must agree. Unknown/outside/partial/disagree remain unpassed; maximum extent not an instantaneous map. Preserve drainage-related outline even if its mechanism is absent.",
+  "evidence_priority": [
+    "absolute epoch and relation of 164000s run to 245700s boundary coverage",
+    "HVAR datum/initial-state provenance and archive vs paper free-outlet difference",
+    "raw cell/node intent and physical channel width/bed compatibility",
+    "independent dry-area/road/site evidence"
+  ],
+  "cost_limit": "No heavy run until short compatibility gate and source scope are recorded. Estimate full-run cost from accepted steps; at most one heavy process. Do not introduce GPU/NS without demonstrated need.",
+  "reject_or_redirect": [
+    "Reject candidate on static-water/conservation/finite/nonnegative failure; diagnose once from retained output, no looped restart.",
+    "If no rescue-scale benefit on full fixed scope, retire this geometry route, retain bad cases, consider width-aware conservative channel/floodplain treatment only with provenance.",
+    "If author metadata cannot be closed, label an explicit conditional research scenario or use a more complete independent experiment; no claim of validated Carlisle reconstruction."
+  ],
+  "do_not": [
+    "move observation or source points",
+    "select outlet or friction by score",
+    "restore canceled HLLC queue",
+    "rerun unchanged Merewether or walls",
+    "claim that lower static barriers imply accurate flooding"
+  ],
+  "production_adopted": false,
+  "field_passes_added": 0
+}

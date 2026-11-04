@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-01",
+  "kind": "research mixed-learner joint fine-tuning",
+  "pairs": [
+    "HASAC1024+MAT256",
+    "HASAC1024+HATRPO1024"
+  ],
+  "joint_episodes_per_pair": 256,
+  "parents": {
+    "hasac": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-full1024-20261101\\hasac\\checkpoint-1024.pt",
+      "sha256": "5d37df5996a972d11b154dcadc52a9d83427750963d3241a28d8da097d988d74"
+    },
+    "mat": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\latest.pt",
+      "sha256": "640230a08c5d878f19230a51fbf239fa84ad6845921a318450f2baab2f1f38f2"
+    },
+    "hatrpo": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-full1024-20261101\\hatrpo\\checkpoint-1024.pt",
+      "sha256": "5e7fc37edd839a538c885ed0bc048c472e88cc871df22b3d1ffd99d5a4a0ac85"
+    }
+  },
+  "source_sha256": "b5eec029f7f6b144f21356d9de5da1f6a734af737e36563a461e3879f9adc041",
+  "manifest_sha256": "dde867a71c348eb239086fc9b6f1ad749c3b6b9516bc33eae999746f7ea5ff5a",
+  "observation": "append four public ownership bits; zero-initialized added input columns exactly preserve initial parent policy; no hidden/future water",
+  "training": "two complete episodes with both policies frozen; then MAT/HATRPO on-policy update of owned actions only; four HASAC batch64 updates with mixed-policy bootstrap; replay capacity4096, reset old replay and optimizer state",
+  "hasac": "bootstrap entropy only for owned HASAC agents; nine-action counterfactual expectation re-evaluates causal MAT responses; stochastic conditional-context approximation",
+  "role_schedule": "each four training water parents use same diagonal allocation, next four opposite; both equally represented",
+  "updates": "original per-algorithm update mechanisms, adapted ownership masks and HASAC targets; not an official algorithm reproduction and no HARL monotonicity guarantee",
+  "controls": "same auto-service and RetryGuard for all; no coverage watchdog; fixed reward/task; 4 training synthetic parent fields",
+  "validation": "reuse 2 parents x4 layouts x2 action seeds x2 allocations=32; every64 joint episodes; sealed50 untouched",
+  "best_rule": "RCR nondecrease, coverage drop<=.01, ACC<=.02, worst-allocation RCR nondecrease, then RCR gain>=.00625 or coverage gain>=.005",
+  "stop": "numerical/runtime failure or manual STOP_AFTER_CHECKPOINT only; no performance early stop",
+  "sources": [
+    "https://www.jmlr.org/papers/v25/23-0488.html",
+    "https://proceedings.iclr.cc/paper_files/paper/2024/hash/fe066022bab2a6c6a3c57032a1623c70-Abstract-Conference.html",
+    "https://arxiv.org/abs/2205.14953"
+  ]
+}

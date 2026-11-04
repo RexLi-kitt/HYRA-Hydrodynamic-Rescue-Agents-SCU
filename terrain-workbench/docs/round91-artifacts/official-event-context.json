@@ -1,0 +1,110 @@
+{
+  "acquisition": [
+    {
+      "name": "EA-2005-retrospective.html",
+      "url": "https://environmentagency.blog.gov.uk/2015/01/08/10-years-on-from-the-cumbrian-and-carlisle-floods-of-2005/",
+      "bytes": 83209,
+      "sha256": "f9b22beb98c0ff0728f7dc6c4528a3779bd4f427f55602e740bcd9262804a956",
+      "status": "downloaded"
+    },
+    {
+      "name": "Carlisle-recovery-debrief.pdf",
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/78990/carlisle-recovery-phase-debrief-report.pdf",
+      "bytes": 305374,
+      "sha256": "b39eae7b3b055a59aeeb2dc80014a08e444a781a4bf75da86f1b76609bf67ab7",
+      "status": "downloaded"
+    },
+    {
+      "name": "FD2321-TR1.pdf",
+      "url": "https://assets.publishing.service.gov.uk/media/602bbc768fa8f50383c41f80/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+      "bytes": 3966687,
+      "sha256": "dc02e9c05cbe29bfb24d734763d8f7be88659e2b659db81e7dcf9ac81c226477",
+      "status": "downloaded"
+    }
+  ],
+  "observational_candidates": [
+    {
+      "id": "future-area-A",
+      "location_text": "Willow Holme industrial area, Eden north and Caldew east",
+      "observation": "report describes inundation in this area",
+      "evidence_type": "government research synthesis of incident notes and photographs, not new instrument measurements",
+      "source": "https://assets.publishing.service.gov.uk/media/602bbc768fa8f50383c41f80/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+      "locator": "Section6.3.5, printed32/PDF42",
+      "precise_geometry": null,
+      "status": "unscored; freeze independently mapped boundaries before comparison",
+      "prohibited": "do not invent boundaries from model wet cells or substitute nominal report velocities as measurements"
+    },
+    {
+      "id": "future-area-B",
+      "location_text": "Immediately south of Bridge Street, west bank of Caldew",
+      "observation": "report describes inundation in this area",
+      "evidence_type": "government research synthesis of incident notes and photographs, not new instrument measurements",
+      "source": "https://assets.publishing.service.gov.uk/media/602bbc768fa8f50383c41f80/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+      "locator": "Section6.3.5, printed32/PDF42",
+      "precise_geometry": null,
+      "status": "unscored; freeze independently mapped boundaries before comparison",
+      "prohibited": "do not invent boundaries from model wet cells or substitute nominal report velocities as measurements"
+    },
+    {
+      "id": "future-area-C",
+      "location_text": "City centre near Corporation Road",
+      "observation": "report describes inundation in this area",
+      "evidence_type": "government research synthesis of incident notes and photographs, not new instrument measurements",
+      "source": "https://assets.publishing.service.gov.uk/media/602bbc768fa8f50383c41f80/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+      "locator": "Section6.3.5, printed32/PDF42",
+      "precise_geometry": null,
+      "status": "unscored; freeze independently mapped boundaries before comparison",
+      "prohibited": "do not invent boundaries from model wet cells or substitute nominal report velocities as measurements"
+    },
+    {
+      "id": "future-area-D",
+      "location_text": "Warwick Road near Botcherby Bridge",
+      "observation": "report describes inundation in this area",
+      "evidence_type": "government research synthesis of incident notes and photographs, not new instrument measurements",
+      "source": "https://assets.publishing.service.gov.uk/media/602bbc768fa8f50383c41f80/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+      "locator": "Section6.3.5, printed32/PDF42",
+      "precise_geometry": null,
+      "status": "unscored; freeze independently mapped boundaries before comparison",
+      "prohibited": "do not invent boundaries from model wet cells or substitute nominal report velocities as measurements"
+    },
+    {
+      "id": "future-area-E",
+      "location_text": "Residential neighbourhood around Warwick Road",
+      "observation": "report describes inundation in this area",
+      "evidence_type": "government research synthesis of incident notes and photographs, not new instrument measurements",
+      "source": "https://assets.publishing.service.gov.uk/media/602bbc768fa8f50383c41f80/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+      "locator": "Section6.3.5, printed32/PDF42",
+      "precise_geometry": null,
+      "status": "unscored; freeze independently mapped boundaries before comparison",
+      "prohibited": "do not invent boundaries from model wet cells or substitute nominal report velocities as measurements"
+    },
+    {
+      "id": "future-macro-onset",
+      "observation": "report describes gradual inundation from early morning toward a lunchtime peak",
+      "source": "https://assets.publishing.service.gov.uk/media/602bbc768fa8f50383c41f80/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+      "locator": "printed33/PDF43",
+      "status": "unscored; qualitative time bins and geographic scope still require registration",
+      "prohibited": "do not turn this narrative into exact per-station arrival timestamps"
+    },
+    {
+      "id": "jan9-context",
+      "observation": "EA page caption dates a flooded Warwick Road area to9Jan2005; recovery timeline lists flooding8/9Jan",
+      "sources": [
+        "https://environmentagency.blog.gov.uk/2015/01/08/10-years-on-from-the-cumbrian-and-carlisle-floods-of-2005/",
+        "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/78990/carlisle-recovery-phase-debrief-report.pdf"
+      ],
+      "locator": "EA image caption; recovery report timeline printed3/PDF4",
+      "status": "additional event-duration context, not a georeferenced observed mask",
+      "prohibited": "do not equate caption date with model-specific maximum times or verified road closure duration"
+    }
+  ],
+  "not_replacing_round90_protocol": true,
+  "no_model_fields_inspected": true,
+  "new_passes": 0,
+  "scope_limits": [
+    "Five zones are report-defined contextual units, with no precise vectors acquired here. Do not claim5/5tested.",
+    "0.5m/s in FD2321 is an assumption inferred from photos; nominal depths and population counts include analytical assumptions, not complete measured maps.",
+    "Jan9 contextual corroboration does not establish exact times of outline measurement.",
+    "No per-link accessibility, landing safety or UAV priority validation follows from these sources."
+  ]
+}

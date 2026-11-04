@@ -1,0 +1,1264 @@
+{
+  "status": "completed",
+  "runtime_s": 19.90071700000044,
+  "torch": "2.9.1+cpu",
+  "cuda_available": false,
+  "field_bytes": 36120000,
+  "all22_fields_bytes": 794642816,
+  "copy_seconds": 0.018594100001791958,
+  "measurements": [
+    {
+      "algorithm": "happo",
+      "variant": "mmap_2threads",
+      "repeat": 0,
+      "seconds": 0.7494513000019651,
+      "steps": 150
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_2threads",
+      "repeat": 0,
+      "seconds": 0.7431785000007949,
+      "steps": 150
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_1thread",
+      "repeat": 0,
+      "seconds": 0.741941999996925,
+      "steps": 150
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_4threads",
+      "repeat": 0,
+      "seconds": 0.7642302000022028,
+      "steps": 150
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_4threads",
+      "repeat": 1,
+      "seconds": 0.7634429999998247,
+      "steps": 150
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_1thread",
+      "repeat": 1,
+      "seconds": 0.7586523999998462,
+      "steps": 150
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_2threads",
+      "repeat": 1,
+      "seconds": 0.7513557999991463,
+      "steps": 150
+    },
+    {
+      "algorithm": "happo",
+      "variant": "mmap_2threads",
+      "repeat": 1,
+      "seconds": 0.7523435999974026,
+      "steps": 150
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "mmap_2threads",
+      "repeat": 0,
+      "seconds": 0.8805840000022727,
+      "steps": 171
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_2threads",
+      "repeat": 0,
+      "seconds": 0.8848874000032083,
+      "steps": 171
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_1thread",
+      "repeat": 0,
+      "seconds": 0.8867903999998816,
+      "steps": 171
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_4threads",
+      "repeat": 0,
+      "seconds": 0.9101674999983516,
+      "steps": 171
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_4threads",
+      "repeat": 1,
+      "seconds": 0.901514600001974,
+      "steps": 171
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_1thread",
+      "repeat": 1,
+      "seconds": 0.8810305000006338,
+      "steps": 171
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_2threads",
+      "repeat": 1,
+      "seconds": 0.8835728999983985,
+      "steps": 171
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "mmap_2threads",
+      "repeat": 1,
+      "seconds": 0.8878724000023794,
+      "steps": 171
+    }
+  ],
+  "summary": [
+    {
+      "algorithm": "happo",
+      "variant": "mmap_2threads",
+      "median_s": 0.7508974499996839,
+      "min_s": 0.7494513000019651,
+      "max_s": 0.7523435999974026
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_2threads",
+      "median_s": 0.7472671499999706,
+      "min_s": 0.7431785000007949,
+      "max_s": 0.7513557999991463
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_1thread",
+      "median_s": 0.7502971999983856,
+      "min_s": 0.741941999996925,
+      "max_s": 0.7586523999998462
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_4threads",
+      "median_s": 0.7638366000010137,
+      "min_s": 0.7634429999998247,
+      "max_s": 0.7642302000022028
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "mmap_2threads",
+      "median_s": 0.884228200002326,
+      "min_s": 0.8805840000022727,
+      "max_s": 0.8878724000023794
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_2threads",
+      "median_s": 0.8842301500008034,
+      "min_s": 0.8835728999983985,
+      "max_s": 0.8848874000032083
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_1thread",
+      "median_s": 0.8839104500002577,
+      "min_s": 0.8810305000006338,
+      "max_s": 0.8867903999998816
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_4threads",
+      "median_s": 0.9058410500001628,
+      "min_s": 0.901514600001974,
+      "max_s": 0.9101674999983516
+    }
+  ],
+  "exact_trace_checks": [
+    {
+      "algorithm": "happo",
+      "variant": "mmap_2threads",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_2threads",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_1thread",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_4threads",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_4threads",
+      "repeat": 1,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_1thread",
+      "repeat": 1,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "variant": "ram_2threads",
+      "repeat": 1,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "variant": "mmap_2threads",
+      "repeat": 1,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "mmap_2threads",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_2threads",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_1thread",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_4threads",
+      "repeat": 0,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_4threads",
+      "repeat": 1,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_1thread",
+      "repeat": 1,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "ram_2threads",
+      "repeat": 1,
+      "exactly_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "variant": "mmap_2threads",
+      "repeat": 1,
+      "exactly_equal": true
+    }
+  ],
+  "all_equal": true,
+  "profiles": {
+    "happo_rollout": {
+      "by_own": [
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "calls": 7378,
+          "own_s": 0.13365180000000002,
+          "cumulative_s": 0.13365180000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 14,
+          "function": "view",
+          "calls": 1411,
+          "own_s": 0.07217570000000001,
+          "cumulative_s": 0.153429
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 43,
+          "function": "min_separation",
+          "calls": 5058,
+          "own_s": 0.0717633,
+          "cumulative_s": 0.3012402
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 39,
+          "function": "position_at",
+          "calls": 34768,
+          "own_s": 0.07035240000000001,
+          "cumulative_s": 0.15219270000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\linalg\\_linalg.py",
+          "line": 2615,
+          "function": "norm",
+          "calls": 66565,
+          "own_s": 0.06664690000000001,
+          "cumulative_s": 0.1370044
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 23,
+          "function": "sector",
+          "calls": 1208,
+          "own_s": 0.036448,
+          "cumulative_s": 0.075098
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch._C._nn.linear>",
+          "calls": 4500,
+          "own_s": 0.034558700000000005,
+          "cumulative_s": 0.034558700000000005
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'dot' of 'numpy.ndarray' objects>",
+          "calls": 66314,
+          "own_s": 0.0332382,
+          "cumulative_s": 0.0332382
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 24,
+          "function": "observe",
+          "calls": 150,
+          "own_s": 0.0241599,
+          "cumulative_s": 0.0989019
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 30,
+          "function": "mixed_sample",
+          "calls": 150,
+          "own_s": 0.0238324,
+          "cumulative_s": 0.2004766
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+          "line": 96,
+          "function": "_clip",
+          "calls": 14294,
+          "own_s": 0.022490200000000002,
+          "cumulative_s": 0.022490200000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.multinomial>",
+          "calls": 600,
+          "own_s": 0.020004900000000003,
+          "cumulative_s": 0.020004900000000003
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 47,
+          "function": "select",
+          "calls": 150,
+          "own_s": 0.0183883,
+          "cumulative_s": 0.40125120000000003
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 7,
+          "function": "project",
+          "calls": 4830,
+          "own_s": 0.0157179,
+          "cumulative_s": 0.031067300000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'logsumexp' of 'torch._C.TensorBase' objects>",
+          "calls": 600,
+          "own_s": 0.014882800000000002,
+          "cumulative_s": 0.014882800000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 91,
+          "function": "observe",
+          "calls": 152,
+          "own_s": 0.014812800000000001,
+          "cumulative_s": 0.0421949
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'ravel' of 'numpy.ndarray' objects>",
+          "calls": 68890,
+          "own_s": 0.0129572,
+          "cumulative_s": 0.0129572
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 80,
+          "function": "sample",
+          "calls": 151,
+          "own_s": 0.0113059,
+          "cumulative_s": 0.0892357
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\distributions\\constraints.py",
+          "line": 353,
+          "function": "check",
+          "calls": 600,
+          "own_s": 0.010078100000000001,
+          "cumulative_s": 0.010078100000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.min>",
+          "calls": 62795,
+          "own_s": 0.0100008,
+          "cumulative_s": 0.011451800000000002
+        }
+      ],
+      "by_cumulative": [
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\linked_train.py",
+          "line": 110,
+          "function": "rollout",
+          "calls": 1,
+          "own_s": 0.0031744000000000004,
+          "cumulative_s": 1.0048113
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\singles.py",
+          "line": 83,
+          "function": "decide",
+          "calls": 150,
+          "own_s": 0.0007129,
+          "cumulative_s": 0.6603339
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 42,
+          "function": "decide",
+          "calls": 150,
+          "own_s": 0.0085249,
+          "cumulative_s": 0.6596056
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 47,
+          "function": "select",
+          "calls": 150,
+          "own_s": 0.0183883,
+          "cumulative_s": 0.40125120000000003
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 144,
+          "function": "step",
+          "calls": 150,
+          "own_s": 0.0055116,
+          "cumulative_s": 0.3276027
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 43,
+          "function": "min_separation",
+          "calls": 5058,
+          "own_s": 0.0717633,
+          "cumulative_s": 0.3012402
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\utils\\_contextlib.py",
+          "line": 117,
+          "function": "decorate_context",
+          "calls": 150,
+          "own_s": 0.0008655000000000001,
+          "cumulative_s": 0.20277320000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 30,
+          "function": "mixed_sample",
+          "calls": 150,
+          "own_s": 0.0238324,
+          "cumulative_s": 0.2004766
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 132,
+          "function": "pairs",
+          "calls": 450,
+          "own_s": 0.002921,
+          "cumulative_s": 0.17106110000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 14,
+          "function": "view",
+          "calls": 1411,
+          "own_s": 0.07217570000000001,
+          "cumulative_s": 0.153429
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 39,
+          "function": "position_at",
+          "calls": 34768,
+          "own_s": 0.07035240000000001,
+          "cumulative_s": 0.15219270000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.any>",
+          "calls": 6488,
+          "own_s": 0.0029614000000000003,
+          "cumulative_s": 0.143318
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\linalg\\_linalg.py",
+          "line": 2615,
+          "function": "norm",
+          "calls": 66565,
+          "own_s": 0.06664690000000001,
+          "cumulative_s": 0.1370044
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 68,
+          "function": "<genexpr>",
+          "calls": 3144,
+          "own_s": 0.0022848,
+          "cumulative_s": 0.1353849
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "calls": 7378,
+          "own_s": 0.13365180000000002,
+          "cumulative_s": 0.13365180000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 24,
+          "function": "observe",
+          "calls": 150,
+          "own_s": 0.0241599,
+          "cumulative_s": 0.0989019
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 80,
+          "function": "sample",
+          "calls": 151,
+          "own_s": 0.0113059,
+          "cumulative_s": 0.0892357
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'sum' of 'numpy.ndarray' objects>",
+          "calls": 2864,
+          "own_s": 0.0013868,
+          "cumulative_s": 0.08803530000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+          "line": 47,
+          "function": "_sum",
+          "calls": 2864,
+          "own_s": 0.0008091000000000001,
+          "cumulative_s": 0.0866485
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 23,
+          "function": "sector",
+          "calls": 1208,
+          "own_s": 0.036448,
+          "cumulative_s": 0.075098
+        }
+      ]
+    },
+    "hasac_rollout": {
+      "by_own": [
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "calls": 8619,
+          "own_s": 0.15872250000000002,
+          "cumulative_s": 0.15872250000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 14,
+          "function": "view",
+          "calls": 1773,
+          "own_s": 0.08894780000000001,
+          "cumulative_s": 0.1888911
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 43,
+          "function": "min_separation",
+          "calls": 6286,
+          "own_s": 0.08823360000000001,
+          "cumulative_s": 0.3711584
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 39,
+          "function": "position_at",
+          "calls": 42416,
+          "own_s": 0.0870009,
+          "cumulative_s": 0.18796780000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\linalg\\_linalg.py",
+          "line": 2615,
+          "function": "norm",
+          "calls": 81134,
+          "own_s": 0.08163880000000001,
+          "cumulative_s": 0.1662451
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 23,
+          "function": "sector",
+          "calls": 1376,
+          "own_s": 0.0405733,
+          "cumulative_s": 0.08330380000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'dot' of 'numpy.ndarray' objects>",
+          "calls": 80851,
+          "own_s": 0.040282000000000005,
+          "cumulative_s": 0.040282000000000005
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch._C._nn.linear>",
+          "calls": 4104,
+          "own_s": 0.0288873,
+          "cumulative_s": 0.0288873
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+          "line": 96,
+          "function": "_clip",
+          "calls": 17306,
+          "own_s": 0.0274929,
+          "cumulative_s": 0.0274929
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 30,
+          "function": "mixed_sample",
+          "calls": 171,
+          "own_s": 0.026716800000000002,
+          "cumulative_s": 0.22822520000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 24,
+          "function": "observe",
+          "calls": 171,
+          "own_s": 0.0253133,
+          "cumulative_s": 0.11083130000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.multinomial>",
+          "calls": 684,
+          "own_s": 0.0230519,
+          "cumulative_s": 0.0230519
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 47,
+          "function": "select",
+          "calls": 171,
+          "own_s": 0.0218998,
+          "cumulative_s": 0.4974172
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 7,
+          "function": "project",
+          "calls": 5824,
+          "own_s": 0.0185463,
+          "cumulative_s": 0.0369755
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 91,
+          "function": "observe",
+          "calls": 173,
+          "own_s": 0.0171668,
+          "cumulative_s": 0.049497900000000004
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'logsumexp' of 'torch._C.TensorBase' objects>",
+          "calls": 684,
+          "own_s": 0.0168864,
+          "cumulative_s": 0.0168864
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'ravel' of 'numpy.ndarray' objects>",
+          "calls": 83784,
+          "own_s": 0.015303800000000001,
+          "cumulative_s": 0.015303800000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 80,
+          "function": "sample",
+          "calls": 172,
+          "own_s": 0.012946200000000001,
+          "cumulative_s": 0.0997606
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.min>",
+          "calls": 76549,
+          "own_s": 0.0122845,
+          "cumulative_s": 0.0138604
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\distributions\\constraints.py",
+          "line": 353,
+          "function": "check",
+          "calls": 684,
+          "own_s": 0.0115023,
+          "cumulative_s": 0.0115023
+        }
+      ],
+      "by_cumulative": [
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\linked_train.py",
+          "line": 110,
+          "function": "rollout",
+          "calls": 1,
+          "own_s": 0.0038069,
+          "cumulative_s": 1.1801538
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\singles.py",
+          "line": 83,
+          "function": "decide",
+          "calls": 171,
+          "own_s": 0.0007825000000000001,
+          "cumulative_s": 0.7739464
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 42,
+          "function": "decide",
+          "calls": 171,
+          "own_s": 0.009291,
+          "cumulative_s": 0.7731467000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 47,
+          "function": "select",
+          "calls": 171,
+          "own_s": 0.0218998,
+          "cumulative_s": 0.4974172
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 144,
+          "function": "step",
+          "calls": 171,
+          "own_s": 0.006307500000000001,
+          "cumulative_s": 0.3782647
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 43,
+          "function": "min_separation",
+          "calls": 6286,
+          "own_s": 0.08823360000000001,
+          "cumulative_s": 0.3711584
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\utils\\_contextlib.py",
+          "line": 117,
+          "function": "decorate_context",
+          "calls": 171,
+          "own_s": 0.0009768,
+          "cumulative_s": 0.23078430000000003
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 30,
+          "function": "mixed_sample",
+          "calls": 171,
+          "own_s": 0.026716800000000002,
+          "cumulative_s": 0.22822520000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 132,
+          "function": "pairs",
+          "calls": 516,
+          "own_s": 0.0034125,
+          "cumulative_s": 0.20036440000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.any>",
+          "calls": 13207,
+          "own_s": 0.0051344,
+          "cumulative_s": 0.1902233
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 14,
+          "function": "view",
+          "calls": 1773,
+          "own_s": 0.08894780000000001,
+          "cumulative_s": 0.1888911
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 39,
+          "function": "position_at",
+          "calls": 42416,
+          "own_s": 0.0870009,
+          "cumulative_s": 0.18796780000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 68,
+          "function": "<genexpr>",
+          "calls": 4254,
+          "own_s": 0.0029472,
+          "cumulative_s": 0.1771537
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\linalg\\_linalg.py",
+          "line": 2615,
+          "function": "norm",
+          "calls": 81134,
+          "own_s": 0.08163880000000001,
+          "cumulative_s": 0.1662451
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+          "calls": 8619,
+          "own_s": 0.15872250000000002,
+          "cumulative_s": 0.15872250000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py",
+          "line": 24,
+          "function": "observe",
+          "calls": 171,
+          "own_s": 0.0253133,
+          "cumulative_s": 0.11083130000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'sum' of 'numpy.ndarray' objects>",
+          "calls": 3449,
+          "own_s": 0.0017193000000000002,
+          "cumulative_s": 0.1080615
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+          "line": 47,
+          "function": "_sum",
+          "calls": 3449,
+          "own_s": 0.0009959,
+          "cumulative_s": 0.10634220000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 80,
+          "function": "sample",
+          "calls": 172,
+          "own_s": 0.012946200000000001,
+          "cumulative_s": 0.0997606
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py",
+          "line": 23,
+          "function": "sector",
+          "calls": 1376,
+          "own_s": 0.0405733,
+          "cumulative_s": 0.08330380000000001
+        }
+      ]
+    },
+    "hasac_update": {
+      "seconds": 0.23067129999981262,
+      "by_own": [
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch._C._nn.linear>",
+          "calls": 1536,
+          "own_s": 0.0745616,
+          "cumulative_s": 0.0745616
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.isfinite>",
+          "calls": 212,
+          "own_s": 0.012299500000000001,
+          "cumulative_s": 0.012299500000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'run_backward' of 'torch._C._EngineBase' objects>",
+          "calls": 20,
+          "own_s": 0.0115589,
+          "cumulative_s": 0.0115589
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.cat>",
+          "calls": 304,
+          "own_s": 0.0093799,
+          "cumulative_s": 0.0093799
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch._C._nn.one_hot>",
+          "calls": 304,
+          "own_s": 0.0066157,
+          "cumulative_s": 0.0066157
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.tanh>",
+          "calls": 1024,
+          "own_s": 0.0063997,
+          "cumulative_s": 0.0063997
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 121,
+          "function": "update_off",
+          "calls": 4,
+          "own_s": 0.005969400000000001,
+          "cumulative_s": 0.229057
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'sqrt' of 'torch._C.TensorBase' objects>",
+          "calls": 144,
+          "own_s": 0.0047235,
+          "cumulative_s": 0.0047235
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.multinomial>",
+          "calls": 96,
+          "own_s": 0.004393800000000001,
+          "cumulative_s": 0.004393800000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 30,
+          "function": "mixed_sample",
+          "calls": 24,
+          "own_s": 0.0041509,
+          "cumulative_s": 0.0537096
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch._foreach_norm>",
+          "calls": 20,
+          "own_s": 0.0041235,
+          "cumulative_s": 0.0041235
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'logsumexp' of 'torch._C.TensorBase' objects>",
+          "calls": 112,
+          "own_s": 0.0038844,
+          "cumulative_s": 0.0038844
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\numpy\\_core\\shape_base.py",
+          "line": 378,
+          "function": "stack",
+          "calls": 40,
+          "own_s": 0.0038096000000000002,
+          "cumulative_s": 0.0040211000000000005
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'all' of 'torch._C.TensorBase' objects>",
+          "calls": 416,
+          "own_s": 0.0032189000000000002,
+          "cumulative_s": 0.0032189000000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.ones_like>",
+          "calls": 20,
+          "own_s": 0.0030033,
+          "cumulative_s": 0.0030033
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.randperm>",
+          "calls": 4,
+          "own_s": 0.0028708,
+          "cumulative_s": 0.0028708
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1779,
+          "function": "_call_impl",
+          "calls": 3376,
+          "own_s": 0.0027975,
+          "cumulative_s": 0.1117128
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\optim\\adam.py",
+          "line": 345,
+          "function": "_single_tensor_adam",
+          "calls": 20,
+          "own_s": 0.0027646000000000003,
+          "cumulative_s": 0.014867300000000002
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch.minimum>",
+          "calls": 148,
+          "own_s": 0.0023856000000000003,
+          "cumulative_s": 0.0023856000000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'addcmul_' of 'torch._C.TensorBase' objects>",
+          "calls": 144,
+          "own_s": 0.0022922000000000003,
+          "cumulative_s": 0.0022922000000000003
+        }
+      ],
+      "by_cumulative": [
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\singles.py",
+          "line": 88,
+          "function": "single_update",
+          "calls": 1,
+          "own_s": 0.0006974,
+          "cumulative_s": 0.23062480000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 121,
+          "function": "update_off",
+          "calls": 4,
+          "own_s": 0.005969400000000001,
+          "cumulative_s": 0.229057
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1771,
+          "function": "_wrapped_call_impl",
+          "calls": 3376,
+          "own_s": 0.0021343,
+          "cumulative_s": 0.1121246
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1779,
+          "function": "_call_impl",
+          "calls": 3376,
+          "own_s": 0.0027975,
+          "cumulative_s": 0.1117128
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\nn\\modules\\container.py",
+          "line": 245,
+          "function": "forward",
+          "calls": 512,
+          "own_s": 0.0017959,
+          "cumulative_s": 0.08956710000000001
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py",
+          "line": 99,
+          "function": "forward",
+          "calls": 304,
+          "own_s": 0.0014292,
+          "cumulative_s": 0.0839975
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\nn\\modules\\linear.py",
+          "line": 130,
+          "function": "forward",
+          "calls": 1536,
+          "own_s": 0.0009464,
+          "cumulative_s": 0.07602940000000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method torch._C._nn.linear>",
+          "calls": 1536,
+          "own_s": 0.0745616,
+          "cumulative_s": 0.0745616
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\utils\\_contextlib.py",
+          "line": 117,
+          "function": "decorate_context",
+          "calls": 64,
+          "own_s": 0.0002256,
+          "cumulative_s": 0.054524800000000005
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py",
+          "line": 30,
+          "function": "mixed_sample",
+          "calls": 24,
+          "own_s": 0.0041509,
+          "cumulative_s": 0.0537096
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py",
+          "line": 23,
+          "function": "optimize",
+          "calls": 20,
+          "own_s": 0.00022810000000000001,
+          "cumulative_s": 0.050393600000000004
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\optim\\optimizer.py",
+          "line": 497,
+          "function": "wrapper",
+          "calls": 20,
+          "own_s": 0.00024310000000000003,
+          "cumulative_s": 0.0191995
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\optim\\optimizer.py",
+          "line": 62,
+          "function": "_use_grad",
+          "calls": 20,
+          "own_s": 0.0001338,
+          "cumulative_s": 0.017915200000000003
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\optim\\adam.py",
+          "line": 213,
+          "function": "step",
+          "calls": 20,
+          "own_s": 0.0001194,
+          "cumulative_s": 0.0177343
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.any>",
+          "calls": 48,
+          "own_s": 9.38e-05,
+          "cumulative_s": 0.0165444
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py",
+          "line": 271,
+          "function": "check_finite",
+          "calls": 4,
+          "own_s": 5.1e-06,
+          "cumulative_s": 0.0157524
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py",
+          "line": 272,
+          "function": "<genexpr>",
+          "calls": 196,
+          "own_s": 0.00033140000000000003,
+          "cumulative_s": 0.015707600000000002
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\optim\\optimizer.py",
+          "line": 133,
+          "function": "maybe_fallback",
+          "calls": 20,
+          "own_s": 5.0700000000000006e-05,
+          "cumulative_s": 0.0152811
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\optim\\adam.py",
+          "line": 885,
+          "function": "adam",
+          "calls": 20,
+          "own_s": 0.0001094,
+          "cumulative_s": 0.015221
+        },
+        {
+          "file": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\work\\uav6-venv\\Lib\\site-packages\\torch\\_tensor.py",
+          "line": 570,
+          "function": "backward",
+          "calls": 20,
+          "own_s": 4.6500000000000005e-05,
+          "cumulative_s": 0.0152084
+        }
+      ]
+    }
+  },
+  "production_sources_unchanged": true,
+  "probe_sha256": "44f494ceeb032bdffbd5c26c6e90f20126f6e8a53a223c6ea66b41e37b0419ea",
+  "protocol_sha256": "5787804515a71cedbf12cea227611c1bb5051ca597428bacc85ccaa2d4cff416"
+}

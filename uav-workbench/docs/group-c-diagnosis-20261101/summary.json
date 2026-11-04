@@ -1,0 +1,238 @@
+{
+  "mat": {
+    "64-greedy-0": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.0,
+        "RCR": 0.6875,
+        "coverage": 0.736875,
+        "rescued": 13.75,
+        "FRT": {
+          "mean": 8.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 8732,
+      "mean_hover_probability": 0.24487239662583438,
+      "mean_entropy": 1.59785175600622,
+      "mean_top_probability": 0.38438372214828614,
+      "executed_hover_fraction": 0.2524049473202016,
+      "argmax_hover_fraction": 0.2524049473202016,
+      "estimated_hover_q_advantage": 0.0,
+      "mean_return": 158.06750000000102
+    },
+    "256-greedy-0": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.6758333333333333,
+        "RCR": 0.5875,
+        "coverage": 0.621175,
+        "rescued": 11.75,
+        "FRT": {
+          "mean": 7.0,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 89.0,
+          "valid": 2,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.25,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 8912,
+      "mean_hover_probability": 0.1627428944220957,
+      "mean_entropy": 1.6815150165713026,
+      "mean_top_probability": 0.31874273045580415,
+      "executed_hover_fraction": 0.1209605026929982,
+      "argmax_hover_fraction": 0.1209605026929982,
+      "estimated_hover_q_advantage": 0.0,
+      "mean_return": -294.77149999999904
+    },
+    "256-sample-3101": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.004583333333333333,
+        "RCR": 0.8999999999999999,
+        "coverage": 0.9168625,
+        "rescued": 18.0,
+        "FRT": {
+          "mean": 9.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 181.0,
+          "valid": 4,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.5,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 8272,
+      "mean_hover_probability": 0.10187255138643014,
+      "mean_entropy": 1.9125593124494331,
+      "mean_top_probability": 0.30148935309346453,
+      "executed_hover_fraction": 0.09151353965183752,
+      "argmax_hover_fraction": 0.020551257253384914,
+      "estimated_hover_q_advantage": 0.0,
+      "mean_return": 198.24225000000067
+    },
+    "256-sample-3102": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.005416666666666667,
+        "RCR": 0.875,
+        "coverage": 0.8874125,
+        "rescued": 17.5,
+        "FRT": {
+          "mean": 10.75,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 217.0,
+          "valid": 4,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.5,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 8467,
+      "mean_hover_probability": 0.10086638802796465,
+      "mean_entropy": 1.911881787373998,
+      "mean_top_probability": 0.30215292560092616,
+      "executed_hover_fraction": 0.09590173615212,
+      "argmax_hover_fraction": 0.01925121058226054,
+      "estimated_hover_q_advantage": 0.0,
+      "mean_return": 193.55325000000101
+    }
+  },
+  "coma": {
+    "64-greedy-0": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.4358333333333333,
+        "RCR": 0.8875,
+        "coverage": 0.859275,
+        "rescued": 17.75,
+        "FRT": {
+          "mean": 6.0,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 8084,
+      "mean_hover_probability": 0.13513241037044385,
+      "mean_entropy": 1.9540894759255787,
+      "mean_top_probability": 0.21498937742993832,
+      "executed_hover_fraction": 0.03587333003463632,
+      "argmax_hover_fraction": 0.03587333003463632,
+      "estimated_hover_q_advantage": 0.037753075481987364,
+      "mean_return": -75.10949999999957
+    },
+    "256-greedy-0": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.0,
+        "RCR": 0.0125,
+        "coverage": 0.037474999999999994,
+        "rescued": 0.25,
+        "FRT": {
+          "mean": 4.0,
+          "valid": 2,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 9592,
+      "mean_hover_probability": 0.6584062775514641,
+      "mean_entropy": 1.2119449654887675,
+      "mean_top_probability": 0.6584062775514641,
+      "executed_hover_fraction": 1.0,
+      "argmax_hover_fraction": 1.0,
+      "estimated_hover_q_advantage": -0.06442281064438363,
+      "mean_return": -0.4704999999999695
+    },
+    "256-sample-3101": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.008333333333333333,
+        "RCR": 0.7250000000000001,
+        "coverage": 0.7888250000000001,
+        "rescued": 14.5,
+        "FRT": {
+          "mean": 28.25,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 8556,
+      "mean_hover_probability": 0.7664765283472352,
+      "mean_entropy": 0.8634640737295206,
+      "mean_top_probability": 0.7664765283472352,
+      "executed_hover_fraction": 0.7601683029453016,
+      "argmax_hover_fraction": 1.0,
+      "estimated_hover_q_advantage": -0.04539166570498724,
+      "mean_return": 161.70650000000074
+    },
+    "256-sample-3102": {
+      "metrics": {
+        "ST": 300.0,
+        "ACC": 0.008333333333333333,
+        "RCR": 0.71875,
+        "coverage": 0.7896500000000001,
+        "rescued": 14.375,
+        "FRT": {
+          "mean": 11.0,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 275.0,
+          "valid": 2,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.25,
+        "timeout_fraction": 1.0
+      },
+      "free_decisions": 8291,
+      "mean_hover_probability": 0.7685168183276915,
+      "mean_entropy": 0.8538133173609452,
+      "mean_top_probability": 0.7685168183276915,
+      "executed_hover_fraction": 0.7689060426969002,
+      "argmax_hover_fraction": 1.0,
+      "estimated_hover_q_advantage": -0.04552724420284746,
+      "mean_return": 159.57300000000072
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-11-01T21:55:29.904495",
+  "prior_merged": 2595,
+  "completed_worker_records_recovered": [
+    [
+      "happo_coma",
+      "iid-47",
+      0,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_coma",
+      "iid-47",
+      1,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_coma",
+      "iid-46",
+      1,
+      "no-cover",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_coma",
+      "iid-48",
+      0,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_coma",
+      "iid-46",
+      0,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_coma",
+      "iid-47",
+      0,
+      "no-cover",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_coma",
+      "iid-46",
+      1,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_coma",
+      "iid-47",
+      1,
+      "no-cover",
+      "fixed",
+      510001
+    ]
+  ],
+  "total_preserved": 2603,
+  "original_prefix_unchanged": true,
+  "source_prefix_sha256": "737c1c2be38a6e61d68055a92a5f29543844ea46eb80335f7b1c3c9c42875611",
+  "note": "Old executor completed queued trials while honoring stop; reuse their checked records rather than repeat them."
+}

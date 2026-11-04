@@ -1,0 +1,79 @@
+{
+  "static": {
+    "lake_candidate_wet_sloped": {
+      "exit_code": 0,
+      "wall_s": 0.04481410000153119,
+      "passed": true,
+      "finite_nonnegative": true,
+      "max_drift_m": 2.7755575615628914e-16,
+      "volume_error_m3": 0.0,
+      "negative_trace": false
+    },
+    "lake_candidate_partial": {
+      "exit_code": 0,
+      "wall_s": 0.033242799996514805,
+      "passed": true,
+      "finite_nonnegative": true,
+      "max_drift_m": 0.0,
+      "volume_error_m3": 0.0,
+      "negative_trace": false
+    },
+    "plane_shore_candidate": {
+      "exit_code": 0,
+      "wall_s": 0.032838300001458265,
+      "passed": true,
+      "finite_nonnegative": true,
+      "max_drift_m": 1.1102230246251565e-16,
+      "volume_error_m3": -1.7763568394002505e-15,
+      "negative_trace": false
+    }
+  },
+  "actual": {
+    "archive": {
+      "exit_code": 0,
+      "wall_s": 3.5013601000027847,
+      "passed": true,
+      "steps": 87,
+      "end_s": 60.0,
+      "finite_nonnegative": true,
+      "min_depth_m": 0.0,
+      "max_depth_m": 0.203169880283,
+      "negative_trace": false,
+      "source_m3": 111.09359999999998,
+      "boundary_net_m3": 0.0,
+      "volume_m3": 111.0935999997,
+      "ledger_error_m3": -2.999769321831991e-10,
+      "source_error_m3": -1.4210854715202004e-14,
+      "wet_cells_numerical": 40,
+      "boundary_header": "0 1 0 0 0 0 0.030859333333333332 0"
+    },
+    "mean_preserving": {
+      "exit_code": 0,
+      "wall_s": 2.6740715999985696,
+      "passed": true,
+      "steps": 60,
+      "end_s": 60.0,
+      "finite_nonnegative": true,
+      "min_depth_m": 0.0,
+      "max_depth_m": 0.328656936373,
+      "negative_trace": false,
+      "source_m3": 111.09360000000001,
+      "boundary_net_m3": 0.0,
+      "volume_m3": 111.09360000000001,
+      "ledger_error_m3": 0.0,
+      "source_error_m3": 1.4210854715202004e-14,
+      "wet_cells_numerical": 9,
+      "boundary_header": "0 1 0 0 0 0 0.030859333333333332 0"
+    }
+  },
+  "field_passes_added": 0,
+  "production_adopted": false,
+  "static_pass": true,
+  "comparison": {
+    "max_abs_depth_difference_m": 0.253587724358,
+    "archive_only_numerically_wet": 31,
+    "candidate_only_numerically_wet": 0,
+    "threshold_purpose": "1e-6 numerical diagnostic only, not field wet/dry or safety threshold",
+    "baseline_equal_round76": true
+  }
+}

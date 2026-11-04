@@ -1,0 +1,33 @@
+{
+  "queries": [
+    "Carlisle 06/1473 flood drawings",
+    "Carlisle Rome Street flood wall2005",
+    "Caldew South Vale2008 flood wall drawing"
+  ],
+  "results": [
+    {
+      "url": "https://cumberland.moderngov.co.uk/Data/CaCC%20Development%20Control%20Committee/200804251000/Agenda/%24Schedule%20of%20Decisions.doc.pdf",
+      "search_index_available": true,
+      "full_document_status": "web open403 Forbidden",
+      "retried": false,
+      "usable_scope": "Search-indexed planning-history lead only, not full drawings or hydraulic dimensions."
+    },
+    {
+      "url": "https://cumberland.moderngov.co.uk/Data/CaCC%20Development%20Control%20Committee/200803071000/Agenda/%24Schedule%20of%20Decisions.doc.pdf",
+      "search_index_available": true,
+      "full_document_status": "web open cache miss",
+      "retried": false,
+      "usable_scope": "Application08/0112 lead only; no acquired cross-sections."
+    },
+    {
+      "url": "https://cumberland.moderngov.co.uk/Data/CaCC%20Development%20Control%20Committee/201702101000/Agenda/Item%2010%20-%2016-1005%20-%20Old%20Brewery%20Halls%20Of%20Residence%2C%20Bridge%20Street%2C%20Carlisle%2C%20CA2%205SR.pdf",
+      "search_index_available": true,
+      "full_document_status": "not downloaded",
+      "usable_scope": "Index points to approvals06/1473(2007),07/1389(2008),08/0112(2008); post2005 improvement plans, not proof of2005 dimensions."
+    }
+  ],
+  "decision": "Stop broad repeated search for these same documents. Need explicit pre-works/existing2005 survey or historically identified structure drawings; do not use proposed2007-2010 geometry.",
+  "source_hash_note": "No raw planning PDFs acquired; hashes below apply to saved retrieval record, not inaccessible original PDFs.",
+  "new_field_passes": 0,
+  "physical_change": false
+}

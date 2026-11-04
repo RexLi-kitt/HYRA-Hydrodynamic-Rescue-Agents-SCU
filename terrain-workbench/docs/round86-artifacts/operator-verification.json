@@ -1,0 +1,18 @@
+[
+  {
+    "time_s": 300,
+    "cells": 108,
+    "max_rotation_deg": 5.4735504971888846e-15,
+    "max_exact_difference": 4.440892098500626e-16,
+    "max_one_vs_two_difference": 4.440892098500626e-16,
+    "passed": true
+  },
+  {
+    "time_s": 600,
+    "cells": 252,
+    "max_rotation_deg": 5.852521822352506e-15,
+    "max_exact_difference": 4.440892098500626e-16,
+    "max_one_vs_two_difference": 8.881784197001252e-16,
+    "passed": true
+  }
+]

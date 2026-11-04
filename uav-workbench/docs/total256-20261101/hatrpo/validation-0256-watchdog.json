@@ -1,0 +1,1450 @@
+{
+  "episodes": [
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "forced_agent_steps": 171,
+      "planner_agent_steps": 141,
+      "ST": 110,
+      "ACC": 0.02727272727272727,
+      "RCR": 1.0,
+      "FRT": 4,
+      "CRT": 99,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 3,
+      "boundaries": 6,
+      "task_complete": true,
+      "timed_out": false
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "forced_agent_steps": 202,
+      "planner_agent_steps": 128,
+      "ST": 142,
+      "ACC": 0.21830985915492956,
+      "RCR": 1.0,
+      "FRT": 9,
+      "CRT": 142,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 31,
+      "boundaries": 21,
+      "task_complete": true,
+      "timed_out": false
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "forced_agent_steps": 150,
+      "planner_agent_steps": 136,
+      "ST": 100,
+      "ACC": 0.0,
+      "RCR": 1.0,
+      "FRT": 5,
+      "CRT": 100,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 0,
+      "boundaries": 15,
+      "task_complete": true,
+      "timed_out": false
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "forced_agent_steps": 207,
+      "planner_agent_steps": 91,
+      "ST": 127,
+      "ACC": 0.023622047244094488,
+      "RCR": 1.0,
+      "FRT": 7,
+      "CRT": 127,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 3,
+      "boundaries": 21,
+      "task_complete": true,
+      "timed_out": false
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "forced_agent_steps": 171,
+      "planner_agent_steps": 141,
+      "ST": 110,
+      "ACC": 0.02727272727272727,
+      "RCR": 1.0,
+      "FRT": 4,
+      "CRT": 99,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 3,
+      "boundaries": 6,
+      "task_complete": true,
+      "timed_out": false
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "forced_agent_steps": 202,
+      "planner_agent_steps": 128,
+      "ST": 142,
+      "ACC": 0.21830985915492956,
+      "RCR": 1.0,
+      "FRT": 9,
+      "CRT": 142,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 31,
+      "boundaries": 21,
+      "task_complete": true,
+      "timed_out": false
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "forced_agent_steps": 150,
+      "planner_agent_steps": 136,
+      "ST": 100,
+      "ACC": 0.0,
+      "RCR": 1.0,
+      "FRT": 5,
+      "CRT": 100,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 0,
+      "boundaries": 15,
+      "task_complete": true,
+      "timed_out": false
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "forced_agent_steps": 207,
+      "planner_agent_steps": 91,
+      "ST": 127,
+      "ACC": 0.023622047244094488,
+      "RCR": 1.0,
+      "FRT": 7,
+      "CRT": 127,
+      "coverage": 1.0,
+      "rescued": 20,
+      "discovered": 20,
+      "conflicts": 3,
+      "boundaries": 21,
+      "task_complete": true,
+      "timed_out": false
+    }
+  ],
+  "events": [
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 18,
+      "agent": 2,
+      "step": 4
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 1,
+      "agent": 3,
+      "step": 6
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 7,
+      "agent": 1,
+      "step": 6
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 19,
+      "agent": 2,
+      "step": 11
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 8,
+      "agent": 1,
+      "step": 21
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 4,
+      "agent": 0,
+      "step": 22
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 17,
+      "agent": 3,
+      "step": 23
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 3,
+      "agent": 0,
+      "step": 25
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 11,
+      "agent": 2,
+      "step": 26
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 14,
+      "agent": 1,
+      "step": 26
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 0,
+      "agent": 3,
+      "step": 30
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 9,
+      "agent": 0,
+      "step": 34
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 12,
+      "agent": 2,
+      "step": 37
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 16,
+      "agent": 1,
+      "step": 40
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 13,
+      "agent": 0,
+      "step": 44
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 15,
+      "agent": 3,
+      "step": 44
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 5,
+      "agent": 2,
+      "step": 59
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 10,
+      "agent": 2,
+      "step": 81
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 6,
+      "agent": 1,
+      "step": 97
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 2,
+      "agent": 2,
+      "step": 99
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 11,
+      "agent": 0,
+      "step": 9
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 8,
+      "agent": 2,
+      "step": 10
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 13,
+      "agent": 3,
+      "step": 11
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 18,
+      "agent": 2,
+      "step": 27
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 6,
+      "agent": 3,
+      "step": 28
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 15,
+      "agent": 0,
+      "step": 28
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 12,
+      "agent": 1,
+      "step": 29
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 5,
+      "agent": 1,
+      "step": 38
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 7,
+      "agent": 0,
+      "step": 39
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 9,
+      "agent": 0,
+      "step": 46
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 10,
+      "agent": 1,
+      "step": 47
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 0,
+      "agent": 3,
+      "step": 48
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 17,
+      "agent": 2,
+      "step": 53
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 2,
+      "agent": 2,
+      "step": 60
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 3,
+      "agent": 0,
+      "step": 63
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 4,
+      "agent": 2,
+      "step": 104
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 1,
+      "agent": 3,
+      "step": 106
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 19,
+      "agent": 0,
+      "step": 112
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 16,
+      "agent": 3,
+      "step": 126
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 14,
+      "agent": 1,
+      "step": 142
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 7,
+      "agent": 3,
+      "step": 5
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 16,
+      "agent": 1,
+      "step": 7
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 2,
+      "agent": 0,
+      "step": 19
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 1,
+      "agent": 3,
+      "step": 24
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 5,
+      "agent": 0,
+      "step": 24
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 3,
+      "agent": 2,
+      "step": 27
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 4,
+      "agent": 3,
+      "step": 27
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 12,
+      "agent": 1,
+      "step": 27
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 6,
+      "agent": 0,
+      "step": 28
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 14,
+      "agent": 1,
+      "step": 32
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 19,
+      "agent": 0,
+      "step": 32
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 9,
+      "agent": 3,
+      "step": 35
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 17,
+      "agent": 2,
+      "step": 36
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 0,
+      "agent": 3,
+      "step": 41
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 15,
+      "agent": 3,
+      "step": 51
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 18,
+      "agent": 2,
+      "step": 69
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 8,
+      "agent": 1,
+      "step": 74
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 10,
+      "agent": 3,
+      "step": 74
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 11,
+      "agent": 2,
+      "step": 97
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 13,
+      "agent": 3,
+      "step": 100
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 3,
+      "agent": 1,
+      "step": 7
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 17,
+      "agent": 0,
+      "step": 9
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 7,
+      "agent": 2,
+      "step": 11
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 5,
+      "agent": 3,
+      "step": 12
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 0,
+      "agent": 1,
+      "step": 18
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 2,
+      "agent": 2,
+      "step": 19
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 14,
+      "agent": 0,
+      "step": 28
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 18,
+      "agent": 3,
+      "step": 30
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 12,
+      "agent": 1,
+      "step": 38
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 13,
+      "agent": 3,
+      "step": 38
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 16,
+      "agent": 0,
+      "step": 42
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 11,
+      "agent": 2,
+      "step": 52
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 1,
+      "agent": 1,
+      "step": 57
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 10,
+      "agent": 1,
+      "step": 77
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 6,
+      "agent": 3,
+      "step": 90
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 4,
+      "agent": 1,
+      "step": 92
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 9,
+      "agent": 2,
+      "step": 100
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 8,
+      "agent": 2,
+      "step": 108
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 15,
+      "agent": 2,
+      "step": 116
+    },
+    {
+      "case": "validation-2101.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 19,
+      "agent": 2,
+      "step": 127
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 18,
+      "agent": 2,
+      "step": 4
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 1,
+      "agent": 3,
+      "step": 6
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 7,
+      "agent": 1,
+      "step": 6
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 19,
+      "agent": 2,
+      "step": 11
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 8,
+      "agent": 1,
+      "step": 21
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 4,
+      "agent": 0,
+      "step": 22
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 17,
+      "agent": 3,
+      "step": 23
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 3,
+      "agent": 0,
+      "step": 25
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 11,
+      "agent": 2,
+      "step": 26
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 14,
+      "agent": 1,
+      "step": 26
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 0,
+      "agent": 3,
+      "step": 30
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 9,
+      "agent": 0,
+      "step": 34
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 12,
+      "agent": 2,
+      "step": 37
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 16,
+      "agent": 1,
+      "step": 40
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 13,
+      "agent": 0,
+      "step": 44
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 15,
+      "agent": 3,
+      "step": 44
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 5,
+      "agent": 2,
+      "step": 59
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 10,
+      "agent": 2,
+      "step": 81
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 6,
+      "agent": 1,
+      "step": 97
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9001,
+      "type": "rescued",
+      "target": 2,
+      "agent": 2,
+      "step": 99
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 11,
+      "agent": 0,
+      "step": 9
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 8,
+      "agent": 2,
+      "step": 10
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 13,
+      "agent": 3,
+      "step": 11
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 18,
+      "agent": 2,
+      "step": 27
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 6,
+      "agent": 3,
+      "step": 28
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 15,
+      "agent": 0,
+      "step": 28
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 12,
+      "agent": 1,
+      "step": 29
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 5,
+      "agent": 1,
+      "step": 38
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 7,
+      "agent": 0,
+      "step": 39
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 9,
+      "agent": 0,
+      "step": 46
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 10,
+      "agent": 1,
+      "step": 47
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 0,
+      "agent": 3,
+      "step": 48
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 17,
+      "agent": 2,
+      "step": 53
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 2,
+      "agent": 2,
+      "step": 60
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 3,
+      "agent": 0,
+      "step": 63
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 4,
+      "agent": 2,
+      "step": 104
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 1,
+      "agent": 3,
+      "step": 106
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 19,
+      "agent": 0,
+      "step": 112
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 16,
+      "agent": 3,
+      "step": 126
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9002,
+      "type": "rescued",
+      "target": 14,
+      "agent": 1,
+      "step": 142
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 7,
+      "agent": 3,
+      "step": 5
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 16,
+      "agent": 1,
+      "step": 7
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 2,
+      "agent": 0,
+      "step": 19
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 1,
+      "agent": 3,
+      "step": 24
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 5,
+      "agent": 0,
+      "step": 24
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 3,
+      "agent": 2,
+      "step": 27
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 4,
+      "agent": 3,
+      "step": 27
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 12,
+      "agent": 1,
+      "step": 27
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 6,
+      "agent": 0,
+      "step": 28
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 14,
+      "agent": 1,
+      "step": 32
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 19,
+      "agent": 0,
+      "step": 32
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 9,
+      "agent": 3,
+      "step": 35
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 17,
+      "agent": 2,
+      "step": 36
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 0,
+      "agent": 3,
+      "step": 41
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 15,
+      "agent": 3,
+      "step": 51
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 18,
+      "agent": 2,
+      "step": 69
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 8,
+      "agent": 1,
+      "step": 74
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 10,
+      "agent": 3,
+      "step": 74
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 11,
+      "agent": 2,
+      "step": 97
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9003,
+      "type": "rescued",
+      "target": 13,
+      "agent": 3,
+      "step": 100
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 3,
+      "agent": 1,
+      "step": 7
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 17,
+      "agent": 0,
+      "step": 9
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 7,
+      "agent": 2,
+      "step": 11
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 5,
+      "agent": 3,
+      "step": 12
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 0,
+      "agent": 1,
+      "step": 18
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 2,
+      "agent": 2,
+      "step": 19
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 14,
+      "agent": 0,
+      "step": 28
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 18,
+      "agent": 3,
+      "step": 30
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 12,
+      "agent": 1,
+      "step": 38
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 13,
+      "agent": 3,
+      "step": 38
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 16,
+      "agent": 0,
+      "step": 42
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 11,
+      "agent": 2,
+      "step": 52
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 1,
+      "agent": 1,
+      "step": 57
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 10,
+      "agent": 1,
+      "step": 77
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 6,
+      "agent": 3,
+      "step": 90
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 4,
+      "agent": 1,
+      "step": 92
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 9,
+      "agent": 2,
+      "step": 100
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 8,
+      "agent": 2,
+      "step": 108
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 15,
+      "agent": 2,
+      "step": 116
+    },
+    {
+      "case": "validation-2201.npy",
+      "layout": 9004,
+      "type": "rescued",
+      "target": 19,
+      "agent": 2,
+      "step": 127
+    }
+  ],
+  "summary": {
+    "ST": 119.75,
+    "ACC": 0.06730115841793784,
+    "RCR": 1.0,
+    "coverage": 1.0,
+    "rescued": 20.0,
+    "FRT": {
+      "mean": 6.25,
+      "valid": 8,
+      "total": 8
+    },
+    "CRT": {
+      "mean": 117.0,
+      "valid": 8,
+      "total": 8
+    },
+    "all_rescued_fraction": 1.0,
+    "timeout_fraction": 0.0
+  },
+  "planner": true
+}

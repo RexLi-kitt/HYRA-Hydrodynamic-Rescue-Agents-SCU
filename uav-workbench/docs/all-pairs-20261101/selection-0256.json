@@ -1,0 +1,142 @@
+{
+  "budget": 256,
+  "ranking": [
+    "happo_hasac",
+    "hasac_coma",
+    "happo_mat",
+    "hatrpo_maac",
+    "happo_coma"
+  ],
+  "best_within_budget": {
+    "happo_hasac": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.001878843853995984,
+        "ST": 121.05555555555556,
+        "planner_fraction": 0.2718534379726083,
+        "neural_free_fraction": 0.4633796397858492,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.001878843853995984,
+        -121.05555555555556
+      ]
+    },
+    "hasac_coma": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.002430449283052207,
+        "ST": 123.09722222222223,
+        "planner_fraction": 0.2789351828028073,
+        "neural_free_fraction": 0.4416666666801258,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.002430449283052207,
+        -123.09722222222223
+      ]
+    },
+    "happo_mat": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.004136360323429723,
+        "ST": 118.5,
+        "planner_fraction": 0.2702484943265629,
+        "neural_free_fraction": 0.492123340301971,
+        "max_conflicts": 6,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.004136360323429723,
+        -118.5
+      ]
+    },
+    "hatrpo_maac": {
+      "episode": 128,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.00730247081380238,
+        "ST": 114.70833333333333,
+        "planner_fraction": 0.34509429753707593,
+        "neural_free_fraction": 0.40057002182565415,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.00730247081380238,
+        -114.70833333333333
+      ]
+    },
+    "happo_coma": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 71,
+        "completion": 0.9861111111111112,
+        "RCR": 0.9993055555555556,
+        "coverage": 1.0,
+        "ACC": 0.0022165664390544773,
+        "ST": 129.08333333333334,
+        "planner_fraction": 0.2925859458345576,
+        "neural_free_fraction": 0.4436908361481789,
+        "max_conflicts": 11,
+        "unserved": 1
+      },
+      "quality": [
+        0,
+        0.9861111111111112,
+        0.9993055555555556,
+        0.9986111111111112,
+        1.0,
+        -0.0022165664390544773,
+        -129.08333333333334
+      ]
+    }
+  },
+  "scope": "research screening; not field acceptance",
+  "selected": [
+    "happo_hasac",
+    "hasac_coma"
+  ]
+}

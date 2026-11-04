@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "training_parents": 16,
+  "validation_parents": 6,
+  "distinct_seeds": 22,
+  "all_finite_nonnegative": true,
+  "max_abs_mass_residual_m3": 2.000888343900442e-11,
+  "dataset_sha256": "c7358594fcb4c270c89b814184a4124b41a54c6c076fc9742fe942a25fd8ba9f",
+  "sealed_test_used": false,
+  "scope": "Synthetic numerical-input audit; not field accuracy"
+}

@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-01",
+  "authorization": "User explicitly authorized new old-model linkage training: all 256, choose better pairs to 1024; conditionally 2048. Supersedes prior prescreen stop only for this new experiment.",
+  "pairs": {
+    "hatrpo_hasac": [
+      "hatrpo",
+      "hasac"
+    ],
+    "hatrpo_maac": [
+      "hatrpo",
+      "maac"
+    ],
+    "hasac_maac": [
+      "hasac",
+      "maac"
+    ]
+  },
+  "parents": {
+    "hatrpo": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-priority-20261101\\hatrpo\\checkpoint-0512.pt",
+      "sha256": "bfdb56b46d0665f2b3b2c292bc61f65417d129117368d02c51a52235b1a54bc9",
+      "pretrained_episodes": 512
+    },
+    "hasac": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt",
+      "sha256": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80",
+      "pretrained_episodes": 256
+    },
+    "maac": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\latest.pt",
+      "sha256": "d1f42b7cc5effdb6e137d682c95d7f303e2daa2e88ca527725452a18acecf625",
+      "pretrained_episodes": 256
+    }
+  },
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\linked_train.py": "c1b29fbc68842aa1e3dde41f5174a336cfb451e10e9e3d9117c93a64f60c7e60",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py": "b5ab357138045440f827b004a26e6bedcae36ed8aa9707ad7f174a74a956aaa3",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\coverage_controller.py": "97b2d5f3d7d2b8320e435d37beea40e3b450d11366350ffdb19fa19fe0d3124b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\priority-20261101\\retry_guard.py": "9d433c76ca0e02d26f2ada9c194871cfdb6f182ae929fed9e5cbc331e93f5dcd",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+  },
+  "seed": 1001,
+  "threads": 2,
+  "device": "cpu",
+  "no_subagents": true,
+  "dataset": {
+    "train_existing": [
+      1101,
+      1201,
+      1301,
+      1401
+    ],
+    "train_new": [
+      31001,
+      31002,
+      31003,
+      31004,
+      31005,
+      31006,
+      31007,
+      31008,
+      31009,
+      31010,
+      31011,
+      31012
+    ],
+    "validation_existing": [
+      2101,
+      2201
+    ],
+    "validation_new": [
+      41001,
+      41002,
+      41003,
+      41004
+    ],
+    "sealed50_used": false
+  },
+  "semantics": "2+2 diagonal role assignment, swapped every 16 training episodes; all 16 parents see both roles. Four public role bits added with zero input weights. Two complete episodes per joint update.",
+  "controls": "Same service/RetryGuard/coverage watchdog in training and evaluation. Coverage planning runs BEFORE network sampling on deterministic legal placeholders; planned actions become singleton masks. No hindsight relabeling of forced actions as policy samples.",
+  "learning": "HATRPO on-policy owned actions first; then owned HASAC/MAAC actors with mixed-team bootstrap and joint observed critic; MAAC loss uses owned agents. Replay capacity1024, four batch64 updates per off-policy learner per two episodes. Fresh replay/optimizers, preserve parent parameters/alpha. Research adaptation; no monotonicity guarantee.",
+  "validation": "6 parents x2 layouts x2 roles x(2 stochastic seeds+1 fixed)=72 per checkpoint; legacy/new and fixed/stochastic separated; two old parents use9001/9401, four new use9501/9502. A single training seed screening, not replicated significance.",
+  "schedule": "3 pairs each256 new joint episodes, checkpoints every64, evaluate0/64/128/192/256. Rank best checkpoints, choose top2 to total1024, continue latest state not restart best; evaluate every128 after256. Latest and best kept separately. No performance early stop before each authorized stage.",
+  "ranking": "lexicographic: fewer legacy/new x sample/fixed ACC>.02 groups, then higher whole-task completion, RCR, worst assignment RCR, coverage, lower ACC, shorter capped steps. Expansion selection is not acceptance. Tie broken by pair id.",
+  "extend2048": "For at most2 finalists: last768->896 and896->1024 both improve with nondecreasing completion/RCR, coverage loss<=.001, every groupACC<=.02 and maxconflicts<=10; improvement means completion+1/n OR RCR+.005 OR coverage+.005 OR nondecreasing task metrics and>=5 fewer capped steps. Also improve1024 over256 and best checkpoint after256. Otherwise stop1024.",
+  "hard_stop": "manual STOP_AFTER_CHECKPOINT, numerical/runtime/integrity failure, disk<8GiB at stage boundary, wall>4h at stage boundary. No automatic failure retry. Up to4864 new joint episodes (3*256+2*768+2*1024), not multiplied by number of member models.",
+  "caveats": "Synthetic small-scale research, no buildings/weather/comms/battery/real delivery verification; no real rescue accuracy claim; no new hierarchical task head in this experiment; selected weights need future multi-training-seed confirmation.",
+  "references": [
+    "https://www.jmlr.org/papers/v25/23-0488.html",
+    "https://proceedings.mlr.press/v97/iqbal19a.html"
+  ]
+}

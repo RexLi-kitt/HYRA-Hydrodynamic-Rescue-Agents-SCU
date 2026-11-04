@@ -1,0 +1,35 @@
+{
+  "algorithms": [
+    "mat",
+    "coma"
+  ],
+  "no_training": true,
+  "no_weight_change": true,
+  "greedy_checkpoints": [
+    64,
+    256
+  ],
+  "stochastic_checkpoint": 256,
+  "stochastic_seeds": [
+    3101,
+    3102
+  ],
+  "validation_layouts": [
+    9001,
+    9002,
+    9003,
+    9004
+  ],
+  "scope": "Diagnostic sampling only; retain original deterministic score and do not replace official evaluation.",
+  "script_hash": "0c2725deac25b3d7430179a569859532d8c1d95b7900c7cd6a0730b982642d17",
+  "checks": {
+    "mat": {
+      "64": "214b156456ef1a9c203b1f5da08de09ab84dc36ec7c19af0a8d4e0f7d3168fd6",
+      "256": "640230a08c5d878f19230a51fbf239fa84ad6845921a318450f2baab2f1f38f2"
+    },
+    "coma": {
+      "64": "5f97a822a81b761c76848dcd64c37cdcec080af64280b5e0f49bd605d6569a36",
+      "256": "24342b00427fe5f883c180d11e19ccbf5266c58eecf0acc0fce9986d949e16d3"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "status": "completed",
+  "total_episode": 256,
+  "phase_steps": 57600,
+  "elapsed_s": 539.3763435000001,
+  "evaluations": {
+    "64": {
+      "service": {
+        "ST": 300.0,
+        "ACC": 0.0075,
+        "RCR": 0.725,
+        "coverage": 0.7107125,
+        "rescued": 14.5,
+        "FRT": {
+          "mean": 11.75,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 117.0,
+          "valid": 2,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.25,
+        "timeout_fraction": 1.0
+      },
+      "watchdog": {
+        "ST": 124.25,
+        "ACC": 0.01508525270273936,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "rescued": 20.0,
+        "FRT": {
+          "mean": 11.75,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 117.5,
+          "valid": 8,
+          "total": 8
+        },
+        "all_rescued_fraction": 1.0,
+        "timeout_fraction": 0.0
+      }
+    },
+    "256": {
+      "service": {
+        "ST": 300.0,
+        "ACC": 0.0125,
+        "RCR": 0.89375,
+        "coverage": 0.8994875,
+        "rescued": 17.875,
+        "FRT": {
+          "mean": 5.0,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 8
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      },
+      "watchdog": {
+        "ST": 113.875,
+        "ACC": 0.006253908692933083,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "rescued": 20.0,
+        "FRT": {
+          "mean": 5.0,
+          "valid": 8,
+          "total": 8
+        },
+        "CRT": {
+          "mean": 109.375,
+          "valid": 8,
+          "total": 8
+        },
+        "all_rescued_fraction": 1.0,
+        "timeout_fraction": 0.0
+      }
+    }
+  },
+  "checkpoint_hash": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80",
+  "formal_test_executed": false,
+  "resumable_to": 1024
+}

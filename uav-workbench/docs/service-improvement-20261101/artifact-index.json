@@ -1,0 +1,87 @@
+{
+  "candidate-episodes.jsonl": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\candidate-episodes.jsonl",
+    "bytes": 11898,
+    "sha256": "687292fa1d7feacce147f1cf638a0d9e01746ee1231802e05c8d7c9210f3e7ab"
+  },
+  "candidate-latest.pt": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\candidate-latest.pt",
+    "bytes": 8561507,
+    "sha256": "1464af8b32709bf94b0d6792d34ffecc52392741786dfda12088d4f5998aada1"
+  },
+  "candidate-validation.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\candidate-validation.json",
+    "bytes": 3348,
+    "sha256": "1aff242ec1730a51007924354f3a7b5f56e725ef3bbd6157e8a9a568bc1b3c3e"
+  },
+  "control-episodes.jsonl": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\control-episodes.jsonl",
+    "bytes": 11854,
+    "sha256": "edd92ad730a734c15f3e21ddc47ca15a7e2e5b8bb1ed503f771540536b7ed5e3"
+  },
+  "control-latest.pt": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\control-latest.pt",
+    "bytes": 8561507,
+    "sha256": "ddbcf75206670f28c811f77fd859bc2db4338f82ffa7743757c36f545919455a"
+  },
+  "control-validation.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\control-validation.json",
+    "bytes": 3328,
+    "sha256": "e43b05a71400d8f7f2a281aa58cf5339e518038d09ce3fa1d719bf20009e6fd4"
+  },
+  "demonstrations.npz": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\demonstrations.npz",
+    "bytes": 301493988,
+    "sha256": "e7f5559c1915caea115cb36637dcdf330195747ca2fd3cdb5adfb0ae1cb55aff"
+  },
+  "hashes.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\hashes.json",
+    "bytes": 1229,
+    "sha256": "62a914da7e72666c27a5ca7ebe891729cd59dafc1e335de67dd6264f806ffadd"
+  },
+  "imitation-final.pt": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\imitation-final.pt",
+    "bytes": 8561507,
+    "sha256": "2f4bf329107d53defcfa420c1cad3e7e7221c11ad0a871df7c6e8ea6e3320c57"
+  },
+  "imitation-validation.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\imitation-validation.json",
+    "bytes": 3385,
+    "sha256": "f90ddad1e509b2dec1e4cb233e7b164aa574ab10c909bf55ee3e28cbfc78ef29"
+  },
+  "imitation.jsonl": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\imitation.jsonl",
+    "bytes": 2386,
+    "sha256": "0cc3b18ecce12a6b489979bcb1fb68620a939b88a3805dcad84f58f294148553"
+  },
+  "improve_service.py": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\improve_service.py",
+    "bytes": 9457,
+    "sha256": "aee6dd852f0774c81e2f76c0e6ed6dc7236c24365a17a2b4a2f98c29e070bf9a"
+  },
+  "progress.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\progress.json",
+    "bytes": 88,
+    "sha256": "351fd0d22c14a15c116eaef818686ba3774415d32598cd9fa97fc432fb610ec8"
+  },
+  "protocol.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\protocol.json",
+    "bytes": 2465,
+    "sha256": "594d6fbf7d2bb69c655bd7e4acfaf1223bfe326032e7c16a6536573a6c7181ed"
+  },
+  "report.md": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\report.md",
+    "bytes": 4649,
+    "sha256": "2f86b08152b6958e5aed0acd5a333b622f792c7d8eaacaa9b77864dcaf6ab37e"
+  },
+  "result.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\result.json",
+    "bytes": 1694,
+    "sha256": "6bd05dea2c4910ecc1deb6420ee6f13b90c549d4ace24d5a3e280c561a24e5fd"
+  },
+  "teacher-rollouts.json": {
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-service-improvement-20261101\\teacher-rollouts.json",
+    "bytes": 24742,
+    "sha256": "59c0ec5e42d68ce366bd71bb9bb8d3c1af12bb28413feb1c24beb1e5e45ad944"
+  }
+}

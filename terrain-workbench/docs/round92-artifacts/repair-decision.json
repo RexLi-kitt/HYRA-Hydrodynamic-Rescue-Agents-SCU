@@ -1,0 +1,38 @@
+[
+  {
+    "id": "Q4-R92-G1",
+    "priority": 1,
+    "hypothesis": "Some missed survey positions are represented as raised building/obstacle cells, or narrow real paths are blocked in5m raster.",
+    "evidence": "78/126 missed marks have observed peak below cell terrain; four compatible marks45,47,48,107 require raster crest0.532..0.852m above observed peak.",
+    "gap": "Historical bare-earth levels, building footprints/ground-floor levels, underpasses and wall crests at original coordinates. No per-cell building attribution yet.",
+    "minimum_discriminating_experiment": "Overlay independently georeferenced historical geometry on all78 incompatible marks and four path bottlenecks. If a false closure is demonstrated, change only that verified representation in an isolated candidate, preserving original survey/mask.",
+    "success": "Independent geometry explains closure; full-window paired run reduces pre-frozen missed area and affected observed points with no lost baseline hits and no new internal failures. Separate unknown false-positive risk remains.",
+    "reject": "No independent correction height/location, no change in local connection, greater missed area or regression at existing observed wet evidence. Never lower bed from observed peak residual.",
+    "cost": "Current GIS diagnostics completed in seconds; full paired candidate~46min after evidence gate, not launched.",
+    "status": "awaiting independent historical geometry"
+  },
+  {
+    "id": "Q4-R92-H1",
+    "priority": 2,
+    "hypothesis": "Model omits event-specific obstruction/breach/drainage mechanisms that affected local head and flood pathways.",
+    "evidence": "EA2005 account reprinted Appendix1 documents bridge/tree obstruction, damaged wall, manhole and culvert flooding. Current original benchmark config has three river inputs, no rain, sewer or breach functions.137 model-wet points:119 low, median stage residual-.2064m.",
+    "gap": "Registration to exact missed clusters; event obstruction size/time, breach crest/time, culvert/network dimensions and local inflow hydrographs. Uniform increase to all3 rivers unsupported.",
+    "minimum_discriminating_experiment": "First register South Vale/gasworks/Victoria Bridge/Dow Beck using independent historical map control points. Compare with all-component catalogue and the south cluster2031 (1457cells). Only if connected and dimensions documented, test one hydraulic structure/source mechanism with accounting and untouched validation set.",
+    "success": "Correct physical mechanism affects pre-registered local missed area and preserves other supported judgments. Boundary/source-integral and nonnegative checks pass.",
+    "reject": "Location/geometry/time/flux inferred solely to fit observations; no local effect; new misses; unjustified water addition or unstable mass.",
+    "cost": "New source PDF and setupHTML obtained; spatial registration and forcing not yet available. No heavy run.",
+    "status": "mechanism supported regionally, per-cluster attribution unverified"
+  },
+  {
+    "id": "Q4-R92-E1",
+    "priority": 3,
+    "hypothesis": "Some apparent misses involve validation representation, including buildings inside broad maximum outlines and16 survey marks with peak-minus-gridbed<=.1m.",
+    "evidence": "14839miss cells enclosed by modeled maximum-wet set; this is topology only.16/126 failedmarks have0<=Z-bed<=.1m.",
+    "gap": "Observation interior holes, surveyed ground elevation and measurement uncertainty; numeric modelbed is not independent observed depth.",
+    "minimum_discriminating_experiment": "Audit raw outline semantics and independent survey ground metadata. Keep original scores, all objects and0.1m rule; any future revised protocol must be prospective and report old failures alongside it.",
+    "success": "Clarifies which decision can be verified without concealing failures.",
+    "reject": "Deleting buildings/points or lowering threshold just to improve coverage.",
+    "cost": "Light documentary/GIS task; no solver rerun.",
+    "status": "diagnostic only; no rescoring allowed"
+  }
+]

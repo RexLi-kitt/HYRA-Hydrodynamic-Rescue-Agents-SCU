@@ -1,0 +1,23 @@
+{
+  "single_factor": "whole-domain raw-value-preserving bed representation from round78; same round77 solver and physical inputs",
+  "exe_sha256": "6288f6696a1f900ebc8dca3f2c0e6b439b24a86253fdb1b0f305641c089756c3",
+  "static_cases": [
+    "wet sloped",
+    "partial step",
+    "plane shore"
+  ],
+  "static_tolerances": {
+    "depth_drift_m": 1e-10,
+    "volume_m3": 1e-08
+  },
+  "dynamic_tolerances": {
+    "source_volume_m3": 1e-06,
+    "ledger_m3": 1e-06,
+    "negative_cells": 0,
+    "end_s": 60
+  },
+  "tolerance_basis": "Existing round75/76 double-precision internal checks, not physical accuracy or qualitative thresholds. No post-result relaxation.",
+  "decision": "Fail any static gate: no actual run. Fail dynamic: retain and stop; no rerun. Static and short hydrodynamic success cannot establish real flood match.",
+  "cost": "3 tiny equilibrium cases then paired60s; each process timeout180s, serial OMP1",
+  "field_acceptance": "not scored, epoch/outlet/initial provenance unresolved"
+}

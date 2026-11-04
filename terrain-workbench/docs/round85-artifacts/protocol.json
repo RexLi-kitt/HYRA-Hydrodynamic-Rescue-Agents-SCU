@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "baseline": "round83 same2400s/300soutput DG2 RK retry",
+  "single_change": "CFL coefficient0.33 to0.165; dtmax1 retained; unchanged executable, inputs, observation coordinates and geometry",
+  "predeclared_times_s": [
+    300,
+    600,
+    900,
+    1200,
+    1500,
+    1800,
+    2100,
+    2400
+  ],
+  "internal_checks": [
+    "exit0 end2400 finite nonnegative all8 H fields and finite momentum",
+    "source integral and accepted interval equality",
+    "independent total volume balance <1e-5m3"
+  ],
+  "internal_sensitivity_only": {
+    "depth_thresholds_m": [
+      1e-06,
+      0.001,
+      0.01
+    ],
+    "metrics": [
+      "all-domain L1/max differences and volume",
+      "bothwet/baselineonly/candidateonly/neither per frame and threshold",
+      "actual accepted dt distribution and rejected attempts",
+      "first saved wet-frame differences; no subframe arrival claims"
+    ]
+  },
+  "not_accuracy_acceptance": "No observation-supported tolerance for these short-time fields; do not choose a timestep by agreement with score, claim convergence from two steps, or call software agreement field accuracy.",
+  "cost": "oneCPU task wallcap900s; no restart; unchanged limited positive-Q/no-rain/no-restart scope",
+  "next": "If numerical gate fails preserve and diagnose; if both pass quantify sensitivity before choosing full-window run, no invented real-world pass."
+}

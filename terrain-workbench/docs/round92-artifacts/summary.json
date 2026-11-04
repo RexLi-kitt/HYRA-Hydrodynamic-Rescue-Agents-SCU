@@ -1,0 +1,126 @@
+{
+  "baseline_positive_coverage_unchanged": 0.8855718647684214,
+  "all_misses_retained": 24884,
+  "components4": 2101,
+  "components8": 1423,
+  "component_sizes_top20": [
+    1457,
+    1292,
+    1128,
+    838,
+    728,
+    661,
+    513,
+    474,
+    399,
+    372,
+    352,
+    350,
+    327,
+    317,
+    283,
+    272,
+    246,
+    234,
+    227,
+    227
+  ],
+  "top10_fraction_of_misses": 0.3159459893907732,
+  "enclosed_miss_cells": 14839,
+  "distance_to_wet_m": {
+    "n": 24884,
+    "min": 5.0,
+    "median": 7.0710678118654755,
+    "p90": 33.54101966249684,
+    "max": 233.45235059857504
+  },
+  "distance_bins": {
+    "5": 11259,
+    "10": 15778,
+    "25": 21242,
+    "50": 23734,
+    "100": 24657
+  },
+  "bed_above_nearest_wet_bed_m": {
+    "n": 24884,
+    "min": -1.7700004577636719,
+    "median": 2.310000419616699,
+    "p90": 8.74000072479248,
+    "max": 41.8700008392334
+  },
+  "same_time_adjacent_head_opportunity_cells": 10,
+  "same_time_opportunity_margin_m": {
+    "n": 10,
+    "min": 0.006814768131773258,
+    "median": 0.012951546516118378,
+    "p90": 0.052560693632851825,
+    "max": 0.09904702406041074
+  },
+  "per_frame": [
+    {
+      "file": "check-0000.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0001.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0002.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0003.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0004.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0005.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0006.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 10
+    },
+    {
+      "file": "check-0007.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0008.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0009.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0010.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    },
+    {
+      "file": "check-0011.wdb",
+      "missed_cells_with_adjacent_same_time_head_above_indicator": 0
+    }
+  ],
+  "all263_retained": 263,
+  "failed_marks": 126,
+  "failed_marks_head_categories": {
+    "peak_below_grid_terrain": 78,
+    "observed_head_not_above_0.1_indicator": 16,
+    "observed_head_above_0.1_indicator": 32
+  },
+  "failed_marks_static_path_exists": 19,
+  "new_simulations": 0,
+  "production_modified": false,
+  "accuracy_improved": false,
+  "limits": [
+    "Topology does not identify buildings or prove defective terrain.",
+    "Same-frame adjacent head only diagnoses potential local impediments; local-inertia hydraulic flux and barriers still need examination.",
+    "Original known-wet polygon may cover features without explicit holes; no independent building exclusion is available.",
+    "No new dry-region, road, direction or timing verification."
+  ]
+}

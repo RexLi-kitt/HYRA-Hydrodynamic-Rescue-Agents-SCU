@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-01",
+  "authorization": "User adds singles to1024 and permits2048 under existing requirements; list all single/pair data.",
+  "algorithms": [
+    "happo",
+    "hatrpo",
+    "hasac",
+    "maac",
+    "mat",
+    "coma"
+  ],
+  "prohibited": [
+    "mappo",
+    "qmix",
+    "vdn",
+    "ippo",
+    "dqn",
+    "ddpg"
+  ],
+  "parents": {
+    "hatrpo": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-priority-20261101\\hatrpo\\checkpoint-0512.pt",
+      "sha256": "bfdb56b46d0665f2b3b2c292bc61f65417d129117368d02c51a52235b1a54bc9",
+      "pretrained_episodes": 512
+    },
+    "hasac": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt",
+      "sha256": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80",
+      "pretrained_episodes": 256
+    },
+    "maac": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\latest.pt",
+      "sha256": "d1f42b7cc5effdb6e137d682c95d7f303e2daa2e88ca527725452a18acecf625",
+      "pretrained_episodes": 256
+    },
+    "happo": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\latest.pt",
+      "sha256": "e74e57921b005beaebbb1ad1321a8b421566ac25a9faed93f1454cc40102b87e",
+      "pretrained_episodes": 256
+    },
+    "mat": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\latest.pt",
+      "sha256": "640230a08c5d878f19230a51fbf239fa84ad6845921a318450f2baab2f1f38f2",
+      "pretrained_episodes": 256
+    },
+    "coma": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\latest.pt",
+      "sha256": "24342b00427fe5f883c180d11e19ccbf5266c58eecf0acc0fce9986d949e16d3",
+      "pretrained_episodes": 256
+    }
+  },
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\linked_train.py": "c1b29fbc68842aa1e3dde41f5174a336cfb451e10e9e3d9117c93a64f60c7e60",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py": "b5ab357138045440f827b004a26e6bedcae36ed8aa9707ad7f174a74a956aaa3",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\coverage_controller.py": "97b2d5f3d7d2b8320e435d37beea40e3b450d11366350ffdb19fa19fe0d3124b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\priority-20261101\\retry_guard.py": "9d433c76ca0e02d26f2ada9c194871cfdb6f182ae929fed9e5cbc331e93f5dcd",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\all_pairs.py": "e3147e24ba5c5e67425dcda7af6df1f9ea32e82de446649a82522f91f3f5a4d2",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py": "32dc127a342d42d04659e74753e47174140f1a6ec191d91b291873555257c8c1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\protocol-addendum.md": "1959136892d9fa8d6a3b85ff4cab7af143dfa21016288f3952b3eacb5d9003dd",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\singles.py": "9fdc1035c8517fd93fd86f5416bda475ea184122232e3d247f01a0fafa61ef6a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\protocol.md": "513f41213bba2690e679fc1c56ebe0e9646a877b4b0af6a3437a0154f01850e8"
+  },
+  "pair_protocol_sha256": "a5aa089d0f89576c88e79c9ae05934e737dffcef6cd9a82f2606cc4bb66dd42f",
+  "dataset_sha256": "c7358594fcb4c270c89b814184a4124b41a54c6c076fc9742fe942a25fd8ba9f",
+  "train_seed": 1001,
+  "threads": 2,
+  "schedule": "All6 singles reach1024 NEW adaptation episodes. Then each eligible single continues latest full state to2048. Parent256/512 is reported separately. No performance early stop before1024.",
+  "controls": "Same service/RetryGuard/coverage watchdog in training and evaluation. Coverage planning runs BEFORE network sampling on deterministic legal placeholders; planned actions become singleton masks. No hindsight relabeling of forced actions as policy samples.",
+  "dataset": {
+    "train_existing": [
+      1101,
+      1201,
+      1301,
+      1401
+    ],
+    "train_new": [
+      31001,
+      31002,
+      31003,
+      31004,
+      31005,
+      31006,
+      31007,
+      31008,
+      31009,
+      31010,
+      31011,
+      31012
+    ],
+    "validation_existing": [
+      2101,
+      2201
+    ],
+    "validation_new": [
+      41001,
+      41002,
+      41003,
+      41004
+    ],
+    "sealed50_used": false
+  },
+  "ranking": "Same frozen lexicographic conflict-group violations, whole-task completion, RCR, worst-assignment RCR, coverage, lowerACC, lowerST. Within each budget use best available0/64/... checkpoint; report when best remains0, no learning gain. Rank all15 together only after every pair reaches64. Expansion is research, not acceptance.",
+  "extend2048": "For every one of the6 singles, reuse the same frozen numeric gates in trend2048. The prior at-most2 restriction applies only to the pair shortlist, not to these6 single controls.",
+  "validation": "Same6 parents,2 layouts,2 stochastic seeds+1fixed =36 unique episodes. One learner controls all4 UAVs; no duplicate role assignment. Pairs have72 with2roles. Compare rates and matched strata, not raw completed counts.",
+  "learning": "One Learner checkpoint, all4 owned actors. Reuse frozen mixed_core on/off updates; two fresh episodes per on-policy update; HASAC/MAAC4 batches64 per block, replay1024. Sampler sees two references to SAME learner for interface compatibility; never two models/optimizers. MAT retains causal joint-action decoder. Fresh replay/optimizers, same parentweights and zero role padding as pairs.",
+  "checkpoint": "Every64episodes; evaluation0/64/128/192/256 then every128; no-cover0/256/1024 and2048 ifeligible. Best and latest separately; best0 explicitly means no new learning gain.",
+  "budget": "One heavy process after all-pairs completed AND integrity audit passed. Up to6*2048=12288 new common environment episodes.8h active wall limit at checkpoint boundaries;8GiB free; cooperative stop; no automatic failure retry.",
+  "limitations": "Synthetic16train/6validation fields,1trainingseed;50sealedtests untouched. No field rescue or battery/communication/building/weather validation. Different ownership/update count is intrinsic; compare environmentepisodes and also report optimizerupdates. Historical4train/2validation rows remain separate.",
+  "extend2048_pair_rule_original": "For at most2 finalists: last768->896 and896->1024 both improve with nondecreasing completion/RCR, coverage loss<=.001, every groupACC<=.02 and maxconflicts<=10; improvement means completion+1/n OR RCR+.005 OR coverage+.005 OR nondecreasing task metrics and>=5 fewer capped steps. Also improve1024 over256 and best checkpoint after256. Otherwise stop1024.",
+  "registration_clarification": "2026-11-01, before any single-model evaluation: all6 singles independently eligible; thresholds unchanged."
+}

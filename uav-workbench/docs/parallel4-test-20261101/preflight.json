@@ -1,0 +1,277 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "key": [
+        "happo",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hatrpo_hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac_mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "coma",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "pure_planner",
+        "training-only-performance",
+        0,
+        "planner",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "uniform_service",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "happo",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hatrpo_hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac_mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "coma",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "pure_planner",
+        "training-only-performance",
+        0,
+        "planner",
+        "fixed",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "uniform_service",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510011
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "happo",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hatrpo_hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac_mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "coma",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "pure_planner",
+        "training-only-performance",
+        0,
+        "planner",
+        "fixed",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "uniform_service",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510021
+      ],
+      "metrics_and_all_arrays_exact": true
+    }
+  ],
+  "seconds": {
+    "2": 20.02533989999938,
+    "4": 14.68356230000063
+  },
+  "startup_included": true,
+  "speedup": 1.3637930286166675,
+  "test_fields_used": false,
+  "wrapper_sha256": "05beef02226111c8a4d265a605b01ff3ec0cc1156f68c5d9e04107ce3e63792d"
+}

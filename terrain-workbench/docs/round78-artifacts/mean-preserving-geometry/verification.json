@@ -1,0 +1,66 @@
+{
+  "checks": {
+    "mean_file_byte_identical": true,
+    "finite": true,
+    "affine_interior_exact": true,
+    "all_faces_no_axial_overshoot": true,
+    "static_source_path_gate": true,
+    "original_hashes_unchanged": true
+  },
+  "sources": [
+    {
+      "name": "upstream1",
+      "row": 25,
+      "col": 419,
+      "baseline_barrier_m": 12.611,
+      "raw_piecewise_constant_barrier_m": 10.319,
+      "candidate_barrier_m": 10.319,
+      "candidate_minus_baseline_m": -2.292
+    },
+    {
+      "name": "upstream2",
+      "row": 305,
+      "col": 290,
+      "baseline_barrier_m": 20.0195,
+      "raw_piecewise_constant_barrier_m": 18.039,
+      "candidate_barrier_m": 18.039,
+      "candidate_minus_baseline_m": -1.9804999999999993
+    },
+    {
+      "name": "upstream3",
+      "row": 305,
+      "col": 146,
+      "baseline_barrier_m": 16.5725,
+      "raw_piecewise_constant_barrier_m": 13.518,
+      "candidate_barrier_m": 13.518,
+      "candidate_minus_baseline_m": -3.054500000000001
+    }
+  ],
+  "geometry_only_passed": true,
+  "channel_mean_delta_m": {
+    "n": 1579,
+    "min": 0.0,
+    "p05": 0.0,
+    "median": 0.0,
+    "p95": 0.0,
+    "max": 0.0
+  },
+  "channel_widths_exceeding_grid_width": 1552,
+  "sgc_bankfull_from_this_archive_and_local_code_m": {
+    "n": 1579,
+    "min": 0.009999999999999787,
+    "p05": 0.009999999999999787,
+    "median": 0.009999999999999787,
+    "p95": 0.009999999999999787,
+    "max": 0.010000000000001563
+  },
+  "sgc_note": "In the locally read SGC implementation, raw DEM and SGCbed differ only by rounding at channel cells, so CalcSGCz enforces its .01m minimum bankfull depth. This is an input/code compatibility observation, not proof that SGC is wrong; wide-channel cells have distinct volume treatment. Author improved-code provenance is not established.",
+  "generated_files": {
+    "bed.asc": "7bb4597790861b121864d23218c81aef8ff8e1dd67e4bf576469eb46c9a1cc0a",
+    "bed.asc1x": "2f1befaed54081afeebceae36f63f2feae245107301bcded3110fd052aa0ae8f",
+    "bed.asc1y": "b7069b4a61566cf907aa48d171ae7f902b488f02cca6ed22800f7204919350d3"
+  },
+  "production_adopted": false,
+  "hydrodynamic_validation": "not run",
+  "field_passes_added": 0
+}

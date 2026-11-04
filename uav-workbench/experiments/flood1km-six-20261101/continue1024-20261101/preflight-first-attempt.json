@@ -1,0 +1,12 @@
+{
+  "tests_run": 3,
+  "passed": false,
+  "elapsed_s": 39.82086030000028,
+  "checks": [
+    "real HASAC split/resume versus uninterrupted updates",
+    "real HATRPO split/resume versus uninterrupted updates",
+    "identical parameters optimizers RNG replay counters and episode records",
+    "post-validation best metadata precedence"
+  ],
+  "scope": "test-only temporary branches; original checkpoints unchanged; no main episode count increment"
+}

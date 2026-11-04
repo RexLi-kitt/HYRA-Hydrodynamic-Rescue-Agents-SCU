@@ -1,0 +1,98 @@
+{
+  "happo-hold": {
+    "episodes": 8,
+    "event_count": 8,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 52,
+    "discovered_unrescued": 100
+  },
+  "happo-commit": {
+    "episodes": 8,
+    "event_count": 134,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 26,
+    "discovered_unrescued": 0
+  },
+  "hatrpo-hold": {
+    "episodes": 8,
+    "event_count": 4,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 92,
+    "discovered_unrescued": 64
+  },
+  "hatrpo-commit": {
+    "episodes": 8,
+    "event_count": 120,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 40,
+    "discovered_unrescued": 0
+  },
+  "hasac-hold": {
+    "episodes": 8,
+    "event_count": 6,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 110,
+    "discovered_unrescued": 44
+  },
+  "hasac-commit": {
+    "episodes": 8,
+    "event_count": 116,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 44,
+    "discovered_unrescued": 0
+  },
+  "maac-hold": {
+    "episodes": 8,
+    "event_count": 20,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 50,
+    "discovered_unrescued": 90
+  },
+  "maac-commit": {
+    "episodes": 8,
+    "event_count": 126,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 34,
+    "discovered_unrescued": 0
+  },
+  "mat-hold": {
+    "episodes": 8,
+    "event_count": 12,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 72,
+    "discovered_unrescued": 76
+  },
+  "mat-commit": {
+    "episodes": 8,
+    "event_count": 130,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 30,
+    "discovered_unrescued": 0
+  },
+  "coma-hold": {
+    "episodes": 8,
+    "event_count": 6,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 114,
+    "discovered_unrescued": 40
+  },
+  "coma-commit": {
+    "episodes": 8,
+    "event_count": 142,
+    "unique_person_events": true,
+    "two_consecutive_hover_steps": true,
+    "undiscovered": 18,
+    "discovered_unrescued": 0
+  }
+}

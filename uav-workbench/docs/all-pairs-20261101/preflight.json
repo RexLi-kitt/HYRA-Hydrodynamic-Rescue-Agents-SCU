@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "zero_role_padding_preserves_parent",
+      "algorithm": "happo",
+      "passed": true
+    },
+    {
+      "test": "zero_role_padding_preserves_parent",
+      "algorithm": "hatrpo",
+      "passed": true
+    },
+    {
+      "test": "zero_role_padding_preserves_parent",
+      "algorithm": "hasac",
+      "passed": true
+    },
+    {
+      "test": "zero_role_padding_preserves_parent",
+      "algorithm": "maac",
+      "passed": true
+    },
+    {
+      "test": "zero_role_padding_preserves_parent",
+      "algorithm": "mat",
+      "passed": true
+    },
+    {
+      "test": "zero_role_padding_preserves_parent",
+      "algorithm": "coma",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "happo_hatrpo",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "happo_hasac",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "happo_maac",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "happo_mat",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "happo_coma",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "hatrpo_hasac",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "hatrpo_maac",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "hatrpo_mat",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "hatrpo_coma",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "hasac_maac",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "hasac_mat",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "hasac_coma",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "maac_mat",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "maac_coma",
+      "passed": true
+    },
+    {
+      "test": "both_members_learn_ownership_exact_resume",
+      "pair": "mat_coma",
+      "passed": true
+    },
+    {
+      "test": "legacy_dispatch_action_stream_equivalence",
+      "pair": [
+        "hasac",
+        "maac"
+      ],
+      "passed": true
+    },
+    {
+      "test": "legacy_dispatch_action_stream_equivalence",
+      "pair": [
+        "hatrpo",
+        "hasac"
+      ],
+      "passed": true
+    },
+    {
+      "test": "legacy_dispatch_action_stream_equivalence",
+      "pair": [
+        "hatrpo",
+        "maac"
+      ],
+      "passed": true
+    },
+    {
+      "test": "mat_causal_action_prefix",
+      "passed": true
+    }
+  ],
+  "excluded_pairs": []
+}

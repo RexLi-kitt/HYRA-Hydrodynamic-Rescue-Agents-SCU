@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "source_and_parents_unchanged": true,
+  "records": {
+    "hatrpo_hasac": [
+      {
+        "file": "eval-0000-no-cover.json",
+        "n": 72,
+        "passed": true
+      },
+      {
+        "file": "eval-0000.json",
+        "n": 72,
+        "passed": true
+      },
+      {
+        "file": "eval-0064.json",
+        "n": 72,
+        "passed": true
+      },
+      {
+        "file": "eval-0128.json",
+        "n": 72,
+        "passed": true
+      },
+      {
+        "file": "eval-0192.json",
+        "n": 72,
+        "passed": true
+      },
+      {
+        "file": "eval-0256-no-cover.json",
+        "n": 72,
+        "passed": true
+      },
+      {
+        "file": "eval-0256.json",
+        "n": 72,
+        "passed": true
+      }
+    ],
+    "hatrpo_maac": [
+      {
+        "file": "eval-0000-no-cover.json",
+        "n": 72,
+        "passed": true
+      },
+      {
+        "file": "eval-0000.json",
+        "n": 72,
+        "passed": true
+      }
+    ]
+  }
+}

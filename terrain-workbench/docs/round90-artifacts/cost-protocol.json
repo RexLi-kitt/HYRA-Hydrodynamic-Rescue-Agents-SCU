@@ -1,0 +1,20 @@
+{
+  "sim_time_s": 7200,
+  "wall_limit_s": 240,
+  "purpose": "single early-event full-grid cost and mass probe after startup gate; no repetition or automatic extension",
+  "same_physics_as": "cap2",
+  "changes": [
+    "duration",
+    "1800s snapshots",
+    "binary output to avoid hardcoded ASCII rounding"
+  ],
+  "full_event_not_started": true,
+  "stopping": "timeout/failure keep all outputs; no restart loop",
+  "expected_volume": "CSV independent quadrature plus left-point-rule bounds; no field scoring",
+  "input_sha256": {
+    "carlisle.bci": "f427f6e3db7e462593081bdafc681ac4f6f6e933fba8724d285e302b9f3257e0",
+    "Carlisle_5m.asc": "a175a51a668472b17ba4bc0f7be56a18048a080030d13e13f1cf28e4fbc9e018",
+    "carlisle_run7.bdy": "717f654d40f1b22fbdb460455e7285c6078cfd636179ebda10749ceccb10c0cc",
+    "case.par": "01bd1671e18caeff5a0c89efddbfe39d47a82fee9c9db836d56e458b8a700aa1"
+  }
+}

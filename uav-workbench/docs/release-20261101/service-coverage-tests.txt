@@ -1,0 +1,27 @@
+test_collision_still_interrupts_service (test_service_commitment.ControllerTests.test_collision_still_interrupts_service) ... ok
+test_detection_is_not_service (test_service_commitment.ControllerTests.test_detection_is_not_service) ... ok
+test_existing_owner_keeps_service (test_service_commitment.ControllerTests.test_existing_owner_keeps_service) ... ok
+test_future_unsafe_not_leaked_or_overridden (test_service_commitment.ControllerTests.test_future_unsafe_not_leaked_or_overridden) ... ok
+test_hidden_people_irrelevant (test_service_commitment.ControllerTests.test_hidden_people_irrelevant) ... ok
+test_measured_unsafe_does_not_force_hold (test_service_commitment.ControllerTests.test_measured_unsafe_does_not_force_hold) ... ok
+test_stuck_job_released (test_service_commitment.ControllerTests.test_stuck_job_released) ... ok
+test_success_releases_job (test_service_commitment.ControllerTests.test_success_releases_job) ... ok
+test_two_complete_hovers_after_arrival (test_service_commitment.ControllerTests.test_two_complete_hovers_after_arrival) ... ok
+test_unique_assignments (test_service_commitment.ControllerTests.test_unique_assignments) ... ok
+test_controller_reads_only_observation (test_coverage_controller.CoverageTests.test_controller_reads_only_observation) ... ok
+test_forced_mask_has_zero_score_gradient (test_coverage_controller.CoverageTests.test_forced_mask_has_zero_score_gradient) ... ok
+test_no_early_takeover (test_coverage_controller.CoverageTests.test_no_early_takeover) ... ok
+test_observed_memory_is_conservative (test_coverage_controller.CoverageTests.test_observed_memory_is_conservative) ... ok
+test_stall_takeover_preserves_service (test_coverage_controller.CoverageTests.test_stall_takeover_preserves_service) ... ok
+verified happo 300 forced 136
+verified hatrpo 300 forced 136
+verified hasac 300 forced 234
+verified maac 300 forced 95
+verified mat 300 forced 255
+verified coma 300 forced 188
+test_all_six_actual_actions_and_next_masks (test_service_training.IntegrationTests.test_all_six_actual_actions_and_next_masks) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 6.595s
+
+OK

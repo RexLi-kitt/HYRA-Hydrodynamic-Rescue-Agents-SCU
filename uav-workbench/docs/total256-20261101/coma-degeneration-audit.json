@@ -1,0 +1,9 @@
+{
+  "algorithm": "coma",
+  "total_episodes": 256,
+  "validation_agent_steps": 9600,
+  "hover_actions": 9596,
+  "watchdog_agent_step_share": 0.47191011235955055,
+  "interpretation": "observed policy degeneration; root cause not isolated",
+  "trace_sha256": "FA9BB0EAC04FD75353293319808746F6EA741711519A257DCDD16E6A06FE25AE"
+}

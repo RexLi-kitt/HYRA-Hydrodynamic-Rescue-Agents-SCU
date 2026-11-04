@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "completed": [
+    {
+      "algorithm": "happo",
+      "returncode": 0
+    },
+    {
+      "algorithm": "hatrpo",
+      "returncode": 0
+    },
+    {
+      "algorithm": "hasac",
+      "returncode": 0
+    },
+    {
+      "algorithm": "maac",
+      "returncode": 0
+    },
+    {
+      "algorithm": "mat",
+      "returncode": 0
+    },
+    {
+      "algorithm": "coma",
+      "returncode": 0
+    }
+  ],
+  "elapsed_s": 1697.2573913999995
+}

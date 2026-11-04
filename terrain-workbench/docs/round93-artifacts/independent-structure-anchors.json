@@ -1,0 +1,284 @@
+{
+  "source": "https://cumbria.gov.uk/elibrary/Content/Internet/536/6357/42684141451.PDF",
+  "source_sha256": "8eb693da7d9b4d3eacf43d6be64965b56a66cd6c3ac123eb6a696d9c6df9401d",
+  "selected": 17,
+  "parsed": 17,
+  "missing": [],
+  "anchors": [
+    {
+      "name": "ROME STREET RLY NO 6",
+      "E": 340113,
+      "N": 555150,
+      "raw_normalized_row": "ROME STREET RLY NO 6 340113 555150 U154 D/RLY",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 0.0,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1252.0768746366973,
+        "47": 1252.0768746366973,
+        "48": 1252.0768746366973,
+        "107": 888.0689725466148,
+        "south-group-14-23": 51.15173506343651
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "ROME STREET ARCHES NO 1",
+      "E": 340145,
+      "N": 555204,
+      "raw_normalized_row": "ROME STREET ARCHES NO 1 TO NO 12 340145 555204 U154 N/A",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 19.0,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1202.6630866539474,
+        "47": 1202.6630866539474,
+        "48": 1202.6630866539474,
+        "107": 856.6379048349424,
+        "south-group-14-23": 86.82453570276088
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "CALDEW BRIDGE APPROACH",
+      "E": 339535,
+      "N": 555994,
+      "raw_normalized_row": "CALDEW BRIDGE APPROACH ARCHES (VIADUCT ESTATE) 339535 555994 U137 RLY",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 928.1734751650685,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1776.7719324662914,
+        "47": 1776.7719324662914,
+        "48": 1776.7719324662914,
+        "107": 176.77245260503685,
+        "south-group-14-23": 1072.1746592789814
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "CALDEW RLY NO 2",
+      "E": 339609,
+      "N": 556048,
+      "raw_normalized_row": "CALDEW RLY NO 2 including approach arches 339609 556048 A595 RLY",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 943.3610125503385,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1717.056347357302,
+        "47": 1717.056347357302,
+        "48": 1717.056347357302,
+        "107": 144.7497841103744,
+        "south-group-14-23": 1077.6003433555504
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "VICTORIA VIADUCT RLY NO 252",
+      "E": 340075,
+      "N": 555611,
+      "raw_normalized_row": "VICTORIA VIADUCT RLY NO 252 340075 555611 C1043 RLY",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 426.0,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1197.5552179336032,
+        "47": 1197.5552179336032,
+        "48": 1197.5552179336032,
+        "107": 495.3367541380308,
+        "south-group-14-23": 499.5482959634634
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "BOTCHERBY",
+      "E": 341733,
+      "N": 555900,
+      "raw_normalized_row": "BOTCHERBY 341733 555900 A69",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 1556.8924176063033,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 537.6490491017352,
+        "47": 537.6490491017352,
+        "48": 537.6490491017352,
+        "107": 2030.8462521815875,
+        "south-group-14-23": 1763.6004366068862
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "CALDEW LITTLE",
+      "E": 339500,
+      "N": 556007,
+      "raw_normalized_row": "CALDEW LITTLE 339500 556007 A595",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 956.9660391048368,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1813.7244829355973,
+        "47": 1813.7244829355973,
+        "48": 1813.7244829355973,
+        "107": 214.09460525664815,
+        "south-group-14-23": 1103.162046120152
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "HOLME HEAD F/B",
+      "E": 339843,
+      "N": 554543,
+      "raw_normalized_row": "HOLME HEAD F/B 339843 554543 U154",
+      "inside_fixed_domain": false,
+      "distance_to_cluster2031_bbox_m": 313.5889028648814,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1791.3097163807267,
+        "47": 1791.3097163807267,
+        "48": 1791.3097163807267,
+        "107": 1401.5600236878904,
+        "south-group-14-23": 652.5645561934849
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "HARRABY",
+      "E": 341338,
+      "N": 554688,
+      "raw_normalized_row": "HARRABY 341338 554688 A6",
+      "inside_fixed_domain": false,
+      "distance_to_cluster2031_bbox_m": 996.7788119738501,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 936.792666495634,
+        "47": 936.792666495634,
+        "48": 936.792666495634,
+        "107": 2058.181357412412,
+        "south-group-14-23": 1260.9046355692408
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DOW BECK (BEDFORD ROAD)",
+      "E": 339032,
+      "N": 555367,
+      "raw_normalized_row": "DOW BECK (BEDFORD ROAD) 339032 555367 U126",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 975.1348624677512,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 2255.0211750668773,
+        "47": 2255.0211750668773,
+        "48": 2255.0211750668773,
+        "107": 880.3638452367294,
+        "south-group-14-23": 1147.9418539281507
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DOW BECK (DOW BECK ROAD)",
+      "E": 339121,
+      "N": 555432,
+      "raw_normalized_row": "DOW BECK (DOW BECK ROAD) 339121 555432 U125",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 903.4212749321326,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 2159.9172437850484,
+        "47": 2159.9172437850484,
+        "48": 2159.9172437850484,
+        "107": 770.5014600894667,
+        "south-group-14-23": 1078.379571394043
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DOW BECK (DUNMAIL DRIVE)",
+      "E": 338735,
+      "N": 555005,
+      "raw_normalized_row": "DOW BECK (DUNMAIL DRIVE) 338735 555005 U127",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 1255.0,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 2611.5536563509468,
+        "47": 2611.5536563509468,
+        "48": 2611.5536563509468,
+        "107": 1343.7308138165174,
+        "south-group-14-23": 1421.9572778392464
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DOW BECK (MORTON)",
+      "E": 338070,
+      "N": 554871,
+      "raw_normalized_row": "DOW BECK (MORTON) 338070 554871 A595",
+      "inside_fixed_domain": false,
+      "distance_to_cluster2031_bbox_m": 1920.0,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 3289.492134053523,
+        "47": 3289.492134053523,
+        "48": 3289.492134053523,
+        "107": 1949.9944871716946,
+        "south-group-14-23": 2097.038030174942
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DOW BECK (SCAWFELL ROAD)",
+      "E": 338959,
+      "N": 555223,
+      "raw_normalized_row": "DOW BECK (SCAWFELL ROAD) 338959 555223 U128",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 1031.7000533100693,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 2347.7398705989553,
+        "47": 2347.7398705989553,
+        "48": 2347.7398705989553,
+        "107": 1031.165602607069,
+        "south-group-14-23": 1198.1537881257148
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DOW BECK (STANHOPE ROAD)",
+      "E": 339206,
+      "N": 555520,
+      "raw_normalized_row": "DOW BECK (STANHOPE ROAD) 339206 555520 U125",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 852.5731640158515,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 2069.0404780960666,
+        "47": 2069.0404780960666,
+        "48": 2069.0404780960666,
+        "107": 648.7052489382215,
+        "south-group-14-23": 1028.5273452854815
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DURRANHILL BECK CULVERT",
+      "E": 342364,
+      "N": 555853,
+      "raw_normalized_row": "DURRANHILL BECK CULVERT 342364 555853 C1045",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 2121.8906663633734,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1115.5727228648072,
+        "47": 1115.5727228648072,
+        "48": 1115.5727228648072,
+        "107": 2662.8410579679744,
+        "south-group-14-23": 2330.5991718869204
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    },
+    {
+      "name": "DURRANHILL CULVERT",
+      "E": 342248,
+      "N": 555935,
+      "raw_normalized_row": "DURRANHILL CULVERT 342248 555935 A69",
+      "inside_fixed_domain": true,
+      "distance_to_cluster2031_bbox_m": 2040.809643254363,
+      "distances_to_diagnostic_bottlenecks_m": {
+        "45": 1024.3322214984746,
+        "47": 1024.3322214984746,
+        "48": 1024.3322214984746,
+        "107": 2545.501227656353,
+        "south-group-14-23": 2249.316896304298
+      },
+      "limits": "2016 location; unknown2005 dimensions/condition, grid accuracy and cross-section. Bbox proximity is not hydraulic connectivity."
+    }
+  ],
+  "all_failure_scores_unchanged": true,
+  "simulation_runs": 0,
+  "production_modified": false
+}

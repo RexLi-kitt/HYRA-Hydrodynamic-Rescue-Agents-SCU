@@ -1,0 +1,95 @@
+--- a/swe/dg2.cpp
++++ b/swe/dg2.cpp
+@@ -12,6 +12,10 @@
+ #include <algorithm>
+ #include <map>
+ #include <cmath>
++
++
++struct TracePointSource { int index; NUMERIC_TYPE before, delta; };
++static std::vector<TracePointSource> trace_point_sources;
+ 
+ // Experimental adapter: nonnegative QFIX/QVAR, no rain, from t=0 only.
+ // q is unit-width discharge. Multiple points in a cell are summed.
+@@ -55,6 +59,8 @@
+         const NUMERIC_TYPE allowed=dg2::Tstep_from_cfl(p,s,a);
+         if (dt<=allowed) {
+             s->Tstep=dt;
++            trace_point_sources.clear();
++            for(const auto& item:initial_h) trace_point_sources.push_back({item.first,item.second,a->H[item.first]-item.second});
+             accumulate_point_flux_stats(b,total_q);
+             return;
+         }
+@@ -64,6 +70,48 @@
+ }
+ 
+ 
++
++// Diagnostic observer only. Single thread; stops before committing a material
++// negative update. It does not clip, limit, recompute or replace any flux.
++static void trace_negative_update(int stage, Pars* p, Solver* s, Arrays* a,
++    BoundCs* b, dg2::FlowCoefficients const& u, int i, int j,
++    dg2::Increment const& inc)
++{
++    static bool saw_negative=false;
++    const int k=j*p->xsz+i;
++    const NUMERIC_TYPE predicted=stage==1 ? a->H[k]+s->Tstep*inc.H :
++        C(0.5)*(a->H[k]+a->H_int[k]+s->Tstep*inc.H);
++    if (!(predicted<C(0.0))) return;
++    const bool material=predicted<C(-1e-12);
++    if(saw_negative && !material) return;
++    FILE* f=fopen("negative-depth.jsonl", "a");
++    if(!f){perror("negative-depth.jsonl");exit(44);}
++    const NUMERIC_TYPE fw=a->FHx[j*(p->xsz+1)+i];
++    const NUMERIC_TYPE fe=a->FHx[j*(p->xsz+1)+i+1];
++    const NUMERIC_TYPE fn=a->FHy[j*(p->xsz+1)+i];
++    const NUMERIC_TYPE fs=a->FHy[(j+1)*(p->xsz+1)+i];
++    double before_source=double(a->H[k]),source_delta=0;
++    for(const auto& src:trace_point_sources)if(src.index==k){before_source=double(src.before);source_delta=double(src.delta);}
++    fprintf(f,"{\"stage\":%d,\"t_s\":%.17g,\"dt_s\":%.17g,\"i\":%d,\"j\":%d,",stage,double(s->t),double(s->Tstep),i,j);
++    fprintf(f,"\"material\":%s,\"first_negative\":%s,\"dx_m\":%.17g,\"dy_m\":%.17g,",material?"true":"false",saw_negative?"false":"true",double(p->dx),double(p->dy));
++    fprintf(f,"\"H_before_source\":%.17g,\"source_delta_h\":%.17g,\"H_n_postsource\":%.17g,\"H_stage\":%.17g,\"H_after_predicted\":%.17g,\"rhs_H\":%.17g,",before_source,source_delta,double(a->H[k]),double(u.H[k]),double(predicted),double(inc.H));
++    fprintf(f,"\"mass_flux_w_e_n_s\":[%.17g,%.17g,%.17g,%.17g],",double(fw),double(fe),double(fn),double(fs));
++    fprintf(f,"\"bed_mean_slope_x_slope_y\":[%.17g,%.17g,%.17g],",double(a->DEM[k]),double(a->DEM1x[k]),double(a->DEM1y[k]));
++    fprintf(f,"\"H_mean_slope_x_slope_y\":[%.17g,%.17g,%.17g],",double(u.H[k]),double(u.H1x[k]),double(u.H1y[k]));
++    fprintf(f,"\"HU_coefficients\":[%.17g,%.17g,%.17g],\"HV_coefficients\":[%.17g,%.17g,%.17g],",double(u.HU[k]),double(u.HU1x[k]),double(u.HU1y[k]),double(u.HV[k]),double(u.HV1x[k]),double(u.HV1y[k]));
++    fprintf(f,"\"Hstar_w_e_n_s\":[%.17g,%.17g,%.17g,%.17g],",double(a->Hstar_pos_x[k]),double(a->Hstar_neg_x[k]),double(a->Hstar_neg_y[k]),double(a->Hstar_pos_y[k]));
++    fprintf(f,"\"H_raw_faces_w_e_n_s\":[%.17g,%.17g,%.17g,%.17g],",double(u.H[k]-SQRT(C(3.0))*u.H1x[k]),double(u.H[k]+SQRT(C(3.0))*u.H1x[k]),double(u.H[k]+SQRT(C(3.0))*u.H1y[k]),double(u.H[k]-SQRT(C(3.0))*u.H1y[k]));
++    fprintf(f,"\"neighbors\":[");bool first=true;
++    for(int jj=(std::max)(0,j-1);jj<=(std::min)(p->ysz-1,j+1);jj++)
++    for(int ii=(std::max)(0,i-1);ii<=(std::min)(p->xsz-1,i+1);ii++){
++        int kk=jj*p->xsz+ii;
++        if(!first)fprintf(f,",");first=false;
++        fprintf(f,"{\"i\":%d,\"j\":%d,\"h\":%.17g,\"h1x\":%.17g,\"h1y\":%.17g,\"hu\":%.17g,\"hv\":%.17g,\"z\":%.17g,\"z1x\":%.17g,\"z1y\":%.17g}",ii,jj,double(u.H[kk]),double(u.H1x[kk]),double(u.H1y[kk]),double(u.HU[kk]),double(u.HV[kk]),double(a->DEM[kk]),double(a->DEM1x[kk]),double(a->DEM1y[kk]));
++    }
++    fprintf(f,"]}\n");fclose(f);saw_negative=true;
++    if(material){fprintf(stderr,"Trace reached material negative depth; expected diagnostic exit 42\n");fflush(NULL);exit(42);}
++}
++
+ void dg2::solve
+ (
+ 	Fnames *Fnameptr,
+@@ -77,6 +125,7 @@
+ 	const int verbose
+ )
+ {
++    if(!getenv("OMP_NUM_THREADS") || strcmp(getenv("OMP_NUM_THREADS"),"1")){fprintf(stderr,"Trace requires OMP_NUM_THREADS=1\n");exit(43);}
+     if (Statesptr->rainfall == ON || Statesptr->dynamicrainfall == ON ||
+         Statesptr->rainfallmask == ON || Solverptr->t != C(0.0)) {
+         fprintf(stderr,"Experimental event/point adapter excludes rain and restart\n");
+@@ -411,6 +460,7 @@
+ 		{
+ 			Increment U_inc = {};
+ 			L(Parptr, Solverptr, Arrptr, i, j, U, U_inc);
++            trace_negative_update(1,Parptr,Solverptr,Arrptr,BCptr,U,i,j,U_inc);
+ 
+ 			update_intermediate_coefficients(
+ 					Parptr, Solverptr, Arrptr, i, j, U_inc);
+@@ -455,6 +505,7 @@
+ 		{
+ 			Increment U_inc = {};
+ 			L(Parptr, Solverptr, Arrptr, i, j, U_int, U_inc);
++            trace_negative_update(2,Parptr,Solverptr,Arrptr,BCptr,U_int,i,j,U_inc);
+ 
+ 			update_final_coefficients(
+ 					Parptr, Solverptr, Arrptr, i, j, U_inc);

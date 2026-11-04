@@ -1,0 +1,21 @@
+--- a/lisflood.h
++++ b/lisflood.h
+@@ -19,6 +19,7 @@
+ #include <string.h>
+ //#include <omp.h>
+ #include <vector> // CCS
++#include <deque> // Stable TimeSeries addresses for boundary/source bindings
+ #include <iostream> // CCS
+ //#include <netcdf.h> // JCN
+ 
+@@ -455,7 +456,9 @@
+ 	NUMERIC_TYPE VolInMT; // added by JCN stores volume in over mass inteval
+ 	NUMERIC_TYPE VolOutMT; // added by JCN stores volume out over mass inteval
+ 
+-	std::vector<TimeSeries> allTimeSeries;
++	// LoadBCVar stores pointers to elements while appending later series.
++	// deque keeps element addresses valid across push_back/pop_back of other elements.
++	std::deque<TimeSeries> allTimeSeries;
+ };
+ 
+ //-------------------------------------------

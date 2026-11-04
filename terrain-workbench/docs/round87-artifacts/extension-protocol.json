@@ -1,0 +1,10 @@
+{
+  "baseline": "round83/carlisle_2400 atCFL.33, same inputs; round86/cfl033 early600 prefix",
+  "candidate_exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771",
+  "single_change_from_round83": "only isolated dg2::friction exact isotropic substep from round86",
+  "extension": "600->2400s same output300; no restart supported, first600 rerun is necessary prefix and must match stored fields/accepted steps, not counted as new independent evidence",
+  "gate": "finite nonnegative all8 H, finite q, accepted time/source/boundary ledger and total water error<1e-5; early600 fields and accepted steps must match bitwise",
+  "comparison": "all8 fields versus oldCFL.33 and old .165 for diagnostics; not new candidate time-sensitivity pair. Do not claim convergence or field accuracy. 1e-6/.001/.01 threshold differences all retained.",
+  "cost": "one serial run,900s wall limit,no automatic restart",
+  "next": "If passes, separately pre-register same2400CFL.165 candidate to complete paired late-window sensitivity; input provenance work remains independent."
+}

@@ -1,0 +1,128 @@
+{
+  "180": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 138,
+      "people_rate": 0.8625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 16,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 136,
+      "people_rate": 0.85,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 17,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 154,
+      "people_rate": 0.9625,
+      "all_rate": 0.0,
+      "p95_rate": 0.75,
+      "unseen": 3,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 148,
+      "people_rate": 0.925,
+      "all_rate": 0.25,
+      "p95_rate": 0.25,
+      "unseen": 3,
+      "refloats": 0
+    }
+  },
+  "240": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 155,
+      "people_rate": 0.96875,
+      "all_rate": 0.25,
+      "p95_rate": 1.0,
+      "unseen": 4,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 154,
+      "people_rate": 0.9625,
+      "all_rate": 0.25,
+      "p95_rate": 0.75,
+      "unseen": 6,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 158,
+      "people_rate": 0.9875,
+      "all_rate": 0.5,
+      "p95_rate": 1.0,
+      "unseen": 0,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 158,
+      "people_rate": 0.9875,
+      "all_rate": 0.75,
+      "p95_rate": 1.0,
+      "unseen": 1,
+      "refloats": 0
+    }
+  },
+  "300": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 158,
+      "people_rate": 0.9875,
+      "all_rate": 0.5,
+      "p95_rate": 1.0,
+      "unseen": 2,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 155,
+      "people_rate": 0.96875,
+      "all_rate": 0.0,
+      "p95_rate": 1.0,
+      "unseen": 4,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 159,
+      "people_rate": 0.99375,
+      "all_rate": 0.75,
+      "p95_rate": 1.0,
+      "unseen": 0,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 159,
+      "people_rate": 0.99375,
+      "all_rate": 0.75,
+      "p95_rate": 1.0,
+      "unseen": 0,
+      "refloats": 0
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "happo-64-service": {
+    "episodes": 8,
+    "rescued": 134,
+    "unique_events": true
+  },
+  "happo-64-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "happo-256-service": {
+    "episodes": 8,
+    "rescued": 130,
+    "unique_events": true
+  },
+  "happo-256-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "hatrpo-64-service": {
+    "episodes": 8,
+    "rescued": 120,
+    "unique_events": true
+  },
+  "hatrpo-64-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "hatrpo-256-service": {
+    "episodes": 8,
+    "rescued": 132,
+    "unique_events": true
+  },
+  "hatrpo-256-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "hasac-64-service": {
+    "episodes": 8,
+    "rescued": 116,
+    "unique_events": true
+  },
+  "hasac-64-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "hasac-256-service": {
+    "episodes": 8,
+    "rescued": 143,
+    "unique_events": true
+  },
+  "hasac-256-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "maac-64-service": {
+    "episodes": 8,
+    "rescued": 126,
+    "unique_events": true
+  },
+  "maac-64-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "maac-256-service": {
+    "episodes": 8,
+    "rescued": 140,
+    "unique_events": true
+  },
+  "maac-256-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "mat-64-service": {
+    "episodes": 8,
+    "rescued": 110,
+    "unique_events": true
+  },
+  "mat-64-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "mat-256-service": {
+    "episodes": 8,
+    "rescued": 94,
+    "unique_events": true
+  },
+  "mat-256-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "coma-64-service": {
+    "episodes": 8,
+    "rescued": 142,
+    "unique_events": true
+  },
+  "coma-64-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  },
+  "coma-256-service": {
+    "episodes": 8,
+    "rescued": 2,
+    "unique_events": true
+  },
+  "coma-256-watchdog": {
+    "episodes": 8,
+    "rescued": 160,
+    "unique_events": true
+  }
+}

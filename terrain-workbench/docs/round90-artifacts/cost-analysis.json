@@ -1,0 +1,31 @@
+{
+  "actual_end_reported_s": 7200.369,
+  "target_s": 7200,
+  "end_overshoot_s": 0.36899999999968713,
+  "all_steps_recorded": true,
+  "independent_left_rule_volume_using_rounded_step_times_m3": 943738.911782008,
+  "binary_volume_m3": 943738.7053895029,
+  "difference_m3": -0.20639250508975238,
+  "reported_time_rounding_bound_m3": 0.4733438942220001,
+  "left_rule_match_within_time_precision": true,
+  "piecewise_linear_exact_volume_at_reported_end_m3": 943817.2986018943,
+  "integration_shortfall_m3": 78.59321239136625,
+  "step_count": 10565,
+  "steps_min_median_max_s": [
+    0.5598,
+    0.599,
+    2.0
+  ],
+  "sum_abs_internal_mass_residual_m3": 1.848018604557678e-05,
+  "sum_signed_internal_mass_residual_m3": -5.677534973019997e-09,
+  "zero_outflow": true,
+  "finite_nonnegative_all_saved_frames": true,
+  "wall_s": 37.10125400000106,
+  "linear_whole_event_estimate_minutes_not_prediction": 21.10025682433836,
+  "limitations": [
+    "7200s is early, wetted footprint and runtime grow later; linear cost is not a promise",
+    "ASCII3-decimal limitation avoided by binary; every-step time labels still rounded to .001s",
+    "fast backend writes no verified restart; no complete event launched",
+    "mass residual does not establish observed fit; endpoint slightly beyond target retained, not shifted"
+  ]
+}

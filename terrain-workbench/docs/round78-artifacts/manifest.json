@@ -1,0 +1,126 @@
+{
+  "all-channel-cells.json": {
+    "sha256": "9959f0ac67c2322170a97655163e73113de5910a75688e682d04dc9040453d7d",
+    "bytes": 629732
+  },
+  "all-outline-coverage.json": {
+    "sha256": "200d7e1dce238949defc13bbcffb524703f81c4e7cc6a331792949971f320bf3",
+    "bytes": 4578
+  },
+  "all-survey-mark-coverage.json": {
+    "sha256": "e947b0d2314fa03587f660dcf09a475796b7da8030e1039e744d97a5b6630b0d",
+    "bytes": 196817
+  },
+  "audit_carlisle_geometry78.py": {
+    "sha256": "34d10af47ea0518651b05a7ab154e688ec8ec48eebbae8ef610f429d7a1c74c5",
+    "bytes": 15014
+  },
+  "channel-geometry.png": {
+    "sha256": "85a4001fb42f2a737b8fd042048b6882bfafb7b21b09a450755f0226f8317c26",
+    "bytes": 236359
+  },
+  "geometry-arrays.npz": {
+    "sha256": "9a85ff6c49c37d17ffd6fee012d657d1ff8516b0bfe40083147b159165d11415",
+    "bytes": 2468655
+  },
+  "geometry-coverage-audit.json": {
+    "sha256": "b441edf2f1622bc3e9342848c8e4bc06e62a1bcde366c5ef49ed3ba20a83bdfc",
+    "bytes": 13129
+  },
+  "independent-path-verification.json": {
+    "sha256": "965bad7ecd718b1cdcd5070bbfcfdd5e5ea18c4552a26eccd628aa4edd9a7303",
+    "bytes": 2674
+  },
+  "logs-before/0-HYRA自动续作进度.md": {
+    "sha256": "cfe1c6c511648f19be13c1338af9fdcbeab270bc7078a287c5d2e7b0b6aea33d",
+    "bytes": 78910
+  },
+  "logs-before/1-HYRA累计更改日志.md": {
+    "sha256": "4517d3a390153f9909640fbec400ec97f251a1f9bf63b892a743e68473f396e7",
+    "bytes": 68582
+  },
+  "logs-before/2-HYRA现实贴合证据与改进工作表-20261029.md": {
+    "sha256": "b85ef7f2dac6e360cbcef1e5d1baf4a846edf01c524ac9fa9a8473fa87119bab",
+    "bytes": 44257
+  },
+  "logs-before/3-HYRA自动续作进度.md": {
+    "sha256": "cfe1c6c511648f19be13c1338af9fdcbeab270bc7078a287c5d2e7b0b6aea33d",
+    "bytes": 78910
+  },
+  "logs-before/4-HYRA累计更改日志.md": {
+    "sha256": "4517d3a390153f9909640fbec400ec97f251a1f9bf63b892a743e68473f396e7",
+    "bytes": 68582
+  },
+  "logs-before/5-HYRA现实贴合证据与改进工作表-20261029.md": {
+    "sha256": "4ef39a8b6b75a0aa679db4da2ca66cb75572661cef7313ec7968d05bb15d27fa",
+    "bytes": 44227
+  },
+  "logs-before/6-reality-validation-workplan-20261029.md": {
+    "sha256": "78b75d8a4686a3ca60018d73bda3a292298f7b0a4c712ad9e3b4c3349c89564a",
+    "bytes": 42612
+  },
+  "mean-preserving-geometry/bed.asc": {
+    "sha256": "7bb4597790861b121864d23218c81aef8ff8e1dd67e4bf576469eb46c9a1cc0a",
+    "bytes": 1164557
+  },
+  "mean-preserving-geometry/bed.asc1x": {
+    "sha256": "2f1befaed54081afeebceae36f63f2feae245107301bcded3110fd052aa0ae8f",
+    "bytes": 1758247
+  },
+  "mean-preserving-geometry/bed.asc1y": {
+    "sha256": "b7069b4a61566cf907aa48d171ae7f902b488f02cca6ed22800f7204919350d3",
+    "bytes": 1786473
+  },
+  "mean-preserving-geometry/geometry.npz": {
+    "sha256": "638bfdc6349ead600b45b9065041230acae6033c5559b68afce4cb82f3e3719f",
+    "bytes": 725207
+  },
+  "mean-preserving-geometry/protocol.json": {
+    "sha256": "df9b527499e590b9a000243c34ff0caf260805a2946bf37e52c1f9346bc8a0fd",
+    "bytes": 1817
+  },
+  "mean-preserving-geometry/verification.json": {
+    "sha256": "708ad23f5a962255978b2e0ef67d5503cf7a7e56bd377021bb36c53062ab7c56",
+    "bytes": 2249
+  },
+  "next-candidate-protocol.json": {
+    "sha256": "173658e8787797123738daa27544d4932a94834d7258c4b3fab9137b2dc242ac",
+    "bytes": 3416
+  },
+  "observation-coverage.png": {
+    "sha256": "f145b2ab06165aaaf197174a851f404bc01f462a172b1bc1067f5387cb5c384e",
+    "bytes": 157668
+  },
+  "observation-objects-bng.geojson": {
+    "sha256": "865144a70db139cbe3ecf20e58649316a78c8dc08a17274b05810045b5dd9c64",
+    "bytes": 609487
+  },
+  "prepare_meanpreserving_bed78.py": {
+    "sha256": "a06d41b179b6aa9934870315e079ad3d00b6b844fe5486a97bf5b7981dfb6448",
+    "bytes": 5608
+  },
+  "protocol.json": {
+    "sha256": "30f9b58a333d351cdf0cb6c7946964a5b8cc7b9bc68e58c0f8fa3287fa5c7f8d",
+    "bytes": 2045
+  },
+  "publish_round78.py": {
+    "sha256": "4cad308a68f0a42bc617f305d554ef48ce7859b13d72c540907722349b181809",
+    "bytes": 18852
+  },
+  "source-grid-profiles.json": {
+    "sha256": "3825d92674584f8e718c9725471ab34cacd65084d9e5a692bab527f5f54a2595",
+    "bytes": 47121
+  },
+  "source-notes.json": {
+    "sha256": "d1e7780fb5b5ae168a766644a70f1b5b944202b1cbce3a64a5325ae9990c1268",
+    "bytes": 858
+  },
+  "verify_geometry_paths78.py": {
+    "sha256": "2637dc95f872224da961ebc7cf33d5176653bcb7ccecba17ac23a209748a76cb",
+    "bytes": 2769
+  },
+  "河床表示与观测覆盖审查-20261030.md": {
+    "sha256": "a42029e067e5ac39612b9799047ddd42d2e22a99ca4afe4b3a189d9481302ca5",
+    "bytes": 9064
+  }
+}

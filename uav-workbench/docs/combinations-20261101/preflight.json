@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HASAC1024",
+      "deterministic": false,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HASAC1024",
+      "deterministic": true,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HATRPO1024",
+      "deterministic": false,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HATRPO1024",
+      "deterministic": true,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HASAC256",
+      "deterministic": false,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HASAC256",
+      "deterministic": true,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HATRPO512",
+      "deterministic": false,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "HATRPO512",
+      "deterministic": true,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "MAT256",
+      "deterministic": false,
+      "passed": true
+    },
+    {
+      "check": "same_expert_action_equivalence",
+      "model": "MAT256",
+      "deterministic": true,
+      "passed": true
+    },
+    {
+      "check": "all_pairs_service_singleton_masks",
+      "passed": true
+    },
+    {
+      "check": "MAT_conditions_on_final_mixed_fleet_prefix",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "UAV research snapshot; no production hydrodynamic changes",
+  "strict_integrity": "passed",
+  "local_data_required_for_integration_test": true,
+  "all_passed": true,
+  "training_rerun": false,
+  "strict_evaluation_records": 5630,
+  "service_coverage_integration_tests": 16,
+  "environment_learner_tests": 31,
+  "date": "2026-11-01",
+  "workbook_export_audit": "passed"
+}

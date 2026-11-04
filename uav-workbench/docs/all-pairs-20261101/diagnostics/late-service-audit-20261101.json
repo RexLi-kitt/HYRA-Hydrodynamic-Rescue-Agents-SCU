@@ -1,0 +1,712 @@
+{
+  "created": "2026-11-01T18:48:00.562258+08:00",
+  "scope": "All unfinished target instances in all five selected 256-episode checkpoints; diagnostic only, no retraining or acceptance change.",
+  "rules": {
+    "step_seconds": 5,
+    "service_depth_limit_m": 0.08,
+    "service_speed_limit_m_s": 0.3,
+    "service_radius_m": 10,
+    "required_continuous_hover_s": 10,
+    "step_numbering": "1-based post-action step; safe interval includes both water frame endpoints"
+  },
+  "n_unfinished_target_instances": 10,
+  "n_discovered_after_last_safe_step": 8,
+  "rows": [
+    {
+      "pair": "hasac_coma",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "sample",
+      "action_seed": 3101,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 101,
+        "first_within10m_step": 169,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            300,
+            false
+          ]
+        ],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\eval-0256\\validation-41004-9501-0-sample-3101.npz"
+      },
+      "best_episode": 0,
+      "best_checkpoint": {
+        "first_discovered_step": 81,
+        "first_within10m_step": 83,
+        "service_completed_step": 85,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            84,
+            true
+          ],
+          [
+            85,
+            true
+          ],
+          [
+            86,
+            true
+          ],
+          [
+            87,
+            true
+          ],
+          [
+            88,
+            true
+          ],
+          [
+            89,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\eval-0000\\validation-41004-9501-0-sample-3101.npz"
+      }
+    },
+    {
+      "pair": "happo_mat",
+      "case": "validation-41003",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "sample",
+      "action_seed": 3102,
+      "target": 9,
+      "checkpoint256": {
+        "first_discovered_step": 172,
+        "first_within10m_step": 211,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            170
+          ]
+        ],
+        "hover_attempts": [],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41003-9501-0-sample-3102.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 106,
+        "first_within10m_step": 109,
+        "service_completed_step": 111,
+        "safe_step_ranges": [
+          [
+            1,
+            170
+          ]
+        ],
+        "hover_attempts": [
+          [
+            110,
+            true
+          ],
+          [
+            111,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41003-9501-0-sample-3102.npz"
+      }
+    },
+    {
+      "pair": "happo_mat",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "sample",
+      "action_seed": 3101,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 106,
+        "first_within10m_step": 118,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            224,
+            false
+          ]
+        ],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-0-sample-3101.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 90,
+        "first_within10m_step": 92,
+        "service_completed_step": 94,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            93,
+            true
+          ],
+          [
+            94,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-0-sample-3101.npz"
+      }
+    },
+    {
+      "pair": "happo_mat",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "sample",
+      "action_seed": 3102,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 156,
+        "first_within10m_step": 256,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-0-sample-3102.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 89,
+        "first_within10m_step": 91,
+        "service_completed_step": 93,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            92,
+            true
+          ],
+          [
+            93,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-0-sample-3102.npz"
+      }
+    },
+    {
+      "pair": "happo_mat",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "fixed",
+      "action_seed": 3101,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 95,
+        "first_within10m_step": 98,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            99,
+            true
+          ],
+          [
+            100,
+            false
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-0-fixed-3101.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 82,
+        "first_within10m_step": 85,
+        "service_completed_step": 87,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            86,
+            true
+          ],
+          [
+            87,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-0-fixed-3101.npz"
+      }
+    },
+    {
+      "pair": "happo_mat",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 1,
+      "mode": "sample",
+      "action_seed": 3102,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 96,
+        "first_within10m_step": 98,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            99,
+            true
+          ],
+          [
+            100,
+            false
+          ],
+          [
+            155,
+            false
+          ],
+          [
+            268,
+            false
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-1-sample-3102.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 36,
+        "first_within10m_step": 38,
+        "service_completed_step": 40,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            39,
+            true
+          ],
+          [
+            40,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-1-sample-3102.npz"
+      }
+    },
+    {
+      "pair": "hatrpo_maac",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "sample",
+      "action_seed": 3101,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 132,
+        "first_within10m_step": 284,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\eval-0256\\validation-41004-9501-0-sample-3101.npz"
+      },
+      "best_episode": 128,
+      "best_checkpoint": {
+        "first_discovered_step": 31,
+        "first_within10m_step": 33,
+        "service_completed_step": 35,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            34,
+            true
+          ],
+          [
+            35,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\eval-0128\\validation-41004-9501-0-sample-3101.npz"
+      }
+    },
+    {
+      "pair": "happo_coma",
+      "case": "validation-41003",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "sample",
+      "action_seed": 3101,
+      "target": 9,
+      "checkpoint256": {
+        "first_discovered_step": 187,
+        "first_within10m_step": 255,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            170
+          ]
+        ],
+        "hover_attempts": [],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0256\\validation-41003-9501-0-sample-3101.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 71,
+        "first_within10m_step": 74,
+        "service_completed_step": 76,
+        "safe_step_ranges": [
+          [
+            1,
+            170
+          ]
+        ],
+        "hover_attempts": [
+          [
+            75,
+            true
+          ],
+          [
+            76,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0064\\validation-41003-9501-0-sample-3101.npz"
+      }
+    },
+    {
+      "pair": "happo_coma",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 0,
+      "mode": "sample",
+      "action_seed": 3102,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 136,
+        "first_within10m_step": 161,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            162,
+            false
+          ]
+        ],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0256\\validation-41004-9501-0-sample-3102.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 90,
+        "first_within10m_step": 93,
+        "service_completed_step": 95,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            94,
+            true
+          ],
+          [
+            95,
+            true
+          ]
+        ],
+        "discovered_after_last_safe_step": false,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0064\\validation-41004-9501-0-sample-3102.npz"
+      }
+    },
+    {
+      "pair": "happo_coma",
+      "case": "validation-41004",
+      "layout": 9501,
+      "assignment": 1,
+      "mode": "sample",
+      "action_seed": 3101,
+      "target": 16,
+      "checkpoint256": {
+        "first_discovered_step": 137,
+        "first_within10m_step": 179,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            180,
+            false
+          ]
+        ],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0256\\validation-41004-9501-1-sample-3101.npz"
+      },
+      "best_episode": 64,
+      "best_checkpoint": {
+        "first_discovered_step": 128,
+        "first_within10m_step": 165,
+        "service_completed_step": null,
+        "safe_step_ranges": [
+          [
+            1,
+            99
+          ]
+        ],
+        "hover_attempts": [
+          [
+            175,
+            false
+          ],
+          [
+            246,
+            false
+          ],
+          [
+            247,
+            false
+          ],
+          [
+            248,
+            false
+          ]
+        ],
+        "discovered_after_last_safe_step": true,
+        "trace_replay_positions_info_final_status_match": true,
+        "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0064\\validation-41004-9501-1-sample-3101.npz"
+      }
+    }
+  ],
+  "illustrative_same_seed_versions": [
+    {
+      "episode": 64,
+      "first_discovered_step": 89,
+      "first_within10m_step": 91,
+      "service_completed_step": 93,
+      "safe_step_ranges": [
+        [
+          1,
+          99
+        ]
+      ],
+      "hover_attempts": [
+        [
+          92,
+          true
+        ],
+        [
+          93,
+          true
+        ]
+      ],
+      "discovered_after_last_safe_step": false,
+      "trace_replay_positions_info_final_status_match": true,
+      "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-0-sample-3102.npz"
+    },
+    {
+      "episode": 128,
+      "first_discovered_step": 100,
+      "first_within10m_step": 162,
+      "service_completed_step": null,
+      "safe_step_ranges": [
+        [
+          1,
+          99
+        ]
+      ],
+      "hover_attempts": [],
+      "discovered_after_last_safe_step": true,
+      "trace_replay_positions_info_final_status_match": true,
+      "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0128\\validation-41004-9501-0-sample-3102.npz"
+    },
+    {
+      "episode": 192,
+      "first_discovered_step": 75,
+      "first_within10m_step": 78,
+      "service_completed_step": 80,
+      "safe_step_ranges": [
+        [
+          1,
+          99
+        ]
+      ],
+      "hover_attempts": [
+        [
+          79,
+          true
+        ],
+        [
+          80,
+          true
+        ]
+      ],
+      "discovered_after_last_safe_step": false,
+      "trace_replay_positions_info_final_status_match": true,
+      "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0192\\validation-41004-9501-0-sample-3102.npz"
+    },
+    {
+      "episode": 256,
+      "first_discovered_step": 156,
+      "first_within10m_step": 256,
+      "service_completed_step": null,
+      "safe_step_ranges": [
+        [
+          1,
+          99
+        ]
+      ],
+      "hover_attempts": [],
+      "discovered_after_last_safe_step": true,
+      "trace_replay_positions_info_final_status_match": true,
+      "trace": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-0-sample-3102.npz"
+    }
+  ],
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\selection-0256.json": "0ee2555132fa69e27464e96c092a0238308060395165fb926706d4ae9a9a9389",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_hasac\\eval-0256.json": "74562527daef98ede1bb9b30c83b17e3f01888793698889ec2ff820768622092",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_hasac\\eval-0064.json": "95531e9eb69930a71c07a060fb3c19845b2493ab9715f78dbab5a10ba969cc32",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\eval-0256.json": "c8867ab8a59ca34027cccda48679beb4453c67aa02292f54a96f7e555b81667c",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\eval-0000.json": "0e8b7a6bd592c365cce43033d79cebf0327a0f9fde3e5272fc8977162c88471f",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\eval-0256\\validation-41004-9501-0-sample-3101.npz": "d0c4deed28aec69589e5e967f135043612dcee06e309a646050e41272ba0532c",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\eval-0000\\validation-41004-9501-0-sample-3101.npz": "718de1d13346586530bb90191937a8ade652eb8c3faa7181345a8680755f02b2",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256.json": "29925650c5e3a68ceaf7443e8fd1b57a3ed300a14d843981d6f79383efe15bb9",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064.json": "d89d4d6d4acfba3de2f6e864ba05fa6ba0a14867536c0d1aa8f6336631e2ebd9",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41003-9501-0-sample-3102.npz": "5183f60a1284280128e3618de5cf76d0fd4cef327e47d5d03d5db87413d1e14e",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41003-9501-0-sample-3102.npz": "23d6dcb61c0afa495fc7fba3944d4afc4ff6869950a279c2a36d48ed9efed0f1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-0-sample-3101.npz": "c2b19fca4330fe425b1743a0fa2d472cc410487a07b815101c1ea0f8c55c76d7",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-0-sample-3101.npz": "b4f8efe27e64a84c769b3246731c525ec604d01500793f6b92e03d8e1de8e606",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-0-sample-3102.npz": "9e0d7279286a9eaa7039f6f8a9496b0e2055a1c854dc13033d3c2a66e8815406",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-0-sample-3102.npz": "23d6dcb61c0afa495fc7fba3944d4afc4ff6869950a279c2a36d48ed9efed0f1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-0-fixed-3101.npz": "7eafd1d82384cee2f492e9be957fa4536386f67ff47d4f70df1244b11b225aab",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-0-fixed-3101.npz": "0fb1bfe8b1153e53012be99a77b8049b40bba94975d7071c10692d1b9f1fe8a4",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0256\\validation-41004-9501-1-sample-3102.npz": "1dc99789723fcb22707828f37811d2af671d41c0c15176e926bde1410a4e5fb9",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0064\\validation-41004-9501-1-sample-3102.npz": "bd7c85ba6fdc50324c908244a9cb57d519af87130bfd11a6330ffa996a92c884",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\eval-0256.json": "86d8fe87151e2afe12d86fbca22ca1aedaa735c56274e4f5cf4c55cc44376478",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\eval-0128.json": "5e6bf01c8e1a03a4fc319f7600d80e1ba83ed2a30f651dbee934de3ac6849d0c",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\eval-0256\\validation-41004-9501-0-sample-3101.npz": "853a1642057ad542ebafa7b63a847c06fa4727be02d4040b6147d99fda44f765",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\eval-0128\\validation-41004-9501-0-sample-3101.npz": "55c6efcfb54d57868c47021a10ae0a410b135fe317242b0c4c2affb80de835ae",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0256.json": "8c2574f1488538107282e46c583f42cfc32b1817a76858df0c5e82e78b927ff1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0064.json": "8113c4d2855648428428fb9263290e37e2ac7f81e20afed309b0503c1f0dac06",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0256\\validation-41003-9501-0-sample-3101.npz": "6e84c2af3a8c3d9a7b0badb2a3e8fab197ba783593abe28b3318420409a769ac",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0064\\validation-41003-9501-0-sample-3101.npz": "05126ac8cda134e9c0ec1b81e2e7e2e6612e842759ae05b34e07ae018347ccb5",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0256\\validation-41004-9501-0-sample-3102.npz": "8ad25e779aa39b116cd7b64bae2370fbc2c190edeefba6881beadaca7835602b",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0064\\validation-41004-9501-0-sample-3102.npz": "dea96cb27f65ae7cc9488c09886e1589955ec90a55c027fa2aca555ca57870c8",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0256\\validation-41004-9501-1-sample-3101.npz": "cb7726956d701d70841e07e79c582df2c5585a7211a355795506b35fe227ce5c",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_coma\\eval-0064\\validation-41004-9501-1-sample-3101.npz": "49eb67303bcd6e3673266861109bdaaf3a832056b7a0c2c65c245b75f19d7977",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0128.json": "a7bf6cf8d9340edfeaa792f7637833dcca08d924665f9b58b69dec9da91115c9",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0128\\validation-41004-9501-0-sample-3102.npz": "65c8f752fde2afbee109d85104342fc659111584ebffa7b70f0a1c75941edee5",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0192.json": "6449dc1cfd31593052e4fa259bb6af4281a8cc9f5c2718bdf32702562170e6d0",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\eval-0192\\validation-41004-9501-0-sample-3102.npz": "7e9398759fa061768c46109fd7e9811e9321be676964cc104e4e47d18f6f8dfb",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\dataset.json": "c7358594fcb4c270c89b814184a4124b41a54c6c076fc9742fe942a25fd8ba9f",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6"
+  },
+  "water_source_sha256": {
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-pilot-20261101\\data\\validation-2101.npy": "75483b4361430ae525596a6ffddaf8783356384650a374f19b54acf9aa9d4869",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-pilot-20261101\\data\\validation-2201.npy": "d8eb9948031e6f98e6856649ed1bfa309962c6ced5f2f2599df20502071145de",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41001.npy": "9b7ff5b6bea1fc3bb86386af5963795667f8ddb805cb9bc849a8555486b48305",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41002.npy": "b4098fcd1b3f7cbb8958133c31715a13e5286255cd4f77c093b5c50939c6e9b2",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41003.npy": "e4c2c3b56e05451ba602b20a068b5c9336e4c4c3bb5dd64e6785a6ce1fdad52a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41004.npy": "19ce006fa7bec07291b13f06ef7e152e5ab68a6107aaf322936ad4c0d4db91fb"
+  },
+  "limitations": [
+    "Synthetic service eligibility rule, not field-validated delivery safety.",
+    "Replay confirms timing mechanism for listed failures, not a causal identification of learning-rate, reward or partner-update causes.",
+    "Read-only reuse of recorded actions; no model, score rule, or ongoing training changed."
+  ]
+}

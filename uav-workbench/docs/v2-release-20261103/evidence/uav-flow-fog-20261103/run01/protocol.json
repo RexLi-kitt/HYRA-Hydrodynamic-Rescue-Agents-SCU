@@ -1,0 +1,94 @@
+{
+  "version": "flow-fog-train-screen-v1",
+  "parameters": [
+    {
+      "name": "view60-w240",
+      "sensor": 60,
+      "window": 240,
+      "patch": false
+    },
+    {
+      "name": "view60-w360",
+      "sensor": 60,
+      "window": 360,
+      "patch": false
+    },
+    {
+      "name": "view60-w480",
+      "sensor": 60,
+      "window": 480,
+      "patch": false
+    },
+    {
+      "name": "view20-w360",
+      "sensor": 20,
+      "window": 360,
+      "patch": false
+    },
+    {
+      "name": "view40-w360",
+      "sensor": 40,
+      "window": 360,
+      "patch": false
+    },
+    {
+      "name": "view100-w360",
+      "sensor": 100,
+      "window": 360,
+      "patch": false
+    },
+    {
+      "name": "patch20-60-w360",
+      "sensor": 60,
+      "window": 360,
+      "patch": true
+    }
+  ],
+  "methods": [
+    "coverage100",
+    "flow_coverage",
+    "linear-16",
+    "gru-16",
+    "gru-32",
+    "linear-16_flowblend",
+    "gru-32_flowblend"
+  ],
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-flow-fog-v1\\experiment.py": "692611df0078006689124655db321dcb627522ef7f96fc140cb7a464a34f004a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-flow-fog-v1\\test_flow_fog.py": "d18ae4129fc5c36be14bd7913d1d4bcaf74d62de7aaaaee4ba771bb829c47a71",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-regional-refloat-v1\\experiment.py": "4831e6b901736d5fee52522740895fca60d4e073a1036c51364b6293d96b6449",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\refloat_dispatch.py": "ee778c60a8d41f0fd5afd70c859229a75d4074e988b6f0d44680e0ac84a24ff7",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\refloat_environment.py": "ebf5676d8a36572cd9b299d922f2034859e0a20c4252ce7e579f66062c691158",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\refloat_search.py": "5f9d7c3c67bad89320a728908193d7830ffd45d2cf7b358896d550593cd88d90",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\screen.py": "487182afa0211ada1bdd64c926b5c5b170e18f398bc6d9f0d75129aa66214d69",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\test_refloat.py": "55632d5ebde9ac18e4460d95670c6c9978a3d23c0ea9f8b766990abdc9c269f6",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-probe-v1\\probe.py": "1782b94bbd3015cb887e7b04257de11947f94836744d43d03f6141e530aeaff1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-probe-v1\\search_env.py": "1e60cd3c3f52cee122be4ebd03fbb97978c44b08f88eaf9bbebe9f6b6f4df76b"
+  },
+  "water_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31009.npy": "891dd39c1d2a99e7b05e2528d2383f39ba45e764a9c7ef2238e6181202ade83f",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31010.npy": "a5038a51c2c667f4c8f5af31bbd39b5f93aaa2e0d2cffb7c2d7f70c513fc28ec",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31011.npy": "0441f2f86ce2d54e73fd03cde7b786770e01cb17a7acc90e54990d923ea75e13",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31012.npy": "a6fc6b9cc69bd31e5635d1e473a8a70a89a1fc9f4c587d7955676c463068f4f5",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-pilot-20261101\\data\\validation-2101.npy": "75483b4361430ae525596a6ffddaf8783356384650a374f19b54acf9aa9d4869",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-pilot-20261101\\data\\validation-2201.npy": "d8eb9948031e6f98e6856649ed1bfa309962c6ced5f2f2599df20502071145de",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41001.npy": "9b7ff5b6bea1fc3bb86386af5963795667f8ddb805cb9bc849a8555486b48305",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41002.npy": "b4098fcd1b3f7cbb8958133c31715a13e5286255cd4f77c093b5c50939c6e9b2",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41003.npy": "e4c2c3b56e05451ba602b20a068b5c9336e4c4c3bb5dd64e6785a6ce1fdad52a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\validation-41004.npy": "19ce006fa7bec07291b13f06ef7e152e5ab68a6107aaf322936ad4c0d4db91fb"
+  },
+  "weights": {
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav-regional-refloat-20261103\\run01\\linear-16.pt": "bda50d48742566b9d72bd59169b2f159c15a51ab04456b38ff6fc3a47a235b44",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav-regional-refloat-20261103\\run01\\gru-16.pt": "674c60aab80c6114ef9ffc622f40ca37a0cde65f635e692a1b8c93dd01a44082",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav-regional-refloat-20261103\\run01\\gru-32.pt": "6d9338befc35bfc1ea130d9702ee1a2707317554a81b7681542d47ff1edcf143"
+  },
+  "scenario_sha256": "ff66d669348096cd08237eb4d754a4ab24026b059a5e7e605ccf8268465f5beb",
+  "train_screen": "4 previous calibration hydraulic parents, lowest-seed roster each, first40 independently shuffled IDs; same persons across all7 conditions. T1500,end960,w240/360/480; accepted events retained, no favorable person deletion.",
+  "selection": "TRAIN only: target85..95% people, >=15pp p95 scene improvement over BOTH nonneural baselines, no people regression against either. Prefer candidates meeting goal; then smaller distance to85..95, higher people, higher p95 gap, stable declared method/parameter order. Allscene gap also reported. Four scenes too small for proof.",
+  "validation": "12 fresh event seeds on6 previously exposed DEV hydraulic parents; NOT untouched-map final test. Freeze selected parameter/model before generating seeds. Evaluate all7 methods, report preselected only as candidate. No further selection from this holdout.",
+  "fog": "Shared per-UAV current location central400m band; x/y orientation seed%2; local radius20 vs background parameter sensor. No known map preview; observations outside disks absent. No weather flight-risk claim.",
+  "flow": "60second coarse forward bilinear advection using observed flow age<=120s; unknown flow0, exiting masslost. Coverage gets same forecast. Learned fusion halfnormalizedcoverage/halfnormalizedprediction; halfnow/halfforecast. Known-person existing30s velocity extrapolation unchanged.",
+  "scope": "Frozen weights no training; selection16/32 now by TRAIN taskpeople, not reusedDEV. Fog and20m/window480 shift from original training; failures retained. No final physical accuracy claim. All fallthresholds2m/1mps,drop10s unchanged. No production edits or remote push.",
+  "target": "People85..95%; >=15 percentage points in at-least95%-people scenes; allpeople scenes separate. Finite exploratory budget, not guaranteed achievement.",
+  "budget": "196 TRAIN screening +84 fresh-event validation=280 rollouts; one serialCPU worker4torchthreads, no new optimization epochs; stopfile STOP, 45min ceiling."
+}

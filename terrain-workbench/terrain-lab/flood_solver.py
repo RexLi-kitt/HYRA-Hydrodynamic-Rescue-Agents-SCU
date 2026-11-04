@@ -21,7 +21,7 @@ class FloodSolver:
                  sea_level=None, sea_edges=None, flux_method='rusanov',
                  spatial_order=2, time_integrator='rk2', low_froude=0,
                  cfl=.4, limiter_theta=1.5, velocity_depth=1e-6,
-                 max_timestep=1., max_steps=500000, open_boundary_mode='outflow_only'):
+                 max_timestep=1., max_steps=500000, open_boundary_mode='outflow_only', wall_flux_mode='hydrostatic'):
         self.bed = np.asarray(bed, dtype=np.float64).copy()
         self.h = np.asarray(depth, dtype=np.float64).copy()
         if (self.bed.ndim != 2 or min(self.bed.shape) < 2 or self.h.shape != self.bed.shape
@@ -31,7 +31,7 @@ class FloodSolver:
         n = np.broadcast_to(np.asarray(manning, dtype=np.float64), self.h.shape)
         if boundary not in ('ocean', 'open', 'closed', 'periodic') or not np.isfinite(n).all() or (n < 0).any():
             raise ValueError('Invalid boundary or Manning coefficient')
-        if (flux_method not in ('rusanov', 'knp') or spatial_order not in (1, 2)
+        if (flux_method not in ('rusanov', 'knp', 'hllc') or spatial_order not in (1, 2)
                 or isinstance(spatial_order, bool) or time_integrator not in ('euler', 'rk2')
                 or low_froude not in (0, 1, 2) or isinstance(low_froude, bool)
                 or not np.isfinite(cfl) or not 0 < cfl <= .45
@@ -40,6 +40,8 @@ class FloodSolver:
                 or not np.isfinite(max_timestep) or max_timestep <= 0
                 or not isinstance(max_steps, int) or isinstance(max_steps, bool) or max_steps < 1):
             raise ValueError('Invalid numerical configuration')
+        if flux_method == 'hllc' and low_froude != 0:
+            raise ValueError('Experimental HLLC requires low_froude=0')
         self.flux_method, self.spatial_order = flux_method, int(spatial_order)
         self.time_integrator, self.low_froude = time_integrator, int(low_froude)
         self.cfl, self.limiter_theta = float(cfl), float(limiter_theta)
@@ -49,9 +51,12 @@ class FloodSolver:
             raise ValueError('Invalid open_boundary_mode')
         if open_boundary_mode == 'extrapolated' and boundary != 'open':
             raise ValueError('Experimental extrapolation requires boundary=open')
+        if wall_flux_mode not in ('hydrostatic', 'reflective'):
+            raise ValueError('Invalid wall_flux_mode')
+        self.wall_flux_mode = wall_flux_mode
         self.open_boundary_mode = open_boundary_mode
         self.acceleration = None
-        if open_boundary_mode == 'outflow_only' and os.environ.get('HYRA_FLOOD_BACKEND', 'auto') != 'numpy':
+        if wall_flux_mode == 'hydrostatic' and open_boundary_mode == 'outflow_only' and os.environ.get('HYRA_FLOOD_BACKEND', 'auto') != 'numpy':
             try:
                 import flood_acceleration
                 self.acceleration = flood_acceleration
@@ -82,6 +87,7 @@ class FloodSolver:
         self.mz = np.zeros_like(self.h)
         self.initial = self.h.copy()
         self.maximum = self.h.copy()
+        self.peak_speed_m_s = 0.0; self.peak_speed_time_s = 0.0
         self.time = 0.0
         self.steps = 0
         self.baseflow_rate = np.zeros_like(self.h)
@@ -89,6 +95,9 @@ class FloodSolver:
         self.solid = np.zeros_like(self.h, dtype=bool)
         self.wall_x = np.zeros((nz,nx+1),dtype=bool)
         self.wall_y = np.zeros((nz+1,nx),dtype=bool)
+        self.hllc_face_audit = ([np.zeros((4,nz+1,nx),dtype=np.int64),
+                                 np.zeros((4,nz,nx+1),dtype=np.int64)]
+                                if self.flux_method=='hllc' else None)
         self.structures = None
         self.structure_warmup = False
         self.drain_capacity = np.zeros_like(self.h)
@@ -111,6 +120,8 @@ class FloodSolver:
                             scheduled_inflow_m3=0.0, external_inflow_m3=0.0, numerical_adjustment_m3=0.0)
 
     def set_environment(self, *, solid=None, wall_x=None, wall_y=None, drain_capacity=None):
+        if self.time > 0 or self.steps > 0:
+            raise ValueError("Environment changes require a new simulation; current water budget is preserved")
         pending = {}
         for name,value in (('solid',solid),('wall_x',wall_x),('wall_y',wall_y),('drain_capacity',drain_capacity)):
             if value is None: continue
@@ -121,6 +132,9 @@ class FloodSolver:
         if np.any(pending.get('solid', self.solid) & (self.baseflow_rate>0)):
             raise ValueError('River sources cannot be inside a solid cell')
         self._validated_source_schedule(self.source_schedule, pending.get('solid', self.solid))
+        from forcing_validation import external_entries
+        external_entries(self, self.external_schedule, pending.get('solid', self.solid),
+                         pending.get('wall_x', self.wall_x), pending.get('wall_y', self.wall_y))
         for name, a in pending.items():
             setattr(self, name, a)
         self.h[self.solid]=0; self.mx[self.solid]=0; self.mz[self.solid]=0
@@ -190,8 +204,12 @@ class FloodSolver:
         return rate
 
     def set_external_inflows(self,entries):
-        self.external_schedule=[e for e in entries if e['enabled']]
-        self.external_volume_by_id={e['id']:0. for e in entries}
+        from forcing_validation import external_entries
+        clean = external_entries(self, entries)
+        self.external_schedule=[e for e in clean if e['enabled']]
+        # Keep already delivered volumes when disabling or replacing a source.
+        self.external_volume_by_id={**self.external_volume_by_id,
+            **{e['id']:self.external_volume_by_id.get(e['id'],0.) for e in clean}}
         self.external_rate=self._external_rate(self.time)
 
     def _external_rate(self,time):
@@ -271,7 +289,11 @@ class FloodSolver:
     def start_scenario(self):
         """Use the warmed state as t=0 without losing momentum or source rates."""
         self.initial = self.h.copy(); self.maximum = self.h.copy()
+        if self.hllc_face_audit is not None:
+            for counts in self.hllc_face_audit: counts.fill(0)
         self.time = 0.0; self.steps = 0
+        self.peak_speed_m_s = 0.0; self.peak_speed_time_s = 0.0
+        self._record_speed_peak()
         for name in self.balance: self.balance[name] = 0.0
         self.balance['initial_m3'] = float(self.h.sum()*self.dx**2)
         for key in self.external_volume_by_id:self.external_volume_by_id[key]=0.
@@ -280,6 +302,14 @@ class FloodSolver:
         self.diagnostics=dict(min_dt_s=None,max_dt_s=0.,limited_faces=0,
                               max_stage_courant=0.,minimum_raw_depth_m=0.)
 
+    def _record_speed_peak(self):
+        """Track accepted-state spatial maxima, not a continuous-time extremum."""
+        u, v = self.leaf_velocity() if hasattr(self, 'leaf') else self.velocity()
+        speed = float(np.hypot(u, v).max())
+        if speed > self.peak_speed_m_s:
+            self.peak_speed_m_s = speed
+            self.peak_speed_time_s = float(self.time)
+
     def velocity(self):
         wet = self.h > self.velocity_depth
         return (np.divide(self.mx, self.h, out=np.zeros_like(self.h), where=wet),
@@ -287,7 +317,7 @@ class FloodSolver:
 
     def numerical_config(self):
         return dict(schema='hyra-swe-v2', flux_method=self.flux_method,
-                    open_boundary_mode=self.open_boundary_mode,
+                    open_boundary_mode=self.open_boundary_mode,wall_flux_mode=self.wall_flux_mode,
                     structures='hydrostatic_crest_ANUGA_Villemonte_shared_RK_flux' if self.structures and self.structures.barriers else 'none',
                     compute_backend='numba' if self.acceleration else 'numpy',
                     spatial_order=self.spatial_order, time_integrator=self.time_integrator,
@@ -497,7 +527,8 @@ class FloodSolver:
                 self.sea_level if self.sea_level is not None else 0.,
                 self.sea_edges[names[0]],self.sea_edges[names[1]],
                 a['fraction'],b['fraction'],a['q'],b['q'],a['advective_x'],b['advective_x'],a['advective_z'],b['advective_z'],
-                0 if self.flux_method=='rusanov' else 1,self.low_froude)
+                {'rusanov':0,'knp':1,'hllc':2}[self.flux_method],self.low_froude,
+                self.hllc_face_audit[axis] if self.hllc_face_audit is not None else None)
             mass,advx,advz,pressure,cl,cr,speed=fields
             face = self._structure_flux(axis,dict(zip(('mass','advx','advz','pressure','corr_l','corr_r','speed'),fields)))
             if details:
@@ -527,9 +558,15 @@ class FloodSolver:
         jump = (br-bl)+(offset_r-offset_l)
         dl = np.maximum(0., hl-np.maximum(jump, 0.))
         dr = np.maximum(0., hr-np.maximum(-jump, 0.))
+        audit = np.zeros_like(self.hllc_face_audit[axis]) if self.hllc_face_audit is not None else None
         mass, advx, advz, pressure, speed = face_flux(
             dl, dr, ul, vl, ur, vr, normal=(1., 0.) if axis == 1 else (0., 1.),
-            method=self.flux_method, low_froude=self.low_froude)
+            method=self.flux_method, low_froude=self.low_froude, audit=audit)
+        if audit is not None:
+            audit[:,self._blocked_faces(axis)] = 0
+            if axis == 1: audit[:,:,[0,-1]] = 0
+            else: audit[:,[0,-1],:] = 0
+            self.hllc_face_audit[axis] += audit
         # Extrapolated ghost states already passed through the selected face flux.
         # Keep that flux, including inward transport; no outflow-only override.
         if self.boundary in ('open', 'ocean') and self.open_boundary_mode == 'outflow_only':
@@ -558,6 +595,19 @@ class FloodSolver:
         corr_r = .5*G*(hr-dr)*(hr+dr)
         corr_l[blocked] = .5*G*hl[blocked]**2
         corr_r[blocked] = .5*G*hr[blocked]**2
+        if self.wall_flux_mode == 'reflective' and blocked.any():
+            # Independent mirror Riemann problems on the two sides of a solid
+            # face. Mass and tangential transport remain zero (slip wall).
+            # The default hydrostatic closure is retained for compatibility.
+            normal=(1.,0.) if axis==1 else (0.,1.)
+            for depth,ux,uz,side,target in ((hl,ul,vl,1,corr_l),(hr,ur,vr,-1,corr_r)):
+                h=depth[blocked];vx=ux[blocked];vz=uz[blocked]
+                gx=-vx if axis==1 else vx;gz=-vz if axis==0 else vz
+                a,b=(vx,vz),(gx,gz)
+                if side==-1:a,b=b,a
+                _,ax,az,p,_=face_flux(h,h,*a,*b,normal=normal,
+                    method=self.flux_method,low_froude=self.low_froude)
+                target[blocked]=(ax if axis==1 else az)+p
         self._structure_flux(axis,dict(mass=mass,advx=advx,advz=advz,pressure=pressure,
                                       corr_l=corr_l,corr_r=corr_r,speed=speed))
         if details:
@@ -703,6 +753,7 @@ class FloodSolver:
             raise ValueError('Inflow requires a valid source cell')
         if inflow and self.solid[source]:
             raise ValueError('Inflow cannot be inside a solid cell')
+        if self.steps == 0: self._record_speed_peak()
         self.source_rate = self._scheduled_rate(self.time)
         self.external_rate = self._external_rate(self.time)
         # Piecewise-constant forcing uses its left limit for BOTH RK stages.
@@ -755,12 +806,13 @@ class FloodSolver:
             raise RuntimeError('Non-finite hydraulic state after source update')
         np.maximum(self.maximum, self.h, out=self.maximum)
         self.time += dt; self.steps += 1
+        self._record_speed_peak()
         d = self.diagnostics
         d['min_dt_s'] = dt if d['min_dt_s'] is None else min(d['min_dt_s'], dt)
         d['max_dt_s'] = max(d['max_dt_s'], dt)
 
     def advance(self, end, *, rain=0.0, rain_until=float('inf'), infiltration=0.0,
-                inflow=0.0, source=None, cancelled=lambda: False, progress=None):
+                inflow=0.0, source=None, cancelled=lambda: False, progress=None, observer=None):
         if not np.isfinite(end) or end < self.time:
             raise ValueError('End time must be finite and cannot go backwards')
         if (not all(np.isfinite(v) and v >= 0 for v in (rain, infiltration, inflow))
@@ -769,6 +821,8 @@ class FloodSolver:
         if inflow and (source is None or len(source) != 2 or not all(
                 isinstance(v, (int, np.integer)) and 0 <= v < n for v, n in zip(source, self.h.shape))):
             raise ValueError('Inflow requires a valid source cell')
+        self._record_speed_peak()
+        if observer is not None: observer(self)
         last_report=time.perf_counter()
         while self.time < end:
             if cancelled():
@@ -791,12 +845,23 @@ class FloodSolver:
                         limit = min(limit, t-self.time)
                         break
             dt = self.timestep(limit, raining, inflow, source)
-            if dt < 1e-10 or self.steps >= self.max_steps:
+            # A tiny final output-limited step can be an accumulated roundoff
+            # remainder, not a collapsed CFL step. Integrate it (including
+            # source budgets) rather than reporting instability or dropping it.
+            if dt <= 0 or (dt < 1e-10 and dt != remaining) or self.steps >= self.max_steps:
                 raise RuntimeError('水动力步长过小或超过步数上限: '+str(self.last_timestep))
             self.step(dt, rain=raining, infiltration=infiltration, inflow=inflow, source=source)
+            if observer is not None: observer(self)
             if progress is not None and time.perf_counter()-last_report>=1.:
                 progress(self)
                 last_report=time.perf_counter()
+
+    def hllc_audit_summary(self):
+        if self.hllc_face_audit is None: return None
+        counts = sum((a.sum(axis=(1,2)) for a in self.hllc_face_audit), np.zeros(4,dtype=np.int64))
+        return dict(scope='unblocked interior Riemann evaluations before structures; includes RK stages and explicit diagnostic flux calls; excludes outer faces',
+                    counts=dict(zip(('contact','dry_hll','small_star_hll','vacuum_hll'),map(int,counts))),
+                    total=int(counts.sum()), fallback=int(counts[1:].sum()))
 
     def summary(self):
         u, v = self.velocity()
@@ -809,6 +874,7 @@ class FloodSolver:
                     numerics=self.numerical_config(), diagnostics=dict(self.diagnostics),
                     last_timestep=dict(self.last_timestep), boundary_state_time_s=self.boundary_state_time,
                     max_speed_m_s=float(np.hypot(u, v).max()),
+                    peak_speed_m_s=self.peak_speed_m_s, peak_speed_time_s=self.peak_speed_time_s,
                     wet_area_m2=int((self.h >= .01).sum())*self.dx**2,
                     newly_flooded_area_m2=int(((self.initial < .01) & (self.h >= .01)).sum())*self.dx**2,
                     external_inflow_by_id_m3=dict(self.external_volume_by_id),

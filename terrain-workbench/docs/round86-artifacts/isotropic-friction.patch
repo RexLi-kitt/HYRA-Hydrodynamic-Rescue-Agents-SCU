@@ -1,0 +1,18 @@
+--- a/swe/dg2/friction.cpp
++++ b/swe/dg2/friction.cpp
+@@ -97,10 +97,9 @@
+ 
+ 	NUMERIC_TYPE speed = SQRT(U*U+V*V);
+ 	NUMERIC_TYPE Cf = Solverptr->g*n*n / pow(H, C(1.0)/C(3.0));
+-	NUMERIC_TYPE Sfx = -Cf*U*speed;
+-	NUMERIC_TYPE Sfy = -Cf*V*speed;
+-	NUMERIC_TYPE Dx = C(1.0) + Solverptr->Tstep*Cf/H * (C(2.0)*U*U + V*V)/speed;
+-	NUMERIC_TYPE Dy = C(1.0) + Solverptr->Tstep*Cf/H * (U*U + C(2.0)*V*V)/speed;
+-	HU += Solverptr->Tstep * Sfx / Dx;
+-	HV += Solverptr->Tstep * Sfy / Dy;
++    // Exact isotropic drag for this fixed-depth, fixed-roughness substep only.
++    const NUMERIC_TYPE damping = C(1.0) /
++        (C(1.0) + Solverptr->Tstep * Cf * speed / H);
++    HU *= damping;
++    HV *= damping;
+ }

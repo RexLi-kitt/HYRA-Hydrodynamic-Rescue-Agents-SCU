@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "17_preselected_rows_all_parsed": true,
+    "original_foi_pdf_hash_matches": true,
+    "ROME STREET RLY NO 6": true,
+    "ROME STREET ARCHES NO 1": true,
+    "BOTCHERBY": true,
+    "CALDEW RLY NO 2": true,
+    "HOLME HEAD F/B": true
+  },
+  "independent_method": "Five selected coordinates cross-checked against separately retrieved public PDF text in web tool; parser reads local original PDF.",
+  "input_hashes": {
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\\u65e0\u4eba\u673a\u96c6\u7fa4\u641c\u6551\u5927\u521b\\outputs\\round92\\all32-minimax-paths.json": "89ca1143334d553d03bcf728a3b6fbd3f0a753faa58d6035851f98a4e38ff82d",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\\u65e0\u4eba\u673a\u96c6\u7fa4\u641c\u6551\u5927\u521b\\outputs\\round92\\all-miss-components.json": "8ec500cbf843926e6a64b0be6d437651f9c0b5aab5a8c4ff3c78bd957b72b1cf",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\\u65e0\u4eba\u673a\u96c6\u7fa4\u641c\u6551\u5927\u521b\\outputs\\round91\\protocol.json": "85ebd24b9ab88dc895d5ec9b475b7e06e919b571b60351a534ac68745d34e247"
+  },
+  "simulation_checks": "Skipped: no solver/input modifications."
+}

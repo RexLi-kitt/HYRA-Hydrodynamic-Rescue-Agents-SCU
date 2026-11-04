@@ -1,0 +1,200 @@
+{
+  "created": "2026-11-01T21:38:20+08:00",
+  "reason": "Top10 by existing frozen validation_quality, ID descending tie-break; NOT selected using test scores",
+  "frozen_source_sha256": "c6e222d9f522c47720ee4f81f981f51e0bc56c4dd7c2153f6ff7f553269f53b2",
+  "candidates": [
+    {
+      "id": "coma",
+      "family": "single",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\coma\\checkpoint-0896.pt",
+      "sha256": "395c4e7921ff73a0ce87eab215d0952938a8dd7a97b19c595f02337a15c71d2b",
+      "episode": 896,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.0,
+        -95.83333333333333
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\coma\\best.json"
+    },
+    {
+      "id": "maac",
+      "family": "single",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\maac\\checkpoint-0064.pt",
+      "sha256": "41e3a0a66420b76f1e1121fb9e34f5bccd476e3de60e9d375b2ea68d7f20fc8f",
+      "episode": 64,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.0014492753623188406,
+        -105.41666666666667
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\maac\\best.json"
+    },
+    {
+      "id": "hasac",
+      "family": "single",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\hasac\\checkpoint-0000.pt",
+      "sha256": "f11d825d3ce6350b3eb479bdb39a3370e77b01b1a9f60fe721f8540914a751bf",
+      "episode": 0,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.0018346318490966513,
+        -116.80555555555556
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\hasac\\best.json"
+    },
+    {
+      "id": "happo_hasac",
+      "family": "pair",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_hasac\\checkpoint-0064.pt",
+      "sha256": "2e4bef48313a5030cabe325b9906e4da3df4d508b7504a1552d277c4c2b0d37a",
+      "episode": 64,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.001878843853995984,
+        -121.05555555555556
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_hasac\\best.json"
+    },
+    {
+      "id": "hasac_coma",
+      "family": "pair",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\checkpoint-0000.pt",
+      "sha256": "73b683e0bca0fb6ec061a0d44b051656726c1429c04fa9e0e830e61edf84e31f",
+      "episode": 0,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.002430449283052207,
+        -123.09722222222223
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\best.json"
+    },
+    {
+      "id": "happo_mat",
+      "family": "pair",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\checkpoint-0064.pt",
+      "sha256": "eccf6ac49abd62c90ce328b77cb0400ea65c1ac6d0c767f16152a5917afa58ce",
+      "episode": 64,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.004136360323429723,
+        -118.5
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\best.json"
+    },
+    {
+      "id": "happo",
+      "family": "single",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\happo\\checkpoint-0768.pt",
+      "sha256": "e0ae7e82f245eada217b51a19739599e6ab2f48ad79e71a9755195fed116cd12",
+      "episode": 768,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.0058879551820728284,
+        -121.27777777777777
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\happo\\best.json"
+    },
+    {
+      "id": "hatrpo",
+      "family": "single",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\hatrpo\\checkpoint-0384.pt",
+      "sha256": "4215d9ccec074646eefce5e92c2e1da9dcfddc0344831350d3fd50266c03bc80",
+      "episode": 384,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.006669182624997858,
+        -111.94444444444444
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\hatrpo\\best.json"
+    },
+    {
+      "id": "mat",
+      "family": "single",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\mat\\checkpoint-0192.pt",
+      "sha256": "7bd28b4628dc076629c8ecdaf3c1ab6f4a0a6ece19774163754091a6a2878dc0",
+      "episode": 192,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.006892516060518914,
+        -108.11111111111111
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\mat\\best.json"
+    },
+    {
+      "id": "hatrpo_maac",
+      "family": "pair",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\checkpoint-0128.pt",
+      "sha256": "6c982f49aedf19a524bbaa6c052c89f76b29a781f76dfd1d5493615d338565bb",
+      "episode": 128,
+      "validation_quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.00730247081380238,
+        -114.70833333333333
+      ],
+      "best_source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\best.json"
+    }
+  ],
+  "all21_order": [
+    "coma",
+    "maac",
+    "hasac",
+    "happo_hasac",
+    "hasac_coma",
+    "happo_mat",
+    "happo",
+    "hatrpo",
+    "mat",
+    "hatrpo_maac",
+    "happo_coma",
+    "hasac_mat",
+    "maac_mat",
+    "hasac_maac",
+    "maac_coma",
+    "happo_hatrpo",
+    "hatrpo_coma",
+    "mat_coma",
+    "happo_maac",
+    "hatrpo_hasac",
+    "hatrpo_mat"
+  ]
+}

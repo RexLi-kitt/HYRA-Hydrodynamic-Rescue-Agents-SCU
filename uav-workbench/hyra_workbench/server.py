@@ -10,6 +10,7 @@ from . import profiles
 from .large_flood_jobs import run_large_flood
 from .jobs import JobBusy, JobRunner
 from .paths import STATIC, ROOT
+from . import six_study
 
 JOBS = JobRunner()
 VERSION = 'hyra-eight-workbench-v5'
@@ -19,6 +20,9 @@ CATALOG_ROUTES = {
     '/api/workbench/signal-routes/catalog': 'signal_routes',
 }
 STATIC_ROUTES = {
+    '/six-study': ('six-study.html', 'text/html; charset=utf-8'),
+    '/six-study.js': ('six-study.js', 'text/javascript; charset=utf-8'),
+    '/six-study.css': ('six-study.css', 'text/css; charset=utf-8'),
     '/': ('workbench-scale100.html', 'text/html; charset=utf-8'),
     '/rescue.html': ('workbench-scale100.html', 'text/html; charset=utf-8'),
     '/app.js': ('workbench-scale100.js', 'text/javascript; charset=utf-8'),
@@ -38,6 +42,10 @@ class Handler(ArtifactHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         try:
+            if path == '/api/six-study/catalog':
+                return self.reply(six_study.catalogue())
+            if path.startswith('/six-study-runs/'):
+                return self.reply(six_study.replay_file(path.removeprefix('/six-study-runs/')).read_bytes())
             if path == '/large-flood':
                 return self.reply((STATIC / 'large-flood.html').read_bytes(), content_type='text/html; charset=utf-8')
             if path.startswith('/large-flood-runs/'):
@@ -68,6 +76,21 @@ class Handler(ArtifactHandler):
             return self.reply(dict(error=str(error)), 400)
 
     def do_POST(self):
+        if urlparse(self.path).path == '/api/six-study/run':
+            origin = self.headers.get('Origin')
+            if origin and origin != 'http://' + self.headers.get('Host', ''):
+                return self.reply(dict(error='拒绝跨来源请求'), 403)
+            try:
+                size = int(self.headers.get('Content-Length', '0'))
+                if not 0 < size <= 4096:
+                    raise ValueError('任务参数为空或过大')
+                return self.reply(six_study.execute(json.loads(self.rfile.read(size)), JOBS))
+            except JobBusy as error:
+                return self.reply(dict(error=str(error)), 409)
+            except subprocess.TimeoutExpired:
+                return self.reply(dict(error='演示超时，日志已保留，正式结果不变'), 504)
+            except (OSError, ValueError, KeyError, TypeError) as error:
+                return self.reply(dict(error=str(error)), 400)
         if urlparse(self.path).path == '/api/large-flood/run':
             return run_large_flood(self, JOBS)
         if urlparse(self.path).path != '/api/workbench/run':

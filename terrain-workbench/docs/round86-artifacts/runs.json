@@ -1,0 +1,60 @@
+{
+  "cfl033": {
+    "exit": 0,
+    "wall_s": 56.24806809999427,
+    "steps": 1058,
+    "median_dt": 0.5387208008235942,
+    "end_s": 600.0,
+    "source_m3": 11109.36,
+    "boundary_m3": 0.0,
+    "balance_error_m3": -3.001332515850663e-10,
+    "source_equals_baseline600": true,
+    "source_times_equal": true,
+    "boundary_times_equal": true,
+    "frames": [
+      {
+        "time_s": 300,
+        "finite_nonnegative": true,
+        "volume_m3": 2777.3399999999006,
+        "momentum_finite": true
+      },
+      {
+        "time_s": 600,
+        "finite_nonnegative": true,
+        "volume_m3": 11109.3599999997,
+        "momentum_finite": true
+      }
+    ],
+    "rejections": 0,
+    "passed": true
+  },
+  "cfl0165": {
+    "exit": 0,
+    "wall_s": 105.93551350000052,
+    "steps": 2051,
+    "median_dt": 0.27026937129552925,
+    "end_s": 600.0,
+    "source_m3": 11109.36,
+    "boundary_m3": 0.0,
+    "balance_error_m3": -6.984919309616089e-10,
+    "source_equals_baseline600": true,
+    "source_times_equal": true,
+    "boundary_times_equal": true,
+    "frames": [
+      {
+        "time_s": 300,
+        "finite_nonnegative": true,
+        "volume_m3": 2777.34,
+        "momentum_finite": true
+      },
+      {
+        "time_s": 600,
+        "finite_nonnegative": true,
+        "volume_m3": 11109.359999999302,
+        "momentum_finite": true
+      }
+    ],
+    "rejections": 0,
+    "passed": true
+  }
+}

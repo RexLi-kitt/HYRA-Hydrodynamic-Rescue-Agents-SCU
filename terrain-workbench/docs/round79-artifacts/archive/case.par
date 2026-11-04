@@ -1,0 +1,15 @@
+DEMfile CarlislefixDEMwithbedDG2.asc
+bdyfile carlisle.bdy
+bcifile carlisle.bci
+stagefile carlisle.stage
+dirroot results
+resroot check
+dg2
+mint_hk
+max_Froude 1
+fpfric .06
+sim_time 60
+initial_tstep 1
+massint 10
+saveint 60
+output_precision 12

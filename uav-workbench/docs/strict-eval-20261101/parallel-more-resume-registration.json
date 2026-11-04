@@ -1,0 +1,16 @@
+{
+  "user_request": "Accelerate remaining evaluation",
+  "workers": 6,
+  "threads_each": 2,
+  "old_registration_sha256": "b93b1456beca685eec50efbe48b0c52ec18fc1241d9c753a69f49f6e21bae465",
+  "wrapper_sha256": "7578e9d03cb3f2aa5a0e02bcbb15feb7f5abf92c5f3bee57569bc97a2e214b56",
+  "preflight_sha256": "e23d239b43a91c293e8818d390f4dcbef25fc60ce516cd823fc7858a7d97bb0e",
+  "completed_prefix_records": 2603,
+  "remaining": 3027,
+  "prefix_sha256": "ed160db02b9c6e7927cfbcf04c15dad893bb04602320e7c82283b2339db50a03",
+  "frozen_sha256": "c6e222d9f522c47720ee4f81f981f51e0bc56c4dd7c2153f6ff7f553269f53b2",
+  "scenario_manifest_sha256": "6d6b4037fcdf7ac2a4b51738804f8be74a4572a0c653c9aa3733f7fdd1d74290",
+  "preserves": "All5630 predefined records; exact seeds, checkpoints, rules, full/no-cover controls, all role assignments; no test-based selection",
+  "original_time_budget": "Shared original8h test budget, not reset",
+  "original_elapsed_s": 2323.7259328
+}

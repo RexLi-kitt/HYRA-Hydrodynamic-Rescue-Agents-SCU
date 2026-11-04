@@ -1,0 +1,70 @@
+{
+  "status": "completed",
+  "pid": 11188,
+  "updated": "2026-11-01 21:16:46",
+  "elapsed_s": 7689.25,
+  "extension": {
+    "happo": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": false,
+        "improves_896_to_1024": true,
+        "material_gain_over_256": false,
+        "best_after_256": true
+      }
+    },
+    "hatrpo": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": false,
+        "improves_896_to_1024": false,
+        "material_gain_over_256": true,
+        "best_after_256": true
+      }
+    },
+    "hasac": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": false,
+        "improves_896_to_1024": false,
+        "material_gain_over_256": false,
+        "best_after_256": false
+      }
+    },
+    "maac": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": false,
+        "improves_896_to_1024": false,
+        "material_gain_over_256": true,
+        "best_after_256": false
+      }
+    },
+    "mat": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": false,
+        "improves_896_to_1024": false,
+        "material_gain_over_256": false,
+        "best_after_256": false
+      }
+    },
+    "coma": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": true,
+        "improves_896_to_1024": false,
+        "material_gain_over_256": true,
+        "best_after_256": true
+      }
+    }
+  },
+  "completed": {
+    "happo": 1024,
+    "hatrpo": 1024,
+    "hasac": 1024,
+    "maac": 1024,
+    "mat": 1024,
+    "coma": 1024
+  }
+}

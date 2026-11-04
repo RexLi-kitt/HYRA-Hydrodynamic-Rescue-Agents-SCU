@@ -1,0 +1,566 @@
+{
+  "master_seed": 719315978554414046,
+  "scenarios": [
+    {
+      "id": "iid-00",
+      "stratum": "iid50",
+      "water_seed": 1000009366,
+      "layout_seed": 1000091621,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-01",
+      "stratum": "iid50",
+      "water_seed": 1000094827,
+      "layout_seed": 1000056527,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-02",
+      "stratum": "iid50",
+      "water_seed": 1000025001,
+      "layout_seed": 1000023344,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-03",
+      "stratum": "iid50",
+      "water_seed": 1000051195,
+      "layout_seed": 1000064743,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-04",
+      "stratum": "iid50",
+      "water_seed": 1000084762,
+      "layout_seed": 1000000217,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-05",
+      "stratum": "iid50",
+      "water_seed": 1000068853,
+      "layout_seed": 1000029476,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-06",
+      "stratum": "iid50",
+      "water_seed": 1000064650,
+      "layout_seed": 1000071567,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-07",
+      "stratum": "iid50",
+      "water_seed": 1000020222,
+      "layout_seed": 1000027851,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-08",
+      "stratum": "iid50",
+      "water_seed": 1000071313,
+      "layout_seed": 1000060516,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-09",
+      "stratum": "iid50",
+      "water_seed": 1000037123,
+      "layout_seed": 1000034910,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-10",
+      "stratum": "iid50",
+      "water_seed": 1000067355,
+      "layout_seed": 1000061889,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-11",
+      "stratum": "iid50",
+      "water_seed": 1000059475,
+      "layout_seed": 1000022482,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-12",
+      "stratum": "iid50",
+      "water_seed": 1000071239,
+      "layout_seed": 1000067285,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-13",
+      "stratum": "iid50",
+      "water_seed": 1000004690,
+      "layout_seed": 1000009799,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-14",
+      "stratum": "iid50",
+      "water_seed": 1000017029,
+      "layout_seed": 1000031077,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-15",
+      "stratum": "iid50",
+      "water_seed": 1000007706,
+      "layout_seed": 1000088354,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-16",
+      "stratum": "iid50",
+      "water_seed": 1000005405,
+      "layout_seed": 1000098927,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-17",
+      "stratum": "iid50",
+      "water_seed": 1000096719,
+      "layout_seed": 1000035285,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-18",
+      "stratum": "iid50",
+      "water_seed": 1000060543,
+      "layout_seed": 1000001561,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-19",
+      "stratum": "iid50",
+      "water_seed": 1000001814,
+      "layout_seed": 1000078786,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-20",
+      "stratum": "iid50",
+      "water_seed": 1000072069,
+      "layout_seed": 1000034465,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-21",
+      "stratum": "iid50",
+      "water_seed": 1000090641,
+      "layout_seed": 1000072600,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-22",
+      "stratum": "iid50",
+      "water_seed": 1000002722,
+      "layout_seed": 1000090941,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-23",
+      "stratum": "iid50",
+      "water_seed": 1000007203,
+      "layout_seed": 1000026155,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-24",
+      "stratum": "iid50",
+      "water_seed": 1000065650,
+      "layout_seed": 1000040225,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-25",
+      "stratum": "iid50",
+      "water_seed": 1000001497,
+      "layout_seed": 1000027826,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-26",
+      "stratum": "iid50",
+      "water_seed": 1000019584,
+      "layout_seed": 1000039937,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-27",
+      "stratum": "iid50",
+      "water_seed": 1000086494,
+      "layout_seed": 1000075331,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-28",
+      "stratum": "iid50",
+      "water_seed": 1000003613,
+      "layout_seed": 1000066746,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-29",
+      "stratum": "iid50",
+      "water_seed": 1000006318,
+      "layout_seed": 1000070625,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-30",
+      "stratum": "iid50",
+      "water_seed": 1000042223,
+      "layout_seed": 1000043697,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-31",
+      "stratum": "iid50",
+      "water_seed": 1000041136,
+      "layout_seed": 1000077214,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-32",
+      "stratum": "iid50",
+      "water_seed": 1000089750,
+      "layout_seed": 1000050816,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-33",
+      "stratum": "iid50",
+      "water_seed": 1000000966,
+      "layout_seed": 1000014150,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-34",
+      "stratum": "iid50",
+      "water_seed": 1000079288,
+      "layout_seed": 1000094278,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-35",
+      "stratum": "iid50",
+      "water_seed": 1000033054,
+      "layout_seed": 1000025821,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-36",
+      "stratum": "iid50",
+      "water_seed": 1000074370,
+      "layout_seed": 1000096870,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-37",
+      "stratum": "iid50",
+      "water_seed": 1000015822,
+      "layout_seed": 1000003075,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-38",
+      "stratum": "iid50",
+      "water_seed": 1000071664,
+      "layout_seed": 1000051424,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-39",
+      "stratum": "iid50",
+      "water_seed": 1000029172,
+      "layout_seed": 1000078160,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-40",
+      "stratum": "iid50",
+      "water_seed": 1000066600,
+      "layout_seed": 1000017804,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-41",
+      "stratum": "iid50",
+      "water_seed": 1000063049,
+      "layout_seed": 1000068891,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-42",
+      "stratum": "iid50",
+      "water_seed": 1000076717,
+      "layout_seed": 1000031138,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-43",
+      "stratum": "iid50",
+      "water_seed": 1000040399,
+      "layout_seed": 1000082263,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-44",
+      "stratum": "iid50",
+      "water_seed": 1000080743,
+      "layout_seed": 1000016369,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-45",
+      "stratum": "iid50",
+      "water_seed": 1000051470,
+      "layout_seed": 1000023820,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-46",
+      "stratum": "iid50",
+      "water_seed": 1000075034,
+      "layout_seed": 1000076097,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-47",
+      "stratum": "iid50",
+      "water_seed": 1000076725,
+      "layout_seed": 1000063551,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-48",
+      "stratum": "iid50",
+      "water_seed": 1000019216,
+      "layout_seed": 1000037682,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "iid-49",
+      "stratum": "iid50",
+      "water_seed": 1000063627,
+      "layout_seed": 1000061696,
+      "rotation_k": 0,
+      "clustered": false
+    },
+    {
+      "id": "shift-50",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000086138,
+      "layout_seed": 1000005559,
+      "rotation_k": 1,
+      "clustered": true
+    },
+    {
+      "id": "shift-51",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000009855,
+      "layout_seed": 1000006320,
+      "rotation_k": 2,
+      "clustered": true
+    },
+    {
+      "id": "shift-52",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000006743,
+      "layout_seed": 1000044024,
+      "rotation_k": 3,
+      "clustered": true
+    },
+    {
+      "id": "shift-53",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000091505,
+      "layout_seed": 1000078044,
+      "rotation_k": 1,
+      "clustered": true
+    },
+    {
+      "id": "shift-54",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000044513,
+      "layout_seed": 1000054160,
+      "rotation_k": 2,
+      "clustered": true
+    },
+    {
+      "id": "shift-55",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000010290,
+      "layout_seed": 1000078261,
+      "rotation_k": 3,
+      "clustered": true
+    },
+    {
+      "id": "shift-56",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000093606,
+      "layout_seed": 1000087509,
+      "rotation_k": 1,
+      "clustered": true
+    },
+    {
+      "id": "shift-57",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000005157,
+      "layout_seed": 1000097764,
+      "rotation_k": 2,
+      "clustered": true
+    },
+    {
+      "id": "shift-58",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000098436,
+      "layout_seed": 1000038398,
+      "rotation_k": 3,
+      "clustered": true
+    },
+    {
+      "id": "shift-59",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000061709,
+      "layout_seed": 1000084878,
+      "rotation_k": 1,
+      "clustered": true
+    },
+    {
+      "id": "shift-60",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000086373,
+      "layout_seed": 1000068181,
+      "rotation_k": 2,
+      "clustered": true
+    },
+    {
+      "id": "shift-61",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000097161,
+      "layout_seed": 1000092472,
+      "rotation_k": 3,
+      "clustered": true
+    },
+    {
+      "id": "shift-62",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000062812,
+      "layout_seed": 1000062028,
+      "rotation_k": 1,
+      "clustered": true
+    },
+    {
+      "id": "shift-63",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000086022,
+      "layout_seed": 1000053943,
+      "rotation_k": 2,
+      "clustered": true
+    },
+    {
+      "id": "shift-64",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000012374,
+      "layout_seed": 1000020690,
+      "rotation_k": 3,
+      "clustered": true
+    },
+    {
+      "id": "shift-65",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000038768,
+      "layout_seed": 1000023387,
+      "rotation_k": 1,
+      "clustered": true
+    },
+    {
+      "id": "shift-66",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000085075,
+      "layout_seed": 1000085594,
+      "rotation_k": 2,
+      "clustered": true
+    },
+    {
+      "id": "shift-67",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000041404,
+      "layout_seed": 1000066268,
+      "rotation_k": 3,
+      "clustered": true
+    },
+    {
+      "id": "shift-68",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000061695,
+      "layout_seed": 1000093101,
+      "rotation_k": 1,
+      "clustered": true
+    },
+    {
+      "id": "shift-69",
+      "stratum": "orientation_cluster20",
+      "water_seed": 1000041330,
+      "layout_seed": 1000006009,
+      "rotation_k": 2,
+      "clustered": true
+    }
+  ],
+  "regeneration_on_poor_results": false
+}

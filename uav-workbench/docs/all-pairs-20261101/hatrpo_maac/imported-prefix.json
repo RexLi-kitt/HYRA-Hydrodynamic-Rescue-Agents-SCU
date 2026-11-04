@@ -1,0 +1,15 @@
+{
+  "source_run": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\hatrpo_maac",
+  "checkpoints": [
+    {
+      "episode": 0,
+      "source_sha256": "048c8545e7190314c029a10cb64aeb61ae1188d15e53aa5d5f18eb4d6c420aac",
+      "migrated_sha256": "65b194189000deb139fb7d9b79cc19feb7dcc3f9cd414b8843e1b1a50d947c7a"
+    },
+    {
+      "episode": 2,
+      "source_sha256": "165f50ade88e9af69d4cdad6a00d842c1bc616835cdebcd73d771d5d896c3e4b",
+      "migrated_sha256": "7a338489b71e175829ab2715dfdf245548bf38206c43ddf0f1071683695013cd"
+    }
+  ]
+}

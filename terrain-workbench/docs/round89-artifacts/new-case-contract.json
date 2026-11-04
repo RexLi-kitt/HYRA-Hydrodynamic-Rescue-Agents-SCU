@@ -1,0 +1,35 @@
+{
+  "case_id": "Carlisle2005-Kabir2020-5m-independent-input-candidate",
+  "status": "input identity audited; not simulated or field accepted",
+  "author_revision": "eadfc848a6d37cb3476da2fe6ec7087262d9ef54",
+  "dem": "original/Carlisle_5m.asc",
+  "boundary_locations": "original/carlisle.bci",
+  "event_total_flow": "original/Upstream_Flows_Run1.csv",
+  "matching_unit_width_boundary": "original/carlisle_run7.bdy",
+  "original_mislabeled_boundary_preserved": "original/carlisle_run1.bdy",
+  "mapping_basis": "274 original times and all 3x274 samples match within export rounding 1e-5 m3/s, using 11/6/6 points at 5m; no time shift or fitted scaling",
+  "date_origin_source": "Kabir2020 Figure4: 2005-01-07 00:00 for 2005 hydrographs; retain civil-time label and confirm timezone before UTC gauge overlay",
+  "grid": {
+    "ncols": 951.0,
+    "nrows": 611.0,
+    "xllcorner": 338500.0,
+    "yllcorner": 554700.0,
+    "cellsize": 5.0,
+    "nodata_value": -9999.0
+  },
+  "duration_s": 245700,
+  "friction_n": 0.055,
+  "outlet": "W 554000 558000 FREE 0.0006",
+  "not_the_rong10m_or_T07_reproduction": true,
+  "observations": "existing round68 independent maximum extents and survey points; maximum-event comparison only after completed event and valid coverage check; no dry assumption outside surveyed extent",
+  "remaining_gates": [
+    "verify acceleration + sgc_enable point-source semantics in chosen existing backend; no inherited DG2 scores",
+    "verify DEM represents same event and channel/initial-state handling; retain authoritative flags, do not silently change drycheckoff",
+    "freeze spatial observation objects and unknown/coverage rules before running",
+    "measure bounded runtime/memory and checkpoint support before full event; no from-zero overnight loop",
+    "derive UTC mapping only with source evidence; 18Points files are locations not time series"
+  ],
+  "next_minimum_test": "static unit/path audit, then bounded inlet/finite/nonnegative/mass probe only if original flag semantics are understood",
+  "field_passes_added": 0,
+  "production_changed": false
+}

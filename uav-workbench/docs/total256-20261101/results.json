@@ -1,0 +1,548 @@
+{
+  "happo": {
+    "status": "completed",
+    "total_episode": 256,
+    "phase_steps": 57600,
+    "elapsed_s": 173.57548339999994,
+    "evaluations": {
+      "64": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.0025,
+          "RCR": 0.8375,
+          "coverage": 0.837025,
+          "rescued": 16.75,
+          "FRT": {
+            "mean": 5.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 111.75,
+          "ACC": 0.006696428571428571,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 5.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 102.0,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      },
+      "256": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.2375,
+          "RCR": 0.8125,
+          "coverage": 0.82045,
+          "rescued": 16.25,
+          "FRT": {
+            "mean": 5.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 103.0,
+          "ACC": 0.024962462462462462,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 5.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 97.75,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      }
+    },
+    "checkpoint_hash": "e74e57921b005beaebbb1ad1321a8b421566ac25a9faed93f1454cc40102b87e",
+    "formal_test_executed": false,
+    "resumable_to": 1024
+  },
+  "hatrpo": {
+    "status": "completed",
+    "total_episode": 256,
+    "phase_steps": 57600,
+    "elapsed_s": 180.42639770000005,
+    "evaluations": {
+      "64": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.14791666666666667,
+          "RCR": 0.75,
+          "coverage": 0.786575,
+          "rescued": 15.0,
+          "FRT": {
+            "mean": 7.5,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 93.0,
+            "valid": 2,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.25,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 125.75,
+          "ACC": 0.054229725406413694,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 7.5,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 119.25,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      },
+      "256": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.37,
+          "RCR": 0.825,
+          "coverage": 0.8298749999999999,
+          "rescued": 16.5,
+          "FRT": {
+            "mean": 6.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 119.75,
+          "ACC": 0.06730115841793784,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 6.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 117.0,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      }
+    },
+    "checkpoint_hash": "ffe80d749b08e6d216821f2d0b13e6f768034237e6cfee4c9a311638c927845e",
+    "formal_test_executed": false,
+    "resumable_to": 1024
+  },
+  "hasac": {
+    "status": "completed",
+    "total_episode": 256,
+    "phase_steps": 57600,
+    "elapsed_s": 539.3763435000001,
+    "evaluations": {
+      "64": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.0075,
+          "RCR": 0.725,
+          "coverage": 0.7107125,
+          "rescued": 14.5,
+          "FRT": {
+            "mean": 11.75,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 117.0,
+            "valid": 2,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.25,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 124.25,
+          "ACC": 0.01508525270273936,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 11.75,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 117.5,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      },
+      "256": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.0125,
+          "RCR": 0.89375,
+          "coverage": 0.8994875,
+          "rescued": 17.875,
+          "FRT": {
+            "mean": 5.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 113.875,
+          "ACC": 0.006253908692933083,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 5.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 109.375,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      }
+    },
+    "checkpoint_hash": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80",
+    "formal_test_executed": false,
+    "resumable_to": 1024
+  },
+  "maac": {
+    "status": "completed",
+    "total_episode": 256,
+    "phase_steps": 57600,
+    "elapsed_s": 362.51716510000006,
+    "evaluations": {
+      "64": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.11291666666666667,
+          "RCR": 0.7875000000000001,
+          "coverage": 0.747475,
+          "rescued": 15.75,
+          "FRT": {
+            "mean": 5.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 109.375,
+          "ACC": 0.005597014925373134,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 5.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 98.5,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      },
+      "256": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.12583333333333335,
+          "RCR": 0.875,
+          "coverage": 0.8423499999999999,
+          "rescued": 17.5,
+          "FRT": {
+            "mean": 38.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 106.5,
+          "ACC": 0.0,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 9.75,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 98.0,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      }
+    },
+    "checkpoint_hash": "d1f42b7cc5effdb6e137d682c95d7f303e2daa2e88ca527725452a18acecf625",
+    "formal_test_executed": false,
+    "resumable_to": 1024
+  },
+  "mat": {
+    "status": "completed",
+    "total_episode": 256,
+    "phase_steps": 57547,
+    "elapsed_s": 267.12862609999956,
+    "evaluations": {
+      "64": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.0,
+          "RCR": 0.6875,
+          "coverage": 0.736875,
+          "rescued": 13.75,
+          "FRT": {
+            "mean": 8.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 101.75,
+          "ACC": 0.0063025210084033615,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 8.25,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 93.0,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      },
+      "256": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.6758333333333333,
+          "RCR": 0.5875,
+          "coverage": 0.621175,
+          "rescued": 11.75,
+          "FRT": {
+            "mean": 7.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 89.0,
+            "valid": 2,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.25,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 116.5,
+          "ACC": 0.06292744573297651,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 7.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 95.25,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      }
+    },
+    "checkpoint_hash": "640230a08c5d878f19230a51fbf239fa84ad6845921a318450f2baab2f1f38f2",
+    "formal_test_executed": false,
+    "resumable_to": 1024
+  },
+  "coma": {
+    "status": "completed",
+    "total_episode": 256,
+    "phase_steps": 57600,
+    "elapsed_s": 162.56679460000032,
+    "evaluations": {
+      "64": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.4358333333333333,
+          "RCR": 0.8875,
+          "coverage": 0.859275,
+          "rescued": 17.75,
+          "FRT": {
+            "mean": 6.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 119.5,
+          "ACC": 0.04006203673864002,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 6.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 108.25,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      },
+      "256": {
+        "service": {
+          "ST": 300.0,
+          "ACC": 0.0,
+          "RCR": 0.0125,
+          "coverage": 0.037474999999999994,
+          "rescued": 0.25,
+          "FRT": {
+            "mean": 4.0,
+            "valid": 2,
+            "total": 8
+          },
+          "CRT": {
+            "mean": null,
+            "valid": 0,
+            "total": 8
+          },
+          "all_rescued_fraction": 0.0,
+          "timeout_fraction": 1.0
+        },
+        "watchdog": {
+          "ST": 89.0,
+          "ACC": 0.008333333333333333,
+          "RCR": 1.0,
+          "coverage": 1.0,
+          "rescued": 20.0,
+          "FRT": {
+            "mean": 9.0,
+            "valid": 8,
+            "total": 8
+          },
+          "CRT": {
+            "mean": 86.5,
+            "valid": 8,
+            "total": 8
+          },
+          "all_rescued_fraction": 1.0,
+          "timeout_fraction": 0.0
+        }
+      }
+    },
+    "checkpoint_hash": "24342b00427fe5f883c180d11e19ccbf5266c58eecf0acc0fce9986d949e16d3",
+    "formal_test_executed": false,
+    "resumable_to": 1024
+  }
+}

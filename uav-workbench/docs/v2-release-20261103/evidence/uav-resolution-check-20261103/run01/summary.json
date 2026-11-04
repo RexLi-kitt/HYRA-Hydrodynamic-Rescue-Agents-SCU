@@ -1,0 +1,98 @@
+{
+  "status": "completed",
+  "results": {
+    "view60-w360": {
+      "coverage100": {
+        "step5": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 377,
+          "people_rate": 0.7854166666666667,
+          "all_rate": 0.0,
+          "p95_rate": 0.16666666666666666,
+          "unseen": 42,
+          "refloats": 0
+        },
+        "step1": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 466,
+          "people_rate": 0.9708333333333333,
+          "all_rate": 0.4166666666666667,
+          "p95_rate": 0.75,
+          "unseen": 10,
+          "refloats": 0
+        }
+      },
+      "flow_coverage": {
+        "step5": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 384,
+          "people_rate": 0.8,
+          "all_rate": 0.0,
+          "p95_rate": 0.16666666666666666,
+          "unseen": 40,
+          "refloats": 0
+        },
+        "step1": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 459,
+          "people_rate": 0.95625,
+          "all_rate": 0.25,
+          "p95_rate": 0.6666666666666666,
+          "unseen": 17,
+          "refloats": 0
+        }
+      },
+      "gru-16": {
+        "step5": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 434,
+          "people_rate": 0.9041666666666667,
+          "all_rate": 0.25,
+          "p95_rate": 0.6666666666666666,
+          "unseen": 10,
+          "refloats": 0
+        },
+        "step1": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 479,
+          "people_rate": 0.9979166666666667,
+          "all_rate": 0.9166666666666666,
+          "p95_rate": 1.0,
+          "unseen": 1,
+          "refloats": 0
+        }
+      },
+      "gru-32_flowblend": {
+        "step5": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 441,
+          "people_rate": 0.91875,
+          "all_rate": 0.08333333333333333,
+          "p95_rate": 0.5,
+          "unseen": 13,
+          "refloats": 0
+        },
+        "step1": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 478,
+          "people_rate": 0.9958333333333333,
+          "all_rate": 0.8333333333333334,
+          "p95_rate": 1.0,
+          "unseen": 0,
+          "refloats": 0
+        }
+      }
+    }
+  },
+  "rollouts": 48,
+  "epochs": 0,
+  "only_resolution_sensitivity": true
+}

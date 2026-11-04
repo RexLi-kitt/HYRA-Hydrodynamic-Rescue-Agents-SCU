@@ -1,0 +1,11 @@
+{
+  "algorithm": "hasac",
+  "parent_checkpoint": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt",
+  "parent_hash": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80",
+  "protocol_hash": "d429911bf6f65a0c129545ab9dc63372f08bcf976a989969d6afa3c42d2196dc",
+  "guard": true,
+  "target": 1024,
+  "reward": "unchanged",
+  "training_layout": "920000+total_episode-65 (same sequence continued)",
+  "replay": "retained original valid transitions and masks, no reward relabeling"
+}

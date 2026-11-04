@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "file": "checkpoints/coma-ep0896.pt",
+      "bytes": 64295529,
+      "sha256": "395c4e7921ff73a0ce87eab215d0952938a8dd7a97b19c595f02337a15c71d2b"
+    },
+    {
+      "file": "checkpoints/happo-ep0768.pt",
+      "bytes": 63236165,
+      "sha256": "e0ae7e82f245eada217b51a19739599e6ab2f48ad79e71a9755195fed116cd12"
+    },
+    {
+      "file": "checkpoints/happo_hasac-ep0064.pt",
+      "bytes": 80452077,
+      "sha256": "2e4bef48313a5030cabe325b9906e4da3df4d508b7504a1552d277c4c2b0d37a"
+    },
+    {
+      "file": "checkpoints/happo_mat-ep0064.pt",
+      "bytes": 65525141,
+      "sha256": "eccf6ac49abd62c90ce328b77cb0400ea65c1ac6d0c767f16152a5917afa58ce"
+    },
+    {
+      "file": "checkpoints/hasac-ep0000.pt",
+      "bytes": 7750600,
+      "sha256": "f11d825d3ce6350b3eb479bdb39a3370e77b01b1a9f60fe721f8540914a751bf"
+    },
+    {
+      "file": "checkpoints/hasac_coma-ep0000.pt",
+      "bytes": 12421244,
+      "sha256": "73b683e0bca0fb6ec061a0d44b051656726c1429c04fa9e0e830e61edf84e31f"
+    },
+    {
+      "file": "checkpoints/hatrpo-ep0384.pt",
+      "bytes": 61356552,
+      "sha256": "4215d9ccec074646eefce5e92c2e1da9dcfddc0344831350d3fd50266c03bc80"
+    },
+    {
+      "file": "checkpoints/hatrpo_maac-ep0128.pt",
+      "bytes": 67999145,
+      "sha256": "6c982f49aedf19a524bbaa6c052c89f76b29a781f76dfd1d5493615d338565bb"
+    },
+    {
+      "file": "checkpoints/maac-ep0064.pt",
+      "bytes": 61803913,
+      "sha256": "41e3a0a66420b76f1e1121fb9e34f5bccd476e3de60e9d375b2ea68d7f20fc8f"
+    },
+    {
+      "file": "checkpoints/mat-ep0192.pt",
+      "bytes": 56562309,
+      "sha256": "7bd28b4628dc076629c8ecdaf3c1ab6f4a0a6ece19774163754091a6a2878dc0"
+    },
+    {
+      "file": "selection.json",
+      "bytes": 7497,
+      "sha256": "85e32c3257473a53458cdf1c2ed6c51adabe6dc6f1de7692fdfd8d74a469cfd3"
+    },
+    {
+      "file": "statistics.json",
+      "bytes": 39065,
+      "sha256": "0d1ed1598857cae2c2e2f694aa1e57e758b9b20eabf846fda69f0eb0c4c5594d"
+    },
+    {
+      "file": "test-snapshot.jsonl",
+      "bytes": 658521,
+      "sha256": "f9506522bd5a5e4e58e6a2a9f4d54f4c1afd3ed12514d05a944ab00e12a194dc"
+    },
+    {
+      "file": "参数统计.html",
+      "bytes": 5424,
+      "sha256": "2381fa5c0750c52504e4c032cb2c36096d64a7d72c1cb1e810474f87d51e0a7d"
+    },
+    {
+      "file": "参数统计.md",
+      "bytes": 3849,
+      "sha256": "b35e452647a5d7182683e9cb1fc6f7ce305059eddd0745bb6a6925aadf12c07d"
+    }
+  ]
+}

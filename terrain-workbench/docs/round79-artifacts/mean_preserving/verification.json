@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "wall_s": 2.6740715999985696,
+  "passed": true,
+  "steps": 60,
+  "end_s": 60.0,
+  "finite_nonnegative": true,
+  "min_depth_m": 0.0,
+  "max_depth_m": 0.328656936373,
+  "negative_trace": false,
+  "source_m3": 111.09360000000001,
+  "boundary_net_m3": 0.0,
+  "volume_m3": 111.09360000000001,
+  "ledger_error_m3": 0.0,
+  "source_error_m3": 1.4210854715202004e-14,
+  "wet_cells_numerical": 9,
+  "boundary_header": "0 1 0 0 0 0 0.030859333333333332 0"
+}

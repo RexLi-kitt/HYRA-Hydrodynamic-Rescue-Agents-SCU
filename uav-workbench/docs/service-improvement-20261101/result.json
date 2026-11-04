@@ -1,0 +1,82 @@
+{
+  "baseline": {
+    "ST": 300.0,
+    "ACC": 0.41375000000000006,
+    "RCR": 0.0,
+    "coverage": 0.6927875000000001,
+    "rescued": 0.0,
+    "FRT": {
+      "mean": null,
+      "valid": 0,
+      "total": 8
+    },
+    "CRT": {
+      "mean": null,
+      "valid": 0,
+      "total": 8
+    },
+    "all_rescued_fraction": 0.0,
+    "timeout_fraction": 1.0
+  },
+  "control": {
+    "ST": 300.0,
+    "ACC": 0.29375,
+    "RCR": 0.0,
+    "coverage": 0.8338375,
+    "rescued": 0.0,
+    "FRT": {
+      "mean": null,
+      "valid": 0,
+      "total": 8
+    },
+    "CRT": {
+      "mean": null,
+      "valid": 0,
+      "total": 8
+    },
+    "all_rescued_fraction": 0.0,
+    "timeout_fraction": 1.0
+  },
+  "imitation_only": {
+    "ST": 300.0,
+    "ACC": 0.20916666666666667,
+    "RCR": 0.0125,
+    "coverage": 0.9290750000000001,
+    "rescued": 0.25,
+    "FRT": {
+      "mean": 44.0,
+      "valid": 1,
+      "total": 8
+    },
+    "CRT": {
+      "mean": null,
+      "valid": 0,
+      "total": 8
+    },
+    "all_rescued_fraction": 0.0,
+    "timeout_fraction": 1.0
+  },
+  "candidate": {
+    "ST": 300.0,
+    "ACC": 0.33208333333333334,
+    "RCR": 0.0,
+    "coverage": 0.82225,
+    "rescued": 0.0,
+    "FRT": {
+      "mean": null,
+      "valid": 0,
+      "total": 8
+    },
+    "CRT": {
+      "mean": null,
+      "valid": 0,
+      "total": 8
+    },
+    "all_rescued_fraction": 0.0,
+    "timeout_fraction": 1.0
+  },
+  "successful": false,
+  "elapsed_s": 213.46856000000025,
+  "formal_test_executed": false,
+  "limitation": "one seed, small reused validation set, adapted implementation, extra demonstration cost; no six-method ranking"
+}

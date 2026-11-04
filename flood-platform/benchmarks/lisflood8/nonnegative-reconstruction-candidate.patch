@@ -1,0 +1,43 @@
+--- a/swe/dg2.cpp
++++ b/swe/dg2.cpp
+@@ -112,6 +112,24 @@
+     if(material){fprintf(stderr,"Trace reached material negative depth; expected diagnostic exit 42\n");fflush(NULL);exit(42);}
+ }
+ 
++#include <cfloat>
++
++// Experimental reconstruction-only candidate. This is not a proof of mean
++// positivity: the existing CFL and hydrostatic discretisation are unchanged.
++static void limit_nonnegative_reconstruction(Pars* p, dg2::FlowCoefficients const& u)
++{
++    for(int k=0;k<p->xsz*p->ysz;k++) {
++        const NUMERIC_TYPE span=SQRT(C(3.0))*(FABS(u.H1x[k])+FABS(u.H1y[k]));
++        if(span>u.H[k] && span>C(0.0)) {
++            if(u.H[k]<C(0.0)){fprintf(stderr,"Negative mean cannot be repaired by slope scaling\n");exit(45);}
++            const NUMERIC_TYPE theta=(u.H[k]/span)*(C(1.0)-C(8.0)*DBL_EPSILON);
++            u.H1x[k]*=theta;u.H1y[k]*=theta;
++            u.HU1x[k]*=theta;u.HU1y[k]*=theta;
++            u.HV1x[k]*=theta;u.HV1y[k]*=theta;
++        }
++    }
++}
++
+ void dg2::solve
+ (
+ 	Fnames *Fnameptr,
+@@ -447,6 +465,7 @@
+     {
+         zero_perimeter_slopes(Parptr, Arrptr, U);
+     }
++	limit_nonnegative_reconstruction(Parptr,U);
+ 	update_Hstar(Parptr, Arrptr, U);
+ 	update_HUstar(Parptr, Solverptr, Arrptr, U);
+ 	update_HVstar(Parptr, Solverptr, Arrptr, U);
+@@ -492,6 +511,7 @@
+     {
+         zero_perimeter_slopes(Parptr, Arrptr, U_int);
+     }
++	limit_nonnegative_reconstruction(Parptr,U_int);
+ 	update_Hstar(Parptr, Arrptr, U_int);
+ 	update_HUstar(Parptr, Solverptr, Arrptr, U_int);
+ 	update_HVstar(Parptr, Solverptr, Arrptr, U_int);

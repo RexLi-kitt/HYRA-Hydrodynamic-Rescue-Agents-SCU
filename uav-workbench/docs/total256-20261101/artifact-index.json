@@ -1,0 +1,374 @@
+{
+  "happo": {
+    "episodes.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\episodes.jsonl",
+      "bytes": 87060,
+      "sha256": "7c4de59d4e643427121d4a47df0899f3b46debe31b02e2f3058d2f9f0f35ebcd"
+    },
+    "identity.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\identity.json",
+      "bytes": 1568,
+      "sha256": "3d70474feb4acd915f911cabd41680e9720771fc43a61166ecdb8ca742e93b22"
+    },
+    "latest.pt": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\latest.pt",
+      "bytes": 9352269,
+      "sha256": "e74e57921b005beaebbb1ad1321a8b421566ac25a9faed93f1454cc40102b87e"
+    },
+    "status.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\status.json",
+      "bytes": 2058,
+      "sha256": "715d6936e74223472e024a1e0c8578a2d3ea15f0971c5112665ec253cff91000"
+    },
+    "validation-0064-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0064-service-trace.jsonl",
+      "bytes": 806358,
+      "sha256": "ff07446577b7f2cb10aa316ca63e7e0b49c9e52c80ae84a3f605b93f10972a5b"
+    },
+    "validation-0064-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0064-service.json",
+      "bytes": 25088,
+      "sha256": "872136d2bc80d6b285450b2ed705c9e6755c4badefa2a2507c97919dd071e419"
+    },
+    "validation-0064-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0064-watchdog-trace.jsonl",
+      "bytes": 380768,
+      "sha256": "8920c49e2959834edf991886b66507b6ec1c31862fc591411fa5904dcc99bb6c"
+    },
+    "validation-0064-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0064-watchdog.json",
+      "bytes": 29254,
+      "sha256": "6c89f8a0944608115c5f11a3c9e17bf05fa99ee12ad92f34dcc648e1f5a18812"
+    },
+    "validation-0256-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0256-service-trace.jsonl",
+      "bytes": 801204,
+      "sha256": "6b2fd763bbe35a331ce13a9f5f8e5c599de9561ca8fbce114f3b793860f9794a"
+    },
+    "validation-0256-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0256-service.json",
+      "bytes": 24524,
+      "sha256": "eaf35fbfa5b4cf74ac05b62b3ea8ab15c627b739144d3de4f2ae3fe7b9c31a7d"
+    },
+    "validation-0256-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0256-watchdog-trace.jsonl",
+      "bytes": 348072,
+      "sha256": "a043b1ecadba7ce0da74618628375241458381c42de4eb1ec4585b20ee3ef9a8"
+    },
+    "validation-0256-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\happo\\validation-0256-watchdog.json",
+      "bytes": 29276,
+      "sha256": "13ee19f513a7d59955a5354044e73eb8b56051d7b4aa79e973282e0bb7e9508d"
+    }
+  },
+  "hatrpo": {
+    "episodes.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\episodes.jsonl",
+      "bytes": 132126,
+      "sha256": "e3cbdcd446061c4e3000ac0970b4a21745f568c00434deca6a78bd80904dd568"
+    },
+    "identity.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\identity.json",
+      "bytes": 1569,
+      "sha256": "8b10edaaae66f312aa51e87137ea6629fe8fb2bc6914d61fa3d32f4a74b589a6"
+    },
+    "latest.pt": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\latest.pt",
+      "bytes": 6173008,
+      "sha256": "ffe80d749b08e6d216821f2d0b13e6f768034237e6cfee4c9a311638c927845e"
+    },
+    "status.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\status.json",
+      "bytes": 2077,
+      "sha256": "c0b6ccb91e857b99a50ae9923c42df0ea819e86308ffd29e37c11dcfbce64e9a"
+    },
+    "validation-0064-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0064-service-trace.jsonl",
+      "bytes": 801472,
+      "sha256": "befbd6284ae84beb7feaa0cc4c607d1ecc1b8db684c493e6235b45083958f2c8"
+    },
+    "validation-0064-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0064-service.json",
+      "bytes": 22965,
+      "sha256": "0208da9e7c6598b983d59faaf49bb024a0b9f3c8bb19c983a458dd5771b1aae3"
+    },
+    "validation-0064-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0064-watchdog-trace.jsonl",
+      "bytes": 422212,
+      "sha256": "395ac44743f66ab71f2b3a82e2467ceb8d2d16ffc5c65957fec1fc27ee7b1a31"
+    },
+    "validation-0064-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0064-watchdog.json",
+      "bytes": 29345,
+      "sha256": "1e22df494e6e32da78e0c24cc0048e93ffebd9adb1cbafdc28d95c824b6d7fcb"
+    },
+    "validation-0256-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0256-service-trace.jsonl",
+      "bytes": 806074,
+      "sha256": "b0606fa63549a6adc50476dc53bde142bf719c30bcdb38767e785d8283953055"
+    },
+    "validation-0256-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0256-service.json",
+      "bytes": 24871,
+      "sha256": "655b471e6ae8bab5569f35e9dc932b0c7fb55c6266ca0ee83e19649c641cd6aa"
+    },
+    "validation-0256-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0256-watchdog-trace.jsonl",
+      "bytes": 405096,
+      "sha256": "97ccf77a690917e7c5d7e672e8fc0915c8da45f4a5c63416b87d4bf154780b86"
+    },
+    "validation-0256-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hatrpo\\validation-0256-watchdog.json",
+      "bytes": 29338,
+      "sha256": "3b5f740558addef7b3630cfca220d1f686227c95bd32c4734340246bcb3685ce"
+    }
+  },
+  "hasac": {
+    "episodes.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\episodes.jsonl",
+      "bytes": 86989,
+      "sha256": "0a30a2c72343b7209ee8e5ba2098f8acf76ea1485f77e0f0ae9dbd02d85e7efb"
+    },
+    "identity.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\identity.json",
+      "bytes": 1568,
+      "sha256": "182627d2761811e4e9a72747f19ac0e5a369577a3f2c73f4469b0890dbdf64a7"
+    },
+    "latest.pt": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt",
+      "bytes": 234535813,
+      "sha256": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80"
+    },
+    "status.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\status.json",
+      "bytes": 2067,
+      "sha256": "74d926de10b76778edd9c567005bad0411fded04c8cc0213e9fa624929ba4339"
+    },
+    "validation-0064-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0064-service-trace.jsonl",
+      "bytes": 803693,
+      "sha256": "208b62c18e252b1c1883e3887d2d687ac5b76dfe9f3f9779cfccf70a969d3d77"
+    },
+    "validation-0064-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0064-service.json",
+      "bytes": 22236,
+      "sha256": "7125a586d8b03c71819586c6298aacfe40f542a0790f69ffe76bd238132a683e"
+    },
+    "validation-0064-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0064-watchdog-trace.jsonl",
+      "bytes": 418490,
+      "sha256": "b57d3ffc1557e1ab406adc85acd162026b4b52b2909a63e51695b23e903d0a34"
+    },
+    "validation-0064-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0064-watchdog.json",
+      "bytes": 29308,
+      "sha256": "bd993db7b6f2671f3b499d12483964d3dddbc2acd1b3a59a4b594eff1df5bcfd"
+    },
+    "validation-0256-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0256-service-trace.jsonl",
+      "bytes": 811563,
+      "sha256": "c5c1c496dde0a638850ab66903920759eeae9c728b9f7785509de1de97bede13"
+    },
+    "validation-0256-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0256-service.json",
+      "bytes": 26602,
+      "sha256": "7091f4873872adc1f8513839c5fcce7735b2d6d8d011d499699fa1e7056684bd"
+    },
+    "validation-0256-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0256-watchdog-trace.jsonl",
+      "bytes": 385495,
+      "sha256": "0c0cf2a5964274b8dd15a080c890d49b301c5778a944e8eb77c7cbad58b57f96"
+    },
+    "validation-0256-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\validation-0256-watchdog.json",
+      "bytes": 29277,
+      "sha256": "a300dce7a1f84eea6b7ed5c089faf4116f4722700d65d37669ed7f6c84a4cb7d"
+    }
+  },
+  "maac": {
+    "episodes.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\episodes.jsonl",
+      "bytes": 87097,
+      "sha256": "1eafc44ad1aa3c155713f5591ae1f1ac2c393dc94f2176653d9a35417d922111"
+    },
+    "identity.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\identity.json",
+      "bytes": 1567,
+      "sha256": "79c93019188c14717e1c2c8c943d0c5e20a70079db16c32c2d7326ea73f6f221"
+    },
+    "latest.pt": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\latest.pt",
+      "bytes": 225417889,
+      "sha256": "d1f42b7cc5effdb6e137d682c95d7f303e2daa2e88ca527725452a18acecf625"
+    },
+    "status.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\status.json",
+      "bytes": 2089,
+      "sha256": "8299f1930151cf5df7b98b8ca0db76a21e703784d18b43442dd4d4a35100855d"
+    },
+    "validation-0064-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0064-service-trace.jsonl",
+      "bytes": 798839,
+      "sha256": "d3e8e006f8f1ac4e309148f04b5d24629df026be4e729c024bc8d4b9cba43db9"
+    },
+    "validation-0064-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0064-service.json",
+      "bytes": 23858,
+      "sha256": "7e9365b8d081a624cbf58f295c9d5cc105cdb74c616c4c1c514a34241b4c7b1c"
+    },
+    "validation-0064-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0064-watchdog-trace.jsonl",
+      "bytes": 367118,
+      "sha256": "8a30778779c541277ccf60564249afc7db0951301d9796928e25d385bd73b040"
+    },
+    "validation-0064-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0064-watchdog.json",
+      "bytes": 29239,
+      "sha256": "0d5a6d2f7a5d229005c8c75fdbac459d702c40de9aa672a93eb1f78c523d4518"
+    },
+    "validation-0256-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0256-service-trace.jsonl",
+      "bytes": 814682,
+      "sha256": "501f9f6c839a8f4c2fdd72855d8ce64edac1f8ed7f3d4b3c6fe587a5e04899af"
+    },
+    "validation-0256-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0256-service.json",
+      "bytes": 26215,
+      "sha256": "f486b81e54af3ec610e2192ae8e821931891bc962afd983e25e6fcd72adb82c9"
+    },
+    "validation-0256-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0256-watchdog-trace.jsonl",
+      "bytes": 371698,
+      "sha256": "9f0241640efc70da93cc6e447dbbe78abd2b59473b1f48483d8c251c9de4a8de"
+    },
+    "validation-0256-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\validation-0256-watchdog.json",
+      "bytes": 29207,
+      "sha256": "8af00c90d9526dfc8ba1430840d6b95d1d4b94debe885e14d1e5afeb41480c5e"
+    }
+  },
+  "mat": {
+    "episodes.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\episodes.jsonl",
+      "bytes": 75717,
+      "sha256": "459485192fbe81961234c0b1aa8d72796fdfb6c759f5d863a37cf3d1a2c01359"
+    },
+    "identity.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\identity.json",
+      "bytes": 1566,
+      "sha256": "c9144c96d509183a30d4b69c24aaadf35d008f0664f40a606bb3e41d55e98cbe"
+    },
+    "latest.pt": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\latest.pt",
+      "bytes": 2211661,
+      "sha256": "640230a08c5d878f19230a51fbf239fa84ad6845921a318450f2baab2f1f38f2"
+    },
+    "status.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\status.json",
+      "bytes": 2068,
+      "sha256": "9d0f0205f30f2f74f41ce9cf1cf2bf63b46fe6ae7930f17acf8373d13a94a672"
+    },
+    "validation-0064-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0064-service-trace.jsonl",
+      "bytes": 797254,
+      "sha256": "55dba59b5af4a433bd0b2bbcea8015858d68bca96bc1a7dfa1e33d0784ae1cd7"
+    },
+    "validation-0064-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0064-service.json",
+      "bytes": 21258,
+      "sha256": "89830b0b487db91e691e7c1c966da2e9c839474f45a67ac05a805fa09ec1944b"
+    },
+    "validation-0064-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0064-watchdog-trace.jsonl",
+      "bytes": 345884,
+      "sha256": "bbf9d5a578f1be97d81d317f0c45fd6aa35d1a6e75d9af15200af15b15a16f18"
+    },
+    "validation-0064-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0064-watchdog.json",
+      "bytes": 29251,
+      "sha256": "da906c4992320675c72c238522671594ce917b1a587121693f8af8b3e5ce730d"
+    },
+    "validation-0256-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0256-service-trace.jsonl",
+      "bytes": 793459,
+      "sha256": "5c191678271dffae97a260a8d32e21137746e42b7b25b73ba46ade8ffbcb622e"
+    },
+    "validation-0256-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0256-service.json",
+      "bytes": 18813,
+      "sha256": "28abf95f8d867ed8e8dfb57d15273b1835fc947eceaccf68a97406ca2e5208ec"
+    },
+    "validation-0256-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0256-watchdog-trace.jsonl",
+      "bytes": 392122,
+      "sha256": "3e18286730844095581c161322319b5bb2359640be9f90eaa76b3801f878d31a"
+    },
+    "validation-0256-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\validation-0256-watchdog.json",
+      "bytes": 29292,
+      "sha256": "60b5534ac00f3ce1bfdea864c3f62570f9a347fd40d634c86892dd462686c081"
+    }
+  },
+  "coma": {
+    "episodes.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\episodes.jsonl",
+      "bytes": 80998,
+      "sha256": "30ef89177c67638d70f0494a70895c6cd5c508a19b9ae0c4ec6a48bd18394815"
+    },
+    "identity.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\identity.json",
+      "bytes": 1567,
+      "sha256": "be783b9863cc6406dec661561feb75da759f0d258b45845ed19e9112c1bacbcb"
+    },
+    "latest.pt": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\latest.pt",
+      "bytes": 10923905,
+      "sha256": "24342b00427fe5f883c180d11e19ccbf5266c58eecf0acc0fce9986d949e16d3"
+    },
+    "status.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\status.json",
+      "bytes": 2074,
+      "sha256": "e517e102baa912bfff4805798b88059cfa37083a69eeb3b85c32b23dc913af45"
+    },
+    "validation-0064-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0064-service-trace.jsonl",
+      "bytes": 810610,
+      "sha256": "3049685cee49aff2d69d08512ad7cb48ecad690443de08aeaa9c936e2a552bc8"
+    },
+    "validation-0064-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0064-service.json",
+      "bytes": 26443,
+      "sha256": "f00cef6a76de249187d44a56497ee600b267918dc70ebc787266be8ad5309969"
+    },
+    "validation-0064-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0064-watchdog-trace.jsonl",
+      "bytes": 406988,
+      "sha256": "f6246098a260183eae88a55543af1b5368964f5973d0c52a9058afe500141c1f"
+    },
+    "validation-0064-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0064-watchdog.json",
+      "bytes": 29305,
+      "sha256": "e90333fca3c4534a9e70f1a175ee96fc9b34d826abc091e4f31e625aef6fe007"
+    },
+    "validation-0256-service-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0256-service-trace.jsonl",
+      "bytes": 779266,
+      "sha256": "fa9bb0eac04fd75353293319808746f6ea741711519a257dcdd16e6a06fe25ae"
+    },
+    "validation-0256-service.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0256-service.json",
+      "bytes": 4030,
+      "sha256": "beac7a0da8beb58772be8e6374e60ae00f21ac11f5900acf9ef0031e10dd9c57"
+    },
+    "validation-0256-watchdog-trace.jsonl": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0256-watchdog-trace.jsonl",
+      "bytes": 314350,
+      "sha256": "76428e0381dc8fdb258443ddcdd12225995beb4c927067fcbcaada40bd84ee39"
+    },
+    "validation-0256-watchdog.json": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\coma\\validation-0256-watchdog.json",
+      "bytes": 29249,
+      "sha256": "e94e759da34ddcc7df5928caa752c20ea94e91cceb9daf36e6a18df0ce5dbfbe"
+    }
+  }
+}

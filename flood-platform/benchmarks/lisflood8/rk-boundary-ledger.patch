@@ -1,0 +1,54 @@
+--- a/swe/dg2.cpp
++++ b/swe/dg2.cpp
+@@ -13,6 +13,37 @@
+ #include <map>
+ #include <cmath>
+ 
++
++
++// DG2 RK2 audit only: integrate each stage's gross boundary rates equally.
++// Do not modify the physical flux arrays or count point sources a second time.
++struct RKBoundaryRates { NUMERIC_TYPE in=C(0.0), out=C(0.0); };
++static RKBoundaryRates rk_boundary_rates(const Pars* p, const Arrays* a)
++{
++    RKBoundaryRates q;
++    const auto add = [&q](NUMERIC_TYPE inward) {
++        if(inward>C(0.0)) q.in+=inward; else q.out-=inward;
++    };
++    for(int i=0;i<p->xsz;i++) add(-a->FHy[i]*p->dx);
++    for(int i=0;i<p->xsz;i++) add(a->FHy[p->ysz*(p->xsz+1)+i]*p->dx);
++    for(int j=0;j<p->ysz;j++) add(a->FHx[j*(p->xsz+1)]*p->dy);
++    for(int j=0;j<p->ysz;j++) add(-a->FHx[j*(p->xsz+1)+p->xsz]*p->dy);
++    return q;
++}
++static void accumulate_rk_boundary_stats(Solver* s, BoundCs* b,
++    const RKBoundaryRates& q1, const RKBoundaryRates& q2)
++{
++    const NUMERIC_TYPE point_in=b->Qin, point_out=b->Qout;
++    b->Qin+=C(0.5)*(q1.in+q2.in);
++    b->Qout+=C(0.5)*(q1.out+q2.out);
++    b->VolInMT+=b->Qin*s->Tstep;
++    b->VolOutMT+=b->Qout*s->Tstep;
++    static FILE* audit=fopen("accepted_boundary_exchange.txt","w");
++    if(!audit){perror("accepted_boundary_exchange.txt");exit(48);}
++    fprintf(audit,"%.17g %.17g %.17g %.17g %.17g %.17g %.17g %.17g\n",
++        double(s->t),double(s->Tstep),double(q1.in),double(q1.out),
++        double(q2.in),double(q2.out),double(point_in),double(point_out));
++}
+ 
+ struct TracePointSource { int index; NUMERIC_TYPE before, delta; };
+ static std::vector<TracePointSource> trace_point_sources;
+@@ -244,10 +275,12 @@
+ 
+ 		apply_friction(Parptr, Solverptr, Arrptr);
+ 		rk_stage1(Parptr, Solverptr, BCptr, Arrptr);
++        const RKBoundaryRates boundary_rk1=rk_boundary_rates(Parptr,Arrptr);
+ 		rk_stage2(Parptr, Solverptr, BCptr, Arrptr);
++        const RKBoundaryRates boundary_rk2=rk_boundary_rates(Parptr,Arrptr);
+ 
+         update_max_field(Parptr, Arrptr);
+-		accumulate_boundary_flux_stats(Parptr, Solverptr, BCptr, Arrptr);
++		accumulate_rk_boundary_stats(Solverptr,BCptr,boundary_rk1,boundary_rk2);
+ 
+ 		if (Solverptr->t > C(0.0))
+ 		{

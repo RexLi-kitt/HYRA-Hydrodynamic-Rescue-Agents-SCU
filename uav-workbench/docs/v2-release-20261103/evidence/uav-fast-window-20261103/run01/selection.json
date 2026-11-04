@@ -1,0 +1,117 @@
+{
+  "chosen": {
+    "method": "gru-32_flowblend",
+    "window": 180,
+    "people_rate": 0.925,
+    "people_gap": 0.0625,
+    "p95_gap": 0.25,
+    "goal_met": true,
+    "rank": [
+      1,
+      0,
+      0.925,
+      0.25,
+      0,
+      -1
+    ]
+  },
+  "candidates": [
+    {
+      "method": "gru-16",
+      "window": 180,
+      "people_rate": 0.9625,
+      "people_gap": 0.09999999999999998,
+      "p95_gap": 0.75,
+      "goal_met": false,
+      "rank": [
+        0,
+        -0.012500000000000067,
+        0.9625,
+        0.75,
+        0,
+        0
+      ]
+    },
+    {
+      "method": "gru-32_flowblend",
+      "window": 180,
+      "people_rate": 0.925,
+      "people_gap": 0.0625,
+      "p95_gap": 0.25,
+      "goal_met": true,
+      "rank": [
+        1,
+        0,
+        0.925,
+        0.25,
+        0,
+        -1
+      ]
+    },
+    {
+      "method": "gru-16",
+      "window": 240,
+      "people_rate": 0.9875,
+      "people_gap": 0.018750000000000044,
+      "p95_gap": 0.0,
+      "goal_met": false,
+      "rank": [
+        0,
+        -0.03750000000000009,
+        0.9875,
+        0.0,
+        -1,
+        0
+      ]
+    },
+    {
+      "method": "gru-32_flowblend",
+      "window": 240,
+      "people_rate": 0.9875,
+      "people_gap": 0.018750000000000044,
+      "p95_gap": 0.0,
+      "goal_met": false,
+      "rank": [
+        0,
+        -0.03750000000000009,
+        0.9875,
+        0.0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "method": "gru-16",
+      "window": 300,
+      "people_rate": 0.99375,
+      "people_gap": 0.006249999999999978,
+      "p95_gap": 0.0,
+      "goal_met": false,
+      "rank": [
+        0,
+        -0.04375000000000007,
+        0.99375,
+        0.0,
+        -2,
+        0
+      ]
+    },
+    {
+      "method": "gru-32_flowblend",
+      "window": 300,
+      "people_rate": 0.99375,
+      "people_gap": 0.006249999999999978,
+      "p95_gap": 0.0,
+      "goal_met": false,
+      "rank": [
+        0,
+        -0.04375000000000007,
+        0.99375,
+        0.0,
+        -2,
+        -1
+      ]
+    }
+  ],
+  "before_new_maps": true
+}

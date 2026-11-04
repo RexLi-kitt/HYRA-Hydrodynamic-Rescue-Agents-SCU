@@ -1,0 +1,74 @@
+{
+  "tasks": [
+    [
+      "happo",
+      "training-only-performance",
+      0,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "hasac",
+      "training-only-performance",
+      0,
+      "no-cover",
+      "sample",
+      510001
+    ],
+    [
+      "mat",
+      "training-only-performance",
+      0,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "hatrpo_hasac",
+      "training-only-performance",
+      0,
+      "no-cover",
+      "sample",
+      510001
+    ],
+    [
+      "hasac_mat",
+      "training-only-performance",
+      0,
+      "full",
+      "fixed",
+      510001
+    ],
+    [
+      "coma",
+      "training-only-performance",
+      0,
+      "no-cover",
+      "sample",
+      510001
+    ],
+    [
+      "pure_planner",
+      "training-only-performance",
+      0,
+      "planner",
+      "fixed",
+      510001
+    ],
+    [
+      "uniform_service",
+      "training-only-performance",
+      0,
+      "no-cover",
+      "sample",
+      510001
+    ]
+  ],
+  "data": "existing TRAIN only",
+  "workers": 2,
+  "torch_threads_per_worker": 2,
+  "acceptance": "Exact metrics and every trace array; no weight changes; bounded memory; same seeds and sample order within rollout",
+  "source_sha256": "7a22b729597717dcb9b778ae52b25f5f78e88ba52833ac11cf041813f1420b81",
+  "wrapper_sha256": "ad69fdcb5487407ca34d598c1bf0b984c7e7ccc1df3f3976737d52ddfd3e55fb"
+}

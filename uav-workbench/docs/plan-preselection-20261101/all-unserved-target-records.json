@@ -1,0 +1,2127 @@
+[
+  {
+    "candidate": "P0",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 64,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 0,
+    "position": [
+      425.0,
+      795.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 3,
+    "position": [
+      445.0,
+      195.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 5,
+    "position": [
+      655.0,
+      885.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 6,
+    "position": [
+      445.0,
+      745.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 14,
+    "position": [
+      425.0,
+      225.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 16,
+    "position": [
+      565.0,
+      945.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 18,
+    "position": [
+      595.0,
+      875.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9402,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 13,
+    "position": [
+      245.0,
+      425.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 5,
+    "position": [
+      725.0,
+      605.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 15,
+    "position": [
+      295.0,
+      565.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 16,
+    "position": [
+      435.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 19,
+    "position": [
+      715.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 0,
+    "position": [
+      425.0,
+      795.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 3,
+    "position": [
+      445.0,
+      195.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 5,
+    "position": [
+      655.0,
+      885.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 6,
+    "position": [
+      445.0,
+      745.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 14,
+    "position": [
+      425.0,
+      225.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 16,
+    "position": [
+      565.0,
+      945.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 18,
+    "position": [
+      595.0,
+      875.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9402,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 13,
+    "position": [
+      245.0,
+      425.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 5,
+    "position": [
+      725.0,
+      605.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 15,
+    "position": [
+      295.0,
+      565.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 16,
+    "position": [
+      435.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 19,
+    "position": [
+      715.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9003,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 3,
+    "position": [
+      245.0,
+      35.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9402,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 12,
+    "position": [
+      855.0,
+      595.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9402,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 17,
+    "position": [
+      305.0,
+      835.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 2,
+    "position": [
+      185.0,
+      635.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 5,
+    "position": [
+      725.0,
+      605.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 15,
+    "position": [
+      295.0,
+      565.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 16,
+    "position": [
+      435.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 19,
+    "position": [
+      715.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9003,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 3,
+    "position": [
+      245.0,
+      35.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9402,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 12,
+    "position": [
+      855.0,
+      595.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9402,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 17,
+    "position": [
+      305.0,
+      835.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 2,
+    "position": [
+      185.0,
+      635.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 5,
+    "position": [
+      725.0,
+      605.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 15,
+    "position": [
+      295.0,
+      565.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 16,
+    "position": [
+      435.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 19,
+    "position": [
+      715.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9001,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 10,
+    "position": [
+      725.0,
+      315.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 0,
+    "position": [
+      65.0,
+      755.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 2,
+    "position": [
+      965.0,
+      425.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      785.0,
+      535.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 5,
+    "position": [
+      65.0,
+      855.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 6,
+    "position": [
+      165.0,
+      475.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 7,
+    "position": [
+      345.0,
+      595.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 9,
+    "position": [
+      165.0,
+      545.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 10,
+    "position": [
+      175.0,
+      555.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 17,
+    "position": [
+      745.0,
+      455.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 18,
+    "position": [
+      165.0,
+      445.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9003,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      245.0,
+      35.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9004,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      745.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 0,
+    "position": [
+      425.0,
+      795.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      445.0,
+      195.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 5,
+    "position": [
+      655.0,
+      885.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 6,
+    "position": [
+      445.0,
+      745.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 14,
+    "position": [
+      425.0,
+      225.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 16,
+    "position": [
+      565.0,
+      945.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 18,
+    "position": [
+      595.0,
+      875.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      15.0,
+      405.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 8,
+    "position": [
+      5.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 12,
+    "position": [
+      855.0,
+      595.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 17,
+    "position": [
+      305.0,
+      835.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9403,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 7,
+    "position": [
+      965.0,
+      465.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 2,
+    "position": [
+      185.0,
+      635.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 5,
+    "position": [
+      725.0,
+      605.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 6,
+    "position": [
+      985.0,
+      525.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 7,
+    "position": [
+      955.0,
+      805.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 12,
+    "position": [
+      885.0,
+      585.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 15,
+    "position": [
+      295.0,
+      565.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 16,
+    "position": [
+      435.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2101",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 19,
+    "position": [
+      715.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9001,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 10,
+    "position": [
+      725.0,
+      315.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 0,
+    "position": [
+      65.0,
+      755.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 2,
+    "position": [
+      965.0,
+      425.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      785.0,
+      535.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 5,
+    "position": [
+      65.0,
+      855.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 6,
+    "position": [
+      165.0,
+      475.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 7,
+    "position": [
+      345.0,
+      595.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 9,
+    "position": [
+      165.0,
+      545.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 10,
+    "position": [
+      175.0,
+      555.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 17,
+    "position": [
+      745.0,
+      455.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9002,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 18,
+    "position": [
+      165.0,
+      445.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9003,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      245.0,
+      35.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9004,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      745.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 0,
+    "position": [
+      425.0,
+      795.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      445.0,
+      195.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 5,
+    "position": [
+      655.0,
+      885.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 6,
+    "position": [
+      445.0,
+      745.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 14,
+    "position": [
+      425.0,
+      225.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 16,
+    "position": [
+      565.0,
+      945.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9401,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 18,
+    "position": [
+      595.0,
+      875.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 3,
+    "position": [
+      15.0,
+      405.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 8,
+    "position": [
+      5.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 12,
+    "position": [
+      855.0,
+      595.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9402,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 17,
+    "position": [
+      305.0,
+      835.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9403,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 7,
+    "position": [
+      965.0,
+      465.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 2,
+    "position": [
+      185.0,
+      635.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 5,
+    "position": [
+      725.0,
+      605.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 6,
+    "position": [
+      985.0,
+      525.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 7,
+    "position": [
+      955.0,
+      805.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 12,
+    "position": [
+      885.0,
+      585.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 15,
+    "position": [
+      295.0,
+      565.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 16,
+    "position": [
+      435.0,
+      15.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P1",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 19,
+    "position": [
+      715.0,
+      295.0
+    ],
+    "status": 0,
+    "first_discovered_step": -1,
+    "category": "undiscovered",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P2",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 104,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P2",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 74,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P2",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 93,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P3",
+    "case": "validation-2101",
+    "layout": 9004,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 11,
+    "position": [
+      345.0,
+      35.0
+    ],
+    "status": 1,
+    "first_discovered_step": 162,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P3",
+    "case": "validation-2101",
+    "layout": 9004,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 12,
+    "position": [
+      325.0,
+      75.0
+    ],
+    "status": 1,
+    "first_discovered_step": 162,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P3",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 114,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P3",
+    "case": "validation-2201",
+    "layout": 9403,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 8,
+    "position": [
+      625.0,
+      185.0
+    ],
+    "status": 1,
+    "first_discovered_step": 94,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P3",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 90,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P3",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 86,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P4",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3101,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 105,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P4",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "sample",
+    "action_seed": 3102,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 107,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "candidate": "P4",
+    "case": "validation-2201",
+    "layout": 9404,
+    "mode": "fixed",
+    "action_seed": 0,
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 113,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  }
+]

@@ -70,9 +70,11 @@ def settings(data, shape):
     # Accept legacy configuration files, but all new runs use native cells.
     config['refine_inland_water']=False
     config['refinement_buffer']=0
-    for name, allowed in (('flux_method', ('rusanov', 'knp')), ('time_integrator', ('euler', 'rk2'))):
+    for name, allowed in (('flux_method', ('rusanov', 'knp', 'hllc')), ('time_integrator', ('euler', 'rk2'))):
         config[name] = data.get(name, config[name])
         if config[name] not in allowed: raise ValueError(f'{name} 参数无效')
+    if config['flux_method']=='hllc' and config['low_froude']!=0:
+        raise ValueError('Experimental HLLC requires low_froude=0')
     return config
 
 

@@ -1,0 +1,288 @@
+{
+  "frames": [
+    {
+      "time_s": 300,
+      "groups": [
+        {
+          "nearest_source": 1,
+          "baseline_volume_m3": 1837.1500000003,
+          "candidate_volume_m3": 1837.1499999998,
+          "L1_depth_volume_m3": 39.41159477049999,
+          "thresholds": [
+            {
+              "h_m": 1e-06,
+              "changed": 30,
+              "changed_in_nominal_channel": 2,
+              "changed_within_30m_of_nearest_source": 2
+            },
+            {
+              "h_m": 0.001,
+              "changed": 21,
+              "changed_in_nominal_channel": 2,
+              "changed_within_30m_of_nearest_source": 3
+            },
+            {
+              "h_m": 0.01,
+              "changed": 5,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 3
+            }
+          ]
+        },
+        {
+          "nearest_source": 2,
+          "baseline_volume_m3": 324.2899999999999,
+          "candidate_volume_m3": 324.29000000020005,
+          "L1_depth_volume_m3": 13.539833225800004,
+          "thresholds": [
+            {
+              "h_m": 1e-06,
+              "changed": 17,
+              "changed_in_nominal_channel": 1,
+              "changed_within_30m_of_nearest_source": 3
+            },
+            {
+              "h_m": 0.001,
+              "changed": 11,
+              "changed_in_nominal_channel": 1,
+              "changed_within_30m_of_nearest_source": 3
+            },
+            {
+              "h_m": 0.01,
+              "changed": 0,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 0
+            }
+          ]
+        },
+        {
+          "nearest_source": 3,
+          "baseline_volume_m3": 615.9000000001,
+          "candidate_volume_m3": 615.9,
+          "L1_depth_volume_m3": 16.152331564700017,
+          "thresholds": [
+            {
+              "h_m": 1e-06,
+              "changed": 4,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 0
+            },
+            {
+              "h_m": 0.001,
+              "changed": 4,
+              "changed_in_nominal_channel": 1,
+              "changed_within_30m_of_nearest_source": 0
+            },
+            {
+              "h_m": 0.01,
+              "changed": 0,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 0
+            }
+          ]
+        }
+      ],
+      "maximum_difference": {
+        "row0": 34,
+        "col0": 414,
+        "easting": 342635.0,
+        "northing": 557415.0,
+        "h_baseline": 0.22004195349,
+        "h_candidate": 0.191695764354,
+        "nearest_source": 1,
+        "distance_to_nearest_source_m": 102.95630140987001,
+        "nominal_channel": true
+      }
+    },
+    {
+      "time_s": 600,
+      "groups": [
+        {
+          "nearest_source": 1,
+          "baseline_volume_m3": 7348.599999999498,
+          "candidate_volume_m3": 7348.6000000001995,
+          "L1_depth_volume_m3": 82.14917422810004,
+          "thresholds": [
+            {
+              "h_m": 1e-06,
+              "changed": 28,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 1
+            },
+            {
+              "h_m": 0.001,
+              "changed": 32,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 1
+            },
+            {
+              "h_m": 0.01,
+              "changed": 27,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 3
+            }
+          ]
+        },
+        {
+          "nearest_source": 2,
+          "baseline_volume_m3": 1297.1599999995,
+          "candidate_volume_m3": 1297.1599999998998,
+          "L1_depth_volume_m3": 21.5882102436,
+          "thresholds": [
+            {
+              "h_m": 1e-06,
+              "changed": 11,
+              "changed_in_nominal_channel": 1,
+              "changed_within_30m_of_nearest_source": 1
+            },
+            {
+              "h_m": 0.001,
+              "changed": 13,
+              "changed_in_nominal_channel": 2,
+              "changed_within_30m_of_nearest_source": 3
+            },
+            {
+              "h_m": 0.01,
+              "changed": 3,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 1
+            }
+          ]
+        },
+        {
+          "nearest_source": 3,
+          "baseline_volume_m3": 2463.6000000001995,
+          "candidate_volume_m3": 2463.6,
+          "L1_depth_volume_m3": 31.996740371399994,
+          "thresholds": [
+            {
+              "h_m": 1e-06,
+              "changed": 1,
+              "changed_in_nominal_channel": 1,
+              "changed_within_30m_of_nearest_source": 0
+            },
+            {
+              "h_m": 0.001,
+              "changed": 7,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 1
+            },
+            {
+              "h_m": 0.01,
+              "changed": 1,
+              "changed_in_nominal_channel": 0,
+              "changed_within_30m_of_nearest_source": 0
+            }
+          ]
+        }
+      ],
+      "maximum_difference": {
+        "row0": 43,
+        "col0": 411,
+        "easting": 342605.0,
+        "northing": 557325.0,
+        "h_baseline": 1.106080727741,
+        "h_candidate": 1.07771107236,
+        "nearest_source": 1,
+        "distance_to_nearest_source_m": 196.9771560359221,
+        "nominal_channel": true
+      }
+    }
+  ],
+  "fixed_depth_friction_probes": [
+    {
+      "time_s": 300,
+      "fixed_depth_dt_s": 0.537662394818746,
+      "active_cells": 108,
+      "maximum_direction_rotation_deg": 15.842780028125865,
+      "median_direction_rotation_deg": 0.7184387498003244,
+      "exact_rotation_max_deg": 6.659458938484485e-15,
+      "max_one_vs_two_momentum_difference_m2_s": 0.03224162166388715,
+      "max_one_vs_exact_momentum_difference_m2_s": 0.06885028325045121,
+      "max_rotation_cell": {
+        "row0": 36,
+        "col0": 414,
+        "H": 0.002259120998,
+        "Q_before": [
+          -0.004386555676,
+          0.001982803238
+        ],
+        "Q_one": [
+          -0.001999538704528167,
+          0.00029815723979692565
+        ],
+        "Q_two": [
+          -0.001010335593760951,
+          1.6851343401615376e-05
+        ],
+        "Q_exact": [
+          -3.191450361602844e-05,
+          1.4425938203690518e-05
+        ]
+      },
+      "zero_n_identity": true,
+      "exact_semigroup": true,
+      "finite_dissipative": true
+    },
+    {
+      "time_s": 600,
+      "fixed_depth_dt_s": 0.5101308240719237,
+      "active_cells": 252,
+      "maximum_direction_rotation_deg": 15.418359572558993,
+      "median_direction_rotation_deg": 0.5779253868322951,
+      "exact_rotation_max_deg": 6.135065102788545e-15,
+      "max_one_vs_two_momentum_difference_m2_s": 0.059622582925295285,
+      "max_one_vs_exact_momentum_difference_m2_s": 0.12838119989789556,
+      "max_rotation_cell": {
+        "row0": 291,
+        "col0": 293,
+        "H": 0.00146969285,
+        "Q_before": [
+          -0.003981022423,
+          -0.001493745507
+        ],
+        "Q_one": [
+          -0.0018632257755894182,
+          -0.00016788040087340004
+        ],
+        "Q_two": [
+          -0.000936284648048786,
+          -3.847638048263576e-06
+        ],
+        "Q_exact": [
+          -1.2726298989949476e-05,
+          -4.775118026753115e-06
+        ]
+      },
+      "zero_n_identity": true,
+      "exact_semigroup": true,
+      "finite_dissipative": true
+    }
+  ],
+  "synthetic_example": {
+    "h": 0.002,
+    "q": [
+      [
+        0.0004,
+        0.0002
+      ]
+    ],
+    "dt": 0.4,
+    "implemented": [
+      [
+        0.00018721154472212104,
+        4.372573233776846e-05
+      ]
+    ],
+    "exact": [
+      [
+        2.9561451849449313e-05,
+        1.4780725924724656e-05
+      ]
+    ],
+    "rotation_deg": 13.418537732041615
+  },
+  "caveat": "Qx/Qy exports are cell mean HU/HV per round80 reader. Fixed H local operator probe excludes gravity, fluxes, slope updates and source interaction; it cannot assign the cause of whole-domain errors. Nominal channel and nearest-source groups are not reality labels.",
+  "production_changed": false,
+  "field_passes_added": 0
+}

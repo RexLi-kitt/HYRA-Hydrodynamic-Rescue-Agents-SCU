@@ -3,3 +3,15 @@
 uav-workbench/runtime-assets/** -text -diff
 uav-workbench/runtime-assets/manifest.json text eol=lf diff
 uav-workbench/runtime-assets/README.md text eol=lf diff
+
+# Preserve archived evidence bytes and their published SHA256 hashes.
+terrain-workbench/docs/round*-artifacts/** -text
+
+# Retain source seals and historical evidence hashes for the UAV study.
+uav-workbench/docs/*20261101*/** -text
+uav-workbench/experiments/flood1km-six-20261101/** -text
+
+# Frozen V2 source and evidence retain the exact recorded SHA256 bytes.
+uav-workbench/experiments/flood-drop-*/** -text
+uav-workbench/docs/v2-release-20261103/** -text
+uav-workbench/docs/validation-report-20261103/** -text

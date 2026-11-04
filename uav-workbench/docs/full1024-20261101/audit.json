@@ -1,0 +1,12 @@
+{
+  "hasac": {
+    "logged_episodes": 576,
+    "contiguous": true,
+    "checkpoint_files": 18
+  },
+  "hatrpo": {
+    "logged_episodes": 320,
+    "contiguous": true,
+    "checkpoint_files": 10
+  }
+}

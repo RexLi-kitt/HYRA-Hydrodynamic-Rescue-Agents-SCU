@@ -1,0 +1,15 @@
+{
+  "new_tests_passed": 8,
+  "tests_file": "test_priority.py",
+  "behavior_checks": [
+    "service priority",
+    "deliberate hover unaffected",
+    "motion reset",
+    "public mask subset",
+    "actual action and next-mask consistency",
+    "MAAC logging weight-equivalence",
+    "MAT finite update",
+    "selection rejects regression"
+  ],
+  "production_changes": false
+}

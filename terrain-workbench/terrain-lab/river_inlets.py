@@ -259,5 +259,5 @@ def configure(world,crossings,settings,native_shape):
             for face in boundary_faces:face_cells[(face['z'],face['x'])]+=face['weight']
             entry['cells']=[dict(z=z,x=x,weight=weight) for (z,x),weight in sorted(face_cells.items())]
         entries.append(entry)
-    world.external_inflows=entries;world.river_crossings=crossings
     world.solver.set_external_inflows(entries)
+    world.external_inflows=entries;world.river_crossings=crossings

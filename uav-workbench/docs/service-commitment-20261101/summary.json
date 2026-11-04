@@ -1,0 +1,356 @@
+{
+  "happo": {
+    "baseline": {
+      "ST": 300.0,
+      "ACC": 1.1487500000000002,
+      "RCR": 0.0,
+      "coverage": 0.6057250000000001,
+      "rescued": 0.0,
+      "FRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "hold": {
+      "ST": 300.0,
+      "ACC": 1.1275,
+      "RCR": 0.05,
+      "coverage": 0.6178875,
+      "rescued": 1.0,
+      "FRT": {
+        "mean": 15.666666666666666,
+        "valid": 6,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "commit": {
+      "ST": 300.0,
+      "ACC": 0.0025,
+      "RCR": 0.8375,
+      "coverage": 0.837025,
+      "rescued": 16.75,
+      "FRT": {
+        "mean": 5.0,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  },
+  "hatrpo": {
+    "baseline": {
+      "ST": 300.0,
+      "ACC": 0.8341666666666667,
+      "RCR": 0.0,
+      "coverage": 0.4752,
+      "rescued": 0.0,
+      "FRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "hold": {
+      "ST": 300.0,
+      "ACC": 0.8325,
+      "RCR": 0.025,
+      "coverage": 0.47597500000000004,
+      "rescued": 0.5,
+      "FRT": {
+        "mean": 10.0,
+        "valid": 4,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "commit": {
+      "ST": 300.0,
+      "ACC": 0.14791666666666667,
+      "RCR": 0.75,
+      "coverage": 0.786575,
+      "rescued": 15.0,
+      "FRT": {
+        "mean": 7.5,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": 93.0,
+        "valid": 2,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.25,
+      "timeout_fraction": 1.0
+    }
+  },
+  "hasac": {
+    "baseline": {
+      "ST": 300.0,
+      "ACC": 0.24375,
+      "RCR": 0.0,
+      "coverage": 0.40945,
+      "rescued": 0.0,
+      "FRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "hold": {
+      "ST": 300.0,
+      "ACC": 0.19791666666666666,
+      "RCR": 0.037500000000000006,
+      "coverage": 0.343275,
+      "rescued": 0.75,
+      "FRT": {
+        "mean": 23.0,
+        "valid": 4,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "commit": {
+      "ST": 300.0,
+      "ACC": 0.0075,
+      "RCR": 0.725,
+      "coverage": 0.7107125,
+      "rescued": 14.5,
+      "FRT": {
+        "mean": 11.75,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": 117.0,
+        "valid": 2,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.25,
+      "timeout_fraction": 1.0
+    }
+  },
+  "maac": {
+    "baseline": {
+      "ST": 300.0,
+      "ACC": 0.41375000000000006,
+      "RCR": 0.0,
+      "coverage": 0.6927875000000001,
+      "rescued": 0.0,
+      "FRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "hold": {
+      "ST": 300.0,
+      "ACC": 0.6470833333333332,
+      "RCR": 0.125,
+      "coverage": 0.6918249999999999,
+      "rescued": 2.5,
+      "FRT": {
+        "mean": 78.75,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "commit": {
+      "ST": 300.0,
+      "ACC": 0.11291666666666667,
+      "RCR": 0.7875000000000001,
+      "coverage": 0.747475,
+      "rescued": 15.75,
+      "FRT": {
+        "mean": 5.25,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  },
+  "mat": {
+    "baseline": {
+      "ST": 300.0,
+      "ACC": 0.049166666666666664,
+      "RCR": 0.0,
+      "coverage": 0.479575,
+      "rescued": 0.0,
+      "FRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "hold": {
+      "ST": 300.0,
+      "ACC": 0.03708333333333333,
+      "RCR": 0.075,
+      "coverage": 0.4809,
+      "rescued": 1.5,
+      "FRT": {
+        "mean": 138.33333333333334,
+        "valid": 6,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "commit": {
+      "ST": 300.0,
+      "ACC": 0.0025,
+      "RCR": 0.8125,
+      "coverage": 0.8214250000000001,
+      "rescued": 16.25,
+      "FRT": {
+        "mean": 8.25,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  },
+  "coma": {
+    "baseline": {
+      "ST": 300.0,
+      "ACC": 0.0033333333333333335,
+      "RCR": 0.0125,
+      "coverage": 0.30397500000000005,
+      "rescued": 0.25,
+      "FRT": {
+        "mean": 224.0,
+        "valid": 2,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "hold": {
+      "ST": 300.0,
+      "ACC": 0.0008333333333333334,
+      "RCR": 0.037500000000000006,
+      "coverage": 0.302925,
+      "rescued": 0.75,
+      "FRT": {
+        "mean": 154.0,
+        "valid": 4,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    },
+    "commit": {
+      "ST": 300.0,
+      "ACC": 0.4358333333333333,
+      "RCR": 0.8875,
+      "coverage": 0.859275,
+      "rescued": 17.75,
+      "FRT": {
+        "mean": 6.0,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  }
+}

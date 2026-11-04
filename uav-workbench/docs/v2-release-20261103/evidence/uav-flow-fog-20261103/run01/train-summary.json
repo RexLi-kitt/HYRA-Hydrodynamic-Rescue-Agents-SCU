@@ -1,0 +1,506 @@
+{
+  "view60-w240": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 111,
+      "people_rate": 0.69375,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 21,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 111,
+      "people_rate": 0.69375,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 25,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 140,
+      "people_rate": 0.875,
+      "all_rate": 0.25,
+      "p95_rate": 0.25,
+      "unseen": 7,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 129,
+      "people_rate": 0.80625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 10,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 125,
+      "people_rate": 0.78125,
+      "all_rate": 0.25,
+      "p95_rate": 0.25,
+      "unseen": 16,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 137,
+      "people_rate": 0.85625,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 7,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 132,
+      "people_rate": 0.825,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 12,
+      "refloats": 0
+    }
+  },
+  "view60-w360": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 121,
+      "people_rate": 0.75625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 19,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 130,
+      "people_rate": 0.8125,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 14,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 117,
+      "people_rate": 0.73125,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 22,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 140,
+      "people_rate": 0.875,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 8,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 139,
+      "people_rate": 0.86875,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 3,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 138,
+      "people_rate": 0.8625,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 10,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 141,
+      "people_rate": 0.88125,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 4,
+      "refloats": 0
+    }
+  },
+  "view60-w480": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 145,
+      "people_rate": 0.90625,
+      "all_rate": 0.25,
+      "p95_rate": 0.5,
+      "unseen": 9,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 141,
+      "people_rate": 0.88125,
+      "all_rate": 0.25,
+      "p95_rate": 0.5,
+      "unseen": 10,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 117,
+      "people_rate": 0.73125,
+      "all_rate": 0.25,
+      "p95_rate": 0.25,
+      "unseen": 22,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 139,
+      "people_rate": 0.86875,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 1,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 153,
+      "people_rate": 0.95625,
+      "all_rate": 0.5,
+      "p95_rate": 0.5,
+      "unseen": 2,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 138,
+      "people_rate": 0.8625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 8,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 147,
+      "people_rate": 0.91875,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 0,
+      "refloats": 0
+    }
+  },
+  "view20-w360": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 0,
+      "people_rate": 0.0,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 160,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 0,
+      "people_rate": 0.0,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 160,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 0,
+      "people_rate": 0.0,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 160,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 28,
+      "people_rate": 0.175,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 124,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 36,
+      "people_rate": 0.225,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 119,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 1,
+      "people_rate": 0.00625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 159,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 22,
+      "people_rate": 0.1375,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 137,
+      "refloats": 0
+    }
+  },
+  "view40-w360": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 107,
+      "people_rate": 0.66875,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 28,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 106,
+      "people_rate": 0.6625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 27,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 110,
+      "people_rate": 0.6875,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 30,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 110,
+      "people_rate": 0.6875,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 36,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 123,
+      "people_rate": 0.76875,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 19,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 113,
+      "people_rate": 0.70625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 36,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 117,
+      "people_rate": 0.73125,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 24,
+      "refloats": 0
+    }
+  },
+  "view100-w360": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 141,
+      "people_rate": 0.88125,
+      "all_rate": 0.25,
+      "p95_rate": 0.5,
+      "unseen": 2,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 142,
+      "people_rate": 0.8875,
+      "all_rate": 0.25,
+      "p95_rate": 0.5,
+      "unseen": 2,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 131,
+      "people_rate": 0.81875,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 12,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 145,
+      "people_rate": 0.90625,
+      "all_rate": 0.25,
+      "p95_rate": 0.25,
+      "unseen": 0,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 140,
+      "people_rate": 0.875,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 2,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 134,
+      "people_rate": 0.8375,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 5,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 134,
+      "people_rate": 0.8375,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 11,
+      "refloats": 0
+    }
+  },
+  "patch20-60-w360": {
+    "coverage100": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 31,
+      "people_rate": 0.19375,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 125,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 31,
+      "people_rate": 0.19375,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 124,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 25,
+      "people_rate": 0.15625,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 135,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 104,
+      "people_rate": 0.65,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 51,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 91,
+      "people_rate": 0.56875,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 58,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 55,
+      "people_rate": 0.34375,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 100,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 4,
+      "people": 160,
+      "supplied": 99,
+      "people_rate": 0.61875,
+      "all_rate": 0.0,
+      "p95_rate": 0.0,
+      "unseen": 46,
+      "refloats": 0
+    }
+  }
+}

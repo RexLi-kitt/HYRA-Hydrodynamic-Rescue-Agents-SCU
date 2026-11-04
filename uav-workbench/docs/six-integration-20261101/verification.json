@@ -1,0 +1,231 @@
+{
+  "status": "passed",
+  "records": 5630,
+  "candidates": 21,
+  "checks": [
+    {
+      "request": {
+        "mode": "record",
+        "index": 672
+      },
+      "result": {
+        "url": "/six-study-runs/5b6b2f192cc541ae8c6e57d5a155b5da.json",
+        "summary": {
+          "candidate": "mat",
+          "family": "single",
+          "checkpoint_episode": 192,
+          "case": "shift-56",
+          "stratum": "orientation_cluster20",
+          "assignment": 0,
+          "roles": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "variant": "full",
+          "mode": "fixed",
+          "action_seed": 510001,
+          "ST": 300,
+          "ACC": 0.01,
+          "RCR": 0.95,
+          "FRT": 66,
+          "CRT": null,
+          "coverage": 1.0,
+          "rescued": 19,
+          "discovered": 20,
+          "conflicts": 3,
+          "boundaries": 142,
+          "task_complete": false,
+          "timed_out": true,
+          "return_sum": 191.8800000000005,
+          "planner_fraction": 0.14583333333333334,
+          "neural_free_fraction": 0.5925,
+          "service_fraction": 0.26166666666666666,
+          "blocked_agent_steps": 6,
+          "unserved_ids": [
+            4
+          ]
+        }
+      },
+      "evidence": {
+        "kind": "record",
+        "trace_sha256": "44e5eadc1adccb48521aefd283cf812cd79be394c84b89d62e5c4457005d5eb8",
+        "field_sha256": "86b629236d40669d32a25629227b622b1f276ec305f0cca452c829a06d0dd0a0",
+        "record_index": 672,
+        "verified": true
+      },
+      "seconds": 3.937000000005355
+    },
+    {
+      "request": {
+        "mode": "record",
+        "index": 4931
+      },
+      "result": {
+        "url": "/six-study-runs/dc034c0453ee4da6b73d23578edf7695.json",
+        "summary": {
+          "candidate": "maac_coma",
+          "family": "pair",
+          "checkpoint_episode": 0,
+          "case": "iid-00",
+          "stratum": "iid50",
+          "assignment": 1,
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "variant": "full",
+          "mode": "fixed",
+          "action_seed": 510001,
+          "ST": 90,
+          "ACC": 0.03333333333333333,
+          "RCR": 1.0,
+          "FRT": 11,
+          "CRT": 74,
+          "coverage": 1.0,
+          "rescued": 20,
+          "discovered": 20,
+          "conflicts": 3,
+          "boundaries": 1,
+          "task_complete": true,
+          "timed_out": false,
+          "return_sum": 237.18000000000004,
+          "planner_fraction": 0.4527777777777778,
+          "neural_free_fraction": 0.058333333333333334,
+          "service_fraction": 0.4888888888888889,
+          "blocked_agent_steps": 6,
+          "unserved_ids": []
+        }
+      },
+      "evidence": {
+        "kind": "record",
+        "trace_sha256": "54e2197157f8090da573da577710f5a0d945b61b78b2bef2d1abb95672604709",
+        "field_sha256": "1e4bf41bc42b3d765839ffcfd0a7a3e48dfc4ff824cc8b4ee52b7cd5ca3cfafa",
+        "record_index": 4931,
+        "verified": true
+      },
+      "seconds": 2.7819999999992433
+    },
+    {
+      "request": {
+        "mode": "demo",
+        "candidate": "mat",
+        "case": 0,
+        "assignment": 0
+      },
+      "result": {
+        "url": "/six-study-runs/8e09f7c03d94443b8b1018cffd99bbdb.json",
+        "summary": {
+          "ST": 101,
+          "ACC": 0.0,
+          "RCR": 1.0,
+          "FRT": 7,
+          "CRT": 100,
+          "coverage": 1.0,
+          "rescued": 20,
+          "discovered": 20,
+          "conflicts": 0,
+          "boundaries": 21,
+          "task_complete": true,
+          "timed_out": false,
+          "return_sum": 239.07000000000002,
+          "planner_fraction": 0.2301980198019802,
+          "neural_free_fraction": 0.41336633663366334,
+          "service_fraction": 0.3564356435643564,
+          "blocked_agent_steps": 0,
+          "unserved_ids": []
+        }
+      },
+      "evidence": {
+        "kind": "demo",
+        "checkpoint_sha256": "7bd28b4628dc076629c8ecdaf3c1ab6f4a0a6ece19774163754091a6a2878dc0",
+        "episode": 192,
+        "field_sha256": "75483b4361430ae525596a6ffddaf8783356384650a374f19b54acf9aa9d4869",
+        "assignment": 0,
+        "roles": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "layout_seed": 770003,
+        "weights_unchanged": true,
+        "contributes_to_formal_scores": false
+      },
+      "seconds": 5.48399999999674
+    },
+    {
+      "request": {
+        "mode": "demo",
+        "candidate": "maac_coma",
+        "case": 0,
+        "assignment": 1
+      },
+      "result": {
+        "url": "/six-study-runs/0fac7c59d2e44c159e5733854ff6329d.json",
+        "summary": {
+          "ST": 86,
+          "ACC": 0.0,
+          "RCR": 1.0,
+          "FRT": 12,
+          "CRT": 85,
+          "coverage": 1.0,
+          "rescued": 20,
+          "discovered": 20,
+          "conflicts": 0,
+          "boundaries": 1,
+          "task_complete": true,
+          "timed_out": false,
+          "return_sum": 243.22000000000023,
+          "planner_fraction": 0.5988372093023255,
+          "neural_free_fraction": 0.061046511627906974,
+          "service_fraction": 0.34011627906976744,
+          "blocked_agent_steps": 0,
+          "unserved_ids": []
+        }
+      },
+      "evidence": {
+        "kind": "demo",
+        "checkpoint_sha256": "07f6cf2c3f6a0cdcea1d0a8964fe557f5c57e9256b23e1b9b3e64d3837dd9299",
+        "episode": 0,
+        "field_sha256": "75483b4361430ae525596a6ffddaf8783356384650a374f19b54acf9aa9d4869",
+        "assignment": 1,
+        "roles": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "layout_seed": 770003,
+        "weights_unchanged": true,
+        "contributes_to_formal_scores": false
+      },
+      "seconds": 4.89100000000326
+    }
+  ],
+  "unit_and_http_checks": 7,
+  "existing_app_regressions": 11,
+  "browser": {
+    "failed_record_selection_retained": true,
+    "timeline": true,
+    "truth_toggle": true,
+    "pair_demo": true,
+    "console_errors": []
+  },
+  "source_hashes": {
+    "console-static/workbench-scale100.html": "1e2be72ab01d4d232bfbc990b657333b35e83d0c5b6573dd848d8619394b5c9d",
+    "hyra_workbench/server.py": "c0c8dc9c87adbbe798beca7d2e48580b9560e3144f1532f6f2d182206199a9dd",
+    "hyra_workbench/six_study.py": "90a171c57abec2eb4f81d60fb220edcbfeb458b3cda4740d2adfe3d726185016",
+    "hyra_workbench/six_worker.py": "02a5776ae883e3284002e489a26c9ab3c9f5a116039aa63a9713bace97180f41",
+    "console-static/six-study.html": "12ad03f357e404653e0703ae8f3cd33a15a758335c65fcc9c00aeeb77a9f232c",
+    "console-static/six-study.css": "cac4e8e7a67b2e1a543a3d0324e1902bc5774c30f829f738e5e3376b189c9258",
+    "console-static/six-study.js": "b2b2fad09d453daa3daf2cc845a7e7ac30aafcb9c6cd936ecf54a5546851b551",
+    "tests/test_six_study.py": "2b7b57861c3fd1c112f7135e54faf4f4ae3f532c4990bc41ff5ca397f895532b",
+    "tools/configure_six_study.py": "89a36d814a3dfb71eb97d0e6f555835f13ed7d414481534d784423a5c892293d",
+    "docs/SIX_STUDY_WORKBENCH_20261101.md": "90af907e7878e51d2cee6b8445b9000f49b6e82baa2c5a98255dc639c366b710"
+  },
+  "formal_records_sha256": "fe2455929348507e3e651c18e20788b4d64ce55d95aefc3a3cee5590433c2653"
+}

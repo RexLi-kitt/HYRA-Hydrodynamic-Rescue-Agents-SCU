@@ -1,0 +1,19 @@
+{
+  "state": "failed_numerical_gate",
+  "exit_code": 42,
+  "simulation_failure_step_start_s": 2179.007318880099,
+  "wall_s": 180.02781319618225,
+  "failed_step_committed": false,
+  "row": 296,
+  "col": 146,
+  "mean_before_m": 0.07536690547193921,
+  "predicted_mean_m": -0.0003254592713868437,
+  "step_s": 0.3697869293910634,
+  "frozen_flux_zero_depth_step_s": 0.3681969330286019,
+  "frozen_flux_bound_is_not_general_CFL": true,
+  "raw_face_depths_positive": true,
+  "lost_volume_if_update_were_committed_m3": 0.03254592713868437,
+  "no_restart": true,
+  "full_field_checkpoint_before_failure": false,
+  "field_passes_added": 0
+}

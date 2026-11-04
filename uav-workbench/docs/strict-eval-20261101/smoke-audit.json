@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "existing_train_field_only": true,
+  "test_fields_generated": false,
+  "rollouts": 10,
+  "checks": [
+    "Single/pair legacy and causal MAT adapters",
+    "Explicit held-out people injection",
+    "Full/no-cover/planner/uniform controls",
+    "Trace and metric reconciliation",
+    "Weight hash unchanged during each trial",
+    "Scene grouping and nondegenerate Wilson endpoint interval",
+    "Clustered unique20-person layouts"
+  ]
+}

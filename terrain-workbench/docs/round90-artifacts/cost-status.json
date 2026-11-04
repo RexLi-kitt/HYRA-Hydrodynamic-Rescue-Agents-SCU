@@ -1,0 +1,49 @@
+{
+  "state": "completed",
+  "exit_code": 0,
+  "wall_s": 37.10125400000106,
+  "frames": [
+    {
+      "name": "check-0000.wdb",
+      "finite_nonnegative": true,
+      "volume_m3": 4.63999998,
+      "wet_cells_over_1mm": 23,
+      "max_h_m": 0.016
+    },
+    {
+      "name": "check-0001.wdb",
+      "finite_nonnegative": true,
+      "volume_m3": 96751.46090557534,
+      "wet_cells_over_1mm": 2936,
+      "max_h_m": 2.3545415354657138
+    },
+    {
+      "name": "check-0002.wdb",
+      "finite_nonnegative": true,
+      "volume_m3": 377252.0805025926,
+      "wet_cells_over_1mm": 8521,
+      "max_h_m": 3.2010222714803054
+    },
+    {
+      "name": "check-0003.wdb",
+      "finite_nonnegative": true,
+      "volume_m3": 659370.6122431532,
+      "wet_cells_over_1mm": 14235,
+      "max_h_m": 3.803004530944
+    },
+    {
+      "name": "check-0004.wdb",
+      "finite_nonnegative": true,
+      "volume_m3": 943738.7053895029,
+      "wet_cells_over_1mm": 19608,
+      "max_h_m": 3.986222421866503
+    }
+  ],
+  "field_passes_added": 0,
+  "end_s": 7200.369,
+  "steps": 10565,
+  "median_step_s": 0.599,
+  "last_volume_reported_m3": 943740.0,
+  "sum_abs_mass_residual_m3": 1.848018604557678e-05,
+  "max_outflow_m3_s": 0.0
+}

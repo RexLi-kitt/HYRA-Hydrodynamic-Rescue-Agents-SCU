@@ -1,0 +1,54 @@
+{
+  "main_training_rows": 3072,
+  "stageCounts": {
+    "happo": {
+      "pilot": 64,
+      "total256": 192
+    },
+    "hatrpo": {
+      "pilot": 64,
+      "total256": 192,
+      "priority": 448,
+      "full1024": 320
+    },
+    "hasac": {
+      "pilot": 64,
+      "total256": 192,
+      "priority": 192,
+      "full1024": 576
+    },
+    "maac": {
+      "pilot": 64,
+      "total256": 192
+    },
+    "mat": {
+      "pilot": 64,
+      "total256": 192
+    },
+    "coma": {
+      "pilot": 64,
+      "total256": 192
+    }
+  },
+  "validation_groups": 144,
+  "validation_rollouts": 1544,
+  "supplemental_groups": 29,
+  "source_files": 177,
+  "checkpoints": 60,
+  "summary_recomputed_and_agrees": true,
+  "contiguous_episode_ranges": true,
+  "workbook_sheets": [
+    "分组总览",
+    "组合试验",
+    "全部阶段验证",
+    "逐场验证",
+    "逐回合训练",
+    "检查点目录",
+    "口径与来源"
+  ],
+  "formula_errors": 0,
+  "exported_headline_values_verified": true,
+  "visual_review": "all seven sheets; date formatting and headline rounding corrected",
+  "workbook_sha256": "8f38107741880d51e218cb3d5ac3d40d91e1b36c2140d9cc6f751f527ce596ac",
+  "workbook_bytes": 1116486
+}

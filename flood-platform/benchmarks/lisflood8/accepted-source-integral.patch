@@ -1,0 +1,128 @@
+--- a/swe/dg2.cpp
++++ b/swe/dg2.cpp
+@@ -17,58 +17,89 @@
+ struct TracePointSource { int index; NUMERIC_TYPE before, delta; };
+ static std::vector<TracePointSource> trace_point_sources;
+ 
+-// Experimental adapter: nonnegative QFIX/QVAR, no rain, from t=0 only.
+-// q is unit-width discharge. Multiple points in a cell are summed.
+-// Probe source-added H with a candidate dt, shrink to its CFL bound,
+-// and commit once. Source volume and flux ledger share the accepted dt.
++// Experimental nonnegative point sources: accepted-interval integral.
++
++static NUMERIC_TYPE positive_series_integral(const TimeSeries* ts,
++    NUMERIC_TYPE begin, NUMERIC_TYPE end)
++{
++    if(!ts || ts->count<1 || !std::isfinite(double(begin)) ||
++       !std::isfinite(double(end)) || end<begin){fprintf(stderr,"Invalid source interval/series\n");exit(46);}
++    for(int k=0;k<ts->count;k++) {
++        if(!std::isfinite(double(ts->time[k])) || !std::isfinite(double(ts->value[k])) ||
++           ts->value[k]<C(0.0) || (k>0 && !(ts->time[k]>ts->time[k-1]))) {
++            fprintf(stderr,"Source requires finite increasing times and nonnegative values\n");exit(46);
++        }
++    }
++    // Same constant extension outside the data range as linear_interpolate.
++    NUMERIC_TYPE area=C(0.0);
++    if(begin<ts->time[0])area+=ts->value[0]*((std::min)(end,ts->time[0])-begin);
++    for(int k=0;k+1<ts->count;k++) {
++        const NUMERIC_TYPE a=(std::max)(begin,ts->time[k]);
++        const NUMERIC_TYPE z=(std::min)(end,ts->time[k+1]);
++        if(z<=a)continue;
++        const NUMERIC_TYPE span=ts->time[k+1]-ts->time[k];
++        const NUMERIC_TYPE fa=(a-ts->time[k])/span,fz=(z-ts->time[k])/span;
++        const NUMERIC_TYPE qa=(C(1.0)-fa)*ts->value[k]+fa*ts->value[k+1];
++        const NUMERIC_TYPE qz=(C(1.0)-fz)*ts->value[k]+fz*ts->value[k+1];
++        area+=C(0.5)*(qa+qz)*(z-a);
++    }
++    if(end>ts->time[ts->count-1])area+=ts->value[ts->count-1]*(end-(std::max)(begin,ts->time[ts->count-1]));
++    if(!std::isfinite(double(area)) || area<C(0.0)){fprintf(stderr,"Invalid integrated source volume\n");exit(46);}
++    return area;
++}
++
+ static void accepted_positive_point_step(Pars* p, Solver* s, BoundCs* b,
+                                         Arrays* a)
+ {
+-    std::map<int, NUMERIC_TYPE> initial_h, depth_rate;
+-    NUMERIC_TYPE total_q = C(0.0);
+-    for (int k=0; k<b->numPS; ++k) {
+-        const int i=b->xpi[k], j=b->ypi[k];
+-        if (i<0 || i>=p->xsz || j<0 || j>=p->ysz) {
+-            fprintf(stderr,"Point outside raster\n"); exit(EXIT_FAILURE);
+-        }
+-        NUMERIC_TYPE q;
+-        if (b->PS_Ident[k] == QFIX4) q=b->PS_Val[k];
+-        else if (b->PS_Ident[k] == QVAR5)
+-            q=linear_interpolate(b->PS_TimeSeries[k],s->t);
+-        else { fprintf(stderr,"Only nonnegative QFIX/QVAR supported\n"); exit(EXIT_FAILURE); }
+-        if (!std::isfinite(double(q)) || q<C(0.0)) {
+-            fprintf(stderr,"Nonfinite/negative point flow unsupported\n"); exit(EXIT_FAILURE);
+-        }
+-        const int index=j*p->xsz+i;
+-        initial_h.emplace(index,a->H[index]);
+-        depth_rate[index] += q*p->dx/p->dA;
+-        total_q += q*p->dx;
++    std::map<int, NUMERIC_TYPE> initial_h;
++    for(int k=0;k<b->numPS;k++) {
++        const int i=b->xpi[k],j=b->ypi[k];
++        if(i<0 || i>=p->xsz || j<0 || j>=p->ysz){fprintf(stderr,"Point outside raster\n");exit(EXIT_FAILURE);}
++        initial_h.emplace(j*p->xsz+i,a->H[j*p->xsz+i]);
+     }
+     dg2::update_boundary_values(p,s,b,a);
+     NUMERIC_TYPE dt=dg2::Tstep_from_cfl(p,s,a);
+     dt=(std::min)(dt,s->Sim_Time-s->t);
+     dt=(std::min)(dt,p->MassTotal-s->t);
+     dt=(std::min)(dt,p->SaveTotal-s->t);
+-    for (int attempt=0; attempt<64; ++attempt) {
+-        if (!(dt>C(0.0)) || !std::isfinite(double(dt))) {
+-            fprintf(stderr,"Invalid point-source timestep\n"); exit(EXIT_FAILURE);
++    for(int attempt=0;attempt<64;attempt++) {
++        if(!(dt>C(0.0)) || !std::isfinite(double(dt)) || !(s->t+dt>s->t)) {
++            fprintf(stderr,"Invalid point-source timestep\n");exit(EXIT_FAILURE);
+         }
+-        for (const auto& item: initial_h)
+-            a->H[item.first]=item.second+depth_rate[item.first]*dt;
++        std::map<int,NUMERIC_TYPE> depth_increment;
++        NUMERIC_TYPE total_volume=C(0.0);
++        for(int k=0;k<b->numPS;k++) {
++            NUMERIC_TYPE unit_width_volume;
++            if(b->PS_Ident[k]==QFIX4) {
++                const NUMERIC_TYPE q=b->PS_Val[k];
++                if(!std::isfinite(double(q)) || q<C(0.0)){fprintf(stderr,"Invalid fixed point flow\n");exit(46);}
++                unit_width_volume=q*dt;
++            }
++            else if(b->PS_Ident[k]==QVAR5)
++                unit_width_volume=positive_series_integral(b->PS_TimeSeries[k],s->t,s->t+dt);
++            else {fprintf(stderr,"Only nonnegative QFIX/QVAR supported\n");exit(EXIT_FAILURE);}
++            const NUMERIC_TYPE volume=unit_width_volume*p->dx;
++            if(!std::isfinite(double(volume)) || volume<C(0.0)){fprintf(stderr,"Invalid point volume\n");exit(46);}
++            depth_increment[b->ypi[k]*p->xsz+b->xpi[k]]+=volume/p->dA;
++            total_volume+=volume;
++        }
++        for(const auto& item:initial_h)a->H[item.first]=item.second+depth_increment[item.first];
+         dg2::update_boundary_values(p,s,b,a);
+         const NUMERIC_TYPE allowed=dg2::Tstep_from_cfl(p,s,a);
+-        if (dt<=allowed) {
++        if(dt<=allowed) {
+             s->Tstep=dt;
+             trace_point_sources.clear();
+-            for(const auto& item:initial_h) trace_point_sources.push_back({item.first,item.second,a->H[item.first]-item.second});
+-            accumulate_point_flux_stats(b,total_q);
++            for(const auto& item:initial_h)trace_point_sources.push_back({item.first,item.second,a->H[item.first]-item.second});
++            accumulate_point_flux_stats(b,total_volume/dt);
++            static FILE* source_audit=fopen("accepted_source_volumes.txt","w");
++            if(!source_audit){perror("accepted_source_volumes.txt");exit(47);}
++            fprintf(source_audit,"%.17g %.17g %.17g %d\n",double(s->t),double(dt),double(total_volume),attempt+1);
+             return;
+         }
+-        dt=C(0.9)*allowed;  // bounded conservative retry; never add twice
+-    }
+-    fprintf(stderr,"Point-source CFL iteration failed\n"); exit(EXIT_FAILURE);
+-}
+-
++        dt=C(0.9)*allowed;
++    }
++    fprintf(stderr,"Point-source CFL iteration failed\n");exit(EXIT_FAILURE);
++}
+ 
+ 
+ // Diagnostic observer only. Single thread; stops before committing a material

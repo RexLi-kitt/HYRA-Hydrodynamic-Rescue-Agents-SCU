@@ -1,0 +1,714 @@
+{
+  "n": 32,
+  "minimum_crest_at_or_above_observed_peak": 4,
+  "endpoint_peak_below_observed_peak": 31,
+  "endpoint_peak_below_minimum_crest": 24,
+  "rows": [
+    {
+      "fid": 14,
+      "E": 340274.741,
+      "N": 555020.559,
+      "observed_peak_masl": 17.13,
+      "target_bed_masl": 16.979999542236328,
+      "minimum_raster_crest_masl": 17.09000015258789,
+      "crest_minus_observed_peak_m": -0.03999984741210838,
+      "path_length_m": 365,
+      "endpoint_max_stage_masl": 16.750218274087068,
+      "endpoint_max_stage_minus_crest_m": -0.33978187850082264,
+      "endpoint_max_stage_minus_observed_peak_m": -0.379781725912931,
+      "endpoint_E_N": [
+        340107.5,
+        555042.5
+      ],
+      "bottleneck_E_N": [
+        340152.5,
+        555117.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 15,
+      "E": 340274.743,
+      "N": 555020.566,
+      "observed_peak_masl": 17.134,
+      "target_bed_masl": 16.979999542236328,
+      "minimum_raster_crest_masl": 17.09000015258789,
+      "crest_minus_observed_peak_m": -0.043999847412109716,
+      "path_length_m": 365,
+      "endpoint_max_stage_masl": 16.750218274087068,
+      "endpoint_max_stage_minus_crest_m": -0.33978187850082264,
+      "endpoint_max_stage_minus_observed_peak_m": -0.38378172591293236,
+      "endpoint_E_N": [
+        340107.5,
+        555042.5
+      ],
+      "bottleneck_E_N": [
+        340152.5,
+        555117.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 17,
+      "E": 340331.244,
+      "N": 555047.859,
+      "observed_peak_masl": 17.537,
+      "target_bed_masl": 16.899999618530273,
+      "minimum_raster_crest_masl": 17.09000015258789,
+      "crest_minus_observed_peak_m": -0.4469998474121084,
+      "path_length_m": 390,
+      "endpoint_max_stage_masl": 16.750218274087068,
+      "endpoint_max_stage_minus_crest_m": -0.33978187850082264,
+      "endpoint_max_stage_minus_observed_peak_m": -0.786781725912931,
+      "endpoint_E_N": [
+        340107.5,
+        555042.5
+      ],
+      "bottleneck_E_N": [
+        340152.5,
+        555117.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 18,
+      "E": 340306.502,
+      "N": 555053.263,
+      "observed_peak_masl": 17.214,
+      "target_bed_masl": 17.09000015258789,
+      "minimum_raster_crest_masl": 17.09000015258789,
+      "crest_minus_observed_peak_m": -0.12399984741210801,
+      "path_length_m": 350,
+      "endpoint_max_stage_masl": 16.750218274087068,
+      "endpoint_max_stage_minus_crest_m": -0.33978187850082264,
+      "endpoint_max_stage_minus_observed_peak_m": -0.46378172591293065,
+      "endpoint_E_N": [
+        340107.5,
+        555042.5
+      ],
+      "bottleneck_E_N": [
+        340307.5,
+        555052.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 21,
+      "E": 340279.025,
+      "N": 555073.676,
+      "observed_peak_masl": 17.271,
+      "target_bed_masl": 16.549999237060547,
+      "minimum_raster_crest_masl": 17.09000015258789,
+      "crest_minus_observed_peak_m": -0.18099984741211017,
+      "path_length_m": 320,
+      "endpoint_max_stage_masl": 16.750218274087068,
+      "endpoint_max_stage_minus_crest_m": -0.33978187850082264,
+      "endpoint_max_stage_minus_observed_peak_m": -0.5207817259129328,
+      "endpoint_E_N": [
+        340107.5,
+        555042.5
+      ],
+      "bottleneck_E_N": [
+        340152.5,
+        555117.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 22,
+      "E": 340242.044,
+      "N": 555084.221,
+      "observed_peak_masl": 17.2,
+      "target_bed_masl": 16.65999984741211,
+      "minimum_raster_crest_masl": 17.09000015258789,
+      "crest_minus_observed_peak_m": -0.10999984741210866,
+      "path_length_m": 265,
+      "endpoint_max_stage_masl": 16.750218274087068,
+      "endpoint_max_stage_minus_crest_m": -0.33978187850082264,
+      "endpoint_max_stage_minus_observed_peak_m": -0.4497817259129313,
+      "endpoint_E_N": [
+        340107.5,
+        555042.5
+      ],
+      "bottleneck_E_N": [
+        340152.5,
+        555117.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 23,
+      "E": 340228.453,
+      "N": 555088.327,
+      "observed_peak_masl": 17.197,
+      "target_bed_masl": 16.520000457763672,
+      "minimum_raster_crest_masl": 17.09000015258789,
+      "crest_minus_observed_peak_m": -0.10699984741210855,
+      "path_length_m": 245,
+      "endpoint_max_stage_masl": 16.750218274087068,
+      "endpoint_max_stage_minus_crest_m": -0.33978187850082264,
+      "endpoint_max_stage_minus_observed_peak_m": -0.4467817259129312,
+      "endpoint_E_N": [
+        340107.5,
+        555042.5
+      ],
+      "bottleneck_E_N": [
+        340152.5,
+        555117.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 25,
+      "E": 340082.681,
+      "N": 555112.683,
+      "observed_peak_masl": 17.363,
+      "target_bed_masl": 16.540000915527344,
+      "minimum_raster_crest_masl": 17.079999923706055,
+      "crest_minus_observed_peak_m": -0.28300007629394486,
+      "path_length_m": 80,
+      "endpoint_max_stage_masl": 16.93433594595636,
+      "endpoint_max_stage_minus_crest_m": -0.1456639777496953,
+      "endpoint_max_stage_minus_observed_peak_m": -0.42866405404364016,
+      "endpoint_E_N": [
+        340057.5,
+        555057.5
+      ],
+      "bottleneck_E_N": [
+        340062.5,
+        555057.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 29,
+      "E": 340037.611,
+      "N": 555275.301,
+      "observed_peak_masl": 16.829,
+      "target_bed_masl": 16.399999618530273,
+      "minimum_raster_crest_masl": 16.399999618530273,
+      "crest_minus_observed_peak_m": -0.4290003814697272,
+      "path_length_m": 10,
+      "endpoint_max_stage_masl": 16.41694139143496,
+      "endpoint_max_stage_minus_crest_m": 0.016941772904687014,
+      "endpoint_max_stage_minus_observed_peak_m": -0.4120586085650402,
+      "endpoint_E_N": [
+        340032.5,
+        555282.5
+      ],
+      "bottleneck_E_N": [
+        340037.5,
+        555277.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 45,
+      "E": 341255.395,
+      "N": 555615.809,
+      "observed_peak_masl": 16.462,
+      "target_bed_masl": 15.989999771118164,
+      "minimum_raster_crest_masl": 17.100000381469727,
+      "crest_minus_observed_peak_m": 0.6380003814697268,
+      "path_length_m": 120,
+      "endpoint_max_stage_masl": 15.836608030107785,
+      "endpoint_max_stage_minus_crest_m": -1.2633923513619418,
+      "endpoint_max_stage_minus_observed_peak_m": -0.625391969892215,
+      "endpoint_E_N": [
+        341332.5,
+        555652.5
+      ],
+      "bottleneck_E_N": [
+        341272.5,
+        555622.5
+      ],
+      "barrier_above_observed_peak": true
+    },
+    {
+      "fid": 47,
+      "E": 341258.613,
+      "N": 555619.588,
+      "observed_peak_masl": 16.568,
+      "target_bed_masl": 15.989999771118164,
+      "minimum_raster_crest_masl": 17.100000381469727,
+      "crest_minus_observed_peak_m": 0.5320003814697252,
+      "path_length_m": 120,
+      "endpoint_max_stage_masl": 15.836608030107785,
+      "endpoint_max_stage_minus_crest_m": -1.2633923513619418,
+      "endpoint_max_stage_minus_observed_peak_m": -0.7313919698922167,
+      "endpoint_E_N": [
+        341332.5,
+        555652.5
+      ],
+      "bottleneck_E_N": [
+        341272.5,
+        555622.5
+      ],
+      "barrier_above_observed_peak": true
+    },
+    {
+      "fid": 48,
+      "E": 341268.001,
+      "N": 555629.817,
+      "observed_peak_masl": 16.547,
+      "target_bed_masl": 15.850000381469727,
+      "minimum_raster_crest_masl": 17.100000381469727,
+      "crest_minus_observed_peak_m": 0.553000381469726,
+      "path_length_m": 100,
+      "endpoint_max_stage_masl": 15.836608030107785,
+      "endpoint_max_stage_minus_crest_m": -1.2633923513619418,
+      "endpoint_max_stage_minus_observed_peak_m": -0.7103919698922159,
+      "endpoint_E_N": [
+        341332.5,
+        555652.5
+      ],
+      "bottleneck_E_N": [
+        341272.5,
+        555622.5
+      ],
+      "barrier_above_observed_peak": true
+    },
+    {
+      "fid": 55,
+      "E": 341878.014,
+      "N": 555659.341,
+      "observed_peak_masl": 16.176,
+      "target_bed_masl": 15.8100004196167,
+      "minimum_raster_crest_masl": 16.15999984741211,
+      "crest_minus_observed_peak_m": -0.016000152587889005,
+      "path_length_m": 15,
+      "endpoint_max_stage_masl": 15.91915073957585,
+      "endpoint_max_stage_minus_crest_m": -0.2408491078362598,
+      "endpoint_max_stage_minus_observed_peak_m": -0.2568492604241488,
+      "endpoint_E_N": [
+        341877.5,
+        555672.5
+      ],
+      "bottleneck_E_N": [
+        341877.5,
+        555662.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 68,
+      "E": 341988.903,
+      "N": 555694.132,
+      "observed_peak_masl": 16.105,
+      "target_bed_masl": 15.859999656677246,
+      "minimum_raster_crest_masl": 15.859999656677246,
+      "crest_minus_observed_peak_m": -0.24500034332275433,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.915199420304534,
+      "endpoint_max_stage_minus_crest_m": 0.055199763627287624,
+      "endpoint_max_stage_minus_observed_peak_m": -0.1898005796954667,
+      "endpoint_E_N": [
+        341987.5,
+        555697.5
+      ],
+      "bottleneck_E_N": [
+        341987.5,
+        555692.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 81,
+      "E": 341624.525,
+      "N": 555762.504,
+      "observed_peak_masl": 16.512,
+      "target_bed_masl": 15.619999885559082,
+      "minimum_raster_crest_masl": 16.18000030517578,
+      "crest_minus_observed_peak_m": -0.3319996948242192,
+      "path_length_m": 10,
+      "endpoint_max_stage_masl": 15.970651074903863,
+      "endpoint_max_stage_minus_crest_m": -0.20934923027191843,
+      "endpoint_max_stage_minus_observed_peak_m": -0.5413489250961376,
+      "endpoint_E_N": [
+        341617.5,
+        555767.5
+      ],
+      "bottleneck_E_N": [
+        341617.5,
+        555762.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 107,
+      "E": 339846.264,
+      "N": 555868.812,
+      "observed_peak_masl": 14.858,
+      "target_bed_masl": 14.260000228881836,
+      "minimum_raster_crest_masl": 15.710000038146973,
+      "crest_minus_observed_peak_m": 0.8520000381469721,
+      "path_length_m": 235,
+      "endpoint_max_stage_masl": 15.260441742278461,
+      "endpoint_max_stage_minus_crest_m": -0.4495582958685116,
+      "endpoint_max_stage_minus_observed_peak_m": 0.4024417422784605,
+      "endpoint_E_N": [
+        339697.5,
+        555932.5
+      ],
+      "bottleneck_E_N": [
+        339702.5,
+        555937.5
+      ],
+      "barrier_above_observed_peak": true
+    },
+    {
+      "fid": 133,
+      "E": 339595.374,
+      "N": 556107.672,
+      "observed_peak_masl": 15.1659,
+      "target_bed_masl": 15.029999732971191,
+      "minimum_raster_crest_masl": 15.029999732971191,
+      "crest_minus_observed_peak_m": -0.1359002670288092,
+      "path_length_m": 15,
+      "endpoint_max_stage_masl": 14.781744368116108,
+      "endpoint_max_stage_minus_crest_m": -0.24825536485508337,
+      "endpoint_max_stage_minus_observed_peak_m": -0.38415563188389257,
+      "endpoint_E_N": [
+        339587.5,
+        556112.5
+      ],
+      "bottleneck_E_N": [
+        339597.5,
+        556107.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 134,
+      "E": 340741.862,
+      "N": 556128.036,
+      "observed_peak_masl": 15.832,
+      "target_bed_masl": 15.699999809265137,
+      "minimum_raster_crest_masl": 15.8100004196167,
+      "crest_minus_observed_peak_m": -0.02199958038330152,
+      "path_length_m": 15,
+      "endpoint_max_stage_masl": 15.531299188085946,
+      "endpoint_max_stage_minus_crest_m": -0.27870123153075355,
+      "endpoint_max_stage_minus_observed_peak_m": -0.30070081191405507,
+      "endpoint_E_N": [
+        340742.5,
+        556142.5
+      ],
+      "bottleneck_E_N": [
+        340742.5,
+        556132.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 135,
+      "E": 343054.842,
+      "N": 556129.12,
+      "observed_peak_masl": 16.246,
+      "target_bed_masl": 16.06999969482422,
+      "minimum_raster_crest_masl": 16.06999969482422,
+      "crest_minus_observed_peak_m": -0.17600030517577991,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 16.12741852846828,
+      "endpoint_max_stage_minus_crest_m": 0.05741883364406064,
+      "endpoint_max_stage_minus_observed_peak_m": -0.11858147153171927,
+      "endpoint_E_N": [
+        343052.5,
+        556132.5
+      ],
+      "bottleneck_E_N": [
+        343052.5,
+        556127.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 136,
+      "E": 339598.609,
+      "N": 556132.024,
+      "observed_peak_masl": 15.0907,
+      "target_bed_masl": 14.800000190734863,
+      "minimum_raster_crest_masl": 14.800000190734863,
+      "crest_minus_observed_peak_m": -0.2906998092651367,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 14.779339127148175,
+      "endpoint_max_stage_minus_crest_m": -0.0206610635866884,
+      "endpoint_max_stage_minus_observed_peak_m": -0.3113608728518251,
+      "endpoint_E_N": [
+        339592.5,
+        556132.5
+      ],
+      "bottleneck_E_N": [
+        339597.5,
+        556132.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 138,
+      "E": 339602.422,
+      "N": 556162.665,
+      "observed_peak_masl": 15.2187,
+      "target_bed_masl": 14.819999694824219,
+      "minimum_raster_crest_masl": 14.819999694824219,
+      "crest_minus_observed_peak_m": -0.39870030517578137,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 14.776932585157754,
+      "endpoint_max_stage_minus_crest_m": -0.04306710966646499,
+      "endpoint_max_stage_minus_observed_peak_m": -0.44176741484224635,
+      "endpoint_E_N": [
+        339597.5,
+        556162.5
+      ],
+      "bottleneck_E_N": [
+        339602.5,
+        556162.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 147,
+      "E": 339887.975,
+      "N": 556268.516,
+      "observed_peak_masl": 15.2634,
+      "target_bed_masl": 14.84000015258789,
+      "minimum_raster_crest_masl": 14.84000015258789,
+      "crest_minus_observed_peak_m": -0.4233998474121101,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 14.866827309346965,
+      "endpoint_max_stage_minus_crest_m": 0.0268271567590741,
+      "endpoint_max_stage_minus_observed_peak_m": -0.396572690653036,
+      "endpoint_E_N": [
+        339887.5,
+        556272.5
+      ],
+      "bottleneck_E_N": [
+        339887.5,
+        556267.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 158,
+      "E": 343135.154,
+      "N": 556325.873,
+      "observed_peak_masl": 16.272,
+      "target_bed_masl": 16.040000915527344,
+      "minimum_raster_crest_masl": 16.040000915527344,
+      "crest_minus_observed_peak_m": -0.23199908447265472,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 16.130956505831307,
+      "endpoint_max_stage_minus_crest_m": 0.09095559030396316,
+      "endpoint_max_stage_minus_observed_peak_m": -0.14104349416869155,
+      "endpoint_E_N": [
+        343137.5,
+        556332.5
+      ],
+      "bottleneck_E_N": [
+        343137.5,
+        556327.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 170,
+      "E": 341502.396,
+      "N": 556568.683,
+      "observed_peak_masl": 16.074,
+      "target_bed_masl": 15.84000015258789,
+      "minimum_raster_crest_masl": 15.84000015258789,
+      "crest_minus_observed_peak_m": -0.233999847412111,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.819395710195572,
+      "endpoint_max_stage_minus_crest_m": -0.020604442392318845,
+      "endpoint_max_stage_minus_observed_peak_m": -0.25460428980442984,
+      "endpoint_E_N": [
+        341507.5,
+        556567.5
+      ],
+      "bottleneck_E_N": [
+        341502.5,
+        556567.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 172,
+      "E": 341505.889,
+      "N": 556577.389,
+      "observed_peak_masl": 16.082,
+      "target_bed_masl": 15.949999809265137,
+      "minimum_raster_crest_masl": 15.949999809265137,
+      "crest_minus_observed_peak_m": -0.13200019073486402,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.819549832401707,
+      "endpoint_max_stage_minus_crest_m": -0.13044997686342974,
+      "endpoint_max_stage_minus_observed_peak_m": -0.26245016759829376,
+      "endpoint_E_N": [
+        341507.5,
+        556572.5
+      ],
+      "bottleneck_E_N": [
+        341507.5,
+        556577.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 192,
+      "E": 341361.826,
+      "N": 556686.738,
+      "observed_peak_masl": 15.899,
+      "target_bed_masl": 15.789999961853027,
+      "minimum_raster_crest_masl": 15.789999961853027,
+      "crest_minus_observed_peak_m": -0.10900003814697179,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.654757933775048,
+      "endpoint_max_stage_minus_crest_m": -0.13524202807797892,
+      "endpoint_max_stage_minus_observed_peak_m": -0.2442420662249507,
+      "endpoint_E_N": [
+        341362.5,
+        556692.5
+      ],
+      "bottleneck_E_N": [
+        341362.5,
+        556687.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 194,
+      "E": 341372.711,
+      "N": 556689.13,
+      "observed_peak_masl": 15.89,
+      "target_bed_masl": 15.65999984741211,
+      "minimum_raster_crest_masl": 15.65999984741211,
+      "crest_minus_observed_peak_m": -0.2300001525878912,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.656638772199837,
+      "endpoint_max_stage_minus_crest_m": -0.0033610752122719134,
+      "endpoint_max_stage_minus_observed_peak_m": -0.2333612278001631,
+      "endpoint_E_N": [
+        341372.5,
+        556692.5
+      ],
+      "bottleneck_E_N": [
+        341372.5,
+        556687.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 206,
+      "E": 341790.293,
+      "N": 556804.249,
+      "observed_peak_masl": 16.066,
+      "target_bed_masl": 15.829999923706055,
+      "minimum_raster_crest_masl": 15.829999923706055,
+      "crest_minus_observed_peak_m": -0.23600007629394426,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.873843766962661,
+      "endpoint_max_stage_minus_crest_m": 0.04384384325660662,
+      "endpoint_max_stage_minus_observed_peak_m": -0.19215623303733764,
+      "endpoint_E_N": [
+        341797.5,
+        556802.5
+      ],
+      "bottleneck_E_N": [
+        341792.5,
+        556802.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 213,
+      "E": 341648.365,
+      "N": 556842.843,
+      "observed_peak_masl": 15.989,
+      "target_bed_masl": 15.789999961853027,
+      "minimum_raster_crest_masl": 15.789999961853027,
+      "crest_minus_observed_peak_m": -0.19900003814697342,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.811344918363224,
+      "endpoint_max_stage_minus_crest_m": 0.02134495651019641,
+      "endpoint_max_stage_minus_observed_peak_m": -0.177655081636777,
+      "endpoint_E_N": [
+        341642.5,
+        556842.5
+      ],
+      "bottleneck_E_N": [
+        341647.5,
+        556842.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 220,
+      "E": 342113.513,
+      "N": 556865.564,
+      "observed_peak_masl": 16.072,
+      "target_bed_masl": 15.970000267028809,
+      "minimum_raster_crest_masl": 15.970000267028809,
+      "crest_minus_observed_peak_m": -0.10199973297119058,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.967601932057182,
+      "endpoint_max_stage_minus_crest_m": -0.002398334971626781,
+      "endpoint_max_stage_minus_observed_peak_m": -0.10439806794281736,
+      "endpoint_E_N": [
+        342112.5,
+        556862.5
+      ],
+      "bottleneck_E_N": [
+        342112.5,
+        556867.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 243,
+      "E": 340729.782,
+      "N": 557198.516,
+      "observed_peak_masl": 15.768,
+      "target_bed_masl": 15.40999984741211,
+      "minimum_raster_crest_masl": 15.40999984741211,
+      "crest_minus_observed_peak_m": -0.3580001525878913,
+      "path_length_m": 5,
+      "endpoint_max_stage_masl": 15.45953254883367,
+      "endpoint_max_stage_minus_crest_m": 0.04953270142156008,
+      "endpoint_max_stage_minus_observed_peak_m": -0.30846745116633123,
+      "endpoint_E_N": [
+        340722.5,
+        557197.5
+      ],
+      "bottleneck_E_N": [
+        340727.5,
+        557197.5
+      ],
+      "barrier_above_observed_peak": false
+    },
+    {
+      "fid": 247,
+      "E": 341342.681,
+      "N": 557215.668,
+      "observed_peak_masl": 15.667,
+      "target_bed_masl": 15.520000457763672,
+      "minimum_raster_crest_masl": 15.520000457763672,
+      "crest_minus_observed_peak_m": -0.14699954223632794,
+      "path_length_m": 10,
+      "endpoint_max_stage_masl": 15.513984268365915,
+      "endpoint_max_stage_minus_crest_m": -0.006016189397756833,
+      "endpoint_max_stage_minus_observed_peak_m": -0.15301573163408477,
+      "endpoint_E_N": [
+        341342.5,
+        557227.5
+      ],
+      "bottleneck_E_N": [
+        341342.5,
+        557217.5
+      ],
+      "barrier_above_observed_peak": false
+    }
+  ],
+  "physical_model_modified": false,
+  "real_accuracy_improvement": false
+}
