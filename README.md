@@ -1,6 +1,10 @@
 # HYRA-Hydrodynamic-Rescue-Agents-
 项目仓库
 
+## 四版搜救实验发布
+
+[V1–V4 发布总览](releases/flood-rescue-v1-v4/README.md)：固定人员搜救、动态落水区域需求预测、贵州综合险情迁移与逐秒需求前推。各版本提供独立源码、冻结模型或先验、结果归档与复跑说明，完成率按各自环境协议呈现。
+
 [无人机工作台](uav-workbench/README.md)：现行统一八方向网页，提供100米双任务、三路径信号建模和原始网格回放；[代码导航](uav-workbench/docs/CODE_MAP.md)。历史单机验收与试跑见[P0—P2记录](uav-workbench/docs/P0-P2_20261025.md)。
 
 [开发日志](DEVLOG.md)：记录地图图层、人员布点、河网检查、分类糙率及洪水对照试验的改动、证据与待办。
