@@ -1,0 +1,31 @@
+{
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "fit_rows": 240000,
+  "cal_rows": 80000,
+  "stride_seconds": 30,
+  "epochs": 32,
+  "models": [
+    {
+      "seed": 11,
+      "seconds": 13.953973900002893,
+      "sha256": "e66870266f40bf5627a3e3d0e2dcb580a212d232f947ca6354c2b522465282c7",
+      "cal_mae": 0.01764771156013012,
+      "cal_poisson": 0.01605696976184845
+    },
+    {
+      "seed": 29,
+      "seconds": 11.155769899996812,
+      "sha256": "0af21847909ebb09cb85a479747125f4fd63bad18f2ca3084730cb60b343a85e",
+      "cal_mae": 0.017164453864097595,
+      "cal_poisson": 0.016586383804678917
+    },
+    {
+      "seed": 47,
+      "seconds": 11.339926300002844,
+      "sha256": "376aff26f5adaee730eb3202e5d9f6a8d3caec3e8c49e088c1875042bb9a6c29",
+      "cal_mae": 0.017108777537941933,
+      "cal_poisson": 0.01620432175695896
+    }
+  ]
+}

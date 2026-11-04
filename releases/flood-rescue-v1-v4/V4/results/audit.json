@@ -1,0 +1,22 @@
+{
+  "protocol_checks": {
+    "sensor_boundary": true,
+    "collision": true,
+    "mass_balance": true,
+    "deadline_equality": true,
+    "hidden_isolation": true,
+    "age120": true,
+    "motion": true,
+    "orientation": true,
+    "conditional_count": true
+  },
+  "main_scenarios": 48,
+  "orientation_scenarios": 12,
+  "episodes": 480,
+  "people": 19200,
+  "main_events": {
+    "strong": 0,
+    "refloats": 0,
+    "map_failures": 0
+  }
+}

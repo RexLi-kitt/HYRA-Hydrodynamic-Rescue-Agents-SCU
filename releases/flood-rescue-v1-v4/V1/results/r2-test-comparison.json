@@ -1,0 +1,40 @@
+{
+  "candidate": "gaps",
+  "baseline": "R2",
+  "episodes": 600,
+  "rescued": 9863,
+  "people": 12000,
+  "weights": {
+    "11": {
+      "path": "uav-workbench\\generated\\rescue-assignment-dqn-v1\\credit-11\\model-1000.pt",
+      "sha256": "eb247cc84027cd76795555f96280bcb39e9c009b1eceee429f0454608a855f6b",
+      "episode": 1000
+    },
+    "29": {
+      "path": "uav-workbench\\generated\\rescue-assignment-dqn-v1\\credit-29\\model-1000.pt",
+      "sha256": "b48daf9b9c914a742c1aa152cf1f122f97afb8fbcc7632580a58ba8040e62a72",
+      "episode": 1000
+    },
+    "47": {
+      "path": "uav-workbench\\generated\\rescue-assignment-dqn-v1\\credit-47\\model-750.pt",
+      "sha256": "c79fefa0108fb4abb0097b61b7a269ba4df057014b1713fdf9689ad87feee338",
+      "episode": 750
+    }
+  },
+  "bootstrap": 20261104,
+  "RCR": {
+    "mean": 0.11508333333333333,
+    "lo": 0.10475,
+    "hi": 0.12516874999999994
+  },
+  "coverage": {
+    "mean": 0.11257783333333332,
+    "lo": 0.11089330416666666,
+    "hi": 0.114385
+  },
+  "discovered": {
+    "mean": 2.09,
+    "lo": 1.9183333333333337,
+    "hi": 2.2583333333333333
+  }
+}
