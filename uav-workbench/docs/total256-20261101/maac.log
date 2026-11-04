@@ -1,0 +1,8 @@
+maac validation 64 {"service": {"ST": 300.0, "ACC": 0.11291666666666667, "RCR": 0.7875000000000001, "coverage": 0.747475, "rescued": 15.75, "FRT": {"mean": 5.25, "valid": 8, "total": 8}, "CRT": {"mean": null, "valid": 0, "total": 8}, "all_rescued_fraction": 0.0, "timeout_fraction": 1.0}, "watchdog": {"ST": 109.375, "ACC": 0.005597014925373134, "RCR": 1.0, "coverage": 1.0, "rescued": 20.0, "FRT": {"mean": 5.25, "valid": 8, "total": 8}, "CRT": {"mean": 98.5, "valid": 8, "total": 8}, "all_rescued_fraction": 1.0, "timeout_fraction": 0.0}}
+maac trained 96 elapsed 105.9
+maac trained 128 elapsed 153.6
+maac trained 160 elapsed 201.0
+maac trained 192 elapsed 249.4
+maac trained 224 elapsed 298.6
+maac trained 256 elapsed 348.1
+maac validation 256 {"service": {"ST": 300.0, "ACC": 0.12583333333333335, "RCR": 0.875, "coverage": 0.8423499999999999, "rescued": 17.5, "FRT": {"mean": 38.0, "valid": 8, "total": 8}, "CRT": {"mean": null, "valid": 0, "total": 8}, "all_rescued_fraction": 0.0, "timeout_fraction": 1.0}, "watchdog": {"ST": 106.5, "ACC": 0.0, "RCR": 1.0, "coverage": 1.0, "rescued": 20.0, "FRT": {"mean": 9.75, "valid": 8, "total": 8}, "CRT": {"mean": 98.0, "valid": 8, "total": 8}, "all_rescued_fraction": 1.0, "timeout_fraction": 0.0}}

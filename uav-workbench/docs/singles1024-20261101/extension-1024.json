@@ -1,0 +1,56 @@
+{
+  "happo": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": false,
+      "improves_896_to_1024": true,
+      "material_gain_over_256": false,
+      "best_after_256": true
+    }
+  },
+  "hatrpo": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": false,
+      "improves_896_to_1024": false,
+      "material_gain_over_256": true,
+      "best_after_256": true
+    }
+  },
+  "hasac": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": false,
+      "improves_896_to_1024": false,
+      "material_gain_over_256": false,
+      "best_after_256": false
+    }
+  },
+  "maac": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": false,
+      "improves_896_to_1024": false,
+      "material_gain_over_256": true,
+      "best_after_256": false
+    }
+  },
+  "mat": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": false,
+      "improves_896_to_1024": false,
+      "material_gain_over_256": false,
+      "best_after_256": false
+    }
+  },
+  "coma": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": true,
+      "improves_896_to_1024": false,
+      "material_gain_over_256": true,
+      "best_after_256": true
+    }
+  }
+}

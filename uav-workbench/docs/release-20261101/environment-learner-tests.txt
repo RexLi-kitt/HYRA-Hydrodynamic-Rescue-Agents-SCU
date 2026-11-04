@@ -1,0 +1,36 @@
+test_arrival_requires_two_following_hovers (test_environment.EnvironmentTests.test_arrival_requires_two_following_hovers) ... ok
+test_future_water_hidden (test_environment.EnvironmentTests.test_future_water_hidden) ... ok
+test_intent_conflict_is_recorded_and_resolved (test_environment.EnvironmentTests.test_intent_conflict_is_recorded_and_resolved) ... ok
+test_last_step_complete_is_success_event (test_environment.EnvironmentTests.test_last_step_complete_is_success_event) ... ok
+test_last_step_partial_is_failure (test_environment.EnvironmentTests.test_last_step_partial_is_failure) ... ok
+test_late_interval_water_interrupts (test_environment.EnvironmentTests.test_late_interval_water_interrupts) ... ok
+test_metrics_json_after_boundary (test_environment.EnvironmentTests.test_metrics_json_after_boundary) ... ok
+test_missing_times_are_null (test_environment.EnvironmentTests.test_missing_times_are_null) ... ok
+test_moving_interrupts_service (test_environment.EnvironmentTests.test_moving_interrupts_service) ... ok
+test_observation_keeps_sampling_time (test_environment.EnvironmentTests.test_observation_keeps_sampling_time) ... ok
+test_one_person_one_rescue (test_environment.EnvironmentTests.test_one_person_one_rescue) ... ok
+test_reproducible_layout (test_environment.EnvironmentTests.test_reproducible_layout) ... ok
+test_speed_not_depth_identifies_service_failure (test_environment.EnvironmentTests.test_speed_not_depth_identifies_service_failure) ... ok
+test_unique_initial_coverage (test_environment.EnvironmentTests.test_unique_initial_coverage) ... ok
+test_unseen_person_coordinates_hidden (test_environment.EnvironmentTests.test_unseen_person_coordinates_hidden) ... ok
+test_crossing_between_endpoints (test_environment.GeometryTests.test_crossing_between_endpoints) ... ok
+test_eight_distances (test_environment.GeometryTests.test_eight_distances) ... ok
+test_exchange_positions (test_environment.GeometryTests.test_exchange_positions) ... ok
+test_move_towards_hover (test_environment.GeometryTests.test_move_towards_hover) ... ok
+test_sector_edge_and_vertex (test_environment.GeometryTests.test_sector_edge_and_vertex) ... ok
+test_service_entry (test_environment.GeometryTests.test_service_entry) ... ok
+test_short_stop_still_collides (test_environment.GeometryTests.test_short_stop_still_collides) ... ok
+test_action_mask (test_learners.LearnerTests.test_action_mask) ... ok
+test_all_six_registry (test_learners.LearnerTests.test_all_six_registry) ... ok
+test_counterfactual_critic_excludes_own_action (test_learners.LearnerTests.test_counterfactual_critic_excludes_own_action) ... ok
+test_every_algorithm_updates_and_restores (test_learners.LearnerTests.test_every_algorithm_updates_and_restores) ... ok
+test_mat_causal_actions (test_learners.LearnerTests.test_mat_causal_actions) ... ok
+test_mat_sampling_matches_teacher_forcing (test_learners.LearnerTests.test_mat_sampling_matches_teacher_forcing) ... ok
+test_terminal_no_bootstrap (test_learners.LearnerTests.test_terminal_no_bootstrap) ... ok
+test_trust_region_bound (test_learners.LearnerTests.test_trust_region_bound) ... ok
+test_unregistered_rejected (test_learners.LearnerTests.test_unregistered_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 1.955s
+
+OK

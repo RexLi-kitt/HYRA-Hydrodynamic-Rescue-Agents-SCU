@@ -1,0 +1,217 @@
+[
+  {
+    "episode": 768,
+    "adopted": false,
+    "best_episode": 512,
+    "sample": {
+      "ST": 300.0,
+      "ACC": 0.024791666666666663,
+      "RCR": 0.9125,
+      "coverage": 0.92726875,
+      "rescued": 18.25,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 16,
+        "total": 16
+      },
+      "CRT": {
+        "mean": 220.33333333333334,
+        "valid": 3,
+        "total": 16
+      },
+      "all_rescued_fraction": 0.1875,
+      "timeout_fraction": 1.0
+    },
+    "greedy": {
+      "ST": 300.0,
+      "ACC": 0.4633333333333334,
+      "RCR": 0.8374999999999999,
+      "coverage": 0.82365,
+      "rescued": 16.75,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  },
+  {
+    "episode": 832,
+    "adopted": false,
+    "best_episode": 512,
+    "sample": {
+      "ST": 300.0,
+      "ACC": 0.017083333333333332,
+      "RCR": 0.925,
+      "coverage": 0.9080875,
+      "rescued": 18.5,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 16,
+        "total": 16
+      },
+      "CRT": {
+        "mean": 220.0,
+        "valid": 4,
+        "total": 16
+      },
+      "all_rescued_fraction": 0.25,
+      "timeout_fraction": 1.0
+    },
+    "greedy": {
+      "ST": 300.0,
+      "ACC": 0.8958333333333334,
+      "RCR": 0.8500000000000001,
+      "coverage": 0.8396,
+      "rescued": 17.0,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  },
+  {
+    "episode": 896,
+    "adopted": false,
+    "best_episode": 512,
+    "sample": {
+      "ST": 300.0,
+      "ACC": 0.020416666666666666,
+      "RCR": 0.971875,
+      "coverage": 0.9413437499999999,
+      "rescued": 19.4375,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 16,
+        "total": 16
+      },
+      "CRT": {
+        "mean": 210.72727272727272,
+        "valid": 11,
+        "total": 16
+      },
+      "all_rescued_fraction": 0.6875,
+      "timeout_fraction": 1.0
+    },
+    "greedy": {
+      "ST": 300.0,
+      "ACC": 0.6391666666666667,
+      "RCR": 0.825,
+      "coverage": 0.86585,
+      "rescued": 16.5,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  },
+  {
+    "episode": 960,
+    "adopted": false,
+    "best_episode": 512,
+    "sample": {
+      "ST": 300.0,
+      "ACC": 0.04166666666666667,
+      "RCR": 0.91875,
+      "coverage": 0.911125,
+      "rescued": 18.375,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 16,
+        "total": 16
+      },
+      "CRT": {
+        "mean": 113.5,
+        "valid": 4,
+        "total": 16
+      },
+      "all_rescued_fraction": 0.25,
+      "timeout_fraction": 1.0
+    },
+    "greedy": {
+      "ST": 300.0,
+      "ACC": 0.26749999999999996,
+      "RCR": 0.7875000000000001,
+      "coverage": 0.76865,
+      "rescued": 15.75,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  },
+  {
+    "episode": 1024,
+    "adopted": false,
+    "best_episode": 512,
+    "sample": {
+      "ST": 300.0,
+      "ACC": 0.021249999999999998,
+      "RCR": 0.99375,
+      "coverage": 0.966275,
+      "rescued": 19.875,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 16,
+        "total": 16
+      },
+      "CRT": {
+        "mean": 193.35714285714286,
+        "valid": 14,
+        "total": 16
+      },
+      "all_rescued_fraction": 0.875,
+      "timeout_fraction": 1.0
+    },
+    "greedy": {
+      "ST": 300.0,
+      "ACC": 0.6683333333333333,
+      "RCR": 0.7999999999999999,
+      "coverage": 0.80125,
+      "rescued": 16.0,
+      "FRT": {
+        "mean": 6.75,
+        "valid": 8,
+        "total": 8
+      },
+      "CRT": {
+        "mean": null,
+        "valid": 0,
+        "total": 8
+      },
+      "all_rescued_fraction": 0.0,
+      "timeout_fraction": 1.0
+    }
+  }
+]

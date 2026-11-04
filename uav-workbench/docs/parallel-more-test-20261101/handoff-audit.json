@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-11-01T21:56:18.503294",
+  "status": "handoff_verified_evaluation_in_progress",
+  "records": 2800,
+  "total": 5630,
+  "preserved_prefix_records": 2603,
+  "prefix_byte_identical": true,
+  "unique_keys": true,
+  "coordinator_pid": 38732,
+  "workers": 6,
+  "selection_sha256": "e4646aa893b4f646c7fe7bc9943a087aa324a46cb1c48a00385429fdfe30e2f9",
+  "selection_matches_preflight": true,
+  "wrapper_matches_preflight": true
+}

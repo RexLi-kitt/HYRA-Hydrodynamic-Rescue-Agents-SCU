@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "S001",
+    "file": "uav6-pilot-20261101/happo/episodes.jsonl",
+    "sha256": "dba695ebd954e9c9819654436bcf6ee02d99a879d38bc366465d2e25321c2f18",
+    "bytes": 25819
+  },
+  {
+    "id": "S002",
+    "file": "uav6-total256-20261101/happo/episodes.jsonl",
+    "sha256": "7c4de59d4e643427121d4a47df0899f3b46debe31b02e2f3058d2f9f0f35ebcd",
+    "bytes": 87060
+  },
+  {
+    "id": "S003",
+    "file": "uav6-pilot-20261101/hatrpo/episodes.jsonl",
+    "sha256": "8296533e6c63114f53fad8e028a2fbfadafa8f945da18e08e6007dae9f76d2f3",
+    "bytes": 33288
+  },
+  {
+    "id": "S004",
+    "file": "uav6-total256-20261101/hatrpo/episodes.jsonl",
+    "sha256": "e3cbdcd446061c4e3000ac0970b4a21745f568c00434deca6a78bd80904dd568",
+    "bytes": 132126
+  },
+  {
+    "id": "S005",
+    "file": "uav6-priority-20261101/hatrpo/episodes.jsonl",
+    "sha256": "2c9ebeb9d7980c215b0b15f10bcc16318b2172f950cad01392cd51678d09a8fe",
+    "bytes": 498417
+  },
+  {
+    "id": "S006",
+    "file": "uav6-full1024-20261101/hatrpo/episodes.jsonl",
+    "sha256": "be813fe758e0256ba61951fa5f61ea3fb93f4bc49c7aa3933c2d05b987fab758",
+    "bytes": 356155
+  },
+  {
+    "id": "S007",
+    "file": "uav6-pilot-20261101/hasac/episodes.jsonl",
+    "sha256": "2afc7b02b570620f85e66c0cdba8302eea7265c79c815629a063c9fe3135fdc6",
+    "bytes": 27807
+  },
+  {
+    "id": "S008",
+    "file": "uav6-total256-20261101/hasac/episodes.jsonl",
+    "sha256": "0a30a2c72343b7209ee8e5ba2098f8acf76ea1485f77e0f0ae9dbd02d85e7efb",
+    "bytes": 86989
+  },
+  {
+    "id": "S009",
+    "file": "uav6-priority-20261101/hasac/episodes.jsonl",
+    "sha256": "e4d632cc4c25ad84a3e1b55d2cc1cb9c07fc69d113116c10d5512fd21f1cb372",
+    "bytes": 183473
+  },
+  {
+    "id": "S010",
+    "file": "uav6-full1024-20261101/hasac/episodes.jsonl",
+    "sha256": "c5265ca7ed3ccacad420fe58b5dc5724127724a7a3c92ade71dc77c41ba16a81",
+    "bytes": 549602
+  },
+  {
+    "id": "S011",
+    "file": "uav6-pilot-20261101/maac/episodes.jsonl",
+    "sha256": "3f9f96b968a3f53e89c619ad3f6d628288975fc8c4da9aae327e517d2cefd8ca",
+    "bytes": 28039
+  },
+  {
+    "id": "S012",
+    "file": "uav6-total256-20261101/maac/episodes.jsonl",
+    "sha256": "1eafc44ad1aa3c155713f5591ae1f1ac2c393dc94f2176653d9a35417d922111",
+    "bytes": 87097
+  },
+  {
+    "id": "S013",
+    "file": "uav6-pilot-20261101/mat/episodes.jsonl",
+    "sha256": "e99ca974f188cf4e691e73a866c652c2530288ab2562693ae031907367b903ca",
+    "bytes": 23966
+  },
+  {
+    "id": "S014",
+    "file": "uav6-total256-20261101/mat/episodes.jsonl",
+    "sha256": "459485192fbe81961234c0b1aa8d72796fdfb6c759f5d863a37cf3d1a2c01359",
+    "bytes": 75717
+  },
+  {
+    "id": "S015",
+    "file": "uav6-pilot-20261101/coma/episodes.jsonl",
+    "sha256": "a6d3a6c9faebf76a5950e3df9a85ed5777a2cfea20ad89a072f64458c55cc033",
+    "bytes": 25118
+  },
+  {
+    "id": "S016",
+    "file": "uav6-total256-20261101/coma/episodes.jsonl",
+    "sha256": "30ef89177c67638d70f0494a70895c6cd5c508a19b9ae0c4ec6a48bd18394815",
+    "bytes": 80998
+  },
+  {
+    "id": "S017",
+    "file": "uav6-total256-20261101/happo/validation-0064-service.json",
+    "sha256": "872136d2bc80d6b285450b2ed705c9e6755c4badefa2a2507c97919dd071e419",
+    "bytes": 25088
+  },
+  {
+    "id": "S018",
+    "file": "uav6-total256-20261101/happo/validation-0064-watchdog.json",
+    "sha256": "6c89f8a0944608115c5f11a3c9e17bf05fa99ee12ad92f34dcc648e1f5a18812",
+    "bytes": 29254
+  },
+  {
+    "id": "S019",
+    "file": "uav6-total256-20261101/happo/validation-0256-service.json",
+    "sha256": "eaf35fbfa5b4cf74ac05b62b3ea8ab15c627b739144d3de4f2ae3fe7b9c31a7d",
+    "bytes": 24524
+  },
+  {
+    "id": "S020",
+    "file": "uav6-total256-20261101/happo/validation-0256-watchdog.json",
+    "sha256": "13ee19f513a7d59955a5354044e73eb8b56051d7b4aa79e973282e0bb7e9508d",
+    "bytes": 29276
+  },
+  {
+    "id": "S021",
+    "file": "uav6-total256-20261101/hatrpo/validation-0064-service.json",
+    "sha256": "0208da9e7c6598b983d59faaf49bb024a0b9f3c8bb19c983a458dd5771b1aae3",
+    "bytes": 22965
+  },
+  {
+    "id": "S022",
+    "file": "uav6-total256-20261101/hatrpo/validation-0064-watchdog.json",
+    "sha256": "1e22df494e6e32da78e0c24cc0048e93ffebd9adb1cbafdc28d95c824b6d7fcb",
+    "bytes": 29345
+  },
+  {
+    "id": "S023",
+    "file": "uav6-total256-20261101/hatrpo/validation-0256-service.json",
+    "sha256": "655b471e6ae8bab5569f35e9dc932b0c7fb55c6266ca0ee83e19649c641cd6aa",
+    "bytes": 24871
+  },
+  {
+    "id": "S024",
+    "file": "uav6-total256-20261101/hatrpo/validation-0256-watchdog.json",
+    "sha256": "3b5f740558addef7b3630cfca220d1f686227c95bd32c4734340246bcb3685ce",
+    "bytes": 29338
+  },
+  {
+    "id": "S025",
+    "file": "uav6-total256-20261101/hasac/validation-0064-service.json",
+    "sha256": "7125a586d8b03c71819586c6298aacfe40f542a0790f69ffe76bd238132a683e",
+    "bytes": 22236
+  },
+  {
+    "id": "S026",
+    "file": "uav6-total256-20261101/hasac/validation-0064-watchdog.json",
+    "sha256": "bd993db7b6f2671f3b499d12483964d3dddbc2acd1b3a59a4b594eff1df5bcfd",
+    "bytes": 29308
+  },
+  {
+    "id": "S027",
+    "file": "uav6-total256-20261101/hasac/validation-0256-service.json",
+    "sha256": "7091f4873872adc1f8513839c5fcce7735b2d6d8d011d499699fa1e7056684bd",
+    "bytes": 26602
+  },
+  {
+    "id": "S028",
+    "file": "uav6-total256-20261101/hasac/validation-0256-watchdog.json",
+    "sha256": "a300dce7a1f84eea6b7ed5c089faf4116f4722700d65d37669ed7f6c84a4cb7d",
+    "bytes": 29277
+  },
+  {
+    "id": "S029",
+    "file": "uav6-total256-20261101/maac/validation-0064-service.json",
+    "sha256": "7e9365b8d081a624cbf58f295c9d5cc105cdb74c616c4c1c514a34241b4c7b1c",
+    "bytes": 23858
+  },
+  {
+    "id": "S030",
+    "file": "uav6-total256-20261101/maac/validation-0064-watchdog.json",
+    "sha256": "0d5a6d2f7a5d229005c8c75fdbac459d702c40de9aa672a93eb1f78c523d4518",
+    "bytes": 29239
+  },
+  {
+    "id": "S031",
+    "file": "uav6-total256-20261101/maac/validation-0256-service.json",
+    "sha256": "f486b81e54af3ec610e2192ae8e821931891bc962afd983e25e6fcd72adb82c9",
+    "bytes": 26215
+  },
+  {
+    "id": "S032",
+    "file": "uav6-total256-20261101/maac/validation-0256-watchdog.json",
+    "sha256": "8af00c90d9526dfc8ba1430840d6b95d1d4b94debe885e14d1e5afeb41480c5e",
+    "bytes": 29207
+  },
+  {
+    "id": "S033",
+    "file": "uav6-total256-20261101/mat/validation-0064-service.json",
+    "sha256": "89830b0b487db91e691e7c1c966da2e9c839474f45a67ac05a805fa09ec1944b",
+    "bytes": 21258
+  },
+  {
+    "id": "S034",
+    "file": "uav6-total256-20261101/mat/validation-0064-watchdog.json",
+    "sha256": "da906c4992320675c72c238522671594ce917b1a587121693f8af8b3e5ce730d",
+    "bytes": 29251
+  },
+  {
+    "id": "S035",
+    "file": "uav6-total256-20261101/mat/validation-0256-service.json",
+    "sha256": "28abf95f8d867ed8e8dfb57d15273b1835fc947eceaccf68a97406ca2e5208ec",
+    "bytes": 18813
+  },
+  {
+    "id": "S036",
+    "file": "uav6-total256-20261101/mat/validation-0256-watchdog.json",
+    "sha256": "60b5534ac00f3ce1bfdea864c3f62570f9a347fd40d634c86892dd462686c081",
+    "bytes": 29292
+  },
+  {
+    "id": "S037",
+    "file": "uav6-total256-20261101/coma/validation-0064-service.json",
+    "sha256": "f00cef6a76de249187d44a56497ee600b267918dc70ebc787266be8ad5309969",
+    "bytes": 26443
+  },
+  {
+    "id": "S038",
+    "file": "uav6-total256-20261101/coma/validation-0064-watchdog.json",
+    "sha256": "e90333fca3c4534a9e70f1a175ee96fc9b34d826abc091e4f31e625aef6fe007",
+    "bytes": 29305
+  },
+  {
+    "id": "S039",
+    "file": "uav6-total256-20261101/coma/validation-0256-service.json",
+    "sha256": "beac7a0da8beb58772be8e6374e60ae00f21ac11f5900acf9ef0031e10dd9c57",
+    "bytes": 4030
+  },
+  {
+    "id": "S040",
+    "file": "uav6-total256-20261101/coma/validation-0256-watchdog.json",
+    "sha256": "e94e759da34ddcc7df5928caa752c20ea94e91cceb9daf36e6a18df0ce5dbfbe",
+    "bytes": 29249
+  },
+  {
+    "id": "S041",
+    "file": "uav6-priority-20261101/compare-happo/sample-original.json",
+    "sha256": "2f4e05e96c37263b40b953cb59563095c13054a913256f9e5a2fa5ec1b05f37d",
+    "bytes": 11429
+  },
+  {
+    "id": "S042",
+    "file": "uav6-priority-20261101/compare-happo/sample-guarded.json",
+    "sha256": "e2e4e8ecdfa3a8b33b9a10a5ae1d565b61ba51568cdef94ec167a2f6ae13009d",
+    "bytes": 11428
+  },
+  {
+    "id": "S043",
+    "file": "uav6-priority-20261101/compare-happo/greedy-guarded.json",
+    "sha256": "20451871e7f86888dd8cda2c43bb1743bd220fc4d609897dd2059b9ec10cfc1e",
+    "bytes": 5912
+  },
+  {
+    "id": "S044",
+    "file": "uav6-priority-20261101/compare-hatrpo/sample-original.json",
+    "sha256": "6036851fd5a2a04b0193761c3f255a91951b269a82b851c8f4b46a2f823cd5eb",
+    "bytes": 11312
+  },
+  {
+    "id": "S045",
+    "file": "uav6-priority-20261101/compare-hatrpo/sample-guarded.json",
+    "sha256": "d3d9c986523bd4d1f549b6742e247d84f1a11c06d8cf6beb09a393ce1639fc76",
+    "bytes": 11311
+  },
+  {
+    "id": "S046",
+    "file": "uav6-priority-20261101/compare-hatrpo/greedy-guarded.json",
+    "sha256": "3214b78efa875436779090fc5723d57f725346c6c490c4667e6dcfecf5c065e5",
+    "bytes": 5900
+  },
+  {
+    "id": "S047",
+    "file": "uav6-priority-20261101/compare-hasac/sample-original.json",
+    "sha256": "f92678e65baf96d3d2fd1ef34a061203f7672421e52bd84e155b3502c6b8b10c",
+    "bytes": 11434
+  },
+  {
+    "id": "S048",
+    "file": "uav6-priority-20261101/compare-hasac/sample-guarded.json",
+    "sha256": "144940ee1646118eef6e3a1524636176a4b76c0b33be49043dbcb3924426cba7",
+    "bytes": 11361
+  },
+  {
+    "id": "S049",
+    "file": "uav6-priority-20261101/compare-hasac/greedy-guarded.json",
+    "sha256": "13b7750dbcd51c636364247e3851e33497df4982d0bc9a225a812eba39484916",
+    "bytes": 5885
+  },
+  {
+    "id": "S050",
+    "file": "uav6-priority-20261101/compare-maac/sample-original.json",
+    "sha256": "0f521ed8e152fd95cb8ff4f040de2ba0a5a6de5ab21f2241c6eab30be0c4f0c9",
+    "bytes": 11468
+  },
+  {
+    "id": "S051",
+    "file": "uav6-priority-20261101/compare-maac/sample-guarded.json",
+    "sha256": "71dd7a6027c7db229d3930075a5a4fd96de5b6c582859950d90ebc4aefd0fa53",
+    "bytes": 11431
+  },
+  {
+    "id": "S052",
+    "file": "uav6-priority-20261101/compare-maac/greedy-guarded.json",
+    "sha256": "8e1baf75e0674fff2030eddc3914a8bc701a2586b4065bdec084a31fd2f6ada1",
+    "bytes": 5908
+  },
+  {
+    "id": "S053",
+    "file": "uav6-priority-20261101/compare-mat/sample-original.json",
+    "sha256": "31d38eb46f499098155d79236f160daeff713d83c2f808d67710d16028da17b4",
+    "bytes": 11330
+  },
+  {
+    "id": "S054",
+    "file": "uav6-priority-20261101/compare-mat/sample-guarded.json",
+    "sha256": "a3742b22a11965fd71cd957f2efcf398f194d5a4bc8bbe5afa20003cac64bf4e",
+    "bytes": 11329
+  },
+  {
+    "id": "S055",
+    "file": "uav6-priority-20261101/compare-mat/greedy-guarded.json",
+    "sha256": "002af750ca1cd95b7dfb6e08fd485c5981210f103b65fd8ce090973f8a91ab03",
+    "bytes": 5925
+  },
+  {
+    "id": "S056",
+    "file": "uav6-priority-20261101/compare-coma/sample-original.json",
+    "sha256": "897b6613936529f29fbfcca78b4fc691332535eb2907b22ff2e8345b54ac15a2",
+    "bytes": 11391
+  },
+  {
+    "id": "S057",
+    "file": "uav6-priority-20261101/compare-coma/sample-guarded.json",
+    "sha256": "063d72a08e023a66bddeaba84bcce2883d6b5298118a65dd6508da4e7e41f68c",
+    "bytes": 11390
+  },
+  {
+    "id": "S058",
+    "file": "uav6-priority-20261101/compare-coma/greedy-guarded.json",
+    "sha256": "a8854a14c899a2e9751d39962820007f6daaa098466e2cb4a40c8c70e2188ed3",
+    "bytes": 5681
+  },
+  {
+    "id": "S059",
+    "file": "uav6-priority-20261101/hasac/validation-0320-greedy.json",
+    "sha256": "e6e90b26d5e4ab2e5c48931f3d506fc527052d30a8f1127b00cd5cbf1383e90d",
+    "bytes": 5855
+  },
+  {
+    "id": "S060",
+    "file": "uav6-priority-20261101/hasac/validation-0320-sample.json",
+    "sha256": "60616fa12955fd4b98413a6160be1e2cdd3f49ee7a958a09bddfc7bf500a6cd6",
+    "bytes": 11425
+  },
+  {
+    "id": "S061",
+    "file": "uav6-priority-20261101/hasac/validation-0384-greedy.json",
+    "sha256": "b30ef4a9efb072c9e6e5dfc8db42e7ab1b31a6c97ad988d6455e8e2e21a1281b",
+    "bytes": 5975
+  },
+  {
+    "id": "S062",
+    "file": "uav6-priority-20261101/hasac/validation-0384-sample.json",
+    "sha256": "28728d04fcf3b3eacd64175db6e45555cd493b7e121a3def2e52481befef716a",
+    "bytes": 11297
+  },
+  {
+    "id": "S063",
+    "file": "uav6-priority-20261101/hasac/validation-0448-greedy.json",
+    "sha256": "5d4145a596b72944b2e144cd1e4d4fb12b2f998fb74c0f06a3550dbfd383b8f0",
+    "bytes": 5886
+  },
+  {
+    "id": "S064",
+    "file": "uav6-priority-20261101/hasac/validation-0448-sample.json",
+    "sha256": "5dbd722b23ceaf6b565649cd32b9a85d3a76c4a011d3be11bf5b7a9d6de21126",
+    "bytes": 11402
+  },
+  {
+    "id": "S065",
+    "file": "uav6-priority-20261101/hatrpo/validation-0320-greedy.json",
+    "sha256": "350373d566cc3e34f75d40aac5fe53f3761e455fcdaacfad0bcb276a8aec83e6",
+    "bytes": 5961
+  },
+  {
+    "id": "S066",
+    "file": "uav6-priority-20261101/hatrpo/validation-0320-sample.json",
+    "sha256": "61f84be81346d66503ea3077d91f184f2532d92a9712c96a15cfe5aed54b982e",
+    "bytes": 11390
+  },
+  {
+    "id": "S067",
+    "file": "uav6-priority-20261101/hatrpo/validation-0384-greedy.json",
+    "sha256": "1bc916427696f03f4cd2f9072a312af7175155a5ff259f709f6b1e6b96929e19",
+    "bytes": 5974
+  },
+  {
+    "id": "S068",
+    "file": "uav6-priority-20261101/hatrpo/validation-0384-sample.json",
+    "sha256": "17b87ca2de87066995442577d42929b74bbe7468f59fee609fc378a78e3f12c8",
+    "bytes": 11320
+  },
+  {
+    "id": "S069",
+    "file": "uav6-priority-20261101/hatrpo/validation-0448-greedy.json",
+    "sha256": "c51d11c72623c8be7df918f53706b8126899f2dd00a36807f8c75f87d109585f",
+    "bytes": 5905
+  },
+  {
+    "id": "S070",
+    "file": "uav6-priority-20261101/hatrpo/validation-0448-sample.json",
+    "sha256": "68a6dac9ff57d253c75097428891b6bb49be9edbc89ce38b1b85f72f164f4590",
+    "bytes": 11365
+  },
+  {
+    "id": "S071",
+    "file": "uav6-priority-20261101/hatrpo/validation-0512-greedy.json",
+    "sha256": "6f6e3b3a3738a05b5bd2468b064d7e31ee5fa0a1fe610c535017046ddaaf4351",
+    "bytes": 5898
+  },
+  {
+    "id": "S072",
+    "file": "uav6-priority-20261101/hatrpo/validation-0512-sample.json",
+    "sha256": "8f9d404ee395ac70bbd45538987fabbf3fd1d32cd7c1ba8b03747e04cf2bcb89",
+    "bytes": 11424
+  },
+  {
+    "id": "S073",
+    "file": "uav6-priority-20261101/hatrpo/validation-0576-greedy.json",
+    "sha256": "747ecef6ba5d0784f878c5b12592cb7e40dbee01e021b5caf02de39a507b5f56",
+    "bytes": 5884
+  },
+  {
+    "id": "S074",
+    "file": "uav6-priority-20261101/hatrpo/validation-0576-sample.json",
+    "sha256": "951a29ff4c1ca6c57615b9d2ee565452e8ca57a574c92c08c266e13a1e4f95ed",
+    "bytes": 11367
+  },
+  {
+    "id": "S075",
+    "file": "uav6-priority-20261101/hatrpo/validation-0640-greedy.json",
+    "sha256": "d4befcc317e639b8544573eff6a69ad25a9dad260a50574901cb4f7eecdea049",
+    "bytes": 5880
+  },
+  {
+    "id": "S076",
+    "file": "uav6-priority-20261101/hatrpo/validation-0640-sample.json",
+    "sha256": "613343b7a2ee4fbb68b1842ac6d3ce22d6a3de88c7d7b495e052ea7cce2f1963",
+    "bytes": 11348
+  },
+  {
+    "id": "S077",
+    "file": "uav6-priority-20261101/hatrpo/validation-0704-greedy.json",
+    "sha256": "d6c1a5a5091732cd12d9f3fd8514df689bfd6528e3dffbea851b3b57c19caf6f",
+    "bytes": 5931
+  },
+  {
+    "id": "S078",
+    "file": "uav6-priority-20261101/hatrpo/validation-0704-sample.json",
+    "sha256": "ff72b5f240a6d2b88cf48951553f76053aef63c7eda89940bf5510645e63944d",
+    "bytes": 11377
+  },
+  {
+    "id": "S079",
+    "file": "uav6-full1024-20261101/hasac/validation-0512-greedy.json",
+    "sha256": "e29d41baa2fdd1453d2d09c4100bca770de73b0404ec1450b0a336b6d028f3ee",
+    "bytes": 5915
+  },
+  {
+    "id": "S080",
+    "file": "uav6-full1024-20261101/hasac/validation-0512-sample.json",
+    "sha256": "59f8fbe650cb981f08e1a18e87fd06250062758ed852a7329bbd55cf13b9384e",
+    "bytes": 11337
+  },
+  {
+    "id": "S081",
+    "file": "uav6-full1024-20261101/hasac/validation-0576-greedy.json",
+    "sha256": "3a97c6b107c6588eb4017d7e3e6460113031b8ae95296c0e1e17059af30ed350",
+    "bytes": 5875
+  },
+  {
+    "id": "S082",
+    "file": "uav6-full1024-20261101/hasac/validation-0576-sample.json",
+    "sha256": "82556accab2d64699b6220c0e5be7b4a49ec4665e828a9b8966c9da5a0857326",
+    "bytes": 11425
+  },
+  {
+    "id": "S083",
+    "file": "uav6-full1024-20261101/hasac/validation-0640-greedy.json",
+    "sha256": "539f5f22a9060d3ce3fd8185a2ace139aff75bf1e0845354459c32370236d624",
+    "bytes": 5905
+  },
+  {
+    "id": "S084",
+    "file": "uav6-full1024-20261101/hasac/validation-0640-sample.json",
+    "sha256": "d88c0120b22bcdd93ca88109093b8ae5b4b65e475f779c214f20a81025c97e67",
+    "bytes": 11379
+  },
+  {
+    "id": "S085",
+    "file": "uav6-full1024-20261101/hasac/validation-0704-greedy.json",
+    "sha256": "e848e4b7283e0948a2a6cd6a170907d9e18cb607c97a4c48269ce8dd13d532ee",
+    "bytes": 5903
+  },
+  {
+    "id": "S086",
+    "file": "uav6-full1024-20261101/hasac/validation-0704-sample.json",
+    "sha256": "fc8b25b126b7934f07ffa825236a10395601212fe3efd431cfcfeb63f826bae7",
+    "bytes": 11398
+  },
+  {
+    "id": "S087",
+    "file": "uav6-full1024-20261101/hasac/validation-0768-greedy.json",
+    "sha256": "a1d9596f4112d2b712870727fbfcd2b0903c5512c3437352aa1c446a24a656c7",
+    "bytes": 5886
+  },
+  {
+    "id": "S088",
+    "file": "uav6-full1024-20261101/hasac/validation-0768-sample.json",
+    "sha256": "c763382e45a92f50ce7d6fb2e97422241765dad26b0ccd9252e0f813a14bdf15",
+    "bytes": 11419
+  },
+  {
+    "id": "S089",
+    "file": "uav6-full1024-20261101/hasac/validation-0832-greedy.json",
+    "sha256": "90acd30176699d42a059a788d834cf834e18ebadd0c9ffa2d44ec802022d4ff8",
+    "bytes": 5853
+  },
+  {
+    "id": "S090",
+    "file": "uav6-full1024-20261101/hasac/validation-0832-sample.json",
+    "sha256": "dcbeec7ade67456afd7061a77012f7273933b9312e0e1450d9485a1287cd10c8",
+    "bytes": 11486
+  },
+  {
+    "id": "S091",
+    "file": "uav6-full1024-20261101/hasac/validation-0896-greedy.json",
+    "sha256": "a794a8546cb0d496b322b5f7f9c5d7bdac3a07880bd734ae823e988b4298ab6e",
+    "bytes": 5910
+  },
+  {
+    "id": "S092",
+    "file": "uav6-full1024-20261101/hasac/validation-0896-sample.json",
+    "sha256": "79b1ebfa2cff5c52ce0a75d44bc5835476f931146684a66d298bfff645bd40ae",
+    "bytes": 11365
+  },
+  {
+    "id": "S093",
+    "file": "uav6-full1024-20261101/hasac/validation-0960-greedy.json",
+    "sha256": "562edcf2934d55bbf1b0ac3f7855b1b2fedbef0e7abb7bce65d72a0434c946e9",
+    "bytes": 5923
+  },
+  {
+    "id": "S094",
+    "file": "uav6-full1024-20261101/hasac/validation-0960-sample.json",
+    "sha256": "77e576c63b9858beaea39f59c77aa81754e54b2a8f7110528196f06553140046",
+    "bytes": 11460
+  },
+  {
+    "id": "S095",
+    "file": "uav6-full1024-20261101/hasac/validation-1024-greedy.json",
+    "sha256": "2dcc71d6ae458a37a755deffb3096bef095881b7bd3e3154e70045c3b276ba61",
+    "bytes": 5817
+  },
+  {
+    "id": "S096",
+    "file": "uav6-full1024-20261101/hasac/validation-1024-sample.json",
+    "sha256": "0c45472ee13bb503cf04cd73154d6bcdf4447fdc3566b63f4f1dca799d182f3a",
+    "bytes": 11357
+  },
+  {
+    "id": "S097",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0768-greedy.json",
+    "sha256": "fcc793f10cb8b59db51df3ba9511684201d10d1311d7444c2d0bdff614653822",
+    "bytes": 5855
+  },
+  {
+    "id": "S098",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0768-sample.json",
+    "sha256": "0b9e55f24eab80ede758b8a0bed8558e38bbcffc8eb18e1df01034ae8f6a12fb",
+    "bytes": 11392
+  },
+  {
+    "id": "S099",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0832-greedy.json",
+    "sha256": "1c34862aa1ff5be0d4e09847bf0adc405ed7b0bb464846a6658b1a6972426b78",
+    "bytes": 5924
+  },
+  {
+    "id": "S100",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0832-sample.json",
+    "sha256": "51ee89620a138c199f4fb7e0bd3cad860089ec131dbc5b73a1ba2a2e54b9749e",
+    "bytes": 11437
+  },
+  {
+    "id": "S101",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0896-greedy.json",
+    "sha256": "d5a09edfdd220b090e57ebaa68ef81da10705c5ea7deebff828897293d12215b",
+    "bytes": 5858
+  },
+  {
+    "id": "S102",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0896-sample.json",
+    "sha256": "1ee817e41f475cad1e8ce4e3ee8283e760d4fe2e10afa720aa05a355ac6cfe2f",
+    "bytes": 11478
+  },
+  {
+    "id": "S103",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0960-greedy.json",
+    "sha256": "f4471997fd61b8f5766c525ef849b2533eeeda1292eaf403dc8ee6180563bcde",
+    "bytes": 5935
+  },
+  {
+    "id": "S104",
+    "file": "uav6-full1024-20261101/hatrpo/validation-0960-sample.json",
+    "sha256": "244885650167287abcbfe6f8801460fff6bd030a098341100dde0cf6c1b5cf76",
+    "bytes": 11405
+  },
+  {
+    "id": "S105",
+    "file": "uav6-full1024-20261101/hatrpo/validation-1024-greedy.json",
+    "sha256": "5e24a7a0f7d53513962388731a8fa0ad8ac9d4e524c57572ec34ba4edb6b08db",
+    "bytes": 5886
+  },
+  {
+    "id": "S106",
+    "file": "uav6-full1024-20261101/hatrpo/validation-1024-sample.json",
+    "sha256": "61aa5015386687685dfe27d7af3ff643ede982c9db5db365619d38c401f73ae6",
+    "bytes": 11429
+  },
+  {
+    "id": "S107",
+    "file": "uav6-service-commitment-20261101/coma-baseline.json",
+    "sha256": "71289972e57d49105c27c1e374071b5a6cc7e7ac053fc2aa9ff4a3df11a32531",
+    "bytes": 3295
+  },
+  {
+    "id": "S108",
+    "file": "uav6-service-commitment-20261101/coma-commit.json",
+    "sha256": "b39d696562400c008c255b5c56748ce7dd52776ac564c5983353af22dee28730",
+    "bytes": 30339
+  },
+  {
+    "id": "S109",
+    "file": "uav6-service-commitment-20261101/coma-hold.json",
+    "sha256": "ba6981b617f573c35924c0c525fb178cfec71b004bb58887bfa9ad574f4c7d80",
+    "bytes": 5348
+  },
+  {
+    "id": "S110",
+    "file": "uav6-service-commitment-20261101/happo-baseline.json",
+    "sha256": "b00a21d8aa665f80ad68f507801d495905bf33d93bb5efa83e58bbbce5548f15",
+    "bytes": 3384
+  },
+  {
+    "id": "S111",
+    "file": "uav6-service-commitment-20261101/happo-commit.json",
+    "sha256": "3f7fbc25b47affdeaf48ba78b5087adbe5344934890164564cb1495ae1421c0b",
+    "bytes": 28792
+  },
+  {
+    "id": "S112",
+    "file": "uav6-service-commitment-20261101/happo-hold.json",
+    "sha256": "886b60ec97d8b3edb30695dd8a112cebeecedf9f9329a34273366b4b5a1ebe89",
+    "bytes": 5778
+  },
+  {
+    "id": "S113",
+    "file": "uav6-service-commitment-20261101/hasac-baseline.json",
+    "sha256": "e91ed3bb73006840e761ce7391c8a4d992ad5b8a9bf36674036419eecde1324c",
+    "bytes": 3269
+  },
+  {
+    "id": "S114",
+    "file": "uav6-service-commitment-20261101/hasac-commit.json",
+    "sha256": "94328afe811f1d4ab692aeeb2431142f6555a368b9e3bc0c661e7338b3ee090a",
+    "bytes": 25502
+  },
+  {
+    "id": "S115",
+    "file": "uav6-service-commitment-20261101/hasac-hold.json",
+    "sha256": "47ce46b75a37b3e8f03038680ad43185776f3a48b9ee749672c3dd4cd5a91dfb",
+    "bytes": 5329
+  },
+  {
+    "id": "S116",
+    "file": "uav6-service-commitment-20261101/hatrpo-baseline.json",
+    "sha256": "544fce144eef63a88f64ffe50b89b31e8a014bb398dc4c229f02590aeaffe7df",
+    "bytes": 3348
+  },
+  {
+    "id": "S117",
+    "file": "uav6-service-commitment-20261101/hatrpo-commit.json",
+    "sha256": "335701af690e80e9516a518433e264be08c18aac2e1f95d2c83ec3d812f98572",
+    "bytes": 26306
+  },
+  {
+    "id": "S118",
+    "file": "uav6-service-commitment-20261101/hatrpo-hold.json",
+    "sha256": "1f865f073a1724b562647b27ff1d1ae952b85e517567f1c3873c9c12899403d5",
+    "bytes": 5043
+  },
+  {
+    "id": "S119",
+    "file": "uav6-service-commitment-20261101/maac-baseline.json",
+    "sha256": "8016e6401574c54a946fb76e76d0e57b3952edea5e33bd03efa590bb3d2fbf6e",
+    "bytes": 3340
+  },
+  {
+    "id": "S120",
+    "file": "uav6-service-commitment-20261101/maac-commit.json",
+    "sha256": "335b522b156d74ba6b39e2b41cb7f91299309bc483f3b31ff06a87c80b901c6d",
+    "bytes": 27366
+  },
+  {
+    "id": "S121",
+    "file": "uav6-service-commitment-20261101/maac-hold.json",
+    "sha256": "be3846d0451b1d3c7beeede203266a2a14a4e66697c88ee8d372e63559b7ff3f",
+    "bytes": 7973
+  },
+  {
+    "id": "S122",
+    "file": "uav6-service-commitment-20261101/mat-baseline.json",
+    "sha256": "9104e9ac7ccfb5cc5b0934305ffc83c5a3fb44e4efd7ecbb555a810ace260fc0",
+    "bytes": 3333
+  },
+  {
+    "id": "S123",
+    "file": "uav6-service-commitment-20261101/mat-commit.json",
+    "sha256": "633a535486367af37aab21dd261a92acbb96c301f3052406a0836d13345930bd",
+    "bytes": 28049
+  },
+  {
+    "id": "S124",
+    "file": "uav6-service-commitment-20261101/mat-hold.json",
+    "sha256": "7df7657d355d178f08bb88c23d0b2dfd5bfb81baa1d0bbb9194444238d97cf07",
+    "bytes": 6488
+  },
+  {
+    "id": "S125",
+    "file": "uav6-group-c-diagnosis-20261101/coma-256-greedy-0.json",
+    "sha256": "6ee36aef7c7f76645d9586292836bd8432d15c7803e4be4a73923cbbac516c5a",
+    "bytes": 9905
+  },
+  {
+    "id": "S126",
+    "file": "uav6-group-c-diagnosis-20261101/coma-256-sample-3101.json",
+    "sha256": "9b3f7a9475e75c8decdc1ef9aefab89185afd0550f00e68ec7282217b8b83293",
+    "bytes": 10199
+  },
+  {
+    "id": "S127",
+    "file": "uav6-group-c-diagnosis-20261101/coma-256-sample-3102.json",
+    "sha256": "1909203fbfb749212b4f9826bc3f9274557de9ecb7594258b47632e279da8519",
+    "bytes": 10158
+  },
+  {
+    "id": "S128",
+    "file": "uav6-group-c-diagnosis-20261101/coma-64-greedy-0.json",
+    "sha256": "85cf204dceb3877681fb1f096450e270303fd64307477db379d97fed006898d7",
+    "bytes": 10133
+  },
+  {
+    "id": "S129",
+    "file": "uav6-group-c-diagnosis-20261101/mat-256-greedy-0.json",
+    "sha256": "dbee5981bc0fd82da92d1d9c44c0c81fcf81a2803587c531253941dbbe6a1a9f",
+    "bytes": 10040
+  },
+  {
+    "id": "S130",
+    "file": "uav6-group-c-diagnosis-20261101/mat-256-sample-3101.json",
+    "sha256": "e89a29b14b95e155793dd4fef440b0e42ef5ef54514a62d16559351b64ec5681",
+    "bytes": 10109
+  },
+  {
+    "id": "S131",
+    "file": "uav6-group-c-diagnosis-20261101/mat-256-sample-3102.json",
+    "sha256": "c633996dfb07bbe2ed52edb9f2e5815e466e33499bb5233bb71d334445b29e9e",
+    "bytes": 10045
+  },
+  {
+    "id": "S132",
+    "file": "uav6-group-c-diagnosis-20261101/mat-64-greedy-0.json",
+    "sha256": "0c6acbc332fa41bb7aef8ee88624569882421611b8a187582c9fe96ce470e067",
+    "bytes": 9981
+  },
+  {
+    "id": "S133",
+    "file": "uav6-service-improvement-20261101/candidate-validation.json",
+    "sha256": "1aff242ec1730a51007924354f3a7b5f56e725ef3bbd6157e8a9a568bc1b3c3e",
+    "bytes": 3348
+  },
+  {
+    "id": "S134",
+    "file": "uav6-service-improvement-20261101/control-validation.json",
+    "sha256": "e43b05a71400d8f7f2a281aa58cf5339e518038d09ce3fa1d719bf20009e6fd4",
+    "bytes": 3328
+  },
+  {
+    "id": "S135",
+    "file": "uav6-service-improvement-20261101/imitation-validation.json",
+    "sha256": "f90ddad1e509b2dec1e4cb233e7b164aa574ab10c909bf55ee3e28cbfc78ef29",
+    "bytes": 3385
+  },
+  {
+    "id": "S136",
+    "file": "uav6-full1024-20261101/hasac/best.json",
+    "sha256": "e2df027b2a04dca06ed44c18ce053839c37f910fe890cebae4416c1c13e0c0b4",
+    "bytes": 12400
+  },
+  {
+    "id": "S137",
+    "file": "uav6-full1024-20261101/hatrpo/best.json",
+    "sha256": "6cdfbc739079333131ad1ecd7b363613ba910d65d8f3ba26aa0691e88a74faf0",
+    "bytes": 12473
+  },
+  {
+    "id": "S138",
+    "file": "uav6-pilot-20261101/happo/identity.json",
+    "sha256": "e1b31cd3fe9dfec706207a73b507c14106b419c8f71140b0703bba43534178b9",
+    "bytes": 940
+  },
+  {
+    "id": "S139",
+    "file": "uav6-pilot-20261101/happo/initial-validation.json",
+    "sha256": "8ade553c281a6b8822f407f3247ef26c5cd141cbf28ab06d77f8855fcd4bb6c0",
+    "bytes": 3348
+  },
+  {
+    "id": "S140",
+    "file": "uav6-pilot-20261101/happo/final-validation.json",
+    "sha256": "b00a21d8aa665f80ad68f507801d495905bf33d93bb5efa83e58bbbce5548f15",
+    "bytes": 3384
+  },
+  {
+    "id": "S141",
+    "file": "uav6-pilot-20261101/hatrpo/identity.json",
+    "sha256": "8f8202255df7d91aa2fce70e6cadef899af5a001830fafbe34219bae41492700",
+    "bytes": 941
+  },
+  {
+    "id": "S142",
+    "file": "uav6-pilot-20261101/hatrpo/initial-validation.json",
+    "sha256": "8ade553c281a6b8822f407f3247ef26c5cd141cbf28ab06d77f8855fcd4bb6c0",
+    "bytes": 3348
+  },
+  {
+    "id": "S143",
+    "file": "uav6-pilot-20261101/hatrpo/final-validation.json",
+    "sha256": "544fce144eef63a88f64ffe50b89b31e8a014bb398dc4c229f02590aeaffe7df",
+    "bytes": 3348
+  },
+  {
+    "id": "S144",
+    "file": "uav6-pilot-20261101/hasac/identity.json",
+    "sha256": "35316985812abec322c5405311505e902053a45e2fa901338734abe03c042137",
+    "bytes": 941
+  },
+  {
+    "id": "S145",
+    "file": "uav6-pilot-20261101/hasac/initial-validation.json",
+    "sha256": "8ade553c281a6b8822f407f3247ef26c5cd141cbf28ab06d77f8855fcd4bb6c0",
+    "bytes": 3348
+  },
+  {
+    "id": "S146",
+    "file": "uav6-pilot-20261101/hasac/final-validation.json",
+    "sha256": "e91ed3bb73006840e761ce7391c8a4d992ad5b8a9bf36674036419eecde1324c",
+    "bytes": 3269
+  },
+  {
+    "id": "S147",
+    "file": "uav6-pilot-20261101/maac/identity.json",
+    "sha256": "27e5b750c1b55070df370a200459f3b1d5a7e383345c1fc896ecec64b7db7d9e",
+    "bytes": 939
+  },
+  {
+    "id": "S148",
+    "file": "uav6-pilot-20261101/maac/initial-validation.json",
+    "sha256": "8ade553c281a6b8822f407f3247ef26c5cd141cbf28ab06d77f8855fcd4bb6c0",
+    "bytes": 3348
+  },
+  {
+    "id": "S149",
+    "file": "uav6-pilot-20261101/maac/final-validation.json",
+    "sha256": "8016e6401574c54a946fb76e76d0e57b3952edea5e33bd03efa590bb3d2fbf6e",
+    "bytes": 3340
+  },
+  {
+    "id": "S150",
+    "file": "uav6-pilot-20261101/mat/identity.json",
+    "sha256": "0c811f7dab7a90033ff3a93c504987083541087c21c0104eeb97a6612a9d5298",
+    "bytes": 938
+  },
+  {
+    "id": "S151",
+    "file": "uav6-pilot-20261101/mat/initial-validation.json",
+    "sha256": "989593e13883801cc2e3909cbaaeb0a1444f41c83494ebf90b581654f0460ce2",
+    "bytes": 3221
+  },
+  {
+    "id": "S152",
+    "file": "uav6-pilot-20261101/mat/final-validation.json",
+    "sha256": "9104e9ac7ccfb5cc5b0934305ffc83c5a3fb44e4efd7ecbb555a810ace260fc0",
+    "bytes": 3333
+  },
+  {
+    "id": "S153",
+    "file": "uav6-pilot-20261101/coma/identity.json",
+    "sha256": "d2b3510011137091521f67155c4d4bf7d3d4a4c4f06aba938bb617383ba40f3c",
+    "bytes": 939
+  },
+  {
+    "id": "S154",
+    "file": "uav6-pilot-20261101/coma/initial-validation.json",
+    "sha256": "8ade553c281a6b8822f407f3247ef26c5cd141cbf28ab06d77f8855fcd4bb6c0",
+    "bytes": 3348
+  },
+  {
+    "id": "S155",
+    "file": "uav6-pilot-20261101/coma/final-validation.json",
+    "sha256": "71289972e57d49105c27c1e374071b5a6cc7e7ac053fc2aa9ff4a3df11a32531",
+    "bytes": 3295
+  },
+  {
+    "id": "S156",
+    "file": "uav6-total256-20261101/protocol.json",
+    "sha256": "f2673f6e5f621f71955d37f0d447289cd50c1f438726e823d679dfe4590a005c",
+    "bytes": 1728
+  },
+  {
+    "id": "S157",
+    "file": "uav6-priority-20261101/protocol.json",
+    "sha256": "d429911bf6f65a0c129545ab9dc63372f08bcf976a989969d6afa3c42d2196dc",
+    "bytes": 4115
+  },
+  {
+    "id": "S158",
+    "file": "uav6-full1024-20261101/protocol.json",
+    "sha256": "139deb10f250f63285ae9cf18fbd95d4ddc17f9f7b16e1dcb962a7451b9e0a05",
+    "bytes": 3045
+  },
+  {
+    "id": "S159",
+    "file": "uav6-pilot-20261101/queue-status.json",
+    "sha256": "568df25de49fd0f19e1d83a2579e9490edb60fee6901fcfb6e4e2652b566b89a",
+    "bytes": 997
+  },
+  {
+    "id": "S160",
+    "file": "uav6-total256-20261101/queue-status.json",
+    "sha256": "65be8775225ba44d64e720f8f1354922b709e137bee72fa5889f511017b47a8e",
+    "bytes": 487
+  },
+  {
+    "id": "S161",
+    "file": "uav6-priority-20261101/queue-status.json",
+    "sha256": "81664cf71a21f2ed35e73ad9a8437e14459d97b603eca7607da57d68a6b4fb97",
+    "bytes": 151
+  },
+  {
+    "id": "S162",
+    "file": "uav6-full1024-20261101/queue-status.json",
+    "sha256": "1e897c8bf1f4f3dcf8dcc1c92230727ee2075027483d3ee01687ffa9e9b4d3ff",
+    "bytes": 202
+  },
+  {
+    "id": "S163",
+    "file": "uav6-combinations-20261101/HASAC1024.json",
+    "sha256": "1b5667e3bb650d585a278138dd7e633c242ff093edac1b8df85d83cc500828ca",
+    "bytes": 11710
+  },
+  {
+    "id": "S164",
+    "file": "uav6-combinations-20261101/HASAC256.json",
+    "sha256": "aec3bcc8e1e4f19683c67214d33b32478b90aa7efbc0b113f9cebd0892a1371d",
+    "bytes": 11714
+  },
+  {
+    "id": "S165",
+    "file": "uav6-combinations-20261101/HATRPO1024.json",
+    "sha256": "2c07dbfc5ce848aa3de8f0f575d38e2e6121e2b0054b4cea86338e0dcebf514a",
+    "bytes": 11734
+  },
+  {
+    "id": "S166",
+    "file": "uav6-combinations-20261101/HATRPO512.json",
+    "sha256": "699341e6bb77f6cd92af570574b47afa77f8ed2a728288aaff0ca0d3c9b1d91e",
+    "bytes": 11798
+  },
+  {
+    "id": "S167",
+    "file": "uav6-combinations-20261101/MAT256.json",
+    "sha256": "00aa94812b2119d366b4124e737d2bd039d0f822b7f085c251fb8aa0b1e79e9c",
+    "bytes": 11681
+  },
+  {
+    "id": "S168",
+    "file": "uav6-combinations-20261101/P1-allocation0.json",
+    "sha256": "4be0ae715669f81307f40f2ebd40f120cfe23459f01289968365fd9263b078ab",
+    "bytes": 11721
+  },
+  {
+    "id": "S169",
+    "file": "uav6-combinations-20261101/P1-allocation1.json",
+    "sha256": "6daa5d7b3fa86ca4d15cc09278fde60d3f3f09e8e3f724fb5fc466e6199932b6",
+    "bytes": 11678
+  },
+  {
+    "id": "S170",
+    "file": "uav6-combinations-20261101/P2-allocation0.json",
+    "sha256": "6589b13ae8ec576251a70ec21ec10539f00d910d5577112915d8b6fac55879da",
+    "bytes": 11729
+  },
+  {
+    "id": "S171",
+    "file": "uav6-combinations-20261101/P2-allocation1.json",
+    "sha256": "a09c19df822c5c5feb4530028902cc698e496d57e561e2d96a8a361be3c677d3",
+    "bytes": 11692
+  },
+  {
+    "id": "S172",
+    "file": "uav6-combinations-20261101/P3-allocation0.json",
+    "sha256": "9e78920cc542f136cb3116eb29a447a568c1cde29ab4694ecf27cec8058d74c9",
+    "bytes": 11681
+  },
+  {
+    "id": "S173",
+    "file": "uav6-combinations-20261101/P3-allocation1.json",
+    "sha256": "40a7abc606096681d9956f79d485407aa1aafecbd07bf2bccbacdbb0879040db",
+    "bytes": 11597
+  },
+  {
+    "id": "S174",
+    "file": "uav6-combinations-20261101/P4-allocation0.json",
+    "sha256": "7e896c720a9a6ec1f5336cd0395675d85fc6da118403fbfccca0425b76506780",
+    "bytes": 11681
+  },
+  {
+    "id": "S175",
+    "file": "uav6-combinations-20261101/P4-allocation1.json",
+    "sha256": "108ee80dc4da8ea494b7f2ea3d0da206190bfb2726d2b1906fdb67453f5ac614",
+    "bytes": 11698
+  },
+  {
+    "id": "S176",
+    "file": "uav6-combinations-20261101/results.json",
+    "sha256": "83432a3a39072465edbbbe61d910b2b4ab5986d6a79ac47b927633ff41015a3a",
+    "bytes": 15497
+  },
+  {
+    "id": "S177",
+    "file": "uav6-combinations-20261101/protocol.json",
+    "sha256": "c640303be75d6fb79e326253993e812dbe4c75dc38f110fb47feee5537fb1c01",
+    "bytes": 4052
+  }
+]

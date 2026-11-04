@@ -1,0 +1,42 @@
+{
+  "user_request": "All six to total256 first; eventual1024 or more",
+  "total": 256,
+  "original_episodes": 64,
+  "additional_per_algorithm": 192,
+  "algorithms": [
+    "happo",
+    "hatrpo",
+    "hasac",
+    "maac",
+    "mat",
+    "coma"
+  ],
+  "groups": {
+    "A": [
+      "happo",
+      "hatrpo"
+    ],
+    "B": [
+      "hasac",
+      "maac"
+    ],
+    "C": [
+      "mat",
+      "coma"
+    ]
+  },
+  "training_seed": 1001,
+  "common_execution": "service singleton masks before actor sampling; actual executed actions learned",
+  "comparison": "paired 64/256 with same execution semantics, each service-only and with coverage watchdog; no sealed50 test",
+  "fairness": "same episodes/layouts/reward/physics/CPU2; off-policy and on-policy update counts differ by algorithm as before",
+  "MAT_note": "Matched64 re-evaluation required: causal later-agent decoder now conditions on forced earlier-agent service action, unlike old post-hoc override.",
+  "replay": "clear old off-policy replay once at service-phase start; persist new replay for future resume",
+  "future": "save full model/optimizers/RNG/replay every32 episodes; no automatic1024 run in this queue",
+  "stop": "STOP_AFTER_CHECKPOINT file stops current algorithm at next saved boundary; failures stop queue",
+  "source_hashes": {
+    "launch_six_service.py": "89df13fd317a491b0abcda265f2b21904bcfd1baf452fa795c44b26ae0f7ef11",
+    "train_with_service.py": "c93af28609ef8a6ecb8bafa0af369842a82eafda6e0def8d31e76b5e5da09849",
+    "coverage_controller.py": "97b2d5f3d7d2b8320e435d37beea40e3b450d11366350ffdb19fa19fe0d3124b",
+    "service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f"
+  }
+}

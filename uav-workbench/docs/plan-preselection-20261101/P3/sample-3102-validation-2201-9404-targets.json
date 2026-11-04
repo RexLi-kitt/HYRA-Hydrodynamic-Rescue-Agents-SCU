@@ -1,0 +1,242 @@
+[
+  {
+    "target": 0,
+    "position": [
+      995.0,
+      95.0
+    ],
+    "status": 2,
+    "first_discovered_step": 0,
+    "category": "served",
+    "legal_windows_after_discovery": 299,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 1,
+    "position": [
+      625.0,
+      175.0
+    ],
+    "status": 1,
+    "first_discovered_step": 90,
+    "category": "discovered_without_window_unserved",
+    "legal_windows_after_discovery": 0,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 2,
+    "position": [
+      185.0,
+      635.0
+    ],
+    "status": 2,
+    "first_discovered_step": 69,
+    "category": "served",
+    "legal_windows_after_discovery": 230,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 3,
+    "position": [
+      115.0,
+      765.0
+    ],
+    "status": 2,
+    "first_discovered_step": 15,
+    "category": "served",
+    "legal_windows_after_discovery": 284,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 4,
+    "position": [
+      255.0,
+      345.0
+    ],
+    "status": 2,
+    "first_discovered_step": 25,
+    "category": "served",
+    "legal_windows_after_discovery": 274,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 5,
+    "position": [
+      725.0,
+      605.0
+    ],
+    "status": 2,
+    "first_discovered_step": 72,
+    "category": "served",
+    "legal_windows_after_discovery": 227,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 6,
+    "position": [
+      985.0,
+      525.0
+    ],
+    "status": 2,
+    "first_discovered_step": 23,
+    "category": "served",
+    "legal_windows_after_discovery": 276,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 7,
+    "position": [
+      955.0,
+      805.0
+    ],
+    "status": 2,
+    "first_discovered_step": 96,
+    "category": "served",
+    "legal_windows_after_discovery": 203,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 8,
+    "position": [
+      55.0,
+      995.0
+    ],
+    "status": 2,
+    "first_discovered_step": 0,
+    "category": "served",
+    "legal_windows_after_discovery": 299,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 9,
+    "position": [
+      315.0,
+      355.0
+    ],
+    "status": 2,
+    "first_discovered_step": 26,
+    "category": "served",
+    "legal_windows_after_discovery": 273,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 10,
+    "position": [
+      935.0,
+      255.0
+    ],
+    "status": 2,
+    "first_discovered_step": 13,
+    "category": "served",
+    "legal_windows_after_discovery": 286,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 11,
+    "position": [
+      805.0,
+      905.0
+    ],
+    "status": 2,
+    "first_discovered_step": 4,
+    "category": "served",
+    "legal_windows_after_discovery": 295,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 12,
+    "position": [
+      885.0,
+      585.0
+    ],
+    "status": 2,
+    "first_discovered_step": 17,
+    "category": "served",
+    "legal_windows_after_discovery": 282,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 13,
+    "position": [
+      375.0,
+      985.0
+    ],
+    "status": 2,
+    "first_discovered_step": 122,
+    "category": "served",
+    "legal_windows_after_discovery": 177,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 14,
+    "position": [
+      55.0,
+      875.0
+    ],
+    "status": 2,
+    "first_discovered_step": 9,
+    "category": "served",
+    "legal_windows_after_discovery": 290,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 15,
+    "position": [
+      295.0,
+      565.0
+    ],
+    "status": 2,
+    "first_discovered_step": 74,
+    "category": "served",
+    "legal_windows_after_discovery": 225,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 16,
+    "position": [
+      435.0,
+      15.0
+    ],
+    "status": 2,
+    "first_discovered_step": 88,
+    "category": "served",
+    "legal_windows_after_discovery": 211,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 17,
+    "position": [
+      455.0,
+      695.0
+    ],
+    "status": 2,
+    "first_discovered_step": 83,
+    "category": "served",
+    "legal_windows_after_discovery": 216,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 18,
+    "position": [
+      145.0,
+      505.0
+    ],
+    "status": 2,
+    "first_discovered_step": 28,
+    "category": "served",
+    "legal_windows_after_discovery": 271,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  },
+  {
+    "target": 19,
+    "position": [
+      715.0,
+      295.0
+    ],
+    "status": 2,
+    "first_discovered_step": 29,
+    "category": "served",
+    "legal_windows_after_discovery": 270,
+    "note": "post-run truth diagnostic; window existence does not prove reachability"
+  }
+]

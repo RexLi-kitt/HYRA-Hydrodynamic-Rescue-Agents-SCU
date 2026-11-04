@@ -1,0 +1,10 @@
+{
+  "start_episode": 448,
+  "phase_steps": 115200,
+  "replay_size": 4096,
+  "learner_updates": 16552,
+  "optimizer_count": 5,
+  "guard": true,
+  "parent_hash_verified": true,
+  "random_state_restored": true
+}

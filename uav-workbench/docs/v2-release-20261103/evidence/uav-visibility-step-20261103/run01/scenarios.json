@@ -1,0 +1,6922 @@
+[
+  {
+    "parameter": "view20-w360",
+    "id": "train-2601012-view40-view20-w360",
+    "field": {
+      "seed": 31009,
+      "split": "train",
+      "parent": "synthetic-swe-31009",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          13.085898855723123
+        ],
+        [
+          750.0,
+          6.542949427861561
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          53
+        ],
+        [
+          15,
+          54
+        ],
+        [
+          15,
+          55
+        ],
+        [
+          15,
+          56
+        ],
+        [
+          15,
+          57
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1162,
+        "max_depth_m": 0.1162711162810178,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.003130004040201584,
+          "max_dt_s": 2.5,
+          "limited_faces": 0,
+          "max_stage_courant": 0.39997775895197835,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 1.296468381314071,
+          "cause": "event_or_output",
+          "requested_limit_s": 1.296468381314071,
+          "cfl_limit_s": 1.8524235285307493,
+          "limiting_cell": [
+            0,
+            51
+          ],
+          "cell_depth_m": 0.1160873758049147,
+          "cell_u_m_s": -0.019003153588245315,
+          "cell_v_m_s": -0.0011691599396871644,
+          "grid_wave_bound_m_s": 2.1593334021041084,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1498.703531618686,
+        "max_speed_m_s": 0.07135742017505936,
+        "peak_speed_m_s": 0.452822935407656,
+        "peak_speed_time_s": 359.2726739937587,
+        "wet_area_m2": 196600.0,
+        "newly_flooded_area_m2": 152700.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1498.703531618686,
+        "balance": {
+          "initial_m3": 1211.1045540608527,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 9282.981727613116,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 10494.086281673968,
+          "residual_m3": 0.0,
+          "corrected_residual_m3": 0.0
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 1211.1045540608527,
+      "water_volume_final_m3": 10494.086281673968,
+      "elapsed_s": 2.742204500002117,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31009.npy",
+      "sha256": "891dd39c1d2a99e7b05e2528d2383f39ba45e764a9c7ef2238e6181202ade83f",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 9282.981727613116,
+      "mass_residual_m3": 0.0
+    },
+    "scenario": {
+      "seed": 2601012,
+      "events": [
+        {
+          "fall": 156,
+          "deadline": 516,
+          "xy": [
+            565,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.02117622271180153,
+            2.6242978258263424e-17,
+            -1.740399456991248e-17
+          ],
+          "exposure_id": 42977
+        },
+        {
+          "fall": 456,
+          "deadline": 816,
+          "xy": [
+            555,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.027088800445199016,
+            2.474195712813449e-17,
+            3.697816298956234e-17
+          ],
+          "exposure_id": 44902
+        },
+        {
+          "fall": 140,
+          "deadline": 500,
+          "xy": [
+            565,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.02081207185983658,
+            0.022081756964325905,
+            0.05763319879770279
+          ],
+          "exposure_id": 31945
+        },
+        {
+          "fall": 468,
+          "deadline": 828,
+          "xy": [
+            515,
+            205
+          ],
+          "trigger": "random",
+          "field": [
+            0.0681329071521759,
+            -0.12027693688869476,
+            0.14633962512016296
+          ],
+          "exposure_id": 1714
+        },
+        {
+          "fall": 505,
+          "deadline": 865,
+          "xy": [
+            475,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.03501328453421593,
+            5.251553318650929e-17,
+            -3.8550745830588954e-17
+          ],
+          "exposure_id": 776
+        },
+        {
+          "fall": 154,
+          "deadline": 514,
+          "xy": [
+            525,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.0419074185192585,
+            9.466290664259311e-17,
+            -5.743443152048283e-17
+          ],
+          "exposure_id": 8875
+        },
+        {
+          "fall": 163,
+          "deadline": 523,
+          "xy": [
+            525,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.03596189245581627,
+            -3.537275224515564e-18,
+            1.452958400342486e-18
+          ],
+          "exposure_id": 2214
+        },
+        {
+          "fall": 496,
+          "deadline": 856,
+          "xy": [
+            555,
+            185
+          ],
+          "trigger": "random",
+          "field": [
+            0.13722598254680635,
+            0.011050990223884583,
+            0.30721795558929443
+          ],
+          "exposure_id": 1230
+        },
+        {
+          "fall": 499,
+          "deadline": 859,
+          "xy": [
+            465,
+            85
+          ],
+          "trigger": "random",
+          "field": [
+            0.011289268173277378,
+            -0.035950998216867446,
+            -0.03949573561549187
+          ],
+          "exposure_id": 48086
+        },
+        {
+          "fall": 794,
+          "deadline": 1154,
+          "xy": [
+            475,
+            5
+          ],
+          "trigger": "random",
+          "field": [
+            0.050341291725635534,
+            -0.10163205415010453,
+            -0.02121724933385849
+          ],
+          "exposure_id": 29882
+        },
+        {
+          "fall": 485,
+          "deadline": 845,
+          "xy": [
+            575,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.01926788128912449,
+            3.723880429185535e-17,
+            0.0
+          ],
+          "exposure_id": 50098
+        },
+        {
+          "fall": 819,
+          "deadline": 1179,
+          "xy": [
+            645,
+            115
+          ],
+          "trigger": "random",
+          "field": [
+            0.09578252136707305,
+            0.12914708852767945,
+            -0.0854608565568924
+          ],
+          "exposure_id": 59434
+        },
+        {
+          "fall": 802,
+          "deadline": 1162,
+          "xy": [
+            595,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.1142524927854538,
+            0.13543606102466582,
+            0.08958042860031128
+          ],
+          "exposure_id": 34992
+        },
+        {
+          "fall": 788,
+          "deadline": 1148,
+          "xy": [
+            425,
+            135
+          ],
+          "trigger": "random",
+          "field": [
+            0.0528425432741642,
+            -0.10866149216890335,
+            -0.04789996445178986
+          ],
+          "exposure_id": 38166
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            575,
+            55
+          ],
+          "trigger": "random",
+          "field": [
+            0.10252376645803452,
+            0.027917662635445595,
+            -0.1571730673313141
+          ],
+          "exposure_id": 25701
+        },
+        {
+          "fall": 509,
+          "deadline": 869,
+          "xy": [
+            565,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.029955288395285606,
+            3.921461700198625e-18,
+            2.7465277572270166e-17
+          ],
+          "exposure_id": 61122
+        },
+        {
+          "fall": 465,
+          "deadline": 825,
+          "xy": [
+            475,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.02334119752049446,
+            -1.3202918442992656e-17,
+            2.0020381405796487e-17
+          ],
+          "exposure_id": 30696
+        },
+        {
+          "fall": 171,
+          "deadline": 531,
+          "xy": [
+            515,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.042530689388513565,
+            6.262667135700228e-17,
+            1.2943837203334923e-17
+          ],
+          "exposure_id": 40521
+        },
+        {
+          "fall": 498,
+          "deadline": 858,
+          "xy": [
+            425,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.014539124444127083,
+            -1.684805442114947e-17,
+            -2.7302076822646923e-17
+          ],
+          "exposure_id": 18350
+        },
+        {
+          "fall": 132,
+          "deadline": 492,
+          "xy": [
+            425,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.01789127103984356,
+            -3.472862612313417e-17,
+            -5.756952731986948e-18
+          ],
+          "exposure_id": 46493
+        },
+        {
+          "fall": 810,
+          "deadline": 1170,
+          "xy": [
+            465,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.07860861718654633,
+            -0.09843667596578598,
+            -0.12214723974466324
+          ],
+          "exposure_id": 34017
+        },
+        {
+          "fall": 802,
+          "deadline": 1162,
+          "xy": [
+            435,
+            825
+          ],
+          "trigger": "random",
+          "field": [
+            0.010737041011452675,
+            -1.388537388121218e-17,
+            2.922225493642067e-18
+          ],
+          "exposure_id": 43336
+        },
+        {
+          "fall": 802,
+          "deadline": 1162,
+          "xy": [
+            555,
+            25
+          ],
+          "trigger": "random",
+          "field": [
+            0.08910988867282868,
+            -0.006132027693092823,
+            -0.1119251310825348
+          ],
+          "exposure_id": 1143
+        },
+        {
+          "fall": 507,
+          "deadline": 867,
+          "xy": [
+            445,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.029098371043801308,
+            1.069480925150682e-16,
+            2.6833414816420097e-17
+          ],
+          "exposure_id": 37554
+        },
+        {
+          "fall": 456,
+          "deadline": 816,
+          "xy": [
+            585,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.07729184329509736,
+            0.09448385238647461,
+            -0.20715226829051972
+          ],
+          "exposure_id": 38569
+        },
+        {
+          "fall": 188,
+          "deadline": 548,
+          "xy": [
+            545,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.042288459837436676,
+            4.295907189454782e-17,
+            -3.433736969339659e-17
+          ],
+          "exposure_id": 30072
+        },
+        {
+          "fall": 790,
+          "deadline": 1150,
+          "xy": [
+            415,
+            915
+          ],
+          "trigger": "random",
+          "field": [
+            0.013032869435846806,
+            -2.9548539224174354e-17,
+            -4.103668496038437e-17
+          ],
+          "exposure_id": 37396
+        },
+        {
+          "fall": 504,
+          "deadline": 864,
+          "xy": [
+            615,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.01374030951410532,
+            1.4112107230399294e-17,
+            -1.1786290580295566e-17
+          ],
+          "exposure_id": 7525
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            485,
+            795
+          ],
+          "trigger": "random",
+          "field": [
+            0.011260353960096836,
+            1.4128990979318236e-17,
+            -9.544412413722903e-18
+          ],
+          "exposure_id": 61227
+        },
+        {
+          "fall": 470,
+          "deadline": 830,
+          "xy": [
+            645,
+            115
+          ],
+          "trigger": "random",
+          "field": [
+            0.027019968256354332,
+            0.0888269767165184,
+            -0.05713796988129616
+          ],
+          "exposure_id": 61153
+        },
+        {
+          "fall": 502,
+          "deadline": 862,
+          "xy": [
+            495,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.06726161986589432,
+            -0.15003139078617095,
+            0.09475603997707366
+          ],
+          "exposure_id": 40470
+        },
+        {
+          "fall": 153,
+          "deadline": 513,
+          "xy": [
+            535,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.04226766899228096,
+            4.8894659242899267e-17,
+            -8.208276007508244e-17
+          ],
+          "exposure_id": 42328
+        },
+        {
+          "fall": 488,
+          "deadline": 848,
+          "xy": [
+            505,
+            875
+          ],
+          "trigger": "random",
+          "field": [
+            0.027342334389686584,
+            -6.399945368415038e-17,
+            -2.7717514057795142e-17
+          ],
+          "exposure_id": 11478
+        },
+        {
+          "fall": 502,
+          "deadline": 862,
+          "xy": [
+            515,
+            915
+          ],
+          "trigger": "random",
+          "field": [
+            0.03411737084388733,
+            -1.5075649890420666e-17,
+            -1.514308496267844e-17
+          ],
+          "exposure_id": 16002
+        },
+        {
+          "fall": 818,
+          "deadline": 1178,
+          "xy": [
+            545,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.10161137282848358,
+            -0.010919690132141113,
+            0.12398917227983475
+          ],
+          "exposure_id": 58334
+        },
+        {
+          "fall": 454,
+          "deadline": 814,
+          "xy": [
+            645,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.0347121074795723,
+            0.12632650136947632,
+            0.010142187960445881
+          ],
+          "exposure_id": 7801
+        },
+        {
+          "fall": 501,
+          "deadline": 861,
+          "xy": [
+            665,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.02160230912268162,
+            0.0833511158823967,
+            0.0028535870369523764
+          ],
+          "exposure_id": 1746
+        },
+        {
+          "fall": 496,
+          "deadline": 856,
+          "xy": [
+            615,
+            115
+          ],
+          "trigger": "random",
+          "field": [
+            0.08147852420806885,
+            0.16394421458244327,
+            -0.14296086132526398
+          ],
+          "exposure_id": 21141
+        },
+        {
+          "fall": 491,
+          "deadline": 851,
+          "xy": [
+            645,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.04455671682953835,
+            0.14127863049507142,
+            0.028252843767404556
+          ],
+          "exposure_id": 9918
+        },
+        {
+          "fall": 493,
+          "deadline": 853,
+          "xy": [
+            665,
+            145
+          ],
+          "trigger": "random",
+          "field": [
+            0.019750002771615982,
+            0.0769069954752922,
+            -0.01662444360554218
+          ],
+          "exposure_id": 35294
+        }
+      ],
+      "traps": [
+        [
+          495,
+          805
+        ],
+        [
+          605,
+          115
+        ],
+        [
+          445,
+          825
+        ],
+        [
+          505,
+          815
+        ],
+        [
+          495,
+          195
+        ],
+        [
+          645,
+          205
+        ],
+        [
+          565,
+          75
+        ],
+        [
+          525,
+          85
+        ],
+        [
+          475,
+          865
+        ],
+        [
+          465,
+          985
+        ],
+        [
+          645,
+          995
+        ],
+        [
+          535,
+          155
+        ]
+      ],
+      "attempted_exposures": 132846,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 20.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": false
+    }
+  },
+  {
+    "parameter": "view20-w360",
+    "id": "train-2601013-view60-view20-w360",
+    "field": {
+      "seed": 31010,
+      "split": "train",
+      "parent": "synthetic-swe-31010",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          8.33371254096741
+        ],
+        [
+          750.0,
+          4.166856270483705
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          55
+        ],
+        [
+          15,
+          56
+        ],
+        [
+          15,
+          57
+        ],
+        [
+          15,
+          58
+        ],
+        [
+          15,
+          59
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1158,
+        "max_depth_m": 0.08088816093042564,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.0007231160731180353,
+          "max_dt_s": 2.453795478365831,
+          "limited_faces": 0,
+          "max_stage_courant": 0.3999739310710128,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.7550173781542071,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.7550173781542071,
+          "cfl_limit_s": 2.1347941737121197,
+          "limiting_cell": [
+            15,
+            59
+          ],
+          "cell_depth_m": 0.07982319115657041,
+          "cell_u_m_s": 0.04395140995515922,
+          "cell_v_m_s": 0.03857829207382346,
+          "grid_wave_bound_m_s": 1.8737169368626008,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1499.2449826218458,
+        "max_speed_m_s": 0.08708499150187557,
+        "peak_speed_m_s": 0.3544664573976332,
+        "peak_speed_time_s": 374.986365495319,
+        "wet_area_m2": 195000.0,
+        "newly_flooded_area_m2": 132100.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1499.2449826218458,
+        "balance": {
+          "initial_m3": 2242.6019212353312,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 6075.2559651529955,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 8317.857886388325,
+          "residual_m3": -1.8189894035458565e-12,
+          "corrected_residual_m3": -1.8189894035458565e-12
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 2242.6019212353312,
+      "water_volume_final_m3": 8317.857886388325,
+      "elapsed_s": 2.815739300000132,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31010.npy",
+      "sha256": "a5038a51c2c667f4c8f5af31bbd39b5f93aaa2e0d2cffb7c2d7f70c513fc28ec",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 6075.2559651529955,
+      "mass_residual_m3": -1.8189894035458565e-12
+    },
+    "scenario": {
+      "seed": 2601013,
+      "events": [
+        {
+          "fall": 160,
+          "deadline": 520,
+          "xy": [
+            475,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.05152227729558945,
+            -8.027114519808515e-18,
+            -6.796104001334855e-17
+          ],
+          "exposure_id": 15112
+        },
+        {
+          "fall": 492,
+          "deadline": 852,
+          "xy": [
+            525,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.010299320332705975,
+            -0.022180240601301193,
+            -0.03859011083841324
+          ],
+          "exposure_id": 23151
+        },
+        {
+          "fall": 464,
+          "deadline": 824,
+          "xy": [
+            485,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.038581833243370056,
+            4.8300586067897564e-17,
+            7.899991484212346e-17
+          ],
+          "exposure_id": 42900
+        },
+        {
+          "fall": 493,
+          "deadline": 853,
+          "xy": [
+            525,
+            785
+          ],
+          "trigger": "random",
+          "field": [
+            0.017695246264338493,
+            -1.1716355073394942e-16,
+            -1.035817218627338e-17
+          ],
+          "exposure_id": 29280
+        },
+        {
+          "fall": 506,
+          "deadline": 866,
+          "xy": [
+            555,
+            145
+          ],
+          "trigger": "random",
+          "field": [
+            0.13370729088783265,
+            -0.1816790521144867,
+            -0.25271099209785464
+          ],
+          "exposure_id": 37664
+        },
+        {
+          "fall": 485,
+          "deadline": 845,
+          "xy": [
+            395,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.04324148967862129,
+            -1.203419545182485e-16,
+            -9.709903295590058e-17
+          ],
+          "exposure_id": 32847
+        },
+        {
+          "fall": 168,
+          "deadline": 528,
+          "xy": [
+            535,
+            855
+          ],
+          "trigger": "random",
+          "field": [
+            0.03439847752451897,
+            -2.519539007753972e-17,
+            2.0896927826434436e-17
+          ],
+          "exposure_id": 52427
+        },
+        {
+          "fall": 450,
+          "deadline": 810,
+          "xy": [
+            325,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.010994738899171352,
+            -2.6099510812051305e-18,
+            -2.0374596687703945e-17
+          ],
+          "exposure_id": 25339
+        },
+        {
+          "fall": 787,
+          "deadline": 1147,
+          "xy": [
+            605,
+            295
+          ],
+          "trigger": "random",
+          "field": [
+            0.03426759466528893,
+            0.020962245762348175,
+            0.09458400458097457
+          ],
+          "exposure_id": 44360
+        },
+        {
+          "fall": 150,
+          "deadline": 510,
+          "xy": [
+            375,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.02299218252301216,
+            4.0153683718554426e-18,
+            1.1701661731825265e-17
+          ],
+          "exposure_id": 9076
+        },
+        {
+          "fall": 460,
+          "deadline": 820,
+          "xy": [
+            515,
+            805
+          ],
+          "trigger": "random",
+          "field": [
+            0.02350381575524807,
+            -5.229683324999517e-17,
+            0.0
+          ],
+          "exposure_id": 45637
+        },
+        {
+          "fall": 492,
+          "deadline": 852,
+          "xy": [
+            465,
+            875
+          ],
+          "trigger": "random",
+          "field": [
+            0.03939734771847725,
+            1.2769768921736733e-16,
+            1.6264745976116184e-16
+          ],
+          "exposure_id": 4394
+        },
+        {
+          "fall": 493,
+          "deadline": 853,
+          "xy": [
+            625,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.08023811727762223,
+            0.17282435595989226,
+            0.11041304469108582
+          ],
+          "exposure_id": 36071
+        },
+        {
+          "fall": 778,
+          "deadline": 1138,
+          "xy": [
+            515,
+            845
+          ],
+          "trigger": "random",
+          "field": [
+            0.033703967928886414,
+            -5.833781929025363e-17,
+            5.800780069562458e-17
+          ],
+          "exposure_id": 28895
+        },
+        {
+          "fall": 182,
+          "deadline": 542,
+          "xy": [
+            395,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.046320028603076935,
+            -1.1261155994120236e-16,
+            -7.111821768138502e-17
+          ],
+          "exposure_id": 56461
+        },
+        {
+          "fall": 791,
+          "deadline": 1151,
+          "xy": [
+            405,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.043309710919857025,
+            -4.0908850483286955e-17,
+            -1.009508570500244e-16
+          ],
+          "exposure_id": 56551
+        },
+        {
+          "fall": 466,
+          "deadline": 826,
+          "xy": [
+            665,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.0200675405561924,
+            0.07192512452602387,
+            0.020859775692224504
+          ],
+          "exposure_id": 51197
+        },
+        {
+          "fall": 798,
+          "deadline": 1158,
+          "xy": [
+            625,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.029493756592273712,
+            -3.7124321833333524e-17,
+            1.3418661539689144e-16
+          ],
+          "exposure_id": 21255
+        },
+        {
+          "fall": 184,
+          "deadline": 544,
+          "xy": [
+            595,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.026344571635127066,
+            0.036390570551157,
+            0.07501883953809738
+          ],
+          "exposure_id": 10256
+        },
+        {
+          "fall": 171,
+          "deadline": 531,
+          "xy": [
+            535,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.05745619535446167,
+            -8.905991604540392e-17,
+            8.301808164870923e-17
+          ],
+          "exposure_id": 38208
+        },
+        {
+          "fall": 140,
+          "deadline": 500,
+          "xy": [
+            575,
+            945
+          ],
+          "trigger": "random",
+          "field": [
+            0.04819880798459053,
+            -7.683031538660342e-17,
+            5.149208577565458e-17
+          ],
+          "exposure_id": 28116
+        },
+        {
+          "fall": 177,
+          "deadline": 537,
+          "xy": [
+            375,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.013557756319642067,
+            1.6949315886504743e-17,
+            1.0211469057659139e-17
+          ],
+          "exposure_id": 32180
+        },
+        {
+          "fall": 823,
+          "deadline": 1183,
+          "xy": [
+            525,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.06217675879597664,
+            -0.055963481217622756,
+            -0.09218747913837433
+          ],
+          "exposure_id": 47403
+        },
+        {
+          "fall": 178,
+          "deadline": 538,
+          "xy": [
+            585,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.02941868603229523,
+            0.021319011226296425,
+            0.08671175241470336
+          ],
+          "exposure_id": 17874
+        },
+        {
+          "fall": 181,
+          "deadline": 541,
+          "xy": [
+            605,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.05281485989689827,
+            2.2914524241719474e-17,
+            1.987677623401238e-18
+          ],
+          "exposure_id": 18905
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            495,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.04808470979332924,
+            -3.404236995543609e-17,
+            -4.042396250216429e-17
+          ],
+          "exposure_id": 30503
+        },
+        {
+          "fall": 481,
+          "deadline": 841,
+          "xy": [
+            555,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.042893137782812125,
+            -6.006793967155771e-17,
+            -2.6216566712176847e-17
+          ],
+          "exposure_id": 19076
+        },
+        {
+          "fall": 453,
+          "deadline": 813,
+          "xy": [
+            535,
+            135
+          ],
+          "trigger": "random",
+          "field": [
+            0.08190885335206985,
+            -0.17801730930805204,
+            -0.12012461572885513
+          ],
+          "exposure_id": 52579
+        },
+        {
+          "fall": 498,
+          "deadline": 858,
+          "xy": [
+            465,
+            845
+          ],
+          "trigger": "random",
+          "field": [
+            0.03189472481608391,
+            7.722860218980322e-17,
+            3.561056741572719e-17
+          ],
+          "exposure_id": 11047
+        },
+        {
+          "fall": 770,
+          "deadline": 1130,
+          "xy": [
+            455,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.01992752030491829,
+            -0.041583102196455,
+            0.039361827075481415
+          ],
+          "exposure_id": 31473
+        },
+        {
+          "fall": 781,
+          "deadline": 1141,
+          "xy": [
+            475,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.037319377064704895,
+            -0.07026776224374771,
+            -0.04829196557402611
+          ],
+          "exposure_id": 15239
+        },
+        {
+          "fall": 503,
+          "deadline": 863,
+          "xy": [
+            625,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.048253656923770906,
+            0.08253618925809861,
+            0.11983519047498703
+          ],
+          "exposure_id": 46767
+        },
+        {
+          "fall": 781,
+          "deadline": 1141,
+          "xy": [
+            585,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.031122663989663124,
+            -4.007015220788474e-17,
+            6.339195900740164e-17
+          ],
+          "exposure_id": 7886
+        },
+        {
+          "fall": 134,
+          "deadline": 494,
+          "xy": [
+            475,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.04494881629943848,
+            1.6295321582493574e-17,
+            3.3662154070770376e-17
+          ],
+          "exposure_id": 10492
+        },
+        {
+          "fall": 814,
+          "deadline": 1174,
+          "xy": [
+            415,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.046360936015844345,
+            -4.422217007247139e-17,
+            -7.481074002442091e-17
+          ],
+          "exposure_id": 15575
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            475,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.0536443367600441,
+            -2.9348569965450885e-17,
+            -1.0798544450114767e-16
+          ],
+          "exposure_id": 4659
+        },
+        {
+          "fall": 497,
+          "deadline": 857,
+          "xy": [
+            525,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.05152634158730507,
+            -3.210013598052729e-17,
+            -1.1194826498381976e-17
+          ],
+          "exposure_id": 2680
+        },
+        {
+          "fall": 131,
+          "deadline": 491,
+          "xy": [
+            365,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.022698888555169106,
+            -4.046464125945618e-17,
+            -3.203109882485912e-17
+          ],
+          "exposure_id": 31344
+        },
+        {
+          "fall": 455,
+          "deadline": 815,
+          "xy": [
+            545,
+            185
+          ],
+          "trigger": "random",
+          "field": [
+            0.08743792027235031,
+            -0.1336626410484314,
+            0.1909349113702774
+          ],
+          "exposure_id": 44859
+        },
+        {
+          "fall": 488,
+          "deadline": 848,
+          "xy": [
+            555,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.06488226056098938,
+            -0.0449490487575531,
+            0.17416711151599884
+          ],
+          "exposure_id": 12442
+        }
+      ],
+      "traps": [
+        [
+          625,
+          135
+        ],
+        [
+          445,
+          885
+        ],
+        [
+          555,
+          75
+        ],
+        [
+          485,
+          865
+        ],
+        [
+          465,
+          895
+        ],
+        [
+          435,
+          895
+        ],
+        [
+          395,
+          875
+        ],
+        [
+          545,
+          205
+        ],
+        [
+          415,
+          955
+        ],
+        [
+          605,
+          185
+        ],
+        [
+          585,
+          915
+        ],
+        [
+          565,
+          155
+        ]
+      ],
+      "attempted_exposures": 127099,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 20.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": false
+    }
+  },
+  {
+    "parameter": "view20-w360",
+    "id": "train-2601014-view100-view20-w360",
+    "field": {
+      "seed": 31011,
+      "split": "train",
+      "parent": "synthetic-swe-31011",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          12.913530348887637
+        ],
+        [
+          750.0,
+          6.456765174443818
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          57
+        ],
+        [
+          15,
+          58
+        ],
+        [
+          15,
+          59
+        ],
+        [
+          15,
+          60
+        ],
+        [
+          15,
+          61
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1150,
+        "max_depth_m": 0.11131268759028469,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.003310387279270799,
+          "max_dt_s": 2.5,
+          "limited_faces": 0,
+          "max_stage_courant": 0.3998706735143784,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 1.3284244585631768,
+          "cause": "event_or_output",
+          "requested_limit_s": 1.3284244585631768,
+          "cfl_limit_s": 1.8457772276082127,
+          "limiting_cell": [
+            15,
+            57
+          ],
+          "cell_depth_m": 0.11073305413562216,
+          "cell_u_m_s": -0.028677634949687572,
+          "cell_v_m_s": 0.03897581949324846,
+          "grid_wave_bound_m_s": 2.1671087605643846,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1498.6715755414368,
+        "max_speed_m_s": 0.08385830321920044,
+        "peak_speed_m_s": 0.4432517667062359,
+        "peak_speed_time_s": 359.31244673694124,
+        "wet_area_m2": 187300.0,
+        "newly_flooded_area_m2": 152500.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1498.6715755414368,
+        "balance": {
+          "initial_m3": 1165.9064833646585,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 9166.632985499144,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 10332.539468863806,
+          "residual_m3": 3.637978807091713e-12,
+          "corrected_residual_m3": 3.637978807091713e-12
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 1165.9064833646585,
+      "water_volume_final_m3": 10332.539468863806,
+      "elapsed_s": 2.745956099999603,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31011.npy",
+      "sha256": "0441f2f86ce2d54e73fd03cde7b786770e01cb17a7acc90e54990d923ea75e13",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 9166.632985499144,
+      "mass_residual_m3": 3.637978807091713e-12
+    },
+    "scenario": {
+      "seed": 2601014,
+      "events": [
+        {
+          "fall": 162,
+          "deadline": 522,
+          "xy": [
+            555,
+            155
+          ],
+          "trigger": "random",
+          "field": [
+            0.01856493130326271,
+            -0.06309401839971543,
+            -0.004414529912173748
+          ],
+          "exposure_id": 49946
+        },
+        {
+          "fall": 130,
+          "deadline": 490,
+          "xy": [
+            545,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.05746559426188469,
+            7.905850669188854e-18,
+            4.528075016004694e-17
+          ],
+          "exposure_id": 66603
+        },
+        {
+          "fall": 188,
+          "deadline": 548,
+          "xy": [
+            425,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.05204180255532265,
+            2.3071557863567764e-18,
+            -6.813597481626922e-17
+          ],
+          "exposure_id": 37702
+        },
+        {
+          "fall": 487,
+          "deadline": 847,
+          "xy": [
+            545,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.08406700193881989,
+            -0.15635016262531282,
+            0.14528325200080872
+          ],
+          "exposure_id": 23858
+        },
+        {
+          "fall": 130,
+          "deadline": 490,
+          "xy": [
+            595,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.039056334644556046,
+            -2.0416129426260232e-17,
+            5.551991603702844e-18
+          ],
+          "exposure_id": 46177
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            565,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.12158098071813583,
+            -0.07414835691452026,
+            -0.14007097482681274
+          ],
+          "exposure_id": 7967
+        },
+        {
+          "fall": 488,
+          "deadline": 848,
+          "xy": [
+            355,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.017210884019732475,
+            2.665246905742412e-18,
+            1.9722336650565055e-17
+          ],
+          "exposure_id": 61335
+        },
+        {
+          "fall": 177,
+          "deadline": 537,
+          "xy": [
+            385,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.04286639392375946,
+            1.6388858008108214e-17,
+            -2.5801737951087222e-17
+          ],
+          "exposure_id": 32954
+        },
+        {
+          "fall": 134,
+          "deadline": 494,
+          "xy": [
+            385,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.02576468698680401,
+            3.460655147007809e-17,
+            5.218036026404729e-17
+          ],
+          "exposure_id": 55805
+        },
+        {
+          "fall": 173,
+          "deadline": 533,
+          "xy": [
+            385,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.03320030868053436,
+            4.1755526750261127e-17,
+            0.0
+          ],
+          "exposure_id": 25421
+        },
+        {
+          "fall": 463,
+          "deadline": 823,
+          "xy": [
+            565,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.012423654086887836,
+            -5.58305223570421e-17,
+            0.0
+          ],
+          "exposure_id": 64330
+        },
+        {
+          "fall": 804,
+          "deadline": 1164,
+          "xy": [
+            645,
+            315
+          ],
+          "trigger": "random",
+          "field": [
+            0.02373754382133484,
+            0.025054942443966867,
+            0.0722459003329277
+          ],
+          "exposure_id": 17465
+        },
+        {
+          "fall": 505,
+          "deadline": 865,
+          "xy": [
+            425,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.029334604740142822,
+            -4.772904264580384e-17,
+            -2.6318099492773037e-17
+          ],
+          "exposure_id": 25072
+        },
+        {
+          "fall": 457,
+          "deadline": 817,
+          "xy": [
+            655,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.08336236625909806,
+            0.2172957181930542,
+            0.0626169890165329
+          ],
+          "exposure_id": 30892
+        },
+        {
+          "fall": 508,
+          "deadline": 868,
+          "xy": [
+            425,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.02011270634829998,
+            7.836114876775326e-18,
+            8.333345054381772e-18
+          ],
+          "exposure_id": 38115
+        },
+        {
+          "fall": 783,
+          "deadline": 1143,
+          "xy": [
+            565,
+            35
+          ],
+          "trigger": "random",
+          "field": [
+            0.07645122855901718,
+            -0.04758835658431053,
+            -0.1265054553747177
+          ],
+          "exposure_id": 29225
+        },
+        {
+          "fall": 504,
+          "deadline": 864,
+          "xy": [
+            685,
+            135
+          ],
+          "trigger": "random",
+          "field": [
+            0.039098013937473294,
+            0.11540416479110718,
+            -0.03238954544067383
+          ],
+          "exposure_id": 33167
+        },
+        {
+          "fall": 169,
+          "deadline": 529,
+          "xy": [
+            435,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.05028415098786354,
+            5.670011682093991e-17,
+            1.3368134700896444e-17
+          ],
+          "exposure_id": 9270
+        },
+        {
+          "fall": 450,
+          "deadline": 810,
+          "xy": [
+            505,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.026705162599682808,
+            -0.09923875331878662,
+            0.014004847966134548
+          ],
+          "exposure_id": 34749
+        },
+        {
+          "fall": 153,
+          "deadline": 513,
+          "xy": [
+            335,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.019784869626164436,
+            1.9375264238683118e-17,
+            2.7399780832341786e-18
+          ],
+          "exposure_id": 29026
+        },
+        {
+          "fall": 176,
+          "deadline": 536,
+          "xy": [
+            505,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.018820106983184814,
+            5.123969146406873e-18,
+            5.755053856172772e-18
+          ],
+          "exposure_id": 26449
+        },
+        {
+          "fall": 496,
+          "deadline": 856,
+          "xy": [
+            615,
+            185
+          ],
+          "trigger": "random",
+          "field": [
+            0.13263517022132873,
+            0.13525005877017976,
+            0.28460535407066345
+          ],
+          "exposure_id": 21286
+        },
+        {
+          "fall": 486,
+          "deadline": 846,
+          "xy": [
+            635,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.1168054386973381,
+            0.2284905403852463,
+            0.16607691645622252
+          ],
+          "exposure_id": 9538
+        },
+        {
+          "fall": 176,
+          "deadline": 536,
+          "xy": [
+            485,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.03364616632461548,
+            1.4233966816496115e-17,
+            -4.7708754883228124e-17
+          ],
+          "exposure_id": 32123
+        },
+        {
+          "fall": 483,
+          "deadline": 843,
+          "xy": [
+            595,
+            235
+          ],
+          "trigger": "random",
+          "field": [
+            0.05619756877422333,
+            0.00272849053144455,
+            0.17155296802520753
+          ],
+          "exposure_id": 74672
+        },
+        {
+          "fall": 178,
+          "deadline": 538,
+          "xy": [
+            465,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.018662573769688606,
+            8.193080865091767e-18,
+            -2.0343391133659257e-17
+          ],
+          "exposure_id": 32906
+        },
+        {
+          "fall": 152,
+          "deadline": 512,
+          "xy": [
+            575,
+            155
+          ],
+          "trigger": "random",
+          "field": [
+            0.048992163687944415,
+            -0.08073195964097976,
+            -0.005264196079224348
+          ],
+          "exposure_id": 46633
+        },
+        {
+          "fall": 473,
+          "deadline": 833,
+          "xy": [
+            495,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.046366944909095764,
+            1.8899832255450912e-17,
+            -5.721686118181321e-17
+          ],
+          "exposure_id": 23413
+        },
+        {
+          "fall": 827,
+          "deadline": 1187,
+          "xy": [
+            685,
+            275
+          ],
+          "trigger": "random",
+          "field": [
+            0.04374223053455353,
+            0.05982350036501885,
+            0.09554309695959091
+          ],
+          "exposure_id": 46935
+        },
+        {
+          "fall": 500,
+          "deadline": 860,
+          "xy": [
+            575,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.04809440299868584,
+            -1.0169733659852776e-16,
+            -1.1929845294062306e-17
+          ],
+          "exposure_id": 77237
+        },
+        {
+          "fall": 507,
+          "deadline": 867,
+          "xy": [
+            455,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.0526110902428627,
+            1.1778494237586131e-17,
+            3.641869574266741e-17
+          ],
+          "exposure_id": 58942
+        },
+        {
+          "fall": 500,
+          "deadline": 860,
+          "xy": [
+            675,
+            225
+          ],
+          "trigger": "random",
+          "field": [
+            0.015301096253097057,
+            0.04449332877993584,
+            0.05060258135199547
+          ],
+          "exposure_id": 56237
+        },
+        {
+          "fall": 183,
+          "deadline": 543,
+          "xy": [
+            585,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.045634232461452484,
+            -2.668523963718776e-17,
+            1.4377129853780462e-18
+          ],
+          "exposure_id": 70958
+        },
+        {
+          "fall": 143,
+          "deadline": 503,
+          "xy": [
+            515,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.05327435955405235,
+            -2.899493966567263e-17,
+            1.1803750874101458e-17
+          ],
+          "exposure_id": 40385
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            635,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.03284623101353645,
+            1.458928489559623e-17,
+            0.0
+          ],
+          "exposure_id": 19378
+        },
+        {
+          "fall": 144,
+          "deadline": 504,
+          "xy": [
+            405,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.03018696792423725,
+            2.573968021455553e-17,
+            7.470576352549855e-17
+          ],
+          "exposure_id": 64228
+        },
+        {
+          "fall": 507,
+          "deadline": 867,
+          "xy": [
+            465,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.04582405462861061,
+            1.5993449793440103e-17,
+            3.491144362642023e-17
+          ],
+          "exposure_id": 30497
+        },
+        {
+          "fall": 130,
+          "deadline": 490,
+          "xy": [
+            345,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.026593463495373726,
+            -2.3486517980938664e-17,
+            0.0
+          ],
+          "exposure_id": 33112
+        },
+        {
+          "fall": 820,
+          "deadline": 1180,
+          "xy": [
+            465,
+            255
+          ],
+          "trigger": "random",
+          "field": [
+            0.011471299454569817,
+            -0.025506991893053055,
+            0.02952377125620842
+          ],
+          "exposure_id": 72307
+        },
+        {
+          "fall": 790,
+          "deadline": 1150,
+          "xy": [
+            585,
+            325
+          ],
+          "trigger": "random",
+          "field": [
+            0.015616402961313725,
+            0.0032052500173449516,
+            0.05408596992492676
+          ],
+          "exposure_id": 23127
+        }
+      ],
+      "traps": [
+        [
+          505,
+          935
+        ],
+        [
+          605,
+          945
+        ],
+        [
+          545,
+          945
+        ],
+        [
+          535,
+          105
+        ],
+        [
+          535,
+          65
+        ],
+        [
+          495,
+          135
+        ],
+        [
+          595,
+          975
+        ],
+        [
+          565,
+          85
+        ],
+        [
+          465,
+          905
+        ],
+        [
+          615,
+          235
+        ],
+        [
+          505,
+          165
+        ],
+        [
+          625,
+          175
+        ]
+      ],
+      "attempted_exposures": 150745,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 20.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": false
+    }
+  },
+  {
+    "parameter": "view20-w360",
+    "id": "train-2601015-view40-view20-w360",
+    "field": {
+      "seed": 31012,
+      "split": "train",
+      "parent": "synthetic-swe-31012",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          8.874548027231986
+        ],
+        [
+          750.0,
+          4.437274013615993
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          62
+        ],
+        [
+          15,
+          63
+        ],
+        [
+          15,
+          64
+        ],
+        [
+          15,
+          65
+        ],
+        [
+          15,
+          66
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1173,
+        "max_depth_m": 0.12279749234976205,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.010039343134394585,
+          "max_dt_s": 2.449964680600778,
+          "limited_faces": 0,
+          "max_stage_courant": 0.3995822613691661,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 1.5022252180831401,
+          "cause": "event_or_output",
+          "requested_limit_s": 1.5022252180831401,
+          "cfl_limit_s": 1.7526580063385386,
+          "limiting_cell": [
+            22,
+            58
+          ],
+          "cell_depth_m": 0.12280171671408983,
+          "cell_u_m_s": -0.013332582665541074,
+          "cell_v_m_s": 0.06250160989671637,
+          "grid_wave_bound_m_s": 2.2822478689703773,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1498.4977747819169,
+        "max_speed_m_s": 0.07852666320068166,
+        "peak_speed_m_s": 0.3631541758146414,
+        "peak_speed_time_s": 379.7589081535234,
+        "wet_area_m2": 237800.0,
+        "newly_flooded_area_m2": 62500.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1498.4977747819169,
+        "balance": {
+          "initial_m3": 5894.610733076803,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 6440.319918381591,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 12334.930651458397,
+          "residual_m3": 1.8189894035458565e-12,
+          "corrected_residual_m3": 1.8189894035458565e-12
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 5894.610733076803,
+      "water_volume_final_m3": 12334.930651458397,
+      "elapsed_s": 2.8152335999984643,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31012.npy",
+      "sha256": "a6fc6b9cc69bd31e5635d1e473a8a70a89a1fc9f4c587d7955676c463068f4f5",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 6440.319918381591,
+      "mass_residual_m3": 2.7284841053187847e-12
+    },
+    "scenario": {
+      "seed": 2601015,
+      "events": [
+        {
+          "fall": 782,
+          "deadline": 1142,
+          "xy": [
+            485,
+            255
+          ],
+          "trigger": "random",
+          "field": [
+            0.04148265272378922,
+            -0.0444692999124527,
+            0.03560621961951256
+          ],
+          "exposure_id": 4012
+        },
+        {
+          "fall": 821,
+          "deadline": 1181,
+          "xy": [
+            605,
+            795
+          ],
+          "trigger": "random",
+          "field": [
+            0.028378039225935937,
+            3.1762749131303282e-06,
+            2.096965145028662e-05
+          ],
+          "exposure_id": 8663
+        },
+        {
+          "fall": 805,
+          "deadline": 1165,
+          "xy": [
+            555,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.11133016645908356,
+            -0.0873289704322815,
+            0.08963432163000107
+          ],
+          "exposure_id": 61879
+        },
+        {
+          "fall": 793,
+          "deadline": 1153,
+          "xy": [
+            645,
+            715
+          ],
+          "trigger": "random",
+          "field": [
+            0.011443881876766681,
+            8.703466155566276e-05,
+            0.00019152089080307633
+          ],
+          "exposure_id": 59191
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            755,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.04137213155627251,
+            0.05931407958269119,
+            0.03579350560903549
+          ],
+          "exposure_id": 10716
+        },
+        {
+          "fall": 173,
+          "deadline": 533,
+          "xy": [
+            605,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.05411583557724953,
+            1.7928354948121687e-17,
+            -3.714115810208529e-19
+          ],
+          "exposure_id": 27636
+        },
+        {
+          "fall": 489,
+          "deadline": 849,
+          "xy": [
+            675,
+            505
+          ],
+          "trigger": "random",
+          "field": [
+            0.010508837923407555,
+            0.0009377971757203341,
+            0.0016036244807764888
+          ],
+          "exposure_id": 21154
+        },
+        {
+          "fall": 160,
+          "deadline": 520,
+          "xy": [
+            705,
+            285
+          ],
+          "trigger": "random",
+          "field": [
+            0.016352076083421707,
+            0.0019531608559191227,
+            0.0022379737347364426
+          ],
+          "exposure_id": 20945
+        },
+        {
+          "fall": 188,
+          "deadline": 548,
+          "xy": [
+            525,
+            805
+          ],
+          "trigger": "random",
+          "field": [
+            0.030432654544711113,
+            -3.514237723332177e-17,
+            -3.642236842458714e-17
+          ],
+          "exposure_id": 35640
+        },
+        {
+          "fall": 807,
+          "deadline": 1167,
+          "xy": [
+            545,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.04246155470609665,
+            -1.1291460992879365e-07,
+            4.3117569248352083e-07
+          ],
+          "exposure_id": 36436
+        },
+        {
+          "fall": 174,
+          "deadline": 534,
+          "xy": [
+            535,
+            825
+          ],
+          "trigger": "random",
+          "field": [
+            0.03530526161193848,
+            2.300725416623687e-17,
+            -3.6466091868277714e-18
+          ],
+          "exposure_id": 63243
+        },
+        {
+          "fall": 478,
+          "deadline": 838,
+          "xy": [
+            445,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.023794816806912422,
+            9.050426603915011e-17,
+            -1.15332141755766e-17
+          ],
+          "exposure_id": 67588
+        },
+        {
+          "fall": 142,
+          "deadline": 502,
+          "xy": [
+            635,
+            595
+          ],
+          "trigger": "random",
+          "field": [
+            0.016317298635840416,
+            -8.67269652106711e-19,
+            -1.098865934076477e-17
+          ],
+          "exposure_id": 54872
+        },
+        {
+          "fall": 817,
+          "deadline": 1177,
+          "xy": [
+            565,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.08332031220197678,
+            -0.08546322882175444,
+            -0.04919327050447464
+          ],
+          "exposure_id": 7704
+        },
+        {
+          "fall": 142,
+          "deadline": 502,
+          "xy": [
+            465,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.0399121455848217,
+            6.268380108231662e-17,
+            -7.167345968971104e-17
+          ],
+          "exposure_id": 69482
+        },
+        {
+          "fall": 165,
+          "deadline": 525,
+          "xy": [
+            675,
+            385
+          ],
+          "trigger": "random",
+          "field": [
+            0.02291707508265972,
+            2.2427489057008643e-06,
+            5.2126392802165356e-06
+          ],
+          "exposure_id": 91349
+        },
+        {
+          "fall": 799,
+          "deadline": 1159,
+          "xy": [
+            565,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.04692962691187859,
+            -6.796266394104578e-09,
+            8.446827024499725e-08
+          ],
+          "exposure_id": 7628
+        },
+        {
+          "fall": 783,
+          "deadline": 1143,
+          "xy": [
+            635,
+            335
+          ],
+          "trigger": "random",
+          "field": [
+            0.06562113165855407,
+            0.002088311314582825,
+            0.07705263495445251
+          ],
+          "exposure_id": 56102
+        },
+        {
+          "fall": 159,
+          "deadline": 519,
+          "xy": [
+            575,
+            515
+          ],
+          "trigger": "random",
+          "field": [
+            0.02348961867392063,
+            -2.056205503156845e-15,
+            1.122056574647738e-14
+          ],
+          "exposure_id": 60445
+        },
+        {
+          "fall": 787,
+          "deadline": 1147,
+          "xy": [
+            575,
+            25
+          ],
+          "trigger": "random",
+          "field": [
+            0.02269857116043568,
+            -0.023871885240077974,
+            -0.04938109889626503
+          ],
+          "exposure_id": 4938
+        },
+        {
+          "fall": 146,
+          "deadline": 506,
+          "xy": [
+            665,
+            305
+          ],
+          "trigger": "random",
+          "field": [
+            0.03815809637308121,
+            0.0007477771956473589,
+            0.0022025817073881627
+          ],
+          "exposure_id": 81582
+        },
+        {
+          "fall": 771,
+          "deadline": 1131,
+          "xy": [
+            675,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.017311686649918556,
+            2.94338102502234e-11,
+            2.401048387890015e-11
+          ],
+          "exposure_id": 88660
+        },
+        {
+          "fall": 820,
+          "deadline": 1180,
+          "xy": [
+            445,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.01851780153810978,
+            -2.761617157176488e-09,
+            1.6870528307677546e-09
+          ],
+          "exposure_id": 27411
+        },
+        {
+          "fall": 472,
+          "deadline": 832,
+          "xy": [
+            535,
+            835
+          ],
+          "trigger": "random",
+          "field": [
+            0.03688087314367294,
+            -3.7045482521232157e-16,
+            9.11941780804579e-16
+          ],
+          "exposure_id": 80063
+        },
+        {
+          "fall": 178,
+          "deadline": 538,
+          "xy": [
+            515,
+            695
+          ],
+          "trigger": "random",
+          "field": [
+            0.01078766118735075,
+            9.725734705333711e-18,
+            2.1597134477881287e-18
+          ],
+          "exposure_id": 51798
+        },
+        {
+          "fall": 503,
+          "deadline": 863,
+          "xy": [
+            465,
+            875
+          ],
+          "trigger": "random",
+          "field": [
+            0.02311231754720211,
+            6.968699702919352e-18,
+            4.7157460180785213e-17
+          ],
+          "exposure_id": 38961
+        },
+        {
+          "fall": 455,
+          "deadline": 815,
+          "xy": [
+            515,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.03840897977352142,
+            7.647059769926126e-17,
+            5.184509068553072e-19
+          ],
+          "exposure_id": 2608
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            625,
+            605
+          ],
+          "trigger": "random",
+          "field": [
+            0.01794791780412197,
+            -9.982427047382392e-18,
+            0.0
+          ],
+          "exposure_id": 31337
+        },
+        {
+          "fall": 457,
+          "deadline": 817,
+          "xy": [
+            645,
+            615
+          ],
+          "trigger": "random",
+          "field": [
+            0.012705594301223755,
+            1.1942698847633437e-06,
+            3.2388095405622153e-06
+          ],
+          "exposure_id": 91162
+        },
+        {
+          "fall": 499,
+          "deadline": 859,
+          "xy": [
+            665,
+            365
+          ],
+          "trigger": "random",
+          "field": [
+            0.031618638336658476,
+            0.004503266792744398,
+            0.013161838427186013
+          ],
+          "exposure_id": 12128
+        },
+        {
+          "fall": 817,
+          "deadline": 1177,
+          "xy": [
+            635,
+            105
+          ],
+          "trigger": "random",
+          "field": [
+            0.10986916124820709,
+            -0.05349211022257805,
+            -0.10320501923561096
+          ],
+          "exposure_id": 63417
+        },
+        {
+          "fall": 818,
+          "deadline": 1178,
+          "xy": [
+            565,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.0687427043914795,
+            -0.06825047582387925,
+            -0.06358328610658645
+          ],
+          "exposure_id": 32614
+        },
+        {
+          "fall": 463,
+          "deadline": 823,
+          "xy": [
+            545,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.04246152937412262,
+            -9.702378102685419e-18,
+            -2.2118589880497265e-17
+          ],
+          "exposure_id": 37580
+        },
+        {
+          "fall": 506,
+          "deadline": 866,
+          "xy": [
+            565,
+            375
+          ],
+          "trigger": "random",
+          "field": [
+            0.04553238153457642,
+            -0.0015584816224873067,
+            0.015913818404078486
+          ],
+          "exposure_id": 9707
+        },
+        {
+          "fall": 154,
+          "deadline": 514,
+          "xy": [
+            525,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.04469690397381782,
+            -0.011446307599544524,
+            0.003616965236142278
+          ],
+          "exposure_id": 64191
+        },
+        {
+          "fall": 783,
+          "deadline": 1143,
+          "xy": [
+            515,
+            245
+          ],
+          "trigger": "random",
+          "field": [
+            0.07683980613946914,
+            -0.05952011868357658,
+            0.06275928914546966
+          ],
+          "exposure_id": 7429
+        },
+        {
+          "fall": 459,
+          "deadline": 819,
+          "xy": [
+            575,
+            275
+          ],
+          "trigger": "random",
+          "field": [
+            0.07264330834150313,
+            -0.02213636077940464,
+            0.04838980734348297
+          ],
+          "exposure_id": 43325
+        },
+        {
+          "fall": 798,
+          "deadline": 1158,
+          "xy": [
+            625,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.033864330500364304,
+            1.913316438617585e-08,
+            4.680172480675537e-08
+          ],
+          "exposure_id": 31164
+        },
+        {
+          "fall": 499,
+          "deadline": 859,
+          "xy": [
+            665,
+            405
+          ],
+          "trigger": "random",
+          "field": [
+            0.02571921646595001,
+            0.003147214651107788,
+            0.008146790228784085
+          ],
+          "exposure_id": 32657
+        },
+        {
+          "fall": 136,
+          "deadline": 496,
+          "xy": [
+            585,
+            405
+          ],
+          "trigger": "random",
+          "field": [
+            0.03986270725727082,
+            -7.307830252045733e-09,
+            3.917945150533342e-08
+          ],
+          "exposure_id": 89302
+        }
+      ],
+      "traps": [
+        [
+          435,
+          995
+        ],
+        [
+          645,
+          515
+        ],
+        [
+          595,
+          435
+        ],
+        [
+          725,
+          165
+        ],
+        [
+          605,
+          615
+        ],
+        [
+          655,
+          235
+        ],
+        [
+          625,
+          115
+        ],
+        [
+          695,
+          195
+        ],
+        [
+          555,
+          465
+        ],
+        [
+          445,
+          925
+        ],
+        [
+          655,
+          565
+        ],
+        [
+          575,
+          55
+        ]
+      ],
+      "attempted_exposures": 147195,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 20.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": false
+    }
+  },
+  {
+    "parameter": "patch20-60-w360",
+    "id": "train-2601012-view40-patch20-60-w360",
+    "field": {
+      "seed": 31009,
+      "split": "train",
+      "parent": "synthetic-swe-31009",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          13.085898855723123
+        ],
+        [
+          750.0,
+          6.542949427861561
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          53
+        ],
+        [
+          15,
+          54
+        ],
+        [
+          15,
+          55
+        ],
+        [
+          15,
+          56
+        ],
+        [
+          15,
+          57
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1162,
+        "max_depth_m": 0.1162711162810178,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.003130004040201584,
+          "max_dt_s": 2.5,
+          "limited_faces": 0,
+          "max_stage_courant": 0.39997775895197835,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 1.296468381314071,
+          "cause": "event_or_output",
+          "requested_limit_s": 1.296468381314071,
+          "cfl_limit_s": 1.8524235285307493,
+          "limiting_cell": [
+            0,
+            51
+          ],
+          "cell_depth_m": 0.1160873758049147,
+          "cell_u_m_s": -0.019003153588245315,
+          "cell_v_m_s": -0.0011691599396871644,
+          "grid_wave_bound_m_s": 2.1593334021041084,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1498.703531618686,
+        "max_speed_m_s": 0.07135742017505936,
+        "peak_speed_m_s": 0.452822935407656,
+        "peak_speed_time_s": 359.2726739937587,
+        "wet_area_m2": 196600.0,
+        "newly_flooded_area_m2": 152700.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1498.703531618686,
+        "balance": {
+          "initial_m3": 1211.1045540608527,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 9282.981727613116,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 10494.086281673968,
+          "residual_m3": 0.0,
+          "corrected_residual_m3": 0.0
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 1211.1045540608527,
+      "water_volume_final_m3": 10494.086281673968,
+      "elapsed_s": 2.742204500002117,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31009.npy",
+      "sha256": "891dd39c1d2a99e7b05e2528d2383f39ba45e764a9c7ef2238e6181202ade83f",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 9282.981727613116,
+      "mass_residual_m3": 0.0
+    },
+    "scenario": {
+      "seed": 2601012,
+      "events": [
+        {
+          "fall": 156,
+          "deadline": 516,
+          "xy": [
+            565,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.02117622271180153,
+            2.6242978258263424e-17,
+            -1.740399456991248e-17
+          ],
+          "exposure_id": 42977
+        },
+        {
+          "fall": 456,
+          "deadline": 816,
+          "xy": [
+            555,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.027088800445199016,
+            2.474195712813449e-17,
+            3.697816298956234e-17
+          ],
+          "exposure_id": 44902
+        },
+        {
+          "fall": 140,
+          "deadline": 500,
+          "xy": [
+            565,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.02081207185983658,
+            0.022081756964325905,
+            0.05763319879770279
+          ],
+          "exposure_id": 31945
+        },
+        {
+          "fall": 468,
+          "deadline": 828,
+          "xy": [
+            515,
+            205
+          ],
+          "trigger": "random",
+          "field": [
+            0.0681329071521759,
+            -0.12027693688869476,
+            0.14633962512016296
+          ],
+          "exposure_id": 1714
+        },
+        {
+          "fall": 505,
+          "deadline": 865,
+          "xy": [
+            475,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.03501328453421593,
+            5.251553318650929e-17,
+            -3.8550745830588954e-17
+          ],
+          "exposure_id": 776
+        },
+        {
+          "fall": 154,
+          "deadline": 514,
+          "xy": [
+            525,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.0419074185192585,
+            9.466290664259311e-17,
+            -5.743443152048283e-17
+          ],
+          "exposure_id": 8875
+        },
+        {
+          "fall": 163,
+          "deadline": 523,
+          "xy": [
+            525,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.03596189245581627,
+            -3.537275224515564e-18,
+            1.452958400342486e-18
+          ],
+          "exposure_id": 2214
+        },
+        {
+          "fall": 496,
+          "deadline": 856,
+          "xy": [
+            555,
+            185
+          ],
+          "trigger": "random",
+          "field": [
+            0.13722598254680635,
+            0.011050990223884583,
+            0.30721795558929443
+          ],
+          "exposure_id": 1230
+        },
+        {
+          "fall": 499,
+          "deadline": 859,
+          "xy": [
+            465,
+            85
+          ],
+          "trigger": "random",
+          "field": [
+            0.011289268173277378,
+            -0.035950998216867446,
+            -0.03949573561549187
+          ],
+          "exposure_id": 48086
+        },
+        {
+          "fall": 794,
+          "deadline": 1154,
+          "xy": [
+            475,
+            5
+          ],
+          "trigger": "random",
+          "field": [
+            0.050341291725635534,
+            -0.10163205415010453,
+            -0.02121724933385849
+          ],
+          "exposure_id": 29882
+        },
+        {
+          "fall": 485,
+          "deadline": 845,
+          "xy": [
+            575,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.01926788128912449,
+            3.723880429185535e-17,
+            0.0
+          ],
+          "exposure_id": 50098
+        },
+        {
+          "fall": 819,
+          "deadline": 1179,
+          "xy": [
+            645,
+            115
+          ],
+          "trigger": "random",
+          "field": [
+            0.09578252136707305,
+            0.12914708852767945,
+            -0.0854608565568924
+          ],
+          "exposure_id": 59434
+        },
+        {
+          "fall": 802,
+          "deadline": 1162,
+          "xy": [
+            595,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.1142524927854538,
+            0.13543606102466582,
+            0.08958042860031128
+          ],
+          "exposure_id": 34992
+        },
+        {
+          "fall": 788,
+          "deadline": 1148,
+          "xy": [
+            425,
+            135
+          ],
+          "trigger": "random",
+          "field": [
+            0.0528425432741642,
+            -0.10866149216890335,
+            -0.04789996445178986
+          ],
+          "exposure_id": 38166
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            575,
+            55
+          ],
+          "trigger": "random",
+          "field": [
+            0.10252376645803452,
+            0.027917662635445595,
+            -0.1571730673313141
+          ],
+          "exposure_id": 25701
+        },
+        {
+          "fall": 509,
+          "deadline": 869,
+          "xy": [
+            565,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.029955288395285606,
+            3.921461700198625e-18,
+            2.7465277572270166e-17
+          ],
+          "exposure_id": 61122
+        },
+        {
+          "fall": 465,
+          "deadline": 825,
+          "xy": [
+            475,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.02334119752049446,
+            -1.3202918442992656e-17,
+            2.0020381405796487e-17
+          ],
+          "exposure_id": 30696
+        },
+        {
+          "fall": 171,
+          "deadline": 531,
+          "xy": [
+            515,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.042530689388513565,
+            6.262667135700228e-17,
+            1.2943837203334923e-17
+          ],
+          "exposure_id": 40521
+        },
+        {
+          "fall": 498,
+          "deadline": 858,
+          "xy": [
+            425,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.014539124444127083,
+            -1.684805442114947e-17,
+            -2.7302076822646923e-17
+          ],
+          "exposure_id": 18350
+        },
+        {
+          "fall": 132,
+          "deadline": 492,
+          "xy": [
+            425,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.01789127103984356,
+            -3.472862612313417e-17,
+            -5.756952731986948e-18
+          ],
+          "exposure_id": 46493
+        },
+        {
+          "fall": 810,
+          "deadline": 1170,
+          "xy": [
+            465,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.07860861718654633,
+            -0.09843667596578598,
+            -0.12214723974466324
+          ],
+          "exposure_id": 34017
+        },
+        {
+          "fall": 802,
+          "deadline": 1162,
+          "xy": [
+            435,
+            825
+          ],
+          "trigger": "random",
+          "field": [
+            0.010737041011452675,
+            -1.388537388121218e-17,
+            2.922225493642067e-18
+          ],
+          "exposure_id": 43336
+        },
+        {
+          "fall": 802,
+          "deadline": 1162,
+          "xy": [
+            555,
+            25
+          ],
+          "trigger": "random",
+          "field": [
+            0.08910988867282868,
+            -0.006132027693092823,
+            -0.1119251310825348
+          ],
+          "exposure_id": 1143
+        },
+        {
+          "fall": 507,
+          "deadline": 867,
+          "xy": [
+            445,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.029098371043801308,
+            1.069480925150682e-16,
+            2.6833414816420097e-17
+          ],
+          "exposure_id": 37554
+        },
+        {
+          "fall": 456,
+          "deadline": 816,
+          "xy": [
+            585,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.07729184329509736,
+            0.09448385238647461,
+            -0.20715226829051972
+          ],
+          "exposure_id": 38569
+        },
+        {
+          "fall": 188,
+          "deadline": 548,
+          "xy": [
+            545,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.042288459837436676,
+            4.295907189454782e-17,
+            -3.433736969339659e-17
+          ],
+          "exposure_id": 30072
+        },
+        {
+          "fall": 790,
+          "deadline": 1150,
+          "xy": [
+            415,
+            915
+          ],
+          "trigger": "random",
+          "field": [
+            0.013032869435846806,
+            -2.9548539224174354e-17,
+            -4.103668496038437e-17
+          ],
+          "exposure_id": 37396
+        },
+        {
+          "fall": 504,
+          "deadline": 864,
+          "xy": [
+            615,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.01374030951410532,
+            1.4112107230399294e-17,
+            -1.1786290580295566e-17
+          ],
+          "exposure_id": 7525
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            485,
+            795
+          ],
+          "trigger": "random",
+          "field": [
+            0.011260353960096836,
+            1.4128990979318236e-17,
+            -9.544412413722903e-18
+          ],
+          "exposure_id": 61227
+        },
+        {
+          "fall": 470,
+          "deadline": 830,
+          "xy": [
+            645,
+            115
+          ],
+          "trigger": "random",
+          "field": [
+            0.027019968256354332,
+            0.0888269767165184,
+            -0.05713796988129616
+          ],
+          "exposure_id": 61153
+        },
+        {
+          "fall": 502,
+          "deadline": 862,
+          "xy": [
+            495,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.06726161986589432,
+            -0.15003139078617095,
+            0.09475603997707366
+          ],
+          "exposure_id": 40470
+        },
+        {
+          "fall": 153,
+          "deadline": 513,
+          "xy": [
+            535,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.04226766899228096,
+            4.8894659242899267e-17,
+            -8.208276007508244e-17
+          ],
+          "exposure_id": 42328
+        },
+        {
+          "fall": 488,
+          "deadline": 848,
+          "xy": [
+            505,
+            875
+          ],
+          "trigger": "random",
+          "field": [
+            0.027342334389686584,
+            -6.399945368415038e-17,
+            -2.7717514057795142e-17
+          ],
+          "exposure_id": 11478
+        },
+        {
+          "fall": 502,
+          "deadline": 862,
+          "xy": [
+            515,
+            915
+          ],
+          "trigger": "random",
+          "field": [
+            0.03411737084388733,
+            -1.5075649890420666e-17,
+            -1.514308496267844e-17
+          ],
+          "exposure_id": 16002
+        },
+        {
+          "fall": 818,
+          "deadline": 1178,
+          "xy": [
+            545,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.10161137282848358,
+            -0.010919690132141113,
+            0.12398917227983475
+          ],
+          "exposure_id": 58334
+        },
+        {
+          "fall": 454,
+          "deadline": 814,
+          "xy": [
+            645,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.0347121074795723,
+            0.12632650136947632,
+            0.010142187960445881
+          ],
+          "exposure_id": 7801
+        },
+        {
+          "fall": 501,
+          "deadline": 861,
+          "xy": [
+            665,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.02160230912268162,
+            0.0833511158823967,
+            0.0028535870369523764
+          ],
+          "exposure_id": 1746
+        },
+        {
+          "fall": 496,
+          "deadline": 856,
+          "xy": [
+            615,
+            115
+          ],
+          "trigger": "random",
+          "field": [
+            0.08147852420806885,
+            0.16394421458244327,
+            -0.14296086132526398
+          ],
+          "exposure_id": 21141
+        },
+        {
+          "fall": 491,
+          "deadline": 851,
+          "xy": [
+            645,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.04455671682953835,
+            0.14127863049507142,
+            0.028252843767404556
+          ],
+          "exposure_id": 9918
+        },
+        {
+          "fall": 493,
+          "deadline": 853,
+          "xy": [
+            665,
+            145
+          ],
+          "trigger": "random",
+          "field": [
+            0.019750002771615982,
+            0.0769069954752922,
+            -0.01662444360554218
+          ],
+          "exposure_id": 35294
+        }
+      ],
+      "traps": [
+        [
+          495,
+          805
+        ],
+        [
+          605,
+          115
+        ],
+        [
+          445,
+          825
+        ],
+        [
+          505,
+          815
+        ],
+        [
+          495,
+          195
+        ],
+        [
+          645,
+          205
+        ],
+        [
+          565,
+          75
+        ],
+        [
+          525,
+          85
+        ],
+        [
+          475,
+          865
+        ],
+        [
+          465,
+          985
+        ],
+        [
+          645,
+          995
+        ],
+        [
+          535,
+          155
+        ]
+      ],
+      "attempted_exposures": 132846,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 60.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": true
+    }
+  },
+  {
+    "parameter": "patch20-60-w360",
+    "id": "train-2601013-view60-patch20-60-w360",
+    "field": {
+      "seed": 31010,
+      "split": "train",
+      "parent": "synthetic-swe-31010",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          8.33371254096741
+        ],
+        [
+          750.0,
+          4.166856270483705
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          55
+        ],
+        [
+          15,
+          56
+        ],
+        [
+          15,
+          57
+        ],
+        [
+          15,
+          58
+        ],
+        [
+          15,
+          59
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1158,
+        "max_depth_m": 0.08088816093042564,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.0007231160731180353,
+          "max_dt_s": 2.453795478365831,
+          "limited_faces": 0,
+          "max_stage_courant": 0.3999739310710128,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 0.7550173781542071,
+          "cause": "event_or_output",
+          "requested_limit_s": 0.7550173781542071,
+          "cfl_limit_s": 2.1347941737121197,
+          "limiting_cell": [
+            15,
+            59
+          ],
+          "cell_depth_m": 0.07982319115657041,
+          "cell_u_m_s": 0.04395140995515922,
+          "cell_v_m_s": 0.03857829207382346,
+          "grid_wave_bound_m_s": 1.8737169368626008,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1499.2449826218458,
+        "max_speed_m_s": 0.08708499150187557,
+        "peak_speed_m_s": 0.3544664573976332,
+        "peak_speed_time_s": 374.986365495319,
+        "wet_area_m2": 195000.0,
+        "newly_flooded_area_m2": 132100.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1499.2449826218458,
+        "balance": {
+          "initial_m3": 2242.6019212353312,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 6075.2559651529955,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 8317.857886388325,
+          "residual_m3": -1.8189894035458565e-12,
+          "corrected_residual_m3": -1.8189894035458565e-12
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 2242.6019212353312,
+      "water_volume_final_m3": 8317.857886388325,
+      "elapsed_s": 2.815739300000132,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31010.npy",
+      "sha256": "a5038a51c2c667f4c8f5af31bbd39b5f93aaa2e0d2cffb7c2d7f70c513fc28ec",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 6075.2559651529955,
+      "mass_residual_m3": -1.8189894035458565e-12
+    },
+    "scenario": {
+      "seed": 2601013,
+      "events": [
+        {
+          "fall": 160,
+          "deadline": 520,
+          "xy": [
+            475,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.05152227729558945,
+            -8.027114519808515e-18,
+            -6.796104001334855e-17
+          ],
+          "exposure_id": 15112
+        },
+        {
+          "fall": 492,
+          "deadline": 852,
+          "xy": [
+            525,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.010299320332705975,
+            -0.022180240601301193,
+            -0.03859011083841324
+          ],
+          "exposure_id": 23151
+        },
+        {
+          "fall": 464,
+          "deadline": 824,
+          "xy": [
+            485,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.038581833243370056,
+            4.8300586067897564e-17,
+            7.899991484212346e-17
+          ],
+          "exposure_id": 42900
+        },
+        {
+          "fall": 493,
+          "deadline": 853,
+          "xy": [
+            525,
+            785
+          ],
+          "trigger": "random",
+          "field": [
+            0.017695246264338493,
+            -1.1716355073394942e-16,
+            -1.035817218627338e-17
+          ],
+          "exposure_id": 29280
+        },
+        {
+          "fall": 506,
+          "deadline": 866,
+          "xy": [
+            555,
+            145
+          ],
+          "trigger": "random",
+          "field": [
+            0.13370729088783265,
+            -0.1816790521144867,
+            -0.25271099209785464
+          ],
+          "exposure_id": 37664
+        },
+        {
+          "fall": 485,
+          "deadline": 845,
+          "xy": [
+            395,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.04324148967862129,
+            -1.203419545182485e-16,
+            -9.709903295590058e-17
+          ],
+          "exposure_id": 32847
+        },
+        {
+          "fall": 168,
+          "deadline": 528,
+          "xy": [
+            535,
+            855
+          ],
+          "trigger": "random",
+          "field": [
+            0.03439847752451897,
+            -2.519539007753972e-17,
+            2.0896927826434436e-17
+          ],
+          "exposure_id": 52427
+        },
+        {
+          "fall": 450,
+          "deadline": 810,
+          "xy": [
+            325,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.010994738899171352,
+            -2.6099510812051305e-18,
+            -2.0374596687703945e-17
+          ],
+          "exposure_id": 25339
+        },
+        {
+          "fall": 787,
+          "deadline": 1147,
+          "xy": [
+            605,
+            295
+          ],
+          "trigger": "random",
+          "field": [
+            0.03426759466528893,
+            0.020962245762348175,
+            0.09458400458097457
+          ],
+          "exposure_id": 44360
+        },
+        {
+          "fall": 150,
+          "deadline": 510,
+          "xy": [
+            375,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.02299218252301216,
+            4.0153683718554426e-18,
+            1.1701661731825265e-17
+          ],
+          "exposure_id": 9076
+        },
+        {
+          "fall": 460,
+          "deadline": 820,
+          "xy": [
+            515,
+            805
+          ],
+          "trigger": "random",
+          "field": [
+            0.02350381575524807,
+            -5.229683324999517e-17,
+            0.0
+          ],
+          "exposure_id": 45637
+        },
+        {
+          "fall": 492,
+          "deadline": 852,
+          "xy": [
+            465,
+            875
+          ],
+          "trigger": "random",
+          "field": [
+            0.03939734771847725,
+            1.2769768921736733e-16,
+            1.6264745976116184e-16
+          ],
+          "exposure_id": 4394
+        },
+        {
+          "fall": 493,
+          "deadline": 853,
+          "xy": [
+            625,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.08023811727762223,
+            0.17282435595989226,
+            0.11041304469108582
+          ],
+          "exposure_id": 36071
+        },
+        {
+          "fall": 778,
+          "deadline": 1138,
+          "xy": [
+            515,
+            845
+          ],
+          "trigger": "random",
+          "field": [
+            0.033703967928886414,
+            -5.833781929025363e-17,
+            5.800780069562458e-17
+          ],
+          "exposure_id": 28895
+        },
+        {
+          "fall": 182,
+          "deadline": 542,
+          "xy": [
+            395,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.046320028603076935,
+            -1.1261155994120236e-16,
+            -7.111821768138502e-17
+          ],
+          "exposure_id": 56461
+        },
+        {
+          "fall": 791,
+          "deadline": 1151,
+          "xy": [
+            405,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.043309710919857025,
+            -4.0908850483286955e-17,
+            -1.009508570500244e-16
+          ],
+          "exposure_id": 56551
+        },
+        {
+          "fall": 466,
+          "deadline": 826,
+          "xy": [
+            665,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.0200675405561924,
+            0.07192512452602387,
+            0.020859775692224504
+          ],
+          "exposure_id": 51197
+        },
+        {
+          "fall": 798,
+          "deadline": 1158,
+          "xy": [
+            625,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.029493756592273712,
+            -3.7124321833333524e-17,
+            1.3418661539689144e-16
+          ],
+          "exposure_id": 21255
+        },
+        {
+          "fall": 184,
+          "deadline": 544,
+          "xy": [
+            595,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.026344571635127066,
+            0.036390570551157,
+            0.07501883953809738
+          ],
+          "exposure_id": 10256
+        },
+        {
+          "fall": 171,
+          "deadline": 531,
+          "xy": [
+            535,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.05745619535446167,
+            -8.905991604540392e-17,
+            8.301808164870923e-17
+          ],
+          "exposure_id": 38208
+        },
+        {
+          "fall": 140,
+          "deadline": 500,
+          "xy": [
+            575,
+            945
+          ],
+          "trigger": "random",
+          "field": [
+            0.04819880798459053,
+            -7.683031538660342e-17,
+            5.149208577565458e-17
+          ],
+          "exposure_id": 28116
+        },
+        {
+          "fall": 177,
+          "deadline": 537,
+          "xy": [
+            375,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.013557756319642067,
+            1.6949315886504743e-17,
+            1.0211469057659139e-17
+          ],
+          "exposure_id": 32180
+        },
+        {
+          "fall": 823,
+          "deadline": 1183,
+          "xy": [
+            525,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.06217675879597664,
+            -0.055963481217622756,
+            -0.09218747913837433
+          ],
+          "exposure_id": 47403
+        },
+        {
+          "fall": 178,
+          "deadline": 538,
+          "xy": [
+            585,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.02941868603229523,
+            0.021319011226296425,
+            0.08671175241470336
+          ],
+          "exposure_id": 17874
+        },
+        {
+          "fall": 181,
+          "deadline": 541,
+          "xy": [
+            605,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.05281485989689827,
+            2.2914524241719474e-17,
+            1.987677623401238e-18
+          ],
+          "exposure_id": 18905
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            495,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.04808470979332924,
+            -3.404236995543609e-17,
+            -4.042396250216429e-17
+          ],
+          "exposure_id": 30503
+        },
+        {
+          "fall": 481,
+          "deadline": 841,
+          "xy": [
+            555,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.042893137782812125,
+            -6.006793967155771e-17,
+            -2.6216566712176847e-17
+          ],
+          "exposure_id": 19076
+        },
+        {
+          "fall": 453,
+          "deadline": 813,
+          "xy": [
+            535,
+            135
+          ],
+          "trigger": "random",
+          "field": [
+            0.08190885335206985,
+            -0.17801730930805204,
+            -0.12012461572885513
+          ],
+          "exposure_id": 52579
+        },
+        {
+          "fall": 498,
+          "deadline": 858,
+          "xy": [
+            465,
+            845
+          ],
+          "trigger": "random",
+          "field": [
+            0.03189472481608391,
+            7.722860218980322e-17,
+            3.561056741572719e-17
+          ],
+          "exposure_id": 11047
+        },
+        {
+          "fall": 770,
+          "deadline": 1130,
+          "xy": [
+            455,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.01992752030491829,
+            -0.041583102196455,
+            0.039361827075481415
+          ],
+          "exposure_id": 31473
+        },
+        {
+          "fall": 781,
+          "deadline": 1141,
+          "xy": [
+            475,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.037319377064704895,
+            -0.07026776224374771,
+            -0.04829196557402611
+          ],
+          "exposure_id": 15239
+        },
+        {
+          "fall": 503,
+          "deadline": 863,
+          "xy": [
+            625,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.048253656923770906,
+            0.08253618925809861,
+            0.11983519047498703
+          ],
+          "exposure_id": 46767
+        },
+        {
+          "fall": 781,
+          "deadline": 1141,
+          "xy": [
+            585,
+            885
+          ],
+          "trigger": "random",
+          "field": [
+            0.031122663989663124,
+            -4.007015220788474e-17,
+            6.339195900740164e-17
+          ],
+          "exposure_id": 7886
+        },
+        {
+          "fall": 134,
+          "deadline": 494,
+          "xy": [
+            475,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.04494881629943848,
+            1.6295321582493574e-17,
+            3.3662154070770376e-17
+          ],
+          "exposure_id": 10492
+        },
+        {
+          "fall": 814,
+          "deadline": 1174,
+          "xy": [
+            415,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.046360936015844345,
+            -4.422217007247139e-17,
+            -7.481074002442091e-17
+          ],
+          "exposure_id": 15575
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            475,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.0536443367600441,
+            -2.9348569965450885e-17,
+            -1.0798544450114767e-16
+          ],
+          "exposure_id": 4659
+        },
+        {
+          "fall": 497,
+          "deadline": 857,
+          "xy": [
+            525,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.05152634158730507,
+            -3.210013598052729e-17,
+            -1.1194826498381976e-17
+          ],
+          "exposure_id": 2680
+        },
+        {
+          "fall": 131,
+          "deadline": 491,
+          "xy": [
+            365,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.022698888555169106,
+            -4.046464125945618e-17,
+            -3.203109882485912e-17
+          ],
+          "exposure_id": 31344
+        },
+        {
+          "fall": 455,
+          "deadline": 815,
+          "xy": [
+            545,
+            185
+          ],
+          "trigger": "random",
+          "field": [
+            0.08743792027235031,
+            -0.1336626410484314,
+            0.1909349113702774
+          ],
+          "exposure_id": 44859
+        },
+        {
+          "fall": 488,
+          "deadline": 848,
+          "xy": [
+            555,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.06488226056098938,
+            -0.0449490487575531,
+            0.17416711151599884
+          ],
+          "exposure_id": 12442
+        }
+      ],
+      "traps": [
+        [
+          625,
+          135
+        ],
+        [
+          445,
+          885
+        ],
+        [
+          555,
+          75
+        ],
+        [
+          485,
+          865
+        ],
+        [
+          465,
+          895
+        ],
+        [
+          435,
+          895
+        ],
+        [
+          395,
+          875
+        ],
+        [
+          545,
+          205
+        ],
+        [
+          415,
+          955
+        ],
+        [
+          605,
+          185
+        ],
+        [
+          585,
+          915
+        ],
+        [
+          565,
+          155
+        ]
+      ],
+      "attempted_exposures": 127099,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 60.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": true
+    }
+  },
+  {
+    "parameter": "patch20-60-w360",
+    "id": "train-2601014-view100-patch20-60-w360",
+    "field": {
+      "seed": 31011,
+      "split": "train",
+      "parent": "synthetic-swe-31011",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          12.913530348887637
+        ],
+        [
+          750.0,
+          6.456765174443818
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          57
+        ],
+        [
+          15,
+          58
+        ],
+        [
+          15,
+          59
+        ],
+        [
+          15,
+          60
+        ],
+        [
+          15,
+          61
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1150,
+        "max_depth_m": 0.11131268759028469,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.003310387279270799,
+          "max_dt_s": 2.5,
+          "limited_faces": 0,
+          "max_stage_courant": 0.3998706735143784,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 1.3284244585631768,
+          "cause": "event_or_output",
+          "requested_limit_s": 1.3284244585631768,
+          "cfl_limit_s": 1.8457772276082127,
+          "limiting_cell": [
+            15,
+            57
+          ],
+          "cell_depth_m": 0.11073305413562216,
+          "cell_u_m_s": -0.028677634949687572,
+          "cell_v_m_s": 0.03897581949324846,
+          "grid_wave_bound_m_s": 2.1671087605643846,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1498.6715755414368,
+        "max_speed_m_s": 0.08385830321920044,
+        "peak_speed_m_s": 0.4432517667062359,
+        "peak_speed_time_s": 359.31244673694124,
+        "wet_area_m2": 187300.0,
+        "newly_flooded_area_m2": 152500.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1498.6715755414368,
+        "balance": {
+          "initial_m3": 1165.9064833646585,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 9166.632985499144,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 10332.539468863806,
+          "residual_m3": 3.637978807091713e-12,
+          "corrected_residual_m3": 3.637978807091713e-12
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 1165.9064833646585,
+      "water_volume_final_m3": 10332.539468863806,
+      "elapsed_s": 2.745956099999603,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31011.npy",
+      "sha256": "0441f2f86ce2d54e73fd03cde7b786770e01cb17a7acc90e54990d923ea75e13",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 9166.632985499144,
+      "mass_residual_m3": 3.637978807091713e-12
+    },
+    "scenario": {
+      "seed": 2601014,
+      "events": [
+        {
+          "fall": 162,
+          "deadline": 522,
+          "xy": [
+            555,
+            155
+          ],
+          "trigger": "random",
+          "field": [
+            0.01856493130326271,
+            -0.06309401839971543,
+            -0.004414529912173748
+          ],
+          "exposure_id": 49946
+        },
+        {
+          "fall": 130,
+          "deadline": 490,
+          "xy": [
+            545,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.05746559426188469,
+            7.905850669188854e-18,
+            4.528075016004694e-17
+          ],
+          "exposure_id": 66603
+        },
+        {
+          "fall": 188,
+          "deadline": 548,
+          "xy": [
+            425,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.05204180255532265,
+            2.3071557863567764e-18,
+            -6.813597481626922e-17
+          ],
+          "exposure_id": 37702
+        },
+        {
+          "fall": 487,
+          "deadline": 847,
+          "xy": [
+            545,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.08406700193881989,
+            -0.15635016262531282,
+            0.14528325200080872
+          ],
+          "exposure_id": 23858
+        },
+        {
+          "fall": 130,
+          "deadline": 490,
+          "xy": [
+            595,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.039056334644556046,
+            -2.0416129426260232e-17,
+            5.551991603702844e-18
+          ],
+          "exposure_id": 46177
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            565,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.12158098071813583,
+            -0.07414835691452026,
+            -0.14007097482681274
+          ],
+          "exposure_id": 7967
+        },
+        {
+          "fall": 488,
+          "deadline": 848,
+          "xy": [
+            355,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.017210884019732475,
+            2.665246905742412e-18,
+            1.9722336650565055e-17
+          ],
+          "exposure_id": 61335
+        },
+        {
+          "fall": 177,
+          "deadline": 537,
+          "xy": [
+            385,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.04286639392375946,
+            1.6388858008108214e-17,
+            -2.5801737951087222e-17
+          ],
+          "exposure_id": 32954
+        },
+        {
+          "fall": 134,
+          "deadline": 494,
+          "xy": [
+            385,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.02576468698680401,
+            3.460655147007809e-17,
+            5.218036026404729e-17
+          ],
+          "exposure_id": 55805
+        },
+        {
+          "fall": 173,
+          "deadline": 533,
+          "xy": [
+            385,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.03320030868053436,
+            4.1755526750261127e-17,
+            0.0
+          ],
+          "exposure_id": 25421
+        },
+        {
+          "fall": 463,
+          "deadline": 823,
+          "xy": [
+            565,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.012423654086887836,
+            -5.58305223570421e-17,
+            0.0
+          ],
+          "exposure_id": 64330
+        },
+        {
+          "fall": 804,
+          "deadline": 1164,
+          "xy": [
+            645,
+            315
+          ],
+          "trigger": "random",
+          "field": [
+            0.02373754382133484,
+            0.025054942443966867,
+            0.0722459003329277
+          ],
+          "exposure_id": 17465
+        },
+        {
+          "fall": 505,
+          "deadline": 865,
+          "xy": [
+            425,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.029334604740142822,
+            -4.772904264580384e-17,
+            -2.6318099492773037e-17
+          ],
+          "exposure_id": 25072
+        },
+        {
+          "fall": 457,
+          "deadline": 817,
+          "xy": [
+            655,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.08336236625909806,
+            0.2172957181930542,
+            0.0626169890165329
+          ],
+          "exposure_id": 30892
+        },
+        {
+          "fall": 508,
+          "deadline": 868,
+          "xy": [
+            425,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.02011270634829998,
+            7.836114876775326e-18,
+            8.333345054381772e-18
+          ],
+          "exposure_id": 38115
+        },
+        {
+          "fall": 783,
+          "deadline": 1143,
+          "xy": [
+            565,
+            35
+          ],
+          "trigger": "random",
+          "field": [
+            0.07645122855901718,
+            -0.04758835658431053,
+            -0.1265054553747177
+          ],
+          "exposure_id": 29225
+        },
+        {
+          "fall": 504,
+          "deadline": 864,
+          "xy": [
+            685,
+            135
+          ],
+          "trigger": "random",
+          "field": [
+            0.039098013937473294,
+            0.11540416479110718,
+            -0.03238954544067383
+          ],
+          "exposure_id": 33167
+        },
+        {
+          "fall": 169,
+          "deadline": 529,
+          "xy": [
+            435,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.05028415098786354,
+            5.670011682093991e-17,
+            1.3368134700896444e-17
+          ],
+          "exposure_id": 9270
+        },
+        {
+          "fall": 450,
+          "deadline": 810,
+          "xy": [
+            505,
+            165
+          ],
+          "trigger": "random",
+          "field": [
+            0.026705162599682808,
+            -0.09923875331878662,
+            0.014004847966134548
+          ],
+          "exposure_id": 34749
+        },
+        {
+          "fall": 153,
+          "deadline": 513,
+          "xy": [
+            335,
+            965
+          ],
+          "trigger": "random",
+          "field": [
+            0.019784869626164436,
+            1.9375264238683118e-17,
+            2.7399780832341786e-18
+          ],
+          "exposure_id": 29026
+        },
+        {
+          "fall": 176,
+          "deadline": 536,
+          "xy": [
+            505,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.018820106983184814,
+            5.123969146406873e-18,
+            5.755053856172772e-18
+          ],
+          "exposure_id": 26449
+        },
+        {
+          "fall": 496,
+          "deadline": 856,
+          "xy": [
+            615,
+            185
+          ],
+          "trigger": "random",
+          "field": [
+            0.13263517022132873,
+            0.13525005877017976,
+            0.28460535407066345
+          ],
+          "exposure_id": 21286
+        },
+        {
+          "fall": 486,
+          "deadline": 846,
+          "xy": [
+            635,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.1168054386973381,
+            0.2284905403852463,
+            0.16607691645622252
+          ],
+          "exposure_id": 9538
+        },
+        {
+          "fall": 176,
+          "deadline": 536,
+          "xy": [
+            485,
+            925
+          ],
+          "trigger": "random",
+          "field": [
+            0.03364616632461548,
+            1.4233966816496115e-17,
+            -4.7708754883228124e-17
+          ],
+          "exposure_id": 32123
+        },
+        {
+          "fall": 483,
+          "deadline": 843,
+          "xy": [
+            595,
+            235
+          ],
+          "trigger": "random",
+          "field": [
+            0.05619756877422333,
+            0.00272849053144455,
+            0.17155296802520753
+          ],
+          "exposure_id": 74672
+        },
+        {
+          "fall": 178,
+          "deadline": 538,
+          "xy": [
+            465,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.018662573769688606,
+            8.193080865091767e-18,
+            -2.0343391133659257e-17
+          ],
+          "exposure_id": 32906
+        },
+        {
+          "fall": 152,
+          "deadline": 512,
+          "xy": [
+            575,
+            155
+          ],
+          "trigger": "random",
+          "field": [
+            0.048992163687944415,
+            -0.08073195964097976,
+            -0.005264196079224348
+          ],
+          "exposure_id": 46633
+        },
+        {
+          "fall": 473,
+          "deadline": 833,
+          "xy": [
+            495,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.046366944909095764,
+            1.8899832255450912e-17,
+            -5.721686118181321e-17
+          ],
+          "exposure_id": 23413
+        },
+        {
+          "fall": 827,
+          "deadline": 1187,
+          "xy": [
+            685,
+            275
+          ],
+          "trigger": "random",
+          "field": [
+            0.04374223053455353,
+            0.05982350036501885,
+            0.09554309695959091
+          ],
+          "exposure_id": 46935
+        },
+        {
+          "fall": 500,
+          "deadline": 860,
+          "xy": [
+            575,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.04809440299868584,
+            -1.0169733659852776e-16,
+            -1.1929845294062306e-17
+          ],
+          "exposure_id": 77237
+        },
+        {
+          "fall": 507,
+          "deadline": 867,
+          "xy": [
+            455,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.0526110902428627,
+            1.1778494237586131e-17,
+            3.641869574266741e-17
+          ],
+          "exposure_id": 58942
+        },
+        {
+          "fall": 500,
+          "deadline": 860,
+          "xy": [
+            675,
+            225
+          ],
+          "trigger": "random",
+          "field": [
+            0.015301096253097057,
+            0.04449332877993584,
+            0.05060258135199547
+          ],
+          "exposure_id": 56237
+        },
+        {
+          "fall": 183,
+          "deadline": 543,
+          "xy": [
+            585,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.045634232461452484,
+            -2.668523963718776e-17,
+            1.4377129853780462e-18
+          ],
+          "exposure_id": 70958
+        },
+        {
+          "fall": 143,
+          "deadline": 503,
+          "xy": [
+            515,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.05327435955405235,
+            -2.899493966567263e-17,
+            1.1803750874101458e-17
+          ],
+          "exposure_id": 40385
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            635,
+            995
+          ],
+          "trigger": "random",
+          "field": [
+            0.03284623101353645,
+            1.458928489559623e-17,
+            0.0
+          ],
+          "exposure_id": 19378
+        },
+        {
+          "fall": 144,
+          "deadline": 504,
+          "xy": [
+            405,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.03018696792423725,
+            2.573968021455553e-17,
+            7.470576352549855e-17
+          ],
+          "exposure_id": 64228
+        },
+        {
+          "fall": 507,
+          "deadline": 867,
+          "xy": [
+            465,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.04582405462861061,
+            1.5993449793440103e-17,
+            3.491144362642023e-17
+          ],
+          "exposure_id": 30497
+        },
+        {
+          "fall": 130,
+          "deadline": 490,
+          "xy": [
+            345,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.026593463495373726,
+            -2.3486517980938664e-17,
+            0.0
+          ],
+          "exposure_id": 33112
+        },
+        {
+          "fall": 820,
+          "deadline": 1180,
+          "xy": [
+            465,
+            255
+          ],
+          "trigger": "random",
+          "field": [
+            0.011471299454569817,
+            -0.025506991893053055,
+            0.02952377125620842
+          ],
+          "exposure_id": 72307
+        },
+        {
+          "fall": 790,
+          "deadline": 1150,
+          "xy": [
+            585,
+            325
+          ],
+          "trigger": "random",
+          "field": [
+            0.015616402961313725,
+            0.0032052500173449516,
+            0.05408596992492676
+          ],
+          "exposure_id": 23127
+        }
+      ],
+      "traps": [
+        [
+          505,
+          935
+        ],
+        [
+          605,
+          945
+        ],
+        [
+          545,
+          945
+        ],
+        [
+          535,
+          105
+        ],
+        [
+          535,
+          65
+        ],
+        [
+          495,
+          135
+        ],
+        [
+          595,
+          975
+        ],
+        [
+          565,
+          85
+        ],
+        [
+          465,
+          905
+        ],
+        [
+          615,
+          235
+        ],
+        [
+          505,
+          165
+        ],
+        [
+          625,
+          175
+        ]
+      ],
+      "attempted_exposures": 150745,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 60.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": true
+    }
+  },
+  {
+    "parameter": "patch20-60-w360",
+    "id": "train-2601015-view40-patch20-60-w360",
+    "field": {
+      "seed": 31012,
+      "split": "train",
+      "parent": "synthetic-swe-31012",
+      "scope": "uncalibrated synthetic flood, no field accuracy claim",
+      "shape": [
+        301,
+        3,
+        100,
+        100
+      ],
+      "dx_m": 10.0,
+      "duration_s": 1500,
+      "frame_dt_s": 5,
+      "fields": [
+        "h",
+        "u",
+        "v"
+      ],
+      "forcing_m3_s": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          300.0,
+          8.874548027231986
+        ],
+        [
+          750.0,
+          4.437274013615993
+        ],
+        [
+          1200.0,
+          0.5
+        ],
+        [
+          1500.0,
+          0.0
+        ]
+      ],
+      "source_cells": [
+        [
+          15,
+          62
+        ],
+        [
+          15,
+          63
+        ],
+        [
+          15,
+          64
+        ],
+        [
+          15,
+          65
+        ],
+        [
+          15,
+          66
+        ]
+      ],
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "summary": {
+        "time_s": 1500.0,
+        "steps": 1173,
+        "max_depth_m": 0.12279749234976205,
+        "numerics": {
+          "schema": "hyra-swe-v2",
+          "flux_method": "rusanov",
+          "open_boundary_mode": "outflow_only",
+          "wall_flux_mode": "hydrostatic",
+          "structures": "none",
+          "compute_backend": "numpy",
+          "spatial_order": 1,
+          "time_integrator": "euler",
+          "low_froude": 0,
+          "cfl": 0.4,
+          "limiter": "generalised_minmod",
+          "limiter_theta": 1.5,
+          "dry_depth_m": 1e-08,
+          "velocity_depth_m": 1e-06,
+          "max_timestep_s": 2.5,
+          "max_steps": 500000,
+          "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+          "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+          "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+          "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+          "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+        },
+        "diagnostics": {
+          "min_dt_s": 0.010039343134394585,
+          "max_dt_s": 2.449964680600778,
+          "limited_faces": 0,
+          "max_stage_courant": 0.3995822613691661,
+          "minimum_raw_depth_m": 0.0
+        },
+        "last_timestep": {
+          "dt_s": 1.5022252180831401,
+          "cause": "event_or_output",
+          "requested_limit_s": 1.5022252180831401,
+          "cfl_limit_s": 1.7526580063385386,
+          "limiting_cell": [
+            22,
+            58
+          ],
+          "cell_depth_m": 0.12280171671408983,
+          "cell_u_m_s": -0.013332582665541074,
+          "cell_v_m_s": 0.06250160989671637,
+          "grid_wave_bound_m_s": 2.2822478689703773,
+          "boundary_wave_bound_m_s": 0.0,
+          "structure_wave_bound_m_s": 0.0
+        },
+        "boundary_state_time_s": 1498.4977747819169,
+        "max_speed_m_s": 0.07852666320068166,
+        "peak_speed_m_s": 0.3631541758146414,
+        "peak_speed_time_s": 379.7589081535234,
+        "wet_area_m2": 237800.0,
+        "newly_flooded_area_m2": 62500.0,
+        "external_inflow_by_id_m3": {},
+        "boundary_inflows": [],
+        "boundary_sample_time_s": 1498.4977747819169,
+        "balance": {
+          "initial_m3": 5894.610733076803,
+          "rainfall_m3": 0.0,
+          "inflow_m3": 0.0,
+          "baseflow_m3": 0.0,
+          "infiltration_m3": 0.0,
+          "outflow_m3": 0.0,
+          "sea_inflow_m3": 0.0,
+          "sea_outflow_m3": 0.0,
+          "drainage_m3": 0.0,
+          "scheduled_inflow_m3": 6440.319918381591,
+          "external_inflow_m3": 0.0,
+          "numerical_adjustment_m3": 0.0,
+          "current_m3": 12334.930651458397,
+          "residual_m3": 1.8189894035458565e-12,
+          "corrected_residual_m3": 1.8189894035458565e-12
+        }
+      },
+      "finite_nonnegative": true,
+      "water_volume_initial_m3": 5894.610733076803,
+      "water_volume_final_m3": 12334.930651458397,
+      "elapsed_s": 2.8152335999984643,
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\run01\\data\\train-31012.npy",
+      "sha256": "a6fc6b9cc69bd31e5635d1e473a8a70a89a1fc9f4c587d7955676c463068f4f5",
+      "source_hashes": {
+        "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+        "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+        "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+        "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+      },
+      "source_volume_m3": 6440.319918381591,
+      "mass_residual_m3": 2.7284841053187847e-12
+    },
+    "scenario": {
+      "seed": 2601015,
+      "events": [
+        {
+          "fall": 782,
+          "deadline": 1142,
+          "xy": [
+            485,
+            255
+          ],
+          "trigger": "random",
+          "field": [
+            0.04148265272378922,
+            -0.0444692999124527,
+            0.03560621961951256
+          ],
+          "exposure_id": 4012
+        },
+        {
+          "fall": 821,
+          "deadline": 1181,
+          "xy": [
+            605,
+            795
+          ],
+          "trigger": "random",
+          "field": [
+            0.028378039225935937,
+            3.1762749131303282e-06,
+            2.096965145028662e-05
+          ],
+          "exposure_id": 8663
+        },
+        {
+          "fall": 805,
+          "deadline": 1165,
+          "xy": [
+            555,
+            215
+          ],
+          "trigger": "random",
+          "field": [
+            0.11133016645908356,
+            -0.0873289704322815,
+            0.08963432163000107
+          ],
+          "exposure_id": 61879
+        },
+        {
+          "fall": 793,
+          "deadline": 1153,
+          "xy": [
+            645,
+            715
+          ],
+          "trigger": "random",
+          "field": [
+            0.011443881876766681,
+            8.703466155566276e-05,
+            0.00019152089080307633
+          ],
+          "exposure_id": 59191
+        },
+        {
+          "fall": 815,
+          "deadline": 1175,
+          "xy": [
+            755,
+            175
+          ],
+          "trigger": "random",
+          "field": [
+            0.04137213155627251,
+            0.05931407958269119,
+            0.03579350560903549
+          ],
+          "exposure_id": 10716
+        },
+        {
+          "fall": 173,
+          "deadline": 533,
+          "xy": [
+            605,
+            985
+          ],
+          "trigger": "random",
+          "field": [
+            0.05411583557724953,
+            1.7928354948121687e-17,
+            -3.714115810208529e-19
+          ],
+          "exposure_id": 27636
+        },
+        {
+          "fall": 489,
+          "deadline": 849,
+          "xy": [
+            675,
+            505
+          ],
+          "trigger": "random",
+          "field": [
+            0.010508837923407555,
+            0.0009377971757203341,
+            0.0016036244807764888
+          ],
+          "exposure_id": 21154
+        },
+        {
+          "fall": 160,
+          "deadline": 520,
+          "xy": [
+            705,
+            285
+          ],
+          "trigger": "random",
+          "field": [
+            0.016352076083421707,
+            0.0019531608559191227,
+            0.0022379737347364426
+          ],
+          "exposure_id": 20945
+        },
+        {
+          "fall": 188,
+          "deadline": 548,
+          "xy": [
+            525,
+            805
+          ],
+          "trigger": "random",
+          "field": [
+            0.030432654544711113,
+            -3.514237723332177e-17,
+            -3.642236842458714e-17
+          ],
+          "exposure_id": 35640
+        },
+        {
+          "fall": 807,
+          "deadline": 1167,
+          "xy": [
+            545,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.04246155470609665,
+            -1.1291460992879365e-07,
+            4.3117569248352083e-07
+          ],
+          "exposure_id": 36436
+        },
+        {
+          "fall": 174,
+          "deadline": 534,
+          "xy": [
+            535,
+            825
+          ],
+          "trigger": "random",
+          "field": [
+            0.03530526161193848,
+            2.300725416623687e-17,
+            -3.6466091868277714e-18
+          ],
+          "exposure_id": 63243
+        },
+        {
+          "fall": 478,
+          "deadline": 838,
+          "xy": [
+            445,
+            935
+          ],
+          "trigger": "random",
+          "field": [
+            0.023794816806912422,
+            9.050426603915011e-17,
+            -1.15332141755766e-17
+          ],
+          "exposure_id": 67588
+        },
+        {
+          "fall": 142,
+          "deadline": 502,
+          "xy": [
+            635,
+            595
+          ],
+          "trigger": "random",
+          "field": [
+            0.016317298635840416,
+            -8.67269652106711e-19,
+            -1.098865934076477e-17
+          ],
+          "exposure_id": 54872
+        },
+        {
+          "fall": 817,
+          "deadline": 1177,
+          "xy": [
+            565,
+            95
+          ],
+          "trigger": "random",
+          "field": [
+            0.08332031220197678,
+            -0.08546322882175444,
+            -0.04919327050447464
+          ],
+          "exposure_id": 7704
+        },
+        {
+          "fall": 142,
+          "deadline": 502,
+          "xy": [
+            465,
+            975
+          ],
+          "trigger": "random",
+          "field": [
+            0.0399121455848217,
+            6.268380108231662e-17,
+            -7.167345968971104e-17
+          ],
+          "exposure_id": 69482
+        },
+        {
+          "fall": 165,
+          "deadline": 525,
+          "xy": [
+            675,
+            385
+          ],
+          "trigger": "random",
+          "field": [
+            0.02291707508265972,
+            2.2427489057008643e-06,
+            5.2126392802165356e-06
+          ],
+          "exposure_id": 91349
+        },
+        {
+          "fall": 799,
+          "deadline": 1159,
+          "xy": [
+            565,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.04692962691187859,
+            -6.796266394104578e-09,
+            8.446827024499725e-08
+          ],
+          "exposure_id": 7628
+        },
+        {
+          "fall": 783,
+          "deadline": 1143,
+          "xy": [
+            635,
+            335
+          ],
+          "trigger": "random",
+          "field": [
+            0.06562113165855407,
+            0.002088311314582825,
+            0.07705263495445251
+          ],
+          "exposure_id": 56102
+        },
+        {
+          "fall": 159,
+          "deadline": 519,
+          "xy": [
+            575,
+            515
+          ],
+          "trigger": "random",
+          "field": [
+            0.02348961867392063,
+            -2.056205503156845e-15,
+            1.122056574647738e-14
+          ],
+          "exposure_id": 60445
+        },
+        {
+          "fall": 787,
+          "deadline": 1147,
+          "xy": [
+            575,
+            25
+          ],
+          "trigger": "random",
+          "field": [
+            0.02269857116043568,
+            -0.023871885240077974,
+            -0.04938109889626503
+          ],
+          "exposure_id": 4938
+        },
+        {
+          "fall": 146,
+          "deadline": 506,
+          "xy": [
+            665,
+            305
+          ],
+          "trigger": "random",
+          "field": [
+            0.03815809637308121,
+            0.0007477771956473589,
+            0.0022025817073881627
+          ],
+          "exposure_id": 81582
+        },
+        {
+          "fall": 771,
+          "deadline": 1131,
+          "xy": [
+            675,
+            955
+          ],
+          "trigger": "random",
+          "field": [
+            0.017311686649918556,
+            2.94338102502234e-11,
+            2.401048387890015e-11
+          ],
+          "exposure_id": 88660
+        },
+        {
+          "fall": 820,
+          "deadline": 1180,
+          "xy": [
+            445,
+            905
+          ],
+          "trigger": "random",
+          "field": [
+            0.01851780153810978,
+            -2.761617157176488e-09,
+            1.6870528307677546e-09
+          ],
+          "exposure_id": 27411
+        },
+        {
+          "fall": 472,
+          "deadline": 832,
+          "xy": [
+            535,
+            835
+          ],
+          "trigger": "random",
+          "field": [
+            0.03688087314367294,
+            -3.7045482521232157e-16,
+            9.11941780804579e-16
+          ],
+          "exposure_id": 80063
+        },
+        {
+          "fall": 178,
+          "deadline": 538,
+          "xy": [
+            515,
+            695
+          ],
+          "trigger": "random",
+          "field": [
+            0.01078766118735075,
+            9.725734705333711e-18,
+            2.1597134477881287e-18
+          ],
+          "exposure_id": 51798
+        },
+        {
+          "fall": 503,
+          "deadline": 863,
+          "xy": [
+            465,
+            875
+          ],
+          "trigger": "random",
+          "field": [
+            0.02311231754720211,
+            6.968699702919352e-18,
+            4.7157460180785213e-17
+          ],
+          "exposure_id": 38961
+        },
+        {
+          "fall": 455,
+          "deadline": 815,
+          "xy": [
+            515,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.03840897977352142,
+            7.647059769926126e-17,
+            5.184509068553072e-19
+          ],
+          "exposure_id": 2608
+        },
+        {
+          "fall": 187,
+          "deadline": 547,
+          "xy": [
+            625,
+            605
+          ],
+          "trigger": "random",
+          "field": [
+            0.01794791780412197,
+            -9.982427047382392e-18,
+            0.0
+          ],
+          "exposure_id": 31337
+        },
+        {
+          "fall": 457,
+          "deadline": 817,
+          "xy": [
+            645,
+            615
+          ],
+          "trigger": "random",
+          "field": [
+            0.012705594301223755,
+            1.1942698847633437e-06,
+            3.2388095405622153e-06
+          ],
+          "exposure_id": 91162
+        },
+        {
+          "fall": 499,
+          "deadline": 859,
+          "xy": [
+            665,
+            365
+          ],
+          "trigger": "random",
+          "field": [
+            0.031618638336658476,
+            0.004503266792744398,
+            0.013161838427186013
+          ],
+          "exposure_id": 12128
+        },
+        {
+          "fall": 817,
+          "deadline": 1177,
+          "xy": [
+            635,
+            105
+          ],
+          "trigger": "random",
+          "field": [
+            0.10986916124820709,
+            -0.05349211022257805,
+            -0.10320501923561096
+          ],
+          "exposure_id": 63417
+        },
+        {
+          "fall": 818,
+          "deadline": 1178,
+          "xy": [
+            565,
+            75
+          ],
+          "trigger": "random",
+          "field": [
+            0.0687427043914795,
+            -0.06825047582387925,
+            -0.06358328610658645
+          ],
+          "exposure_id": 32614
+        },
+        {
+          "fall": 463,
+          "deadline": 823,
+          "xy": [
+            545,
+            865
+          ],
+          "trigger": "random",
+          "field": [
+            0.04246152937412262,
+            -9.702378102685419e-18,
+            -2.2118589880497265e-17
+          ],
+          "exposure_id": 37580
+        },
+        {
+          "fall": 506,
+          "deadline": 866,
+          "xy": [
+            565,
+            375
+          ],
+          "trigger": "random",
+          "field": [
+            0.04553238153457642,
+            -0.0015584816224873067,
+            0.015913818404078486
+          ],
+          "exposure_id": 9707
+        },
+        {
+          "fall": 154,
+          "deadline": 514,
+          "xy": [
+            525,
+            195
+          ],
+          "trigger": "random",
+          "field": [
+            0.04469690397381782,
+            -0.011446307599544524,
+            0.003616965236142278
+          ],
+          "exposure_id": 64191
+        },
+        {
+          "fall": 783,
+          "deadline": 1143,
+          "xy": [
+            515,
+            245
+          ],
+          "trigger": "random",
+          "field": [
+            0.07683980613946914,
+            -0.05952011868357658,
+            0.06275928914546966
+          ],
+          "exposure_id": 7429
+        },
+        {
+          "fall": 459,
+          "deadline": 819,
+          "xy": [
+            575,
+            275
+          ],
+          "trigger": "random",
+          "field": [
+            0.07264330834150313,
+            -0.02213636077940464,
+            0.04838980734348297
+          ],
+          "exposure_id": 43325
+        },
+        {
+          "fall": 798,
+          "deadline": 1158,
+          "xy": [
+            625,
+            895
+          ],
+          "trigger": "random",
+          "field": [
+            0.033864330500364304,
+            1.913316438617585e-08,
+            4.680172480675537e-08
+          ],
+          "exposure_id": 31164
+        },
+        {
+          "fall": 499,
+          "deadline": 859,
+          "xy": [
+            665,
+            405
+          ],
+          "trigger": "random",
+          "field": [
+            0.02571921646595001,
+            0.003147214651107788,
+            0.008146790228784085
+          ],
+          "exposure_id": 32657
+        },
+        {
+          "fall": 136,
+          "deadline": 496,
+          "xy": [
+            585,
+            405
+          ],
+          "trigger": "random",
+          "field": [
+            0.03986270725727082,
+            -7.307830252045733e-09,
+            3.917945150533342e-08
+          ],
+          "exposure_id": 89302
+        }
+      ],
+      "traps": [
+        [
+          435,
+          995
+        ],
+        [
+          645,
+          515
+        ],
+        [
+          595,
+          435
+        ],
+        [
+          725,
+          165
+        ],
+        [
+          605,
+          615
+        ],
+        [
+          655,
+          235
+        ],
+        [
+          625,
+          115
+        ],
+        [
+          695,
+          195
+        ],
+        [
+          555,
+          465
+        ],
+        [
+          445,
+          925
+        ],
+        [
+          655,
+          565
+        ],
+        [
+          575,
+          55
+        ]
+      ],
+      "attempted_exposures": 147195,
+      "pool_size": 120,
+      "fall_end": 960,
+      "config": {
+        "duration": 1500,
+        "window": 360,
+        "people": 40,
+        "uavs": 4,
+        "step": 1,
+        "speed": 10.0,
+        "sensor": 60.0,
+        "drop_radius": 10.0,
+        "drop_seconds": 10,
+        "separation": 5.0,
+        "wet_depth": 0.01,
+        "trigger_depth": 2.0,
+        "trigger_speed": 1.0,
+        "random_per_minute": 0.05,
+        "traps": 12,
+        "trap_radius": 4.0,
+        "fall_pattern": "three_bursts",
+        "burst_width": 60,
+        "spatial_clusters": 0,
+        "cluster_radius": 100.0
+      },
+      "id_assignment": "independent shuffle",
+      "conditioning": "Fixed N accepted actual falls, not a population fall-risk estimate; 1-second exposure probability",
+      "patch_fog": true
+    }
+  }
+]

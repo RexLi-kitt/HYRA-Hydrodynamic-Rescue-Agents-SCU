@@ -1,0 +1,103 @@
+{
+  "status": "completed",
+  "rollouts": 280,
+  "selected": {
+    "parameter": {
+      "name": "view60-w360",
+      "sensor": 60,
+      "window": 360,
+      "patch": false
+    },
+    "method": "gru-32_flowblend",
+    "goal_met": true,
+    "people_rate": 0.88125,
+    "gap95": 0.25,
+    "people_gap": 0.06874999999999998,
+    "rank": [
+      1,
+      0,
+      0.88125,
+      0.25,
+      -1,
+      -4
+    ]
+  },
+  "validation": {
+    "coverage100": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 399,
+      "people_rate": 0.83125,
+      "all_rate": 0.0,
+      "p95_rate": 0.16666666666666666,
+      "unseen": 31,
+      "refloats": 0
+    },
+    "flow_coverage": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 403,
+      "people_rate": 0.8395833333333333,
+      "all_rate": 0.0,
+      "p95_rate": 0.25,
+      "unseen": 28,
+      "refloats": 0
+    },
+    "linear-16": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 411,
+      "people_rate": 0.85625,
+      "all_rate": 0.0,
+      "p95_rate": 0.16666666666666666,
+      "unseen": 28,
+      "refloats": 0
+    },
+    "gru-16": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 439,
+      "people_rate": 0.9145833333333333,
+      "all_rate": 0.16666666666666666,
+      "p95_rate": 0.5,
+      "unseen": 10,
+      "refloats": 0
+    },
+    "gru-32": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 412,
+      "people_rate": 0.8583333333333333,
+      "all_rate": 0.08333333333333333,
+      "p95_rate": 0.25,
+      "unseen": 19,
+      "refloats": 0
+    },
+    "linear-16_flowblend": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 406,
+      "people_rate": 0.8458333333333333,
+      "all_rate": 0.0,
+      "p95_rate": 0.16666666666666666,
+      "unseen": 31,
+      "refloats": 0
+    },
+    "gru-32_flowblend": {
+      "cases": 12,
+      "people": 480,
+      "supplied": 432,
+      "people_rate": 0.9,
+      "all_rate": 0.16666666666666666,
+      "p95_rate": 0.3333333333333333,
+      "unseen": 10,
+      "refloats": 0
+    }
+  },
+  "goal_met": false,
+  "p95_gap": 0.08333333333333331,
+  "all_gap": 0.16666666666666666,
+  "people_gap": 0.060416666666666674,
+  "source_hashes_unchanged": true,
+  "not_final_map_holdout": true
+}

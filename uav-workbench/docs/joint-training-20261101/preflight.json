@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "zero_initialized_role_input_preserves_parent",
+      "algorithm": "hasac",
+      "passed": true
+    },
+    {
+      "test": "zero_initialized_role_input_preserves_parent",
+      "algorithm": "mat",
+      "passed": true
+    },
+    {
+      "test": "zero_initialized_role_input_preserves_parent",
+      "algorithm": "hatrpo",
+      "passed": true
+    },
+    {
+      "test": "ownership_gradients_both_models_learn_and_exact_serialized_resume",
+      "partner": "mat",
+      "passed": true
+    },
+    {
+      "test": "ownership_gradients_both_models_learn_and_exact_serialized_resume",
+      "partner": "hatrpo",
+      "passed": true
+    }
+  ]
+}

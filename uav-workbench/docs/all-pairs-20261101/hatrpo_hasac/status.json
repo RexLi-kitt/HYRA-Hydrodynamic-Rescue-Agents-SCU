@@ -1,0 +1,19 @@
+{
+  "status": "reused_compatible_prefix",
+  "joint_episode": 64,
+  "target": 64,
+  "best_joint_episode": 0,
+  "best_summary": {
+    "n": 72,
+    "completed": 70,
+    "completion": 0.9722222222222222,
+    "RCR": 0.9986111111111112,
+    "coverage": 1.0,
+    "ACC": 0.010218775128650152,
+    "ST": 123.15277777777777,
+    "planner_fraction": 0.28637176117099195,
+    "neural_free_fraction": 0.42538343044229354,
+    "max_conflicts": 9,
+    "unserved": 2
+  }
+}

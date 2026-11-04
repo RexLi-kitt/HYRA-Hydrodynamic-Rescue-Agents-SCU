@@ -1,0 +1,13 @@
+2026-11-01 UAV strict evaluation acceleration addendum
+
+Authorization: user requested faster execution. Original frozen 5630-trial protocol remains in force.
+Change: replace serial scheduling with two independent CPU worker processes, each using the original two Torch threads. At most four submitted trials. Only coordinator appends accepted results.
+Unchanged: all 21 frozen checkpoints, 70 independent parent fields, roles, seeds, metrics, full/no-cover conditions, sampled leader repeats, rule controls, and 8-hour total budget. No training, test-based model selection or GPU/environment change.
+Reason: independent trials permit process isolation. Earlier RAM/preallocation and geometry-cache probes offered insufficient benefit. Current CPU-only Torch cannot execute CUDA; changing the environment is unnecessary for this scheduler change.
+Preflight: eight existing TRAIN-only trials, singles/pairs/rule controls and deterministic/sampled actions. All metrics and every saved trajectory array match exactly. Serial 10.5178 s; two workers 8.5774 s including startup; speed ratio 1.2262. Small-sample timing is not a promised whole-test speedup.
+Handoff: original evaluator observes its existing stop marker after finishing one record. Verify process exit, preserve original prefix and stop diagnostics, archive only the marker created for this handoff, then resume uncompleted unique task keys. Do not kill the process or reset the completed file.
+Budget: elapsed time conservatively counted from training completion at 2026-11-01 21:16:46 Asia/Shanghai, no later than original evaluation start. Shared eight-hour ceiling and 8 GiB minimum free disk remain.
+Acceptance: original source hashes and all checkpoints/field hashes unchanged; prefix byte-identical; no duplicate or omitted keys; expected set exactly 5630. Each trial retains original weight and trajectory checks. Aggregate in original task order to preserve bootstrap interpretation.
+Regression: eight exact train-case comparisons passed. Full test completion and resource behavior pending. No quantitative claim of rescue improvement follows from faster scheduling.
+Rollback: preserve all serial and parallel records/traces; stop at record boundary via original stop mechanism. Do not launch old serial main directly, because it is not a resume command. If continuation fails, inspect saved failure and construct a checked serial continuation over remaining keys without regenerating fields.
+Limitations: one training seed and synthetic field generator; strict test incomplete. Parallelism may be limited by CPU/memory pressure or mirroring overhead. Top10 package selection remains based on development validation, not partial test outcomes.

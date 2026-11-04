@@ -1,0 +1,74 @@
+{
+  "version": "preselection-v1.0",
+  "frozen_before_results": true,
+  "plan_sha256": "b319b19cd8164dce9134ec0782b472c57c07a064344a8db9d68d8185ca29cbd7",
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-plan-preselection-20261101\\preselect.py": "7ebe9c79cb84d200b491228b9a8306f4820f712429ca04eb477313082b6b1f00",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\coverage_controller.py": "97b2d5f3d7d2b8320e435d37beea40e3b450d11366350ffdb19fa19fe0d3124b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\priority-20261101\\retry_guard.py": "9d433c76ca0e02d26f2ada9c194871cfdb6f182ae929fed9e5cbc331e93f5dcd",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78"
+  },
+  "manifest_sha256": "dde867a71c348eb239086fc9b6f1ad749c3b6b9516bc33eae999746f7ea5ff5a",
+  "candidates": {
+    "P0": {
+      "name": "纯规划",
+      "algorithm": null,
+      "checkpoint": null,
+      "planner": "immediate"
+    },
+    "P1": {
+      "name": "HATRPO1024 原策略",
+      "algorithm": "hatrpo",
+      "checkpoint": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-full1024-20261101\\hatrpo\\checkpoint-1024.pt",
+      "planner": "off"
+    },
+    "P2": {
+      "name": "HATRPO1024 加补漏",
+      "algorithm": "hatrpo",
+      "checkpoint": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-full1024-20261101\\hatrpo\\checkpoint-1024.pt",
+      "planner": "stall5"
+    },
+    "P3": {
+      "name": "HASAC256 加补漏",
+      "algorithm": "hasac",
+      "checkpoint": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt",
+      "planner": "stall5"
+    },
+    "P4": {
+      "name": "MAAC256 加补漏",
+      "algorithm": "maac",
+      "checkpoint": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\latest.pt",
+      "planner": "stall5"
+    }
+  },
+  "checkpoint_hashes": {
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-full1024-20261101\\hatrpo\\checkpoint-1024.pt": "5e7fc37edd839a538c885ed0bc048c472e88cc871df22b3d1ffd99d5a4a0ac85",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\maac\\latest.pt": "d1f42b7cc5effdb6e137d682c95d7f303e2daa2e88ca527725452a18acecf625"
+  },
+  "layouts": [
+    9001,
+    9002,
+    9003,
+    9004,
+    9401,
+    9402,
+    9403,
+    9404
+  ],
+  "sample_seeds": [
+    3101,
+    3102
+  ],
+  "rollouts": 208,
+  "parent_fields": 2,
+  "holdout50_used": false,
+  "added_training_episodes": 0,
+  "gate": "For old and new layout strata separately, sample AND fixed: completion and rescue >= P0, ACC<=0.02. Further investment requires sample completion gain >=1/8 OR equal completion/rescue with capped steps <=P0-5 in BOTH strata.",
+  "no_candidate_action": "No automatic expansion to 1024; preserve failure evidence and register a separate mechanism experiment.",
+  "planner": "Existing observed-history watchdog, immediate for P0; stall5 otherwise. Same service and RetryGuard, guard remembers actual final action.",
+  "diagnostics": "Truth only after decision or at episode end; no hidden/future input to controller. Available service windows after discovery do not prove feasible arrival.",
+  "maximum_seconds": 1800
+}

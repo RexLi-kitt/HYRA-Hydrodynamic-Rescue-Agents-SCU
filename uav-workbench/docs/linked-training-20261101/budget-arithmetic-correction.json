@@ -1,0 +1,8 @@
+{
+  "original_explanatory_total": 4864,
+  "correct_total": 4352,
+  "expression": "3*256 + 2*(1024-256) + 2*(2048-1024)",
+  "training_targets_changed": false,
+  "ranking_rules_changed": false,
+  "original_protocol_retained": true
+}

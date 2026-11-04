@@ -1,0 +1,12 @@
+{
+  "algorithm": "hatrpo",
+  "parent_checkpoint": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-priority-20261101\\hatrpo\\checkpoint-0704.pt",
+  "parent_hash": "4935562764cd366799b431a71610e45a4babee9c19d79ffe141c6b663baddf16",
+  "protocol_hash": "139deb10f250f63285ae9cf18fbd95d4ddc17f9f7b16e1dcb962a7451b9e0a05",
+  "guard": false,
+  "target": 1024,
+  "performance_early_stopping": false,
+  "reward": "unchanged",
+  "training_layout": "920000+total_episode-65; unchanged continuation",
+  "parent_result_hash": "262974cd55a2d980f3717767b2b4ec9603f9970aa809d6437541d494bb8ea763"
+}

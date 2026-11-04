@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-01",
+  "user_request": "Improve first, prioritize stronger models for training",
+  "original_checkpoint_episodes": 256,
+  "algorithms": [
+    "happo",
+    "hatrpo",
+    "hasac",
+    "maac",
+    "mat",
+    "coma"
+  ],
+  "forbidden": [
+    "MAPPO",
+    "QMIX",
+    "VDN",
+    "IPPO",
+    "DQN",
+    "DDPG"
+  ],
+  "changes": [
+    "optional observed-motion RetryGuard: three failed moves, five-step cooldown; service always wins",
+    "same sampled execution for six methods; paired greedy results retained",
+    "independent checkpoints every32, validation every64, early stopping"
+  ],
+  "unchanged": [
+    "physics",
+    "water",
+    "service conditions",
+    "reward",
+    "learner architecture and optimization",
+    "observation rights"
+  ],
+  "validation": {
+    "parents": [
+      "validation-2101.npy",
+      "validation-2201.npy"
+    ],
+    "layouts": [
+      9001,
+      9002,
+      9003,
+      9004
+    ],
+    "action_seeds": [
+      3101,
+      3102
+    ],
+    "experiment": "each256 model: unguarded sampled, guarded sampled, guarded greedy; reuse archived unguarded greedy",
+    "selection": "guard accepted per algorithm only if sample RCR and coverage nondecrease, ACC nonincrease, one strict improvement; otherwise original controller retained",
+    "rank": "minimum of two action-seed RCR means, then overall RCR, coverage, negative ACC; exact ties retain registry order",
+    "scope": "development validation reuse; not independent confirmation or final50 test"
+  },
+  "training": {
+    "number_selected": 2,
+    "target": 1024,
+    "additional_cap_per_selected": 768,
+    "seed": "restore checkpoint RNG; not independent training replication",
+    "checkpoint_every": 32,
+    "evaluate_every": 64,
+    "early_stop": "three consecutive evaluations without predeclared significant improvement",
+    "improvement": "worst seed RCR nondecrease; mean RCR nondecrease; coverage loss<=.01; ACC<=max(.02,bestACC+.005); RCR gain>=.00625 or equal RCR and coverage gain>=.005",
+    "hard_limit_seconds_per_model": 3600,
+    "simultaneous_heavy_jobs": 1,
+    "reward": "unchanged",
+    "stop_file": "STOP_AFTER_CHECKPOINT in this output directory"
+  },
+  "source_hashes": {
+    "__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b"
+  },
+  "new_code_hashes": {
+    "finish_report.py": "30da65d22d1078c515b4a15633cd6cf3f176354a041878435a8e1d59fa1c6d71",
+    "priority_train.py": "7332e32154c9a6aa991b083327145eae5f58d33457268fee61b1dadf996960a6",
+    "retry_guard.py": "9d433c76ca0e02d26f2ada9c194871cfdb6f182ae929fed9e5cbc331e93f5dcd",
+    "run_priority_queue.py": "c9959e815ac9a02a673894707d2a20c5b8f4667b52b42770ce29d79972c4e9ad",
+    "test_priority.py": "15f9335f1029f766278f2d63c06c05b53419b5397cbeca138efc9faece030d84"
+  },
+  "input_hashes": {
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-pilot-20261101\\data\\dataset.json": "dde867a71c348eb239086fc9b6f1ad749c3b6b9516bc33eae999746f7ea5ff5a"
+  },
+  "parent_hashes": {
+    "happo": "e74e57921b005beaebbb1ad1321a8b421566ac25a9faed93f1454cc40102b87e",
+    "hatrpo": "ffe80d749b08e6d216821f2d0b13e6f768034237e6cfee4c9a311638c927845e",
+    "hasac": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80",
+    "maac": "d1f42b7cc5effdb6e137d682c95d7f303e2daa2e88ca527725452a18acecf625",
+    "mat": "640230a08c5d878f19230a51fbf239fa84ad6845921a318450f2baab2f1f38f2",
+    "coma": "24342b00427fe5f883c180d11e19ccbf5266c58eecf0acc0fce9986d949e16d3"
+  }
+}

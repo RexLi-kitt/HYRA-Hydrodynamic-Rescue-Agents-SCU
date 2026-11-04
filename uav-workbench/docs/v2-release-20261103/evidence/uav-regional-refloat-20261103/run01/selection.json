@@ -1,0 +1,20 @@
+{
+  "selected": {
+    "linear": {
+      "model": "linear",
+      "epoch": 16,
+      "calibration_poisson": 0.1609387993812561,
+      "beats_constant_and_statistic": true
+    },
+    "gru": {
+      "model": "gru",
+      "epoch": 32,
+      "calibration_poisson": 0.13746267557144165,
+      "beats_constant_and_statistic": true
+    }
+  },
+  "constant_poisson": 0.22497059404850006,
+  "statistic_poisson": 0.19595254957675934,
+  "statistic_scale": 0.07974731922149658,
+  "selection_before_dev": true
+}

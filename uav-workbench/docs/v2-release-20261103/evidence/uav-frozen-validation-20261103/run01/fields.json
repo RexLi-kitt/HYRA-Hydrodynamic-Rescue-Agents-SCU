@@ -1,0 +1,4274 @@
+[
+  {
+    "seed": 915001,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915001",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        13.933059943933216
+      ],
+      [
+        750.0,
+        6.966529971966608
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        55
+      ],
+      [
+        15,
+        56
+      ],
+      [
+        15,
+        57
+      ],
+      [
+        15,
+        58
+      ],
+      [
+        15,
+        59
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1236,
+      "max_depth_m": 0.09394759026031388,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.011688796727668205,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3987823501664906,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.1651164352160777,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.1651164352160777,
+        "cfl_limit_s": 1.924799979094987,
+        "limiting_cell": [
+          15,
+          59
+        ],
+        "cell_depth_m": 0.09399287074813104,
+        "cell_u_m_s": 0.061826376890438184,
+        "cell_v_m_s": 0.06751391186558175,
+        "grid_wave_bound_m_s": 2.0781380109328254,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.834883564784,
+      "max_speed_m_s": 0.11664436885429355,
+      "peak_speed_m_s": 0.4726838137563032,
+      "peak_speed_time_s": 359.17174685536116,
+      "wet_area_m2": 226200.0,
+      "newly_flooded_area_m2": 178600.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.834883564784,
+      "balance": {
+        "initial_m3": 1484.9910970790088,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 9854.815462154906,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 11339.806559233926,
+        "residual_m3": 1.0913936421275139e-11,
+        "corrected_residual_m3": 1.0913936421275139e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 1484.9910970790088,
+    "water_volume_final_m3": 11339.806559233926,
+    "elapsed_s": 2.942736099998001,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915001.npy",
+    "sha256": "57107b145b41b46a5b359371fa5a44aea094a0812998638702c6ab327bb8c3af",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 9854.815462154906,
+    "mass_residual_m3": 1.2732925824820995e-11
+  },
+  {
+    "seed": 915002,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915002",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        14.95752486692643
+      ],
+      [
+        750.0,
+        7.478762433463215
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        64
+      ],
+      [
+        15,
+        65
+      ],
+      [
+        15,
+        66
+      ],
+      [
+        15,
+        67
+      ],
+      [
+        15,
+        68
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1293,
+      "max_depth_m": 0.11804529475248514,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0006136410435715334,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3998962736503681,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.3798964619777507,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.3798964619777507,
+        "cfl_limit_s": 1.8109203184938247,
+        "limiting_cell": [
+          0,
+          61
+        ],
+        "cell_depth_m": 0.11809475464777157,
+        "cell_u_m_s": -0.05472002426779661,
+        "cell_v_m_s": 0.0014199989144109413,
+        "grid_wave_bound_m_s": 2.2088216467342265,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.6201035380222,
+      "max_speed_m_s": 0.13098172439264252,
+      "peak_speed_m_s": 0.5010019510401483,
+      "peak_speed_time_s": 364.05555177461366,
+      "wet_area_m2": 216000.0,
+      "newly_flooded_area_m2": 179000.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.6201035380222,
+      "balance": {
+        "initial_m3": 891.0127566363107,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 10546.329285175329,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 11437.342041811627,
+        "residual_m3": -1.0913936421275139e-11,
+        "corrected_residual_m3": -1.0913936421275139e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 891.0127566363107,
+    "water_volume_final_m3": 11437.342041811627,
+    "elapsed_s": 2.9922781999994186,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915002.npy",
+    "sha256": "977b26b350be5afcf01a3dd37e61e046794e3f80d61778af28efc11b0c9dc4e0",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 10546.329285175329,
+    "mass_residual_m3": -1.0913936421275139e-11
+  },
+  {
+    "seed": 915003,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915003",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        8.885970491385134
+      ],
+      [
+        750.0,
+        4.442985245692567
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        41
+      ],
+      [
+        15,
+        42
+      ],
+      [
+        15,
+        43
+      ],
+      [
+        15,
+        44
+      ],
+      [
+        15,
+        45
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1130,
+      "max_depth_m": 0.08052274857184426,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.007500775187196496,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39702717020424294,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 0.7593550199258061,
+        "cause": "event_or_output",
+        "requested_limit_s": 0.7593550199258061,
+        "cfl_limit_s": 2.132008779115091,
+        "limiting_cell": [
+          15,
+          41
+        ],
+        "cell_depth_m": 0.07907865190814561,
+        "cell_u_m_s": -0.049418030980289136,
+        "cell_v_m_s": 0.039938705318489615,
+        "grid_wave_bound_m_s": 1.876164882238541,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1499.2406449800742,
+      "max_speed_m_s": 0.09332697749088885,
+      "peak_speed_m_s": 0.3671968506429075,
+      "peak_speed_time_s": 369.8872766535323,
+      "wet_area_m2": 186900.0,
+      "newly_flooded_area_m2": 143800.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1499.2406449800742,
+      "balance": {
+        "initial_m3": 1370.7306148576454,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 6448.030081684982,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 7818.760696542617,
+        "residual_m3": -1.0913936421275139e-11,
+        "corrected_residual_m3": -1.0913936421275139e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 1370.7306148576454,
+    "water_volume_final_m3": 7818.760696542617,
+    "elapsed_s": 2.6444542999961413,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915003.npy",
+    "sha256": "a2682dea2a6f3fdab7eba7d1b71ea0b1cc04bcf98f8f6b1c7ae38410b6a7bbca",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 6448.030081684982,
+    "mass_residual_m3": -1.0913936421275139e-11
+  },
+  {
+    "seed": 915004,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915004",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        10.049705778832452
+      ],
+      [
+        750.0,
+        5.024852889416226
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        48
+      ],
+      [
+        15,
+        49
+      ],
+      [
+        15,
+        50
+      ],
+      [
+        15,
+        51
+      ],
+      [
+        15,
+        52
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1142,
+      "max_depth_m": 0.1027703748109963,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.010006733223661968,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39976490053307706,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.0528266732744669,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.0528266732744669,
+        "cfl_limit_s": 1.975140168265318,
+        "limiting_cell": [
+          3,
+          50
+        ],
+        "cell_depth_m": 0.10220361698219287,
+        "cell_u_m_s": 0.013749137480933357,
+        "cell_v_m_s": -0.0066287862874945015,
+        "grid_wave_bound_m_s": 2.025172726608578,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.9471733267255,
+      "max_speed_m_s": 0.08032345772644961,
+      "peak_speed_m_s": 0.40028891302707736,
+      "peak_speed_time_s": 369.6556479735047,
+      "wet_area_m2": 137000.0,
+      "newly_flooded_area_m2": 129700.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.9471733267255,
+      "balance": {
+        "initial_m3": 177.53417563930418,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 7233.5514007119145,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 7411.085576351209,
+        "residual_m3": -1.000444171950221e-11,
+        "corrected_residual_m3": -1.000444171950221e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 177.53417563930418,
+    "water_volume_final_m3": 7411.085576351209,
+    "elapsed_s": 2.601797600000282,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915004.npy",
+    "sha256": "ff38bf13e2337dc220ef996c20b56f7d03675c46d7be8893f7214ce0f90a3bfa",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 7233.5514007119145,
+    "mass_residual_m3": -1.000444171950221e-11
+  },
+  {
+    "seed": 915005,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915005",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        9.63258077452052
+      ],
+      [
+        750.0,
+        4.81629038726026
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        46
+      ],
+      [
+        15,
+        47
+      ],
+      [
+        15,
+        48
+      ],
+      [
+        15,
+        49
+      ],
+      [
+        15,
+        50
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1133,
+      "max_depth_m": 0.08434304323786468,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0013324664106164619,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3979252802894131,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 0.8053948270849105,
+        "cause": "event_or_output",
+        "requested_limit_s": 0.8053948270849105,
+        "cfl_limit_s": 2.108069121438545,
+        "limiting_cell": [
+          15,
+          46
+        ],
+        "cell_depth_m": 0.08291534586799881,
+        "cell_u_m_s": -0.04289771857419397,
+        "cell_v_m_s": 0.02694494239418103,
+        "grid_wave_bound_m_s": 1.897470988650696,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1499.194605172915,
+      "max_speed_m_s": 0.07318272708334206,
+      "peak_speed_m_s": 0.38109490599791374,
+      "peak_speed_time_s": 364.77510796760805,
+      "wet_area_m2": 218900.0,
+      "newly_flooded_area_m2": 143200.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1499.194605172915,
+      "balance": {
+        "initial_m3": 2541.1138107680285,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 6951.992022801354,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 9493.105833569385,
+        "residual_m3": 1.8189894035458565e-12,
+        "corrected_residual_m3": 1.8189894035458565e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 2541.1138107680285,
+    "water_volume_final_m3": 9493.105833569385,
+    "elapsed_s": 2.5426281000036397,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915005.npy",
+    "sha256": "407380d5019f6f202ab20b083713308a47962383d921f3f3aff375c9cea604bc",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 6951.992022801354,
+    "mass_residual_m3": 1.8189894035458565e-12
+  },
+  {
+    "seed": 915006,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915006",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        16.024701441617
+      ],
+      [
+        750.0,
+        8.0123507208085
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        42
+      ],
+      [
+        15,
+        43
+      ],
+      [
+        15,
+        44
+      ],
+      [
+        15,
+        45
+      ],
+      [
+        15,
+        46
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1306,
+      "max_depth_m": 0.10996331810237035,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0033430067896063065,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3991814876197239,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.3424631523669177,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.3424631523669177,
+        "cfl_limit_s": 1.8341589114473156,
+        "limiting_cell": [
+          15,
+          42
+        ],
+        "cell_depth_m": 0.10851285057412931,
+        "cell_u_m_s": -0.0317700890566099,
+        "cell_v_m_s": 0.06070067468639498,
+        "grid_wave_bound_m_s": 2.1808361178714017,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.657536847633,
+      "max_speed_m_s": 0.11632333113575305,
+      "peak_speed_m_s": 0.49393141240265775,
+      "peak_speed_time_s": 354.0036856400651,
+      "wet_area_m2": 286700.0,
+      "newly_flooded_area_m2": 178400.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.657536847633,
+      "balance": {
+        "initial_m3": 3413.5332679730127,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 11266.673473091467,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 14680.206741064463,
+        "residual_m3": -1.6370904631912708e-11,
+        "corrected_residual_m3": -1.6370904631912708e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 3413.5332679730127,
+    "water_volume_final_m3": 14680.206741064463,
+    "elapsed_s": 3.126648799996474,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915006.npy",
+    "sha256": "2c7666d46c9e734def70e3b4fde265be4816967373a1de32c181258f39648d5c",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 11266.673473091467,
+    "mass_residual_m3": -1.6370904631912708e-11
+  },
+  {
+    "seed": 915007,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915007",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        16.93666731240709
+      ],
+      [
+        750.0,
+        8.468333656203544
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        60
+      ],
+      [
+        15,
+        61
+      ],
+      [
+        15,
+        62
+      ],
+      [
+        15,
+        63
+      ],
+      [
+        15,
+        64
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1314,
+      "max_depth_m": 0.11112215409828369,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.001187110866482044,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3991950136083053,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.36735887336431,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.36735887336431,
+        "cfl_limit_s": 1.8220578668766527,
+        "limiting_cell": [
+          15,
+          60
+        ],
+        "cell_depth_m": 0.10978379190665716,
+        "cell_u_m_s": -0.03274788803605097,
+        "cell_v_m_s": 0.06376874504647342,
+        "grid_wave_bound_m_s": 2.195319958117876,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.6326411266357,
+      "max_speed_m_s": 0.12190448218476109,
+      "peak_speed_m_s": 0.508649361625594,
+      "peak_speed_time_s": 349.9832840549638,
+      "wet_area_m2": 200200.0,
+      "newly_flooded_area_m2": 184200.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.6326411266357,
+      "balance": {
+        "initial_m3": 438.0794220336604,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 11882.25043587477,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 12320.329857908433,
+        "residual_m3": 1.8189894035458565e-12,
+        "corrected_residual_m3": 1.8189894035458565e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 438.0794220336604,
+    "water_volume_final_m3": 12320.329857908433,
+    "elapsed_s": 3.0949371000024257,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915007.npy",
+    "sha256": "3c438f742dfc28f9af7b86f6a4a24cf98aad6606d1bfb88a357a226f64d990b2",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 11882.25043587477,
+    "mass_residual_m3": 1.8189894035458565e-12
+  },
+  {
+    "seed": 915008,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915008",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        17.235362784755562
+      ],
+      [
+        750.0,
+        8.617681392377781
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        33
+      ],
+      [
+        15,
+        34
+      ],
+      [
+        15,
+        35
+      ],
+      [
+        15,
+        36
+      ],
+      [
+        15,
+        37
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1316,
+      "max_depth_m": 0.1110253983175393,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0033479023296081323,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39923551056250534,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.3611941562287484,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.3611941562287484,
+        "cfl_limit_s": 1.8247111384969015,
+        "limiting_cell": [
+          15,
+          37
+        ],
+        "cell_depth_m": 0.10977087558062087,
+        "cell_u_m_s": 0.03603747012604284,
+        "cell_v_m_s": 0.05763625146795414,
+        "grid_wave_bound_m_s": 2.1921277925091114,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.6388058437713,
+      "max_speed_m_s": 0.10158650392152599,
+      "peak_speed_m_s": 0.5140374035694585,
+      "peak_speed_time_s": 349.94945796786544,
+      "wet_area_m2": 239300.0,
+      "newly_flooded_area_m2": 188500.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.6388058437713,
+      "balance": {
+        "initial_m3": 1503.0467381167714,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 12083.869879710004,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 13586.916617826759,
+        "residual_m3": -1.6370904631912708e-11,
+        "corrected_residual_m3": -1.6370904631912708e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 1503.0467381167714,
+    "water_volume_final_m3": 13586.916617826759,
+    "elapsed_s": 3.250693300004059,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915008.npy",
+    "sha256": "b096b8596eb03d7236f9ec43441c3ad9a09c731b3836229927b5de18e1e6bace",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 12083.869879710004,
+    "mass_residual_m3": -1.6370904631912708e-11
+  },
+  {
+    "seed": 915009,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915009",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        8.230103871393045
+      ],
+      [
+        750.0,
+        4.115051935696522
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        54
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        15,
+        56
+      ],
+      [
+        15,
+        57
+      ],
+      [
+        15,
+        58
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1116,
+      "max_depth_m": 0.0798327298094779,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.004676043234724148,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3970752357946954,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 0.6588395135445353,
+        "cause": "event_or_output",
+        "requested_limit_s": 0.6588395135445353,
+        "cfl_limit_s": 2.187696951785182,
+        "limiting_cell": [
+          15,
+          58
+        ],
+        "cell_depth_m": 0.07889321238632631,
+        "cell_u_m_s": 0.04598121566116648,
+        "cell_v_m_s": 0.0050016153716188365,
+        "grid_wave_bound_m_s": 1.828406807778363,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1499.3411604864555,
+      "max_speed_m_s": 0.055320845048368344,
+      "peak_speed_m_s": 0.35171184742532163,
+      "peak_speed_time_s": 375.0,
+      "wet_area_m2": 153000.0,
+      "newly_flooded_area_m2": 126800.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1499.3411604864555,
+      "balance": {
+        "initial_m3": 875.2426243806436,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 6005.320113190296,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 6880.562737570942,
+        "residual_m3": 1.8189894035458565e-12,
+        "corrected_residual_m3": 1.8189894035458565e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 875.2426243806436,
+    "water_volume_final_m3": 6880.562737570942,
+    "elapsed_s": 2.6772617000024184,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915009.npy",
+    "sha256": "1203e5793e22493eb607867fcd473bab06c649e34a8420f217eec36af2162881",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 6005.320113190296,
+    "mass_residual_m3": 1.8189894035458565e-12
+  },
+  {
+    "seed": 915010,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915010",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        13.792809645690227
+      ],
+      [
+        750.0,
+        6.896404822845113
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        46
+      ],
+      [
+        15,
+        47
+      ],
+      [
+        15,
+        48
+      ],
+      [
+        15,
+        49
+      ],
+      [
+        15,
+        50
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1308,
+      "max_depth_m": 0.13522158111794383,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 6.353522599056305e-05,
+        "max_dt_s": 2.3808776069898085,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39993898243197185,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.6568844920857373,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.6568844920857373,
+        "cfl_limit_s": 1.6770446277238111,
+        "limiting_cell": [
+          15,
+          46
+        ],
+        "cell_depth_m": 0.13525265469984832,
+        "cell_u_m_s": -0.029024086620405877,
+        "cell_v_m_s": 0.03829533429335231,
+        "grid_wave_bound_m_s": 2.385148214826607,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.3431155079143,
+      "max_speed_m_s": 0.0860723131039834,
+      "peak_speed_m_s": 0.45355119717638687,
+      "peak_speed_time_s": 359.1645220151792,
+      "wet_area_m2": 263500.0,
+      "newly_flooded_area_m2": 91900.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.3431155079143,
+      "balance": {
+        "initial_m3": 5595.518391055317,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 9760.146510840921,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 15355.664901896227,
+        "residual_m3": -1.0913936421275139e-11,
+        "corrected_residual_m3": -1.0913936421275139e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 5595.518391055317,
+    "water_volume_final_m3": 15355.664901896227,
+    "elapsed_s": 3.1309022000059485,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915010.npy",
+    "sha256": "b8f4a61375936a9d6a63ccff8a2c50f46a9a613608382b09f62eef998b936836",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 9760.146510840921,
+    "mass_residual_m3": -1.0913936421275139e-11
+  },
+  {
+    "seed": 915011,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915011",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        11.972604962829596
+      ],
+      [
+        750.0,
+        5.986302481414798
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        39
+      ],
+      [
+        15,
+        40
+      ],
+      [
+        15,
+        41
+      ],
+      [
+        15,
+        42
+      ],
+      [
+        15,
+        43
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1175,
+      "max_depth_m": 0.09422411669252742,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.009503928658261884,
+        "max_dt_s": 2.4952480356708566,
+        "limited_faces": 0,
+        "max_stage_courant": 0.399985976394768,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.0613838711037715,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.0613838711037715,
+        "cfl_limit_s": 1.9819885584837387,
+        "limiting_cell": [
+          15,
+          39
+        ],
+        "cell_depth_m": 0.09375197276441724,
+        "cell_u_m_s": -0.046597576664102705,
+        "cell_v_m_s": 0.0388348764608997,
+        "grid_wave_bound_m_s": 2.01817512158601,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.9386161288962,
+      "max_speed_m_s": 0.09422887376604615,
+      "peak_speed_m_s": 0.42962573984486885,
+      "peak_speed_time_s": 359.4341442402976,
+      "wet_area_m2": 212200.0,
+      "newly_flooded_area_m2": 158800.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.9386161288962,
+      "balance": {
+        "initial_m3": 1891.7728906888133,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 8531.508349909967,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 10423.281240598782,
+        "residual_m3": 1.8189894035458565e-12,
+        "corrected_residual_m3": 1.8189894035458565e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 1891.7728906888133,
+    "water_volume_final_m3": 10423.281240598782,
+    "elapsed_s": 2.6980019000038737,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915011.npy",
+    "sha256": "e06f4a0162b294098fa6642a41470dbabceaad590fd6bb5771003f366531b53e",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 8531.508349909967,
+    "mass_residual_m3": 1.8189894035458565e-12
+  },
+  {
+    "seed": 915012,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915012",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        13.96060112720992
+      ],
+      [
+        750.0,
+        6.98030056360496
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        55
+      ],
+      [
+        15,
+        56
+      ],
+      [
+        15,
+        57
+      ],
+      [
+        15,
+        58
+      ],
+      [
+        15,
+        59
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1264,
+      "max_depth_m": 0.10467966594988574,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.031946050570240914,
+        "max_dt_s": 2.26589485919899,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39978395067737554,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.1772720900421518,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.1772720900421518,
+        "cfl_limit_s": 1.9121087205563,
+        "limiting_cell": [
+          0,
+          60
+        ],
+        "cell_depth_m": 0.10471746814320729,
+        "cell_u_m_s": 0.037627113934075036,
+        "cell_v_m_s": 0.001322252648878136,
+        "grid_wave_bound_m_s": 2.0919312573587647,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.8227279099578,
+      "max_speed_m_s": 0.09135951761066033,
+      "peak_speed_m_s": 0.47644577353775086,
+      "peak_speed_time_s": 364.166366566955,
+      "wet_area_m2": 228900.0,
+      "newly_flooded_area_m2": 164000.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.8227279099578,
+      "balance": {
+        "initial_m3": 2830.678110429184,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 9873.405760866706,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 12704.083871295878,
+        "residual_m3": -1.2732925824820995e-11,
+        "corrected_residual_m3": -1.2732925824820995e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 2830.678110429184,
+    "water_volume_final_m3": 12704.083871295878,
+    "elapsed_s": 3.0787057999987155,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915012.npy",
+    "sha256": "51686e7c56e070d694730d91be7e1361e1a33a8d2e752f02fec95b89fc8ccd1f",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 9873.405760866706,
+    "mass_residual_m3": -1.2732925824820995e-11
+  },
+  {
+    "seed": 915013,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915013",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        10.093480823979382
+      ],
+      [
+        750.0,
+        5.046740411989691
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        48
+      ],
+      [
+        15,
+        49
+      ],
+      [
+        15,
+        50
+      ],
+      [
+        15,
+        51
+      ],
+      [
+        15,
+        52
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1170,
+      "max_depth_m": 0.09119180953568791,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.04594842514097763,
+        "max_dt_s": 2.429990683172826,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39989562494332526,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 0.9952137129444054,
+        "cause": "event_or_output",
+        "requested_limit_s": 0.9952137129444054,
+        "cfl_limit_s": 2.0184449486675264,
+        "limiting_cell": [
+          15,
+          48
+        ],
+        "cell_depth_m": 0.09121027488053261,
+        "cell_u_m_s": -0.06788067064838402,
+        "cell_v_m_s": 0.011701148699546256,
+        "grid_wave_bound_m_s": 1.9817236049170397,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1499.0047862870556,
+      "max_speed_m_s": 0.07700449432732308,
+      "peak_speed_m_s": 0.40169184950649955,
+      "peak_speed_time_s": 369.6663085862701,
+      "wet_area_m2": 173800.0,
+      "newly_flooded_area_m2": 131400.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1499.0047862870556,
+      "balance": {
+        "initial_m3": 1507.9472531699005,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 7263.099556186073,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 8771.046809355983,
+        "residual_m3": 9.094947017729282e-12,
+        "corrected_residual_m3": 9.094947017729282e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 1507.9472531699005,
+    "water_volume_final_m3": 8771.046809355983,
+    "elapsed_s": 2.8429371000020183,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915013.npy",
+    "sha256": "3829b7f11aca204f273e97ed060405d82a184d3f7a690e386a04a56002ac6a9c",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 7263.099556186073,
+    "mass_residual_m3": 1.000444171950221e-11
+  },
+  {
+    "seed": 915014,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915014",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        16.266801916149834
+      ],
+      [
+        750.0,
+        8.133400958074917
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        38
+      ],
+      [
+        15,
+        39
+      ],
+      [
+        15,
+        40
+      ],
+      [
+        15,
+        41
+      ],
+      [
+        15,
+        42
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1346,
+      "max_depth_m": 0.10376959451452436,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.007744340156250473,
+        "max_dt_s": 2.41022814600501,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3999881718396493,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.3386859985064348,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.3386859985064348,
+        "cfl_limit_s": 1.8362831494211234,
+        "limiting_cell": [
+          27,
+          40
+        ],
+        "cell_depth_m": 0.10187128400983993,
+        "cell_u_m_s": -0.007288479994650979,
+        "cell_v_m_s": 0.1326883144800227,
+        "grid_wave_bound_m_s": 2.178313296215224,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.6613140014936,
+      "max_speed_m_s": 0.14445652470629283,
+      "peak_speed_m_s": 0.5005091867788397,
+      "peak_speed_time_s": 350.0,
+      "wet_area_m2": 224700.0,
+      "newly_flooded_area_m2": 176300.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.6613140014936,
+      "balance": {
+        "initial_m3": 1431.1319237504495,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 11430.09129340109,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 12861.223217151559,
+        "residual_m3": 2.000888343900442e-11,
+        "corrected_residual_m3": 2.000888343900442e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 1431.1319237504495,
+    "water_volume_final_m3": 12861.223217151559,
+    "elapsed_s": 3.2087479999972857,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915014.npy",
+    "sha256": "d36abf85ab63cbd2a0e277ed24ee63ace9c576bd42ba02f802b460c925964a82",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 11430.09129340109,
+    "mass_residual_m3": 2.000888343900442e-11
+  },
+  {
+    "seed": 915015,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915015",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        12.558767166189213
+      ],
+      [
+        750.0,
+        6.2793835830946065
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        63
+      ],
+      [
+        15,
+        64
+      ],
+      [
+        15,
+        65
+      ],
+      [
+        15,
+        66
+      ],
+      [
+        15,
+        67
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1181,
+      "max_depth_m": 0.10707177977243214,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.00915015200871494,
+        "max_dt_s": 2.257957634826311,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39968186833388314,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.307929950175776,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.307929950175776,
+        "cfl_limit_s": 1.851512879922505,
+        "limiting_cell": [
+          15,
+          67
+        ],
+        "cell_depth_m": 0.10471721499238897,
+        "cell_u_m_s": 0.03606089133384836,
+        "cell_v_m_s": 0.06701352830876307,
+        "grid_wave_bound_m_s": 2.1603954492433344,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.6920700498242,
+      "max_speed_m_s": 0.1279433071008256,
+      "peak_speed_m_s": 0.4340265172398354,
+      "peak_speed_time_s": 354.3644188077892,
+      "wet_area_m2": 227900.0,
+      "newly_flooded_area_m2": 146200.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.6920700498242,
+      "balance": {
+        "initial_m3": 3080.5382065907484,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 8927.16783717771,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 12007.706043768461,
+        "residual_m3": 1.8189894035458565e-12,
+        "corrected_residual_m3": 1.8189894035458565e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 3080.5382065907484,
+    "water_volume_final_m3": 12007.706043768461,
+    "elapsed_s": 2.8673167000015383,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915015.npy",
+    "sha256": "6488bc6596e619ae9df9f519bef78f6d1329fcb89a19cfe64bc935da5b13c733",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 8927.16783717771,
+    "mass_residual_m3": 1.8189894035458565e-12
+  },
+  {
+    "seed": 915016,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915016",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        16.294306911862066
+      ],
+      [
+        750.0,
+        8.147153455931033
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        53
+      ],
+      [
+        15,
+        54
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        15,
+        56
+      ],
+      [
+        15,
+        57
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1343,
+      "max_depth_m": 0.09959914615146825,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0033981162267764375,
+        "max_dt_s": 2.444909316492236,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39939708292310505,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.1697106416891074,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.1697106416891074,
+        "cfl_limit_s": 1.9235918967974928,
+        "limiting_cell": [
+          15,
+          53
+        ],
+        "cell_depth_m": 0.09819802503340583,
+        "cell_u_m_s": -0.03654153334083754,
+        "cell_v_m_s": 0.0562769701865834,
+        "grid_wave_bound_m_s": 2.0794431535397044,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.830289358311,
+      "max_speed_m_s": 0.10543574903459313,
+      "peak_speed_m_s": 0.4996802240308536,
+      "peak_speed_time_s": 350.0,
+      "wet_area_m2": 290700.0,
+      "newly_flooded_area_m2": 197700.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.830289358311,
+      "balance": {
+        "initial_m3": 3529.2719122002786,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 11448.657165506898,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 14977.929077707186,
+        "residual_m3": 9.094947017729282e-12,
+        "corrected_residual_m3": 9.094947017729282e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 3529.2719122002786,
+    "water_volume_final_m3": 14977.929077707186,
+    "elapsed_s": 3.3556525000021793,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915016.npy",
+    "sha256": "ef5669d224c1b014063a01620d4290c785170ef430166ec5e087c8eea7e4d6a4",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 11448.657165506898,
+    "mass_residual_m3": 9.094947017729282e-12
+  },
+  {
+    "seed": 915017,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915017",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        9.692120915075309
+      ],
+      [
+        750.0,
+        4.8460604575376545
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        68
+      ],
+      [
+        15,
+        69
+      ],
+      [
+        15,
+        70
+      ],
+      [
+        15,
+        71
+      ],
+      [
+        15,
+        72
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1138,
+      "max_depth_m": 0.09004395303319725,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.007015075417371008,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39773207931938925,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.021002685038411,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.021002685038411,
+        "cfl_limit_s": 1.9977976176504044,
+        "limiting_cell": [
+          15,
+          72
+        ],
+        "cell_depth_m": 0.08920007761503418,
+        "cell_u_m_s": 0.05300723481051991,
+        "cell_v_m_s": 0.05664221744963577,
+        "grid_wave_bound_m_s": 2.002204810267204,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.9789973149616,
+      "max_speed_m_s": 0.11207399603278967,
+      "peak_speed_m_s": 0.38682445437831664,
+      "peak_speed_time_s": 369.7266287994358,
+      "wet_area_m2": 150000.0,
+      "newly_flooded_area_m2": 136800.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.9789973149616,
+      "balance": {
+        "initial_m3": 308.33485982333235,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 6992.181617675834,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 7300.51647749916,
+        "residual_m3": -6.366462912410498e-12,
+        "corrected_residual_m3": -6.366462912410498e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 308.33485982333235,
+    "water_volume_final_m3": 7300.51647749916,
+    "elapsed_s": 2.5969419999964884,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915017.npy",
+    "sha256": "a04fd3dea969cf76d457e5697e1c5cfacab71e896fd3a3677c511762084a89a5",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 6992.181617675834,
+    "mass_residual_m3": -6.366462912410498e-12
+  },
+  {
+    "seed": 915018,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915018",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        12.703511725020094
+      ],
+      [
+        750.0,
+        6.351755862510047
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        69
+      ],
+      [
+        15,
+        70
+      ],
+      [
+        15,
+        71
+      ],
+      [
+        15,
+        72
+      ],
+      [
+        15,
+        73
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1144,
+      "max_depth_m": 0.10113074294791465,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0019665211165715846,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.398872795707033,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.1801891427610371,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.1801891427610371,
+        "cfl_limit_s": 1.9170503098472376,
+        "limiting_cell": [
+          15,
+          73
+        ],
+        "cell_depth_m": 0.0991873285663091,
+        "cell_u_m_s": 0.033258442574242604,
+        "cell_v_m_s": 0.05491389109176528,
+        "grid_wave_bound_m_s": 2.0865388766551174,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.819810857239,
+      "max_speed_m_s": 0.10355027896154013,
+      "peak_speed_m_s": 0.43739187163250337,
+      "peak_speed_time_s": 354.354634917199,
+      "wet_area_m2": 165300.0,
+      "newly_flooded_area_m2": 157200.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.819810857239,
+      "balance": {
+        "initial_m3": 306.528327974658,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 9024.870414388559,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 9331.39874236322,
+        "residual_m3": 3.637978807091713e-12,
+        "corrected_residual_m3": 3.637978807091713e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 306.528327974658,
+    "water_volume_final_m3": 9331.39874236322,
+    "elapsed_s": 2.688222400000086,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915018.npy",
+    "sha256": "12bfd3372278b8592a1e9ad07b25d33e4513b22d805088392ceaf6aca67c2276",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 9024.870414388559,
+    "mass_residual_m3": 3.637978807091713e-12
+  },
+  {
+    "seed": 915019,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915019",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        17.15976612330161
+      ],
+      [
+        750.0,
+        8.579883061650804
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        33
+      ],
+      [
+        15,
+        34
+      ],
+      [
+        15,
+        35
+      ],
+      [
+        15,
+        36
+      ],
+      [
+        15,
+        37
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1382,
+      "max_depth_m": 0.14266102215097498,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.007084513605477127,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39940066204693475,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 0.27257635568594196,
+        "cause": "event_or_output",
+        "requested_limit_s": 0.27257635568594196,
+        "cfl_limit_s": 1.5817884649428389,
+        "limiting_cell": [
+          21,
+          32
+        ],
+        "cell_depth_m": 0.1426699617784225,
+        "cell_u_m_s": -0.01321173870647426,
+        "cell_v_m_s": 0.11897059385208124,
+        "grid_wave_bound_m_s": 2.5287831392452014,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1499.727423644314,
+      "max_speed_m_s": 0.1541465477481432,
+      "peak_speed_m_s": 0.5228137491792113,
+      "peak_speed_time_s": 354.8888051240996,
+      "wet_area_m2": 166500.0,
+      "newly_flooded_area_m2": 154000.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1499.727423644314,
+      "balance": {
+        "initial_m3": 288.59079385838857,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 12032.842133228598,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 12321.432927086975,
+        "residual_m3": -1.0913936421275139e-11,
+        "corrected_residual_m3": -1.0913936421275139e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 288.59079385838857,
+    "water_volume_final_m3": 12321.432927086975,
+    "elapsed_s": 3.3358133000001544,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915019.npy",
+    "sha256": "966ce9091bb7370500ea42777932354de88b9b8c112a4c2fdb97c1dd0c86d240",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 12032.842133228598,
+    "mass_residual_m3": -1.0913936421275139e-11
+  },
+  {
+    "seed": 915020,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915020",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        10.629283285814935
+      ],
+      [
+        750.0,
+        5.314641642907468
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        60
+      ],
+      [
+        15,
+        61
+      ],
+      [
+        15,
+        62
+      ],
+      [
+        15,
+        63
+      ],
+      [
+        15,
+        64
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1143,
+      "max_depth_m": 0.09338636037598179,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0036667842378506066,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.399652919863875,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.003264397229941,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.003264397229941,
+        "cfl_limit_s": 1.9988388820985696,
+        "limiting_cell": [
+          14,
+          74
+        ],
+        "cell_depth_m": 0.09339253310058598,
+        "cell_u_m_s": 0.05177209759456118,
+        "cell_v_m_s": 0.033614162753516946,
+        "grid_wave_bound_m_s": 2.0011617923904015,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.99673560277,
+      "max_speed_m_s": 0.09251909855795747,
+      "peak_speed_m_s": 0.419676787933677,
+      "peak_speed_time_s": 374.55540693812145,
+      "wet_area_m2": 233200.0,
+      "newly_flooded_area_m2": 150100.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.99673560277,
+      "balance": {
+        "initial_m3": 2156.2204224850525,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 7624.766217925078,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 9780.986640410134,
+        "residual_m3": 3.637978807091713e-12,
+        "corrected_residual_m3": 3.637978807091713e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 2156.2204224850525,
+    "water_volume_final_m3": 9780.986640410134,
+    "elapsed_s": 2.7668521000014152,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915020.npy",
+    "sha256": "322f7f4cb5eee5a17b8888d3e90fe5dac2b4a53c635bdb7b456305d28757131a",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 7624.766217925078,
+    "mass_residual_m3": 3.637978807091713e-12
+  },
+  {
+    "seed": 915021,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915021",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        15.14522831344265
+      ],
+      [
+        750.0,
+        7.572614156721325
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        54
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        15,
+        56
+      ],
+      [
+        15,
+        57
+      ],
+      [
+        15,
+        58
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1307,
+      "max_depth_m": 0.1295926802358915,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 7.59883605496725e-05,
+        "max_dt_s": 2.39038623130588,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39992371896305695,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.5301018748102706,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.5301018748102706,
+        "cfl_limit_s": 1.7359034795060349,
+        "limiting_cell": [
+          0,
+          48
+        ],
+        "cell_depth_m": 0.12944654990532992,
+        "cell_u_m_s": -0.049502223278442,
+        "cell_v_m_s": 2.86762632823656e-05,
+        "grid_wave_bound_m_s": 2.3042755816920373,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.4698981251897,
+      "max_speed_m_s": 0.13110044657912395,
+      "peak_speed_m_s": 0.4901928762127659,
+      "peak_speed_time_s": 359.0841088504153,
+      "wet_area_m2": 244700.0,
+      "newly_flooded_area_m2": 207500.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.4698981251897,
+      "balance": {
+        "initial_m3": 1372.1484538079956,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 10673.029111573775,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 12045.177565381764,
+        "residual_m3": -5.4569682106375694e-12,
+        "corrected_residual_m3": -5.4569682106375694e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 1372.1484538079956,
+    "water_volume_final_m3": 12045.177565381764,
+    "elapsed_s": 3.198613900000055,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915021.npy",
+    "sha256": "aff62241101658562d6170b3bcf1fd924f00221ccef414c982e5fa96e6b071b5",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 10673.029111573775,
+    "mass_residual_m3": -5.4569682106375694e-12
+  },
+  {
+    "seed": 915022,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915022",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        12.940333961639992
+      ],
+      [
+        750.0,
+        6.470166980819996
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        52
+      ],
+      [
+        15,
+        53
+      ],
+      [
+        15,
+        54
+      ],
+      [
+        15,
+        55
+      ],
+      [
+        15,
+        56
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1185,
+      "max_depth_m": 0.10054882992524744,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.0004394800902218776,
+        "max_dt_s": 2.462566402880954,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3997950673010487,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.2141993437344354,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.2141993437344354,
+        "cfl_limit_s": 1.9000185548946944,
+        "limiting_cell": [
+          15,
+          52
+        ],
+        "cell_depth_m": 0.09980058038725938,
+        "cell_u_m_s": -0.05105392675822388,
+        "cell_v_m_s": 0.05493679000215167,
+        "grid_wave_bound_m_s": 2.1052425986554084,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.7858006562656,
+      "max_speed_m_s": 0.11924402151109904,
+      "peak_speed_m_s": 0.4474886670839535,
+      "peak_speed_time_s": 359.3018973612519,
+      "wet_area_m2": 271900.0,
+      "newly_flooded_area_m2": 161000.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.7858006562656,
+      "balance": {
+        "initial_m3": 4483.582723036771,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 9184.72542410703,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 13668.308147143784,
+        "residual_m3": -1.8189894035458565e-11,
+        "corrected_residual_m3": -1.8189894035458565e-11
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 4483.582723036771,
+    "water_volume_final_m3": 13668.308147143784,
+    "elapsed_s": 2.9089961999998195,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915022.npy",
+    "sha256": "f4cb7c39611ead434f222739eaadd25ef3b765feccf5a4c511bf22ab54391b82",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 9184.72542410703,
+    "mass_residual_m3": -1.8189894035458565e-11
+  },
+  {
+    "seed": 915023,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915023",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        11.164521966353018
+      ],
+      [
+        750.0,
+        5.582260983176509
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        40
+      ],
+      [
+        15,
+        41
+      ],
+      [
+        15,
+        42
+      ],
+      [
+        15,
+        43
+      ],
+      [
+        15,
+        44
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1137,
+      "max_depth_m": 0.1090291414476538,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 4.4505626107138596e-05,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.3991575680594407,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.246753132439835,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.246753132439835,
+        "cfl_limit_s": 1.8857771621630295,
+        "limiting_cell": [
+          15,
+          44
+        ],
+        "cell_depth_m": 0.10783653686952463,
+        "cell_u_m_s": 0.03247525149926621,
+        "cell_v_m_s": 0.014705764605704566,
+        "grid_wave_bound_m_s": 2.1211413947827795,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.7532468675602,
+      "max_speed_m_s": 0.05396678044330232,
+      "peak_speed_m_s": 0.4092595618158323,
+      "peak_speed_time_s": 359.5473214139814,
+      "wet_area_m2": 153900.0,
+      "newly_flooded_area_m2": 127400.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.7532468675602,
+      "balance": {
+        "initial_m3": 787.2025481912458,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 7986.052327288289,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 8773.254875479535,
+        "residual_m3": 0.0,
+        "corrected_residual_m3": 0.0
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 787.2025481912458,
+    "water_volume_final_m3": 8773.254875479535,
+    "elapsed_s": 2.597538000001805,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915023.npy",
+    "sha256": "02e2233d6ef048e48a7fdfbb158ff2c83e08a902ea9007ef05ff3304a6a74b5e",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 7986.052327288289,
+    "mass_residual_m3": 0.0
+  },
+  {
+    "seed": 915024,
+    "split": "frozen-validation",
+    "parent": "synthetic-swe-915024",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        9.122421593762724
+      ],
+      [
+        750.0,
+        4.561210796881362
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        40
+      ],
+      [
+        15,
+        41
+      ],
+      [
+        15,
+        42
+      ],
+      [
+        15,
+        43
+      ],
+      [
+        15,
+        44
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1166,
+      "max_depth_m": 0.09394672685685114,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.029355466892752702,
+        "max_dt_s": 2.376222435857425,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39980868470956993,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.0428139346779517,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.0428139346779517,
+        "cfl_limit_s": 1.986337733709051,
+        "limiting_cell": [
+          15,
+          40
+        ],
+        "cell_depth_m": 0.09215159875223317,
+        "cell_u_m_s": -0.042411003410473186,
+        "cell_v_m_s": 0.042525066565546756,
+        "grid_wave_bound_m_s": 2.0137562369773216,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.957186065322,
+      "max_speed_m_s": 0.09496104951213823,
+      "peak_speed_m_s": 0.3680092292366162,
+      "peak_speed_time_s": 369.84627487940355,
+      "wet_area_m2": 178000.0,
+      "newly_flooded_area_m2": 121400.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.957186065322,
+      "balance": {
+        "initial_m3": 2185.9980949711667,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 6607.634575789846,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 8793.632670761008,
+        "residual_m3": -5.4569682106375694e-12,
+        "corrected_residual_m3": -5.4569682106375694e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 2185.9980949711667,
+    "water_volume_final_m3": 8793.632670761008,
+    "elapsed_s": 2.662086800002726,
+    "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-validation-20261103\\run01\\fields\\frozen-validation-915024.npy",
+    "sha256": "9e2d8999f1ad5a27de8236857c0db871435ad8e3232b0ba68277a1bb52833367",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 6607.634575789846,
+    "mass_residual_m3": -4.547473508864641e-12
+  }
+]

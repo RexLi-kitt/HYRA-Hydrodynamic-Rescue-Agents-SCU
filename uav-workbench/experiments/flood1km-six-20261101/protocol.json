@@ -1,0 +1,62 @@
+{
+  "version": "flood1km-six-pilot-preparation-v1",
+  "date": "2026-11-01",
+  "state": "PILOT_EXECUTION_AUTHORIZED",
+  "execution_authorized_now": true,
+  "user_latest_instruction": "可以开始跑代码训练了",
+  "scope": "Local pilot proposal; does not establish agreement by other experiment participants",
+  "source_protocol": "C:/Users/Lenovo/Documents/xwechat_files/wxid_e5c5k65357512_0668/msg/file/2026-10/flood_uav_baseline_protocol_v0.4.md",
+  "groups": {"A": ["happo", "hatrpo"], "B": ["hasac", "maac"], "C": ["mat", "coma"]},
+  "excluded": ["mappo", "qmix", "vdn", "ippo", "dqn", "ddpg"],
+  "environment": {
+    "side_m": 1000, "grid": [100, 100], "cell_m": 10, "agents": 4, "people": 20,
+    "initial_xy_m": [[5,5],[995,5],[5,995],[995,995]],
+    "joint_step_s": 5, "max_joint_steps": 300, "speed_m_s": 10,
+    "action_order": ["north","south","west","east","northwest","southwest","northeast","southeast","hover"],
+    "coordinates": "x east, y north; array row increases with y",
+    "sensor": {"angle_deg":180,"radius_m":100,"initial_heading":"towards center","moving_heading":"actual displacement","hover_heading":"unchanged","sampling":"grid centers and people at t=0 and each decision endpoint; no path sensing","instant_turn_model":true},
+    "service": {"radius_m":10,"duration_s":10,"depth_limit_m":0.08,"speed_limit_m_s":0.3,"arrival_step_counts":false,"interrupt_resets":true,"one_uav_per_person":true,"one_person_per_uav":true,"priority":"existing owner, then distance, then UAV id; target id for overlapping new services","short_step":"first intersection with discovered unrescued service disk; an already-inside UAV may depart"},
+    "water": {"fields":["depth","u","v"],"frame_dt_s":5,"interpolation":"piecewise linear; endpoint checks bound depth and velocity norm for a hovering target over the complete service interval","truth_access":"environment only"},
+    "collision": {"minimum_separation_m":5,"test":"exact piecewise straight synchronous trajectories including short-step stops","response":"stop conflicting UAVs, recursively recheck resulting paths","ACC":"original intention unordered pairs per joint step; no divide by fleet size"},
+    "communication":"ideal complete sharing of actually observed data and public UAV state",
+    "training_information":"same observed histories as execution; no hidden terrain, hidden people or future water",
+    "termination":"all 20 served AND all cells observed, otherwise 300-step finite horizon",
+    "bootstrap_at_time_limit":false,
+    "flight_scope":"synthetic planar kinematics; no battery, buildings, weather or physical hoist model"
+  },
+  "representation": {
+    "common_fields":["observed mask","last measured depth","last measured u","last measured v","measurement age","discovered people status"],
+    "local_patch":[11,11],"global_pooled":[10,10],"known_target_records":20,
+    "extra":"public UAV positions/headings/last actions, own id and remaining time; unknown fields have a separate mask",
+    "temporal_memory":"explicit observed map and timestamps; no recurrent network in first pilot"
+  },
+  "reward": {"new_rescue":10,"new_discovery":1,"new_coverage_cell":0.002,"joint_step":-0.01,"conflicting_pair":-2,"boundary_intention":-0.2,"complete_task":5,"hidden_target_distance":false},
+  "pilot": {"train_parent_seeds":[1101,1201,1301,1401],"validation_parent_seeds":[2101,2201],"validation_layout_seeds":[9001,9002,9003,9004],"training_seed":701,"episodes_per_algorithm":64,"maximum_joint_steps_per_algorithm":19200,"environment_cost_benchmark_episodes":64,"maximum_training_wall_seconds_per_algorithm":1200,"parallel_training_jobs":1,"test_scenes_generated":0,"formal_test_scenes_planned":50,"formal_training_seeds_planned":3,"formal_budget":"decide from measured pilot cost and validation curves; not approved as an automatic long run"},
+  "learning": {
+    "gamma":0.995,"hidden_width":64,"learning_rate":0.0003,"gradient_norm_limit":10,
+    "happo":{"independent_actors":true,"random_sequential_updates":true,"preceding_agent_ratio_correction":true,"clip":0.2,"epochs":4,"gae_lambda":0.95},
+    "hatrpo":{"independent_actors":true,"random_sequential_updates":true,"preceding_agent_ratio_correction":true,"KL_limit":0.01,"conjugate_gradient_steps":10,"Fisher_damping":0.1,"backtracking_steps":10},
+    "hasac":{"twin_joint_Q":true,"entropy_alpha":0.05,"sequential_actors":true,"discrete_actor_expectation":"exact nine-action enumeration; adaptation from sampled official discrete update","replay_capacity":4096,"warmup_steps":1024,"batch":64,"updates_per_32_steps":4,"target_tau":0.01},
+    "maac":{"critic":"other-agent multihead attention, own-action-excluded Q vector","heads":4,"entropy_alpha":0.05,"actor_expectation":"exact categorical","shared_critic_encoders":true,"replay_capacity":4096,"warmup_steps":1024,"batch":64,"updates_per_32_steps":4,"target_tau":0.01},
+    "mat":{"encoder_layers":1,"decoder_layers":1,"heads":4,"width":64,"causal_actions":true,"joint_execution":"all computed actions execute together; no mid-step measurement","dropout":0,"clip":0.2,"epochs":4},
+    "coma":{"critic":"Q_i for all own actions conditioned on allowed joint history and other actions","counterfactual_baseline":true,"TD_lambda":0.8,"target_tau":0.05,"entropy_bonus":0.01,"critic_updates_per_rollout":4},
+    "implementation_status":"new compact adaptations; no claim of exact official-code or benchmark reproduction; runtime and numerical tests not executed"
+  },
+  "enhancements_later": ["CNN spatial encoding with controlled ablation","GRU history with sequence replay/burn-in where required","explicit target commitment","larger training budgets only with validation and cost evidence"],
+  "sources": {
+    "happo_hatrpo":"https://jmlr.org/papers/v25/23-0488.html",
+    "harl_code":"https://github.com/PKU-MARL/HARL",
+    "hasac":"https://proceedings.iclr.cc/paper_files/paper/2024/hash/fe066022bab2a6c6a3c57032a1623c70-Abstract-Conference.html",
+    "maac":"https://proceedings.mlr.press/v97/iqbal19a.html",
+    "maac_code":"https://github.com/shariqiqbal2810/MAAC",
+    "mat":"https://arxiv.org/abs/2205.14953",
+    "mat_code":"https://github.com/PKU-MARL/Multi-Agent-Transformer",
+    "coma":"https://arxiv.org/abs/1705.08926"
+  },
+  "readiness": {
+    "preparation_files_written":true,"syntax_check_run":true,"environment_tests_run":true,
+    "learner_tests_run":false,"GPU_compute_verified":false,"dependency_install_complete":false,
+    "hydraulic_generation_started":false,"benchmark_started":false,"training_started":false,
+    "reason":"User resumed execution on 2026-11-01. Syntax and 21 environment tests passed. Further runtime results are recorded separately without rewriting the frozen training configuration."
+  }
+}

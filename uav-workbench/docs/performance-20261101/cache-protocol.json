@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "scope": "Existing TRAIN data only, no production file edits",
+  "candidate": "65536 exact separation entries +512 immutable view masks; never caches observations or policy decisions",
+  "inputs": "Exact dtype and bytes; finite public geometry. No coordinate rounding, no future or hidden state",
+  "success": "Every metric and trace array identical, source/weight hashes unchanged, median paired total speedup >=1.10",
+  "rejection": "Any difference or insufficient gain means do not deploy; no changed scores or thresholds",
+  "limits": "At most180s; one small process; no CUDA install or live model mutation"
+}

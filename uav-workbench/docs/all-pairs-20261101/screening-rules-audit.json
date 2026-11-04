@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "exactly15_distinct_unordered_pairs",
+      "passed": true
+    },
+    {
+      "test": "all6_in5_pairs_each",
+      "passed": true
+    },
+    {
+      "test": "missing64_evaluation_cannot_be_silently_skipped",
+      "passed": true
+    },
+    {
+      "test": "superior256_checkpoint_excluded_from64_ranking",
+      "passed": true
+    }
+  ],
+  "fixtures_are_not_experiment_results": true
+}

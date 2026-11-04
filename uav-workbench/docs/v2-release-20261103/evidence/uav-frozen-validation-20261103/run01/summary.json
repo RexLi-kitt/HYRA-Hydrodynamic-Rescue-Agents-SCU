@@ -1,0 +1,429 @@
+{
+  "status": "completed",
+  "statistics": {
+    "main": {
+      "results": {
+        "coverage100": {
+          "cases": 48,
+          "people": 1920,
+          "supplied": 1508,
+          "people_rate": 0.7854166666666667,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 307,
+          "refloats": 0
+        },
+        "flow_coverage": {
+          "cases": 48,
+          "people": 1920,
+          "supplied": 1488,
+          "people_rate": 0.775,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 312,
+          "refloats": 0
+        },
+        "gru-32_flowblend": {
+          "cases": 48,
+          "people": 1920,
+          "supplied": 1751,
+          "people_rate": 0.9119791666666667,
+          "all_rate": 0.10416666666666667,
+          "p95_rate": 0.4375,
+          "unseen": 107,
+          "refloats": 0
+        }
+      },
+      "parent_count": 24,
+      "gaps": {
+        "people_rate": {
+          "estimate": 0.12656250000000024,
+          "ci95": [
+            0.09687499999999993,
+            0.15625
+          ]
+        },
+        "all_rate": {
+          "estimate": 0.10416666666666667,
+          "ci95": [
+            0.020833333333333332,
+            0.1875
+          ]
+        },
+        "p95_rate": {
+          "estimate": 0.4375,
+          "ci95": [
+            0.2916666666666667,
+            0.5833333333333334
+          ]
+        }
+      },
+      "ci95": {
+        "coverage100": {
+          "people_rate": [
+            0.7588541666666666,
+            0.8114583333333333
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "flow_coverage": {
+          "people_rate": [
+            0.7484375000000001,
+            0.8010416666666665
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "gru-32_flowblend": {
+          "people_rate": [
+            0.8880208333333335,
+            0.9328125000000002
+          ],
+          "all_rate": [
+            0.020833333333333332,
+            0.1875
+          ],
+          "p95_rate": [
+            0.2916666666666667,
+            0.5833333333333334
+          ]
+        }
+      },
+      "point_goal_met": true,
+      "bootstrap_goal_supported": true,
+      "uncertainty": "Paired parent-cluster percentile bootstrap10000; same parent scenes resampled together, stronger of both baselines inside each draw. Approximate sampling interval for one frozen model, no training-seed uncertainty; all-zero proportions can give degenerate intervals and are not certainty."
+    },
+    "rotate90": {
+      "results": {
+        "coverage100": {
+          "cases": 6,
+          "people": 240,
+          "supplied": 188,
+          "people_rate": 0.7833333333333333,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 42,
+          "refloats": 0
+        },
+        "flow_coverage": {
+          "cases": 6,
+          "people": 240,
+          "supplied": 183,
+          "people_rate": 0.7625,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 40,
+          "refloats": 0
+        },
+        "gru-32_flowblend": {
+          "cases": 6,
+          "people": 240,
+          "supplied": 204,
+          "people_rate": 0.85,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 19,
+          "refloats": 0
+        }
+      },
+      "parent_count": 6,
+      "gaps": {
+        "people_rate": {
+          "estimate": 0.06666666666666665,
+          "ci95": [
+            -0.008333333333333304,
+            0.125
+          ]
+        },
+        "all_rate": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "p95_rate": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "ci95": {
+        "coverage100": {
+          "people_rate": [
+            0.7333333333333334,
+            0.8458333333333333
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "flow_coverage": {
+          "people_rate": [
+            0.6833333333333335,
+            0.8333333333333334
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "gru-32_flowblend": {
+          "people_rate": [
+            0.8041666666666667,
+            0.8958333333333334
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "point_goal_met": false,
+      "bootstrap_goal_supported": false,
+      "uncertainty": "Paired parent-cluster percentile bootstrap10000; same parent scenes resampled together, stronger of both baselines inside each draw. Approximate sampling interval for one frozen model, no training-seed uncertainty; all-zero proportions can give degenerate intervals and are not certainty."
+    },
+    "mirror_x": {
+      "results": {
+        "coverage100": {
+          "cases": 6,
+          "people": 240,
+          "supplied": 194,
+          "people_rate": 0.8083333333333333,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 36,
+          "refloats": 0
+        },
+        "flow_coverage": {
+          "cases": 6,
+          "people": 240,
+          "supplied": 190,
+          "people_rate": 0.7916666666666666,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 36,
+          "refloats": 0
+        },
+        "gru-32_flowblend": {
+          "cases": 6,
+          "people": 240,
+          "supplied": 223,
+          "people_rate": 0.9291666666666667,
+          "all_rate": 0.16666666666666666,
+          "p95_rate": 0.3333333333333333,
+          "unseen": 10,
+          "refloats": 0
+        }
+      },
+      "parent_count": 6,
+      "gaps": {
+        "people_rate": {
+          "estimate": 0.12083333333333346,
+          "ci95": [
+            0.08749999999999991,
+            0.15416666666666667
+          ]
+        },
+        "all_rate": {
+          "estimate": 0.16666666666666666,
+          "ci95": [
+            0.0,
+            0.5
+          ]
+        },
+        "p95_rate": {
+          "estimate": 0.3333333333333333,
+          "ci95": [
+            0.0,
+            0.6666666666666666
+          ]
+        }
+      },
+      "ci95": {
+        "coverage100": {
+          "people_rate": [
+            0.7708333333333334,
+            0.8416666666666667
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "flow_coverage": {
+          "people_rate": [
+            0.75,
+            0.8375
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "gru-32_flowblend": {
+          "people_rate": [
+            0.9,
+            0.9625
+          ],
+          "all_rate": [
+            0.0,
+            0.5
+          ],
+          "p95_rate": [
+            0.0,
+            0.6666666666666666
+          ]
+        }
+      },
+      "point_goal_met": true,
+      "bootstrap_goal_supported": false,
+      "uncertainty": "Paired parent-cluster percentile bootstrap10000; same parent scenes resampled together, stronger of both baselines inside each draw. Approximate sampling interval for one frozen model, no training-seed uncertainty; all-zero proportions can give degenerate intervals and are not certainty."
+    },
+    "orientation_combined": {
+      "results": {
+        "coverage100": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 382,
+          "people_rate": 0.7958333333333333,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 78,
+          "refloats": 0
+        },
+        "flow_coverage": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 373,
+          "people_rate": 0.7770833333333333,
+          "all_rate": 0.0,
+          "p95_rate": 0.0,
+          "unseen": 76,
+          "refloats": 0
+        },
+        "gru-32_flowblend": {
+          "cases": 12,
+          "people": 480,
+          "supplied": 427,
+          "people_rate": 0.8895833333333333,
+          "all_rate": 0.08333333333333333,
+          "p95_rate": 0.16666666666666666,
+          "unseen": 29,
+          "refloats": 0
+        }
+      },
+      "parent_count": 6,
+      "gaps": {
+        "people_rate": {
+          "estimate": 0.09375,
+          "ci95": [
+            0.04791666666666661,
+            0.12916666666666654
+          ]
+        },
+        "all_rate": {
+          "estimate": 0.08333333333333333,
+          "ci95": [
+            0.0,
+            0.25
+          ]
+        },
+        "p95_rate": {
+          "estimate": 0.16666666666666666,
+          "ci95": [
+            0.0,
+            0.3333333333333333
+          ]
+        }
+      },
+      "ci95": {
+        "coverage100": {
+          "people_rate": [
+            0.7666666666666666,
+            0.8312499999999999
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "flow_coverage": {
+          "people_rate": [
+            0.7166666666666668,
+            0.8333333333333334
+          ],
+          "all_rate": [
+            0.0,
+            0.0
+          ],
+          "p95_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "gru-32_flowblend": {
+          "people_rate": [
+            0.8729166666666667,
+            0.9083333333333332
+          ],
+          "all_rate": [
+            0.0,
+            0.25
+          ],
+          "p95_rate": [
+            0.0,
+            0.3333333333333333
+          ]
+        }
+      },
+      "point_goal_met": true,
+      "bootstrap_goal_supported": false,
+      "uncertainty": "Paired parent-cluster percentile bootstrap10000; same parent scenes resampled together, stronger of both baselines inside each draw. Approximate sampling interval for one frozen model, no training-seed uncertainty; all-zero proportions can give degenerate intervals and are not certainty."
+    }
+  },
+  "rollouts": 180,
+  "new_training_epochs": 0,
+  "leakage_audits_passed": 3,
+  "source_checkpoint_scenario_water_hashes_unchanged": true
+}

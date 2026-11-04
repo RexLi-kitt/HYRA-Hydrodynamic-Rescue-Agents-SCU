@@ -1,0 +1,13 @@
+{
+  "weights_unchanged": true,
+  "parameter_hashes": {
+    "HASAC1024": "c41575a13e55cc660c5cf494b51ec6be1deff86d244291f53d746476b965e17d",
+    "HATRPO1024": "936aab63a5e1990065eaa1555fd9e4fd3037d40af4d458805aff4bf805e25a1e",
+    "HASAC256": "bb478a01f87975d220ed54dc386df690068a4abd129538021f53b3e7a2410b6c",
+    "HATRPO512": "d0c1c55496acc822e0d14bbfda60af9a1c906fdf09300e8e38267dc012bd59db",
+    "MAT256": "4e75481f77277d665c20a1edeec24940cf36df5b8376c67c34d655dc679bb0ed"
+  },
+  "training_episodes_added": 0,
+  "rollouts": 208,
+  "source_protocol_hash": "c640303be75d6fb79e326253993e812dbe4c75dc38f110fb47feee5537fb1c01"
+}

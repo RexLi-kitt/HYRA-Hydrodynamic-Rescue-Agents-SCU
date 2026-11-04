@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "pid": 10436,
+  "elapsed_s": 7111.1584884,
+  "completed": {
+    "happo_hatrpo": 64,
+    "happo_hasac": 1024,
+    "happo_maac": 64,
+    "happo_mat": 256,
+    "happo_coma": 256,
+    "hatrpo_hasac": 64,
+    "hatrpo_maac": 256,
+    "hatrpo_mat": 64,
+    "hatrpo_coma": 64,
+    "hasac_maac": 64,
+    "hasac_mat": 64,
+    "hasac_coma": 1024,
+    "maac_mat": 64,
+    "maac_coma": 64,
+    "mat_coma": 64
+  },
+  "selected256": [
+    "happo_hasac",
+    "hasac_coma",
+    "happo_mat",
+    "hatrpo_maac",
+    "happo_coma"
+  ],
+  "selected1024": [
+    "happo_hasac",
+    "hasac_coma"
+  ],
+  "extension": {
+    "happo_hasac": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": true,
+        "improves_896_to_1024": false,
+        "material_gain_over_256": false,
+        "best_after_256": false
+      }
+    },
+    "hasac_coma": {
+      "eligible": false,
+      "checks": {
+        "improves_768_to_896": true,
+        "improves_896_to_1024": false,
+        "material_gain_over_256": false,
+        "best_after_256": false
+      }
+    }
+  }
+}

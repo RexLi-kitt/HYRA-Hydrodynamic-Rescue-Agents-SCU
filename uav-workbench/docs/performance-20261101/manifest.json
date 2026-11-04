@@ -1,0 +1,300 @@
+{
+  "files": [
+    {
+      "file": "cache-protocol.json",
+      "bytes": 649,
+      "sha256": "4386007d79165d57015990065d0265c86692f668d6dcd4f91ef88126f5e5ada4"
+    },
+    {
+      "file": "cache-results.json",
+      "bytes": 18774,
+      "sha256": "25dcf97bbba3865120ec23fe11d70bc929d8d0cfcfaa9a9edbea7674f6588db3"
+    },
+    {
+      "file": "cache-traces/coma-False-False.npz",
+      "bytes": 5317,
+      "sha256": "e9b3ca57848363bb000ab00f08da7d6ea418d4ac10590bd826946a46a0b221cd"
+    },
+    {
+      "file": "cache-traces/coma-False-True.npz",
+      "bytes": 5317,
+      "sha256": "e9b3ca57848363bb000ab00f08da7d6ea418d4ac10590bd826946a46a0b221cd"
+    },
+    {
+      "file": "cache-traces/coma-True-False.npz",
+      "bytes": 5491,
+      "sha256": "ee1bb56941e219df75b6d9bf5401ace46f3ea2261844dabf7aa590eb46416283"
+    },
+    {
+      "file": "cache-traces/coma-True-True.npz",
+      "bytes": 5491,
+      "sha256": "ee1bb56941e219df75b6d9bf5401ace46f3ea2261844dabf7aa590eb46416283"
+    },
+    {
+      "file": "cache-traces/happo-False-False.npz",
+      "bytes": 5969,
+      "sha256": "cd3df50f03b8897f6a043062f6e42cd6af9468c0a23dcb18af7005b0c8a4104d"
+    },
+    {
+      "file": "cache-traces/happo-False-True.npz",
+      "bytes": 5969,
+      "sha256": "cd3df50f03b8897f6a043062f6e42cd6af9468c0a23dcb18af7005b0c8a4104d"
+    },
+    {
+      "file": "cache-traces/happo-True-False.npz",
+      "bytes": 5693,
+      "sha256": "2b8854d2f17114987e5a00e0012d104281513b3a1733afdd2d8f84dbbc30c000"
+    },
+    {
+      "file": "cache-traces/happo-True-True.npz",
+      "bytes": 5693,
+      "sha256": "2b8854d2f17114987e5a00e0012d104281513b3a1733afdd2d8f84dbbc30c000"
+    },
+    {
+      "file": "cache-traces/hasac-False-False.npz",
+      "bytes": 6765,
+      "sha256": "d18b21f65a3e5a049604e04a76eab97e7846ade165738f2abdd0b76f5ab4dad1"
+    },
+    {
+      "file": "cache-traces/hasac-False-True.npz",
+      "bytes": 6765,
+      "sha256": "d18b21f65a3e5a049604e04a76eab97e7846ade165738f2abdd0b76f5ab4dad1"
+    },
+    {
+      "file": "cache-traces/hasac-True-False.npz",
+      "bytes": 5494,
+      "sha256": "643780156ba20170e4b0e1c819e31903103f877c068e3964508254420b2631e8"
+    },
+    {
+      "file": "cache-traces/hasac-True-True.npz",
+      "bytes": 5494,
+      "sha256": "643780156ba20170e4b0e1c819e31903103f877c068e3964508254420b2631e8"
+    },
+    {
+      "file": "cache-traces/hasac_mat-False-False.npz",
+      "bytes": 9437,
+      "sha256": "833b38236f7cccfe24b609fc3ffdedf25292dd04d4d18d8b735ea2e2ac1fa453"
+    },
+    {
+      "file": "cache-traces/hasac_mat-False-True.npz",
+      "bytes": 9437,
+      "sha256": "833b38236f7cccfe24b609fc3ffdedf25292dd04d4d18d8b735ea2e2ac1fa453"
+    },
+    {
+      "file": "cache-traces/hasac_mat-True-False.npz",
+      "bytes": 6691,
+      "sha256": "0f70458bf41101e960218ebd7a9ee2162ec2ef29c076b47a165c01a015f37ae7"
+    },
+    {
+      "file": "cache-traces/hasac_mat-True-True.npz",
+      "bytes": 6691,
+      "sha256": "0f70458bf41101e960218ebd7a9ee2162ec2ef29c076b47a165c01a015f37ae7"
+    },
+    {
+      "file": "cache-traces/hatrpo-False-False.npz",
+      "bytes": 8998,
+      "sha256": "27e95fa5da2346a49f41c5a2c57a2f4e04ab2a7ab9ff12cd8ce7d824f2c1402b"
+    },
+    {
+      "file": "cache-traces/hatrpo-False-True.npz",
+      "bytes": 8998,
+      "sha256": "27e95fa5da2346a49f41c5a2c57a2f4e04ab2a7ab9ff12cd8ce7d824f2c1402b"
+    },
+    {
+      "file": "cache-traces/hatrpo-True-False.npz",
+      "bytes": 5786,
+      "sha256": "494374e95ea2c989737b8cbafcc39e52f505ed135060a57466e6942240619db8"
+    },
+    {
+      "file": "cache-traces/hatrpo-True-True.npz",
+      "bytes": 5786,
+      "sha256": "494374e95ea2c989737b8cbafcc39e52f505ed135060a57466e6942240619db8"
+    },
+    {
+      "file": "cache-traces/hatrpo_hasac-False-False.npz",
+      "bytes": 4788,
+      "sha256": "a8290bf6c3cf694d1817efc8abe582c932b89d8b60467ff0b404020ab0784098"
+    },
+    {
+      "file": "cache-traces/hatrpo_hasac-False-True.npz",
+      "bytes": 4788,
+      "sha256": "a8290bf6c3cf694d1817efc8abe582c932b89d8b60467ff0b404020ab0784098"
+    },
+    {
+      "file": "cache-traces/hatrpo_hasac-True-False.npz",
+      "bytes": 5395,
+      "sha256": "55eb8cdfc1b7e2ad6d9038057c075f4b8abe2f53c54617a406763b7a1949efb8"
+    },
+    {
+      "file": "cache-traces/hatrpo_hasac-True-True.npz",
+      "bytes": 5395,
+      "sha256": "55eb8cdfc1b7e2ad6d9038057c075f4b8abe2f53c54617a406763b7a1949efb8"
+    },
+    {
+      "file": "cache-traces/maac-False-False.npz",
+      "bytes": 7024,
+      "sha256": "5471562e9c4daad7b4407b4e13e357afd19cc34dafeb3e2e1312367a52ba2b11"
+    },
+    {
+      "file": "cache-traces/maac-False-True.npz",
+      "bytes": 7024,
+      "sha256": "5471562e9c4daad7b4407b4e13e357afd19cc34dafeb3e2e1312367a52ba2b11"
+    },
+    {
+      "file": "cache-traces/maac-True-False.npz",
+      "bytes": 5814,
+      "sha256": "6328a1e20463557a6ec2eb65b37661f27040ce9f17908f690744c2f242ca9f34"
+    },
+    {
+      "file": "cache-traces/maac-True-True.npz",
+      "bytes": 5814,
+      "sha256": "6328a1e20463557a6ec2eb65b37661f27040ce9f17908f690744c2f242ca9f34"
+    },
+    {
+      "file": "cache-traces/mat-False-False.npz",
+      "bytes": 5796,
+      "sha256": "186028f6cf2d9dc0e585ed508aa6d68f24d09863538de8682b23c967f8be9b3e"
+    },
+    {
+      "file": "cache-traces/mat-False-True.npz",
+      "bytes": 5796,
+      "sha256": "186028f6cf2d9dc0e585ed508aa6d68f24d09863538de8682b23c967f8be9b3e"
+    },
+    {
+      "file": "cache-traces/mat-True-False.npz",
+      "bytes": 5884,
+      "sha256": "b7ae7885f3ed46fadc9bd3ea074e19eb36a8b223eedad5ef8be7fadde7a4c081"
+    },
+    {
+      "file": "cache-traces/mat-True-True.npz",
+      "bytes": 5884,
+      "sha256": "b7ae7885f3ed46fadc9bd3ea074e19eb36a8b223eedad5ef8be7fadde7a4c081"
+    },
+    {
+      "file": "cache_probe.py",
+      "bytes": 4423,
+      "sha256": "bd79f19e8fd3bfc5b437f1e1626376e9d1612300d4dc3b085d503b539b58354e"
+    },
+    {
+      "file": "geometry_cache.py",
+      "bytes": 2100,
+      "sha256": "945063212c1725e883266a1d08e24d370050e208e6d744f90b0ff545b63e15d3"
+    },
+    {
+      "file": "hardware-repository.json",
+      "bytes": 925,
+      "sha256": "502cde66ee361de20ba93d62fb93c42b11c2f8d0f39fe4369623a747e9a66287"
+    },
+    {
+      "file": "probe.py",
+      "bytes": 6126,
+      "sha256": "44f494ceeb032bdffbd5c26c6e90f20126f6e8a53a223c6ea66b41e37b0419ea"
+    },
+    {
+      "file": "protocol.json",
+      "bytes": 10898,
+      "sha256": "5787804515a71cedbf12cea227611c1bb5051ca597428bacc85ccaa2d4cff416"
+    },
+    {
+      "file": "report.md",
+      "bytes": 5546,
+      "sha256": "d0aca9595eee2cb8495a7fd7b4c61a6b2b3ba28aabb836b2f1aee59f285f23be"
+    },
+    {
+      "file": "results.json",
+      "bytes": 43917,
+      "sha256": "28c80a5d2e670728f6cf17153ce2c7e128e114f8978978777ec97dcfec0020db"
+    },
+    {
+      "file": "traces/happo-mmap_2threads-0.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-mmap_2threads-1.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-profile.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-ram_1thread-0.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-ram_1thread-1.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-ram_2threads-0.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-ram_2threads-1.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-ram_4threads-0.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/happo-ram_4threads-1.npz",
+      "bytes": 6905,
+      "sha256": "18087f6f3188381d9ea6a4194b591c639c8dd824c88a61a41caf72cd1175c8b6"
+    },
+    {
+      "file": "traces/hasac-mmap_2threads-0.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-mmap_2threads-1.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-profile.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-ram_1thread-0.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-ram_1thread-1.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-ram_2threads-0.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-ram_2threads-1.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-ram_4threads-0.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    },
+    {
+      "file": "traces/hasac-ram_4threads-1.npz",
+      "bytes": 6866,
+      "sha256": "26244b8c996501451fc5a4ef6fe596ed33144a7fe9831d3d7973bd56c32542c6"
+    }
+  ],
+  "scope": "Performance probe; no accepted production change"
+}

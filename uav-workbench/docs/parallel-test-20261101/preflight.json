@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "key": [
+        "happo",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hatrpo_hasac",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "hasac_mat",
+        "training-only-performance",
+        0,
+        "full",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "coma",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "pure_planner",
+        "training-only-performance",
+        0,
+        "planner",
+        "fixed",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    },
+    {
+      "key": [
+        "uniform_service",
+        "training-only-performance",
+        0,
+        "no-cover",
+        "sample",
+        510001
+      ],
+      "metrics_and_all_arrays_exact": true
+    }
+  ],
+  "serial_s": 10.51779610000085,
+  "parallel_s": 8.57742899999721,
+  "startup_included": true,
+  "speedup": 1.2262177978977469,
+  "test_fields_used": false,
+  "wrapper_sha256": "ad69fdcb5487407ca34d598c1bf0b984c7e7ccc1df3f3976737d52ddfd3e55fb"
+}

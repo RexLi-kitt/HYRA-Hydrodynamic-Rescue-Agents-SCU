@@ -1,0 +1,32 @@
+{
+  "protocol_sha256": "227564d0432e20cdc3f3964c6352089ab9080f03cf90c870b9b71fdced340a87",
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\linked_train.py": "c1b29fbc68842aa1e3dde41f5174a336cfb451e10e9e3d9117c93a64f60c7e60",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py": "b5ab357138045440f827b004a26e6bedcae36ed8aa9707ad7f174a74a956aaa3",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\coverage_controller.py": "97b2d5f3d7d2b8320e435d37beea40e3b450d11366350ffdb19fa19fe0d3124b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\priority-20261101\\retry_guard.py": "9d433c76ca0e02d26f2ada9c194871cfdb6f182ae929fed9e5cbc331e93f5dcd",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\all_pairs.py": "e3147e24ba5c5e67425dcda7af6df1f9ea32e82de446649a82522f91f3f5a4d2",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py": "32dc127a342d42d04659e74753e47174140f1a6ec191d91b291873555257c8c1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\protocol-addendum.md": "1959136892d9fa8d6a3b85ff4cab7af143dfa21016288f3952b3eacb5d9003dd",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\singles.py": "9fdc1035c8517fd93fd86f5416bda475ea184122232e3d247f01a0fafa61ef6a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\protocol.md": "513f41213bba2690e679fc1c56ebe0e9646a877b4b0af6a3437a0154f01850e8",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-strict-eval-20261101\\strict_eval.py": "7a22b729597717dcb9b778ae52b25f5f78e88ba52833ac11cf041813f1420b81",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-strict-eval-20261101\\protocol.md": "227564d0432e20cdc3f3964c6352089ab9080f03cf90c870b9b71fdced340a87",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-strict-eval-20261101\\audit.py": "6c6f0dfd67f47c07c3b80eca337ab11091eaba5dce607e593671db6668439ff6"
+  },
+  "test_fields_generated_at_registration": false,
+  "test_seed_plan_created_at_registration": false,
+  "rollout_cap": 5630
+}

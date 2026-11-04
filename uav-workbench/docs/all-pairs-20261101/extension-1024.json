@@ -1,0 +1,20 @@
+{
+  "happo_hasac": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": true,
+      "improves_896_to_1024": false,
+      "material_gain_over_256": false,
+      "best_after_256": false
+    }
+  },
+  "hasac_coma": {
+    "eligible": false,
+    "checks": {
+      "improves_768_to_896": true,
+      "improves_896_to_1024": false,
+      "material_gain_over_256": false,
+      "best_after_256": false
+    }
+  }
+}

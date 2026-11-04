@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "all_exported_table_values_match_source": true,
+  "row_counts": {
+    "全部评估轮次": 430,
+    "当前逐场验证": 13622,
+    "历史逐场验证": 3020,
+    "当前逐回合训练": 9600,
+    "历史逐回合训练": 3584,
+    "严格测试结果": 90,
+    "权重检查点": 232,
+    "当前21方案": 21
+  },
+  "formula_caches_verified": true,
+  "no_excel_error_cells": true,
+  "data_sha256": "7f9ef8d39f3561bd61e9ed5634e0e93fb8bd3a5591b8b7c89995bb9feddbb1f9",
+  "xlsx_sha256": "c27dab6361b9fc079db743e227e208d9b7fb41a02dfd55576b8ac37be370e46b",
+  "bytes": 4811805
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "tests": 6,
+  "elapsed_s": 0.331,
+  "initial_fixture_failure_fixed": true,
+  "code_sha256": {
+    "experiment.py": "692611df0078006689124655db321dcb627522ef7f96fc140cb7a464a34f004a",
+    "test_flow_fog.py": "d18ae4129fc5c36be14bd7913d1d4bcaf74d62de7aaaaee4ba771bb829c47a71"
+  }
+}

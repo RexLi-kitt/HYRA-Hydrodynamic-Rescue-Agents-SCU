@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-03",
+  "archive_verification": "passed",
+  "staged_blob_sha256_checks": 136,
+  "complete_rollouts": 180,
+  "scenarios": 60,
+  "frozen_model_parameters": 4641,
+  "unit_tests": {"validation": 4, "flow_fog": 6, "refloat": 9, "all_passed": true},
+  "document_pages_visually_reviewed": 9,
+  "new_training_epochs": 0,
+  "whitespace_check": {
+    "status": "7 pre-existing whitespace findings retained in sealed research source",
+    "blank_lines_at_eof": 5,
+    "trailing_whitespace_lines": 2,
+    "note": "CRLF is preserved as recorded; remaining historical whitespace is not rewritten to avoid invalidating original experiment source hashes. This is not a claim that git diff --check passed."
+  }
+}

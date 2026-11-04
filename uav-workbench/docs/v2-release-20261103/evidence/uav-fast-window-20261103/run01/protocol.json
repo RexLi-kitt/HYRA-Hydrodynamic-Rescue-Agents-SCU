@@ -1,0 +1,46 @@
+{
+  "version": "fast-shared-window-train-tune-v1",
+  "methods": [
+    "coverage100",
+    "flow_coverage",
+    "gru-16",
+    "gru-32_flowblend"
+  ],
+  "windows_s": [
+    180,
+    240,
+    300
+  ],
+  "sensor_m": 60,
+  "step_s": 1,
+  "duration_s": 1500,
+  "people": 40,
+  "reason": "At common1s previous12newmap scenarios learned478/480 vscoverage466/480 and95%-scene+25pp; both over95% people. Reorganize taskurgency on TRAIN instead of crippling planner.",
+  "selection": "Use same4TRAINcalibration-parent first40 rosters.48rollouts, no weightupdates. Goal85..95%people,no people regression vsboth planners,>=15pp95%-scene gap. Prefer goal met, nearest interval, higher people, higher95%gap then earlier window/method order. All raw candidates retained.",
+  "confirmation": "Generate six new hydraulic seeds814001..814006 only after freeze; eventseeds2026110600..611,2perparent. Same generator family and physics, not realflood;48taskrollouts allfour methods, preselected learning candidate scored without test reselection.",
+  "fairness": "Both planners same1s observation/decision; same persecond physical/service engine; same methods/weights/features/flowforecast as prior. Only common rescuewindow varied; no deleting failed people or changing truths. 10sdrop,2m/1mps triggers unchanged.",
+  "budget": "48TRAIN+48newmapconfirmation=96rollouts,6waterfields,0new supervised/RL epochs;CPU4threads1worker,STOPfile,30min.",
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-fast-window-v1\\tune.py": "85703ab05cb624f084cf9039bd74e5589f0078124107900a259882b2befe1b01",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-flow-fog-v1\\experiment.py": "692611df0078006689124655db321dcb627522ef7f96fc140cb7a464a34f004a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-flow-fog-v1\\test_flow_fog.py": "d18ae4129fc5c36be14bd7913d1d4bcaf74d62de7aaaaee4ba771bb829c47a71",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-regional-refloat-v1\\experiment.py": "4831e6b901736d5fee52522740895fca60d4e073a1036c51364b6293d96b6449",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\refloat_dispatch.py": "ee778c60a8d41f0fd5afd70c859229a75d4074e988b6f0d44680e0ac84a24ff7",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\refloat_environment.py": "ebf5676d8a36572cd9b299d922f2034859e0a20c4252ce7e579f66062c691158",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\refloat_search.py": "5f9d7c3c67bad89320a728908193d7830ffd45d2cf7b358896d550593cd88d90",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\screen.py": "487182afa0211ada1bdd64c926b5c5b170e18f398bc6d9f0d75129aa66214d69",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-refloat-v1\\test_refloat.py": "55632d5ebde9ac18e4460d95670c6c9978a3d23c0ea9f8b766990abdc9c269f6",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-probe-v1\\probe.py": "1782b94bbd3015cb887e7b04257de11947f94836744d43d03f6141e530aeaff1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-probe-v1\\search_env.py": "1e60cd3c3f52cee122be4ebd03fbb97978c44b08f88eaf9bbebe9f6b6f4df76b",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\terrain-workbench\\terrain-lab\\flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\terrain-workbench\\terrain-lab\\flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\terrain-workbench\\terrain-lab\\flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\terrain-workbench\\terrain-lab\\flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+  },
+  "weights": {
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav-regional-refloat-20261103\\run01\\gru-16.pt": "674c60aab80c6114ef9ffc622f40ca37a0cde65f635e692a1b8c93dd01a44082",
+    "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav-regional-refloat-20261103\\run01\\gru-32.pt": "6d9338befc35bfc1ea130d9702ee1a2707317554a81b7681542d47ff1edcf143"
+  },
+  "previous_scenarios_sha": "71235ee539ea4f27a809e788277b2594430f911774340a8d099f2be8a0538249"
+}

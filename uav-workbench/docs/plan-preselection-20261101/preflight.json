@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checks": [
+    "P1 original action stream equivalence for 12 steps",
+    "P0 observed coverage and legal integrated control for 12 steps",
+    "P2 observed coverage and legal integrated control for 12 steps",
+    "first decision invariant to changed future truth with identical observation"
+  ],
+  "scope": "bounded startup checks; full-run invariants remain enabled"
+}

@@ -1,0 +1,9 @@
+{
+  "old_exited": true,
+  "updated": "2026-11-01T21:45:02.8259301+08:00",
+  "elapsed_test_s": 1696.8140431,
+  "original_budget_seconds": 28800,
+  "budget_start_conservative": "2026-11-01T21:16:46+08:00",
+  "reason": "User-authorized two-process acceleration; expected manual_stopped is handoff, not a numerical failure",
+  "old_pid": 40556
+}

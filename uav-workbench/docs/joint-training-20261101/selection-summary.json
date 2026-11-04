@@ -1,0 +1,72 @@
+{
+  "hasac_mat": {
+    "chosen_joint_episode": 0,
+    "additional_joint_training_run": 256,
+    "parent_training_episodes": {
+      "hasac": 1024,
+      "mat": 256
+    },
+    "checkpoint_relative_path": null,
+    "checkpoint_sha256": null,
+    "baseline": {
+      "joint_episode": 0,
+      "coverage": 0.9377687499999999,
+      "rescued_ratio": 0.9375,
+      "potential_conflicts_per_step": 0.0071875,
+      "all_rescued": 13,
+      "whole_task_complete": 0
+    },
+    "chosen": {
+      "joint_episode": 0,
+      "coverage": 0.9377687499999999,
+      "rescued_ratio": 0.9375,
+      "potential_conflicts_per_step": 0.0071875,
+      "all_rescued": 13,
+      "whole_task_complete": 0
+    },
+    "latest": {
+      "joint_episode": 256,
+      "coverage": 0.886965625,
+      "rescued_ratio": 0.9,
+      "potential_conflicts_per_step": 0.030000000000000002,
+      "all_rescued": 7,
+      "whole_task_complete": 0
+    },
+    "interpretation": "development-validation selection only; baseline 0 reconstructed from unchanged parent weights and zero-initialized role adapter; no independent held-out result"
+  },
+  "hasac_hatrpo": {
+    "chosen_joint_episode": 64,
+    "additional_joint_training_run": 256,
+    "parent_training_episodes": {
+      "hasac": 1024,
+      "hatrpo": 1024
+    },
+    "checkpoint_relative_path": "hasac_hatrpo/checkpoint-0064.pt",
+    "checkpoint_sha256": "b0340898863848d4220778424e4c1148bd18b33f20f39935feed2985085bde48",
+    "baseline": {
+      "joint_episode": 0,
+      "coverage": 0.925565625,
+      "rescued_ratio": 0.9328125,
+      "potential_conflicts_per_step": 0.025104166666666664,
+      "all_rescued": 12,
+      "whole_task_complete": 0
+    },
+    "chosen": {
+      "joint_episode": 64,
+      "coverage": 0.944540625,
+      "rescued_ratio": 0.9453125,
+      "potential_conflicts_per_step": 0.0109375,
+      "all_rescued": 13,
+      "whole_task_complete": 0
+    },
+    "latest": {
+      "joint_episode": 256,
+      "coverage": 0.9545,
+      "rescued_ratio": 0.9500000000000001,
+      "potential_conflicts_per_step": 0.022395833333333334,
+      "all_rescued": 13,
+      "whole_task_complete": 0
+    },
+    "interpretation": "development-validation selection only; baseline 0 reconstructed from unchanged parent weights and zero-initialized role adapter; no independent held-out result"
+  }
+}

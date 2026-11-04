@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-11-01T21:51:59.312817",
+  "prior_merged": 2100,
+  "completed_worker_records_recovered": [
+    [
+      "happo_maac",
+      "shift-62",
+      1,
+      "no-cover",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_maac",
+      "shift-63",
+      0,
+      "no-cover",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_maac",
+      "shift-62",
+      0,
+      "no-cover",
+      "fixed",
+      510001
+    ],
+    [
+      "happo_maac",
+      "shift-63",
+      0,
+      "full",
+      "fixed",
+      510001
+    ]
+  ],
+  "total_preserved": 2104,
+  "original_prefix_unchanged": true,
+  "source_prefix_sha256": "b1a90bc236664943006893cd61fc9fb77fc32ca7aa2b28a1403e7696de68edc5",
+  "note": "Old executor completed queued trials while honoring stop; reuse their checked records rather than repeat them."
+}

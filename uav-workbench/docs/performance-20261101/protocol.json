@@ -1,0 +1,224 @@
+{
+  "scope": "Performance only; existing TRAIN field, unchanged frozen source and weights",
+  "date": "2026-11-01",
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\linked_train.py": "c1b29fbc68842aa1e3dde41f5174a336cfb451e10e9e3d9117c93a64f60c7e60",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py": "b5ab357138045440f827b004a26e6bedcae36ed8aa9707ad7f174a74a956aaa3",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\coverage_controller.py": "97b2d5f3d7d2b8320e435d37beea40e3b450d11366350ffdb19fa19fe0d3124b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\priority-20261101\\retry_guard.py": "9d433c76ca0e02d26f2ada9c194871cfdb6f182ae929fed9e5cbc331e93f5dcd",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\terrain-workbench\\terrain-lab\\flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\all_pairs.py": "e3147e24ba5c5e67425dcda7af6df1f9ea32e82de446649a82522f91f3f5a4d2",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\mixed_core.py": "32dc127a342d42d04659e74753e47174140f1a6ec191d91b291873555257c8c1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\protocol-addendum.md": "1959136892d9fa8d6a3b85ff4cab7af143dfa21016288f3952b3eacb5d9003dd",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\singles.py": "9fdc1035c8517fd93fd86f5416bda475ea184122232e3d247f01a0fafa61ef6a",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\protocol.md": "513f41213bba2690e679fc1c56ebe0e9646a877b4b0af6a3437a0154f01850e8"
+  },
+  "source_field": {
+    "seed": 1101,
+    "split": "train",
+    "parent": "synthetic-swe-1101",
+    "scope": "uncalibrated synthetic flood, no field accuracy claim",
+    "shape": [
+      301,
+      3,
+      100,
+      100
+    ],
+    "dx_m": 10.0,
+    "duration_s": 1500,
+    "frame_dt_s": 5,
+    "fields": [
+      "h",
+      "u",
+      "v"
+    ],
+    "forcing_m3_s": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        300.0,
+        12.328170864558668
+      ],
+      [
+        750.0,
+        6.164085432279334
+      ],
+      [
+        1200.0,
+        0.5
+      ],
+      [
+        1500.0,
+        0.0
+      ]
+    ],
+    "source_cells": [
+      [
+        15,
+        64
+      ],
+      [
+        15,
+        65
+      ],
+      [
+        15,
+        66
+      ],
+      [
+        15,
+        67
+      ],
+      [
+        15,
+        68
+      ]
+    ],
+    "numerics": {
+      "schema": "hyra-swe-v2",
+      "flux_method": "rusanov",
+      "open_boundary_mode": "outflow_only",
+      "wall_flux_mode": "hydrostatic",
+      "structures": "none",
+      "compute_backend": "numpy",
+      "spatial_order": 1,
+      "time_integrator": "euler",
+      "low_froude": 0,
+      "cfl": 0.4,
+      "limiter": "generalised_minmod",
+      "limiter_theta": 1.5,
+      "dry_depth_m": 1e-08,
+      "velocity_depth_m": 1e-06,
+      "max_timestep_s": 2.5,
+      "max_steps": 500000,
+      "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+      "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+      "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+      "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+      "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+    },
+    "summary": {
+      "time_s": 1500.0,
+      "steps": 1145,
+      "max_depth_m": 0.0976870081835173,
+      "numerics": {
+        "schema": "hyra-swe-v2",
+        "flux_method": "rusanov",
+        "open_boundary_mode": "outflow_only",
+        "wall_flux_mode": "hydrostatic",
+        "structures": "none",
+        "compute_backend": "numpy",
+        "spatial_order": 1,
+        "time_integrator": "euler",
+        "low_froude": 0,
+        "cfl": 0.4,
+        "limiter": "generalised_minmod",
+        "limiter_theta": 1.5,
+        "dry_depth_m": 1e-08,
+        "velocity_depth_m": 1e-06,
+        "max_timestep_s": 2.5,
+        "max_steps": 500000,
+        "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+        "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+        "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+        "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+        "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+      },
+      "diagnostics": {
+        "min_dt_s": 0.004151505981440096,
+        "max_dt_s": 2.5,
+        "limited_faces": 0,
+        "max_stage_courant": 0.39880908045714564,
+        "minimum_raw_depth_m": 0.0
+      },
+      "last_timestep": {
+        "dt_s": 1.142398040194621,
+        "cause": "event_or_output",
+        "requested_limit_s": 1.142398040194621,
+        "cfl_limit_s": 1.9358588825124143,
+        "limiting_cell": [
+          15,
+          68
+        ],
+        "cell_depth_m": 0.09611469351940419,
+        "cell_u_m_s": 0.03771141488211458,
+        "cell_v_m_s": 0.05975163132635302,
+        "grid_wave_bound_m_s": 2.0662663152433316,
+        "boundary_wave_bound_m_s": 0.0,
+        "structure_wave_bound_m_s": 0.0
+      },
+      "boundary_state_time_s": 1498.8576019598054,
+      "max_speed_m_s": 0.10021861269069579,
+      "peak_speed_m_s": 0.4328716902742604,
+      "peak_speed_time_s": 359.377994562044,
+      "wet_area_m2": 177100.0,
+      "newly_flooded_area_m2": 155200.0,
+      "external_inflow_by_id_m3": {},
+      "boundary_inflows": [],
+      "boundary_sample_time_s": 1498.8576019598054,
+      "balance": {
+        "initial_m3": 747.7063458464319,
+        "rainfall_m3": 0.0,
+        "inflow_m3": 0.0,
+        "baseflow_m3": 0.0,
+        "infiltration_m3": 0.0,
+        "outflow_m3": 0.0,
+        "sea_inflow_m3": 0.0,
+        "sea_outflow_m3": 0.0,
+        "drainage_m3": 0.0,
+        "scheduled_inflow_m3": 8771.515333577097,
+        "external_inflow_m3": 0.0,
+        "numerical_adjustment_m3": 0.0,
+        "current_m3": 9519.221679423528,
+        "residual_m3": -1.8189894035458565e-12,
+        "corrected_residual_m3": -1.8189894035458565e-12
+      }
+    },
+    "finite_nonnegative": true,
+    "water_volume_initial_m3": 747.7063458464319,
+    "water_volume_final_m3": 9519.221679423528,
+    "elapsed_s": 4.788339899999755,
+    "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-pilot-20261101\\data\\train-1101.npy",
+    "sha256": "7ea0da2dbdecaee5647f7e1a090aa97a2aa651a5d53ddc8eea0e9857f3a364c7",
+    "source_hashes": {
+      "flood_acceleration.py": "20ef2488618bda14a5dd1419e33222c9098264f550db93639f5899a7eaf40933",
+      "flood_numerics.py": "3248707f1f42db1b2609ff050b83c493b752cb7e9a7555c20cf3c279f5d4353a",
+      "flood_run.py": "f12891ec34136794ec83f9f13aadb73a623345311c9718e7e3ec654434747755",
+      "flood_solver.py": "dd3dc40b30788b5f78f65198317b9e63ae4b508ff12862c57ad64f476ad20c7d"
+    },
+    "source_volume_m3": 8771.515333577097,
+    "mass_residual_m3": -1.8189894035458565e-12
+  },
+  "methods": [
+    "happo",
+    "hasac"
+  ],
+  "layout": 778801,
+  "action_seed": 778802,
+  "variants": [
+    "mmap_2threads",
+    "ram_2threads",
+    "ram_1thread",
+    "ram_4threads"
+  ],
+  "repetitions": 2,
+  "order": "forward then reverse, identical seeds and fresh controllers",
+  "checks": "Metrics and every trace array exactly equal; no weight mutation during rollout",
+  "updates": "One local cloned HASAC update block, never saved as a production checkpoint",
+  "limit_s": 180,
+  "caveat": "One short probe while live training continues; warmed OS cache, not isolated benchmark; no new test data",
+  "accept": "RAM preload only if meaningful end-to-end speedup and exact equality; thread change needs future registration, not live edits"
+}

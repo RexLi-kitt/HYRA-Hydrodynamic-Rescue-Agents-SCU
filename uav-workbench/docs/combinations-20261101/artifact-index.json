@@ -1,0 +1,122 @@
+[
+  {
+    "file": "audit.json",
+    "bytes": 638,
+    "sha256": "6345dac3d5e47fe626bb5a5ad334b64360c5fd8040945fdcb855089f2cbe67a9"
+  },
+  {
+    "file": "combo_eval.py",
+    "bytes": 10209,
+    "sha256": "5d353f2c313481fe787000a2730766b26a77d1db9e9ba4cad7614701ea62b3b0"
+  },
+  {
+    "file": "HASAC1024.json",
+    "bytes": 11710,
+    "sha256": "1b5667e3bb650d585a278138dd7e633c242ff093edac1b8df85d83cc500828ca"
+  },
+  {
+    "file": "HASAC256.json",
+    "bytes": 11714,
+    "sha256": "aec3bcc8e1e4f19683c67214d33b32478b90aa7efbc0b113f9cebd0892a1371d"
+  },
+  {
+    "file": "HATRPO1024.json",
+    "bytes": 11734,
+    "sha256": "2c07dbfc5ce848aa3de8f0f575d38e2e6121e2b0054b4cea86338e0dcebf514a"
+  },
+  {
+    "file": "HATRPO512.json",
+    "bytes": 11798,
+    "sha256": "699341e6bb77f6cd92af570574b47afa77f8ed2a728288aaff0ca0d3c9b1d91e"
+  },
+  {
+    "file": "MAT256.json",
+    "bytes": 11681,
+    "sha256": "00aa94812b2119d366b4124e737d2bd039d0f822b7f085c251fb8aa0b1e79e9c"
+  },
+  {
+    "file": "P1-allocation0.json",
+    "bytes": 11721,
+    "sha256": "4be0ae715669f81307f40f2ebd40f120cfe23459f01289968365fd9263b078ab"
+  },
+  {
+    "file": "P1-allocation1.json",
+    "bytes": 11678,
+    "sha256": "6daa5d7b3fa86ca4d15cc09278fde60d3f3f09e8e3f724fb5fc466e6199932b6"
+  },
+  {
+    "file": "P1-pooled.json",
+    "bytes": 22424,
+    "sha256": "caa5ea4a39bf7be40e061bc3f467cf9c08668e73ed1b2801ca53f67819ed6703"
+  },
+  {
+    "file": "P2-allocation0.json",
+    "bytes": 11729,
+    "sha256": "6589b13ae8ec576251a70ec21ec10539f00d910d5577112915d8b6fac55879da"
+  },
+  {
+    "file": "P2-allocation1.json",
+    "bytes": 11692,
+    "sha256": "a09c19df822c5c5feb4530028902cc698e496d57e561e2d96a8a361be3c677d3"
+  },
+  {
+    "file": "P2-pooled.json",
+    "bytes": 22453,
+    "sha256": "1e852feec56ab1cb5fb246aadac75e92a5d6f6a812aab9d0632b11d916671fa5"
+  },
+  {
+    "file": "P3-allocation0.json",
+    "bytes": 11681,
+    "sha256": "9e78920cc542f136cb3116eb29a447a568c1cde29ab4694ecf27cec8058d74c9"
+  },
+  {
+    "file": "P3-allocation1.json",
+    "bytes": 11597,
+    "sha256": "40a7abc606096681d9956f79d485407aa1aafecbd07bf2bccbacdbb0879040db"
+  },
+  {
+    "file": "P3-pooled.json",
+    "bytes": 22311,
+    "sha256": "871f45c0cfbca4fc6ee322ffed26cd98b467ba7707068080d737fb0128e54b91"
+  },
+  {
+    "file": "P4-allocation0.json",
+    "bytes": 11681,
+    "sha256": "7e896c720a9a6ec1f5336cd0395675d85fc6da118403fbfccca0425b76506780"
+  },
+  {
+    "file": "P4-allocation1.json",
+    "bytes": 11698,
+    "sha256": "108ee80dc4da8ea494b7f2ea3d0da206190bfb2726d2b1906fdb67453f5ac614"
+  },
+  {
+    "file": "P4-pooled.json",
+    "bytes": 22433,
+    "sha256": "8eccb98f0c9f6de02772e75403c48cbe9678f37f62a6067ec153c7c3587074f7"
+  },
+  {
+    "file": "preflight.json",
+    "bytes": 1694,
+    "sha256": "44a1786477754a41d47c16ebd461095c6171817c732a41706cfc75e6316a258f"
+  },
+  {
+    "file": "protocol.json",
+    "bytes": 4052,
+    "sha256": "c640303be75d6fb79e326253993e812dbe4c75dc38f110fb47feee5537fb1c01"
+  },
+  {
+    "file": "queue-status.json",
+    "bytes": 154,
+    "sha256": "535071304f1d7d51ab9a97f9204ed1877ecc212a1336d9e2d9a3eb30a312427d"
+  },
+  {
+    "file": "report.md",
+    "bytes": 4991,
+    "sha256": "0f3279f12e7347b268662c72e38afd82bd386173b769ad3855e7ea8c0ad43fb4"
+  },
+  {
+    "file": "results.json",
+    "bytes": 15497,
+    "sha256": "83432a3a39072465edbbbe61d910b2b4ab5986d6a79ac47b927633ff41015a3a"
+  }
+]

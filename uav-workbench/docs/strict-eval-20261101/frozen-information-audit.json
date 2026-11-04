@@ -1,0 +1,365 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "candidate": "happo",
+      "roles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo",
+      "roles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hasac",
+      "roles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "maac",
+      "roles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "mat",
+      "roles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "coma",
+      "roles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_hatrpo",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_hatrpo",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_hasac",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_hasac",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_maac",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_maac",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_mat",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_mat",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_coma",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "happo_coma",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_hasac",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_hasac",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_maac",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_maac",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_mat",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_mat",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_coma",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hatrpo_coma",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hasac_maac",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hasac_maac",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hasac_mat",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hasac_mat",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hasac_coma",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "hasac_coma",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "maac_mat",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "maac_mat",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "maac_coma",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "maac_coma",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "mat_coma",
+      "roles": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    },
+    {
+      "candidate": "mat_coma",
+      "roles": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "hidden_changes_leave_inputs_and_decisions_equal": true
+    }
+  ]
+}

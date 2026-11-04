@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "unique_new_water_parents": 24,
+  "training_index_parents": 16,
+  "training_parent_overlap": [],
+  "training_index_sha256": "f4139244f1f2aeec20a40ab6c24981fc3d43c29d44176da4c3c27143a78e40f3",
+  "unique_new_water_hashes": 24,
+  "complete_scenarios": 60,
+  "unique_method_scenario_rows": 180,
+  "all40person_records_retained": true,
+  "shared_config_and_person_deadlines_verified": true,
+  "source_water_volume_max_abs_residual_m3": 2.000888343900442e-11,
+  "scope": "Checks provenance/roster and result completeness; same procedural generator family, not a guarantee against every leak or distribution bias."
+}

@@ -1,0 +1,6 @@
+{
+  "first_attempt": "HASAC split/resume passed; HATRPO first non-updating episode had empty loss log after resume, whereas uninterrupted log retained the previous loss; best-metadata precedence passed.",
+  "correction": "Checkpoint and restore last_loss diagnostics. No learner, reward, optimizer or physics change.",
+  "legacy_checkpoints": "Older parent checkpoints do not include last_loss, so initial loss log may be empty until the next actual update. Model/optimizer/RNG restoration is unaffected.",
+  "validation": "Rerun exact split/resume comparison including model, optimizer, RNG, counters, replay and episode records. Final outcome in preflight.json."
+}

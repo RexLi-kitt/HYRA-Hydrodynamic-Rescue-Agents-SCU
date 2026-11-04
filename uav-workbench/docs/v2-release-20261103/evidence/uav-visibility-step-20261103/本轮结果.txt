@@ -1,0 +1,9 @@
+条件 | 方法 | 原5秒人数/160 | 新1秒人数/160 | 新1秒全员场景/4 | 新1秒>=95%场景/4
+view20-w360 | coverage100 | 0 | 120 | 0 | 0
+view20-w360 | flow_coverage | 0 | 119 | 0 | 0
+view20-w360 | gru-16 | 28 | 113 | 0 | 1
+view20-w360 | gru-32_flowblend | 22 | 97 | 0 | 0
+patch20-60-w360 | coverage100 | 31 | 144 | 0 | 2
+patch20-60-w360 | flow_coverage | 31 | 143 | 0 | 2
+patch20-60-w360 | gru-16 | 104 | 139 | 2 | 2
+patch20-60-w360 | gru-32_flowblend | 99 | 155 | 1 | 3

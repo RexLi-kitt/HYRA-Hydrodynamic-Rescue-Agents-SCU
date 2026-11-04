@@ -1,0 +1,258 @@
+[
+  {
+    "joint_episode": 64,
+    "adopted": false,
+    "summary": {
+      "ST": 300.0,
+      "ACC": 0.014583333333333334,
+      "RCR": 0.91875,
+      "coverage": 0.925371875,
+      "rescued": 18.375,
+      "FRT": {
+        "mean": 5.9375,
+        "valid": 32,
+        "total": 32
+      },
+      "CRT": {
+        "mean": 141.1,
+        "valid": 10,
+        "total": 32
+      },
+      "all_rescued_fraction": 0.3125,
+      "timeout_fraction": 1.0
+    },
+    "by_assignment": {
+      "0": {
+        "ST": 300.0,
+        "ACC": 0.019583333333333335,
+        "RCR": 0.9249999999999999,
+        "coverage": 0.9257437500000001,
+        "rescued": 18.5,
+        "FRT": {
+          "mean": 5.875,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 143.57142857142858,
+          "valid": 7,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.4375,
+        "timeout_fraction": 1.0
+      },
+      "1": {
+        "ST": 300.0,
+        "ACC": 0.009583333333333333,
+        "RCR": 0.9124999999999999,
+        "coverage": 0.925,
+        "rescued": 18.25,
+        "FRT": {
+          "mean": 6.0,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 135.33333333333334,
+          "valid": 3,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.1875,
+        "timeout_fraction": 1.0
+      }
+    },
+    "whole_task_completed": 0
+  },
+  {
+    "joint_episode": 128,
+    "adopted": false,
+    "summary": {
+      "ST": 300.0,
+      "ACC": 0.010729166666666666,
+      "RCR": 0.915625,
+      "coverage": 0.9436249999999999,
+      "rescued": 18.3125,
+      "FRT": {
+        "mean": 6.1875,
+        "valid": 32,
+        "total": 32
+      },
+      "CRT": {
+        "mean": 152.0,
+        "valid": 5,
+        "total": 32
+      },
+      "all_rescued_fraction": 0.15625,
+      "timeout_fraction": 1.0
+    },
+    "by_assignment": {
+      "0": {
+        "ST": 300.0,
+        "ACC": 0.009583333333333333,
+        "RCR": 0.896875,
+        "coverage": 0.9351,
+        "rescued": 17.9375,
+        "FRT": {
+          "mean": 6.375,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      },
+      "1": {
+        "ST": 300.0,
+        "ACC": 0.011875,
+        "RCR": 0.934375,
+        "coverage": 0.9521499999999999,
+        "rescued": 18.6875,
+        "FRT": {
+          "mean": 6.0,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 152.0,
+          "valid": 5,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.3125,
+        "timeout_fraction": 1.0
+      }
+    },
+    "whole_task_completed": 0
+  },
+  {
+    "joint_episode": 192,
+    "adopted": false,
+    "summary": {
+      "ST": 300.0,
+      "ACC": 0.020520833333333332,
+      "RCR": 0.9015624999999999,
+      "coverage": 0.919546875,
+      "rescued": 18.03125,
+      "FRT": {
+        "mean": 5.75,
+        "valid": 32,
+        "total": 32
+      },
+      "CRT": {
+        "mean": 232.0,
+        "valid": 11,
+        "total": 32
+      },
+      "all_rescued_fraction": 0.34375,
+      "timeout_fraction": 1.0
+    },
+    "by_assignment": {
+      "0": {
+        "ST": 300.0,
+        "ACC": 0.012083333333333333,
+        "RCR": 0.878125,
+        "coverage": 0.902025,
+        "rescued": 17.5625,
+        "FRT": {
+          "mean": 6.0,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 228.66666666666666,
+          "valid": 6,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.375,
+        "timeout_fraction": 1.0
+      },
+      "1": {
+        "ST": 300.0,
+        "ACC": 0.028958333333333336,
+        "RCR": 0.925,
+        "coverage": 0.93706875,
+        "rescued": 18.5,
+        "FRT": {
+          "mean": 5.5,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 236.0,
+          "valid": 5,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.3125,
+        "timeout_fraction": 1.0
+      }
+    },
+    "whole_task_completed": 0
+  },
+  {
+    "joint_episode": 256,
+    "adopted": false,
+    "summary": {
+      "ST": 300.0,
+      "ACC": 0.030000000000000002,
+      "RCR": 0.9,
+      "coverage": 0.886965625,
+      "rescued": 18.0,
+      "FRT": {
+        "mean": 6.375,
+        "valid": 32,
+        "total": 32
+      },
+      "CRT": {
+        "mean": 144.42857142857142,
+        "valid": 7,
+        "total": 32
+      },
+      "all_rescued_fraction": 0.21875,
+      "timeout_fraction": 1.0
+    },
+    "by_assignment": {
+      "0": {
+        "ST": 300.0,
+        "ACC": 0.036250000000000004,
+        "RCR": 0.8656250000000001,
+        "coverage": 0.87014375,
+        "rescued": 17.3125,
+        "FRT": {
+          "mean": 7.0,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": null,
+          "valid": 0,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.0,
+        "timeout_fraction": 1.0
+      },
+      "1": {
+        "ST": 300.0,
+        "ACC": 0.02375,
+        "RCR": 0.934375,
+        "coverage": 0.9037875,
+        "rescued": 18.6875,
+        "FRT": {
+          "mean": 5.75,
+          "valid": 16,
+          "total": 16
+        },
+        "CRT": {
+          "mean": 144.42857142857142,
+          "valid": 7,
+          "total": 16
+        },
+        "all_rescued_fraction": 0.4375,
+        "timeout_fraction": 1.0
+      }
+    },
+    "whole_task_completed": 0
+  }
+]

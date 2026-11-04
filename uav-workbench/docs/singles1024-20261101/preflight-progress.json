@@ -1,0 +1,54 @@
+{
+  "completed": 6,
+  "total": 6,
+  "checks": [
+    {
+      "algorithm": "happo",
+      "parent_equivalence": true,
+      "one_learner": true,
+      "masked_forced_logp": true,
+      "learns": true,
+      "exact_serialized_resume": true
+    },
+    {
+      "algorithm": "hatrpo",
+      "parent_equivalence": true,
+      "one_learner": true,
+      "masked_forced_logp": true,
+      "learns": true,
+      "exact_serialized_resume": true
+    },
+    {
+      "algorithm": "hasac",
+      "parent_equivalence": true,
+      "one_learner": true,
+      "masked_forced_logp": true,
+      "learns": true,
+      "exact_serialized_resume": true
+    },
+    {
+      "algorithm": "maac",
+      "parent_equivalence": true,
+      "one_learner": true,
+      "masked_forced_logp": true,
+      "learns": true,
+      "exact_serialized_resume": true
+    },
+    {
+      "algorithm": "mat",
+      "parent_equivalence": true,
+      "one_learner": true,
+      "masked_forced_logp": true,
+      "learns": true,
+      "exact_serialized_resume": true
+    },
+    {
+      "algorithm": "coma",
+      "parent_equivalence": true,
+      "one_learner": true,
+      "masked_forced_logp": true,
+      "learns": true,
+      "exact_serialized_resume": true
+    }
+  ]
+}

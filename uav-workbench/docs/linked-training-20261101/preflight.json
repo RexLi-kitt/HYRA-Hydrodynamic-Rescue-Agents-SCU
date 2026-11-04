@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "parent_policy_and_role_padding_preserved",
+      "algorithm": "hatrpo",
+      "passed": true
+    },
+    {
+      "test": "parent_policy_and_role_padding_preserved",
+      "algorithm": "hasac",
+      "passed": true
+    },
+    {
+      "test": "parent_policy_and_role_padding_preserved",
+      "algorithm": "maac",
+      "passed": true
+    },
+    {
+      "test": "both_models_update_ownership_and_exact_resume",
+      "pair": "hatrpo_hasac",
+      "passed": true
+    },
+    {
+      "test": "both_models_update_ownership_and_exact_resume",
+      "pair": "hatrpo_maac",
+      "passed": true
+    },
+    {
+      "test": "both_models_update_ownership_and_exact_resume",
+      "pair": "hasac_maac",
+      "passed": true
+    },
+    {
+      "test": "observed_only_controller_and_presampling_rule_masks",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-01",
+  "request": "实际组合，不限制原ABC配对",
+  "kind": "frozen-weight heterogeneous fleet evaluation",
+  "training_episodes_added": 0,
+  "learning_updates": 0,
+  "parents": {
+    "HASAC1024": {
+      "algorithm": "hasac",
+      "episode": 1024,
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-full1024-20261101\\hasac\\checkpoint-1024.pt",
+      "sha256": "5d37df5996a972d11b154dcadc52a9d83427750963d3241a28d8da097d988d74"
+    },
+    "HATRPO1024": {
+      "algorithm": "hatrpo",
+      "episode": 1024,
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-full1024-20261101\\hatrpo\\checkpoint-1024.pt",
+      "sha256": "5e7fc37edd839a538c885ed0bc048c472e88cc871df22b3d1ffd99d5a4a0ac85"
+    },
+    "HASAC256": {
+      "algorithm": "hasac",
+      "episode": 256,
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\hasac\\latest.pt",
+      "sha256": "30e1e7967b81c53d812f3d6905e676755c885ffa1819b29377cd073932704c80"
+    },
+    "HATRPO512": {
+      "algorithm": "hatrpo",
+      "episode": 512,
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-priority-20261101\\hatrpo\\checkpoint-0512.pt",
+      "sha256": "bfdb56b46d0665f2b3b2c292bc61f65417d129117368d02c51a52235b1a54bc9"
+    },
+    "MAT256": {
+      "algorithm": "mat",
+      "episode": 256,
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-total256-20261101\\mat\\latest.pt",
+      "sha256": "640230a08c5d878f19230a51fbf239fa84ad6845921a318450f2baab2f1f38f2"
+    }
+  },
+  "pairs": [
+    {
+      "id": "P1",
+      "first": "HASAC1024",
+      "second": "HATRPO1024"
+    },
+    {
+      "id": "P2",
+      "first": "HASAC256",
+      "second": "HATRPO512"
+    },
+    {
+      "id": "P3",
+      "first": "HASAC1024",
+      "second": "MAT256"
+    },
+    {
+      "id": "P4",
+      "first": "HATRPO1024",
+      "second": "MAT256"
+    }
+  ],
+  "assignments": [
+    [
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "assignment_meaning": "0/1 selects first/second model for UAV ids 0..3; two opposite diagonal allocations; both retained and equally weighted",
+  "single_controls": [
+    "HASAC1024",
+    "HATRPO1024",
+    "HASAC256",
+    "HATRPO512",
+    "MAT256"
+  ],
+  "common_controller": "ServiceCommitment commit and RetryGuard enabled for all members and all combinations; no coverage watchdog",
+  "action_selection": "stochastic; each expert emits only assigned UAV actions, MAT uses actual preceding mixed actions",
+  "validation": {
+    "parents": [
+      "validation-2101.npy",
+      "validation-2201.npy"
+    ],
+    "layouts": [
+      9001,
+      9002,
+      9003,
+      9004
+    ],
+    "action_seeds": [
+      3101,
+      3102
+    ],
+    "per_single": 16,
+    "per_pair": 32,
+    "total": 208,
+    "scope": "reused development validation; 2 water parents, not 208 independent flood events; sealed50 untouched"
+  },
+  "success_rule": [
+    "pooled RCR >= max of both singles",
+    "pooled coverage >= max of both singles minus .01",
+    "ACC <= .02",
+    "worst action-seed RCR >= max of both singles worst action-seed RCR",
+    "each assignment RCR >= max single RCR minus .025",
+    "RCR gain >= .00625 OR coverage gain >= .005 relative to maximum respective single score"
+  ],
+  "limits": "No claim of joint training or synergy from merely averaging scores. No hidden people or future water supplied to policy. Original scores and weights untouched.",
+  "cost": "208 serial CPU2 rollouts, each max300 steps; expected minutes; stop on error or STOP file between rollouts",
+  "script_sha256": "5d353f2c313481fe787000a2730766b26a77d1db9e9ba4cad7614701ea62b3b0",
+  "manifest_sha256": "dde867a71c348eb239086fc9b6f1ad749c3b6b9516bc33eae999746f7ea5ff5a"
+}

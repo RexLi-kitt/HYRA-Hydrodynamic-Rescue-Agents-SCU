@@ -1,0 +1,56 @@
+{
+  "version": "service-commitment-v1",
+  "modes": [
+    "hold",
+    "commit"
+  ],
+  "algorithms": [
+    "happo",
+    "hatrpo",
+    "hasac",
+    "maac",
+    "mat",
+    "coma"
+  ],
+  "fixed_validation_layouts": [
+    9001,
+    9002,
+    9003,
+    9004
+  ],
+  "parents": [
+    "validation-2101.npy",
+    "validation-2201.npy"
+  ],
+  "aim": "Increase completed service, preserving coverage/conflict/timeout reporting; no success assumption.",
+  "baseline": "Original 64-episode checkpoints. Failed BC candidate not substituted.",
+  "unchanged": "Water, initial states, personnel, service radius/time/water checks, collision resolution, 300-step limit, reward, weights, metrics.",
+  "hold": "Force hover only when already inside a discovered unserved target service radius.",
+  "commit": "Maintain unique assignment to discovered target; approach and hover, otherwise proposed neural action.",
+  "commitment": "Existing ownership first, keep assignment, then shortest agent-target distance; deterministic ties.",
+  "release": "Completed/no longer observed target, last observed local water unsafe, 40-step assignment timeout or 3 consecutive stalls; agent-target cooldown 10 steps.",
+  "unknown_water": "Not certified safe; approach/hover may be attempted but only unchanged Env determines actual service completion over full interval.",
+  "info": "Controller receives exactly actor observation and action mask, no Env/truth/future access.",
+  "attribution": "Learning policy plus explicit controller. Not neural learning gain or original-algorithm ranking. No retraining.",
+  "budgets": "CPU2, serial, 6 algorithms x 2 wrappers x 8 validations; final 50-scene test unused.",
+  "controller_hash": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f",
+  "script_hash": "2992f85626a3e3f3fd8d8b9e449a1bbcb1a6c73c514a8391a659d02a45fd0ff3",
+  "source_hashes": {
+    "__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b"
+  },
+  "data_hash": "dde867a71c348eb239086fc9b6f1ad749c3b6b9516bc33eae999746f7ea5ff5a",
+  "checkpoint_hashes": {
+    "happo": "211cad6dbff4517dad5afe2b63fa5df8ec2797fbcb6e801c0934f71d7e74fc3a",
+    "hatrpo": "68bff857de5036f50505fbdbcd96d1eaa1ed3a3e4b638b0d95ae0694f63a8f84",
+    "hasac": "c9756b4e4465335a49fd29f30986291198fba979221a7a057a40483912fe5fb7",
+    "maac": "1611198d4797dc41cdaf09056340ea23b72b2be40b188090485ad401303ea953",
+    "mat": "214b156456ef1a9c203b1f5da08de09ab84dc36ec7c19af0a8d4e0f7d3168fd6",
+    "coma": "5f97a822a81b761c76848dcd64c37cdcec080af64280b5e0f49bd605d6569a36"
+  }
+}

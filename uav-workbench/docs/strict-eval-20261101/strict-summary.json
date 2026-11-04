@@ -1,0 +1,5806 @@
+{
+  "status": "completed",
+  "summary": [
+    {
+      "candidate": "coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.96,
+        "RCR": 0.9980000000000001,
+        "coverage": 1.0,
+        "ACC": 0.015858308904577834,
+        "ST": 109.2
+      },
+      "ci95": {
+        "task_complete": [
+          0.9,
+          1.0
+        ],
+        "RCR": [
+          0.995,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.01105470704271353,
+          0.020888401657437133
+        ],
+        "ST": [
+          100.24,
+          121.42
+        ]
+      },
+      "max_conflicts": 12,
+      "failed_rollouts": 2,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 48,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8653990931249297,
+          0.9889611156723802
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": true,
+        "confidence": 0.975,
+        "means": {
+          "task_complete": -0.02,
+          "RCR": -0.0010000000000000009,
+          "coverage": 0.0,
+          "ACC": 0.007240182422447731,
+          "ST": 23.88
+        },
+        "intervals": {
+          "task_complete": [
+            -0.1,
+            0.06
+          ],
+          "RCR": [
+            -0.0050000000000000044,
+            0.0030000000000000027
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.0034930777748225328,
+            0.016688495071734682
+          ],
+          "ST": [
+            8.059750000000001,
+            40.12
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.9,
+        "RCR": 0.9949999999999999,
+        "coverage": 1.0,
+        "ACC": 0.07258804018915758,
+        "ST": 123.7
+      },
+      "ci95": {
+        "task_complete": [
+          0.75,
+          1.0
+        ],
+        "RCR": [
+          0.9875,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.06092849745587579,
+          0.08453876250561786
+        ],
+        "ST": [
+          103.35,
+          153.10124999999996
+        ]
+      },
+      "max_conflicts": 12,
+      "failed_rollouts": 2,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 18,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.6989663547715128,
+          0.9721335187862319
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.1,
+          "RCR": -0.0050000000000000044,
+          "coverage": 0.0,
+          "ACC": 0.0418837246777857,
+          "ST": 43.05
+        },
+        "intervals": {
+          "task_complete": [
+            -0.25,
+            0.0
+          ],
+          "RCR": [
+            -0.012500000000000011,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            0.01654606933932223,
+            0.06106202395135038
+          ],
+          "ST": [
+            21.95,
+            73.1
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "coma",
+      "variant": "full",
+      "mode": "sample",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 150,
+      "means": {
+        "task_complete": 0.9533333333333333,
+        "RCR": 0.9966666666666667,
+        "coverage": 1.0,
+        "ACC": 0.02194414895475779,
+        "ST": 117.16666666666664
+      },
+      "ci95": {
+        "task_complete": [
+          0.8933333333333333,
+          1.0
+        ],
+        "RCR": [
+          0.9916666666666667,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.015501455945953304,
+          0.029034519032913195
+        ],
+        "ST": [
+          107.88000000000004,
+          129.46033333333332
+        ]
+      },
+      "max_conflicts": 65,
+      "failed_rollouts": 7,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 47,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8378290831116182,
+          0.979385029651026
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.371,
+        "coverage": 0.39510000000000006,
+        "ACC": 0.005600000000000001,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.30700000000000005,
+          0.439
+        ],
+        "coverage": [
+          0.34703265,
+          0.44637879999999996
+        ],
+        "ACC": [
+          0.0038000000000000013,
+          0.007400000000000003
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 6,
+      "failed_rollouts": 50,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.0475,
+        "coverage": 0.23447500000000007,
+        "ACC": 0.01966666666666667,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.0,
+          0.1425
+        ],
+        "coverage": [
+          0.21370000000000008,
+          0.27602500000000013
+        ],
+        "ACC": [
+          0.019,
+          0.020000000000000004
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 6,
+      "failed_rollouts": 20,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.94,
+        "RCR": 0.9970000000000002,
+        "coverage": 1.0,
+        "ACC": 0.014832034099997018,
+        "ST": 119.28
+      },
+      "ci95": {
+        "task_complete": [
+          0.86,
+          1.0
+        ],
+        "RCR": [
+          0.9930000000000001,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.009403466892965704,
+          0.020769672088781697
+        ],
+        "ST": [
+          106.1995,
+          135.10049999999998
+        ]
+      },
+      "max_conflicts": 9,
+      "failed_rollouts": 3,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 47,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8378290831116182,
+          0.979385029651026
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.04,
+          "RCR": -0.0020000000000000018,
+          "coverage": 0.0,
+          "ACC": 0.006213907617866911,
+          "ST": 33.96
+        },
+        "intervals": {
+          "task_complete": [
+            -0.12,
+            0.04
+          ],
+          "RCR": [
+            -0.006000000000000005,
+            0.0020000000000000018
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.004077538194140378,
+            0.015626276321098958
+          ],
+          "ST": [
+            17.22,
+            51.62
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.95,
+        "RCR": 0.9974999999999999,
+        "coverage": 1.0,
+        "ACC": 0.05321371929560932,
+        "ST": 117.85
+      },
+      "ci95": {
+        "task_complete": [
+          0.85,
+          1.0
+        ],
+        "RCR": [
+          0.9924999999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.0356954908683394,
+          0.07381930633147286
+        ],
+        "ST": [
+          104.75,
+          139.3
+        ]
+      },
+      "max_conflicts": 19,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 19,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.763868806553258,
+          0.9911185511992047
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.05,
+          "RCR": -0.0025000000000000022,
+          "coverage": 0.0,
+          "ACC": 0.022509403784237433,
+          "ST": 37.2
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            0.0
+          ],
+          "RCR": [
+            -0.007500000000000007,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.012835250143320641,
+            0.05492059832422223
+          ],
+          "ST": [
+            24.15,
+            58.25
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7619999999999998,
+        "coverage": 0.7212040000000001,
+        "ACC": 0.026000000000000006,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7249999999999999,
+          0.7969999999999997
+        ],
+        "coverage": [
+          0.70410395,
+          0.7380422000000001
+        ],
+        "ACC": [
+          0.006400000000000001,
+          0.05406833333333329
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 142,
+      "failed_rollouts": 50,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9349999999999999,
+        "coverage": 0.7049049999999999,
+        "ACC": 0.020999999999999998,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.8849999999999998,
+          0.975
+        ],
+        "coverage": [
+          0.6854235000000002,
+          0.724505125
+        ],
+        "ACC": [
+          0.013500000000000002,
+          0.029833333333333333
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 24,
+      "failed_rollouts": 20,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.87,
+        "RCR": 0.9930000000000002,
+        "coverage": 1.0,
+        "ACC": 0.006718082511793904,
+        "ST": 139.1
+      },
+      "ci95": {
+        "task_complete": [
+          0.78,
+          0.95
+        ],
+        "RCR": [
+          0.988,
+          0.9975
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.004324220620221379,
+          0.009307696367162227
+        ],
+        "ST": [
+          123.32975,
+          156.99075
+        ]
+      },
+      "max_conflicts": 6,
+      "failed_rollouts": 13,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 42,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.7148578393696501,
+          0.916625793219666
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.11,
+          "RCR": -0.006000000000000003,
+          "coverage": 0.0,
+          "ACC": -0.0019000439703362017,
+          "ST": 53.78
+        },
+        "intervals": {
+          "task_complete": [
+            -0.2,
+            -0.04
+          ],
+          "RCR": [
+            -0.010500000000000008,
+            -0.0020000000000000018
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.009751840902132438,
+            0.004220982700541265
+          ],
+          "ST": [
+            39.42975,
+            70.01
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.032424031589506505,
+        "ST": 106.875
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.021816379361489023,
+          0.04333818316688112
+        ],
+        "ST": [
+          103.825,
+          109.825
+        ]
+      },
+      "max_conflicts": 12,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": 0.001719716078134614,
+          "ST": 26.225
+        },
+        "intervals": {
+          "task_complete": [
+            0.0,
+            0.0
+          ],
+          "RCR": [
+            0.0,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.023254156676320647,
+            0.024036225429096166
+          ],
+          "ST": [
+            22.5,
+            30.125
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.5874999999999999,
+        "coverage": 0.591906,
+        "ACC": 0.0025000000000000005,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.5419999999999999,
+          0.632
+        ],
+        "coverage": [
+          0.5630746999999999,
+          0.6207800000000001
+        ],
+        "ACC": [
+          0.0015,
+          0.0035666666666666676
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 9,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.8762499999999998,
+        "coverage": 0.6218725,
+        "ACC": 0.024000000000000004,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7825,
+          0.95
+        ],
+        "coverage": [
+          0.5927423125,
+          0.6463410625
+        ],
+        "ACC": [
+          0.008333333333333335,
+          0.050749999999999997
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 156,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_hasac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.9,
+        "RCR": 0.9945,
+        "coverage": 1.0,
+        "ACC": 0.010771461941014207,
+        "ST": 134.25
+      },
+      "ci95": {
+        "task_complete": [
+          0.83,
+          0.96
+        ],
+        "RCR": [
+          0.9905000000000003,
+          0.998
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.007594686089532849,
+          0.0142649063543887
+        ],
+        "ST": [
+          121.22975000000001,
+          148.67174999999997
+        ]
+      },
+      "max_conflicts": 19,
+      "failed_rollouts": 10,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 42,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.7148578393696501,
+          0.916625793219666
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": true,
+        "confidence": 0.975,
+        "means": {
+          "task_complete": -0.08,
+          "RCR": -0.004500000000000004,
+          "coverage": 0.0,
+          "ACC": 0.002153335458884097,
+          "ST": 48.93
+        },
+        "intervals": {
+          "task_complete": [
+            -0.17,
+            -0.01
+          ],
+          "RCR": [
+            -0.008500000000000008,
+            -0.0010000000000000009
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.008089654527326292,
+            0.01007167215642088
+          ],
+          "ST": [
+            33.069375,
+            66.77062500000004
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_hasac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.975,
+        "RCR": 0.99875,
+        "coverage": 1.0,
+        "ACC": 0.02758023700577956,
+        "ST": 111.95
+      },
+      "ci95": {
+        "task_complete": [
+          0.925,
+          1.0
+        ],
+        "RCR": [
+          0.9962499999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.01702290723824734,
+          0.03901937194825476
+        ],
+        "ST": [
+          104.15,
+          122.775
+        ]
+      },
+      "max_conflicts": 12,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 19,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.763868806553258,
+          0.9911185511992047
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.025,
+          "RCR": -0.0012500000000000011,
+          "coverage": 0.0,
+          "ACC": -0.0031240785055923334,
+          "ST": 31.3
+        },
+        "intervals": {
+          "task_complete": [
+            -0.075,
+            0.0
+          ],
+          "RCR": [
+            -0.0037500000000000033,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.030078015942624214,
+            0.017534984622603726
+          ],
+          "ST": [
+            22.35,
+            43.00062499999999
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_hasac",
+      "variant": "full",
+      "mode": "sample",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 300,
+      "means": {
+        "task_complete": 0.9066666666666666,
+        "RCR": 0.9945000000000002,
+        "coverage": 1.0,
+        "ACC": 0.008520901882051311,
+        "ST": 144.76000000000005
+      },
+      "ci95": {
+        "task_complete": [
+          0.8633333333333332,
+          0.9466666666666668
+        ],
+        "RCR": [
+          0.9918333333333337,
+          0.9968333333333335
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.006995351420571307,
+          0.010052266878317348
+        ],
+        "ST": [
+          137.77325,
+          152.66341666666668
+        ]
+      },
+      "max_conflicts": 20,
+      "failed_rollouts": 28,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 34,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.5418970269185592,
+          0.7924178373934316
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_hasac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7239999999999999,
+        "coverage": 0.7452120000000001,
+        "ACC": 0.08310000000000002,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.6764999999999999,
+          0.7705
+        ],
+        "coverage": [
+          0.7128378249999999,
+          0.7775322250000001
+        ],
+        "ACC": [
+          0.06506499999999996,
+          0.10249999999999998
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 181,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_hasac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9275,
+        "coverage": 0.777935,
+        "ACC": 0.045000000000000005,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.8775000000000001,
+          0.9675
+        ],
+        "coverage": [
+          0.7582048124999999,
+          0.79595575
+        ],
+        "ACC": [
+          0.02591666666666667,
+          0.06941666666666667
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 90,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_hatrpo",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.91,
+        "RCR": 0.9950000000000001,
+        "coverage": 1.0,
+        "ACC": 0.016348507805376184,
+        "ST": 131.82
+      },
+      "ci95": {
+        "task_complete": [
+          0.84,
+          0.97
+        ],
+        "RCR": [
+          0.9910000000000002,
+          0.9980000000000001
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.012057911660832865,
+          0.020777915624827996
+        ],
+        "ST": [
+          118.98,
+          146.35074999999998
+        ]
+      },
+      "max_conflicts": 12,
+      "failed_rollouts": 9,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 43,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.7381380628941446,
+          0.9304916657298371
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.07,
+          "RCR": -0.0040000000000000036,
+          "coverage": 0.0,
+          "ACC": 0.007730381323246075,
+          "ST": 46.5
+        },
+        "intervals": {
+          "task_complete": [
+            -0.14,
+            -0.01
+          ],
+          "RCR": [
+            -0.007500000000000007,
+            -0.0010000000000000009
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            5.9257038485452576e-05,
+            0.01471694077070486
+          ],
+          "ST": [
+            32.829499999999996,
+            61.56149999999998
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_hatrpo",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.03753916006938596,
+        "ST": 112.075
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.026755300158612615,
+          0.04895852144769386
+        ],
+        "ST": [
+          107.925,
+          116.2
+        ]
+      },
+      "max_conflicts": 17,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": 0.006834844558014068,
+          "ST": 31.425
+        },
+        "intervals": {
+          "task_complete": [
+            0.0,
+            0.0
+          ],
+          "RCR": [
+            0.0,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.022139741022884588,
+            0.030056639768845237
+          ],
+          "ST": [
+            26.95,
+            35.6
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_hatrpo",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7715,
+        "coverage": 0.7843919999999999,
+        "ACC": 0.16613333333333333,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7395000000000002,
+          0.8019999999999997
+        ],
+        "coverage": [
+          0.7626537749999999,
+          0.8064689500000003
+        ],
+        "ACC": [
+          0.13179749999999998,
+          0.20136833333333334
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 295,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_hatrpo",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9424999999999997,
+        "coverage": 0.7815175,
+        "ACC": 0.17608333333333334,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.8787499999999998,
+          0.9887499999999998
+        ],
+        "coverage": [
+          0.7603874375,
+          0.80074025
+        ],
+        "ACC": [
+          0.13341458333333334,
+          0.2185020833333333
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 225,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.9,
+        "RCR": 0.9940000000000001,
+        "coverage": 0.999996,
+        "ACC": 0.0136583943795271,
+        "ST": 136.32
+      },
+      "ci95": {
+        "task_complete": [
+          0.82,
+          0.96
+        ],
+        "RCR": [
+          0.9894875,
+          0.998
+        ],
+        "coverage": [
+          0.999988,
+          1.0
+        ],
+        "ACC": [
+          0.009140316560240874,
+          0.01864138176237931
+        ],
+        "ST": [
+          124.06899999999999,
+          150.56025
+        ]
+      },
+      "max_conflicts": 42,
+      "failed_rollouts": 10,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 42,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.7148578393696501,
+          0.916625793219666
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.08,
+          "RCR": -0.005000000000000002,
+          "coverage": -3.999999999999559e-06,
+          "ACC": 0.005040267897396989,
+          "ST": 51.0
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            -0.02
+          ],
+          "RCR": [
+            -0.009500000000000001,
+            -0.0015000000000000013
+          ],
+          "coverage": [
+            -1.1999999999998679e-05,
+            0.0
+          ],
+          "ACC": [
+            -0.004273254930395773,
+            0.013174653478448395
+          ],
+          "ST": [
+            37.67975,
+            65.67025
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.975,
+        "RCR": 0.99875,
+        "coverage": 1.0,
+        "ACC": 0.040021838803811514,
+        "ST": 119.825
+      },
+      "ci95": {
+        "task_complete": [
+          0.925,
+          1.0
+        ],
+        "RCR": [
+          0.9962499999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.030838292008835987,
+          0.049565095902554146
+        ],
+        "ST": [
+          112.425,
+          131.35
+        ]
+      },
+      "max_conflicts": 15,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 19,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.763868806553258,
+          0.9911185511992047
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.025,
+          "RCR": -0.0012500000000000011,
+          "coverage": 0.0,
+          "ACC": 0.009317523292439624,
+          "ST": 39.175
+        },
+        "intervals": {
+          "task_complete": [
+            -0.075,
+            0.0
+          ],
+          "RCR": [
+            -0.0037500000000000033,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.016524515456302333,
+            0.02837672055329478
+          ],
+          "ST": [
+            31.524375,
+            50.4
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7649999999999997,
+        "coverage": 0.7766919999999996,
+        "ACC": 0.0663,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7319999999999998,
+          0.7970125000000001
+        ],
+        "coverage": [
+          0.7566703749999999,
+          0.7964791750000001
+        ],
+        "ACC": [
+          0.04783249999999999,
+          0.08676666666666667
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 160,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9650000000000001,
+        "coverage": 0.7761774999999999,
+        "ACC": 0.09308333333333332,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.9424999999999999,
+          0.9824999999999999
+        ],
+        "coverage": [
+          0.7576724375,
+          0.794025125
+        ],
+        "ACC": [
+          0.05291666666666667,
+          0.13708541666666665
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 163,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.87,
+        "RCR": 0.9935,
+        "coverage": 1.0,
+        "ACC": 0.016446802447762907,
+        "ST": 143.19
+      },
+      "ci95": {
+        "task_complete": [
+          0.8,
+          0.93
+        ],
+        "RCR": [
+          0.9900000000000003,
+          0.9965000000000002
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.011423918728512191,
+          0.02201095149872484
+        ],
+        "ST": [
+          130.12,
+          157.2
+        ]
+      },
+      "max_conflicts": 38,
+      "failed_rollouts": 13,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 38,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6258731624205708,
+          0.8570260860300828
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.11,
+          "RCR": -0.005500000000000005,
+          "coverage": 0.0,
+          "ACC": 0.007828675965632801,
+          "ST": 57.87
+        },
+        "intervals": {
+          "task_complete": [
+            -0.18,
+            -0.04
+          ],
+          "RCR": [
+            -0.009000000000000008,
+            -0.0020000000000000018
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.002252009057533632,
+            0.01686325325518602
+          ],
+          "ST": [
+            43.55,
+            72.67025
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.03256612114558467,
+        "ST": 111.65
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.022440620167662937,
+          0.04426745323965337
+        ],
+        "ST": [
+          107.75,
+          115.825
+        ]
+      },
+      "max_conflicts": 12,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": 0.0018618056342127882,
+          "ST": 31.0
+        },
+        "intervals": {
+          "task_complete": [
+            0.0,
+            0.0
+          ],
+          "RCR": [
+            0.0,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.027026222731977315,
+            0.024517628572179182
+          ],
+          "ST": [
+            26.35,
+            35.925
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "happo_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7375000000000002,
+        "coverage": 0.7429910000000001,
+        "ACC": 0.023033333333333336,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7035000000000001,
+          0.7709999999999997
+        ],
+        "coverage": [
+          0.7204246500000003,
+          0.7658339750000002
+        ],
+        "ACC": [
+          0.013166666666666669,
+          0.03550083333333332
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 117,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "happo_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.8524999999999998,
+        "coverage": 0.7061975000000001,
+        "ACC": 0.07091666666666667,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7725,
+          0.925
+        ],
+        "coverage": [
+          0.6817093125,
+          0.731870875
+        ],
+        "ACC": [
+          0.04608124999999999,
+          0.09758333333333333
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 96,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.92,
+        "RCR": 0.9960000000000002,
+        "coverage": 1.0,
+        "ACC": 0.00734097367041748,
+        "ST": 130.12
+      },
+      "ci95": {
+        "task_complete": [
+          0.84,
+          0.98
+        ],
+        "RCR": [
+          0.992,
+          0.9990000000000001
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.0040541567892161895,
+          0.011130615533911698
+        ],
+        "ST": [
+          115.8795,
+          146.9605
+        ]
+      },
+      "max_conflicts": 6,
+      "failed_rollouts": 4,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 46,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8116175308165717,
+          0.968450485911407
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.06,
+          "RCR": -0.0030000000000000027,
+          "coverage": 0.0,
+          "ACC": -0.001277152811712627,
+          "ST": 44.8
+        },
+        "intervals": {
+          "task_complete": [
+            -0.14,
+            0.02
+          ],
+          "RCR": [
+            -0.007000000000000006,
+            0.0010000000000000009
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.00938207968445287,
+            0.005090077527315528
+          ],
+          "ST": [
+            27.3,
+            62.94049999999999
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.95,
+        "RCR": 0.9974999999999999,
+        "coverage": 1.0,
+        "ACC": 0.018889606755424247,
+        "ST": 117.45
+      },
+      "ci95": {
+        "task_complete": [
+          0.85,
+          1.0
+        ],
+        "RCR": [
+          0.9924999999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.010172745911573147,
+          0.029044296500496638
+        ],
+        "ST": [
+          104.65,
+          138.95
+        ]
+      },
+      "max_conflicts": 9,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 19,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.763868806553258,
+          0.9911185511992047
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.05,
+          "RCR": -0.0025000000000000022,
+          "coverage": 0.0,
+          "ACC": -0.011814708755947638,
+          "ST": 36.8
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            0.0
+          ],
+          "RCR": [
+            -0.007500000000000007,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.03996694040207587,
+            0.008624781212080391
+          ],
+          "ST": [
+            23.0,
+            58.601249999999986
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.8250000000000002,
+        "coverage": 0.8480600000000004,
+        "ACC": 0.03200000000000001,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7930000000000003,
+          0.8550000000000003
+        ],
+        "coverage": [
+          0.8238633499999999,
+          0.8694941499999999
+        ],
+        "ACC": [
+          0.020466666666666668,
+          0.04573333333333334
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 78,
+      "failed_rollouts": 50,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9674999999999999,
+        "coverage": 0.8230299999999999,
+        "ACC": 0.016000000000000004,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.9175000000000001,
+          0.9974999999999999
+        ],
+        "coverage": [
+          0.7949195000000001,
+          0.8488552500000001
+        ],
+        "ACC": [
+          0.008333333333333335,
+          0.025
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 22,
+      "failed_rollouts": 20,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.91,
+        "RCR": 0.9945000000000002,
+        "coverage": 1.0,
+        "ACC": 0.008361761824900926,
+        "ST": 129.81
+      },
+      "ci95": {
+        "task_complete": [
+          0.83,
+          0.97
+        ],
+        "RCR": [
+          0.9890000000000001,
+          0.9985
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.004806577165100544,
+          0.012717194746415673
+        ],
+        "ST": [
+          117.3,
+          144.98099999999997
+        ]
+      },
+      "max_conflicts": 39,
+      "failed_rollouts": 9,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 44,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.7619518261679701,
+          0.9438239984906773
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.07,
+          "RCR": -0.004500000000000001,
+          "coverage": 0.0,
+          "ACC": -0.0002563646572291811,
+          "ST": 44.49
+        },
+        "intervals": {
+          "task_complete": [
+            -0.14,
+            -0.02
+          ],
+          "RCR": [
+            -0.0085,
+            -0.0014999999999999992
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.0068909386226641035,
+            0.00562780425866133
+          ],
+          "ST": [
+            33.5195,
+            57.49074999999999
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.975,
+        "RCR": 0.99875,
+        "coverage": 1.0,
+        "ACC": 0.02335846973687881,
+        "ST": 111.025
+      },
+      "ci95": {
+        "task_complete": [
+          0.925,
+          1.0
+        ],
+        "RCR": [
+          0.9962499999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.015385730709856979,
+          0.03355242901355276
+        ],
+        "ST": [
+          104.125,
+          122.3
+        ]
+      },
+      "max_conflicts": 18,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 19,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.763868806553258,
+          0.9911185511992047
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.025,
+          "RCR": -0.0012500000000000011,
+          "coverage": 0.0,
+          "ACC": -0.007345845774493075,
+          "ST": 30.375
+        },
+        "intervals": {
+          "task_complete": [
+            -0.075,
+            0.0
+          ],
+          "RCR": [
+            -0.0037500000000000033,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.03386147891778878,
+            0.013050961634089576
+          ],
+          "ST": [
+            22.375,
+            41.725
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.6829999999999999,
+        "coverage": 0.6904690000000001,
+        "ACC": 0.017666666666666667,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.6434999999999998,
+          0.7214999999999999
+        ],
+        "coverage": [
+          0.6634848750000001,
+          0.7163980000000001
+        ],
+        "ACC": [
+          0.011333333333333338,
+          0.024834166666666654
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 48,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9262500000000001,
+        "coverage": 0.717535,
+        "ACC": 0.00891666666666667,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.8749999999999998,
+          0.9650000000000001
+        ],
+        "coverage": [
+          0.693579875,
+          0.7405484374999999
+        ],
+        "ACC": [
+          0.005833333333333334,
+          0.012750000000000003
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 21,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac_maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.87,
+        "RCR": 0.9920000000000002,
+        "coverage": 0.999796,
+        "ACC": 0.012203913073814196,
+        "ST": 140.49
+      },
+      "ci95": {
+        "task_complete": [
+          0.79,
+          0.94
+        ],
+        "RCR": [
+          0.9860000000000002,
+          0.9965000000000002
+        ],
+        "coverage": [
+          0.9993879999999998,
+          1.0
+        ],
+        "ACC": [
+          0.00821908217872223,
+          0.01676897858585357
+        ],
+        "ST": [
+          126.9095,
+          156.23349999999994
+        ]
+      },
+      "max_conflicts": 34,
+      "failed_rollouts": 13,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 40,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6696289406777459,
+          0.887562499842239
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.11,
+          "RCR": -0.007000000000000004,
+          "coverage": -0.00020399999999999973,
+          "ACC": 0.0035857865916840903,
+          "ST": 55.17
+        },
+        "intervals": {
+          "task_complete": [
+            -0.19,
+            -0.05
+          ],
+          "RCR": [
+            -0.011500000000000005,
+            -0.0030000000000000027
+          ],
+          "coverage": [
+            -0.0006119999999999993,
+            0.0
+          ],
+          "ACC": [
+            -0.002920374049843789,
+            0.009726812676152332
+          ],
+          "ST": [
+            42.37,
+            69.61025
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac_maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.975,
+        "RCR": 0.99875,
+        "coverage": 1.0,
+        "ACC": 0.029268541667055566,
+        "ST": 123.2
+      },
+      "ci95": {
+        "task_complete": [
+          0.925,
+          1.0
+        ],
+        "RCR": [
+          0.9962499999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.020959471583305255,
+          0.03789260865701256
+        ],
+        "ST": [
+          114.424375,
+          135.025
+        ]
+      },
+      "max_conflicts": 12,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 19,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.763868806553258,
+          0.9911185511992047
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.025,
+          "RCR": -0.0012500000000000011,
+          "coverage": 0.0,
+          "ACC": -0.0014357738443163217,
+          "ST": 42.55
+        },
+        "intervals": {
+          "task_complete": [
+            -0.075,
+            0.0
+          ],
+          "RCR": [
+            -0.0037500000000000033,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.022406371864022383,
+            0.014975757608639893
+          ],
+          "ST": [
+            32.75,
+            55.275
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac_maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.8185000000000001,
+        "coverage": 0.829458,
+        "ACC": 0.03833333333333333,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7985000000000002,
+          0.8384999999999998
+        ],
+        "coverage": [
+          0.8152816749999999,
+          0.8431846499999998
+        ],
+        "ACC": [
+          0.028899166666666653,
+          0.05016666666666666
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 132,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac_maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.97,
+        "coverage": 0.7754175,
+        "ACC": 0.03075000000000001,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.945,
+          0.99
+        ],
+        "coverage": [
+          0.7485538124999999,
+          0.8012451250000001
+        ],
+        "ACC": [
+          0.021416666666666674,
+          0.04208333333333334
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 53,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.9,
+        "RCR": 0.9945,
+        "coverage": 1.0,
+        "ACC": 0.012286414864381416,
+        "ST": 140.31
+      },
+      "ci95": {
+        "task_complete": [
+          0.83,
+          0.96
+        ],
+        "RCR": [
+          0.9910000000000001,
+          0.9975000000000002
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.008581121734154248,
+          0.01616414660789027
+        ],
+        "ST": [
+          126.73975,
+          155.50025
+        ]
+      },
+      "max_conflicts": 28,
+      "failed_rollouts": 10,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 41,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6920394632569922,
+          0.9022980732976582
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.08,
+          "RCR": -0.004500000000000004,
+          "coverage": 0.0,
+          "ACC": 0.00366828838225131,
+          "ST": 54.99
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            -0.02
+          ],
+          "RCR": [
+            -0.007500000000000007,
+            -0.0015000000000000013
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.005068050558204787,
+            0.010930696312288463
+          ],
+          "ST": [
+            40.079,
+            70.96049999999998
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.925,
+        "RCR": 0.9950000000000001,
+        "coverage": 0.9999800000000001,
+        "ACC": 0.03202643191334646,
+        "ST": 131.4
+      },
+      "ci95": {
+        "task_complete": [
+          0.85,
+          1.0
+        ],
+        "RCR": [
+          0.9887499999999999,
+          1.0
+        ],
+        "coverage": [
+          0.9999399999999999,
+          1.0
+        ],
+        "ACC": [
+          0.02107277261085004,
+          0.04307288488855913
+        ],
+        "ST": [
+          117.049375,
+          148.050625
+        ]
+      },
+      "max_conflicts": 17,
+      "failed_rollouts": 3,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 17,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.6395811352592431,
+          0.9476312541037835
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.075,
+          "RCR": -0.0050000000000000044,
+          "coverage": -1.9999999999997796e-05,
+          "ACC": 0.001322116401974573,
+          "ST": 50.75
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            0.0
+          ],
+          "RCR": [
+            -0.01125000000000001,
+            0.0
+          ],
+          "coverage": [
+            -5.9999999999993395e-05,
+            0.0
+          ],
+          "ACC": [
+            -0.02934401850959124,
+            0.024272048690186194
+          ],
+          "ST": [
+            36.599375,
+            66.60062499999998
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hasac_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.8199999999999998,
+        "coverage": 0.8256089999999999,
+        "ACC": 0.12633333333333335,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7904999999999999,
+          0.8484999999999999
+        ],
+        "coverage": [
+          0.8060419499999998,
+          0.843943625
+        ],
+        "ACC": [
+          0.10326666666666666,
+          0.14930166666666667
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 165,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hasac_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.885,
+        "coverage": 0.7936274999999998,
+        "ACC": 0.10941666666666668,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.80625,
+          0.95
+        ],
+        "coverage": [
+          0.7629023125,
+          0.8233976249999999
+        ],
+        "ACC": [
+          0.047,
+          0.18616666666666665
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 298,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.96,
+        "RCR": 0.9980000000000001,
+        "coverage": 1.0,
+        "ACC": 0.004510565492355884,
+        "ST": 118.86
+      },
+      "ci95": {
+        "task_complete": [
+          0.9,
+          1.0
+        ],
+        "RCR": [
+          0.995,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.0015911111111111109,
+          0.008314988124110244
+        ],
+        "ST": [
+          107.039,
+          133.76
+        ]
+      },
+      "max_conflicts": 7,
+      "failed_rollouts": 2,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 48,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8653990931249297,
+          0.9889611156723802
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.02,
+          "RCR": -0.0010000000000000009,
+          "coverage": 0.0,
+          "ACC": -0.004107560989774225,
+          "ST": 33.54
+        },
+        "intervals": {
+          "task_complete": [
+            -0.08,
+            0.04
+          ],
+          "RCR": [
+            -0.0040000000000000036,
+            0.0020000000000000018
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.01231187641354271,
+            0.0030580136610363928
+          ],
+          "ST": [
+            17.72,
+            49.3
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.030573101524119035,
+        "ST": 111.6
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.01946099308919893,
+          0.04249352494763359
+        ],
+        "ST": [
+          103.5,
+          123.2
+        ]
+      },
+      "max_conflicts": 9,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": -0.00013121398725285567,
+          "ST": 30.95
+        },
+        "intervals": {
+          "task_complete": [
+            0.0,
+            0.0
+          ],
+          "RCR": [
+            0.0,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.030919467987616113,
+            0.022605787063331197
+          ],
+          "ST": [
+            23.35,
+            42.3
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.6449999999999999,
+        "coverage": 0.6639880000000002,
+        "ACC": 0.002,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.594,
+          0.6959999999999998
+        ],
+        "coverage": [
+          0.627529,
+          0.7007508000000003
+        ],
+        "ACC": [
+          0.0008,
+          0.003401666666666643
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 7,
+      "failed_rollouts": 50,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7825,
+        "coverage": 0.646385,
+        "ACC": 0.008499999999999997,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.6025000000000003,
+          0.9324999999999999
+        ],
+        "coverage": [
+          0.5907898749999999,
+          0.69457525
+        ],
+        "ACC": [
+          0.004999999999999999,
+          0.012499999999999999
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 9,
+      "failed_rollouts": 20,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.85,
+        "RCR": 0.99,
+        "coverage": 0.999489,
+        "ACC": 0.011429769851475589,
+        "ST": 155.96
+      },
+      "ci95": {
+        "task_complete": [
+          0.75,
+          0.94
+        ],
+        "RCR": [
+          0.9820000000000002,
+          0.9965
+        ],
+        "coverage": [
+          0.998467,
+          1.0
+        ],
+        "ACC": [
+          0.007876467395117636,
+          0.015441098855967625
+        ],
+        "ST": [
+          139.79975000000002,
+          173.21025
+        ]
+      },
+      "max_conflicts": 30,
+      "failed_rollouts": 15,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 41,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6920394632569922,
+          0.9022980732976582
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.13,
+          "RCR": -0.009000000000000006,
+          "coverage": -0.0005109999999999992,
+          "ACC": 0.0028116433693454812,
+          "ST": 70.64
+        },
+        "intervals": {
+          "task_complete": [
+            -0.22,
+            -0.05
+          ],
+          "RCR": [
+            -0.015500000000000009,
+            -0.003500000000000003
+          ],
+          "coverage": [
+            -0.001428999999999998,
+            0.0
+          ],
+          "ACC": [
+            -0.006259299247096213,
+            0.010474319433482687
+          ],
+          "ST": [
+            55.86,
+            87.15
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.85,
+        "RCR": 0.99,
+        "coverage": 0.9999649999999999,
+        "ACC": 0.04452243884361218,
+        "ST": 156.375
+      },
+      "ci95": {
+        "task_complete": [
+          0.75,
+          0.95
+        ],
+        "RCR": [
+          0.9824999999999999,
+          0.9962500000000001
+        ],
+        "coverage": [
+          0.9998975,
+          1.0
+        ],
+        "ACC": [
+          0.03350933913260122,
+          0.05797467478350876
+        ],
+        "ST": [
+          142.3,
+          171.625
+        ]
+      },
+      "max_conflicts": 26,
+      "failed_rollouts": 6,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 14,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.4810271816464765,
+          0.8545227551323956
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.15,
+          "RCR": -0.010000000000000009,
+          "coverage": -3.50000000000017e-05,
+          "ACC": 0.013818123332240292,
+          "ST": 75.725
+        },
+        "intervals": {
+          "task_complete": [
+            -0.25,
+            -0.05
+          ],
+          "RCR": [
+            -0.017500000000000016,
+            -0.0037500000000000033
+          ],
+          "coverage": [
+            -0.00010250000000000536,
+            0.0
+          ],
+          "ACC": [
+            -0.017955795401440804,
+            0.040429739279181864
+          ],
+          "ST": [
+            61.5,
+            90.575
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.4965,
+        "coverage": 0.5288390000000001,
+        "ACC": 0.13736666666666664,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.456,
+          0.5379999999999999
+        ],
+        "coverage": [
+          0.49699895000000005,
+          0.5616855749999999
+        ],
+        "ACC": [
+          0.09399833333333331,
+          0.18573499999999998
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 313,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.43375,
+        "coverage": 0.45772250000000003,
+        "ACC": 0.14783333333333332,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.34375,
+          0.5175312499999997
+        ],
+        "coverage": [
+          0.42455725000000005,
+          0.4915196874999999
+        ],
+        "ACC": [
+          0.10683333333333334,
+          0.18716874999999994
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 161,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_hasac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.9,
+        "RCR": 0.9945000000000002,
+        "coverage": 1.0,
+        "ACC": 0.01564562767717391,
+        "ST": 138.34
+      },
+      "ci95": {
+        "task_complete": [
+          0.83,
+          0.96
+        ],
+        "RCR": [
+          0.9910000000000001,
+          0.9975000000000002
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.011148006663569533,
+          0.020567765435482638
+        ],
+        "ST": [
+          125.5195,
+          152.75025
+        ]
+      },
+      "max_conflicts": 17,
+      "failed_rollouts": 10,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 41,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6920394632569922,
+          0.9022980732976582
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.08,
+          "RCR": -0.004500000000000004,
+          "coverage": 0.0,
+          "ACC": 0.007027501195043797,
+          "ST": 53.02
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            -0.02
+          ],
+          "RCR": [
+            -0.007500000000000007,
+            -0.0020000000000000018
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.0016620400676431984,
+            0.01500936231476486
+          ],
+          "ST": [
+            39.94975,
+            67.43
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_hasac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.035175042711641576,
+        "ST": 106.825
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.025254211943866803,
+          0.045408161106668614
+        ],
+        "ST": [
+          103.525,
+          110.275
+        ]
+      },
+      "max_conflicts": 15,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": 0.004470727200269692,
+          "ST": 26.175
+        },
+        "intervals": {
+          "task_complete": [
+            0.0,
+            0.0
+          ],
+          "RCR": [
+            0.0,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.025910404653330842,
+            0.026203999671528755
+          ],
+          "ST": [
+            21.05,
+            31.25
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_hasac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.741,
+        "coverage": 0.7603750000000002,
+        "ACC": 0.14163333333333336,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7084999999999999,
+          0.774
+        ],
+        "coverage": [
+          0.7378199250000003,
+          0.7832462749999998
+        ],
+        "ACC": [
+          0.1149333333333333,
+          0.16960166666666665
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 168,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_hasac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9099999999999998,
+        "coverage": 0.7816399999999999,
+        "ACC": 0.15200000000000005,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.8424999999999999,
+          0.9637499999999999
+        ],
+        "coverage": [
+          0.759907125,
+          0.8018751875000001
+        ],
+        "ACC": [
+          0.12208333333333335,
+          0.18025208333333334
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 154,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.9,
+        "RCR": 0.9945000000000002,
+        "coverage": 1.0,
+        "ACC": 0.02076173476372391,
+        "ST": 134.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.82,
+          0.97
+        ],
+        "RCR": [
+          0.9899999999999999,
+          0.9980000000000001
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.01594131055867787,
+          0.02609952952439926
+        ],
+        "ST": [
+          120.52925,
+          149.60049999999998
+        ]
+      },
+      "max_conflicts": 31,
+      "failed_rollouts": 10,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 43,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.7381380628941446,
+          0.9304916657298371
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.08,
+          "RCR": -0.004500000000000001,
+          "coverage": 0.0,
+          "ACC": 0.01214360828159381,
+          "ST": 48.68
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            -0.02
+          ],
+          "RCR": [
+            -0.008000000000000005,
+            -0.0014999999999999992
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            0.00468606889097003,
+            0.01935240789596725
+          ],
+          "ST": [
+            37.2095,
+            61.98
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.975,
+        "RCR": 0.99875,
+        "coverage": 1.0,
+        "ACC": 0.049564006907177424,
+        "ST": 117.45
+      },
+      "ci95": {
+        "task_complete": [
+          0.925,
+          1.0
+        ],
+        "RCR": [
+          0.9962499999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.03782044520288572,
+          0.06344380820294247
+        ],
+        "ST": [
+          107.875,
+          130.1
+        ]
+      },
+      "max_conflicts": 37,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 19,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.763868806553258,
+          0.9911185511992047
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.025,
+          "RCR": -0.0012500000000000011,
+          "coverage": 0.0,
+          "ACC": 0.018859691395805532,
+          "ST": 36.8
+        },
+        "intervals": {
+          "task_complete": [
+            -0.075,
+            0.0
+          ],
+          "RCR": [
+            -0.0037500000000000033,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.012097892697398745,
+            0.04557076666484164
+          ],
+          "ST": [
+            28.05,
+            48.475
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.5429999999999999,
+        "coverage": 0.5827949999999998,
+        "ACC": 0.08319999999999997,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.49699999999999994,
+          0.5919999999999999
+        ],
+        "coverage": [
+          0.5437710999999997,
+          0.6254645499999997
+        ],
+        "ACC": [
+          0.06599916666666666,
+          0.10130000000000003
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 105,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.4774999999999999,
+        "coverage": 0.47314,
+        "ACC": 0.18308333333333332,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.41,
+          0.5462499999999999
+        ],
+        "coverage": [
+          0.4401824375,
+          0.5182732499999999
+        ],
+        "ACC": [
+          0.14375,
+          0.2213333333333333
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 162,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.88,
+        "RCR": 0.9935,
+        "coverage": 1.0,
+        "ACC": 0.01709356619464234,
+        "ST": 144.13
+      },
+      "ci95": {
+        "task_complete": [
+          0.8,
+          0.95
+        ],
+        "RCR": [
+          0.9890000000000003,
+          0.9970000000000002
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.012127834253660057,
+          0.02261012149846968
+        ],
+        "ST": [
+          130.19,
+          159.94025
+        ]
+      },
+      "max_conflicts": 23,
+      "failed_rollouts": 12,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 41,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6920394632569922,
+          0.9022980732976582
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.1,
+          "RCR": -0.005500000000000005,
+          "coverage": 0.0,
+          "ACC": 0.008475439712512241,
+          "ST": 58.81
+        },
+        "intervals": {
+          "task_complete": [
+            -0.18,
+            -0.03
+          ],
+          "RCR": [
+            -0.009500000000000008,
+            -0.0020000000000000018
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.0013527488162396392,
+            0.01723921477313062
+          ],
+          "ST": [
+            43.889,
+            75.05049999999999
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.95,
+        "RCR": 0.9974999999999999,
+        "coverage": 1.0,
+        "ACC": 0.039119436926453074,
+        "ST": 122.75
+      },
+      "ci95": {
+        "task_complete": [
+          0.875,
+          1.0
+        ],
+        "RCR": [
+          0.99375,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.030910503605571567,
+          0.047652605351825084
+        ],
+        "ST": [
+          111.1,
+          137.60062499999998
+        ]
+      },
+      "max_conflicts": 16,
+      "failed_rollouts": 2,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 18,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.6989663547715128,
+          0.9721335187862319
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.05,
+          "RCR": -0.0025000000000000022,
+          "coverage": 0.0,
+          "ACC": 0.008415121415081193,
+          "ST": 42.1
+        },
+        "intervals": {
+          "task_complete": [
+            -0.125,
+            0.0
+          ],
+          "RCR": [
+            -0.0062500000000000056,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.015894579179123867,
+            0.02543991375252062
+          ],
+          "ST": [
+            31.55,
+            55.925
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "hatrpo_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7030000000000001,
+        "coverage": 0.7090500000000002,
+        "ACC": 0.2056666666666667,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.6625,
+          0.7435
+        ],
+        "coverage": [
+          0.6831049749999999,
+          0.7348880250000002
+        ],
+        "ACC": [
+          0.1741,
+          0.2378358333333333
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 169,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "hatrpo_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.81875,
+        "coverage": 0.7133375,
+        "ACC": 0.12741666666666668,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.6975,
+          0.9212812499999997
+        ],
+        "coverage": [
+          0.6799694999999999,
+          0.7450009375
+        ],
+        "ACC": [
+          0.08324791666666667,
+          0.1743333333333333
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 157,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.96,
+        "RCR": 0.9980000000000001,
+        "coverage": 1.0,
+        "ACC": 0.012156525788026182,
+        "ST": 111.92
+      },
+      "ci95": {
+        "task_complete": [
+          0.9,
+          1.0
+        ],
+        "RCR": [
+          0.995,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.00418783342765516,
+          0.02194404462569654
+        ],
+        "ST": [
+          98.74,
+          128.24099999999999
+        ]
+      },
+      "max_conflicts": 45,
+      "failed_rollouts": 2,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 48,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8653990931249297,
+          0.9889611156723802
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.02,
+          "RCR": -0.0010000000000000009,
+          "coverage": 0.0,
+          "ACC": 0.003538399305896076,
+          "ST": 26.6
+        },
+        "intervals": {
+          "task_complete": [
+            -0.06,
+            0.0
+          ],
+          "RCR": [
+            -0.0030000000000000027,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.004583863030236749,
+            0.012480217886245624
+          ],
+          "ST": [
+            15.259500000000001,
+            40.08
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "maac",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.019889596503469796,
+        "ST": 88.05
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.005416375925598059,
+          0.03832611904935481
+        ],
+        "ST": [
+          85.55,
+          90.5
+        ]
+      },
+      "max_conflicts": 15,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": -0.010814719007902086,
+          "ST": 7.4
+        },
+        "intervals": {
+          "task_complete": [
+            0.0,
+            0.0
+          ],
+          "RCR": [
+            0.0,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.042735298358440144,
+            0.015079296306909113
+          ],
+          "ST": [
+            4.6,
+            10.20124999999998
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.7650000000000001,
+        "coverage": 0.7976400000000001,
+        "ACC": 0.022000000000000002,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.7080000000000001,
+          0.8200000000000002
+        ],
+        "coverage": [
+          0.7639604499999998,
+          0.8300986000000002
+        ],
+        "ACC": [
+          0.012533333333333336,
+          0.0336
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 58,
+      "failed_rollouts": 50,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "maac",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9349999999999998,
+        "coverage": 0.7564699999999999,
+        "ACC": 0.04633333333333333,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.8775000000000001,
+          0.9724999999999999
+        ],
+        "coverage": [
+          0.71437825,
+          0.7956214999999999
+        ],
+        "ACC": [
+          0.02783333333333333,
+          0.07316666666666667
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 76,
+      "failed_rollouts": 20,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "maac_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.97,
+        "RCR": 0.998,
+        "coverage": 0.999993,
+        "ACC": 0.004306635739009974,
+        "ST": 103.56
+      },
+      "ci95": {
+        "task_complete": [
+          0.93,
+          1.0
+        ],
+        "RCR": [
+          0.9954999999999999,
+          1.0
+        ],
+        "coverage": [
+          0.9999789999999998,
+          1.0
+        ],
+        "ACC": [
+          0.0020996391624638015,
+          0.006833178764856607
+        ],
+        "ST": [
+          96.15975,
+          112.36049999999999
+        ]
+      },
+      "max_conflicts": 9,
+      "failed_rollouts": 3,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 47,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8378290831116182,
+          0.979385029651026
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.01,
+          "RCR": -0.0010000000000000009,
+          "coverage": -7.000000000001449e-06,
+          "ACC": -0.0043114907431201326,
+          "ST": 18.24
+        },
+        "intervals": {
+          "task_complete": [
+            -0.05,
+            0.02
+          ],
+          "RCR": [
+            -0.0025000000000000022,
+            0.0
+          ],
+          "coverage": [
+            -2.100000000000435e-05,
+            0.0
+          ],
+          "ACC": [
+            -0.011844768125202779,
+            0.0011544697428945761
+          ],
+          "ST": [
+            9.7895,
+            27.16
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "maac_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.0248841952347335,
+        "ST": 85.675
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.014032950735061016,
+          0.03856448229236884
+        ],
+        "ST": [
+          83.65,
+          87.775
+        ]
+      },
+      "max_conflicts": 21,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": -0.005820120276638386,
+          "ST": 5.025
+        },
+        "intervals": {
+          "task_complete": [
+            0.0,
+            0.0
+          ],
+          "RCR": [
+            0.0,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.019928098592850364,
+            0.00588004472879823
+          ],
+          "ST": [
+            3.775,
+            6.275
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "maac_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.428,
+        "coverage": 0.4725390000000001,
+        "ACC": 0.0109,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.37449999999999994,
+          0.483
+        ],
+        "coverage": [
+          0.43164475000000013,
+          0.51624835
+        ],
+        "ACC": [
+          0.004866666666666667,
+          0.019468333333333313
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 111,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "maac_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.4574999999999999,
+        "coverage": 0.41167749999999986,
+        "ACC": 0.019333333333333334,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.41,
+          0.5112499999999999
+        ],
+        "coverage": [
+          0.3882903124999999,
+          0.44383306250000004
+        ],
+        "ACC": [
+          0.005666666666666666,
+          0.04241666666666667
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 107,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "maac_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.84,
+        "RCR": 0.9910000000000002,
+        "coverage": 1.0,
+        "ACC": 0.02020460589054604,
+        "ST": 160.31
+      },
+      "ci95": {
+        "task_complete": [
+          0.75,
+          0.92
+        ],
+        "RCR": [
+          0.9850000000000003,
+          0.9960000000000001
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.01409816215301385,
+          0.027070066563025484
+        ],
+        "ST": [
+          143.70925,
+          178.64049999999997
+        ]
+      },
+      "max_conflicts": 67,
+      "failed_rollouts": 16,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 39,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6475845041874634,
+          0.8724608402978559
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.14,
+          "RCR": -0.008000000000000005,
+          "coverage": 0.0,
+          "ACC": 0.011586479408415933,
+          "ST": 74.99
+        },
+        "intervals": {
+          "task_complete": [
+            -0.23,
+            -0.06
+          ],
+          "RCR": [
+            -0.012500000000000011,
+            -0.003999999999999999
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            0.002334875938638478,
+            0.020707260437551642
+          ],
+          "ST": [
+            59.24975,
+            92.30024999999999
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "maac_mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.925,
+        "RCR": 0.9962499999999999,
+        "coverage": 1.0,
+        "ACC": 0.034081473033324705,
+        "ST": 139.425
+      },
+      "ci95": {
+        "task_complete": [
+          0.85,
+          1.0
+        ],
+        "RCR": [
+          0.9924999999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.024747024421666753,
+          0.04410959493982185
+        ],
+        "ST": [
+          127.95,
+          153.35062499999998
+        ]
+      },
+      "max_conflicts": 29,
+      "failed_rollouts": 3,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 17,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.6395811352592431,
+          0.9476312541037835
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.075,
+          "RCR": -0.0037500000000000033,
+          "coverage": 0.0,
+          "ACC": 0.003377157521952815,
+          "ST": 58.775
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            0.0
+          ],
+          "RCR": [
+            -0.007500000000000007,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.024065501668806895,
+            0.024875392454488738
+          ],
+          "ST": [
+            46.125,
+            73.25
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "maac_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.706,
+        "coverage": 0.7415480000000001,
+        "ACC": 0.1407666666666667,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.6629999999999999,
+          0.7490000000000003
+        ],
+        "coverage": [
+          0.710042575,
+          0.7735041250000001
+        ],
+        "ACC": [
+          0.11649916666666663,
+          0.165035
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 142,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "maac_mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.56125,
+        "coverage": 0.6014899999999999,
+        "ACC": 0.2170833333333333,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.48624999999999996,
+          0.6487499999999999
+        ],
+        "coverage": [
+          0.5650843750000001,
+          0.6466483749999999
+        ],
+        "ACC": [
+          0.18483333333333335,
+          0.24358333333333332
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 136,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.98,
+        "RCR": 0.9990000000000001,
+        "coverage": 1.0,
+        "ACC": 0.013231122510066971,
+        "ST": 110.5
+      },
+      "ci95": {
+        "task_complete": [
+          0.94,
+          1.0
+        ],
+        "RCR": [
+          0.9969999999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.007933051312693416,
+          0.019170280545170358
+        ],
+        "ST": [
+          101.8,
+          122.26
+        ]
+      },
+      "max_conflicts": 11,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 49,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8950455641036219,
+          0.9964607407283539
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": 0.0,
+          "RCR": 0.0,
+          "coverage": 0.0,
+          "ACC": 0.0046129960279368614,
+          "ST": 25.18
+        },
+        "intervals": {
+          "task_complete": [
+            -0.06,
+            0.06
+          ],
+          "RCR": [
+            -0.0030000000000000027,
+            0.0030000000000000027
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.00541176367844847,
+            0.0138194202796191
+          ],
+          "ST": [
+            11.5995,
+            38.86099999999998
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "mat",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.85,
+        "RCR": 0.9924999999999999,
+        "coverage": 1.0,
+        "ACC": 0.037076643006037684,
+        "ST": 148.35
+      },
+      "ci95": {
+        "task_complete": [
+          0.7,
+          1.0
+        ],
+        "RCR": [
+          0.9849999999999998,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.02006807520889194,
+          0.05768469436559646
+        ],
+        "ST": [
+          122.39875,
+          177.25
+        ]
+      },
+      "max_conflicts": 51,
+      "failed_rollouts": 3,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 17,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.6395811352592431,
+          0.9476312541037835
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.15,
+          "RCR": -0.007500000000000007,
+          "coverage": 0.0,
+          "ACC": 0.006372327494665797,
+          "ST": 67.7
+        },
+        "intervals": {
+          "task_complete": [
+            -0.3,
+            0.0
+          ],
+          "RCR": [
+            -0.015000000000000013,
+            0.0
+          ],
+          "coverage": [
+            0.0,
+            0.0
+          ],
+          "ACC": [
+            -0.025822779086201505,
+            0.035298259563708016
+          ],
+          "ST": [
+            42.34875,
+            97.45
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.42,
+        "coverage": 0.46110400000000007,
+        "ACC": 0.2812666666666666,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.35200000000000004,
+          0.48800000000000004
+        ],
+        "coverage": [
+          0.4058504,
+          0.5163553499999999
+        ],
+        "ACC": [
+          0.18319999999999997,
+          0.3846666666666666
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 367,
+      "failed_rollouts": 50,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "mat",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.1325,
+        "coverage": 0.36363999999999985,
+        "ACC": 0.1651666666666667,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.01,
+          0.27749999999999997
+        ],
+        "coverage": [
+          0.31400499999999987,
+          0.4287749999999998
+        ],
+        "ACC": [
+          0.041666666666666644,
+          0.3011666666666665
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 231,
+      "failed_rollouts": 20,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "mat_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.86,
+        "RCR": 0.9910000000000001,
+        "coverage": 0.999825,
+        "ACC": 0.012497293592538867,
+        "ST": 148.81
+      },
+      "ci95": {
+        "task_complete": [
+          0.77,
+          0.94
+        ],
+        "RCR": [
+          0.985,
+          0.9960000000000001
+        ],
+        "coverage": [
+          0.999475,
+          1.0
+        ],
+        "ACC": [
+          0.009355329043839166,
+          0.015913311734948546
+        ],
+        "ST": [
+          133.01975000000002,
+          166.41
+        ]
+      },
+      "max_conflicts": 18,
+      "failed_rollouts": 14,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 40,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.6696289406777459,
+          0.887562499842239
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.12,
+          "RCR": -0.008000000000000005,
+          "coverage": -0.0001750000000000007,
+          "ACC": 0.0038791671104087605,
+          "ST": 63.49
+        },
+        "intervals": {
+          "task_complete": [
+            -0.21,
+            -0.04
+          ],
+          "RCR": [
+            -0.014000000000000005,
+            -0.0030000000000000027
+          ],
+          "coverage": [
+            -0.0005250000000000021,
+            0.0
+          ],
+          "ACC": [
+            -0.004102569863690582,
+            0.010647882093253364
+          ],
+          "ST": [
+            46.29,
+            81.681
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "mat_coma",
+      "variant": "full",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.925,
+        "RCR": 0.9949999999999999,
+        "coverage": 0.9998950000000001,
+        "ACC": 0.04037727753806747,
+        "ST": 130.675
+      },
+      "ci95": {
+        "task_complete": [
+          0.85,
+          1.0
+        ],
+        "RCR": [
+          0.9887499999999999,
+          1.0
+        ],
+        "coverage": [
+          0.9996849999999998,
+          1.0
+        ],
+        "ACC": [
+          0.030591599617084412,
+          0.051272259918650184
+        ],
+        "ST": [
+          117.775,
+          145.075
+        ]
+      },
+      "max_conflicts": 18,
+      "failed_rollouts": 3,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 17,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.6395811352592431,
+          0.9476312541037835
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      },
+      "vs_pure_planner": {
+        "confirmatory": false,
+        "confidence": 0.95,
+        "means": {
+          "task_complete": -0.075,
+          "RCR": -0.0050000000000000044,
+          "coverage": -0.00010499999999999954,
+          "ACC": 0.00967296202669558,
+          "ST": 50.025
+        },
+        "intervals": {
+          "task_complete": [
+            -0.15,
+            0.0
+          ],
+          "RCR": [
+            -0.01125000000000001,
+            0.0
+          ],
+          "coverage": [
+            -0.0003149999999999986,
+            0.0
+          ],
+          "ACC": [
+            -0.019305521253944597,
+            0.031399646030157935
+          ],
+          "ST": [
+            36.9,
+            65.675
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "mat_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 100,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.48949999999999994,
+        "coverage": 0.5128510000000002,
+        "ACC": 0.08156666666666666,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.44049999999999995,
+          0.5405
+        ],
+        "coverage": [
+          0.4772937499999999,
+          0.5505581500000002
+        ],
+        "ACC": [
+          0.0633,
+          0.10050166666666663
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 106,
+      "failed_rollouts": 100,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "mat_coma",
+      "variant": "no-cover",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 40,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.43375,
+        "coverage": 0.45167250000000003,
+        "ACC": 0.18275,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.33125,
+          0.5375
+        ],
+        "coverage": [
+          0.41519225,
+          0.48927218749999996
+        ],
+        "ACC": [
+          0.14933125,
+          0.21400000000000002
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 108,
+      "failed_rollouts": 40,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "pure_planner",
+      "variant": "planner",
+      "mode": "fixed",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.98,
+        "RCR": 0.9990000000000001,
+        "coverage": 1.0,
+        "ACC": 0.008618126482130105,
+        "ST": 85.32
+      },
+      "ci95": {
+        "task_complete": [
+          0.94,
+          1.0
+        ],
+        "RCR": [
+          0.9969999999999999,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.002305758746275246,
+          0.016401161628580636
+        ],
+        "ST": [
+          79.62,
+          95.22
+        ]
+      },
+      "max_conflicts": 43,
+      "failed_rollouts": 1,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 49,
+        "total_parents": 50,
+        "wilson_ci95": [
+          0.8950455641036219,
+          0.9964607407283539
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "pure_planner",
+      "variant": "planner",
+      "mode": "fixed",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.030704315511371892,
+        "ST": 80.65
+      },
+      "ci95": {
+        "task_complete": [
+          1.0,
+          1.0
+        ],
+        "RCR": [
+          1.0,
+          1.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "ACC": [
+          0.01274543468344591,
+          0.05606069225488128
+        ],
+        "ST": [
+          78.1,
+          83.35
+        ]
+      },
+      "max_conflicts": 21,
+      "failed_rollouts": 0,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 20,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0.8388748419471806,
+          1
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "uniform_service",
+      "variant": "no-cover",
+      "mode": "sample",
+      "stratum": "iid50",
+      "independent_parents": 50,
+      "rollouts": 50,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.915,
+        "coverage": 0.9195960000000001,
+        "ACC": 0.008666666666666665,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.887,
+          0.94
+        ],
+        "coverage": [
+          0.9045439,
+          0.93404605
+        ],
+        "ACC": [
+          0.005933333333333331,
+          0.01193333333333333
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 15,
+      "failed_rollouts": 50,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 50,
+        "wilson_ci95": [
+          6.938893903907228e-18,
+          0.07134759913335872
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    },
+    {
+      "candidate": "uniform_service",
+      "variant": "no-cover",
+      "mode": "sample",
+      "stratum": "orientation_cluster20",
+      "independent_parents": 20,
+      "rollouts": 20,
+      "means": {
+        "task_complete": 0.0,
+        "RCR": 0.9949999999999999,
+        "coverage": 0.909915,
+        "ACC": 0.012833333333333332,
+        "ST": 300.0
+      },
+      "ci95": {
+        "task_complete": [
+          0.0,
+          0.0
+        ],
+        "RCR": [
+          0.9875,
+          1.0
+        ],
+        "coverage": [
+          0.8909098749999999,
+          0.9272701250000001
+        ],
+        "ACC": [
+          0.008666666666666665,
+          0.017499999999999998
+        ],
+        "ST": [
+          300.0,
+          300.0
+        ]
+      },
+      "max_conflicts": 11,
+      "failed_rollouts": 20,
+      "training_seeds": 1,
+      "all_assignments_complete": {
+        "completed_parents": 0,
+        "total_parents": 20,
+        "wilson_ci95": [
+          0,
+          0.16112515805281938
+        ],
+        "definition": "All role/seed repetitions for this parent complete; binomial scene interval, not training-seed uncertainty."
+      }
+    }
+  ],
+  "rows": 5630,
+  "test_used_for_selection": false,
+  "training_seed_count": 1,
+  "bootstrap_unit": "independent parent field; roles averaged within case",
+  "caution": "Percentile scene intervals with one training seed; saturated metrics can have degenerate intervals, not a guarantee or proof of100percent success."
+}

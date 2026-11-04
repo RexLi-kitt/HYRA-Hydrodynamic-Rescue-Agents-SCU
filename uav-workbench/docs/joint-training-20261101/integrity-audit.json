@@ -1,0 +1,282 @@
+{
+  "status": "passed",
+  "parents_unchanged": true,
+  "training_source_unchanged": true,
+  "same_training_schedules": true,
+  "new_joint_episodes_total": 512,
+  "scope": "Integrity and finite-value audit only; not evidence of performance or real-world rescue validity.",
+  "groups": {
+    "hasac_mat": {
+      "training_episodes": 256,
+      "training_joint_steps": 76800,
+      "training_seed": 1001,
+      "case_role_counts": [
+        {
+          "case": "train-1101.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1101.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1201.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1201.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1301.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1301.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1401.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1401.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        }
+      ],
+      "learner_update_calls": [
+        512,
+        128
+      ],
+      "checkpoint_finite": true,
+      "checkpoint_sha256": "a3c9840c4216cff65d762b3c938d5aa4e225320e8780555f4d6e7c4bb7e28e79",
+      "best_joint_episode": 0,
+      "validation": [
+        {
+          "joint_episode": 0,
+          "coverage": 0.9377687499999999,
+          "rescued_ratio": 0.9375,
+          "potential_conflicts_per_step": 0.0071875,
+          "all_rescued": 13,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 64,
+          "coverage": 0.925371875,
+          "rescued_ratio": 0.91875,
+          "potential_conflicts_per_step": 0.014583333333333334,
+          "all_rescued": 10,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 128,
+          "coverage": 0.9436249999999999,
+          "rescued_ratio": 0.915625,
+          "potential_conflicts_per_step": 0.010729166666666666,
+          "all_rescued": 5,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 192,
+          "coverage": 0.919546875,
+          "rescued_ratio": 0.9015624999999999,
+          "potential_conflicts_per_step": 0.020520833333333332,
+          "all_rescued": 11,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 256,
+          "coverage": 0.886965625,
+          "rescued_ratio": 0.9,
+          "potential_conflicts_per_step": 0.030000000000000002,
+          "all_rescued": 7,
+          "whole_task_complete": 0
+        }
+      ]
+    },
+    "hasac_hatrpo": {
+      "training_episodes": 256,
+      "training_joint_steps": 76793,
+      "training_seed": 1001,
+      "case_role_counts": [
+        {
+          "case": "train-1101.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1101.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1201.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1201.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1301.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1301.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1401.npy",
+          "roles": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "episodes": 32
+        },
+        {
+          "case": "train-1401.npy",
+          "roles": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "episodes": 32
+        }
+      ],
+      "learner_update_calls": [
+        512,
+        128
+      ],
+      "checkpoint_finite": true,
+      "checkpoint_sha256": "a8af14c87134a960f22a4e77cad0075d784b56fa9828aee871f64270de26eefd",
+      "best_joint_episode": 64,
+      "validation": [
+        {
+          "joint_episode": 0,
+          "coverage": 0.925565625,
+          "rescued_ratio": 0.9328125,
+          "potential_conflicts_per_step": 0.025104166666666664,
+          "all_rescued": 12,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 64,
+          "coverage": 0.944540625,
+          "rescued_ratio": 0.9453125,
+          "potential_conflicts_per_step": 0.0109375,
+          "all_rescued": 13,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 128,
+          "coverage": 0.9175656249999999,
+          "rescued_ratio": 0.9171875,
+          "potential_conflicts_per_step": 0.013958333333333333,
+          "all_rescued": 14,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 192,
+          "coverage": 0.9086125,
+          "rescued_ratio": 0.8984375,
+          "potential_conflicts_per_step": 0.015833333333333335,
+          "all_rescued": 11,
+          "whole_task_complete": 0
+        },
+        {
+          "joint_episode": 256,
+          "coverage": 0.9545,
+          "rescued_ratio": 0.9500000000000001,
+          "potential_conflicts_per_step": 0.022395833333333334,
+          "all_rescued": 13,
+          "whole_task_complete": 0
+        }
+      ]
+    }
+  }
+}

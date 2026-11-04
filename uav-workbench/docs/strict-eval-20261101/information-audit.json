@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "tested_states": 24,
+  "tests": [
+    {
+      "algorithm": "happo",
+      "step": 0,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "step": 6,
+      "hidden_targets_changed": 17,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "step": 12,
+      "hidden_targets_changed": 16,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "happo",
+      "step": 17,
+      "hidden_targets_changed": 15,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hatrpo",
+      "step": 0,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hatrpo",
+      "step": 6,
+      "hidden_targets_changed": 17,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hatrpo",
+      "step": 12,
+      "hidden_targets_changed": 16,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hatrpo",
+      "step": 17,
+      "hidden_targets_changed": 13,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "step": 0,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "step": 6,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "step": 12,
+      "hidden_targets_changed": 17,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "hasac",
+      "step": 17,
+      "hidden_targets_changed": 15,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "maac",
+      "step": 0,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "maac",
+      "step": 6,
+      "hidden_targets_changed": 18,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "maac",
+      "step": 12,
+      "hidden_targets_changed": 17,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "maac",
+      "step": 17,
+      "hidden_targets_changed": 16,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "mat",
+      "step": 0,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "mat",
+      "step": 6,
+      "hidden_targets_changed": 17,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "mat",
+      "step": 12,
+      "hidden_targets_changed": 17,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "mat",
+      "step": 17,
+      "hidden_targets_changed": 16,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "coma",
+      "step": 0,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "coma",
+      "step": 6,
+      "hidden_targets_changed": 19,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "coma",
+      "step": 12,
+      "hidden_targets_changed": 18,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    },
+    {
+      "algorithm": "coma",
+      "step": 17,
+      "hidden_targets_changed": 18,
+      "future_changed": true,
+      "unknown_current_changed": true,
+      "observation_mask_and_actions_equal": true
+    }
+  ],
+  "scope": "Six single-learner parent policies and shared controller; train field only; no learner updates. Pair-specific ownership tested separately by strict preflight.",
+  "findings": [
+    "Only observed target records are passed to policies; true target IDs/coordinates are not direct actor inputs.",
+    "service_safe reads interval endpoint truth inside environment outcome calculation, after the action. It is not called by action generation.",
+    "Validation has6 parentwaterfields but only4 unique targetlayout seeds; repeated checkpoint/control selection can overfit this development suite.",
+    "Ideal sensing/communication and shared coverage/service controllers limit interpretation of high success."
+  ],
+  "test_fields_generated": false,
+  "source_hashes": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-strict-eval-20261101\\audit.py": "6c6f0dfd67f47c07c3b80eca337ab11091eaba5dce607e593671db6668439ff6",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\flood1km\\learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-linked-training-20261101\\observed_planner.py": "b5ab357138045440f827b004a26e6bedcae36ed8aa9707ad7f174a74a956aaa3",
+    "C:\\Users\\Lenovo\\Desktop\\无人机大创\\HYRA-PR-20261031\\uav-workbench\\experiments\\flood1km-six-20261101\\service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f"
+  }
+}

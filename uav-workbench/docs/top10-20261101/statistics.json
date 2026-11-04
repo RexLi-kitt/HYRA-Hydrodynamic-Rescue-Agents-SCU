@@ -1,0 +1,1342 @@
+{
+  "snapshot": "2026-11-01T21:38:20+08:00",
+  "test_records": 830,
+  "test_snapshot_sha256": "f9506522bd5a5e4e58e6a2a9f4d54f4c1afd3ed12514d05a944ab00e12a194dc",
+  "scope": "Development shortlist only, not final test ranking; full controllers include coverage and service rules",
+  "records": [
+    {
+      "rank": 1,
+      "id": "coma",
+      "family": "single",
+      "best_episode": 896,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "coma",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 1164470,
+            "trainable": 780269
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 448,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 1164470,
+      "trainable_parameters": 780269,
+      "checkpoint_mib": 61.31699466705322,
+      "checkpoint": "coma-ep0896.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\coma\\checkpoint-0896.pt",
+      "sha256": "395c4e7921ff73a0ce87eab215d0952938a8dd7a97b19c595f02337a15c71d2b",
+      "validation": {
+        "n": 36,
+        "completed": 36,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.0,
+        "ST": 95.83333333333333,
+        "planner_fraction": 0.43310988877336654,
+        "neural_free_fraction": 0.2984141021051148,
+        "max_conflicts": 0,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 48,
+          "means": {
+            "task_complete": 0.96,
+            "RCR": 0.998,
+            "coverage": 1.0,
+            "ACC": 0.015858308904577838,
+            "ST": 109.2
+          },
+          "max_conflicts": 12
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.371,
+            "coverage": 0.3951,
+            "ACC": 0.0056,
+            "ST": 300.0
+          },
+          "max_conflicts": 6
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 15,
+          "expected_parents": 20,
+          "rollouts": 15,
+          "expected_rollouts": 20,
+          "completed_rollouts": 13,
+          "means": {
+            "task_complete": 0.8666666666666667,
+            "RCR": 0.9933333333333333,
+            "coverage": 1.0,
+            "ACC": 0.072222494749052,
+            "ST": 131.13333333333333
+          },
+          "max_conflicts": 12
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 15,
+          "expected_parents": 20,
+          "rollouts": 15,
+          "expected_rollouts": 20,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.0,
+            "coverage": 0.2137,
+            "ACC": 0.02,
+            "ST": 300.0
+          },
+          "max_conflicts": 6
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "maac",
+      "family": "single",
+      "best_episode": 64,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "maac",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 866870,
+            "trainable": 631469
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 128,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 866870,
+      "trainable_parameters": 631469,
+      "checkpoint_mib": 58.94080448150635,
+      "checkpoint": "maac-ep0064.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\maac\\checkpoint-0064.pt",
+      "sha256": "41e3a0a66420b76f1e1121fb9e34f5bccd476e3de60e9d375b2ea68d7f20fc8f",
+      "validation": {
+        "n": 36,
+        "completed": 36,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.0014492753623188406,
+        "ST": 105.41666666666667,
+        "planner_fraction": 0.4180381174523508,
+        "neural_free_fraction": 0.269461179455225,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 48,
+          "means": {
+            "task_complete": 0.96,
+            "RCR": 0.998,
+            "coverage": 1.0,
+            "ACC": 0.012156525788026182,
+            "ST": 111.92
+          },
+          "max_conflicts": 45
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.765,
+            "coverage": 0.79764,
+            "ACC": 0.022,
+            "ST": 300.0
+          },
+          "max_conflicts": 58
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 20,
+          "means": {
+            "task_complete": 1.0,
+            "RCR": 1.0,
+            "coverage": 1.0,
+            "ACC": 0.0198895965034698,
+            "ST": 88.05
+          },
+          "max_conflicts": 15
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.9349999999999999,
+            "coverage": 0.75647,
+            "ACC": 0.04633333333333334,
+            "ST": 300.0
+          },
+          "max_conflicts": 76
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "hasac",
+      "family": "single",
+      "best_episode": 0,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "hasac",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 1929768,
+            "trainable": 1162918
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 0,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 1929768,
+      "trainable_parameters": 1162918,
+      "checkpoint_mib": 7.391548156738281,
+      "checkpoint": "hasac-ep0000.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\hasac\\checkpoint-0000.pt",
+      "sha256": "f11d825d3ce6350b3eb479bdb39a3370e77b01b1a9f60fe721f8540914a751bf",
+      "validation": {
+        "n": 36,
+        "completed": 36,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.0018346318490966513,
+        "ST": 116.80555555555556,
+        "planner_fraction": 0.26126946627292214,
+        "neural_free_fraction": 0.4728837397856499,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 46,
+          "means": {
+            "task_complete": 0.92,
+            "RCR": 0.996,
+            "coverage": 1.0,
+            "ACC": 0.00734097367041748,
+            "ST": 130.12
+          },
+          "max_conflicts": 6
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.825,
+            "coverage": 0.84806,
+            "ACC": 0.032,
+            "ST": 300.0
+          },
+          "max_conflicts": 78
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 19,
+          "means": {
+            "task_complete": 0.95,
+            "RCR": 0.9975,
+            "coverage": 1.0,
+            "ACC": 0.018889606755424247,
+            "ST": 117.45
+          },
+          "max_conflicts": 9
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.9675,
+            "coverage": 0.82303,
+            "ACC": 0.016,
+            "ST": 300.0
+          },
+          "max_conflicts": 22
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "id": "happo_hasac",
+      "family": "pair",
+      "best_episode": 64,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "happo",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 777189,
+            "trainable": 777189
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 32,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        },
+        {
+          "algorithm": "hasac",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 1929768,
+            "trainable": 1162918
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 128,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 2706957,
+      "trainable_parameters": 1940107,
+      "checkpoint_mib": 76.72507953643799,
+      "checkpoint": "happo_hasac-ep0064.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_hasac\\checkpoint-0064.pt",
+      "sha256": "2e4bef48313a5030cabe325b9906e4da3df4d508b7504a1552d277c4c2b0d37a",
+      "validation": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.001878843853995984,
+        "ST": 121.05555555555556,
+        "planner_fraction": 0.2718534379726083,
+        "neural_free_fraction": 0.4633796397858492,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "hasac_coma",
+      "family": "pair",
+      "best_episode": 0,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "hasac",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 1929768,
+            "trainable": 1162918
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 0,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        },
+        {
+          "algorithm": "coma",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 1164470,
+            "trainable": 780269
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 0,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 3094238,
+      "trainable_parameters": 1943187,
+      "checkpoint_mib": 11.845821380615234,
+      "checkpoint": "hasac_coma-ep0000.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hasac_coma\\checkpoint-0000.pt",
+      "sha256": "73b683e0bca0fb6ec061a0d44b051656726c1429c04fa9e0e830e61edf84e31f",
+      "validation": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.002430449283052207,
+        "ST": 123.09722222222223,
+        "planner_fraction": 0.2789351828028073,
+        "neural_free_fraction": 0.4416666666801258,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "happo_mat",
+      "family": "pair",
+      "best_episode": 64,
+      "trained_episodes": 256,
+      "parts": [
+        {
+          "algorithm": "happo",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 777189,
+            "trainable": 777189
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 16,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        },
+        {
+          "algorithm": "mat",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 179530,
+            "trainable": 179530
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 16,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 956719,
+      "trainable_parameters": 956719,
+      "checkpoint_mib": 62.489644050598145,
+      "checkpoint": "happo_mat-ep0064.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\happo_mat\\checkpoint-0064.pt",
+      "sha256": "eccf6ac49abd62c90ce328b77cb0400ea65c1ac6d0c767f16152a5917afa58ce",
+      "validation": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.004136360323429723,
+        "ST": 118.5,
+        "planner_fraction": 0.2702484943265629,
+        "neural_free_fraction": 0.492123340301971,
+        "max_conflicts": 6,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "id": "happo",
+      "family": "single",
+      "best_episode": 768,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "happo",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 777189,
+            "trainable": 777189
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 384,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 777189,
+      "trainable_parameters": 777189,
+      "checkpoint_mib": 60.30670642852783,
+      "checkpoint": "happo-ep0768.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\happo\\checkpoint-0768.pt",
+      "sha256": "e0ae7e82f245eada217b51a19739599e6ab2f48ad79e71a9755195fed116cd12",
+      "validation": {
+        "n": 36,
+        "completed": 36,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.0058879551820728284,
+        "ST": 121.27777777777777,
+        "planner_fraction": 0.23307807546832493,
+        "neural_free_fraction": 0.5050780320934325,
+        "max_conflicts": 4,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 47,
+          "means": {
+            "task_complete": 0.94,
+            "RCR": 0.997,
+            "coverage": 1.0,
+            "ACC": 0.014832034099997017,
+            "ST": 119.28
+          },
+          "max_conflicts": 9
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.762,
+            "coverage": 0.721204,
+            "ACC": 0.026,
+            "ST": 300.0
+          },
+          "max_conflicts": 142
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 19,
+          "means": {
+            "task_complete": 0.95,
+            "RCR": 0.9975,
+            "coverage": 1.0,
+            "ACC": 0.05321371929560932,
+            "ST": 117.85
+          },
+          "max_conflicts": 19
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.9349999999999999,
+            "coverage": 0.704905,
+            "ACC": 0.021,
+            "ST": 300.0
+          },
+          "max_conflicts": 24
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "id": "hatrpo",
+      "family": "single",
+      "best_episode": 384,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "hatrpo",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 777189,
+            "trainable": 777189
+          },
+          "parent_episodes": 512,
+          "updates_at_checkpoint": 192,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 777189,
+      "trainable_parameters": 777189,
+      "checkpoint_mib": 58.51416778564453,
+      "checkpoint": "hatrpo-ep0384.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\hatrpo\\checkpoint-0384.pt",
+      "sha256": "4215d9ccec074646eefce5e92c2e1da9dcfddc0344831350d3fd50266c03bc80",
+      "validation": {
+        "n": 36,
+        "completed": 36,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.006669182624997858,
+        "ST": 111.94444444444444,
+        "planner_fraction": 0.307746742749585,
+        "neural_free_fraction": 0.4168643403029879,
+        "max_conflicts": 5,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 48,
+          "means": {
+            "task_complete": 0.96,
+            "RCR": 0.998,
+            "coverage": 1.0,
+            "ACC": 0.004510565492355883,
+            "ST": 118.86
+          },
+          "max_conflicts": 7
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.645,
+            "coverage": 0.663988,
+            "ACC": 0.002,
+            "ST": 300.0
+          },
+          "max_conflicts": 7
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 20,
+          "means": {
+            "task_complete": 1.0,
+            "RCR": 1.0,
+            "coverage": 1.0,
+            "ACC": 0.03057310152411903,
+            "ST": 111.6
+          },
+          "max_conflicts": 9
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.7825,
+            "coverage": 0.646385,
+            "ACC": 0.0085,
+            "ST": 300.0
+          },
+          "max_conflicts": 9
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "id": "mat",
+      "family": "single",
+      "best_episode": 192,
+      "trained_episodes": 1024,
+      "parts": [
+        {
+          "algorithm": "mat",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 179530,
+            "trainable": 179530
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 96,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 179530,
+      "trainable_parameters": 179530,
+      "checkpoint_mib": 53.94202136993408,
+      "checkpoint": "mat-ep0192.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-singles1024-20261101\\run01\\mat\\checkpoint-0192.pt",
+      "sha256": "7bd28b4628dc076629c8ecdaf3c1ab6f4a0a6ece19774163754091a6a2878dc0",
+      "validation": {
+        "n": 36,
+        "completed": 36,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.006892516060518914,
+        "ST": 108.11111111111111,
+        "planner_fraction": 0.33208045443592904,
+        "neural_free_fraction": 0.4235930834077624,
+        "max_conflicts": 5,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 49,
+          "means": {
+            "task_complete": 0.98,
+            "RCR": 0.999,
+            "coverage": 1.0,
+            "ACC": 0.01323112251006697,
+            "ST": 110.5
+          },
+          "max_conflicts": 11
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 50,
+          "expected_parents": 50,
+          "rollouts": 50,
+          "expected_rollouts": 50,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.42,
+            "coverage": 0.461104,
+            "ACC": 0.28126666666666666,
+            "ST": 300.0
+          },
+          "max_conflicts": 367
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 17,
+          "means": {
+            "task_complete": 0.85,
+            "RCR": 0.9924999999999999,
+            "coverage": 1.0,
+            "ACC": 0.037076643006037684,
+            "ST": 148.35
+          },
+          "max_conflicts": 51
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": true,
+          "observed_parents": 20,
+          "expected_parents": 20,
+          "rollouts": 20,
+          "expected_rollouts": 20,
+          "completed_rollouts": 0,
+          "means": {
+            "task_complete": 0.0,
+            "RCR": 0.1325,
+            "coverage": 0.36363999999999996,
+            "ACC": 0.16516666666666666,
+            "ST": 300.0
+          },
+          "max_conflicts": 231
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "id": "hatrpo_maac",
+      "family": "pair",
+      "best_episode": 128,
+      "trained_episodes": 256,
+      "parts": [
+        {
+          "algorithm": "hatrpo",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 777189,
+            "trainable": 777189
+          },
+          "parent_episodes": 512,
+          "updates_at_checkpoint": 64,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        },
+        {
+          "algorithm": "maac",
+          "input_dim": 1472,
+          "action_count": 9,
+          "parameters": {
+            "total": 866870,
+            "trainable": 631469
+          },
+          "parent_episodes": 256,
+          "updates_at_checkpoint": 256,
+          "gamma": 0.995,
+          "alpha": 0.05,
+          "optimizer_group_lrs": [
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ],
+            [
+              0.0003
+            ]
+          ],
+          "learning_rate_note": "HATRPO policy uses trust-region update; stored Adam policy groups do not imply they are used."
+        }
+      ],
+      "total_parameters": 1644059,
+      "trainable_parameters": 1408658,
+      "checkpoint_mib": 64.84903812408447,
+      "checkpoint": "hatrpo_maac-ep0128.pt",
+      "source_path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-all-pairs-20261101\\run01\\hatrpo_maac\\checkpoint-0128.pt",
+      "sha256": "6c982f49aedf19a524bbaa6c052c89f76b29a781f76dfd1d5493615d338565bb",
+      "validation": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.00730247081380238,
+        "ST": 114.70833333333333,
+        "planner_fraction": 0.34509429753707593,
+        "neural_free_fraction": 0.40057002182565415,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "strict_test": [
+        {
+          "stratum": "iid50",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "iid50",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 50,
+          "rollouts": 0,
+          "expected_rollouts": 100,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "full",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        },
+        {
+          "stratum": "orientation_cluster20",
+          "variant": "no-cover",
+          "complete": false,
+          "observed_parents": 0,
+          "expected_parents": 20,
+          "rollouts": 0,
+          "expected_rollouts": 40,
+          "completed_rollouts": 0,
+          "means": null,
+          "max_conflicts": null
+        }
+      ]
+    }
+  ]
+}

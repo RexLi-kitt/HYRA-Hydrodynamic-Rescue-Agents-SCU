@@ -1,0 +1,16 @@
+{
+  "joint_episode": 256,
+  "summary": {
+    "completion": 1.0,
+    "RCR": 1.0,
+    "coverage": 1.0,
+    "ACC": 0,
+    "ST": 80
+  },
+  "groups": {
+    "example": {
+      "ACC": 0.01
+    }
+  },
+  "worst_assignment_RCR": 1.0
+}

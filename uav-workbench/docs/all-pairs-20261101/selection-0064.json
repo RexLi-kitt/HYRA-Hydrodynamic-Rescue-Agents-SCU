@@ -1,0 +1,405 @@
+{
+  "budget": 64,
+  "ranking": [
+    "happo_hasac",
+    "hasac_coma",
+    "happo_mat",
+    "hatrpo_maac",
+    "happo_coma",
+    "hasac_mat",
+    "maac_mat",
+    "hasac_maac",
+    "maac_coma",
+    "happo_hatrpo",
+    "hatrpo_coma",
+    "mat_coma",
+    "happo_maac",
+    "hatrpo_hasac",
+    "hatrpo_mat"
+  ],
+  "best_within_budget": {
+    "happo_hatrpo": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 70,
+        "completion": 0.9722222222222222,
+        "RCR": 0.9986111111111112,
+        "coverage": 1.0,
+        "ACC": 0.003118987493987494,
+        "ST": 125.01388888888889,
+        "planner_fraction": 0.26060985673626763,
+        "neural_free_fraction": 0.4718098181438438,
+        "max_conflicts": 3,
+        "unserved": 2
+      },
+      "quality": [
+        0,
+        0.9722222222222222,
+        0.9986111111111112,
+        0.9986111111111112,
+        1.0,
+        -0.003118987493987494,
+        -125.01388888888889
+      ]
+    },
+    "happo_hasac": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.001878843853995984,
+        "ST": 121.05555555555556,
+        "planner_fraction": 0.2718534379726083,
+        "neural_free_fraction": 0.4633796397858492,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.001878843853995984,
+        -121.05555555555556
+      ]
+    },
+    "happo_maac": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 69,
+        "completion": 0.9583333333333334,
+        "RCR": 0.9979166666666666,
+        "coverage": 1.0,
+        "ACC": 0.005761170867951051,
+        "ST": 138.5,
+        "planner_fraction": 0.2651659331323058,
+        "neural_free_fraction": 0.4943938267703483,
+        "max_conflicts": 15,
+        "unserved": 3
+      },
+      "quality": [
+        0,
+        0.9583333333333334,
+        0.9979166666666666,
+        0.9972222222222223,
+        1.0,
+        -0.005761170867951051,
+        -138.5
+      ]
+    },
+    "happo_mat": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.004136360323429723,
+        "ST": 118.5,
+        "planner_fraction": 0.2702484943265629,
+        "neural_free_fraction": 0.492123340301971,
+        "max_conflicts": 6,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.004136360323429723,
+        -118.5
+      ]
+    },
+    "happo_coma": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 71,
+        "completion": 0.9861111111111112,
+        "RCR": 0.9993055555555556,
+        "coverage": 1.0,
+        "ACC": 0.0022165664390544773,
+        "ST": 129.08333333333334,
+        "planner_fraction": 0.2925859458345576,
+        "neural_free_fraction": 0.4436908361481789,
+        "max_conflicts": 11,
+        "unserved": 1
+      },
+      "quality": [
+        0,
+        0.9861111111111112,
+        0.9993055555555556,
+        0.9986111111111112,
+        1.0,
+        -0.0022165664390544773,
+        -129.08333333333334
+      ]
+    },
+    "hatrpo_hasac": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 70,
+        "completion": 0.9722222222222222,
+        "RCR": 0.9986111111111112,
+        "coverage": 1.0,
+        "ACC": 0.010218775128650152,
+        "ST": 123.15277777777777,
+        "planner_fraction": 0.28637176117099195,
+        "neural_free_fraction": 0.42538343044229354,
+        "max_conflicts": 9,
+        "unserved": 2
+      },
+      "quality": [
+        -1,
+        0.9722222222222222,
+        0.9986111111111112,
+        0.9972222222222222,
+        1.0,
+        -0.010218775128650152,
+        -123.15277777777777
+      ]
+    },
+    "hatrpo_maac": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.011217746667888313,
+        "ST": 111.84722222222223,
+        "planner_fraction": 0.3745962672155807,
+        "neural_free_fraction": 0.3728028936764527,
+        "max_conflicts": 4,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.011217746667888313,
+        -111.84722222222223
+      ]
+    },
+    "hatrpo_mat": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 69,
+        "completion": 0.9583333333333334,
+        "RCR": 0.9979166666666666,
+        "coverage": 1.0,
+        "ACC": 0.016065296241219322,
+        "ST": 134.98611111111111,
+        "planner_fraction": 0.24664681885297346,
+        "neural_free_fraction": 0.49313144492183864,
+        "max_conflicts": 9,
+        "unserved": 3
+      },
+      "quality": [
+        -1,
+        0.9583333333333334,
+        0.9979166666666666,
+        0.9972222222222223,
+        1.0,
+        -0.016065296241219322,
+        -134.98611111111111
+      ]
+    },
+    "hatrpo_coma": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 70,
+        "completion": 0.9722222222222222,
+        "RCR": 0.9986111111111112,
+        "coverage": 1.0,
+        "ACC": 0.00501169629808323,
+        "ST": 123.375,
+        "planner_fraction": 0.31568499643622805,
+        "neural_free_fraction": 0.4453451273125769,
+        "max_conflicts": 14,
+        "unserved": 2
+      },
+      "quality": [
+        0,
+        0.9722222222222222,
+        0.9986111111111112,
+        0.9986111111111112,
+        1.0,
+        -0.00501169629808323,
+        -123.375
+      ]
+    },
+    "hasac_maac": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 71,
+        "completion": 0.9861111111111112,
+        "RCR": 0.9993055555555556,
+        "coverage": 1.0,
+        "ACC": 0.010977322309960784,
+        "ST": 139.25,
+        "planner_fraction": 0.2621888474246176,
+        "neural_free_fraction": 0.4998501989468465,
+        "max_conflicts": 21,
+        "unserved": 1
+      },
+      "quality": [
+        0,
+        0.9861111111111112,
+        0.9993055555555556,
+        0.9986111111111112,
+        1.0,
+        -0.010977322309960784,
+        -139.25
+      ]
+    },
+    "hasac_mat": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 71,
+        "completion": 0.9861111111111112,
+        "RCR": 0.9993055555555556,
+        "coverage": 1.0,
+        "ACC": 0.0031329246050589726,
+        "ST": 127.16666666666667,
+        "planner_fraction": 0.2539820666065713,
+        "neural_free_fraction": 0.47993183560541447,
+        "max_conflicts": 6,
+        "unserved": 1
+      },
+      "quality": [
+        0,
+        0.9861111111111112,
+        0.9993055555555556,
+        0.9986111111111112,
+        1.0,
+        -0.0031329246050589726,
+        -127.16666666666667
+      ]
+    },
+    "hasac_coma": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 72,
+        "completion": 1.0,
+        "RCR": 1.0,
+        "coverage": 1.0,
+        "ACC": 0.002430449283052207,
+        "ST": 123.09722222222223,
+        "planner_fraction": 0.2789351828028073,
+        "neural_free_fraction": 0.4416666666801258,
+        "max_conflicts": 3,
+        "unserved": 0
+      },
+      "quality": [
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -0.002430449283052207,
+        -123.09722222222223
+      ]
+    },
+    "maac_mat": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 71,
+        "completion": 0.9861111111111112,
+        "RCR": 0.9993055555555556,
+        "coverage": 1.0,
+        "ACC": 0.004586645376580935,
+        "ST": 133.68055555555554,
+        "planner_fraction": 0.29596660857706264,
+        "neural_free_fraction": 0.47566737027567463,
+        "max_conflicts": 15,
+        "unserved": 1
+      },
+      "quality": [
+        0,
+        0.9861111111111112,
+        0.9993055555555556,
+        0.9986111111111112,
+        1.0,
+        -0.004586645376580935,
+        -133.68055555555554
+      ]
+    },
+    "maac_coma": {
+      "episode": 0,
+      "summary": {
+        "n": 72,
+        "completed": 70,
+        "completion": 0.9722222222222222,
+        "RCR": 0.9986111111111112,
+        "coverage": 1.0,
+        "ACC": 0.002776381690719852,
+        "ST": 125.33333333333333,
+        "planner_fraction": 0.32684066707198095,
+        "neural_free_fraction": 0.3733564639779595,
+        "max_conflicts": 19,
+        "unserved": 2
+      },
+      "quality": [
+        0,
+        0.9722222222222222,
+        0.9986111111111112,
+        0.9986111111111112,
+        1.0,
+        -0.002776381690719852,
+        -125.33333333333333
+      ]
+    },
+    "mat_coma": {
+      "episode": 64,
+      "summary": {
+        "n": 72,
+        "completed": 70,
+        "completion": 0.9722222222222222,
+        "RCR": 0.9986111111111112,
+        "coverage": 1.0,
+        "ACC": 0.004552234121169559,
+        "ST": 125.93055555555556,
+        "planner_fraction": 0.3046217646454105,
+        "neural_free_fraction": 0.4406906874106123,
+        "max_conflicts": 8,
+        "unserved": 2
+      },
+      "quality": [
+        0,
+        0.9722222222222222,
+        0.9986111111111112,
+        0.9972222222222222,
+        1.0,
+        -0.004552234121169559,
+        -125.93055555555556
+      ]
+    }
+  },
+  "scope": "research screening; not field acceptance",
+  "selected": [
+    "happo_hasac",
+    "hasac_coma",
+    "happo_mat",
+    "hatrpo_maac",
+    "happo_coma"
+  ]
+}

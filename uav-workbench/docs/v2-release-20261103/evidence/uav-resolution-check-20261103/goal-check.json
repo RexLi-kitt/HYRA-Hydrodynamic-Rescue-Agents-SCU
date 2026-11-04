@@ -1,0 +1,14 @@
+{
+  "gru-32_flowblend": {
+    "people_gap": 0.025000000000000022,
+    "p95_gap": 0.25,
+    "all_gap": 0.4166666666666667,
+    "goal_met": false
+  },
+  "gru-16": {
+    "people_gap": 0.027083333333333348,
+    "p95_gap": 0.25,
+    "all_gap": 0.49999999999999994,
+    "goal_met": false
+  }
+}

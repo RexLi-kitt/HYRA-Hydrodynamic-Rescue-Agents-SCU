@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "total_rollouts": 208,
+  "new_training_episodes": 0,
+  "plan_unchanged": true,
+  "checks": [
+    {
+      "candidate": "P0",
+      "episodes": 16,
+      "traces_and_final_states_verified": true
+    },
+    {
+      "candidate": "P1",
+      "episodes": 48,
+      "traces_and_final_states_verified": true
+    },
+    {
+      "candidate": "P2",
+      "episodes": 48,
+      "traces_and_final_states_verified": true
+    },
+    {
+      "candidate": "P3",
+      "episodes": 48,
+      "traces_and_final_states_verified": true
+    },
+    {
+      "candidate": "P4",
+      "episodes": 48,
+      "traces_and_final_states_verified": true
+    }
+  ],
+  "note": "Verification of archived records, not performance acceptance"
+}

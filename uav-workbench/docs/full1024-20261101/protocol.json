@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-01",
+  "request": "Continue HASAC448 and HATRPO704 to total1024; no performance early stop",
+  "algorithms": [
+    "hasac",
+    "hatrpo"
+  ],
+  "starting_episodes": {
+    "hasac": 448,
+    "hatrpo": 704
+  },
+  "target": 1024,
+  "added_episodes": {
+    "hasac": 576,
+    "hatrpo": 320
+  },
+  "parent": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-priority-20261101",
+  "parent_hashes": {
+    "hasac": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-priority-20261101\\hasac\\checkpoint-0448.pt",
+      "sha256": "1281b1ad2b793f933354e7608f83b5728a370790ed66be688497245ffd313df7",
+      "episode": 448
+    },
+    "hatrpo": {
+      "path": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\uav6-priority-20261101\\hatrpo\\checkpoint-0704.pt",
+      "sha256": "4935562764cd366799b431a71610e45a4babee9c19d79ffe141c6b663baddf16",
+      "episode": 704
+    }
+  },
+  "parent_protocol_hash": "d429911bf6f65a0c129545ab9dc63372f08bcf976a989969d6afa3c42d2196dc",
+  "original_module_hashes": {
+    "__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b"
+  },
+  "orchestration_hashes": {
+    "continue_full1024.py": "2da459f882d74f0b402888521193eefc3ca4bb8adfdccb12bba38ccc6582f1fa",
+    "run_full1024.py": "8ba7926cf29ee97a018463cd33e56a1c7fbb59f9f6bf9ee6665230d3431b6476",
+    "test_resume.py": "23e4d9fc6fc6082996910dd0fc22e290ba4ab869503b302cdb486c653d9ccf4c"
+  },
+  "unchanged": [
+    "learning algorithms",
+    "optimizers and hyperparameters",
+    "rewards",
+    "service and RetryGuard settings",
+    "observations and physics",
+    "training layout sequence",
+    "validation layouts and action seeds",
+    "best-model adoption criterion"
+  ],
+  "resume": "full learner/target/optimizer/RNG/replay and counters; no reset from best point",
+  "validation": "each64: same2 parents x4 layouts, sampled3101/3102 and greedy separately; reuse development set",
+  "best_selection": "carry previous accepted best, apply unchanged priority_train.significant_improvement; not necessarily maximum RCR",
+  "checkpoints": "independent full state each32; prior files retained",
+  "performance_early_stopping": false,
+  "walltime_early_stopping": false,
+  "stop": "numerical/runtime exception, or user STOP_AFTER_CHECKPOINT; no automatic retry",
+  "cpu_threads": 2,
+  "concurrent_training_jobs": 1,
+  "sealed50_test": false
+}

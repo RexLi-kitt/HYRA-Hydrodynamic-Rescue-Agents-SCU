@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "plateau_does_not_extend",
+      "passed": true
+    },
+    {
+      "name": "material_rescue_gain_can_extend",
+      "passed": true
+    },
+    {
+      "name": "one_conflict_stratum_blocks_extension",
+      "passed": true
+    },
+    {
+      "name": "conflict_gate_precedes_average_rescue_rank",
+      "passed": true
+    },
+    {
+      "name": "time_gain_with_equal_task_quality_can_extend",
+      "passed": true
+    },
+    {
+      "name": "faster_but_fewer_serviced_blocks_extension",
+      "passed": true
+    },
+    {
+      "name": "one_large_conflict_tail_blocks_extension",
+      "passed": true
+    }
+  ]
+}

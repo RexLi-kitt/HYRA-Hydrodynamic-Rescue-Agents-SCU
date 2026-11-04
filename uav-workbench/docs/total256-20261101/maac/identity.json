@@ -1,0 +1,25 @@
+{
+  "algorithm": "maac",
+  "base_checkpoint_hash": "1611198d4797dc41cdaf09056340ea23b72b2be40b188090485ad401303ea953",
+  "data_hash": "dde867a71c348eb239086fc9b6f1ad749c3b6b9516bc33eae999746f7ea5ff5a",
+  "seed": 1001,
+  "source_hashes": {
+    "__init__.py": "0d03e19b89db13c2dd409ab27b316beca953710d3def909c725ae7a3ef0b5af0",
+    "benchmark.py": "ea47b4870eb6d40e21904bf4a5941093e9d52c9981b5c008f09481eb048120e0",
+    "data.py": "e5a32cc0023386d7b3e0c6505d716d931432acfa4ab3eaef5c833d4650c774a4",
+    "env.py": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+    "learners.py": "970fa071ff5393435d847b2e6e43cb5ab661469077c520ebe7455edb4fb19f78",
+    "orchestrate.py": "82a871160d50991d22d2f6535e53a0e5901a5d937e136651618a7abf699b8df9",
+    "train.py": "af81baf2609b908148564689251a1cc2f7995dc4d724f8840ab8d52f974f364b"
+  },
+  "new_code_hashes": {
+    "train_with_service.py": "c93af28609ef8a6ecb8bafa0af369842a82eafda6e0def8d31e76b5e5da09849",
+    "service_commitment.py": "5d295ac9359ec054cc196e1b4cc0539235af47000874b8c611ba210471e4e18f",
+    "coverage_controller.py": "97b2d5f3d7d2b8320e435d37beea40e3b450d11366350ffdb19fa19fe0d3124b"
+  },
+  "semantics": "64 original + cumulative continuation; actual actions sampled from service singleton masks; no coverage planner while training",
+  "replay_policy": "fresh replay at original64 -> service-phase transition; save and restore replay thereafter",
+  "layout": "920000+(total_episode-65)",
+  "validation": "2 parents x 4 layouts, no final test",
+  "future_target": 1024
+}
