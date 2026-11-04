@@ -1,0 +1,7 @@
+{
+  "scope": "All32 missed marks whose observed peak exceeds cell bed+0.1m; diagnostic subgroup, does not replace all263 or full outline scores.",
+  "rules": "Global 4-neighbor minimax bed path to ANY cell with model max depth>0.1. Dijkstra key=(highest bed along path, steps). No diagonal jumps, no radius truncation, no DEM edits. Endpoint head uses that cell cumulative maximum only; never treats neighboring asynchronous maxima as a real flow field.",
+  "interpretation": "Barrier above observed peak implies no positive-depth constant-head connection along even easiest raster route at that peak, under fixed DEM. Barrier below peak is necessary, not sufficient for flooding; path selection uses model output and is diagnosis only.",
+  "limitations": "No bridge/culvert underpass, time/direction/available-volume guarantee or independent water-level uncertainty. Global result can select a physically unrelated pool and is only a lower bound.",
+  "next_gate": "Need independent historical crest/underpass/blockage/flow evidence before hydro candidate; no fitting to path or survey peaks."
+}

@@ -1,0 +1,80 @@
+{
+  "all263_preserved": true,
+  "source_sha256": "96bcd7c9e583fb614e22255572d82e16c287505acf2c1fe3bb27aca940d0ad99",
+  "sample_comparison": [
+    {
+      "archive_field": "dem_2m",
+      "count": 263,
+      "survey_below_sample": 98,
+      "minimum_survey_minus_sample_m": -2.6425,
+      "maximum_survey_minus_sample_m": 4.047799999999999,
+      "among_81_below_5m_now_not_below": 40
+    },
+    {
+      "archive_field": "dem_5m",
+      "count": 263,
+      "survey_below_sample": 81,
+      "minimum_survey_minus_sample_m": -8.465000000000003,
+      "maximum_survey_minus_sample_m": 4.247,
+      "among_81_below_5m_now_not_below": 0
+    },
+    {
+      "archive_field": "dem_10m",
+      "count": 263,
+      "survey_below_sample": 90,
+      "minimum_survey_minus_sample_m": -8.8277,
+      "maximum_survey_minus_sample_m": 4.0466,
+      "among_81_below_5m_now_not_below": 18
+    },
+    {
+      "archive_field": "dem_15m",
+      "count": 263,
+      "survey_below_sample": 84,
+      "minimum_survey_minus_sample_m": -8.675,
+      "maximum_survey_minus_sample_m": 4.4780000000000015,
+      "among_81_below_5m_now_not_below": 27
+    },
+    {
+      "archive_field": "dem_25m",
+      "count": 263,
+      "survey_below_sample": 96,
+      "minimum_survey_minus_sample_m": -8.761000000000003,
+      "maximum_survey_minus_sample_m": 5.478,
+      "among_81_below_5m_now_not_below": 33
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kabir et al. 2020, A deep convolutional neural network model for rapid prediction of fluvial flood inundation",
+      "url": "https://arxiv.org/pdf/2006.11555v2",
+      "location": "Section3.1.2 PDFpage15; Figure4 PDFpage17",
+      "verified": "5m EA LiDAR further processed by Bristol, including removal of trees and bridges; 2005 flow inputs routed with 1D model, not direct measurement at inlet; time zero Jan7 00:00. Does not identify buildings at the81 suspect point cells.",
+      "claim_limit": "CNN targets are LISFLOOD outputs; cannot transfer reported software agreement to real-world accuracy."
+    },
+    {
+      "title": "McClean et al. 2020, Implications of Using Global Digital Elevation Models for Flood Risk Analysis in Cities",
+      "url": "https://doi.org/10.1029/2020WR028241",
+      "location": "Sections2.6.1 and3.2; Figure5 caption; Section3.4",
+      "verified": "263 observations are elevations above sea level; paper retains points below DEM in numerical diagnostics. Building/bridge treatment is feature-dependent; this paper does not resolve our specific81 cells.",
+      "claim_limit": "No permission to convert Z minus uncertain terrain into exact measured depth, remove high cells, or replace5m with50m."
+    },
+    {
+      "title": "Neal et al. 2009 original observation study",
+      "url": "https://research-information.bris.ac.uk/en/publications/distributed-whole-city-water-level-measurements-from-the-carlisle/",
+      "location": "university bibliographic page",
+      "verified": "DOI10.1016/j.jhydrol.2009.01.026 and publication identity only; full original text not obtained in this unit."
+    },
+    {
+      "title": "Parkes et al. 2013, Reducing Inconsistencies in Point Observations of Maximum Flood Inundation Level",
+      "url": "https://journals.ametsoc.org/view/journals/eint/17/6/2012ei000475.1.xml",
+      "verified": "publisher full page returned403; no alternate-entry retry; search snippet not sufficient to assign point-specific uncertainty",
+      "claim_limit": "Do not add0.51m uniformly, shift observed elevations, or adopt snippet uncertainty as a new acceptance tolerance."
+    }
+  ],
+  "not_a_controlled_resolution_experiment": true,
+  "why": "These are archived samples from distinct terrain representations, not a new consistent regridding of one verified raw ground surface. Only point attributes available here.",
+  "no_simulation_fields_read": true,
+  "model_changes": [],
+  "acceptance_changes": [],
+  "next_discriminating_work": "After complete result, cross-tab all known misses with elevation flags without exclusion. Obtain matching raw terrain/building-processing provenance before any geometry edit; absent provenance, mark attribution unresolved and retain original input."
+}

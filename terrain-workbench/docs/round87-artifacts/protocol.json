@@ -1,0 +1,14 @@
+{
+  "purpose": "Nonzero roughness coupled regressions before extending isolated exact-friction candidate. No production edits or observation tuning.",
+  "lake": "Reuse round79 analytic wet slope/partial step/plane shore fixtures, only n0->.06, same3s/dtmax.02; baseline and candidate. h drift<1e-10m, volume<1e-8m3, finite nonnegative and finite q.",
+  "uniform_slope": "80x8 cells dx1m, z=-.001*x, H=1m, qx=H^(5/3)*sqrt(.001)/.06, qy0, DG bed slope=-.001/(2sqrt3), H and q slopes0. Closed walls;2s, interior rows2:6 cols30:50 before fastest characteristic reaches from x walls (~7.4m vs30m). All boundary cells retained but not mistaken for uniform infinite-domain solution.",
+  "slope_gate": "Internal analytic regression: finite nonnegative and volume error<1e-8m3; core velocity drift <=2*g*S*dt, halfdt error<=.8 full error unless <1e-12; candidate no worse than baseline by >5%+1e-12. This is a splitting/truncation diagnostic, not field tolerance.",
+  "timesteps": [
+    0.02,
+    0.01
+  ],
+  "gravity": 9.80655,
+  "n": 0.06,
+  "cost": "10 tiny serial runs<=30s each; if any gate fails do not start2400 extension; preserve failures",
+  "field_passes_added": 0
+}

@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "cap": 2,
+      "steps": 30,
+      "exact_piecewise_volume_m3": 191.806759458,
+      "left_rule_volume_m3": 190.05320078940002,
+      "reported_volume_m3": 190.05,
+      "mass_print_rounding_bound_m3": 0.005,
+      "sum_abs_mass_residual_m3": 6.5725138e-13,
+      "quadrature_shortfall_m3": 1.7535586685999647,
+      "checks": {
+        "time60": true,
+        "all_steps_seen": true,
+        "fixed_steps": true,
+        "outflow_zero": true,
+        "discrete_volume_matches_mass_text_precision": true,
+        "source_quadrature_bound": true,
+        "all_step_mass_residual_small": true
+      }
+    },
+    {
+      "cap": 1,
+      "steps": 60,
+      "exact_piecewise_volume_m3": 191.806759458,
+      "left_rule_volume_m3": 190.92998012370003,
+      "reported_volume_m3": 190.93,
+      "mass_print_rounding_bound_m3": 0.005,
+      "sum_abs_mass_residual_m3": 1.1342045899999999e-12,
+      "quadrature_shortfall_m3": 0.8767793342999539,
+      "checks": {
+        "time60": true,
+        "all_steps_seen": true,
+        "fixed_steps": true,
+        "outflow_zero": true,
+        "discrete_volume_matches_mass_text_precision": true,
+        "source_quadrature_bound": true,
+        "all_step_mass_residual_small": true
+      }
+    }
+  ],
+  "gate": true,
+  "ascii_precision_issue": "fast ASCII writer hardcodes 3 decimals despite output_precision12; raster volume is not a mass audit at 1e-5m3. Next unique longer cost probe uses binary output, not a physical modification.",
+  "checkpoint": "Fast writer checkpoint call commented; no validated restart",
+  "field_passes_added": 0
+}

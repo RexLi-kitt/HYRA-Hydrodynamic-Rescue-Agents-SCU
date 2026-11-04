@@ -1,0 +1,70 @@
+{
+  "checks": {
+    "rhs_matches_trace": true,
+    "prediction_matches_trace": true,
+    "decimal_balance_matches": true,
+    "all_four_faces_positive": true,
+    "recorded_raw_faces_match": true,
+    "source_increment_zero": true,
+    "all_four_fluxes_outward": true,
+    "dt_exceeds_frozen_drain_bound": true,
+    "below_bound_nonnegative": true,
+    "above_bound_negative": true
+  },
+  "pass": true,
+  "outward_m3_s_w_e_n_s": [
+    13.243687951062856,
+    7.049699045742212,
+    0.08291785531719284,
+    0.0928785416689697
+  ],
+  "outgoing_m3_s": 20.46918339379123,
+  "incoming_m3_s": 0.0,
+  "available_m3": 7.5366905471939205,
+  "requested_outgoing_m3": 7.569236474332605,
+  "mean_rhs_m_s": -0.2046918339379123,
+  "replayed_mean_m": -0.0003254592713868437,
+  "frozen_drain_bound_s": 0.36819693302860196,
+  "excess_fraction": 0.004318331359750571,
+  "face_depth_m_w_e_n_s": [
+    0.14906446703387116,
+    0.0016693439100072538,
+    0.07703624938194634,
+    0.07369756156193208
+  ],
+  "face_hu_m2_s_w_e_n_s": [
+    -1.3243687951063248,
+    0.7049699045732718,
+    -0.32744083899645043,
+    -0.29195805153660254
+  ],
+  "face_u_m_s_w_e_n_s": [
+    -8.88453714999293,
+    422.30357708029646,
+    -4.250477426191872,
+    -3.961570035003862
+  ],
+  "face_v_m_s_w_e_n_s": [
+    0.15358615845095325,
+    -8.350737058776526,
+    0.060876253738163306,
+    0.057862274481567944
+  ],
+  "mean_u_m_s": -4.1092233166165295,
+  "mean_v_m_s": 0.05940264326936129,
+  "local_mean_cfl_scale_s": 0.664127370652862,
+  "face_cfl_scales_s": [
+    0.32694017561604577,
+    0.007811916984785869,
+    0.644575394729432,
+    0.6858284725167134
+  ],
+  "gravity_used_for_diagnostic": 9.80655,
+  "cfl_from_dg2_parser": 0.33,
+  "limitations": [
+    "Frozen recorded flux replay; does not reconstruct missing neighbour momentum slopes or rerun the Riemann solver.",
+    "Face CFL scales are diagnostic, not a proof of an admissible DG time step.",
+    "No full-state checkpoint; no PDE recovery or field validation was performed."
+  ],
+  "trace_sha256": "b3539a71906ce517b6a5f6c00d12a9a57a630ce16d71cf85eb63869cab415ca4"
+}

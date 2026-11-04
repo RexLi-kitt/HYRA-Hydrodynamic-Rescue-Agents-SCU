@@ -1,0 +1,26 @@
+{
+  "source": "https://cumbria.gov.uk/elibrary/Content/Internet/536/6357/42684141451.PDF",
+  "source_date": "2016-11-10",
+  "evidence_type": "County council structure register, post-event location evidence only",
+  "selection_before_spatial_comparison": [
+    "ROME STREET RLY NO 6",
+    "ROME STREET ARCHES NO 1",
+    "CALDEW BRIDGE APPROACH",
+    "CALDEW RLY NO 2",
+    "VICTORIA VIADUCT RLY NO 252",
+    "BOTCHERBY",
+    "CALDEW LITTLE",
+    "HOLME HEAD F/B",
+    "HARRABY",
+    "DOW BECK (BEDFORD ROAD)",
+    "DOW BECK (DOW BECK ROAD)",
+    "DOW BECK (DUNMAIL DRIVE)",
+    "DOW BECK (MORTON)",
+    "DOW BECK (SCAWFELL ROAD)",
+    "DOW BECK (STANHOPE ROAD)",
+    "DURRANHILL BECK CULVERT",
+    "DURRANHILL CULVERT"
+  ],
+  "rules": "Read published eastings/northings, exact name match, no coordinate fitting. Compute distance to all4 prior bottlenecks and fixed missed-component bounding boxes. Coordinates alone never justify DEM edits or source additions. Asset list is not exhaustive.",
+  "reject": "Absent/unparseable rows remain gaps; do not guess values. No dimensions or2005 identity inferred from2016 locations."
+}

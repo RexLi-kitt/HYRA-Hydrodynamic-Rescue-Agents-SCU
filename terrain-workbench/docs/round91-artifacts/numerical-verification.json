@@ -1,0 +1,101 @@
+{
+  "checks": {
+    "end_within_one_original_cap": true,
+    "all_steps_recorded": true,
+    "saved_fields_finite_nonnegative": true,
+    "max_finite_nonnegative": true,
+    "per_step_mass_guard": true,
+    "maximum_dominates_all_snapshots": true
+  },
+  "actual_end_s": 245700.115,
+  "steps": 545611,
+  "frames": [
+    {
+      "name": "check-0000.wdb",
+      "sha256": "01ec481567b9109d70ee70e8bb5e26e5af405c996d582b5be617fc24e51c4107",
+      "finite_nonnegative": true,
+      "volume_m3": 4.63999998,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0001.wdb",
+      "sha256": "bbcdde515fa831c3426e7af0a7822bc27c098843ed37fe82a8544e4c043f742e",
+      "finite_nonnegative": true,
+      "volume_m3": 1395850.9087369582,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0002.wdb",
+      "sha256": "5a83dd2ee2b8d4b3d4a757db0be759de47dee71883a7b8ebbea36af56f599b46",
+      "finite_nonnegative": true,
+      "volume_m3": 1758333.2344798648,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0003.wdb",
+      "sha256": "0c16a78672de80c744eb4549ae299ae9137e916be38496b5e376d2247efa28db",
+      "finite_nonnegative": true,
+      "volume_m3": 4238012.936131139,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0004.wdb",
+      "sha256": "339ff0484adafef7e179277d72035242bbb4e2e0e0c2d83e1daf6860de7c22a6",
+      "finite_nonnegative": true,
+      "volume_m3": 5572551.168535366,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0005.wdb",
+      "sha256": "abf00c7b2a67f04429ef4a2d6ba3f963866193892f37a7b9ce75bddde3beab16",
+      "finite_nonnegative": true,
+      "volume_m3": 8653071.476819552,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0006.wdb",
+      "sha256": "69f8e8b76d417849b3fa08b92a143e48b57309ce1ff99155ce13a7aea2ccbd05",
+      "finite_nonnegative": true,
+      "volume_m3": 11796186.555359364,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0007.wdb",
+      "sha256": "f9217a38250877a2017f83653bd11c4619a9e0046dc338bbdef74a0f6944f5d7",
+      "finite_nonnegative": true,
+      "volume_m3": 10693835.655526895,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0008.wdb",
+      "sha256": "19404d2e637a8ee368c1f0e0f721228b050a056303c54ee5f8b181da9512f592",
+      "finite_nonnegative": true,
+      "volume_m3": 7758189.3818092095,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0009.wdb",
+      "sha256": "b6c259a429a690a51612826b1c473c509674341812c7f04a380b8e57f01fa0b2",
+      "finite_nonnegative": true,
+      "volume_m3": 4637063.841183739,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0010.wdb",
+      "sha256": "1fa6a55e0cb6eaa6556d72cf8f17fea5eccaca71c2e55aadde47192904e07ab4",
+      "finite_nonnegative": true,
+      "volume_m3": 3903817.6001308276,
+      "maximum_dominates_saved_depth_above_1mm": true
+    },
+    {
+      "name": "check-0011.wdb",
+      "sha256": "1609ed5e1a5433a58064e79d249ef34723829d8440ade924c6334ad1fd91ba28",
+      "finite_nonnegative": true,
+      "volume_m3": 3664752.684883353,
+      "maximum_dominates_saved_depth_above_1mm": true
+    }
+  ],
+  "total_signed_mass_residual_m3": 6.342919269375433e-09,
+  "sum_abs_mass_residual_m3": 0.0227781018172211,
+  "wall_s": 2740.4500504000025
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-31",
+  "source_url": "https://www.ecrr.org/Portals/27/Publications/Carlisle2005%20FloodHealthImpactAssessment.pdf",
+  "source_pdf": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\无人机集群搜救大创\\outputs\\round92\\EA2005-reprinted-in-HIA2011.pdf",
+  "source_sha256": "5d7873eb3e7ca97c63abcf65942e080c008df71e7e0755ad000c6aad62684850",
+  "pdf_page_one_based": 51,
+  "image_sha256": "32865675e79cd0a5b39f4b38355edd089af045108c1d0021df43d0036701d4f4",
+  "method": "Extracted original embedded JPEG, visually inspected; no image modification or georeferencing.",
+  "observed_legend": "Flood Warning Areas",
+  "use": "Event mechanism and landmark context only",
+  "limitations": [
+    "Warning areas are not measured inundation polygons.",
+    "No visible coordinate grid or printed scale; independent historical control points not established.",
+    "No measured culvert inverts, wall crest heights or breach dimensions."
+  ],
+  "decision": "No rasterization for scoring; no terrain edits; no new hydrodynamic run.",
+  "baseline_unchanged": {
+    "known_wet_cells": 217464,
+    "predicted_above_0_1m": 192580,
+    "missed_indicator_cells": 24884
+  },
+  "external_transmission": false
+}

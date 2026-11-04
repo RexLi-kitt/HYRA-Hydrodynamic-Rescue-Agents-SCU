@@ -1,0 +1,96 @@
+{
+  "state": "completed",
+  "exit_code": 0,
+  "wall_s": 298.40492449999874,
+  "target_s": 2400,
+  "field_passes_added": 0,
+  "production_adopted": false,
+  "accepted_steps": 5260,
+  "end_s": 2400.0,
+  "minimum_dt": 0.003726773599214629,
+  "rejections": 9,
+  "first_rejection_s": 2179.007318880099,
+  "max_attempt": 2,
+  "first_rejection_stage": 1,
+  "snapshots": [
+    {
+      "file": "check-0000.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 1.760471246912,
+      "volume_m3": 2777.3400000004,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0001.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 2.855698124611,
+      "volume_m3": 11109.3599999992,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0002.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 3.444911186814,
+      "volume_m3": 24996.059999999703,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0003.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 3.574391155509,
+      "volume_m3": 41660.0000000001,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0004.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 3.612488262757,
+      "volume_m3": 58323.7399999998,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0005.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 3.645366181539,
+      "volume_m3": 74987.2800000011,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0006.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 3.76743113195,
+      "volume_m3": 91658.47,
+      "momentum_finite": true
+    },
+    {
+      "file": "check-0007.wd",
+      "finite": true,
+      "nonnegative": true,
+      "min": 0.0,
+      "max": 3.917173640313,
+      "volume_m3": 108345.1600000029,
+      "momentum_finite": true
+    }
+  ],
+  "source_step_times_equal": true,
+  "boundary_step_times_equal": true,
+  "mass_max_interval_error": 1.6007e-10,
+  "source_total_m3": 108345.16,
+  "boundary_net_m3": 0.0,
+  "independent_balance_error_m3": 2.8958311304450035e-09,
+  "internal_gate_pass": true
+}

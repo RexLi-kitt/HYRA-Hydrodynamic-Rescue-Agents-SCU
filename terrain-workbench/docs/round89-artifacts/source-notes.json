@@ -1,0 +1,21 @@
+{
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2006.11555v2",
+      "locations": "Figure4 p17; section3.1.2 pp14-15; code availability p40",
+      "summary": "2005 event origin Jan7 midnight; 15-minute routed inflows; CNN uses hydraulic-model targets. Not independent flood-accuracy evidence."
+    },
+    {
+      "url": "https://github.com/SRKabir/Rapid_FloodModelling_CNN/tree/eadfc848a6d37cb3476da2fe6ec7087262d9ef54",
+      "locations": "README and Data",
+      "summary": "README assigns Run1 to 2005 and Run2-9 to synthetic training; fixed version data identity resolves bdy1/7 mismatch."
+    }
+  ],
+  "read_failures": [
+    "Heriot-Watt PDF web403: not retried through alternate access to that endpoint; separately published author arXiv copy read normally",
+    "arXiv HTML404, PDF read succeeds; screenshot cache miss, no visual table claim used",
+    "one TLS EOF downloading two final small files; one resume with default TLS and all old blobs reverified succeeded"
+  ],
+  "simulation_started": false,
+  "license_note": "Public access is not a blanket redistribution license. Local source provenance copies only; no upload or PR."
+}

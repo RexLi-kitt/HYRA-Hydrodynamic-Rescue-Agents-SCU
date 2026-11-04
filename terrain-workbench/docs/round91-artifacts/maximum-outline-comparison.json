@@ -1,0 +1,57 @@
+{
+  "evidence": "2005 reported maximum polygons vs complete-window conditional software simulation",
+  "backend": "LF8 fast acceleration; not production HYRA or DG2",
+  "rows": [
+    {
+      "threshold_m": 0.01,
+      "main_indicator": false,
+      "observed_fully_covered_cells": 217464,
+      "model_above_indicator": 194262,
+      "model_below_or_equal_indicator": 23202,
+      "positive_coverage_fraction": 0.893306478313652,
+      "edge_unknown_predicted_above": 3908,
+      "outside_unknown_predicted_above": 13604,
+      "overall_accuracy": null,
+      "false_positives": null,
+      "true_negatives": null,
+      "scope": "positive maximum-outline coverage only; not total accuracy"
+    },
+    {
+      "threshold_m": 0.1,
+      "main_indicator": true,
+      "observed_fully_covered_cells": 217464,
+      "model_above_indicator": 192580,
+      "model_below_or_equal_indicator": 24884,
+      "positive_coverage_fraction": 0.8855718647684214,
+      "edge_unknown_predicted_above": 3670,
+      "outside_unknown_predicted_above": 12647,
+      "overall_accuracy": null,
+      "false_positives": null,
+      "true_negatives": null,
+      "scope": "positive maximum-outline coverage only; not total accuracy"
+    },
+    {
+      "threshold_m": 0.3,
+      "main_indicator": false,
+      "observed_fully_covered_cells": 217464,
+      "model_above_indicator": 187192,
+      "model_below_or_equal_indicator": 30272,
+      "positive_coverage_fraction": 0.8607953500349483,
+      "edge_unknown_predicted_above": 3060,
+      "outside_unknown_predicted_above": 10688,
+      "overall_accuracy": null,
+      "false_positives": null,
+      "true_negatives": null,
+      "scope": "positive maximum-outline coverage only; not total accuracy"
+    }
+  ],
+  "zero_recorded_max_depth_meaning": "no recorded depth above 0.001m, not exact dryness",
+  "zero_recorded_max_depth_in_reported_fully_covered_cells": 23017,
+  "unknown_edge_cells": 9318,
+  "unknown_outside_cells": 354279,
+  "all263_marks_retained": true,
+  "all_target_qualitative_requirements_pass": false,
+  "why_not_overall_pass": "unknown dry coverage, boundary precision, initial-state realism, time-specific rise/fall, directions and route evidence remain; any main-indicator misses also retained",
+  "production_adopted": false,
+  "original_version_replication": false
+}

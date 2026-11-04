@@ -1,0 +1,30 @@
+{
+  "case_id": "Carlisle2005-Kabir2020-5m-independent-input-candidate",
+  "purpose": "first complete-window conditional reference simulation with pre-registered real maximum-outline comparison",
+  "target_s": 245700,
+  "wall_limit_s": 3600,
+  "threads": 4,
+  "source_revision": "eadfc848a6d37cb3476da2fe6ec7087262d9ef54",
+  "exe_sha256": "884a074e36474ae86949579525af295a0e9550c24d2ca138cd2612dcd4e7a771",
+  "configuration_hashes": {
+    "carlisle.bci": "f427f6e3db7e462593081bdafc681ac4f6f6e933fba8724d285e302b9f3257e0",
+    "Carlisle_5m.asc": "a175a51a668472b17ba4bc0f7be56a18048a080030d13e13f1cf28e4fbc9e018",
+    "carlisle_run7.bdy": "717f654d40f1b22fbdb460455e7285c6078cfd636179ebda10749ceccb10c0cc",
+    "case.par": "0be401dbbfb4a15e0d1531633e26225383d66b71a3614bdca8a712997cd0062f"
+  },
+  "observation_protocol_sha256": "165a6878575838451e82546474066b2040ef089e07fc2331836646747fddb314",
+  "observation_mask_sha256": "7a0f71fe7902fa524d9908d8d349d98e9b457e1b1a0c693d7cc1e070af0808e2",
+  "all_observations": "all5 polygons/all263 marks retained; only independently preregistered covered cells eligible for positive wet check; outside and edge remain unknown",
+  "input_source": "Run7.bdy independently verified equal to 2005 Run1.csv with original23 source widths, no fit",
+  "not_exact_original_software": "v8 fast backend, author v6.3.1 example; no score inheritance from DG2 or production",
+  "limits": [
+    "dry initial state as archive configuration, not observed state",
+    "no proven restart; one bounded run, do not relaunch automatically",
+    "max extent only, no time-of-day/road/person claims",
+    "no known-dry coverage so no overall accuracy/false alarm estimate",
+    "initial wall cost extrapolation ~8min is not a duration promise"
+  ],
+  "failure_gate": "exit nonzero, wall3600s, nonfinite latest mass or abs per-step Verror >max(1e-4,1e-8*abs(volume)); retain all failures",
+  "physical_defaults_changed": false,
+  "full_event_no_prior_runs": true
+}

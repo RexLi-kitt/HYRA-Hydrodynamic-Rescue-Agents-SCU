@@ -1,0 +1,34 @@
+{
+  "case.par": {
+    "baseline600_sha256": "ceed716724289dd4b2949738a2ce9bfd6c754a823c7433bc7660e75cc7941259",
+    "candidate2400_sha256": "828f7db0d19cea92d32e74f42ff11c30aca8679a1e941c575e23d7ac7b2f283f"
+  },
+  "carlisle.bci": {
+    "baseline600_sha256": "5ddab49982d6043f397a640ce01b65481e310d784b51b5cf6258d71553ce65aa",
+    "candidate2400_sha256": "5ddab49982d6043f397a640ce01b65481e310d784b51b5cf6258d71553ce65aa"
+  },
+  "carlisle.bdy": {
+    "baseline600_sha256": "1a7e4ba6858b61a97466fd1d9724bbbfb315d2f46fba3dafa76f5ccf97e39726",
+    "candidate2400_sha256": "1a7e4ba6858b61a97466fd1d9724bbbfb315d2f46fba3dafa76f5ccf97e39726"
+  },
+  "carlisle.stage": {
+    "baseline600_sha256": "bc899141b78405ae3fe540323af47b6f33615ad9e2e53b62c7c328524b0ed915",
+    "candidate2400_sha256": "bc899141b78405ae3fe540323af47b6f33615ad9e2e53b62c7c328524b0ed915"
+  },
+  "CarlislefixDEMwithbedDG2.asc": {
+    "baseline600_sha256": "e3d557b88a44d273c13210b4a695942b64f879075657c93e1eb086acc27a98b7",
+    "candidate2400_sha256": "e3d557b88a44d273c13210b4a695942b64f879075657c93e1eb086acc27a98b7"
+  },
+  "CarlislefixDEMwithbedDG2.asc.raw": {
+    "baseline600_sha256": "7bb4597790861b121864d23218c81aef8ff8e1dd67e4bf576469eb46c9a1cc0a",
+    "candidate2400_sha256": "7bb4597790861b121864d23218c81aef8ff8e1dd67e4bf576469eb46c9a1cc0a"
+  },
+  "CarlislefixDEMwithbedDG2.asc1x": {
+    "baseline600_sha256": "d814246283249fabd29f10ae83581b89a138a725dc3089e4dc2a1552c43e1b7e",
+    "candidate2400_sha256": "d814246283249fabd29f10ae83581b89a138a725dc3089e4dc2a1552c43e1b7e"
+  },
+  "CarlislefixDEMwithbedDG2.asc1y": {
+    "baseline600_sha256": "09edc12d7810df43862f83bafceffd40411f0464e46bddf113c95646b3d5077d",
+    "candidate2400_sha256": "09edc12d7810df43862f83bafceffd40411f0464e46bddf113c95646b3d5077d"
+  }
+}

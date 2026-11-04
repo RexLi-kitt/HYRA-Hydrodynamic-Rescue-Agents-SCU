@@ -1,0 +1,132 @@
+[
+  {
+    "file": "analyze_friction86.py",
+    "sha256": "257965fe8945ea77632d243751b72b1c6ebf652cdf2aa9b5c0030399b9ea47ff",
+    "bytes": 2041
+  },
+  {
+    "file": "audit-round86-20261030.md",
+    "sha256": "edd7b3645ec6a48b580e4c04e9d097524aa728c435975de1e9adb29d9c067f55",
+    "bytes": 7132
+  },
+  {
+    "file": "build.log",
+    "sha256": "24878797c5a403c201cf2ca40257cbc0d5556afe5a8dfe369c3842d570b0f1b2",
+    "bytes": 1241
+  },
+  {
+    "file": "candidate-build.json",
+    "sha256": "b9c6dc6d3fa5765cf4bd62fe3cc5792c84176f92090b56c88be278b7c1d5e4c8",
+    "bytes": 273
+  },
+  {
+    "file": "candidate-build.log",
+    "sha256": "5db3f6b2c60ad1bb5db924783cea587fd5ffe4239c6dba5395f7053d34a3ff0b",
+    "bytes": 51561
+  },
+  {
+    "file": "candidate-probe-build.log",
+    "sha256": "b8449435c66d34217ea0d5ab212cc76ac42f8c817654b8cf334a954ea93da2e0",
+    "bytes": 1321
+  },
+  {
+    "file": "candidate-protocol.json",
+    "sha256": "a232ab5fc01ba276584cb49f383cb85e3fdc6f723352cd3329bece909de743b0",
+    "bytes": 1271
+  },
+  {
+    "file": "candidate-source.zip",
+    "sha256": "4e2b84728336054609d7d93d0059860bb6cb85f4836b1ab054dd953f8defe66c",
+    "bytes": 694306
+  },
+  {
+    "file": "candidate_friction86.py",
+    "sha256": "19de28414db9a78f9cd4fcfdace9ca822eac9c441367125755cdd5a7a697ca9c",
+    "bytes": 9300
+  },
+  {
+    "file": "CMakeLists.txt",
+    "sha256": "22fa5627cd9045bd4d83f4ddbfa3e09f6536b0859bb7befa3db1ea8079936448",
+    "bytes": 128
+  },
+  {
+    "file": "controls.json",
+    "sha256": "6c89d2b8ccbdbca8e848e1a42f162324a4601a93500a39d4f660708a2e0331dd",
+    "bytes": 1718
+  },
+  {
+    "file": "coupled-comparison.json",
+    "sha256": "04d7b3f4c35fd5eafae57eb5f15004517c8098d830793884922f1095bf169b1b",
+    "bytes": 7229
+  },
+  {
+    "file": "coupled-full-comparisons.npz",
+    "sha256": "ce8a12f6f37dfc7c6189562823df2d8bab074ad7113b9753056de32d42a44914",
+    "bytes": 39328
+  },
+  {
+    "file": "diagnose_routing86.py",
+    "sha256": "3ba43d30a0025f1503c72bd4d689acb1c40f327f45f7ba858e77ab902c0e6557",
+    "bytes": 7748
+  },
+  {
+    "file": "diagnosis.json",
+    "sha256": "3b907c328efbd88583108339e0815112d3a748c5785676903948a3008ebdcd12",
+    "bytes": 8666
+  },
+  {
+    "file": "friction_probe.cpp",
+    "sha256": "712375b9e7498935891ac1088b11eb34d4ac9c50977ba9c8b2566373379400a4",
+    "bytes": 1247
+  },
+  {
+    "file": "full-diagnostics.npz",
+    "sha256": "e828688ab7ae2da09e51df67cc4bfc5e79d2e9e4057397595647d16097782e10",
+    "bytes": 38982
+  },
+  {
+    "file": "isotropic-friction.patch",
+    "sha256": "3f57fce5849986b997d97eeeed64900ddd9551bad9c33bf91a78f1988dc18867",
+    "bytes": 715
+  },
+  {
+    "file": "literature-source.json",
+    "sha256": "f6f425e6b71638d73947606657b2386d6379ee1085dc1855d52069f909ddb7ad",
+    "bytes": 503
+  },
+  {
+    "file": "operator-verification.json",
+    "sha256": "5dbad341206d7162dc8afe662a397ef36434403af455fb0e63c13e6e3be5d60f",
+    "bytes": 458
+  },
+  {
+    "file": "protocol.json",
+    "sha256": "672a0d66dfae6f3b7a4468880162d17dc6db19eb52090fdca8a951193635b6d1",
+    "bytes": 1339
+  },
+  {
+    "file": "publish_friction86.py",
+    "sha256": "44c48f44b4e8514fecbf1e4763d215f40bf0093104ce2bb5049e6ca0f4dc2ec1",
+    "bytes": 10089
+  },
+  {
+    "file": "raw-experiments.zip",
+    "sha256": "012bb7687049ab73e796f76a06bef11115da006e6eae921bdfa95f81ed7408e3",
+    "bytes": 6035425
+  },
+  {
+    "file": "runs.json",
+    "sha256": "4e66b58e17c59b17981b73bd7da6e22723e5c90f94b0453c72984ad2a18b1c6f",
+    "bytes": 1465
+  },
+  {
+    "file": "source-and-field-hashes.json",
+    "sha256": "c8e56f7f996ad303d68ef66f73c251e3f0d23dde495f7ccf1081585dbf15b3e3",
+    "bytes": 1228
+  },
+  {
+    "file": "status.json",
+    "sha256": "a2a8f5495ae8ac7ef5ed7dfe6d06987142e96542a6e9456f01a7a2c51db0119b",
+    "bytes": 76
+  }
+]

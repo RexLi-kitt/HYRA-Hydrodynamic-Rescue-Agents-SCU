@@ -1,0 +1,30 @@
+{
+  "author_reference_outputs": {
+    "tree_revision": "eadfc848a6d37cb3476da2fe6ec7087262d9ef54",
+    "tree_file_sha256": "735703e30f2fc601686e079dc74a253c66589b8cb9b34b2f0edb62cb290f1016",
+    "readme_sha256": "ce1bf2ab329d3a29d18972848612b98fc1ebce129932be5413409db79def875d",
+    "finding": "Frozen complete repository tree contains inputs/code, no full hydraulic output fields; README asks users to generate them. No same-input original-output comparison is available from this snapshot.",
+    "url": "https://github.com/SRKabir/Rapid_FloodModelling_CNN/tree/eadfc848a6d37cb3476da2fe6ec7087262d9ef54"
+  },
+  "new_historical_lead": {
+    "title": "An investigation of inundation modelling for urban areas",
+    "author": "Marie-Alice Ghitescu",
+    "year": 2009,
+    "url": "https://cdm21063.contentdm.oclc.org/digital/collection/masters2/id/20",
+    "evidence_level": "Institutional repository indexed transcript; appendix original not obtained or visually checked.",
+    "summary": "Caldew study uses29 channel sections at about50m spacing; sections are referenced in Appendix B and positions in Fig4.2. The terrain discussion mentions2002 survey with November2005 update. A local model uses Manning n0.035. These are data leads, not corrections for this5m full-domain model.",
+    "date_caution": "November2005 is after the January event; source date and modifications must be verified. Text coordinate axis naming appears reversed versus EPSG27700; do not assign geometry from it without figure/reference verification.",
+    "retrieval": "Web page/API unavailable through fetch; public metadata TLS handshake timed out twice (initial plus one recovery). Stop retrying this run; no appendix file or fabricated hash.",
+    "do_not_adopt": "Do not change whole-domain n0.055 to0.035 just because a different local study used it; no independent calibrated value for our floodplain/river distribution."
+  },
+  "other_access_status": [
+    {
+      "url": "https://journals.ametsoc.org/view/journals/eint/17/6/2012ei000475.1.xml",
+      "status": "403; not used as full-text evidence or bypassed"
+    },
+    {
+      "url": "https://centaur.reading.ac.uk/31223/1/MetAppsCarlisle_v3_0_180308_submit.pdf",
+      "status": "Access Denied; no further retrieval attempts"
+    }
+  ]
+}

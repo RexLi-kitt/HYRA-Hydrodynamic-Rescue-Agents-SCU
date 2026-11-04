@@ -1,0 +1,72 @@
+[
+  {
+    "file": "analyze_extension87.py",
+    "sha256": "a58c7da6925caee69776c4bc57f62530b0a2c94c8640cf2415f5e26c24d34bab",
+    "bytes": 1746
+  },
+  {
+    "file": "audit-round87-20261030.md",
+    "sha256": "359265e8f72f583950d43c14d4768e94cd5e4f7050e97db1d99cf7d208774f68",
+    "bytes": 6998
+  },
+  {
+    "file": "extend_friction87.py",
+    "sha256": "2928e4ca0e1a3803758fe5ecf9cdc95593387bfbfe664f1da7573b66c077fafd",
+    "bytes": 4560
+  },
+  {
+    "file": "extension-comparison.json",
+    "sha256": "be32db0b0662c60c7785863277f4508d40c6c67e096a73cf4e2235f199aaa99b",
+    "bytes": 7797
+  },
+  {
+    "file": "extension-hashes.json",
+    "sha256": "83fcec6cefec44e8854023112dde0038a318b9c6a3ce8c3562c71fbfc68b5ed2",
+    "bytes": 1817
+  },
+  {
+    "file": "extension-protocol.json",
+    "sha256": "94b6780ee30093eacb533ce8ed4c65da63b6359ba1ae8ea8051d8cd880043a1b",
+    "bytes": 1093
+  },
+  {
+    "file": "full-extension-comparison.npz",
+    "sha256": "00ccef5e53a699286197aed04e464f8d4e13cd3775b95d13c7fb53f8c0ac591a",
+    "bytes": 146037
+  },
+  {
+    "file": "input-evidence-attempts.json",
+    "sha256": "bbe5caf397f29ee6838f5c92408e6bf471a74ecbb1bad5d55e1dee87bce33f24",
+    "bytes": 704
+  },
+  {
+    "file": "protocol.json",
+    "sha256": "c763b8ff61d8af1c47510d4d9a3691768d7b934aa20927ce287797de7ea9e989",
+    "bytes": 1181
+  },
+  {
+    "file": "publish_extension87.py",
+    "sha256": "77b17cb833abd2d5c94783fa1a2f6be645f259c040c6fb89e699a0b35abdeb31",
+    "bytes": 8608
+  },
+  {
+    "file": "raw-experiments.zip",
+    "sha256": "23cb984f3eaa60afffa7d0ccb23a263a907ec75824cb9066c0e28eb4b5964076",
+    "bytes": 4617980
+  },
+  {
+    "file": "regress_friction87.py",
+    "sha256": "d3498a06cf5077d317a1fa8546a626634e1171dd93adb2e9d1b5ce925531bd23",
+    "bytes": 5752
+  },
+  {
+    "file": "regressions.json",
+    "sha256": "5373b3cf49ddfa780be1d4b1318559906786eb72683bd03ba6dd7c2f9665c654",
+    "bytes": 5951
+  },
+  {
+    "file": "status.json",
+    "sha256": "cae9648935d5e0054437a46b631a7f8a2c45438b7754e9cd6ae28340144b630d",
+    "bytes": 1874
+  }
+]

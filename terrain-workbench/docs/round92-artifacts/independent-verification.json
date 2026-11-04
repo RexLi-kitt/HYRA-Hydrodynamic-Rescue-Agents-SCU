@@ -1,0 +1,280 @@
+{
+  "checks": {
+    "all24884_misses_identical": true,
+    "all263_unique_ids_retained": true,
+    "component_counts_match_independent_bincount": true,
+    "all_component_cells_accounted": true,
+    "all32_paths_independently_valid": true,
+    "all_inputs_unchanged": true
+  },
+  "paths": [
+    {
+      "fid": 14,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 15,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 17,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 18,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 21,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 22,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 23,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 25,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 29,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 45,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 47,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 48,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 55,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 68,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 81,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 107,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 133,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 134,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 135,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 136,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 138,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 147,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 158,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 170,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 172,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 192,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 194,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 206,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 213,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 220,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 243,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    },
+    {
+      "fid": 247,
+      "cardinal_path": true,
+      "starts_at_original_point": true,
+      "ends_in_model_wet": true,
+      "bed_and_crest_exact": true,
+      "independent_threshold_connectivity_proves_minimum": true
+    }
+  ],
+  "wet137_survey_stage_diagnostic": {
+    "count": 137,
+    "below_observed": 119,
+    "median_model_minus_observed_m": -0.20641811915390917,
+    "range_m": [
+      -0.9272284982363317,
+      0.6416272922602495
+    ],
+    "meaning": "Internal cause diagnostic at137 model-wet marks only; not a new primary score or overall bias estimate."
+  },
+  "no_hydrodynamic_rerun": true,
+  "old_mass_and_stability_checks": "Inherited unchanged hashed round91 run; no repeat required."
+}

@@ -1,0 +1,129 @@
+{
+  "count_checks": [
+    {
+      "threshold_m": 0.01,
+      "rows_outside_unknown_known_wet_edge_unknown_columns_below_above": [
+        [
+          340675,
+          13604
+        ],
+        [
+          23202,
+          194262
+        ],
+        [
+          5410,
+          3908
+        ]
+      ]
+    },
+    {
+      "threshold_m": 0.1,
+      "rows_outside_unknown_known_wet_edge_unknown_columns_below_above": [
+        [
+          341632,
+          12647
+        ],
+        [
+          24884,
+          192580
+        ],
+        [
+          5648,
+          3670
+        ]
+      ]
+    },
+    {
+      "threshold_m": 0.3,
+      "rows_outside_unknown_known_wet_edge_unknown_columns_below_above": [
+        [
+          343591,
+          10688
+        ],
+        [
+          30272,
+          187192
+        ],
+        [
+          6258,
+          3060
+        ]
+      ]
+    }
+  ],
+  "all263_mark_index_checks": true,
+  "elevation_flag_groups": [
+    {
+      "survey_below_grid": true,
+      "points": 81,
+      "model_above_main_indicator": 3,
+      "model_not_above_main_indicator": 78,
+      "interpretation": "diagnostic association only; no points excluded and no causal conclusion"
+    },
+    {
+      "survey_below_grid": false,
+      "points": 182,
+      "model_above_main_indicator": 134,
+      "model_not_above_main_indicator": 48,
+      "interpretation": "diagnostic association only; no points excluded and no causal conclusion"
+    }
+  ],
+  "all5_polygon_diagnostics": [
+    {
+      "fid": 1,
+      "eligible_cells": 11637,
+      "above_main_indicator": 11428,
+      "below_main_indicator": 209,
+      "coverage": 0.9820400446850562,
+      "zero_cells_meaning": "no eligible fully covered cells, NOT pass"
+    },
+    {
+      "fid": 20,
+      "eligible_cells": 0,
+      "above_main_indicator": 0,
+      "below_main_indicator": 0,
+      "coverage": null,
+      "zero_cells_meaning": "no eligible fully covered cells, NOT pass"
+    },
+    {
+      "fid": 25,
+      "eligible_cells": 0,
+      "above_main_indicator": 0,
+      "below_main_indicator": 0,
+      "coverage": null,
+      "zero_cells_meaning": "no eligible fully covered cells, NOT pass"
+    },
+    {
+      "fid": 27,
+      "eligible_cells": 0,
+      "above_main_indicator": 0,
+      "below_main_indicator": 0,
+      "coverage": null,
+      "zero_cells_meaning": "no eligible fully covered cells, NOT pass"
+    },
+    {
+      "fid": 35,
+      "eligible_cells": 205827,
+      "above_main_indicator": 181152,
+      "below_main_indicator": 24675,
+      "coverage": 0.8801177688058418,
+      "zero_cells_meaning": "no eligible fully covered cells, NOT pass"
+    }
+  ],
+  "maximum_time_diagnostic": {
+    "known_wet_cells_with_model_max_above_indicator_after_48h": 15,
+    "meaning": "timing diagnostic, not proof observation ends at48h; frozen full-window score unchanged"
+  },
+  "all_internal_checks": {
+    "end_within_one_original_cap": true,
+    "all_steps_recorded": true,
+    "saved_fields_finite_nonnegative": true,
+    "max_finite_nonnegative": true,
+    "per_step_mass_guard": true,
+    "maximum_dominates_all_snapshots": true
+  },
+  "primary_score_recomputed_from_binary": true,
+  "overall_accuracy": null,
+  "production_adopted": false
+}

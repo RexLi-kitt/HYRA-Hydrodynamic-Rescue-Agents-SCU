@@ -1,0 +1,77 @@
+[
+  {
+    "file": "audit-round83-20261030.md",
+    "sha256": "79572391172af433046d43fcf4aeeda6d9aebd689b44c3f4f1a7443472b01937",
+    "bytes": 8584
+  },
+  {
+    "file": "build.json",
+    "sha256": "2463a03ed38dd6ea1a8ea6d0730a8e3d75cd042715ab8e4bba445220cfd7a5cc",
+    "bytes": 1385
+  },
+  {
+    "file": "build.log",
+    "sha256": "91d2a43e23a32cace9dc8670439c5477cb449a28c17ca8b83243e58ea99ddcc3",
+    "bytes": 49639
+  },
+  {
+    "file": "build_retry83.py",
+    "sha256": "aa08c07b0b585811554a7fcb2f00eca3030966f5db700cd6fe122b6d6dcf63d9",
+    "bytes": 8625
+  },
+  {
+    "file": "controls.json",
+    "sha256": "b7b9048b8bc4dac0fb124e10a5c5f566ac15edbb0ca7cab067fd4547dcc58025",
+    "bytes": 2697
+  },
+  {
+    "file": "dg2-candidate.cpp",
+    "sha256": "78c491b05ef168c1c232a6b0731a6e1847645d80acad97838c5ae18877a56982",
+    "bytes": 50099
+  },
+  {
+    "file": "independent-verification.json",
+    "sha256": "48e17bda17165f966ffc241435863f37a6228c5282d3318e386da6415d44bc3f",
+    "bytes": 1205
+  },
+  {
+    "file": "protocol.json",
+    "sha256": "8e4b91d63e1cb76af5d9a3300df209eca3a1b4bb498f03a866b7d156558c8b0f",
+    "bytes": 927
+  },
+  {
+    "file": "publish_retry83.py",
+    "sha256": "17c8415c89a86dbc1b207ee15bdb27109f3a41b081ed47179c8980d351514f36",
+    "bytes": 8845
+  },
+  {
+    "file": "raw-experiments.zip",
+    "sha256": "8cffe3a2842ce31f63f0ba43297f234c8da9926718b342d6924e1c0dc8263a84",
+    "bytes": 4599035
+  },
+  {
+    "file": "rk-step-transaction.patch",
+    "sha256": "8a5ae315f7240910597bfd6b64c5274cfe676001442ca1e35416223199c76d13",
+    "bytes": 8414
+  },
+  {
+    "file": "run_retry83.py",
+    "sha256": "4819cf9e9ff72f284814ba3293ef6034a463a558965b575cff30402555e05589",
+    "bytes": 3398
+  },
+  {
+    "file": "status.json",
+    "sha256": "949fd72ebe25c6956e57db5df0a4fc81bfeac08e79e618c4e4532b502ee07017",
+    "bytes": 2372
+  },
+  {
+    "file": "test_retry83.py",
+    "sha256": "abe549171b09cad125efc4a64698ca823f08c70d313834cfea2d8382580372eb",
+    "bytes": 3407
+  },
+  {
+    "file": "verify_retry83.py",
+    "sha256": "78451cbf0de675b623ac465cb3384ec0972acdf610cbade70f80291cc53ef73d",
+    "bytes": 3120
+  }
+]

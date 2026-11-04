@@ -1,0 +1,8 @@
+{
+  "single_changed_variable": "OMP_NUM_THREADS 1 to4",
+  "case": "same7200s source/geometry/solver/outputs",
+  "wall_limit_s": 240,
+  "predeclared_equivalence": "all saved h maxabs <=1e-9 m; all time/step/iteration text columns equal; finite nonnegative; cumulative mass discrepancy <=1e-4m3",
+  "adoption": "retain 4 threads for this isolated reference path only if equivalence passes and measured wall runtime is lower; no production changes",
+  "GPU_not_used": true
+}

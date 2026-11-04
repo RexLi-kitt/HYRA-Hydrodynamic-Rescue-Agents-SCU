@@ -1,0 +1,57 @@
+[
+  {
+    "file": "analyze_sensitivity84.py",
+    "sha256": "145504ed49668349f23804c2f02f018197b04bd125d59f34f7e82e8f224f6132",
+    "bytes": 4592
+  },
+  {
+    "file": "audit-round84-20261030.md",
+    "sha256": "8b7c297d002304fd33314e611cac635835d8320535c989127907230fd9fd301b",
+    "bytes": 5901
+  },
+  {
+    "file": "comparison.json",
+    "sha256": "c794ae0e022211622d412367643a3e5c59ef21fc924ae7a5a9d8d9dff9c75749",
+    "bytes": 12767
+  },
+  {
+    "file": "configuration-hashes.json",
+    "sha256": "0ccedcae9ec595be7be9c396eb1ae1bcd626cae11aff2c9ef7124f199a74961a",
+    "bytes": 1761
+  },
+  {
+    "file": "full-mask-comparisons.npz",
+    "sha256": "78bbec233b1897510687fe4bffef68f07a06299e6f8e25369dba373a8a71cc59",
+    "bytes": 40733
+  },
+  {
+    "file": "protocol.json",
+    "sha256": "326f1bf6f1b6bf75093d752810189a8b9595c1730d716341780f61e0c7bd4888",
+    "bytes": 1443
+  },
+  {
+    "file": "publish_sensitivity84.py",
+    "sha256": "c0b6905d071710ad702d73aed295a95d10743a154fa7bd5f6cd7281c6b7259b8",
+    "bytes": 8350
+  },
+  {
+    "file": "raw-experiment.zip",
+    "sha256": "f2086ce4aa07c51899a6f8ab580623a3b6c0a42716a505380a1c03d79ace976d",
+    "bytes": 4481532
+  },
+  {
+    "file": "run_sensitivity84.py",
+    "sha256": "d0c23773a8cffb1c77d7ea0cee576482656d0fa0f45099e60f06bb501e86db31",
+    "bytes": 4916
+  },
+  {
+    "file": "status.json",
+    "sha256": "caf8d5d3085416cecac0ff461fa88581d30dcfcfc6329eb3e0a27eb893e3d630",
+    "bytes": 1902
+  },
+  {
+    "file": "time-sensitivity-2400s.png",
+    "sha256": "a93989f224a4236b9cbe28bb27604ef4650128ad5b6e9f2fec11b89593657b79",
+    "bytes": 86516
+  }
+]
