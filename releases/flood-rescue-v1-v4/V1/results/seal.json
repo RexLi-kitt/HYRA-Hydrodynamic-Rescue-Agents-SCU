@@ -1,0 +1,42 @@
+{
+  "best": "gaps",
+  "parents": [
+    189001,
+    189050
+  ],
+  "layouts": 4,
+  "criterion": "RCR > .95",
+  "files": {
+    "uav-workbench\\v1_rescue95\\band.py": "9460c5ed2da5ab2666921445c422f1fec2929215b427aa8d0495aa34ba165822",
+    "uav-workbench\\v1_rescue95\\bank.py": "3f010625f6b3e390efe8998f2bc3ee31b7c40c363e9b056281dba6489e1bc6f6",
+    "uav-workbench\\v1_rescue95\\deep.py": "ef3d9a98ed101118c56967b446777d3589747b02db9dfa2a59f5747a6d901024",
+    "uav-workbench\\v1_rescue95\\edges.py": "91a14eb9f2a03c077898bf9e1e137525e307dadaa9dc0db70ef00516cf6f2615",
+    "uav-workbench\\v1_rescue95\\gaps.py": "a7d2c67c68b8fe89b8066ddd1486682ada3b03530c1aeb7f90892f307da5880a",
+    "uav-workbench\\v1_rescue95\\guard.py": "007210594afa629048e5882943df61658de8b8a87fb43dcb3e0573c3743291b6",
+    "uav-workbench\\v1_rescue95\\late.py": "4f8daeac719221f9a8cebbd4c925da1c20b23b46398f14b2c83dc1bd386daf20",
+    "uav-workbench\\v1_rescue95\\long.py": "8b876e3fc167278733cee353471882945ad17c01558cc592b187602e71b520a4",
+    "uav-workbench\\v1_rescue95\\missed.py": "903891009dd6e7140a3ad72326f041d3a27b5e1fd5f14e3ba88754e3346f3382",
+    "uav-workbench\\v1_rescue95\\offline.py": "cc57f5c6261d16815c47323b7f47f5dc9757687dddc07d76918c1ea9d6606014",
+    "uav-workbench\\v1_rescue95\\opportunistic.py": "772070a5b6f32492811ecfc6b1c60ac253a211d065432c801392a0d6f96976bb",
+    "uav-workbench\\v1_rescue95\\priority.py": "464bcb79c5ad4737f4f254334364d663c44cb92b84bbfed7eafecaf99969a283",
+    "uav-workbench\\v1_rescue95\\refine.py": "564e19eda0e48983dbbbd8e1929853badc8fbe8c0e0a69049fb1de022037b3ef",
+    "uav-workbench\\v1_rescue95\\rescue.py": "a257bd29e9a0aa3aa706458c48acfdda334c6dcf46448c4ea9361d9db37de7c5",
+    "uav-workbench\\v1_rescue95\\risk.py": "2bd098b36494cf95a0a4017c3879098b2e2f46b319da89ecad1aba173f6cf042",
+    "uav-workbench\\v1_rescue95\\search.py": "72725982f299a77e3312e90bbe6f02903896a763e837ce6facf6a5fb2b15cb45",
+    "uav-workbench\\v1_rescue95\\stripe.py": "94afb621a08883f9dbf6bf1d86f8ab39de66a5943bd17143f258e17061dbd7ef",
+    "uav-workbench\\v1_rescue95\\study.py": "1df443b3871ff8af9f76453e8062b77c6ab49c2af1ff6ad914ea1541217496cf",
+    "uav-workbench\\v1_rescue95\\sweep.py": "1e78d233f140013ec3afa5176ebfd7a3e5bdd5c6bd9a05397adf9e565f852fcc",
+    "uav-workbench\\v1_rescue95\\teamroute.py": "dd7a1275249b2787ceb5586abe0a05328a2845db20a1b16e5c44879011a235dd",
+    "uav-workbench\\v1_rescue95\\tiles.py": "7e769fd37dd97a7d126cd2d24a89bbaab6ac1078246c32f9a7bf02f648638360",
+    "uav-workbench\\v1_rescue95\\deep.js": "d2ac66c241653ecbcdd492f4e75c8616c623ab75a4a1f536df372150a3cfe69e",
+    "uav-workbench\\v1_rescue95\\train-prior.npz": "43ab91cc5d340a54c187350a9401573591c9231f594f8a85512abfcfe97dd8df",
+    "uav-workbench\\v1_rescue95\\RouteOptimizer.java": "941208639bd29386170d33e38884c6b80ac490da9cb4eb85ff90fb5d765d58df",
+    "uav-workbench\\v1_rescue95\\StripOptimizer.java": "ed67294bd0437f3143743aff18fcdf33d73ca162d6d4fc067d1958ff0ddbb61a",
+    "uav-workbench\\v1_rescue95\\TeamRouteOptimizer.java": "cd2da06220f4764530d5ae9373cb31eba120687337e7c4ad787fa7e8134f73ad",
+    "uav-workbench\\flood_dqn\\maps.py": "6d199d99ce17c59bbe6747f4926aeb557646e865df95eac73faa5d161f49e57c",
+    "uav-workbench\\flood_dqn\\env.py": "14802a788caaaa5a641acd25b7d030877061ec704cadda9a04a00f0bf9fde4f4",
+    ".\\terrain-workbench\\terrain-lab\\flood_solver.py": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+    "uav-workbench\\coordinated_search_dqn\\planner.py": "b7eaae3521736e2df41610a0f5947e5f483205cd5a1419614553033395269d71",
+    "uav-workbench\\rescue_assignment_dqn\\controller.py": "4e21019b8397648f162719d8041404833ba27410f01a8e177a2cb9e4bdefc457"
+  }
+}

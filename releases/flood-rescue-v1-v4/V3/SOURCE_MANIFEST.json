@@ -1,0 +1,1484 @@
+[
+  {
+    "source": "terrain-workbench/terrain-lab/flood_numerics.py",
+    "bundled": "terrain-workbench/terrain-lab/flood_numerics.py",
+    "source_sha256": "506b5f1b421c913b2cd1788bbe4bc7807ddea7fdaa42c13c3b68e55f62775140",
+    "bundled_sha256": "506b5f1b421c913b2cd1788bbe4bc7807ddea7fdaa42c13c3b68e55f62775140"
+  },
+  {
+    "source": "terrain-workbench/terrain-lab/flood_solver.py",
+    "bundled": "terrain-workbench/terrain-lab/flood_solver.py",
+    "source_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd",
+    "bundled_sha256": "7f2394e6aa5f35c17c183c70f8f01bb77ab02763ec9844160cb13461a4fa37dd"
+  },
+  {
+    "source": "terrain-workbench/terrain-lab/hydraulic_structures.py",
+    "bundled": "terrain-workbench/terrain-lab/hydraulic_structures.py",
+    "source_sha256": "d60e12f41e9f8ebf66dedf4b12dc6b75ccfdec6a18770d23f93f91e69b35636f",
+    "bundled_sha256": "d60e12f41e9f8ebf66dedf4b12dc6b75ccfdec6a18770d23f93f91e69b35636f"
+  },
+  {
+    "source": "uav-workbench/flood_dqn/env.py",
+    "bundled": "uav-workbench/flood_dqn/env.py",
+    "source_sha256": "14802a788caaaa5a641acd25b7d030877061ec704cadda9a04a00f0bf9fde4f4",
+    "bundled_sha256": "14802a788caaaa5a641acd25b7d030877061ec704cadda9a04a00f0bf9fde4f4"
+  },
+  {
+    "source": "uav-workbench/flood_dqn/maps.py",
+    "bundled": "uav-workbench/flood_dqn/maps.py",
+    "source_sha256": "6d199d99ce17c59bbe6747f4926aeb557646e865df95eac73faa5d161f49e57c",
+    "bundled_sha256": "6d199d99ce17c59bbe6747f4926aeb557646e865df95eac73faa5d161f49e57c"
+  },
+  {
+    "source": "uav-workbench/large_flood_routes/dataset.py",
+    "bundled": "uav-workbench/large_flood_routes/dataset.py",
+    "source_sha256": "fc319d7ae03f31b1328076a45a3cef0bde22941affee8cbf3621764defd4a57e",
+    "bundled_sha256": "fc319d7ae03f31b1328076a45a3cef0bde22941affee8cbf3621764defd4a57e"
+  },
+  {
+    "source": "uav-workbench/release_io.py",
+    "bundled": "uav-workbench/release_io.py",
+    "source_sha256": "f8225624b655aea37d025dcfd27586e076d83c88570d6d86aa44728365df429b",
+    "bundled_sha256": "f8225624b655aea37d025dcfd27586e076d83c88570d6d86aa44728365df429b"
+  },
+  {
+    "source": "uav-workbench/dynamic_drop_rebuild/audit.py",
+    "bundled": "uav-workbench/dynamic_drop_rebuild/audit.py",
+    "source_sha256": "c84d156b851013b98c2aa46f068d6d146c3530642ebe229fa6c15c440b3fa16e",
+    "bundled_sha256": "19e9f2a9a735390d389f257df24315b7213c288dc5469696aabd7bdbb0001d78"
+  },
+  {
+    "source": "uav-workbench/dynamic_drop_rebuild/learning.py",
+    "bundled": "uav-workbench/dynamic_drop_rebuild/learning.py",
+    "source_sha256": "6e37171fde879d12a2c7161832fc1b09014fc7ac4dd528c86efbfeaaf3d608dc",
+    "bundled_sha256": "92fadb2012b8032684f32a9793bf30ecd64eae4b384a4c70e1c6951007b02178"
+  },
+  {
+    "source": "uav-workbench/dynamic_drop_rebuild/planner.py",
+    "bundled": "uav-workbench/dynamic_drop_rebuild/planner.py",
+    "source_sha256": "1216b0f67d278ede636c8045380c3f515b590b78a6f160f6dfe8d150dd835df3",
+    "bundled_sha256": "0291c52d5b8a869c91190246137d19fdb0cc3cfaeb1be118318151dbd708efd6"
+  },
+  {
+    "source": "uav-workbench/dynamic_drop_rebuild/scenarios.py",
+    "bundled": "uav-workbench/dynamic_drop_rebuild/scenarios.py",
+    "source_sha256": "d78f9b7f2cc5360b74d16438d13ec078638e6193ddddb69d0d4be9f583c05dee",
+    "bundled_sha256": "90483cf5d52114df96fb35d1e4ba31caefb1904ee43b200778fb44edb8ff9ff5"
+  },
+  {
+    "source": "uav-workbench/dynamic_drop_rebuild/sim.py",
+    "bundled": "uav-workbench/dynamic_drop_rebuild/sim.py",
+    "source_sha256": "4366c9655e4270ed5cdb2359c7d2336fbfd2d00d08390e928adafa5e383ffe78",
+    "bundled_sha256": "4864c48106ba6eee39ed86728da8780bcbc9796a52eb7fcdfd10ebb3d91e8c8c"
+  },
+  {
+    "source": "uav-workbench/dynamic_drop_rebuild/study.py",
+    "bundled": "uav-workbench/dynamic_drop_rebuild/study.py",
+    "source_sha256": "9b959525611d09733e9db364fdb91629c3148dcd1553ecce5fbe8e5e5b3f3581",
+    "bundled_sha256": "23d669feba1d4ddbbed76970d47d4f2ea611242f8cb8bdc54d7318b89b354309"
+  },
+  {
+    "source": "uav-workbench/dynamic_drop_rebuild/README.md",
+    "bundled": "docs/original-dynamic_drop_rebuild.md",
+    "source_sha256": "e0ec684b5bf275e6e8388a485077941f2cdfa3b6199f4875fd874f186858715a",
+    "bundled_sha256": "fda15d500a8751a572510afcb70add1b95da4439ef22b406868e7d51ab677060"
+  },
+  {
+    "source": "uav-workbench/guizhou_mixed_rescue/checks.py",
+    "bundled": "uav-workbench/guizhou_mixed_rescue/checks.py",
+    "source_sha256": "c399fe7df3473030bb2e4719dee6ddb2b94efe9b2fb2f3700efa785a70e24c81",
+    "bundled_sha256": "5fe9dcfcd127f62c685e3c55d56fe646e1c1799d45396b53c5bead9c76042044"
+  },
+  {
+    "source": "uav-workbench/guizhou_mixed_rescue/report.py",
+    "bundled": "uav-workbench/guizhou_mixed_rescue/report.py",
+    "source_sha256": "5e699c59cb02febff2dc9127ef7b70f158f94dd62d159d13a53b483cedb35ddf",
+    "bundled_sha256": "d184a91a44bd86e29619b90a096f8879415e5affb924e449e90c319e0a2ab896"
+  },
+  {
+    "source": "uav-workbench/guizhou_mixed_rescue/scenario.py",
+    "bundled": "uav-workbench/guizhou_mixed_rescue/scenario.py",
+    "source_sha256": "0fbba26c0b1e375992a174074d02bac5185df23905db513b8181ccfa876b11b1",
+    "bundled_sha256": "1d19c2a73f0d4cce995672b8323c574f8dda3f6cc3280389f13a30a486be6324"
+  },
+  {
+    "source": "uav-workbench/guizhou_mixed_rescue/study.py",
+    "bundled": "uav-workbench/guizhou_mixed_rescue/study.py",
+    "source_sha256": "2d4a7491f4474c1bb9bb9af280d7860fa1dfd580380777e0a3afebe72db4c3f5",
+    "bundled_sha256": "53e7bf3380d41a98110a61b86595efeb9b08da72fdde0471c92bdf5faf94e2c5"
+  },
+  {
+    "source": "uav-workbench/guizhou_mixed_rescue/__main__.py",
+    "bundled": "uav-workbench/guizhou_mixed_rescue/__main__.py",
+    "source_sha256": "0f8681ba0f20ac89447eb047ab7a53bf472ed6d89338c128e7fe59725c9d3e21",
+    "bundled_sha256": "f87f5c7f38e9c173cde38ee7bf1bc4d6a3b250f26bbd62104833963b38b8329b"
+  },
+  {
+    "source": "uav-workbench/guizhou_mixed_rescue/README.md",
+    "bundled": "docs/original-guizhou_mixed_rescue.md",
+    "source_sha256": "aed2f9a664f2dff00953721d54e9919eab29f0480840283be4cc2eb4a180f764",
+    "bundled_sha256": "a9d519442094b84fa8ff68d9b1cb72a0a57936354afbcebee9f2632d6a3b1ae0"
+  },
+  {
+    "source": "uav-workbench/patrol_aimpoints/policy.py",
+    "bundled": "uav-workbench/patrol_aimpoints/policy.py",
+    "source_sha256": "c0f775be665146097b2d28655a606bd207cd0b80c5caa06efb5a5598bd310130",
+    "bundled_sha256": "c0f775be665146097b2d28655a606bd207cd0b80c5caa06efb5a5598bd310130"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/alarms.csv",
+    "bundled": "results/alarms.csv",
+    "source_sha256": "03584d0f46304a09eb0b1b9f34408aa370664f5560e6f2fde18b0416b79b16fa",
+    "bundled_sha256": "1bad03ce5d94ae619eb9cca8bafdc13ec99f17ec236f26171b69ba90f68b6dbc"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/checks.json",
+    "bundled": "results/checks.json",
+    "source_sha256": "5684165786ee77feaebbfb93d239fa524202d77e10e6c0e82164741f02b16155",
+    "bundled_sha256": "5684165786ee77feaebbfb93d239fa524202d77e10e6c0e82164741f02b16155"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/development.json",
+    "bundled": "results/development.json",
+    "source_sha256": "4d50eaeffc09f7c2337f98e099c99e4e2d39183c07cd0a08f1d38ed797725e5f",
+    "bundled_sha256": "4d50eaeffc09f7c2337f98e099c99e4e2d39183c07cd0a08f1d38ed797725e5f"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/disagreements.csv",
+    "bundled": "results/disagreements.csv",
+    "source_sha256": "2dd95e95cb81f39dcc11663836ecde794b9356f9bfee3de2e89547d2d60a2bd0",
+    "bundled_sha256": "672dc32ebac60c8f6b4fcaf0629045fca08fcfc02c9451454836cd0031e8f7c2"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/first-branches.csv",
+    "bundled": "results/first-branches.csv",
+    "source_sha256": "88c45db88da4bc355d6c2d26285b773786ac45459d8e341323f41f7b97507288",
+    "bundled_sha256": "bbc422c70cf7253c7b042288f7d61662ddadb0a2e636e42c616f8923d0bb2582"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/loss-replay.json",
+    "bundled": "results/loss-replay.json",
+    "source_sha256": "0dba863a1d263eb160a1d67ea1b477fb7f93f4ab2cc1dbcf9b24273689b09eac",
+    "bundled_sha256": "0dba863a1d263eb160a1d67ea1b477fb7f93f4ab2cc1dbcf9b24273689b09eac"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/loss.html",
+    "bundled": "results/loss.html",
+    "source_sha256": "bbfcac08d4b730575935cc0faa80d6b312a3c5cab76df2752cb4067d61742d98",
+    "bundled_sha256": "bbfcac08d4b730575935cc0faa80d6b312a3c5cab76df2752cb4067d61742d98"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/maps.json",
+    "bundled": "results/maps.json",
+    "source_sha256": "f95ac5493119dd8b99296978625137783eb1f9ec024cfc1b6578bbc4914d6bd5",
+    "bundled_sha256": "f95ac5493119dd8b99296978625137783eb1f9ec024cfc1b6578bbc4914d6bd5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/paired.csv",
+    "bundled": "results/paired.csv",
+    "source_sha256": "f3873951ce5a1d41b51b898b3c59e80a189ae898e31de19acf64c9e63c1dc661",
+    "bundled_sha256": "9a7234775c47acde1e1c9e569fee188bf583df36bc4ea11311db34f22df8204d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/people.csv",
+    "bundled": "results/people.csv",
+    "source_sha256": "03b56b40bc121a8b714b4f98fec9928f77806b4b449f3cdde8ca180dc0fabb0d",
+    "bundled_sha256": "647be958fbb423a5039f8ce826591888bdb69e588fcd3408aac925449c9237b9"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/person-pairs.csv",
+    "bundled": "results/person-pairs.csv",
+    "source_sha256": "72e144fd82c880fe939aa05efbfa06be728d6c31a8b0f2d7963c9061ac1749f5",
+    "bundled_sha256": "400f19b4a6df00f172c6db5e95c45145c0f1dfb4271ac4d05f590ce622cee442"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/runs.csv",
+    "bundled": "results/runs.csv",
+    "source_sha256": "d8cbf7fb213cda909092313a3e9dbf1cb3bb8decacabefea35beccd4d54d5912",
+    "bundled_sha256": "6d2727fec72cf94f4d2395b7d18b148e55eb77d75825a8086ffa631ea4465118"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/seal.json",
+    "bundled": "results/seal.json",
+    "source_sha256": "860c05c6bbc2c64e88d1ae7bcc5428114d5897cfe6a9cfd306ee45eaef0e06d3",
+    "bundled_sha256": "14276d3a4828ff0b215f0be794807b4bd833adb9c87f25a5ed62d32954d97aba"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/strata.csv",
+    "bundled": "results/strata.csv",
+    "source_sha256": "8219278debce4268fdaabe07a4e3085326dcb4682bad608d4278be36e68a280b",
+    "bundled_sha256": "f9491ab28a3ad2eab567c3ea205d23d54ca854224f95b2dc5a1862ac70bf6691"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/summary.csv",
+    "bundled": "results/summary.csv",
+    "source_sha256": "8059a26bb1ee8ccd622358e47f6a076eaa920a8553b438d65438dc3960ce1833",
+    "bundled_sha256": "66c9fe61918e6bd7f14dfd0121790c5ee0dfaefb9d98e0bdcf075c4e385d94a0"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/verification.json",
+    "bundled": "results/verification.json",
+    "source_sha256": "135e6be8b3647fe0114848e9c818054bb90f02cbbb09e55607e5494835580aeb",
+    "bundled_sha256": "135e6be8b3647fe0114848e9c818054bb90f02cbbb09e55607e5494835580aeb"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/实验报告.md",
+    "bundled": "results/实验报告.md",
+    "source_sha256": "68ca9aaca87d89a93484264cbd13189ef1b8f1b7a6bcf9576a7572b5241e9fdb",
+    "bundled_sha256": "68ca9aaca87d89a93484264cbd13189ef1b8f1b7a6bcf9576a7572b5241e9fdb"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184001-0.gz",
+    "bundled": "results/cases/184001-0.gz",
+    "source_sha256": "2a6e074f71b4e9f97a8eb1d2c688e75b3a34c52e195af7b321020cc6903014b2",
+    "bundled_sha256": "2a6e074f71b4e9f97a8eb1d2c688e75b3a34c52e195af7b321020cc6903014b2"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184001-1.gz",
+    "bundled": "results/cases/184001-1.gz",
+    "source_sha256": "0e7254c2f3068d8d0f1a1b0721e5c5e0846d14a881b4296c87b0d5c1512d9f18",
+    "bundled_sha256": "0e7254c2f3068d8d0f1a1b0721e5c5e0846d14a881b4296c87b0d5c1512d9f18"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184002-0.gz",
+    "bundled": "results/cases/184002-0.gz",
+    "source_sha256": "05a286a02093666bda9ad742722456f20599e3745f72ef571d00199ce327e02a",
+    "bundled_sha256": "05a286a02093666bda9ad742722456f20599e3745f72ef571d00199ce327e02a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184002-1.gz",
+    "bundled": "results/cases/184002-1.gz",
+    "source_sha256": "20fc1f4b39a102e1b34c60ed4800c8a8841a28d774c652d2dd2b37c0b08a4bbe",
+    "bundled_sha256": "20fc1f4b39a102e1b34c60ed4800c8a8841a28d774c652d2dd2b37c0b08a4bbe"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184003-0.gz",
+    "bundled": "results/cases/184003-0.gz",
+    "source_sha256": "e2a8c09f46282b0058a0944664cb85ac4a17d87d2dc6209dcf7974e11f40460f",
+    "bundled_sha256": "e2a8c09f46282b0058a0944664cb85ac4a17d87d2dc6209dcf7974e11f40460f"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184003-1.gz",
+    "bundled": "results/cases/184003-1.gz",
+    "source_sha256": "f50dc945b16dd69ff530a2579817fccbc01b9a43771d67bfa617cbfd5716d1bf",
+    "bundled_sha256": "f50dc945b16dd69ff530a2579817fccbc01b9a43771d67bfa617cbfd5716d1bf"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184004-0.gz",
+    "bundled": "results/cases/184004-0.gz",
+    "source_sha256": "2d323414ab1adac0e96cb59cddb0b493d299aeb8850518c77c1fe53d540f9f84",
+    "bundled_sha256": "2d323414ab1adac0e96cb59cddb0b493d299aeb8850518c77c1fe53d540f9f84"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184004-1.gz",
+    "bundled": "results/cases/184004-1.gz",
+    "source_sha256": "4f66c14d99852c507eab346d7754835acb857d5280c7f7df60acb39977d54c2e",
+    "bundled_sha256": "4f66c14d99852c507eab346d7754835acb857d5280c7f7df60acb39977d54c2e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184005-0.gz",
+    "bundled": "results/cases/184005-0.gz",
+    "source_sha256": "bfdea77c0a8673e0de04e10d61ed3c5c0e68be68a5c41e532bff23154e773168",
+    "bundled_sha256": "bfdea77c0a8673e0de04e10d61ed3c5c0e68be68a5c41e532bff23154e773168"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184005-1.gz",
+    "bundled": "results/cases/184005-1.gz",
+    "source_sha256": "bc2cdde7d0daacff6dcf569d89e6753a98282c851351b51871818f9ce9439306",
+    "bundled_sha256": "bc2cdde7d0daacff6dcf569d89e6753a98282c851351b51871818f9ce9439306"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184006-0.gz",
+    "bundled": "results/cases/184006-0.gz",
+    "source_sha256": "cea1d6bc92ce1375eb7fffa630eae0f627a8d72a58caa6649e726f133bf946d4",
+    "bundled_sha256": "cea1d6bc92ce1375eb7fffa630eae0f627a8d72a58caa6649e726f133bf946d4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184006-1.gz",
+    "bundled": "results/cases/184006-1.gz",
+    "source_sha256": "7c8165aad25c74137194c6d4af591c107bddf29d437e008d827056ff5082bc7a",
+    "bundled_sha256": "7c8165aad25c74137194c6d4af591c107bddf29d437e008d827056ff5082bc7a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184007-0.gz",
+    "bundled": "results/cases/184007-0.gz",
+    "source_sha256": "85c561a1ec0d4c8ea8843571511864dd1115ce0672a17dabc71069d9f5117793",
+    "bundled_sha256": "85c561a1ec0d4c8ea8843571511864dd1115ce0672a17dabc71069d9f5117793"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184007-1.gz",
+    "bundled": "results/cases/184007-1.gz",
+    "source_sha256": "1f3b365cf4818d8068ad1fa80d5cd784b8ac469c9bff51b5aca23a4f5465b0ae",
+    "bundled_sha256": "1f3b365cf4818d8068ad1fa80d5cd784b8ac469c9bff51b5aca23a4f5465b0ae"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184008-0.gz",
+    "bundled": "results/cases/184008-0.gz",
+    "source_sha256": "aa5255b0da330b1ff17acf088edbbc273cb6eb9b24e55c27699e80000c2ab5c3",
+    "bundled_sha256": "aa5255b0da330b1ff17acf088edbbc273cb6eb9b24e55c27699e80000c2ab5c3"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184008-1.gz",
+    "bundled": "results/cases/184008-1.gz",
+    "source_sha256": "1e7a200f7f55b5c79183e27f6e538ca8fa03291e807b79e3c13cef84cddcd1ac",
+    "bundled_sha256": "1e7a200f7f55b5c79183e27f6e538ca8fa03291e807b79e3c13cef84cddcd1ac"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184009-0.gz",
+    "bundled": "results/cases/184009-0.gz",
+    "source_sha256": "72dbb478cbd9ed331f8887a0fd2ee2aaca23d082e09b914e226f033b15b6734e",
+    "bundled_sha256": "72dbb478cbd9ed331f8887a0fd2ee2aaca23d082e09b914e226f033b15b6734e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184009-1.gz",
+    "bundled": "results/cases/184009-1.gz",
+    "source_sha256": "2f43f8764fd6480b14cad1fb90a7074dfc50112130308d6135d212f3941de92a",
+    "bundled_sha256": "2f43f8764fd6480b14cad1fb90a7074dfc50112130308d6135d212f3941de92a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184010-0.gz",
+    "bundled": "results/cases/184010-0.gz",
+    "source_sha256": "ea8e3848316a9c2a8cc534d06a56d194c2f5329423e483d02919db6f2e58a021",
+    "bundled_sha256": "ea8e3848316a9c2a8cc534d06a56d194c2f5329423e483d02919db6f2e58a021"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184010-1.gz",
+    "bundled": "results/cases/184010-1.gz",
+    "source_sha256": "adc8f179e4ea169f7af1410642021f080b59d6ad330291a1b80a71ea6076ce09",
+    "bundled_sha256": "adc8f179e4ea169f7af1410642021f080b59d6ad330291a1b80a71ea6076ce09"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184011-0.gz",
+    "bundled": "results/cases/184011-0.gz",
+    "source_sha256": "0e66f329027127979f07903c453f1290bcf5a173fe2d77f0123bc235cfbbb260",
+    "bundled_sha256": "0e66f329027127979f07903c453f1290bcf5a173fe2d77f0123bc235cfbbb260"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184011-1.gz",
+    "bundled": "results/cases/184011-1.gz",
+    "source_sha256": "cde7c87b16b88aad0084ec6d1ce20c9cf918816cd6a36539e57411fab97cdb27",
+    "bundled_sha256": "cde7c87b16b88aad0084ec6d1ce20c9cf918816cd6a36539e57411fab97cdb27"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184012-0.gz",
+    "bundled": "results/cases/184012-0.gz",
+    "source_sha256": "7d21dc25e1f3b4b4ff70ccf196c572c3e690083c8ed5fb1d1363cef0dc047508",
+    "bundled_sha256": "7d21dc25e1f3b4b4ff70ccf196c572c3e690083c8ed5fb1d1363cef0dc047508"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184012-1.gz",
+    "bundled": "results/cases/184012-1.gz",
+    "source_sha256": "4f3f7de2c07fc9e45440b3073b9b90f1435a3b8cf1cb0eb9255655991537b274",
+    "bundled_sha256": "4f3f7de2c07fc9e45440b3073b9b90f1435a3b8cf1cb0eb9255655991537b274"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184013-0.gz",
+    "bundled": "results/cases/184013-0.gz",
+    "source_sha256": "2bc334ad937854786272c1eda4f3f3a381d8ae8eee33aadc988fa25ed509c308",
+    "bundled_sha256": "2bc334ad937854786272c1eda4f3f3a381d8ae8eee33aadc988fa25ed509c308"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184013-1.gz",
+    "bundled": "results/cases/184013-1.gz",
+    "source_sha256": "41a47886e5db9b358aaf5e84a059203df752d8dc6ced5de4ffae20627374aa65",
+    "bundled_sha256": "41a47886e5db9b358aaf5e84a059203df752d8dc6ced5de4ffae20627374aa65"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184014-0.gz",
+    "bundled": "results/cases/184014-0.gz",
+    "source_sha256": "bff5ee75b62e08aec92060a3bb3d1ce9048c993c888c59b515323ada9eec0a4b",
+    "bundled_sha256": "bff5ee75b62e08aec92060a3bb3d1ce9048c993c888c59b515323ada9eec0a4b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184014-1.gz",
+    "bundled": "results/cases/184014-1.gz",
+    "source_sha256": "3b4be9e075bc2c79eb75cd36a6606c1942db5569fe6939fb76445d359742126d",
+    "bundled_sha256": "3b4be9e075bc2c79eb75cd36a6606c1942db5569fe6939fb76445d359742126d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184015-0.gz",
+    "bundled": "results/cases/184015-0.gz",
+    "source_sha256": "27373fef18998aacba8765ef0a12337e0db0a6f4225e686f29361edadeafc292",
+    "bundled_sha256": "27373fef18998aacba8765ef0a12337e0db0a6f4225e686f29361edadeafc292"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184015-1.gz",
+    "bundled": "results/cases/184015-1.gz",
+    "source_sha256": "5a92e861e7f4f773a1dd7375ccb692dfbbe20f78988e35d8b9c68d4c91d2b1ec",
+    "bundled_sha256": "5a92e861e7f4f773a1dd7375ccb692dfbbe20f78988e35d8b9c68d4c91d2b1ec"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184016-0.gz",
+    "bundled": "results/cases/184016-0.gz",
+    "source_sha256": "b1ffac4fc0473d37622f21bf4d0a011c184b5391b7f63d7c356ee6a58a110948",
+    "bundled_sha256": "b1ffac4fc0473d37622f21bf4d0a011c184b5391b7f63d7c356ee6a58a110948"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184016-1.gz",
+    "bundled": "results/cases/184016-1.gz",
+    "source_sha256": "ece9ad821b5c56c3f60d951715908734ed19d21ff6311eadc1046f51462a8a12",
+    "bundled_sha256": "ece9ad821b5c56c3f60d951715908734ed19d21ff6311eadc1046f51462a8a12"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184017-0.gz",
+    "bundled": "results/cases/184017-0.gz",
+    "source_sha256": "11bcba424cad6847ef1b2b2ad551ef0461682ac995714b3127069dd5077ae474",
+    "bundled_sha256": "11bcba424cad6847ef1b2b2ad551ef0461682ac995714b3127069dd5077ae474"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184017-1.gz",
+    "bundled": "results/cases/184017-1.gz",
+    "source_sha256": "a9638b8ef8ed13d1f4a6956619e12dc1c0b2b76e4c8f59b90f11a503d0794270",
+    "bundled_sha256": "a9638b8ef8ed13d1f4a6956619e12dc1c0b2b76e4c8f59b90f11a503d0794270"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184018-0.gz",
+    "bundled": "results/cases/184018-0.gz",
+    "source_sha256": "bbfdef258eb93ec203bb54d7f7eba979078f944d5b3ff2378b71a6c9ec6a7772",
+    "bundled_sha256": "bbfdef258eb93ec203bb54d7f7eba979078f944d5b3ff2378b71a6c9ec6a7772"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184018-1.gz",
+    "bundled": "results/cases/184018-1.gz",
+    "source_sha256": "d0c4fe487dba3a546bc9747aa69c220a184d86564cd24fdf71016efc936fc78a",
+    "bundled_sha256": "d0c4fe487dba3a546bc9747aa69c220a184d86564cd24fdf71016efc936fc78a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184019-0.gz",
+    "bundled": "results/cases/184019-0.gz",
+    "source_sha256": "3181805e56b99262e97403f5a258187d595db17ef998aeb03cbcfa2b94017b45",
+    "bundled_sha256": "3181805e56b99262e97403f5a258187d595db17ef998aeb03cbcfa2b94017b45"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184019-1.gz",
+    "bundled": "results/cases/184019-1.gz",
+    "source_sha256": "6d09dd49dd9ee4eb585073b41f46ae3434ae1bf6880d0bb99b43857c25a4322b",
+    "bundled_sha256": "6d09dd49dd9ee4eb585073b41f46ae3434ae1bf6880d0bb99b43857c25a4322b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184020-0.gz",
+    "bundled": "results/cases/184020-0.gz",
+    "source_sha256": "556bc842876f3e7d6a8e5b63fc41f36f47d9b6f9165c5fd1bfcb36256b0cbe92",
+    "bundled_sha256": "556bc842876f3e7d6a8e5b63fc41f36f47d9b6f9165c5fd1bfcb36256b0cbe92"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184020-1.gz",
+    "bundled": "results/cases/184020-1.gz",
+    "source_sha256": "95fd175664e10231537f8647194ddc08d3808dbcf98fadedc34c0e3119811be4",
+    "bundled_sha256": "95fd175664e10231537f8647194ddc08d3808dbcf98fadedc34c0e3119811be4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184021-0.gz",
+    "bundled": "results/cases/184021-0.gz",
+    "source_sha256": "6e2511cdece6d1be2c39999b244dd3be7ffcaa59484e17c20822f00dd3976b8a",
+    "bundled_sha256": "6e2511cdece6d1be2c39999b244dd3be7ffcaa59484e17c20822f00dd3976b8a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184021-1.gz",
+    "bundled": "results/cases/184021-1.gz",
+    "source_sha256": "ef668ab24f8acd04a01e2b85d2175d47fb5f72f5bffb73e66b5ca84f21f531b6",
+    "bundled_sha256": "ef668ab24f8acd04a01e2b85d2175d47fb5f72f5bffb73e66b5ca84f21f531b6"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184022-0.gz",
+    "bundled": "results/cases/184022-0.gz",
+    "source_sha256": "c8246325ff18420ea6505a462d9f09f8b6c72c3604c0569f85911c36ceba90c5",
+    "bundled_sha256": "c8246325ff18420ea6505a462d9f09f8b6c72c3604c0569f85911c36ceba90c5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184022-1.gz",
+    "bundled": "results/cases/184022-1.gz",
+    "source_sha256": "fac80ddbdb6031dcae682bcfa0a6af10eadacc45c9237b4eac1944162ccff602",
+    "bundled_sha256": "fac80ddbdb6031dcae682bcfa0a6af10eadacc45c9237b4eac1944162ccff602"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184023-0.gz",
+    "bundled": "results/cases/184023-0.gz",
+    "source_sha256": "fde2f466b71cb6931c50e4148439ca8c25c34b8544ceda1b65f95933ec62eb82",
+    "bundled_sha256": "fde2f466b71cb6931c50e4148439ca8c25c34b8544ceda1b65f95933ec62eb82"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184023-1.gz",
+    "bundled": "results/cases/184023-1.gz",
+    "source_sha256": "c1c7064639eb86ec5eea97ba0e75c348c614c8e21d263e232fa0c712d513a0f4",
+    "bundled_sha256": "c1c7064639eb86ec5eea97ba0e75c348c614c8e21d263e232fa0c712d513a0f4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184024-0.gz",
+    "bundled": "results/cases/184024-0.gz",
+    "source_sha256": "7c4b096a29d5e7faef94f0f7f89685382ee3e91f3c885b7f632f497202c5e31b",
+    "bundled_sha256": "7c4b096a29d5e7faef94f0f7f89685382ee3e91f3c885b7f632f497202c5e31b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184024-1.gz",
+    "bundled": "results/cases/184024-1.gz",
+    "source_sha256": "072103204e309d29e676eae6fdc6fd7e7e3c5d8c37114e98db64a5aa56232918",
+    "bundled_sha256": "072103204e309d29e676eae6fdc6fd7e7e3c5d8c37114e98db64a5aa56232918"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184025-0.gz",
+    "bundled": "results/cases/184025-0.gz",
+    "source_sha256": "ecd4fb7a5dae9ae5cd6c549e23c58f26ce57c786d23a860b0270a33e332ac913",
+    "bundled_sha256": "ecd4fb7a5dae9ae5cd6c549e23c58f26ce57c786d23a860b0270a33e332ac913"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184025-1.gz",
+    "bundled": "results/cases/184025-1.gz",
+    "source_sha256": "7661249f9c1cb7aeb84c1cfea79a78a8905ca46b4ddfaf5236bea6f96b2fe5ce",
+    "bundled_sha256": "7661249f9c1cb7aeb84c1cfea79a78a8905ca46b4ddfaf5236bea6f96b2fe5ce"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184026-0.gz",
+    "bundled": "results/cases/184026-0.gz",
+    "source_sha256": "cc7d25b43b79ad6345873bfe2fde9ade668f8d7bf7be091c1d8ff44e6960641d",
+    "bundled_sha256": "cc7d25b43b79ad6345873bfe2fde9ade668f8d7bf7be091c1d8ff44e6960641d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184026-1.gz",
+    "bundled": "results/cases/184026-1.gz",
+    "source_sha256": "f061586676b9047508fbbf095a921686e190a55b707ce2a58dab493ea0e227e2",
+    "bundled_sha256": "f061586676b9047508fbbf095a921686e190a55b707ce2a58dab493ea0e227e2"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184027-0.gz",
+    "bundled": "results/cases/184027-0.gz",
+    "source_sha256": "02ee41876d0d404bd45b3f4fdddc6c83d867e1d24a5d995d1a31bd1b1bf86fff",
+    "bundled_sha256": "02ee41876d0d404bd45b3f4fdddc6c83d867e1d24a5d995d1a31bd1b1bf86fff"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184027-1.gz",
+    "bundled": "results/cases/184027-1.gz",
+    "source_sha256": "4f2bcf35b52c689824b6f8184ec8bad436c5ade38c6e136967fd8dbe0b213da4",
+    "bundled_sha256": "4f2bcf35b52c689824b6f8184ec8bad436c5ade38c6e136967fd8dbe0b213da4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184028-0.gz",
+    "bundled": "results/cases/184028-0.gz",
+    "source_sha256": "318676c58eeb8a77d9872c9eb177422082692758bb29607fcccbd2dd23fa9dfa",
+    "bundled_sha256": "318676c58eeb8a77d9872c9eb177422082692758bb29607fcccbd2dd23fa9dfa"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184028-1.gz",
+    "bundled": "results/cases/184028-1.gz",
+    "source_sha256": "1650874ec13139776950340d9da8517de037bbe8df1805ba94e8debf6b597120",
+    "bundled_sha256": "1650874ec13139776950340d9da8517de037bbe8df1805ba94e8debf6b597120"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184029-0.gz",
+    "bundled": "results/cases/184029-0.gz",
+    "source_sha256": "03403149ee4865d3bff7254e2770d3518b0b74c11eaf761f9688c5f89978ed2d",
+    "bundled_sha256": "03403149ee4865d3bff7254e2770d3518b0b74c11eaf761f9688c5f89978ed2d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184029-1.gz",
+    "bundled": "results/cases/184029-1.gz",
+    "source_sha256": "4019e858d8400f026c40e8efe6acd6f8ade16e21fd83c2bc17d128069dc232e2",
+    "bundled_sha256": "4019e858d8400f026c40e8efe6acd6f8ade16e21fd83c2bc17d128069dc232e2"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184030-0.gz",
+    "bundled": "results/cases/184030-0.gz",
+    "source_sha256": "e64ca9fbcbb71ccbe2f011532d4e4b5cfbae5715222e36c45ba966f05859d391",
+    "bundled_sha256": "e64ca9fbcbb71ccbe2f011532d4e4b5cfbae5715222e36c45ba966f05859d391"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184030-1.gz",
+    "bundled": "results/cases/184030-1.gz",
+    "source_sha256": "774d088f0ef7fb6077eaa665a88a61dcdf3c4d26f4fb7a1b90e4e92bf727574f",
+    "bundled_sha256": "774d088f0ef7fb6077eaa665a88a61dcdf3c4d26f4fb7a1b90e4e92bf727574f"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184031-0.gz",
+    "bundled": "results/cases/184031-0.gz",
+    "source_sha256": "976ae24011f091dcd71086a79765388a3bf010b6f1c0739786f00b1930b3d71f",
+    "bundled_sha256": "976ae24011f091dcd71086a79765388a3bf010b6f1c0739786f00b1930b3d71f"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184031-1.gz",
+    "bundled": "results/cases/184031-1.gz",
+    "source_sha256": "a96c436f4184e05376c3a116ae20f2e5bdcf96bbb2c842ed8b766e2b865cd16a",
+    "bundled_sha256": "a96c436f4184e05376c3a116ae20f2e5bdcf96bbb2c842ed8b766e2b865cd16a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184032-0.gz",
+    "bundled": "results/cases/184032-0.gz",
+    "source_sha256": "767d57c6e11b3f4e71120244ffd0038c462c87c9ce63a398f0e95d38f65e980d",
+    "bundled_sha256": "767d57c6e11b3f4e71120244ffd0038c462c87c9ce63a398f0e95d38f65e980d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184032-1.gz",
+    "bundled": "results/cases/184032-1.gz",
+    "source_sha256": "ce16dcac6b69a7c6f5a4a2867e158d379b6414dff42741a4f9c0114643bf68b5",
+    "bundled_sha256": "ce16dcac6b69a7c6f5a4a2867e158d379b6414dff42741a4f9c0114643bf68b5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184033-0.gz",
+    "bundled": "results/cases/184033-0.gz",
+    "source_sha256": "d60aa05a63c5528d4cd41fbdfd73c52b20df98ffbdb229d31c2543797b89e469",
+    "bundled_sha256": "d60aa05a63c5528d4cd41fbdfd73c52b20df98ffbdb229d31c2543797b89e469"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184033-1.gz",
+    "bundled": "results/cases/184033-1.gz",
+    "source_sha256": "db292ec5cec39d38ef3374fd3b5c92950834941102e14750d24f8b6a696a140b",
+    "bundled_sha256": "db292ec5cec39d38ef3374fd3b5c92950834941102e14750d24f8b6a696a140b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184034-0.gz",
+    "bundled": "results/cases/184034-0.gz",
+    "source_sha256": "4c6129b8e3525783b620d278da8abc8fb8a96e938750da8bb963ea80936c1c8e",
+    "bundled_sha256": "4c6129b8e3525783b620d278da8abc8fb8a96e938750da8bb963ea80936c1c8e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184034-1.gz",
+    "bundled": "results/cases/184034-1.gz",
+    "source_sha256": "cbbc81685f1872e9aa61dc8fb7f0a7925f815be82587bc0ff391d8d825c67cfe",
+    "bundled_sha256": "cbbc81685f1872e9aa61dc8fb7f0a7925f815be82587bc0ff391d8d825c67cfe"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184035-0.gz",
+    "bundled": "results/cases/184035-0.gz",
+    "source_sha256": "4f8cac0d233a57af220b296eef636eb030c0b775716ef654cea01d7095e63daf",
+    "bundled_sha256": "4f8cac0d233a57af220b296eef636eb030c0b775716ef654cea01d7095e63daf"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184035-1.gz",
+    "bundled": "results/cases/184035-1.gz",
+    "source_sha256": "58991b2ddafba375343ea38881512505b2357aec26c23299229bc1820b492de6",
+    "bundled_sha256": "58991b2ddafba375343ea38881512505b2357aec26c23299229bc1820b492de6"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184036-0.gz",
+    "bundled": "results/cases/184036-0.gz",
+    "source_sha256": "1b9b7670095ae3f32736358b6ac4176e8d1731d7dcf22ae6ff7443230a372c49",
+    "bundled_sha256": "1b9b7670095ae3f32736358b6ac4176e8d1731d7dcf22ae6ff7443230a372c49"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184036-1.gz",
+    "bundled": "results/cases/184036-1.gz",
+    "source_sha256": "c2f5a1c867f8b5f780ccd5e9b9cf4a4ccfac89be6667dc2e2e5076bfcadeb735",
+    "bundled_sha256": "c2f5a1c867f8b5f780ccd5e9b9cf4a4ccfac89be6667dc2e2e5076bfcadeb735"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184037-0.gz",
+    "bundled": "results/cases/184037-0.gz",
+    "source_sha256": "41e16ba4e98a9ee22579d11fbec3a2ac3b6dc042b2dda4a512f68d720a620653",
+    "bundled_sha256": "41e16ba4e98a9ee22579d11fbec3a2ac3b6dc042b2dda4a512f68d720a620653"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184037-1.gz",
+    "bundled": "results/cases/184037-1.gz",
+    "source_sha256": "dee5f6f193637604792245211466a0f8370115b31083e92b51f0ceaa5703c778",
+    "bundled_sha256": "dee5f6f193637604792245211466a0f8370115b31083e92b51f0ceaa5703c778"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184038-0.gz",
+    "bundled": "results/cases/184038-0.gz",
+    "source_sha256": "f4f630f5dc6725465159291e583da1e4569db5b2e179ba49c88b1a169ed5d7ca",
+    "bundled_sha256": "f4f630f5dc6725465159291e583da1e4569db5b2e179ba49c88b1a169ed5d7ca"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184038-1.gz",
+    "bundled": "results/cases/184038-1.gz",
+    "source_sha256": "154dff8f3b865ed8bf3325a9bf0818a8db2258c5d4603c1d96e80c4fd31ace30",
+    "bundled_sha256": "154dff8f3b865ed8bf3325a9bf0818a8db2258c5d4603c1d96e80c4fd31ace30"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184039-0.gz",
+    "bundled": "results/cases/184039-0.gz",
+    "source_sha256": "4fdef4f88e5d287f5bd7355c0be7e618bef2e0884998485d2a2eb9ac184513ea",
+    "bundled_sha256": "4fdef4f88e5d287f5bd7355c0be7e618bef2e0884998485d2a2eb9ac184513ea"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184039-1.gz",
+    "bundled": "results/cases/184039-1.gz",
+    "source_sha256": "97cec3f471ce1b14b3960770ac45b21994943c70e15d24a88d5ca605b043739c",
+    "bundled_sha256": "97cec3f471ce1b14b3960770ac45b21994943c70e15d24a88d5ca605b043739c"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184040-0.gz",
+    "bundled": "results/cases/184040-0.gz",
+    "source_sha256": "9940e675bb1cf23a1eaae290e67552a53ecf660da44fb128a529e278638425ef",
+    "bundled_sha256": "9940e675bb1cf23a1eaae290e67552a53ecf660da44fb128a529e278638425ef"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184040-1.gz",
+    "bundled": "results/cases/184040-1.gz",
+    "source_sha256": "8976ad28044d09bcf8e9461c1fe75d2160a6119ffd2884845c63b665d65fd452",
+    "bundled_sha256": "8976ad28044d09bcf8e9461c1fe75d2160a6119ffd2884845c63b665d65fd452"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184041-0.gz",
+    "bundled": "results/cases/184041-0.gz",
+    "source_sha256": "025529c7102f6c37dbe73ec330f11e7510f822c9d6d5a037d2efbc51ea1e2ac4",
+    "bundled_sha256": "025529c7102f6c37dbe73ec330f11e7510f822c9d6d5a037d2efbc51ea1e2ac4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184041-1.gz",
+    "bundled": "results/cases/184041-1.gz",
+    "source_sha256": "fd4dce9e314ea618a4ca1216f82e85d91373366056fdb0765753a9e3841732bc",
+    "bundled_sha256": "fd4dce9e314ea618a4ca1216f82e85d91373366056fdb0765753a9e3841732bc"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184042-0.gz",
+    "bundled": "results/cases/184042-0.gz",
+    "source_sha256": "a812135305136e38d0480ade8d37aa57521f39d791de59df15535233d08065b1",
+    "bundled_sha256": "a812135305136e38d0480ade8d37aa57521f39d791de59df15535233d08065b1"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184042-1.gz",
+    "bundled": "results/cases/184042-1.gz",
+    "source_sha256": "4b6a96793e82c8f8cf703abd6afbee44ed67d2f88a45376e8cac25e059469fcf",
+    "bundled_sha256": "4b6a96793e82c8f8cf703abd6afbee44ed67d2f88a45376e8cac25e059469fcf"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184043-0.gz",
+    "bundled": "results/cases/184043-0.gz",
+    "source_sha256": "9e75d1e6b13f293baa4e698e79fc83eed0883e34e8dbd7b22bcf915e3fe7ca11",
+    "bundled_sha256": "9e75d1e6b13f293baa4e698e79fc83eed0883e34e8dbd7b22bcf915e3fe7ca11"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184043-1.gz",
+    "bundled": "results/cases/184043-1.gz",
+    "source_sha256": "4d3b6803d91b8d7880a3aafbec428747a165e8221a52de5b9345a7feb99594b4",
+    "bundled_sha256": "4d3b6803d91b8d7880a3aafbec428747a165e8221a52de5b9345a7feb99594b4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184044-0.gz",
+    "bundled": "results/cases/184044-0.gz",
+    "source_sha256": "19add2ec412de4cb68250f30069297bb36c17bed564a68a56d1fd64041a4b799",
+    "bundled_sha256": "19add2ec412de4cb68250f30069297bb36c17bed564a68a56d1fd64041a4b799"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184044-1.gz",
+    "bundled": "results/cases/184044-1.gz",
+    "source_sha256": "df440fc5ca2c5ab875536a3a984a8cb827f645e54d4ab35d82706e8dbd3d61cd",
+    "bundled_sha256": "df440fc5ca2c5ab875536a3a984a8cb827f645e54d4ab35d82706e8dbd3d61cd"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184045-0.gz",
+    "bundled": "results/cases/184045-0.gz",
+    "source_sha256": "63356624fc924eb85e9ed84720f922b70aa9a6cbf326780d6c2911800b100c7b",
+    "bundled_sha256": "63356624fc924eb85e9ed84720f922b70aa9a6cbf326780d6c2911800b100c7b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184045-1.gz",
+    "bundled": "results/cases/184045-1.gz",
+    "source_sha256": "8a51100347b29e877045b947cc5a23048a45334cc882a92294f58a7993bca708",
+    "bundled_sha256": "8a51100347b29e877045b947cc5a23048a45334cc882a92294f58a7993bca708"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184046-0.gz",
+    "bundled": "results/cases/184046-0.gz",
+    "source_sha256": "0ab5b30a6e79d9447d7031cf72232ea57774ae6892ee8988f5fa845a8b4f85d2",
+    "bundled_sha256": "0ab5b30a6e79d9447d7031cf72232ea57774ae6892ee8988f5fa845a8b4f85d2"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184046-1.gz",
+    "bundled": "results/cases/184046-1.gz",
+    "source_sha256": "8f5805dcb6b7aa213562f7e6dd0d5c38b5569cf384b1eca91d8a56f740d2fae9",
+    "bundled_sha256": "8f5805dcb6b7aa213562f7e6dd0d5c38b5569cf384b1eca91d8a56f740d2fae9"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184047-0.gz",
+    "bundled": "results/cases/184047-0.gz",
+    "source_sha256": "0ad9ca5f3a424a1f8052e62bd2f6d4abe20a4101730f0cce1f7a1fd880a90693",
+    "bundled_sha256": "0ad9ca5f3a424a1f8052e62bd2f6d4abe20a4101730f0cce1f7a1fd880a90693"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184047-1.gz",
+    "bundled": "results/cases/184047-1.gz",
+    "source_sha256": "bcccebfbeaee09742726de52cddf0a6f75dc413d86bea065ac4b1cdedf2625e3",
+    "bundled_sha256": "bcccebfbeaee09742726de52cddf0a6f75dc413d86bea065ac4b1cdedf2625e3"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184048-0.gz",
+    "bundled": "results/cases/184048-0.gz",
+    "source_sha256": "1c91a73748f5c44d0b1745bb9939e2a8289200ae305c755c4f10c7aa79fe66f5",
+    "bundled_sha256": "1c91a73748f5c44d0b1745bb9939e2a8289200ae305c755c4f10c7aa79fe66f5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184048-1.gz",
+    "bundled": "results/cases/184048-1.gz",
+    "source_sha256": "997c46bdd320f91450851d5d0f2179e3a57e1c4243e32dbcd6a9fd1053b0e05d",
+    "bundled_sha256": "997c46bdd320f91450851d5d0f2179e3a57e1c4243e32dbcd6a9fd1053b0e05d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184049-0.gz",
+    "bundled": "results/cases/184049-0.gz",
+    "source_sha256": "2ba155acae2cb467c13f506ded85a6ca62e4567dec7b019e0384d856a50fbe3e",
+    "bundled_sha256": "2ba155acae2cb467c13f506ded85a6ca62e4567dec7b019e0384d856a50fbe3e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184049-1.gz",
+    "bundled": "results/cases/184049-1.gz",
+    "source_sha256": "3a06fa34a7825e0f2f07be7b4955dc8366c9e1b127ea1d270691d1d27a780f97",
+    "bundled_sha256": "3a06fa34a7825e0f2f07be7b4955dc8366c9e1b127ea1d270691d1d27a780f97"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184050-0.gz",
+    "bundled": "results/cases/184050-0.gz",
+    "source_sha256": "4820a6c1b2518a6097142d92a1acfb32486ba32e313be014537c8d9925732939",
+    "bundled_sha256": "4820a6c1b2518a6097142d92a1acfb32486ba32e313be014537c8d9925732939"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184050-1.gz",
+    "bundled": "results/cases/184050-1.gz",
+    "source_sha256": "5390f2cff8a399dbf24adbd098452633ce0c3b6221fc6cbeca193d8630f72770",
+    "bundled_sha256": "5390f2cff8a399dbf24adbd098452633ce0c3b6221fc6cbeca193d8630f72770"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184051-0.gz",
+    "bundled": "results/cases/184051-0.gz",
+    "source_sha256": "e3905d2c171c826489836fdb1c9ca8966b5e5018c73e3cc1d7cf7a8fb3d9e387",
+    "bundled_sha256": "e3905d2c171c826489836fdb1c9ca8966b5e5018c73e3cc1d7cf7a8fb3d9e387"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184051-1.gz",
+    "bundled": "results/cases/184051-1.gz",
+    "source_sha256": "fe4541511da9b143f31e53984d237809e6c293ec695eb60a60c66d775cd965c5",
+    "bundled_sha256": "fe4541511da9b143f31e53984d237809e6c293ec695eb60a60c66d775cd965c5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184052-0.gz",
+    "bundled": "results/cases/184052-0.gz",
+    "source_sha256": "010f31cad4125bee7fff0349b951f7d63e9a5aac6650c1913f3e6f6eec5ea9d9",
+    "bundled_sha256": "010f31cad4125bee7fff0349b951f7d63e9a5aac6650c1913f3e6f6eec5ea9d9"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184052-1.gz",
+    "bundled": "results/cases/184052-1.gz",
+    "source_sha256": "13344258f2757625d89fdd498632a91230da0e13e80a7504e29b4963edd13c46",
+    "bundled_sha256": "13344258f2757625d89fdd498632a91230da0e13e80a7504e29b4963edd13c46"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184053-0.gz",
+    "bundled": "results/cases/184053-0.gz",
+    "source_sha256": "ac08c689e2d4abbf6b30e47362389f7723ec55dde88be554446a1b5fb0636f4d",
+    "bundled_sha256": "ac08c689e2d4abbf6b30e47362389f7723ec55dde88be554446a1b5fb0636f4d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184053-1.gz",
+    "bundled": "results/cases/184053-1.gz",
+    "source_sha256": "ad985776de97ce372d0cb94bb502db02f4de9bba9d01592b1ed83daa5020b5f9",
+    "bundled_sha256": "ad985776de97ce372d0cb94bb502db02f4de9bba9d01592b1ed83daa5020b5f9"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184054-0.gz",
+    "bundled": "results/cases/184054-0.gz",
+    "source_sha256": "8f0c041a62140359d5ceb091b093ec82e042a8cbeb172b9236a73e1feff6d5fb",
+    "bundled_sha256": "8f0c041a62140359d5ceb091b093ec82e042a8cbeb172b9236a73e1feff6d5fb"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184054-1.gz",
+    "bundled": "results/cases/184054-1.gz",
+    "source_sha256": "2d293737d347446b2ba2548c3990e6e056c885c1ab1cc47efbdef717dd639908",
+    "bundled_sha256": "2d293737d347446b2ba2548c3990e6e056c885c1ab1cc47efbdef717dd639908"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184055-0.gz",
+    "bundled": "results/cases/184055-0.gz",
+    "source_sha256": "45ac3f8700dfa2e3ebe72cba11269a5d1adea9676c513b2ab69cf5d4c4b89a46",
+    "bundled_sha256": "45ac3f8700dfa2e3ebe72cba11269a5d1adea9676c513b2ab69cf5d4c4b89a46"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184055-1.gz",
+    "bundled": "results/cases/184055-1.gz",
+    "source_sha256": "aa60ca149524703cf7841af7788c316315d7d1c6daadb8c9ef5f253d51d15f6c",
+    "bundled_sha256": "aa60ca149524703cf7841af7788c316315d7d1c6daadb8c9ef5f253d51d15f6c"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184056-0.gz",
+    "bundled": "results/cases/184056-0.gz",
+    "source_sha256": "999a926d9830af7956cdf732018b82968e6c8537a1b531853473a0fd7fad44a5",
+    "bundled_sha256": "999a926d9830af7956cdf732018b82968e6c8537a1b531853473a0fd7fad44a5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184056-1.gz",
+    "bundled": "results/cases/184056-1.gz",
+    "source_sha256": "2362ab4edf4e902d5e7091983fcafa0ffa14701f418ed6800df0bc14182d7da0",
+    "bundled_sha256": "2362ab4edf4e902d5e7091983fcafa0ffa14701f418ed6800df0bc14182d7da0"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184057-0.gz",
+    "bundled": "results/cases/184057-0.gz",
+    "source_sha256": "d0c8ec014dc7f798f564e7757d709f5c286f3def9605b90d7f77606649121202",
+    "bundled_sha256": "d0c8ec014dc7f798f564e7757d709f5c286f3def9605b90d7f77606649121202"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184057-1.gz",
+    "bundled": "results/cases/184057-1.gz",
+    "source_sha256": "523a9be4150abfd4527155b40cc04ab18c1413d56a48ccc24d4c762b2ffbbac0",
+    "bundled_sha256": "523a9be4150abfd4527155b40cc04ab18c1413d56a48ccc24d4c762b2ffbbac0"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184058-0.gz",
+    "bundled": "results/cases/184058-0.gz",
+    "source_sha256": "f66cca2a5c9ca65cde2e45831e6f243defe9d4d6c47724635220449fc11acab9",
+    "bundled_sha256": "f66cca2a5c9ca65cde2e45831e6f243defe9d4d6c47724635220449fc11acab9"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184058-1.gz",
+    "bundled": "results/cases/184058-1.gz",
+    "source_sha256": "ca4869d9ec80b185570d77d618f224cecf5f08d0513af93f50eb3b56e8ef0466",
+    "bundled_sha256": "ca4869d9ec80b185570d77d618f224cecf5f08d0513af93f50eb3b56e8ef0466"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184059-0.gz",
+    "bundled": "results/cases/184059-0.gz",
+    "source_sha256": "caf98243d5d8a8661f5e7407a9976b7de83cf983eacd41cccb3ffd8672c32759",
+    "bundled_sha256": "caf98243d5d8a8661f5e7407a9976b7de83cf983eacd41cccb3ffd8672c32759"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184059-1.gz",
+    "bundled": "results/cases/184059-1.gz",
+    "source_sha256": "d6acd2d0cc7849b4573e11a074df66ac528a8387ecdf7e685d2541bc1bcedf71",
+    "bundled_sha256": "d6acd2d0cc7849b4573e11a074df66ac528a8387ecdf7e685d2541bc1bcedf71"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184060-0.gz",
+    "bundled": "results/cases/184060-0.gz",
+    "source_sha256": "a7d672d672f3e9d9bc4f40034772c06584a6d25adb615944702bfdb81f48f2f8",
+    "bundled_sha256": "a7d672d672f3e9d9bc4f40034772c06584a6d25adb615944702bfdb81f48f2f8"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184060-1.gz",
+    "bundled": "results/cases/184060-1.gz",
+    "source_sha256": "94327b8126d000dbf6473f033b2674a0ec940a6e88e592b849abe2df14a09298",
+    "bundled_sha256": "94327b8126d000dbf6473f033b2674a0ec940a6e88e592b849abe2df14a09298"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184061-0.gz",
+    "bundled": "results/cases/184061-0.gz",
+    "source_sha256": "04c1af5476ff484e749797e0c23232a71fb55a5840199a6bf8f61451ea9f276f",
+    "bundled_sha256": "04c1af5476ff484e749797e0c23232a71fb55a5840199a6bf8f61451ea9f276f"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184061-1.gz",
+    "bundled": "results/cases/184061-1.gz",
+    "source_sha256": "069706eadcc9327e8c3ebc8cc8717847fd75dbcd68d093afe62ebf35e081aa54",
+    "bundled_sha256": "069706eadcc9327e8c3ebc8cc8717847fd75dbcd68d093afe62ebf35e081aa54"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184062-0.gz",
+    "bundled": "results/cases/184062-0.gz",
+    "source_sha256": "7adb9386b541c7bc245466bd3ee6b81062ffe7d998a5c6734ca162359c4759d0",
+    "bundled_sha256": "7adb9386b541c7bc245466bd3ee6b81062ffe7d998a5c6734ca162359c4759d0"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184062-1.gz",
+    "bundled": "results/cases/184062-1.gz",
+    "source_sha256": "476656602ae73769a379a7dc2f92ca84bb6149f1a3e1db6106e1bf0ba2aa0626",
+    "bundled_sha256": "476656602ae73769a379a7dc2f92ca84bb6149f1a3e1db6106e1bf0ba2aa0626"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184063-0.gz",
+    "bundled": "results/cases/184063-0.gz",
+    "source_sha256": "03e1be2c5bca4c445a42b737c22a8a9519b5e2b42b92c9b9389e3ca913f455fc",
+    "bundled_sha256": "03e1be2c5bca4c445a42b737c22a8a9519b5e2b42b92c9b9389e3ca913f455fc"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184063-1.gz",
+    "bundled": "results/cases/184063-1.gz",
+    "source_sha256": "12db0d521147c142cc4ba6288b06fab36ed6dd9817a5e90eba8cca0a4584c90e",
+    "bundled_sha256": "12db0d521147c142cc4ba6288b06fab36ed6dd9817a5e90eba8cca0a4584c90e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184064-0.gz",
+    "bundled": "results/cases/184064-0.gz",
+    "source_sha256": "c77a5e77dea3bbcc8d86f3c0b78c8a8354c854fcfb1fc9c8414c0e3d9e42374c",
+    "bundled_sha256": "c77a5e77dea3bbcc8d86f3c0b78c8a8354c854fcfb1fc9c8414c0e3d9e42374c"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184064-1.gz",
+    "bundled": "results/cases/184064-1.gz",
+    "source_sha256": "a17c6c3e9cf7459dda28c70275d98d06e009d1e11335307b27cb39e045e50730",
+    "bundled_sha256": "a17c6c3e9cf7459dda28c70275d98d06e009d1e11335307b27cb39e045e50730"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184065-0.gz",
+    "bundled": "results/cases/184065-0.gz",
+    "source_sha256": "d403fa23bf23753f0e14994730c35d1040c25a04b3ccbb502d948b7acf167c2b",
+    "bundled_sha256": "d403fa23bf23753f0e14994730c35d1040c25a04b3ccbb502d948b7acf167c2b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184065-1.gz",
+    "bundled": "results/cases/184065-1.gz",
+    "source_sha256": "ccdd2df4d9e721feafb901c33c01f246611eb32e970077e61872c2d13b3774de",
+    "bundled_sha256": "ccdd2df4d9e721feafb901c33c01f246611eb32e970077e61872c2d13b3774de"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184066-0.gz",
+    "bundled": "results/cases/184066-0.gz",
+    "source_sha256": "54fb4d1bb4cbe924adff83e594b554589042d8f0fd84b011386614c4c118891e",
+    "bundled_sha256": "54fb4d1bb4cbe924adff83e594b554589042d8f0fd84b011386614c4c118891e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184066-1.gz",
+    "bundled": "results/cases/184066-1.gz",
+    "source_sha256": "7a29626f917d881b9dd0703d63b113c2d54d31cad24af445bfbc17ba54119cf5",
+    "bundled_sha256": "7a29626f917d881b9dd0703d63b113c2d54d31cad24af445bfbc17ba54119cf5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184067-0.gz",
+    "bundled": "results/cases/184067-0.gz",
+    "source_sha256": "9a70d65518397ed2e281b6d74f44524f0413d558117808bb63177b2c45b51165",
+    "bundled_sha256": "9a70d65518397ed2e281b6d74f44524f0413d558117808bb63177b2c45b51165"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184067-1.gz",
+    "bundled": "results/cases/184067-1.gz",
+    "source_sha256": "a90b5304991962713804d9a407a63577dc5662050833037da444850b0f997793",
+    "bundled_sha256": "a90b5304991962713804d9a407a63577dc5662050833037da444850b0f997793"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184068-0.gz",
+    "bundled": "results/cases/184068-0.gz",
+    "source_sha256": "1906e8a8cdfd25d5a8dd54c10aa1cc34d32a73498bf9165586c25fa2e52130c3",
+    "bundled_sha256": "1906e8a8cdfd25d5a8dd54c10aa1cc34d32a73498bf9165586c25fa2e52130c3"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184068-1.gz",
+    "bundled": "results/cases/184068-1.gz",
+    "source_sha256": "40909908a75ebcd77cf7a35b678fe21646d4765d03010879a22d98c5f4794c86",
+    "bundled_sha256": "40909908a75ebcd77cf7a35b678fe21646d4765d03010879a22d98c5f4794c86"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184069-0.gz",
+    "bundled": "results/cases/184069-0.gz",
+    "source_sha256": "d2a36c7b6124b1a40fab8e996dc19d2abbfb8651b266feb590e549dca0b9144a",
+    "bundled_sha256": "d2a36c7b6124b1a40fab8e996dc19d2abbfb8651b266feb590e549dca0b9144a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184069-1.gz",
+    "bundled": "results/cases/184069-1.gz",
+    "source_sha256": "0c22dd7f17e723a607255308997c89e04a856f60f078e73a47185f8459a40bc5",
+    "bundled_sha256": "0c22dd7f17e723a607255308997c89e04a856f60f078e73a47185f8459a40bc5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184070-0.gz",
+    "bundled": "results/cases/184070-0.gz",
+    "source_sha256": "b6f4e97254f502a59700abe8fdbb104e8e585e01304ae7d5f1ce04b5e5df968e",
+    "bundled_sha256": "b6f4e97254f502a59700abe8fdbb104e8e585e01304ae7d5f1ce04b5e5df968e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184070-1.gz",
+    "bundled": "results/cases/184070-1.gz",
+    "source_sha256": "26c936a46bd89de3df0b8bd7a2ab95517be88dd593b1c09223e392ee77f416ae",
+    "bundled_sha256": "26c936a46bd89de3df0b8bd7a2ab95517be88dd593b1c09223e392ee77f416ae"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184071-0.gz",
+    "bundled": "results/cases/184071-0.gz",
+    "source_sha256": "bb591bb6aa44665c894349fca633407cfbb8d9be41f3d03c7ff3a3d592eba7a7",
+    "bundled_sha256": "bb591bb6aa44665c894349fca633407cfbb8d9be41f3d03c7ff3a3d592eba7a7"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184071-1.gz",
+    "bundled": "results/cases/184071-1.gz",
+    "source_sha256": "5a30b7961af1a8b37a049ec26263ccadee6c8578d03e090338823045ac1184b1",
+    "bundled_sha256": "5a30b7961af1a8b37a049ec26263ccadee6c8578d03e090338823045ac1184b1"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184072-0.gz",
+    "bundled": "results/cases/184072-0.gz",
+    "source_sha256": "869d3ec1600869393ed98c62e87a5f65fcc893372693c3191b7c2e257b913f2d",
+    "bundled_sha256": "869d3ec1600869393ed98c62e87a5f65fcc893372693c3191b7c2e257b913f2d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184072-1.gz",
+    "bundled": "results/cases/184072-1.gz",
+    "source_sha256": "8f23f495b238eff917167ca05b3cfd528156d41a8dd4ca7cc1d2f7ead97db025",
+    "bundled_sha256": "8f23f495b238eff917167ca05b3cfd528156d41a8dd4ca7cc1d2f7ead97db025"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184073-0.gz",
+    "bundled": "results/cases/184073-0.gz",
+    "source_sha256": "39bfb3779cbd152007c8d40da8dcaaefaaeb0da683d6eb75a61037f1be7f9f92",
+    "bundled_sha256": "39bfb3779cbd152007c8d40da8dcaaefaaeb0da683d6eb75a61037f1be7f9f92"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184073-1.gz",
+    "bundled": "results/cases/184073-1.gz",
+    "source_sha256": "c6b4e84a8a47c0456c5f274f72237ab7ffa9a386c2db23912dfb0fddbf8b5e26",
+    "bundled_sha256": "c6b4e84a8a47c0456c5f274f72237ab7ffa9a386c2db23912dfb0fddbf8b5e26"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184074-0.gz",
+    "bundled": "results/cases/184074-0.gz",
+    "source_sha256": "5dadf042d0fdf6d93793c9912b0ee316ce688d49b8b7d77e75866b915c0958cc",
+    "bundled_sha256": "5dadf042d0fdf6d93793c9912b0ee316ce688d49b8b7d77e75866b915c0958cc"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184074-1.gz",
+    "bundled": "results/cases/184074-1.gz",
+    "source_sha256": "88a8bac4fa59cdec3b1a993477a6654b867f489c097d454b2ddd7aba286174bc",
+    "bundled_sha256": "88a8bac4fa59cdec3b1a993477a6654b867f489c097d454b2ddd7aba286174bc"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184075-0.gz",
+    "bundled": "results/cases/184075-0.gz",
+    "source_sha256": "0f7c359d6e477718c48a7a672c5e16ff624acf050c83b4a382ebd76481f586a7",
+    "bundled_sha256": "0f7c359d6e477718c48a7a672c5e16ff624acf050c83b4a382ebd76481f586a7"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184075-1.gz",
+    "bundled": "results/cases/184075-1.gz",
+    "source_sha256": "fa59665354f5710753cd0b2480f62b1c2ad639fc72431294160f4e495d6f6871",
+    "bundled_sha256": "fa59665354f5710753cd0b2480f62b1c2ad639fc72431294160f4e495d6f6871"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184076-0.gz",
+    "bundled": "results/cases/184076-0.gz",
+    "source_sha256": "a4782186c6eb096222f7969aea27b0d98b3481f81aa756630d9cbe32f80ed075",
+    "bundled_sha256": "a4782186c6eb096222f7969aea27b0d98b3481f81aa756630d9cbe32f80ed075"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184076-1.gz",
+    "bundled": "results/cases/184076-1.gz",
+    "source_sha256": "bbfa87cbee3b6180e336b2f3adc51e1ab12f7ee96ecce1f50374e4bba5ea10d1",
+    "bundled_sha256": "bbfa87cbee3b6180e336b2f3adc51e1ab12f7ee96ecce1f50374e4bba5ea10d1"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184077-0.gz",
+    "bundled": "results/cases/184077-0.gz",
+    "source_sha256": "b3210c183cf77db21f8ea8d732eec9df5fe21a6b8650c736bbe2643e2639e90c",
+    "bundled_sha256": "b3210c183cf77db21f8ea8d732eec9df5fe21a6b8650c736bbe2643e2639e90c"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184077-1.gz",
+    "bundled": "results/cases/184077-1.gz",
+    "source_sha256": "ddf9c72bc22a15bc6068c5fcd156302ec71c890b12c298b2b3cdf53d2b109032",
+    "bundled_sha256": "ddf9c72bc22a15bc6068c5fcd156302ec71c890b12c298b2b3cdf53d2b109032"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184078-0.gz",
+    "bundled": "results/cases/184078-0.gz",
+    "source_sha256": "fd333a2cec854c159871fee4f4a744f721c5d448834c6de885fb56e1fe69cc8b",
+    "bundled_sha256": "fd333a2cec854c159871fee4f4a744f721c5d448834c6de885fb56e1fe69cc8b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184078-1.gz",
+    "bundled": "results/cases/184078-1.gz",
+    "source_sha256": "cfda177d815e8ab97c60a17fb7ed7a721d56f76e54698d98b377100f1475296b",
+    "bundled_sha256": "cfda177d815e8ab97c60a17fb7ed7a721d56f76e54698d98b377100f1475296b"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184079-0.gz",
+    "bundled": "results/cases/184079-0.gz",
+    "source_sha256": "649675cf3124a9a7db9ec41631b67a975ad0cfe293f9966a0b2a927a32f0b222",
+    "bundled_sha256": "649675cf3124a9a7db9ec41631b67a975ad0cfe293f9966a0b2a927a32f0b222"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184079-1.gz",
+    "bundled": "results/cases/184079-1.gz",
+    "source_sha256": "e8d910c52234ba5c5f3b24dbec03331319cedcaa948467910ef2ff5f46671a77",
+    "bundled_sha256": "e8d910c52234ba5c5f3b24dbec03331319cedcaa948467910ef2ff5f46671a77"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184080-0.gz",
+    "bundled": "results/cases/184080-0.gz",
+    "source_sha256": "54312c2e901caa01f6088ae78e9219c381f706a73bbd4355314d81cb0bcbc47d",
+    "bundled_sha256": "54312c2e901caa01f6088ae78e9219c381f706a73bbd4355314d81cb0bcbc47d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184080-1.gz",
+    "bundled": "results/cases/184080-1.gz",
+    "source_sha256": "f425ea113557644d7a92495fade2b7d2273435c66d865cfcbefaa274e84df305",
+    "bundled_sha256": "f425ea113557644d7a92495fade2b7d2273435c66d865cfcbefaa274e84df305"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184081-0.gz",
+    "bundled": "results/cases/184081-0.gz",
+    "source_sha256": "8c0b71e6dc057c3265ab18f6abadc3239456f911b2946ca4b7e733cc5fb8758a",
+    "bundled_sha256": "8c0b71e6dc057c3265ab18f6abadc3239456f911b2946ca4b7e733cc5fb8758a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184081-1.gz",
+    "bundled": "results/cases/184081-1.gz",
+    "source_sha256": "c7d2aec029752c7b634c623586b3e27442c1cd41f8aa12a4bcfe8b5626af197c",
+    "bundled_sha256": "c7d2aec029752c7b634c623586b3e27442c1cd41f8aa12a4bcfe8b5626af197c"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184082-0.gz",
+    "bundled": "results/cases/184082-0.gz",
+    "source_sha256": "4e37cc517f112a11d1162e1b87c14708d9ca6645451cc5615c8d274de0016fa6",
+    "bundled_sha256": "4e37cc517f112a11d1162e1b87c14708d9ca6645451cc5615c8d274de0016fa6"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184082-1.gz",
+    "bundled": "results/cases/184082-1.gz",
+    "source_sha256": "bb6e371658a3a3718138cc2c911cb09880c2d6b636f3456bae2b3b5baf559f0a",
+    "bundled_sha256": "bb6e371658a3a3718138cc2c911cb09880c2d6b636f3456bae2b3b5baf559f0a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184083-0.gz",
+    "bundled": "results/cases/184083-0.gz",
+    "source_sha256": "57ffcabf2e10bd436c31130bbacf1492230c22e52ef1ee8af0888b5524da3c55",
+    "bundled_sha256": "57ffcabf2e10bd436c31130bbacf1492230c22e52ef1ee8af0888b5524da3c55"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184083-1.gz",
+    "bundled": "results/cases/184083-1.gz",
+    "source_sha256": "7aeaf3ea4bd0f576f3b8c03d7ebbae8a9671c6e7e01d4319e7d8042e72cb1885",
+    "bundled_sha256": "7aeaf3ea4bd0f576f3b8c03d7ebbae8a9671c6e7e01d4319e7d8042e72cb1885"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184084-0.gz",
+    "bundled": "results/cases/184084-0.gz",
+    "source_sha256": "6726adb315a495f6b30271f09b6509381699140f43e41de0efc3c658194fabe6",
+    "bundled_sha256": "6726adb315a495f6b30271f09b6509381699140f43e41de0efc3c658194fabe6"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184084-1.gz",
+    "bundled": "results/cases/184084-1.gz",
+    "source_sha256": "9e88cf3d48556913d9ebddc3f4e788dc11b143ae78ee46affc1cff15609fd36e",
+    "bundled_sha256": "9e88cf3d48556913d9ebddc3f4e788dc11b143ae78ee46affc1cff15609fd36e"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184085-0.gz",
+    "bundled": "results/cases/184085-0.gz",
+    "source_sha256": "423578f508c5fd41919e7d3a6d94a1a92b58fe73c75446d824be3ae1b2af329a",
+    "bundled_sha256": "423578f508c5fd41919e7d3a6d94a1a92b58fe73c75446d824be3ae1b2af329a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184085-1.gz",
+    "bundled": "results/cases/184085-1.gz",
+    "source_sha256": "e7a2f215eacd309021f9c2ed3d75cf360f5ebd2e84568626bfb7b4b8b1b8522c",
+    "bundled_sha256": "e7a2f215eacd309021f9c2ed3d75cf360f5ebd2e84568626bfb7b4b8b1b8522c"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184086-0.gz",
+    "bundled": "results/cases/184086-0.gz",
+    "source_sha256": "237287f98ab5fbe78f428aa6d8454dfad1eeddbd238851c7c224f5c42fe9aa89",
+    "bundled_sha256": "237287f98ab5fbe78f428aa6d8454dfad1eeddbd238851c7c224f5c42fe9aa89"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184086-1.gz",
+    "bundled": "results/cases/184086-1.gz",
+    "source_sha256": "ce18e69a06a23f3aa78f98d3221e804487b77793a92cca1f0d6e7cfdfbd305f3",
+    "bundled_sha256": "ce18e69a06a23f3aa78f98d3221e804487b77793a92cca1f0d6e7cfdfbd305f3"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184087-0.gz",
+    "bundled": "results/cases/184087-0.gz",
+    "source_sha256": "083d7d9c901ed964a8e187e4affe2e59682c05e9bc4410c7bb6ca9f606791576",
+    "bundled_sha256": "083d7d9c901ed964a8e187e4affe2e59682c05e9bc4410c7bb6ca9f606791576"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184087-1.gz",
+    "bundled": "results/cases/184087-1.gz",
+    "source_sha256": "41ffb982550db6c595d653e0cf0d7ffcda07bc7e1c9f7833d3ed35972b7d25d1",
+    "bundled_sha256": "41ffb982550db6c595d653e0cf0d7ffcda07bc7e1c9f7833d3ed35972b7d25d1"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184088-0.gz",
+    "bundled": "results/cases/184088-0.gz",
+    "source_sha256": "31636792f60f491fc33e563ca968bfa307e4653f5376a998a3a18da971d6d500",
+    "bundled_sha256": "31636792f60f491fc33e563ca968bfa307e4653f5376a998a3a18da971d6d500"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184088-1.gz",
+    "bundled": "results/cases/184088-1.gz",
+    "source_sha256": "0d5ae8f75df99d0baee32ce3dd9ec0774a18cfa07abc57c72b8e48ac31c9bdec",
+    "bundled_sha256": "0d5ae8f75df99d0baee32ce3dd9ec0774a18cfa07abc57c72b8e48ac31c9bdec"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184089-0.gz",
+    "bundled": "results/cases/184089-0.gz",
+    "source_sha256": "cc2aa51b269f8e8923a354cab23100fdd18fc7f7d5fb9af35c0cb1e60614ecd4",
+    "bundled_sha256": "cc2aa51b269f8e8923a354cab23100fdd18fc7f7d5fb9af35c0cb1e60614ecd4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184089-1.gz",
+    "bundled": "results/cases/184089-1.gz",
+    "source_sha256": "0b0c0177283d20113de55a948bdbab3ba4e706165059a20ca0f61c0ee3ea89c1",
+    "bundled_sha256": "0b0c0177283d20113de55a948bdbab3ba4e706165059a20ca0f61c0ee3ea89c1"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184090-0.gz",
+    "bundled": "results/cases/184090-0.gz",
+    "source_sha256": "6db8035bcc57bec72c5edf10e854c32f2ffafc10da3892efa28a274baf5930a8",
+    "bundled_sha256": "6db8035bcc57bec72c5edf10e854c32f2ffafc10da3892efa28a274baf5930a8"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184090-1.gz",
+    "bundled": "results/cases/184090-1.gz",
+    "source_sha256": "cdb56a9361a97660b7d1a79aeb65fb65f62acc7a71fbf77d970278fd4193bb78",
+    "bundled_sha256": "cdb56a9361a97660b7d1a79aeb65fb65f62acc7a71fbf77d970278fd4193bb78"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184091-0.gz",
+    "bundled": "results/cases/184091-0.gz",
+    "source_sha256": "310442e12fa95c31ac00fe891e7d573b8f0259c7d876518f24e73320777399d5",
+    "bundled_sha256": "310442e12fa95c31ac00fe891e7d573b8f0259c7d876518f24e73320777399d5"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184091-1.gz",
+    "bundled": "results/cases/184091-1.gz",
+    "source_sha256": "7f78c6518d9d9ace124ce1bf0615744126cebc2d5fb5006a13d88a2cc57e3c73",
+    "bundled_sha256": "7f78c6518d9d9ace124ce1bf0615744126cebc2d5fb5006a13d88a2cc57e3c73"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184092-0.gz",
+    "bundled": "results/cases/184092-0.gz",
+    "source_sha256": "40e33d0429886fb07bad13b189bc7e985cd98ae46d75c12db05c337dbb5c18c4",
+    "bundled_sha256": "40e33d0429886fb07bad13b189bc7e985cd98ae46d75c12db05c337dbb5c18c4"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184092-1.gz",
+    "bundled": "results/cases/184092-1.gz",
+    "source_sha256": "4b3017c8a3d583c18ce3af92d91db7a7b3ef3ddc9b34e799a5155eb5da92d557",
+    "bundled_sha256": "4b3017c8a3d583c18ce3af92d91db7a7b3ef3ddc9b34e799a5155eb5da92d557"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184093-0.gz",
+    "bundled": "results/cases/184093-0.gz",
+    "source_sha256": "020915c91828589531306068e5fb40c6b189be3a385b2d7d053bb7120084028d",
+    "bundled_sha256": "020915c91828589531306068e5fb40c6b189be3a385b2d7d053bb7120084028d"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184093-1.gz",
+    "bundled": "results/cases/184093-1.gz",
+    "source_sha256": "d884ac3a16e69e28d39af2aea085ec2c712d39ca5108576196a3e71cacf7c9bd",
+    "bundled_sha256": "d884ac3a16e69e28d39af2aea085ec2c712d39ca5108576196a3e71cacf7c9bd"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184094-0.gz",
+    "bundled": "results/cases/184094-0.gz",
+    "source_sha256": "8760ad564a703615606e6fd08191d2ca07f8fd0807074114fe3d94e2cd10b518",
+    "bundled_sha256": "8760ad564a703615606e6fd08191d2ca07f8fd0807074114fe3d94e2cd10b518"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184094-1.gz",
+    "bundled": "results/cases/184094-1.gz",
+    "source_sha256": "83b37e9af81b04a8cebe2e4cf3b3dd430551179684e0ab98c9e930dcd140d881",
+    "bundled_sha256": "83b37e9af81b04a8cebe2e4cf3b3dd430551179684e0ab98c9e930dcd140d881"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184095-0.gz",
+    "bundled": "results/cases/184095-0.gz",
+    "source_sha256": "b19de250d6e7d639840a22d725aeaac5126582f177dae3756cef8cf2300b8ecc",
+    "bundled_sha256": "b19de250d6e7d639840a22d725aeaac5126582f177dae3756cef8cf2300b8ecc"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184095-1.gz",
+    "bundled": "results/cases/184095-1.gz",
+    "source_sha256": "666fc6256102d1f8f9884fc436d840eafe9acde716c270b4abf0160329fc8814",
+    "bundled_sha256": "666fc6256102d1f8f9884fc436d840eafe9acde716c270b4abf0160329fc8814"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184096-0.gz",
+    "bundled": "results/cases/184096-0.gz",
+    "source_sha256": "73aee20bbfbc8a3b68898469d741800ff82f3ea9f72d541351b37aa850cc0d85",
+    "bundled_sha256": "73aee20bbfbc8a3b68898469d741800ff82f3ea9f72d541351b37aa850cc0d85"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184096-1.gz",
+    "bundled": "results/cases/184096-1.gz",
+    "source_sha256": "8caac15964086748f20b95d6f6cc78c4c234fd149e81071e057a00d511baf0a6",
+    "bundled_sha256": "8caac15964086748f20b95d6f6cc78c4c234fd149e81071e057a00d511baf0a6"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184097-0.gz",
+    "bundled": "results/cases/184097-0.gz",
+    "source_sha256": "c6a2e9d00a8bc8a7973ece71af894b469e7aecafefbc969a89cba367e2a9b11a",
+    "bundled_sha256": "c6a2e9d00a8bc8a7973ece71af894b469e7aecafefbc969a89cba367e2a9b11a"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184097-1.gz",
+    "bundled": "results/cases/184097-1.gz",
+    "source_sha256": "5b79a80138b8f79de4a9a0fc2119c47db0a93465dec10e9ddedbce3d06eebcee",
+    "bundled_sha256": "5b79a80138b8f79de4a9a0fc2119c47db0a93465dec10e9ddedbce3d06eebcee"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184098-0.gz",
+    "bundled": "results/cases/184098-0.gz",
+    "source_sha256": "b2c220dfcc137b8cde44d9db62df195d8d2fdadf8ce25c1b1e71328657fd8368",
+    "bundled_sha256": "b2c220dfcc137b8cde44d9db62df195d8d2fdadf8ce25c1b1e71328657fd8368"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184098-1.gz",
+    "bundled": "results/cases/184098-1.gz",
+    "source_sha256": "3b0104ba0c88538ee6a8f4bfa8664a64a1c84a514b93dde3a0a3a64453aa76ba",
+    "bundled_sha256": "3b0104ba0c88538ee6a8f4bfa8664a64a1c84a514b93dde3a0a3a64453aa76ba"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184099-0.gz",
+    "bundled": "results/cases/184099-0.gz",
+    "source_sha256": "b7130525990d06d5d47960b6129e11943925a61658557e4d64991f1baa9bf202",
+    "bundled_sha256": "b7130525990d06d5d47960b6129e11943925a61658557e4d64991f1baa9bf202"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184099-1.gz",
+    "bundled": "results/cases/184099-1.gz",
+    "source_sha256": "fdb3d6d7e57424c7d807ba8fa7e7c187fb84a743b0efaca75895d8e0f2a7fb27",
+    "bundled_sha256": "fdb3d6d7e57424c7d807ba8fa7e7c187fb84a743b0efaca75895d8e0f2a7fb27"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184100-0.gz",
+    "bundled": "results/cases/184100-0.gz",
+    "source_sha256": "205fcaa570fbc5432056d601500a055600adca5646d23adb0dc23180e5eb33c9",
+    "bundled_sha256": "205fcaa570fbc5432056d601500a055600adca5646d23adb0dc23180e5eb33c9"
+  },
+  {
+    "source": "uav-workbench/generated/guizhou-mixed-rescue-v1/cases/184100-1.gz",
+    "bundled": "results/cases/184100-1.gz",
+    "source_sha256": "c028cdca6ee113b88c077fe89a5e505dd00e9bf0cb0c28c93fc8ebf3c6fe1956",
+    "bundled_sha256": "c028cdca6ee113b88c077fe89a5e505dd00e9bf0cb0c28c93fc8ebf3c6fe1956"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/L0-11.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/L0-11.pt",
+    "source_sha256": "742c96301d5d3ba24ad0de9662ed34904d97d67418d9594952c6f3b4e6f9ce31",
+    "bundled_sha256": "742c96301d5d3ba24ad0de9662ed34904d97d67418d9594952c6f3b4e6f9ce31"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/LG-11.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/LG-11.pt",
+    "source_sha256": "48c5876832f4e4659c2893f8144d1b6479257a122c89efe5fe7115f109e9f810",
+    "bundled_sha256": "48c5876832f4e4659c2893f8144d1b6479257a122c89efe5fe7115f109e9f810"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/T0-11.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/T0-11.pt",
+    "source_sha256": "660b8c8d7fd548ac12c97dbd9ee191d197678368f17064d51de9dac4b40c44d2",
+    "bundled_sha256": "660b8c8d7fd548ac12c97dbd9ee191d197678368f17064d51de9dac4b40c44d2"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/T0-29.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/T0-29.pt",
+    "source_sha256": "9a69ebae16cf601aa30ab48c7299aa10e54d6bfa7a7ac0b1328bb28d9d3aa023",
+    "bundled_sha256": "9a69ebae16cf601aa30ab48c7299aa10e54d6bfa7a7ac0b1328bb28d9d3aa023"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/T0-47.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/T0-47.pt",
+    "source_sha256": "29941fa041d091c5cfe2ad5cf350311d3ada4d0340265f6cea7889b0d552ef24",
+    "bundled_sha256": "29941fa041d091c5cfe2ad5cf350311d3ada4d0340265f6cea7889b0d552ef24"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/TG-11.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/TG-11.pt",
+    "source_sha256": "8b8c7cb94a2588a56041c984188edeabfcfa384bd7a3e554ea06f35a67a71942",
+    "bundled_sha256": "8b8c7cb94a2588a56041c984188edeabfcfa384bd7a3e554ea06f35a67a71942"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/TG-29.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/TG-29.pt",
+    "source_sha256": "8bae6131c7aa69f820551941065c004edd332c55c98f06062eb4dc688fab473c",
+    "bundled_sha256": "8bae6131c7aa69f820551941065c004edd332c55c98f06062eb4dc688fab473c"
+  },
+  {
+    "source": "uav-workbench/generated/dynamic-drop-rebuild-v1/TG-47.pt",
+    "bundled": "models/dynamic-drop-rebuild-v1/TG-47.pt",
+    "source_sha256": "b42d3c9b6f9b4c584260a32f9fb7aa4bf557f1c83ff55a65c246fbbdf2c8fb49",
+    "bundled_sha256": "b42d3c9b6f9b4c584260a32f9fb7aa4bf557f1c83ff55a65c246fbbdf2c8fb49"
+  },
+  {
+    "source": "LICENSE",
+    "bundled": "LICENSE",
+    "source_sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "bundled_sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  }
+]

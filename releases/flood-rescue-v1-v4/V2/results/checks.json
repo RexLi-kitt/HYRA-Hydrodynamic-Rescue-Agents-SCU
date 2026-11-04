@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "tests": [
+    "1 minute probability, refloat equality and dry precedence",
+    "segment snag and continuous collision stops",
+    "terminal deadline equality and service interruption",
+    "causal snapshot unchanged under hidden target substitution",
+    "forced/random exposure thresholds",
+    "trajectory seed reproducibility",
+    "alpha zero recovers all actions and outcomes"
+  ]
+}

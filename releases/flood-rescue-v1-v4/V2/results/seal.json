@@ -1,0 +1,39 @@
+{
+  "choice": {
+    "alpha": {
+      "L0": 0.25,
+      "LG": 0.25,
+      "T0": 0.5,
+      "TG": 0.5
+    },
+    "calibration_scores": {
+      "L0": 37.5,
+      "LG": 38.4375,
+      "T0": 39.770833333333336,
+      "TG": 39.520833333333336
+    },
+    "winner": "T0"
+  },
+  "models": {
+    "L0-11.pt": "742c96301d5d3ba24ad0de9662ed34904d97d67418d9594952c6f3b4e6f9ce31",
+    "LG-11.pt": "48c5876832f4e4659c2893f8144d1b6479257a122c89efe5fe7115f109e9f810",
+    "T0-11.pt": "660b8c8d7fd548ac12c97dbd9ee191d197678368f17064d51de9dac4b40c44d2",
+    "T0-29.pt": "9a69ebae16cf601aa30ab48c7299aa10e54d6bfa7a7ac0b1328bb28d9d3aa023",
+    "T0-47.pt": "29941fa041d091c5cfe2ad5cf350311d3ada4d0340265f6cea7889b0d552ef24",
+    "TG-11.pt": "8b8c7cb94a2588a56041c984188edeabfcfa384bd7a3e554ea06f35a67a71942",
+    "TG-29.pt": "8bae6131c7aa69f820551941065c004edd332c55c98f06062eb4dc688fab473c",
+    "TG-47.pt": "b42d3c9b6f9b4c584260a32f9fb7aa4bf557f1c83ff55a65c246fbbdf2c8fb49"
+  },
+  "code": {
+    "audit.py": "c84d156b851013b98c2aa46f068d6d146c3530642ebe229fa6c15c440b3fa16e",
+    "learning.py": "6e37171fde879d12a2c7161832fc1b09014fc7ac4dd528c86efbfeaaf3d608dc",
+    "planner.py": "1216b0f67d278ede636c8045380c3f515b590b78a6f160f6dfe8d150dd835df3",
+    "scenarios.py": "d78f9b7f2cc5360b74d16438d13ec078638e6193ddddb69d0d4be9f583c05dee",
+    "sim.py": "4366c9655e4270ed5cdb2359c7d2336fbfd2d00d08390e928adafa5e383ffe78",
+    "study.py": "9b959525611d09733e9db364fdb91629c3148dcd1553ecce5fbe8e5e5b3f3581"
+  },
+  "test_parents": [
+    181001,
+    181050
+  ]
+}

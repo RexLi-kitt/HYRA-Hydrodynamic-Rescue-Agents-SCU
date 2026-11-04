@@ -52,3 +52,7 @@
 
 [Sur-QMIX适配贯通](uav-workbench/docs/SUR_PREFLIGHT_20261025.md)已完成训练/执行/恢复与权限审计；[独立物理辅助实验](uav-workbench/docs/SCIML_PROTOCOL_20261025.md)已完成全部训练、留出评价与审计；[首轮闭环结果为负](uav-workbench/docs/SCIML_FINAL_20261025.md)，不追加轮次。[运行与复现](uav-workbench/docs/REPRODUCE.md)区分原网页回放、两机clean actor命令行与科学训练入口。
 
+
+## 四版搜救实验发布
+
+[V1–V4 发布总览](releases/flood-rescue-v1-v4/README.md)：固定人员搜救、动态落水区域需求预测、贵州综合险情迁移与逐秒需求前推。各版本提供独立源码、冻结模型或先验、结果归档与复跑说明，完成率按各自环境协议呈现。

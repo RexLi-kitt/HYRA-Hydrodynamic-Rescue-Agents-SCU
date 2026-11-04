@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "no-alarm K1 equivalence",
+    "shared discovery",
+    "obstacle intersection",
+    "departure",
+    "deadline equality"
+  ]
+}
