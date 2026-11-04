@@ -1,0 +1,7 @@
+{
+  "gru_beats_simple_with_positive_people_interval": true,
+  "structural_people_not_below_planners": true,
+  "manufactured_mechanism_people_not_below_planners": false,
+  "gru_extra_training_started": false,
+  "next": "同类场景已证明冻结GRU相对本轮简单对照的收益，但压力条件泛化不足。先在另设开发场隔离预测加权导致的重复巡查与探索不足，再设计只依赖当前观测的探索保底；随后补充有数值依据的多地形/涨退水FIT数据，开展多种子8/16/32监督epoch小试，仅CAL改善才延长。不在旧分布直接堆轮数，不拿本批测试选新模型，不把制造场当真实水动力依据。"
+}

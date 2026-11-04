@@ -1,0 +1,43 @@
+{
+  "version": "window-scale-anchor-v1",
+  "date": "2026-11-04",
+  "source_sha256": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-return-v1\\probe.py": "2c5af3de78ec25d5eec4b9f388b24c90fd34cf7dd6dbc51bbecec0c3717509aa",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-return-v1\\test_train.py": "ba95cd9750bdfcc164e540ae51a151b5d3e29ed4ed07e65dfa7650d70b951190",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-return-v1\\train.py": "17b99a70e1a1aadeacb6963408a6eb286c32b319f9d499187898eb9dbf3615f1",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-return-v1\\window_adapter.py": "b9f7894442ce7b15f7e3265bdd838a1663f65efbae37d3ba92f8f7ff9abefeea",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-return-v1\\window_screen.py": "cbe918181c2e6e16694c3c21aa77aa1ce9bb099b32ab822959683f3261c6ee94",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\history_model.py": "c6e891141512921911995304949b6b6adc45d5ba0ebf4552fa6e43d68af856e4",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\long_dispatch.py": "03a943b85a125a573ec607adaacbd61d4b8dc070d2035604f4faec79ca2c6840",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\long_environment.py": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\long_flow.py": "62a5f69e9c01e3a401e27da02650c413c1c1c14fdb0573f30ba5c541ef70bc9e",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\long_search.py": "bb52e7db4813610e83a516221393954421b6d65c36091126e158391dcba471db",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\long_water.py": "c593a7dd9a21ca3a973274ff86fd7a94a1359a74f1c04fd75fa1a0dbefdb93b8",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\models.py": "2ee7fcf39f349d0ddd5a9a0d1c4b76503d6768135bc8c517f5f290b06376dde0",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\run.py": "511a055426405a3c2ae4826f0db03cfa4ef241e590e301972b1fdf4d6d56d4b9",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\test_contracts.py": "0daebdf112e4e0b7086d892b210f732244dd721b5cbd5ec7b2d3ab48d6565d5d",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-convlstm20-v1\\test_refloat.py": "b440cd2d166ea55e478289f9bfa813f8940004d6325cda3baf3117ca5f4cceba",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-fine-memory-v1\\memory.py": "0f815a55b1e0c6cdb54cdac716984b4c95d9d52d46df6e3d19f122dfab91ce20",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-fine-memory-v1\\test_memory.py": "8e2e488d9304b0a80e277e38f9eb9d6e85b282eaddf8bb43c135f39e2bff057c",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-fine-memory-v1\\train_pilot.py": "58fff5d05270d66cd49faccbf29f4c702c41ea954477fbc48c359ba02d36fe19",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-redesign-v1\\adapter.py": "65397ed0075dd24c04a72924b66658a9bb77568e0ee0b24ddf42376452b88a38",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-redesign-v1\\audit.py": "e0b00d4fe5a04563eb3edba328ae902c73a3fedc6ac2d38ce6418d6104bafbf0",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-redesign-v1\\neutral_residual.py": "9fd0f62141582cb448ccacc06dccc3e74569ca9e4470547346929bcf3f8737f6",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-redesign-v1\\pilot.py": "01db68c93a83ddf28c2ec8fb78fdb99a50ab6a4d3d8df880ce6e5804e4422771",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\hyra-uav-pr-20261101\\uav-workbench\\experiments\\flood-drop-search-redesign-v1\\test_neutral_residual.py": "a28e869afa5d420c2396e8c7cb51aee41881a50e4fc891eb1a29380baea0cb23"
+  },
+  "input_sha256": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-window85-20261104\\run01\\scenarios.json": "d47a661499a626a2f829a05996765041c188808a8596e27eefe7be749ceb1642",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-window85-20261104\\run01\\results.jsonl": "6e72408d4e45a7809555d1d60f243664df1dfbe712f4b80b2f7af98970360ad5",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-window85-20261104\\run01\\input-lock.json": "da1e4c26b5e6f6afa19963fb3f1d8e87c25ff234335058bb9507ccd51136342d",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fine-s202611141-e16.pt": "e4aeb310f314a438e9c52c1ad5e05624be2d1df18a6df6eac2ae9b52e0cec0bd",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fine-s202611142-e16.pt": "3bed74682c5d7b163814b1585d162b9b5485e040c8756c3bcfed93756ff6284a"
+  },
+  "hypothesis": "Old constant-window std=.01 amplifies truthful660s input to80. Test fixed physical extrapolation scale1 while exactly preserving420 training anchor. Only channel13 changes; time normalization and all other inputs stay untouched.",
+  "setup": "6previous DEV parents,660s window,2400s horizon,20m sensor,40people4UAV,10s service,unchanged physical environment/weights/dispatcher. Both prior fine16 seeds.",
+  "comparison": "seed141 raw+adapted and seed142 adapted=18new full runs; seed142 raw6runs and both planners reused from exact SCREEN config after input SHA checks.",
+  "tests": "Across24FIT parents8fixed archived frames each, exact normalized inputs and predictions at420; other63channels exact at660; same true config still passed to environment.",
+  "gate": "Both seeds adapted >=own raw and >=207/240 strongest archived planner. Otherwise do not promote or start long training. This is DEV causality screen, not independent finaltest. Never sweep scale after results.",
+  "limits": "Fixed weights lack variable-window training; adapter is an explicit extrapolation assumption, not retraining or proof80% success probability. It cannot establish future-field generalization.",
+  "budget": "One CPU4 workload,18new runs,STOP/1200s guard. No new maps,training,production changes orpush."
+}

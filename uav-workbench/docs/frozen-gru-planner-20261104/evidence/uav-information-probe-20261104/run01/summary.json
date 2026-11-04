@@ -1,0 +1,97 @@
+{
+  "results": {
+    "confirmation": {
+      "coverage100": {
+        "scenes": 6,
+        "supplied": 213,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 6,
+        "supplied": 205,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "oracle-direct100": {
+        "scenes": 6,
+        "supplied": 240,
+        "people": 240,
+        "all_scenes": 6,
+        "p95_scenes": 6
+      },
+      "oracle-direct20": {
+        "scenes": 6,
+        "supplied": 240,
+        "people": 240,
+        "all_scenes": 6,
+        "p95_scenes": 6
+      },
+      "oracle-residual25": {
+        "scenes": 6,
+        "supplied": 214,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 207,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      }
+    },
+    "confirmation_rotation": {
+      "coverage100": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 3,
+        "supplied": 102,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "oracle-direct100": {
+        "scenes": 3,
+        "supplied": 120,
+        "people": 120,
+        "all_scenes": 3,
+        "p95_scenes": 3
+      },
+      "oracle-direct20": {
+        "scenes": 3,
+        "supplied": 120,
+        "people": 120,
+        "all_scenes": 3,
+        "p95_scenes": 3
+      },
+      "oracle-residual25": {
+        "scenes": 3,
+        "supplied": 105,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 99,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    }
+  },
+  "elapsed_s": 211.92199999999866,
+  "new_rollouts": 27,
+  "reused_rollouts": 27,
+  "source_inputs_unchanged": true,
+  "privileged_diagnostic_only": true
+}

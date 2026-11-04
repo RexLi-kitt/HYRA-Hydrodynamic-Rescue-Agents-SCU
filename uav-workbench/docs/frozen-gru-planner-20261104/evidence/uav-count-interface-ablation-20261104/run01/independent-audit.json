@@ -1,0 +1,182 @@
+{
+  "rows": 25,
+  "source_and_weights_unchanged": true,
+  "registered_before_first_confirmation_result": true,
+  "paired": [
+    {
+      "phase": "confirmation",
+      "case": "confirmation-0",
+      "old_people": 29,
+      "new_people": 39,
+      "change": 10
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-1",
+      "old_people": 38,
+      "new_people": 38,
+      "change": 0
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-2",
+      "old_people": 31,
+      "new_people": 38,
+      "change": 7
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-3",
+      "old_people": 34,
+      "new_people": 36,
+      "change": 2
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-4",
+      "old_people": 37,
+      "new_people": 31,
+      "change": -6
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-5",
+      "old_people": 38,
+      "new_people": 40,
+      "change": 2
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-6",
+      "old_people": 34,
+      "new_people": 37,
+      "change": 3
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-7",
+      "old_people": 29,
+      "new_people": 35,
+      "change": 6
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-8",
+      "old_people": 30,
+      "new_people": 37,
+      "change": 7
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-9",
+      "old_people": 31,
+      "new_people": 38,
+      "change": 7
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-10",
+      "old_people": 34,
+      "new_people": 40,
+      "change": 6
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-11",
+      "old_people": 36,
+      "new_people": 35,
+      "change": -1
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-12",
+      "old_people": 28,
+      "new_people": 36,
+      "change": 8
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-13",
+      "old_people": 35,
+      "new_people": 37,
+      "change": 2
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-14",
+      "old_people": 32,
+      "new_people": 37,
+      "change": 5
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-15",
+      "old_people": 35,
+      "new_people": 37,
+      "change": 2
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-16",
+      "old_people": 38,
+      "new_people": 38,
+      "change": 0
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-17",
+      "old_people": 33,
+      "new_people": 37,
+      "change": 4
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-18",
+      "old_people": 36,
+      "new_people": 40,
+      "change": 4
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-19",
+      "old_people": 36,
+      "new_people": 39,
+      "change": 3
+    },
+    {
+      "phase": "rotation",
+      "case": "confirmation-0",
+      "old_people": 33,
+      "new_people": 33,
+      "change": 0
+    },
+    {
+      "phase": "rotation",
+      "case": "confirmation-1",
+      "old_people": 37,
+      "new_people": 40,
+      "change": 3
+    },
+    {
+      "phase": "rotation",
+      "case": "confirmation-2",
+      "old_people": 37,
+      "new_people": 40,
+      "change": 3
+    },
+    {
+      "phase": "rotation",
+      "case": "confirmation-3",
+      "old_people": 35,
+      "new_people": 33,
+      "change": -2
+    },
+    {
+      "phase": "rotation",
+      "case": "confirmation-4",
+      "old_people": 36,
+      "new_people": 39,
+      "change": 3
+    }
+  ]
+}

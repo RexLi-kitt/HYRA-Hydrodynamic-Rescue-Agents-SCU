@@ -1,0 +1,67 @@
+{
+  "selected": {
+    "statistical-s202611171": "statistical-s202611171-e8",
+    "statistical-s202611172": "statistical-s202611172-e16",
+    "physical-s202611171": "physical-s202611171-e8",
+    "physical-s202611172": "physical-s202611172-e8"
+  },
+  "calibration": {
+    "statistical-s202611171-e8": {
+      "scenes": 4,
+      "supplied": 146,
+      "people": 160,
+      "all_scenes": 0,
+      "p95_scenes": 2
+    },
+    "statistical-s202611171-e16": {
+      "scenes": 4,
+      "supplied": 127,
+      "people": 160,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "statistical-s202611172-e8": {
+      "scenes": 4,
+      "supplied": 140,
+      "people": 160,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "statistical-s202611172-e16": {
+      "scenes": 4,
+      "supplied": 143,
+      "people": 160,
+      "all_scenes": 0,
+      "p95_scenes": 1
+    },
+    "physical-s202611171-e8": {
+      "scenes": 4,
+      "supplied": 136,
+      "people": 160,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "physical-s202611171-e16": {
+      "scenes": 4,
+      "supplied": 135,
+      "people": 160,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "physical-s202611172-e8": {
+      "scenes": 4,
+      "supplied": 141,
+      "people": 160,
+      "all_scenes": 0,
+      "p95_scenes": 2
+    },
+    "physical-s202611172-e16": {
+      "scenes": 4,
+      "supplied": 136,
+      "people": 160,
+      "all_scenes": 1,
+      "p95_scenes": 1
+    }
+  },
+  "before_test": true
+}

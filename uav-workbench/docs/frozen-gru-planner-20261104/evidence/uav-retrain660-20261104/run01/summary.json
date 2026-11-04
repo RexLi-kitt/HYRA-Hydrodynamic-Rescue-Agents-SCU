@@ -1,0 +1,219 @@
+{
+  "results": {
+    "calibration": {
+      "coverage100": {
+        "scenes": 4,
+        "supplied": 132,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 4,
+        "supplied": 131,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "old142-adapter": {
+        "scenes": 4,
+        "supplied": 140,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-raw": {
+        "scenes": 4,
+        "supplied": 139,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "physical-s202611171-e16": {
+        "scenes": 4,
+        "supplied": 135,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "physical-s202611171-e8": {
+        "scenes": 4,
+        "supplied": 136,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "physical-s202611172-e16": {
+        "scenes": 4,
+        "supplied": 136,
+        "people": 160,
+        "all_scenes": 1,
+        "p95_scenes": 1
+      },
+      "physical-s202611172-e8": {
+        "scenes": 4,
+        "supplied": 141,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "statistical-s202611171-e16": {
+        "scenes": 4,
+        "supplied": 127,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 4,
+        "supplied": 146,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 4,
+        "supplied": 143,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e8": {
+        "scenes": 4,
+        "supplied": 140,
+        "people": 160,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    },
+    "test": {
+      "coverage100": {
+        "scenes": 6,
+        "supplied": 200,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 6,
+        "supplied": 207,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "old142-adapter": {
+        "scenes": 6,
+        "supplied": 213,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "old142-raw": {
+        "scenes": 6,
+        "supplied": 193,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "physical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 201,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "physical-s202611172-e8": {
+        "scenes": 6,
+        "supplied": 202,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 217,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 6,
+        "supplied": 217,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      }
+    },
+    "rotation": {
+      "coverage100": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-adapter": {
+        "scenes": 3,
+        "supplied": 107,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-raw": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "physical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 97,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "physical-s202611172-e8": {
+        "scenes": 3,
+        "supplied": 101,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    }
+  },
+  "selected": {
+    "statistical-s202611171": "statistical-s202611171-e8",
+    "statistical-s202611172": "statistical-s202611172-e16",
+    "physical-s202611171": "physical-s202611171-e8",
+    "physical-s202611172": "physical-s202611172-e8"
+  },
+  "counts": {
+    "collection": 12,
+    "epochs": 64,
+    "evaluations": 120
+  },
+  "elapsed_s": 1430.125,
+  "source_water_unchanged": true
+}

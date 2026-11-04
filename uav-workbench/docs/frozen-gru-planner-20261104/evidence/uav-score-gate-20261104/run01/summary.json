@@ -1,0 +1,117 @@
+{
+  "development_gate_passed": false,
+  "confirmation_gate_passed": null,
+  "references": {
+    "statistical-s202611171-e8": 0.3195819831453264,
+    "statistical-s202611172-e16": 0.4407735215499997
+  },
+  "results": {
+    "development": {
+      "coverage100": {
+        "scenes": 6,
+        "supplied": 200,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 6,
+        "supplied": 207,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "old142-adapter": {
+        "scenes": 6,
+        "supplied": 213,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 217,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611171-e8-gated": {
+        "scenes": 6,
+        "supplied": 211,
+        "people": 240,
+        "all_scenes": 1,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 6,
+        "supplied": 217,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "statistical-s202611172-e16-gated": {
+        "scenes": 6,
+        "supplied": 214,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      }
+    },
+    "development_rotation": {
+      "coverage100": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-adapter": {
+        "scenes": 3,
+        "supplied": 107,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611171-e8-gated": {
+        "scenes": 3,
+        "supplied": 103,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611172-e16-gated": {
+        "scenes": 3,
+        "supplied": 101,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    }
+  },
+  "new_evaluations": 18,
+  "reused_evaluations": 45,
+  "elapsed_s": 179.76600000000326,
+  "source_inputs_weights_unchanged": true,
+  "confirmation_water_sha256": {}
+}

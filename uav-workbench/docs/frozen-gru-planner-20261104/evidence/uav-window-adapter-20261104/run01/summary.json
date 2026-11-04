@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "seed": 202611141,
+      "adapted": false,
+      "supplied": 198,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 2
+    },
+    {
+      "seed": 202611141,
+      "adapted": true,
+      "supplied": 207,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 2
+    },
+    {
+      "seed": 202611142,
+      "adapted": false,
+      "supplied": 198,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    {
+      "seed": 202611142,
+      "adapted": true,
+      "supplied": 199,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 1
+    }
+  ],
+  "gate_passed": false,
+  "trained": false,
+  "formal_test": false,
+  "elapsed_s": 194.9220000000023
+}

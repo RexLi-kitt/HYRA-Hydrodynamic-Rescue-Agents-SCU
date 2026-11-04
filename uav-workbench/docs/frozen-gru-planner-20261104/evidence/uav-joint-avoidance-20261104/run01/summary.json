@@ -1,0 +1,228 @@
+{
+  "micro_passed": true,
+  "development_passed": true,
+  "chosen": "statistical-s202611171-e8",
+  "target_point_estimates_passed": false,
+  "results": {
+    "confirmation": {
+      "coverage100": {
+        "scenes": 20,
+        "supplied": 700,
+        "people": 800,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "flow_coverage": {
+        "scenes": 20,
+        "supplied": 692,
+        "people": 800,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 20,
+        "supplied": 697,
+        "people": 800,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      }
+    },
+    "confirmation_rotation": {
+      "coverage100": {
+        "scenes": 5,
+        "supplied": 170,
+        "people": 200,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 5,
+        "supplied": 169,
+        "people": 200,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 5,
+        "supplied": 165,
+        "people": 200,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    },
+    "development": {
+      "coverage100": {
+        "scenes": 6,
+        "supplied": 200,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 6,
+        "supplied": 207,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "old142-adapter": {
+        "scenes": 6,
+        "supplied": 213,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 218,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 6,
+        "supplied": 220,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      }
+    },
+    "development_rotation": {
+      "coverage100": {
+        "scenes": 3,
+        "supplied": 101,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-adapter": {
+        "scenes": 3,
+        "supplied": 107,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 109,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 3,
+        "supplied": 106,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    },
+    "old_development": {
+      "coverage100": {
+        "scenes": 6,
+        "supplied": 200,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 6,
+        "supplied": 207,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "old142-adapter": {
+        "scenes": 6,
+        "supplied": 213,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 217,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 6,
+        "supplied": 217,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      }
+    },
+    "old_rotation": {
+      "coverage100": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-adapter": {
+        "scenes": 3,
+        "supplied": 107,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 96,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    }
+  },
+  "new_evaluations": 120,
+  "reused_evaluations": 45,
+  "elapsed_s": 1351.061999999998,
+  "source_inputs_unchanged": true,
+  "confirmation_water_sha256": {
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105301.npy": "958fab5eea4a5a2d2dfc33fa234b607a39cd03ef3e3ff065fd63a1e25feafd1d",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105302.npy": "b45d03ef2619a248716b753cbdbe7d3e808c3188e986600bba8c5ebd8568e876",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105303.npy": "1a44f5d75147ca295208a785b8b11d2a75b6f7fd67344a070d20fd5236e7e7b5",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105304.npy": "813e33180fb369479ebb0a41a9c262cf9b3634bce76e5ea9fe028c1fdcedf726",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105305.npy": "66fff7fb0f9d70336c48a01247b1e35ef53d4d0c86f6546b73510e83ece418ca",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105306.npy": "04b647b6e7c37ce1e11d1af069a00e57adfa33be6bbe3d1371b735d5071dd7ab",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105307.npy": "accf900f4c3587da5c43a6356ce3b99ef454a0b6881261153e4570953fb81fb4",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105308.npy": "f87d2243ee8aa9654f2b9b9982572bcda69fc78bd535f8d44b1192424dcf4948",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105309.npy": "2d470718f30619fdf6ffe1bc51f24cab225e992c40e3ab5081439782e8ee3664",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105310.npy": "453d2c80385eb3f28d7de7d45192fa3d523a9025c85b2789ea55141430081eae",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105311.npy": "0875e406696ef44b40b1bb7f12e29d0c82f0d63f8e6ccbe6e77513c44146eb96",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105312.npy": "c42e418df28dfd2b103fa9ee6af6c17dab404a1850440b100ed449d953d1d415",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105313.npy": "892f5953b06e76978965e9ac80f6b91eb4e850f2f1acaebc6e786725cc9a6f76",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105314.npy": "9c850136aa417e788af45d7f09861ca72b12f4d92458046667a6359b2ffc950e",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105315.npy": "315eda0c49a3aee61afc15121c463e224c58c08214212287675b81fe003b759b",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105316.npy": "1a42b6a8eb78adc651643e435559980e1074ee47cce0978ea9212cc85ed62555",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105317.npy": "36ff21425bd78ef870d5b0e75594018951a593711d7aac0d74a1452d99c0a197",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105318.npy": "c6104ace5dd9d1df89b767b10652d9b1883ee695dc3581a3314975efbb2346e8",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105319.npy": "8e156d4888523bd8025987ee489be2e9dc7fd8f4f667c5fe9ce58905f22127e2",
+    "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105320.npy": "84efc96844fe211cc567e4468667cd5c7837b0315b19ff94b8a27df9fcfee982"
+  }
+}

@@ -1,0 +1,41 @@
+﻿同一GRU模型只改变搜索接口的对照 — 2026-11-04
+
+目的：把模型选择收益与接口收益分开。在独立确认结果出现之前，预登记使用相同旧142权重、归一化、公开历史、30秒缓存、半权流动运输、共享避让、全部场景，唯一撤回最终计分映射。不是增加训练或调整难度。
+旧接口：中位数/最大偏差归一化的±25%残差；新接口：完整流向规划底分×(1+8×预计区域人数)。参数、checkpoint未重新选择。
+面板 | 接口 | 人数/总人数 | 人数率 | 全员场景 | >=95%人数场景
+confirmation | old_interface | 674/800 | 84.250% | 0/20 | 3/20
+confirmation | new_interface | 745/800 | 93.125% | 3/20 | 9/20
+rotation | old_interface | 178/200 | 89.000% | 0/5 | 0/5
+rotation | new_interface | 185/200 | 92.500% | 2/5 | 3/5
+
+全部逐场：面板 | 场景 | 旧接口 | 新接口 | 人数变化
+confirmation | confirmation-0 | 29 | 39 | +10
+confirmation | confirmation-1 | 38 | 38 | +0
+confirmation | confirmation-2 | 31 | 38 | +7
+confirmation | confirmation-3 | 34 | 36 | +2
+confirmation | confirmation-4 | 37 | 31 | -6
+confirmation | confirmation-5 | 38 | 40 | +2
+confirmation | confirmation-6 | 34 | 37 | +3
+confirmation | confirmation-7 | 29 | 35 | +6
+confirmation | confirmation-8 | 30 | 37 | +7
+confirmation | confirmation-9 | 31 | 38 | +7
+confirmation | confirmation-10 | 34 | 40 | +6
+confirmation | confirmation-11 | 36 | 35 | -1
+confirmation | confirmation-12 | 28 | 36 | +8
+confirmation | confirmation-13 | 35 | 37 | +2
+confirmation | confirmation-14 | 32 | 37 | +5
+confirmation | confirmation-15 | 35 | 37 | +2
+confirmation | confirmation-16 | 38 | 38 | +0
+confirmation | confirmation-17 | 33 | 37 | +4
+confirmation | confirmation-18 | 36 | 40 | +4
+confirmation | confirmation-19 | 36 | 39 | +3
+rotation | confirmation-0 | 33 | 33 | +0
+rotation | confirmation-1 | 37 | 40 | +3
+rotation | confirmation-2 | 37 | 40 | +3
+rotation | confirmation-3 | 35 | 33 | -2
+rotation | confirmation-4 | 36 | 39 | +3
+
+原场同模型新增救助71人，旋转新增7人。仅归因此批相同输入、权重和执行器下改变接口的净效果；有退步场也全部保留。不能据此断言每个新场景都更好，也不能称神经网络重新训练精度提高。
+成本266.5秒、25额外成对回放、0训练epoch、0新地图。输入/源码/权重哈希、原落水/期限一致、10秒服务及5米分离检查通过。
+当前独立确认总体目标另见uav-count-confirmation-20261104/最终复盘与全部数据.txt；该报告的95%区间、800人均随机落水、0次再漂移、合成场景限定必须同时保留。
+回退仅使用SafeFineEnv恢复旧残差。生产默认未覆盖，无推送。

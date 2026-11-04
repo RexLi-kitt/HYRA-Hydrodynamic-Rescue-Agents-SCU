@@ -1,0 +1,241 @@
+{
+  "results": {
+    "original": {
+      "coverage100": {
+        "scenes": 40,
+        "people": 1600,
+        "supplied": 1371,
+        "p95_scenes": 3,
+        "all_scenes": 1,
+        "refloats": 0
+      },
+      "flow_coverage": {
+        "scenes": 40,
+        "people": 1600,
+        "supplied": 1365,
+        "p95_scenes": 4,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "statistic": {
+        "scenes": 40,
+        "people": 1600,
+        "supplied": 1435,
+        "p95_scenes": 10,
+        "all_scenes": 1,
+        "refloats": 0
+      },
+      "linear": {
+        "scenes": 40,
+        "people": 1600,
+        "supplied": 1395,
+        "p95_scenes": 10,
+        "all_scenes": 2,
+        "refloats": 0
+      },
+      "gru-frozen": {
+        "scenes": 40,
+        "people": 1600,
+        "supplied": 1510,
+        "p95_scenes": 25,
+        "all_scenes": 8,
+        "refloats": 0
+      }
+    },
+    "two_valleys": {
+      "coverage100": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 132,
+        "p95_scenes": 1,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "flow_coverage": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 138,
+        "p95_scenes": 1,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "statistic": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 142,
+        "p95_scenes": 1,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "linear": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 132,
+        "p95_scenes": 1,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "gru-frozen": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 149,
+        "p95_scenes": 3,
+        "all_scenes": 0,
+        "refloats": 0
+      }
+    },
+    "diagonal": {
+      "coverage100": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 137,
+        "p95_scenes": 0,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "flow_coverage": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 131,
+        "p95_scenes": 0,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "statistic": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 132,
+        "p95_scenes": 1,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "linear": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 136,
+        "p95_scenes": 1,
+        "all_scenes": 0,
+        "refloats": 0
+      },
+      "gru-frozen": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 148,
+        "p95_scenes": 1,
+        "all_scenes": 0,
+        "refloats": 0
+      }
+    },
+    "manufactured_rewet": {
+      "coverage100": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 81,
+        "p95_scenes": 0,
+        "all_scenes": 0,
+        "refloats": 123
+      },
+      "flow_coverage": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 63,
+        "p95_scenes": 0,
+        "all_scenes": 0,
+        "refloats": 130
+      },
+      "statistic": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 17,
+        "p95_scenes": 0,
+        "all_scenes": 0,
+        "refloats": 153
+      },
+      "linear": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 31,
+        "p95_scenes": 0,
+        "all_scenes": 0,
+        "refloats": 148
+      },
+      "gru-frozen": {
+        "scenes": 4,
+        "people": 160,
+        "supplied": 16,
+        "p95_scenes": 0,
+        "all_scenes": 0,
+        "refloats": 156
+      }
+    }
+  },
+  "point_target": true,
+  "stable_15pp_lower_bound": true,
+  "paired_primary": {
+    "coverage100": {
+      "people_pp": 8.6875,
+      "scene_pp": 55.0,
+      "people_95": [
+        5.875,
+        11.375
+      ],
+      "scene_95": [
+        37.5,
+        72.5
+      ],
+      "wins": 34,
+      "losses": 2
+    },
+    "flow_coverage": {
+      "people_pp": 9.0625,
+      "scene_pp": 52.5,
+      "people_95": [
+        6.25,
+        11.6875
+      ],
+      "scene_95": [
+        35.0,
+        70.0
+      ],
+      "wins": 33,
+      "losses": 6
+    },
+    "statistic": {
+      "people_pp": 4.6875,
+      "scene_pp": 37.5,
+      "people_95": [
+        2.1875,
+        7.0625
+      ],
+      "scene_95": [
+        17.5,
+        57.5
+      ],
+      "wins": 27,
+      "losses": 8
+    },
+    "linear": {
+      "people_pp": 7.1875,
+      "scene_pp": 37.5,
+      "people_95": [
+        4.25,
+        10.125
+      ],
+      "scene_95": [
+        17.5,
+        57.5
+      ],
+      "wins": 31,
+      "losses": 8
+    }
+  },
+  "counts": {
+    "fields": 48,
+    "cal_collections": 8,
+    "linear_epochs": 64,
+    "evaluations": 260
+  },
+  "elapsed_s": 897.5319999999992,
+  "source_inputs_unchanged": true,
+  "gru_training_epochs": 0
+}

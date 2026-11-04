@@ -1,0 +1,173 @@
+{
+  "state": "completed",
+  "selected": {
+    "202611141": "fine-s202611141-e16",
+    "202611142": "fine-s202611142-e16"
+  },
+  "statistics": {
+    "calibration": {
+      "coarse-s202611141-e16": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 235,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 82,
+        "refloats": 0
+      },
+      "coarse-s202611141-e32": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 219,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 98,
+        "refloats": 0
+      },
+      "coarse-s202611142-e16": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 238,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 80,
+        "refloats": 0
+      },
+      "coarse-s202611142-e32": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 230,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 89,
+        "refloats": 0
+      },
+      "coverage100": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 224,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 92,
+        "refloats": 0
+      },
+      "fine-s202611141-e16": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 235,
+        "all_scenes": 0,
+        "p95_scenes": 1,
+        "failed_not_seen_before_deadline": 83,
+        "refloats": 0
+      },
+      "fine-s202611141-e32": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 228,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 85,
+        "refloats": 0
+      },
+      "fine-s202611142-e16": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 255,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 63,
+        "refloats": 0
+      },
+      "fine-s202611142-e32": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 238,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 79,
+        "refloats": 0
+      },
+      "flow_coverage": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 217,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 98,
+        "refloats": 0
+      },
+      "mixed-s202611141-e32": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 223,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 94,
+        "refloats": 0
+      },
+      "mixed-s202611142-e32": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 243,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 72,
+        "refloats": 0
+      },
+      "old_gru32": {
+        "cases": 8,
+        "people": 320,
+        "supplied": 180,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 136,
+        "refloats": 0
+      }
+    },
+    "rotation": {
+      "coverage100": {
+        "cases": 3,
+        "people": 120,
+        "supplied": 91,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 28,
+        "refloats": 0
+      },
+      "fine-s202611141-e16": {
+        "cases": 3,
+        "people": 120,
+        "supplied": 85,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 32,
+        "refloats": 0
+      },
+      "fine-s202611142-e16": {
+        "cases": 3,
+        "people": 120,
+        "supplied": 103,
+        "all_scenes": 0,
+        "p95_scenes": 1,
+        "failed_not_seen_before_deadline": 15,
+        "refloats": 0
+      },
+      "flow_coverage": {
+        "cases": 3,
+        "people": 120,
+        "supplied": 91,
+        "all_scenes": 0,
+        "p95_scenes": 0,
+        "failed_not_seen_before_deadline": 27,
+        "refloats": 0
+      }
+    }
+  },
+  "source_inputs_unchanged": true,
+  "counts": {
+    "collection": 72,
+    "evaluation": 116,
+    "epoch_updates": 160
+  },
+  "limits": "8newCALparents,selectiondata not finaltest;2trainingseeds;same synthetic generator;no guaranteed improvement;no production change."
+}

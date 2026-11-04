@@ -1,0 +1,27 @@
+{
+  "rows": 260,
+  "source_inputs_unchanged": true,
+  "fall_triggers": {
+    "original": {
+      "threshold": 0,
+      "random": 1600
+    },
+    "two_valleys": {
+      "threshold": 0,
+      "random": 160
+    },
+    "diagonal": {
+      "threshold": 0,
+      "random": 160
+    },
+    "manufactured_rewet": {
+      "threshold": 160,
+      "random": 0
+    }
+  },
+  "min_swept_separation": 5.004066110114996,
+  "primary_independent_parents": 40,
+  "structural_parents": 8,
+  "manufactured_shared_fields": 1,
+  "manufactured_layouts": 4
+}

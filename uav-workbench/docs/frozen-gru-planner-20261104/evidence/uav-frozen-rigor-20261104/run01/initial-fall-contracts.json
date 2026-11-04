@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "depth_equal",
+      "depth": 2.0,
+      "u": 0.0,
+      "v": 0.0,
+      "actual": "threshold",
+      "expected": "threshold"
+    },
+    {
+      "name": "speed_norm_equal",
+      "depth": 0.1,
+      "u": 0.6,
+      "v": 0.8,
+      "actual": "threshold",
+      "expected": "threshold"
+    },
+    {
+      "name": "both_below",
+      "depth": 1.999,
+      "u": 0.99,
+      "v": 0.0,
+      "actual": "random",
+      "expected": "random"
+    },
+    {
+      "name": "dry_velocity_not_water_exposure",
+      "passed": true
+    }
+  ],
+  "scope": "Four manufactured input-contract tests, not field safety thresholds"
+}

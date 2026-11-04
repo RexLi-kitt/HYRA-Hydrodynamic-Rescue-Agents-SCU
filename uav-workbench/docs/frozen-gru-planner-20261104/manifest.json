@@ -1,0 +1,3448 @@
+{
+  "scope": "Frozen research snapshot; no production promotion; large raw arrays remain local",
+  "included": [
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/count_coupling.py",
+      "bytes": 1778,
+      "sha256": "a5479c3acdc12a4d2e9567f486b00c6502e6bac481dc9c78784257330484f54f"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/coupling_ablation.py",
+      "bytes": 4553,
+      "sha256": "47e144fb408460a7709238a605e2cafc0ee84c8af6a13e42d4231b557aa2e447"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/coupling_confirmation.py",
+      "bytes": 7569,
+      "sha256": "22bed8e58150871f28b792eac0e9ed244b4195879a11eeddefc5106c64e10bd9"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/coupling_trial.py",
+      "bytes": 7369,
+      "sha256": "2618571e2b050b798a27e68d9ebf8936b32766c941cb3392f5f796239155ffa5"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/information_probe.py",
+      "bytes": 6107,
+      "sha256": "2b95e9b8b4504e53683490db70c8aee85466af877bc0490db6ae8fcce1f8e591"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/joint_avoidance.py",
+      "bytes": 4057,
+      "sha256": "6e1906a82f9f4bafb04e2059a8dd3ef0148780293ea4e4a5f0efba400873d80f"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/joint_trial.py",
+      "bytes": 10394,
+      "sha256": "6049ac0a2f0ced32e8ea7374b4bd9d80743d1e0b8b39342328c326da8864a6a5"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/probe.py",
+      "bytes": 14034,
+      "sha256": "2c5af3de78ec25d5eec4b9f388b24c90fd34cf7dd6dbc51bbecec0c3717509aa"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/retrain660.py",
+      "bytes": 11168,
+      "sha256": "76a36668ddbed70ca8367f8ad65f2a4181499a225f8bba197366403203d8ccb7"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/rigor_support.py",
+      "bytes": 8516,
+      "sha256": "db71f4224246871c9d3154b9fbc040bc7ac5d1508fb710c5e42ab88d3b50d351"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/rigor_trial.py",
+      "bytes": 12103,
+      "sha256": "ec2a2dab877db5a4a452c110a164d0f450ca5c3f25a82796e5b8b67f6b420375"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/route_audit.py",
+      "bytes": 4813,
+      "sha256": "c1dc4e81a11efe832f30d0269f7162d23626f7fc3eb325dba03a4445da21265a"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/score_gate.py",
+      "bytes": 1600,
+      "sha256": "43a03d4e37a522c59c95245510a3416d087308779c154adf0a67a40a5c845f75"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/score_gate_trial.py",
+      "bytes": 10667,
+      "sha256": "bce45c43ac5781fabba01e1fef64d2c5f6cdd7ae4fbdf72741a863e67b63d310"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/test_joint_avoidance.py",
+      "bytes": 1687,
+      "sha256": "8dad9703430ca9cc7b0e283208396eb7c36c133301553c0ffb7f8347519fd211"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/test_score_gate.py",
+      "bytes": 1543,
+      "sha256": "afa44f821323f87c888f094c839e524eaf566a459085e86c17e35b02e8f08112"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/test_train.py",
+      "bytes": 1826,
+      "sha256": "ba95cd9750bdfcc164e540ae51a151b5d3e29ed4ed07e65dfa7650d70b951190"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/train.py",
+      "bytes": 19360,
+      "sha256": "17b99a70e1a1aadeacb6963408a6eb286c32b319f9d499187898eb9dbf3615f1"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/window_adapter.py",
+      "bytes": 7332,
+      "sha256": "b9f7894442ce7b15f7e3265bdd838a1663f65efbae37d3ba92f8f7ff9abefeea"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-return-v1/window_screen.py",
+      "bytes": 8624,
+      "sha256": "cbe918181c2e6e16694c3c21aa77aa1ce9bb099b32ab822959683f3261c6ee94"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-fine-memory-v1/memory.py",
+      "bytes": 2973,
+      "sha256": "0f815a55b1e0c6cdb54cdac716984b4c95d9d52d46df6e3d19f122dfab91ce20"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-fine-memory-v1/test_memory.py",
+      "bytes": 2596,
+      "sha256": "8e2e488d9304b0a80e277e38f9eb9d6e85b282eaddf8bb43c135f39e2bff057c"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-fine-memory-v1/train_pilot.py",
+      "bytes": 14272,
+      "sha256": "58fff5d05270d66cd49faccbf29f4c702c41ea954477fbc48c359ba02d36fe19"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/history_model.py",
+      "bytes": 2054,
+      "sha256": "c6e891141512921911995304949b6b6adc45d5ba0ebf4552fa6e43d68af856e4"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/long_dispatch.py",
+      "bytes": 6313,
+      "sha256": "03a943b85a125a573ec607adaacbd61d4b8dc070d2035604f4faec79ca2c6840"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/long_environment.py",
+      "bytes": 20144,
+      "sha256": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/long_flow.py",
+      "bytes": 4076,
+      "sha256": "62a5f69e9c01e3a401e27da02650c413c1c1c14fdb0573f30ba5c541ef70bc9e"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/long_search.py",
+      "bytes": 5527,
+      "sha256": "bb52e7db4813610e83a516221393954421b6d65c36091126e158391dcba471db"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/long_water.py",
+      "bytes": 3635,
+      "sha256": "c593a7dd9a21ca3a973274ff86fd7a94a1359a74f1c04fd75fa1a0dbefdb93b8"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/models.py",
+      "bytes": 1520,
+      "sha256": "2ee7fcf39f349d0ddd5a9a0d1c4b76503d6768135bc8c517f5f290b06376dde0"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/run.py",
+      "bytes": 14694,
+      "sha256": "511a055426405a3c2ae4826f0db03cfa4ef241e590e301972b1fdf4d6d56d4b9"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/test_contracts.py",
+      "bytes": 3266,
+      "sha256": "0daebdf112e4e0b7086d892b210f732244dd721b5cbd5ec7b2d3ab48d6565d5d"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-convlstm20-v1/test_refloat.py",
+      "bytes": 2773,
+      "sha256": "b440cd2d166ea55e478289f9bfa813f8940004d6325cda3baf3117ca5f4cceba"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-redesign-v1/adapter.py",
+      "bytes": 1324,
+      "sha256": "65397ed0075dd24c04a72924b66658a9bb77568e0ee0b24ddf42376452b88a38"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-redesign-v1/audit.py",
+      "bytes": 4202,
+      "sha256": "e0b00d4fe5a04563eb3edba328ae902c73a3fedc6ac2d38ce6418d6104bafbf0"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-redesign-v1/neutral_residual.py",
+      "bytes": 1360,
+      "sha256": "9fd0f62141582cb448ccacc06dccc3e74569ca9e4470547346929bcf3f8737f6"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-redesign-v1/pilot.py",
+      "bytes": 10045,
+      "sha256": "01db68c93a83ddf28c2ec8fb78fdb99a50ab6a4d3d8df880ce6e5804e4422771"
+    },
+    {
+      "path": "uav-workbench/experiments/flood-drop-search-redesign-v1/test_neutral_residual.py",
+      "bytes": 1740,
+      "sha256": "a28e869afa5d420c2396e8c7cb51aee41881a50e4fc891eb1a29380baea0cb23"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/artifact-sha256.json",
+      "bytes": 7706,
+      "sha256": "c00788ebdd7a44f2145d899642c8ae2c7ed62eda7fc7552bd71ed74fbf531934"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/calibration-collection.json",
+      "bytes": 65795,
+      "sha256": "21be8d6b379b1957f2d450c1556fdc9dd6fe44c5ab3c764acb35ddfbbfd32421"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/decision.json",
+      "bytes": 685,
+      "sha256": "eafd001f028f3c6df8b8efcc81a71a59dcc3133c68d6feaf4107014d0f801d75"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/diagonal-1105605.json",
+      "bytes": 2089,
+      "sha256": "9293a9aed0fd6b94249fb387327b318a2d02f580481a8ba8abfc74c5e5c15036"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/diagonal-1105606.json",
+      "bytes": 2092,
+      "sha256": "a8a55cba3e55776fbaa2f814982bffb50355094320c8e839e0e847c56cded019"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/diagonal-1105607.json",
+      "bytes": 2086,
+      "sha256": "e055fca80807bf91afb3e89c9313c791289d5344f23aeaf9e9f362d5449b5ad6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/diagonal-1105608.json",
+      "bytes": 2085,
+      "sha256": "1838f4d31cdc237bc3f3bce413d7c11fa21f291d89a66532c8692ac9cb508c6c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105501.json",
+      "bytes": 5346,
+      "sha256": "1930c840461f29cd564b0be3ca4c698aecbce64be7d1e9df3dde00fa1cf57e59"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105502.json",
+      "bytes": 5346,
+      "sha256": "dc998a454829e0278813e29738b71a62eb683dfa6dec3d4340c7ecc986a162d8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105503.json",
+      "bytes": 5340,
+      "sha256": "a914c759213e2eafd15205725d81f21437b1b057c2a759a2643dbbdfde7f1252"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105504.json",
+      "bytes": 5338,
+      "sha256": "452f8ba80e54329d429be748bb3b832b1d3599e2f3b6d58ed62040fb4797605e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105505.json",
+      "bytes": 5332,
+      "sha256": "368fd08c75c62953a6dd464533e449af01cda30b3f7b816636452616d12a0cc4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105506.json",
+      "bytes": 5333,
+      "sha256": "f268c89852b2c8bc423b1322922ed2179650803e8df7b3c6cb6f3355ce17b280"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105507.json",
+      "bytes": 5352,
+      "sha256": "d54014fc7a82a59448aa83039458fe2f2ea70476783c806dbe10d622b3462ab4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105508.json",
+      "bytes": 5334,
+      "sha256": "6356f02309f1a43eb69a72953b6503527529999916531c15b41072536b956629"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105509.json",
+      "bytes": 5340,
+      "sha256": "79c2cb4ada0a6bd0ebe6beafabc210d94b1faf4c7620033cbfd135d356f4dd30"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105510.json",
+      "bytes": 5326,
+      "sha256": "8d0c868883338a44f97f1cb2a88c0057c9817a42e504b046a631e3e8aa5c217c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105511.json",
+      "bytes": 5350,
+      "sha256": "0c8912ab29f0c6428644563a8bbb0e2fa60178c80b2d3f8b652ea94b06af498f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105512.json",
+      "bytes": 5332,
+      "sha256": "4fec55de894e3147cf63ae623f459d0351acd4d3293c3c00a11d338edb612446"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105513.json",
+      "bytes": 5329,
+      "sha256": "a0eac5b15497ea16d8e229f1115a1ebff1f52a5db9151e06611cc9b512379870"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105514.json",
+      "bytes": 5338,
+      "sha256": "b84224f2cd4b7d2cf007137e7b36f0215b4bfb75189baf2640ab84afd82872c6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105515.json",
+      "bytes": 5333,
+      "sha256": "b6c6a86ebece7e87163f62d2aebe6b8b73653aec83b12afdb4a054929a505716"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105516.json",
+      "bytes": 5339,
+      "sha256": "2baff081dde0ed632643f948415051c5de5a592738046498d454371b344b5aab"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105517.json",
+      "bytes": 5349,
+      "sha256": "4690e8c885053b47825cee35a995bf3b0f9f4159f3f693b06a7a52b75a776253"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105518.json",
+      "bytes": 5340,
+      "sha256": "e14cb1600d2fc566bb96c923fe228fa297059165281d9c0566e7d5b320008e26"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105519.json",
+      "bytes": 5352,
+      "sha256": "e0fdab7583e43c23c8af7c1eb3866903c85d30d73d9f992059455b8bdcb47fd7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105520.json",
+      "bytes": 5336,
+      "sha256": "818ad73718be3319cf0d1cb8180a680cdb2a39d98e83a9dcb30d86b841c455c4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105521.json",
+      "bytes": 5338,
+      "sha256": "93234a2ae84434710c48f71db5fed05d9dcbb39962766652882349026c0f627f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105522.json",
+      "bytes": 5336,
+      "sha256": "df3c2c6f6103f2f733c9ae6e096ad8f160477d289bc1fd0e7d129b469b6a6173"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105523.json",
+      "bytes": 5340,
+      "sha256": "a004a7468fb63ff62e0bb9ac98ba274c31af9b157b8821d9256bf1e1a9ee5798"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105524.json",
+      "bytes": 5332,
+      "sha256": "54011b059227df6ba930eef8b2bf283756abb16e25b58da13610d30cdb5beed9"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105525.json",
+      "bytes": 5342,
+      "sha256": "10a7166223bf335e11573a3eceb6135344223122c04f1e3e3aa683957aa1e752"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105526.json",
+      "bytes": 5334,
+      "sha256": "940378847384b87f2e33af2d8cc9e6aaf33cbefba379edc93b16ec1ebdf150ca"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105527.json",
+      "bytes": 5328,
+      "sha256": "ff21fc119be99de6bf52d4077dd5e529f01f9063329b9c7a18359198a53d6950"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105528.json",
+      "bytes": 5333,
+      "sha256": "485a769dbb5e7e22540fdd03dc5b956d94d6cf216dee409103108bb3d8a50b4a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105529.json",
+      "bytes": 5339,
+      "sha256": "6fa8097ec4ce77fc5085a63505561e1efb4f671f4a5746abdcf34539ac56c78a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105530.json",
+      "bytes": 5332,
+      "sha256": "28b8114ea418699e38650b053f71c374df64ffcb56b8a558ed5e6140aaa7ec30"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105531.json",
+      "bytes": 5330,
+      "sha256": "b3bc8ac1a765933c1eeb807095fd28146077ac4546671a6d8fe9afe6811491e8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105532.json",
+      "bytes": 5334,
+      "sha256": "72f9e4f6811ee66ed62caa424335ecc2e47ea9092a7acc09902689787867283c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105533.json",
+      "bytes": 5334,
+      "sha256": "820bb2aea4705c4cd67a7378fb830d7b7f621c060273b73399a23d8d1b4981a0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105534.json",
+      "bytes": 5271,
+      "sha256": "a29a502ca064896eb03259d6e0a50c6f50f30e5c995a74ef420bda93f2673d41"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105535.json",
+      "bytes": 5331,
+      "sha256": "7c60922ff420962e38b4349ffae415279dad8a171fcb77a4fb67662055569fee"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105536.json",
+      "bytes": 5330,
+      "sha256": "661c3fd5c65a1b0b2cfd953a288dce59040cf9f0f0796516686f20240686cac8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105537.json",
+      "bytes": 5332,
+      "sha256": "a5455ab6b3e26578fd31f91078ce0e62cf8849f0c3797ec430e3199f156af8cf"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105538.json",
+      "bytes": 5333,
+      "sha256": "ea739a936636a01854f857ca01459a18fa0827aae1ab6a3fc537493032a13a77"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105539.json",
+      "bytes": 5276,
+      "sha256": "31860843c8bd0ea5ed5a895e3c751a0cd2b08be2810bf5201305071433b00d82"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/original-1105540.json",
+      "bytes": 5318,
+      "sha256": "37ecc0eaef0b05ee8b536e8e89aac40406d719752ff868a9fd38bdc8ac88dced"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/two_valleys-1105601.json",
+      "bytes": 2333,
+      "sha256": "bd0f23543388cdbca251319d562816d9e92e86a53d1a93f154a26acde7fcba16"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/two_valleys-1105602.json",
+      "bytes": 2332,
+      "sha256": "873b04c4ab45823ff7f3ded1b063066f309f7df9e6c45e4521025546b1fafa7b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/two_valleys-1105603.json",
+      "bytes": 2330,
+      "sha256": "b9f1f8e28a571b35a59b30656dba7007008258d98076e06d2fc54419c4eab6a9"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/fields/two_valleys-1105604.json",
+      "bytes": 2332,
+      "sha256": "5f833e7f14dc8daa8cb171d964ddd814eac56debfe20e33c609eac0a41d32a4a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105501.log",
+      "bytes": 605,
+      "sha256": "eff318e115ba8bcfb9fc211301e6d92f791b89507f53b8c78a523f4900132f98"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105502.log",
+      "bytes": 607,
+      "sha256": "978cca0af6e2d7293baa44f28a96f4428babe41029054f1534e1f7b54a0fc0f3"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105503.log",
+      "bytes": 604,
+      "sha256": "373d4d5b4777b081bc9a1ed2ffb8d332eb1c0239cb3b82786d0b3a758bedc546"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105504.log",
+      "bytes": 606,
+      "sha256": "73f8bc4ca12657c2ad4bccc33ee783e5ebf44cee2f08162320d6fe01ba83aca8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105505.log",
+      "bytes": 605,
+      "sha256": "1ea3a14b4798e464d9b192db80081ae0a5ef8d8d0a40471619f59f85d05304e8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105506.log",
+      "bytes": 603,
+      "sha256": "943ae3eb890b3daa5e0b01ecf577bdd65c021b2d0fa0aca5238e7636b2f562dc"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105507.log",
+      "bytes": 607,
+      "sha256": "158198216fc2cc43d1dfb357390a3a286c9ea4fbf2d0c6972a0185d4b2384476"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105508.log",
+      "bytes": 606,
+      "sha256": "7b5150431d2ea14749a861689471fa38b7830f4708f6ed8a407357fb03df8704"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105509.log",
+      "bytes": 606,
+      "sha256": "bc457eeee93dc75dfa564a83c36c6bfd7ad7350a82b9315fa090dabad3ec8669"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105510.log",
+      "bytes": 607,
+      "sha256": "afeca682627d238676f484984c4e4056f27d0432125fcfc2f886eb725b675425"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105511.log",
+      "bytes": 604,
+      "sha256": "87736dd204c6c782b07ce9dbf67a2afc6c1eb0a083423d0f18aab0f03203b717"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105512.log",
+      "bytes": 608,
+      "sha256": "8d5754d333ec35440c3b55fd6505a2b98ffaf558b1a721b2c3b52a68069e1e37"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105513.log",
+      "bytes": 607,
+      "sha256": "11468faa35482f6d31e4376da3e5373458e0f5b43c3384ba2b1747f89e4d8365"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105514.log",
+      "bytes": 606,
+      "sha256": "7c2623985bad629a2cb6a9a262ab6483f91138bda3d902410c4982c940f0a4b3"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105515.log",
+      "bytes": 605,
+      "sha256": "1a7e7396d0b1638df7100bd68416835b645e65e5e302343c80a3de9f2593d935"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105516.log",
+      "bytes": 606,
+      "sha256": "2228f5e46380f92944c2945c1f615cfc7c9044daef1d809bbe23a6f74c2028d5"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105517.log",
+      "bytes": 608,
+      "sha256": "f36245e81770559214f5d38b5a6b63e15a63420049e008533d2948c60e658e04"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105518.log",
+      "bytes": 608,
+      "sha256": "117fee47b1e2eea6352c3a93f4233570393b4d44da479e4c7f4d423356ce37bc"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105519.log",
+      "bytes": 608,
+      "sha256": "fcfd88b1e70971b06610e82f84ba26aa4e83142ebc1f2e5b3264da6b1e92a36f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105520.log",
+      "bytes": 608,
+      "sha256": "18f9259c4f08ac0994a58166073e15e8eda4ed5bbd44272b22ecf8549dee1bd1"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105521.log",
+      "bytes": 605,
+      "sha256": "a42f2265e7390e595f97f8b1d53cf1de1175c3e9c56a20587ef80b4ce4055728"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105522.log",
+      "bytes": 605,
+      "sha256": "4d9b7de2294d5f41d6c5498c505358d0d438b18586df6fa4fd8e28bc39c4f449"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105523.log",
+      "bytes": 609,
+      "sha256": "16e922e09d0a5401bcd5dada0eee163288530f98c74d461287740e269c4e64d2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105524.log",
+      "bytes": 608,
+      "sha256": "e24afe09339bd55253d0f4bec5cc03c09cf80d40bad2427e224abd0a38a82708"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105525.log",
+      "bytes": 605,
+      "sha256": "40e8b837977fa554164c9e8e144f358886cafdb0d4a606969420b9eb9e2bb5d2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105526.log",
+      "bytes": 607,
+      "sha256": "392c36873be812cb67fae841d6e82dafe44b967f972bd4e53b43cb50d9a4d41d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105527.log",
+      "bytes": 609,
+      "sha256": "61663cd3111092c92576263d00111017e6ddb5f0bc95d7a3231b17452515da2a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105528.log",
+      "bytes": 605,
+      "sha256": "b3d9793e924ae8a757b34bd605044a72f2d7b987c255dc1676c875de29832f72"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105529.log",
+      "bytes": 605,
+      "sha256": "24f49de06268d054b2568f517720779812988eadf23c4c3d0d9514b53b299b4f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105530.log",
+      "bytes": 608,
+      "sha256": "47e51ee3cf3f1a62b6dd20fe9d4d7fcdc8d50857ed0291a2125f547965cea26f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105531.log",
+      "bytes": 605,
+      "sha256": "504fe7b680c0555a0cf6e52ae7a9073b526f49de1fb16a15c865c8ef95856b4e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105532.log",
+      "bytes": 606,
+      "sha256": "af46f38b33339c5047661ee473b2194337dd461794563d443509542a9ca884a8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105533.log",
+      "bytes": 606,
+      "sha256": "0d282fa1df99baabdae6f823e85bab0ed23a41162e889b763492e44f15667531"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105534.log",
+      "bytes": 607,
+      "sha256": "b08dc4de264cc417085f18ae636126178116b5ac8d0f33285527edc281c6b3b2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105535.log",
+      "bytes": 605,
+      "sha256": "8c24e18df7142c453969cea311245c1cb5992e4d7931a339bf5369c608a85ea7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105536.log",
+      "bytes": 609,
+      "sha256": "327caa858c0750f6ca89707ed3c722bfa26ba26deadc732c6e92e1bdba32ea21"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105537.log",
+      "bytes": 605,
+      "sha256": "362465480e0e3e86c92ecc3f5650c1387ece450169f0af1acd29b82f5d2fb2b7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105538.log",
+      "bytes": 606,
+      "sha256": "506b105de79d0bf6e0c6056f087f3c409ac4b692558643ffbdc0f1f4a5c31c31"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105539.log",
+      "bytes": 602,
+      "sha256": "62a916284e0a4c7454a249cbe43625c81930147b07bfe0f5a07e9c1624a42f83"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105540.log",
+      "bytes": 606,
+      "sha256": "07e9e572e643671cd5e575058f63e8f21c195afde90ec85ac8293c1675dc1834"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105601.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105602.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105603.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105604.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105605.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105606.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105607.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/generation-1105608.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/independent-audit.json",
+      "bytes": 558,
+      "sha256": "c5027551719fd1cb9313c0928ad9c4dfefbf57920e1b5b4600f04c35dfe201ca"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/initial-fall-contracts.json",
+      "bytes": 677,
+      "sha256": "e4a1adf228d62c54690d6711b46b51fac59257a930ad03dbaccb406901e8641e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/input-lock.json",
+      "bytes": 11600,
+      "sha256": "5b09656dd49dbf3c956a0cacd870dc8128761f5c15dc3d7be8cecbcb59bebcbb"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/linear-selection.json",
+      "bytes": 1378,
+      "sha256": "3f14613f4912a2eef16e2a05a7e161d2870ee7f16ef1de7064c19dae52126048"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/linear-training.json",
+      "bytes": 4386,
+      "sha256": "fd7c41fbdff64ef100b718518a1fe12f8b62e62df0ed94ea4895bffe1901849a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/mechanism-field.json",
+      "bytes": 437,
+      "sha256": "00dd11019c66d96212c6e4ced568e4f9706e7a3531852355b7160f939793196a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/mechanism-unit-tests.json",
+      "bytes": 125,
+      "sha256": "22e9d44debe91bf5fc76a4441fdc86d9a5e595603a91e709499dc7e4063bb55e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/mechanism-unit-tests.txt",
+      "bytes": 1127,
+      "sha256": "25a44d89023721b9b43c26706d1439f1294858dbcc4ebabf31bf42a9cf50a29a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/predictor-lock.json",
+      "bytes": 659,
+      "sha256": "c77b8e40dcd593f799db1fcf8afeb9c547c9f4701c9f543f0faa4792bae5a468"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/pressure-replay/protocol.json",
+      "bytes": 900,
+      "sha256": "e874a9439929acb302c4f419824daf8714d88545a168ab4150a323cafb3838f7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/pressure-replay/result.json",
+      "bytes": 135098,
+      "sha256": "5578b3f7a53a700426a2a85a51e3a4809fedd2d7ca6aef2f4bdb6bf8fee63804"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/protocol.json",
+      "bytes": 21414,
+      "sha256": "4de32070cbb50c3a5cfa1dd5596da1c6877b2a730fef8e2fbf037f0f91907732"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/results.jsonl",
+      "bytes": 1259286,
+      "sha256": "a10d397afdb0b4ddee94e1576f192a4774ecbea57f05007236c7491da6bdfb0b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/scenarios.json",
+      "bytes": 1072341,
+      "sha256": "5a8898048a88be74d1b39234d5a75ca9a2e71ecc52e5b8377040edac4e141f43"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/secondary-audit.json",
+      "bytes": 6577,
+      "sha256": "acaddde801c41c35a595609c576eca095248373471930c7f527eb7564ad26157"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/source/archive_rigor.py",
+      "bytes": 12589,
+      "sha256": "b98df7f91f30957f8b8f05c45f79a0bd539044adef47948b8cf8048fe3d7850a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/source/audit_fall_thresholds.py",
+      "bytes": 1361,
+      "sha256": "ca6aeee319bbf90334d13250172973de8c4c086f21aba8975ed75d5aa7980d14"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/source/audit_rigor_results.py",
+      "bytes": 4767,
+      "sha256": "8a7da21b970ae9f851ed95233350be8a935a749c4f46123e94dcd161d87ec404"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/source/inspect_rigor_pressure.py",
+      "bytes": 3787,
+      "sha256": "9d2e52163734221e98604774750c5690f4f914aa7c53076eefe873d4ad818fbf"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/source/rigor_support.py",
+      "bytes": 8516,
+      "sha256": "db71f4224246871c9d3154b9fbc040bc7ac5d1508fb710c5e42ab88d3b50d351"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/source/rigor_trial.py",
+      "bytes": 12103,
+      "sha256": "ec2a2dab877db5a4a452c110a164d0f450ca5c3f25a82796e5b8b67f6b420375"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/statistic.json",
+      "bytes": 57,
+      "sha256": "1ba9df1423b043cb6501eda1bb27a834664861e386d6c5ba09cdc9698a82e07e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/status.json",
+      "bytes": 152,
+      "sha256": "fe1451a40d67aebaca456c6c8bb5625bed922dd2ae8fa86b10b4ec417f72695c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/summary.json",
+      "bytes": 5041,
+      "sha256": "12354336bf81a49a0bfaf49d2a6bf80cfec0ca8ee87742f44d755869e6bcf5e7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-frozen-rigor-20261104/run01/严谨性复核与全部数据.txt",
+      "bytes": 13298,
+      "sha256": "ef05a830171ccf6a4258046f0eb325636ba95777bfbf58ee3dc3b9c8d783306d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/artifact-sha256.json",
+      "bytes": 1546,
+      "sha256": "848719eb9cd29ef72cd710693e51fae7317b86cfdc84531c0511abcaacf27f8d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105401.json",
+      "bytes": 5366,
+      "sha256": "efde59254cfd83db9579cbf2d3ef97c3a47ddd9d941199f94f8956a2ce29a861"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105402.json",
+      "bytes": 5302,
+      "sha256": "50c00169404087447ca8d29995e456d2167bce41a2d53a2f62e471df4734d913"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105403.json",
+      "bytes": 5334,
+      "sha256": "75f04df74737fc1d8cb194379e3d4979d22789fe8941f4eb5664e0383fce1885"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105404.json",
+      "bytes": 5352,
+      "sha256": "94d09dc5e025f3b98ceb7b68db397785faf04c90c34f73db5cbc8e4e64fc07c8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105405.json",
+      "bytes": 5364,
+      "sha256": "f31b8b61929172c7a6e979ff22f5b22533e6c90daaa2259135ae32eb96d3e3be"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105406.json",
+      "bytes": 5355,
+      "sha256": "73964c9267733313f2fed02a86bf9f2198b1f69770e4ff27bd8fc3b3102b90a5"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105407.json",
+      "bytes": 5346,
+      "sha256": "69c2e710e18838c5bd50d546a17eda67eee833ee3866268e9c782ce66dfdf6f9"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105408.json",
+      "bytes": 5369,
+      "sha256": "86887187a9c8aeae18c2bcf9616ec303e4ed441bb0b9c929a974507a6fa18adb"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105409.json",
+      "bytes": 5349,
+      "sha256": "e6e267e54aca8400c2f4d6bac3613014654dcb614e710863b48733b320da4729"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105410.json",
+      "bytes": 5346,
+      "sha256": "e0760ab8b7d58ea66b40ec585d4b254e7f9ea6d2ec47005e8ef52ef1c5f769cc"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105411.json",
+      "bytes": 5354,
+      "sha256": "ab16ab3b1703ae31f106071b8d1dd5793f9c56262a3e2644fbe9a5cb428a603c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105412.json",
+      "bytes": 5345,
+      "sha256": "925251214266c94833b2b33bd76750a9be6dde404b8c3cfeab6e9ff8596648ec"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105413.json",
+      "bytes": 5350,
+      "sha256": "acb7fa26fdb54798a28af34ee6fc1ec5b9addcb177c7bba31e52679c64e9d99d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105414.json",
+      "bytes": 5368,
+      "sha256": "beec8f8a4c01be469576e560cf99438e37062c61665575e39959790edd1d5ef0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105415.json",
+      "bytes": 5351,
+      "sha256": "94f353cfc58ce4564a08a5a87d1e830cf0bd0e674aea2e724425cea9b866feb4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105416.json",
+      "bytes": 5340,
+      "sha256": "326b7848af43d6e5211de230239970a1421df5e858dbad4f937d4d2c637f0d0b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105417.json",
+      "bytes": 5363,
+      "sha256": "1e9957e41e28d98ae335021ff081f4e8926e2cb2da39b693e542ed54393f2037"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105418.json",
+      "bytes": 5347,
+      "sha256": "1bb3d5dfc50474816bd3afa26baacd682faa1b6d9e2ca1e9c81f9cb75c8083f6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105419.json",
+      "bytes": 5301,
+      "sha256": "ea3e3f1ff6a63c208a95e3f002b3af4e3ff2aa5b5f62327b548bb72c4998859d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/fields/confirmation-1105420.json",
+      "bytes": 5349,
+      "sha256": "7f0e5cd3c4dfc37b7ba219418c093d156914a54c2396d43c2f4691101d8e13f2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/generation.log",
+      "bytes": 12151,
+      "sha256": "f7815e1997ad54211c5d23a5f782688178d4f6f289e5035c26f17e60b9e527c8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/independent-audit.json",
+      "bytes": 1518,
+      "sha256": "ac51fb36870c60229c32c678a3b1b546d65c23d1908bf9d5b5d4a21792eeb893"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/input-lock.json",
+      "bytes": 5000,
+      "sha256": "a23a5a1bfda36d17b1fa61902d6b44f1a8cb6743744b2ee126c310c76f180125"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/policy-leakage-audit.json",
+      "bytes": 780,
+      "sha256": "dbd2e53f43d490c436383f999fefab096064c6edc967c8d88a94b6e2b78756e0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/protocol.json",
+      "bytes": 11916,
+      "sha256": "6d1151bbf558fd84d493f0695381b6d952118c4cbe3de9dbb40300fa80aa0d5e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/results.jsonl",
+      "bytes": 369416,
+      "sha256": "fa2add2a298172b690fbbb359577cea886eb34d5a82b6e4df496b04e67b318e0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/scenarios.json",
+      "bytes": 433062,
+      "sha256": "4409d4d4416c74fc11d4f5436d57c8e186e1ac749b65f0580537202204b30b6d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/source/count_coupling.py",
+      "bytes": 1778,
+      "sha256": "a5479c3acdc12a4d2e9567f486b00c6502e6bac481dc9c78784257330484f54f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/source/coupling_confirmation.py",
+      "bytes": 7569,
+      "sha256": "22bed8e58150871f28b792eac0e9ed244b4195879a11eeddefc5106c64e10bd9"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/source/joint_avoidance.py",
+      "bytes": 4057,
+      "sha256": "6e1906a82f9f4bafb04e2059a8dd3ef0148780293ea4e4a5f0efba400873d80f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/source/test_joint_avoidance.py",
+      "bytes": 1687,
+      "sha256": "8dad9703430ca9cc7b0e283208396eb7c36c133301553c0ffb7f8347519fd211"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/source/window_adapter.py",
+      "bytes": 7332,
+      "sha256": "b9f7894442ce7b15f7e3265bdd838a1663f65efbae37d3ba92f8f7ff9abefeea"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/status.json",
+      "bytes": 83,
+      "sha256": "d2d0cbc0667c7ddd5b15841266731489fdd795107e493c34b6ad099094156ff0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/summary.json",
+      "bytes": 1202,
+      "sha256": "026416e8a071fd1b3a085d451a6d5401f578ca214c427ca0295c5705f538a954"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-confirmation-20261104/run01/最终复盘与全部数据.txt",
+      "bytes": 8180,
+      "sha256": "7f27c2cca0e52a1b0b1997fa63ed30e74c11c35a64b76aaa52bae196e8e50ebc"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/artifact-sha256.json",
+      "bytes": 650,
+      "sha256": "0f6532df0d1b32300c49ae6c781d7ff7218a76af5aa65b02b3116714bfbbf6be"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/coupling_ablation.py",
+      "bytes": 4553,
+      "sha256": "47e144fb408460a7709238a605e2cafc0ee84c8af6a13e42d4231b557aa2e447"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/independent-audit.json",
+      "bytes": 3854,
+      "sha256": "a6ed574d62d7e416b6c8eeddc2e6c58a1f34f1991ab92d91cfcc25b08985d309"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/protocol.json",
+      "bytes": 10156,
+      "sha256": "75c20dc84e47de76572b49e89201640e712cac7ca23d464b9abe14f414e4531a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/results.jsonl",
+      "bytes": 106207,
+      "sha256": "b03430904af308a256fe7c64bf674856cd1681414038f1c398c3146f0a5f0b22"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/status.json",
+      "bytes": 64,
+      "sha256": "a06bbc6612268bb2b36be266f6c508f955998d5eeb1ab3f8f8991c2228b3a096"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/summary.json",
+      "bytes": 813,
+      "sha256": "ca1249fc44e03f13d0b1566771e5c6e13898c4800cdccfc49525de5fc88065ee"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-interface-ablation-20261104/run01/同模型接口前后对照.txt",
+      "bytes": 2774,
+      "sha256": "7bb168ccbee9488a78ec8e762a86dcded5d53bc6ff7f4e2de9bbe68e178fbe70"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/artifact-sha256.json",
+      "bytes": 749,
+      "sha256": "8f76f812b7acad2bea47a15be8e13ddf1f3ba68ea0f1f79ec7f0fe274977a0f9"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/independent-audit.json",
+      "bytes": 156,
+      "sha256": "0dd8ef61ec06095bfdf77fcb328132620d2a4415d62bdbd1c4e55716097cf39c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/protocol.json",
+      "bytes": 13035,
+      "sha256": "d335c9c958678ffa0949d024cb5f8a81ffd21b72ba084b2c3f82c557234f4f4c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/results.jsonl",
+      "bytes": 274884,
+      "sha256": "ccd1af96b0bbf136c61a3369fef39104faef51094569350c41849715b4884aa2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/source/count_coupling.py",
+      "bytes": 1778,
+      "sha256": "a5479c3acdc12a4d2e9567f486b00c6502e6bac481dc9c78784257330484f54f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/source/coupling_trial.py",
+      "bytes": 7369,
+      "sha256": "2618571e2b050b798a27e68d9ebf8936b32766c941cb3392f5f796239155ffa5"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/status.json",
+      "bytes": 63,
+      "sha256": "e9133df517a40e9f870222dce679886bcf8e28f7ff04845a2ddbb85c62a8443e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/summary.json",
+      "bytes": 2588,
+      "sha256": "86cefd8c4d37638970381515d7a5d34f739a6ad6f0ce62e4e7e8f67d22d8b2e2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-count-coupling-20261104/run01/诊断与完整对照.txt",
+      "bytes": 3284,
+      "sha256": "d61e3ed29681e95562e1080dc4830aa6e8c2220a7db807820fdcb70db4770857"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/artifact-sha256.json",
+      "bytes": 652,
+      "sha256": "2827a8d24312da58f466611f0f31c66db7106490417d549bb1d1c5f42ddf7bab"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/independent-audit.json",
+      "bytes": 157,
+      "sha256": "d8519a4249e6d4d43a32b2f101b14653d41fcfe69c99b6479aa8693847ddb35b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/protocol.json",
+      "bytes": 12476,
+      "sha256": "73c56405731acabaef7f1918025c07269eaa15c0849ab1b392a102e72a429eaf"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/results.jsonl",
+      "bytes": 236048,
+      "sha256": "1ce4651acf42857d7ecc50abcecbf0f8896b7a474646b436ece885e86d4eb2e2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/source/information_probe.py",
+      "bytes": 6107,
+      "sha256": "2b95e9b8b4504e53683490db70c8aee85466af877bc0490db6ae8fcce1f8e591"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/status.json",
+      "bytes": 64,
+      "sha256": "1cf026f0103978277c03dc1fde34bbcabdaaf5fd0736a523bb4557fe063c57be"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/summary.json",
+      "bytes": 2198,
+      "sha256": "3bd07333fb604b935ccc7e952d389b7a9c5add16febe5f8425cf2aea5cefc9a4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-information-probe-20261104/run01/诊断与完整对照.txt",
+      "bytes": 3002,
+      "sha256": "12a3c16ec6fee2fffe7c330d2f590aae2a6fd5057730d986d6d6180bee3e751e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/confirmation-scenarios.json",
+      "bytes": 432679,
+      "sha256": "db8d96ba63d3878db01f361cc93fa2cf714fd072d0b7d6a1ff31a001bd639628"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105301.json",
+      "bytes": 5344,
+      "sha256": "ab0bdbb4e5e1496b9f5d9006a579068257b7c51925c955f7d533e03a99608571"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105302.json",
+      "bytes": 5347,
+      "sha256": "1d12c46afb9b086030c69cbcfc4f8045aadd9951759b23b272a5e8bd2f473058"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105303.json",
+      "bytes": 5341,
+      "sha256": "4263e095ce6d0d5d3aa3dd754e393232f63e924e4e90daefe4a9327cca1246f3"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105304.json",
+      "bytes": 5345,
+      "sha256": "9adbaccdc7c5f10ffaabe01be1037b601d15f535ad67e12354855b553d42f98d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105305.json",
+      "bytes": 5349,
+      "sha256": "aa42026c1f5f902d21d128156f2ed9ac54ad0bd7d1e9d13631cdce30231d600c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105306.json",
+      "bytes": 5343,
+      "sha256": "9dcf1b4f6223ec9c87e4c687584dc1c9c42d3c0342ba332c0f1002868946080d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105307.json",
+      "bytes": 5348,
+      "sha256": "b9539d58eb5f3468990b121d6ddb01086c732b5bd71ba0ee947f5b07f22a5fc6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105308.json",
+      "bytes": 5363,
+      "sha256": "a526fe0a6af96891bf47d52f3f584f8773da630f5f3ac1441c1219778c641b96"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105309.json",
+      "bytes": 5348,
+      "sha256": "9b1b0ee64e03041315b624daaab58e436c216c5c715563d7dd88b2bc08d2f9e8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105310.json",
+      "bytes": 5367,
+      "sha256": "5ebe6b9795bbf4168a3868c7fd65b42259c04415e2f1fc99be163ec2a806a61a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105311.json",
+      "bytes": 5349,
+      "sha256": "b384477bb0db280f9d3a10a2b8bc2aeed1edc0f483d9e27a15c1fc02ee0a8090"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105312.json",
+      "bytes": 5348,
+      "sha256": "0279c7e9f83bfb69ac338f4fb2259b8a9f48ae4682a606006c21ab72da2df9f0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105313.json",
+      "bytes": 5362,
+      "sha256": "70de325dd27e5a56d9f53ad7883450bf2df8d5e7f7973504b6d8a453d8d6af32"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105314.json",
+      "bytes": 5340,
+      "sha256": "40b5fab89263dd96dcabfa2f172175aa9786be8013da2ca86ff5b7bb28cc2b12"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105315.json",
+      "bytes": 5368,
+      "sha256": "0c31284e1b81cb276cd4642a3e9f9291ce5323d5f9599771d9948604aab4b5a2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105316.json",
+      "bytes": 5338,
+      "sha256": "b99ee61b2d348ad8e8aae9f2d6930a3fd0274cc61f09c53760965efcfa72af92"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105317.json",
+      "bytes": 5356,
+      "sha256": "dcf7298859c4b4e394d50bf11a975be7eb391ab6da23832c62cc931e690d3844"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105318.json",
+      "bytes": 5356,
+      "sha256": "28ea23294a5e538a6430f425b77581eea45e509da748280cbc7675d615f53798"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105319.json",
+      "bytes": 5360,
+      "sha256": "7b74e7e847330d40eeedc95b5f14da4496b682d0a231e53f1685cdb9fb0f48b2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/fields/confirmation-1105320.json",
+      "bytes": 5341,
+      "sha256": "8d53add8bc340e915656181f46289ed13aad367137b19978566e71d478e149a3"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/generation.log",
+      "bytes": 12134,
+      "sha256": "1d9914f56192cd4334b0d9f12a73893e573a5635fa3f060d8ccfbba81bcc2a95"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/independent-audit.json",
+      "bytes": 4345,
+      "sha256": "b96e527ee0d590bcf27c4276f9761402fbc9c1983caa083ebae4f6e6e7de5126"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/joint_avoidance.py",
+      "bytes": 4057,
+      "sha256": "6e1906a82f9f4bafb04e2059a8dd3ef0148780293ea4e4a5f0efba400873d80f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/joint_trial.py",
+      "bytes": 10394,
+      "sha256": "6049ac0a2f0ced32e8ea7374b4bd9d80743d1e0b8b39342328c326da8864a6a5"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/manifest.json",
+      "bytes": 1311,
+      "sha256": "714600343f78a373b47bdee86ea6739fdb4a304f1522e0854875037bdc95dc57"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/micro-gate.json",
+      "bytes": 7540,
+      "sha256": "8f8359b106e28f166a5d6f31c6f8befaf6d5c0dbbcb7f1141f03516de125b2c2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/protocol.json",
+      "bytes": 12865,
+      "sha256": "1f360854037277bea0d9fcfcb2bd38a456c6076270803be4820eeeb399641238"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/results.jsonl",
+      "bytes": 718232,
+      "sha256": "9f137db1b72f1c40d65d1a9ac02bc84b3dcf6ad551e38ff3f4c62c990d71ef25"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/selection.json",
+      "bytes": 1652,
+      "sha256": "6cd5e444f272a19127c7cb6c93c87adc65609c6b3de9b1fbaa1c89bcc817be60"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/status.json",
+      "bytes": 90,
+      "sha256": "6e52ce6fae3dca2e27a07d922c1e74ae1a3e5602970a73fc6e48b4015bcea7b5"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/summary.json",
+      "bytes": 9600,
+      "sha256": "4ef71c88d249a94c79ba6cd9f9fec1957b4b10030d7f348c393c34f1e5a6d196"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/test_joint_avoidance.py",
+      "bytes": 1687,
+      "sha256": "8dad9703430ca9cc7b0e283208396eb7c36c133301553c0ffb7f8347519fd211"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/共享避碰修复与完整数据.txt",
+      "bytes": 6454,
+      "sha256": "d5408c7f9e9da92bd22394db774a815c963b79dbee5ade389e9ab0ef5daf0202"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-joint-avoidance-20261104/run01/复盘与执行路线.txt",
+      "bytes": 4557,
+      "sha256": "945c87b7d2a50d258510e30d175773bbe7e3d3caa84e77660dc0e08a7cfae5f1"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/audit_retrain660_rotation.py",
+      "bytes": 3433,
+      "sha256": "7c5a2a7f1a7bcff073a45f392938b8f3714f85c22fff7bbf97489382cc79d37e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/audits.json",
+      "bytes": 975,
+      "sha256": "c3ab9f92adb073437005395e3ed05ddb8c5f3276d636fbecea1e2affd99668d3"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-0.json",
+      "bytes": 6371,
+      "sha256": "1295a7174722ff92ec61495acaa4e850f19aa7e9afe467222b3c68e5c268bd37"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-1.json",
+      "bytes": 6374,
+      "sha256": "1507cd715bbaf23a7893b1b70b2431a69c7bb0b0701750927a1dca402aa76b6d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-10.json",
+      "bytes": 6378,
+      "sha256": "c14c34a04b838b91808807b73af91fab333543851e84bab59cb363b0844fa201"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-11.json",
+      "bytes": 6352,
+      "sha256": "1a0e0fb697d4b0e06af5793b4257446d316908a0ef5c7cd176a9f07eca268d53"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-2.json",
+      "bytes": 6371,
+      "sha256": "c0d86dbdf82752bebe6b66dd68aa2cd3ecc21f451fc099d5a534510184f8bc4c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-3.json",
+      "bytes": 6373,
+      "sha256": "554486a898a6a599e4dfd30d9ff73008030202c200b81c36cf56cd7497b1749d"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-4.json",
+      "bytes": 6384,
+      "sha256": "b1ca5355318fabd8232c49a44f775569172c4c72b52c3c310307f60a3de73a86"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-5.json",
+      "bytes": 6366,
+      "sha256": "bd27246d1f226678687da115080ab780058ae5320ddf8b75a21508dceb827504"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-6.json",
+      "bytes": 6367,
+      "sha256": "b686487d013a65afbe78c502bcc85482f98a7f4a3e49e375d8b860466c3c5fd2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-7.json",
+      "bytes": 6363,
+      "sha256": "95e0aa46d2e1261c7a810b01861ba2fdc1161c1a397d79d7d25cfd1a4d572012"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-8.json",
+      "bytes": 6357,
+      "sha256": "5846b75fbb59c1caf0fcf8e932b9c79e87943760440afa054ddd8c93fe483375"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/collection-fit-9.json",
+      "bytes": 6368,
+      "sha256": "f4faedde6b4c273750874d47d60fea986a9d68bef2276521266ec58aaff35311"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/data-location.json",
+      "bytes": 5201,
+      "sha256": "2fbf08e2dd008625bd4f46af9148bed0a06bacec5e9bd5c4348386d6a4dd6edb"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/calibration-1105001.json",
+      "bytes": 5355,
+      "sha256": "52ac51d7fb2bc36680a7d22f2c9debe6162b700b6a746d389bed4964e805e8a5"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/calibration-1105002.json",
+      "bytes": 5338,
+      "sha256": "dcee9e246f5cdfca67002cc4812820c899718e82930ade88a47e5fde32d609f9"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/calibration-1105003.json",
+      "bytes": 5327,
+      "sha256": "a163f719e07f4818b5e742117fd472553fa401a312423e0aa1893ecd3353ff36"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/calibration-1105004.json",
+      "bytes": 5333,
+      "sha256": "bbaa7db2ca88ad0abbcec6b17ccac0d658533c155bc4e37b7d3a7fb6a7de97d6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104501.json",
+      "bytes": 5287,
+      "sha256": "fcaae9c1302eec1a1970ca70d1782c1d9368b5fbebbd39c7300890da9182fcb4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104502.json",
+      "bytes": 5312,
+      "sha256": "985780ad4367699e8f54944ee3486811a3cf646d2e4b20c24fa6de8c116ffc4b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104503.json",
+      "bytes": 5350,
+      "sha256": "ad9b5a413af371c32bbffe71420c213e36bb5ba0166d8cb148f9fcee09c48d04"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104504.json",
+      "bytes": 5314,
+      "sha256": "aad9d492145ab4bac4de0ae1e41b53a9f2baa6c77e603d961dfc3e4a7dfd5f09"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104505.json",
+      "bytes": 5319,
+      "sha256": "bd070596fd714c89d5cfc23f2de0f10677070b3b28aadbbd04f4333aee16eeba"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104506.json",
+      "bytes": 5316,
+      "sha256": "a7a0d558c00fc37d20343bed73c7ee9b23dad83719fca3f69ec42dbb505c7f7a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104507.json",
+      "bytes": 5331,
+      "sha256": "ce200f54bf1419db4c3736a24ab96e9b1be851eb342ccb0e88021a45a430a67e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104508.json",
+      "bytes": 5325,
+      "sha256": "2842af9cf76f224cf92727a206ed57db827dc199bca99e5fcff6e5a1d95b5baf"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104509.json",
+      "bytes": 5325,
+      "sha256": "8e35a240886444debea40aca196582efaacac154b4b6631ae6ce2be3e049902f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104510.json",
+      "bytes": 5320,
+      "sha256": "c3b526548ab31daf25e9ffe0e75e6c093e5af875cbc4c2e4c1c7ee07254c4e0b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104511.json",
+      "bytes": 5317,
+      "sha256": "48e1cb1b5028d40ad5d5c550fd86374c1ac5328906b41c4f3a4d52be2ad1c950"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/fit-1104512.json",
+      "bytes": 5324,
+      "sha256": "23197296c9e0aa2bdaa9f3913d7b3cf7b86dc99ab22b01dd030169d36ffae741"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/test-1105101.json",
+      "bytes": 5342,
+      "sha256": "84855edd59e5288716431e47c4947dbb462767ae12dfc0002b681a0798b23432"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/test-1105102.json",
+      "bytes": 5325,
+      "sha256": "e306be2894da458e9bf7c14a404de80ee349458184fd747c9fab5c296d4fc4ed"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/test-1105103.json",
+      "bytes": 5325,
+      "sha256": "97fac4dedc897d4b9f7b01f1fa9245dbcaf967c51a2c2b56c0295b0182a0a311"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/test-1105104.json",
+      "bytes": 5333,
+      "sha256": "bac4c8e08831669fa7fefe1a18228466cdd8361b5356bb54d2bdc525a344144a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/test-1105105.json",
+      "bytes": 5321,
+      "sha256": "2a5d7da1962c2288ca1094ef8bdb2499a1c436e977ca5cd5cc13f0b6793b5022"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/fields/test-1105106.json",
+      "bytes": 5329,
+      "sha256": "5404f25ceab2472b29ea8e4e5306134039aad40e3c1b726ab10845292590338e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/generation.log",
+      "bytes": 13347,
+      "sha256": "4dd164cc3d5af22458caecb49d358c91bd5caed996219bd04cb49550941b186a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/independent-audit.json",
+      "bytes": 5370,
+      "sha256": "1fc8cc7d13b3fc7f5bd211a71e4acde979386b043f60ee43b95c252d90491573"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/input-lock.json",
+      "bytes": 5152,
+      "sha256": "811989fe0ec69d71515a7064bd2b4d2b1604f07c53122b08152910f8d09e74cc"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/manifest.json",
+      "bytes": 4699,
+      "sha256": "2a0eda5a6b06b3c1270502d7b967a0ebaaee599ccbca942bc6ded2938348d8b6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/normalization.json",
+      "bytes": 6817,
+      "sha256": "dbd06e3900117d895b9c9899547205bdf95253cbef0485a3223360e385f14350"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/protocol.json",
+      "bytes": 10667,
+      "sha256": "418237d4d2e18d51999e58b98201b10fc1d038e528cbf13de171bcd0401996fd"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/results.jsonl",
+      "bytes": 502395,
+      "sha256": "a2846842ab0dfc4c9559d65960e49ccf8d87115e738361e40385b17aa355c0bc"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/retrain660.py",
+      "bytes": 11168,
+      "sha256": "76a36668ddbed70ca8367f8ad65f2a4181499a225f8bba197366403203d8ccb7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/rotation-prediction-audit.json",
+      "bytes": 245390,
+      "sha256": "d330ded13b9711e8683605534a015a2d61374cd3fce5fac133491fc217553b6b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/scenarios.json",
+      "bytes": 513612,
+      "sha256": "192f22ed9b8f53b115c2ca145f82ebeb55542e54c88c39daaa431a8b570e46bd"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/selection.json",
+      "bytes": 1551,
+      "sha256": "4904e502ff8e28395cf35a7369291ff5f2ffa24516e30bfc4a7260d1031351f5"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/status.json",
+      "bytes": 115,
+      "sha256": "3d5c2399e45e70da8168aae398921a90d1f1b349288dd550cf83be00a4e17b20"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/summary.json",
+      "bytes": 5110,
+      "sha256": "8df4682130527e8c226af0b8b1368a54e54b213a8209e2971bdf855a2d25da54"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/training.json",
+      "bytes": 7084,
+      "sha256": "4cb4714dde45734423065de854831628b520da6bb31aebcd30853dfe52fce583"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/配对重训结果与局限.txt",
+      "bytes": 9142,
+      "sha256": "cee2ead21cfa396bb3f03d5e29261001f50bc00dc78be6cbb3f5ae3547b1ff33"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-retrain660-20261104/run01/阶段决策.txt",
+      "bytes": 2359,
+      "sha256": "9f52cdfc66377a2db0825500fea54d9ebc8cd6eff89136d38ac3b2f72538497b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/development-gate.json",
+      "bytes": 419,
+      "sha256": "2f073e699aa8f907a41bf2cbd0cdcc911533bfd5f196a8e28012b3404ed150d4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/fit-reference.json",
+      "bytes": 31929,
+      "sha256": "96a68f85b64446350ac52cc245cff36ea2fb2d7e773b80abde7bcfce0fa858cd"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/independent-audit.json",
+      "bytes": 574,
+      "sha256": "f5bcef5a289687601ffe2047c16237d8b9485c95b08c9069b8481c4c3e299894"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/manifest.json",
+      "bytes": 1025,
+      "sha256": "ac38ef53031a44e114063d558a53dd81379df34729de048b6d1dba9de68b75c7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/protocol.json",
+      "bytes": 14685,
+      "sha256": "1db0efb1a1a71eaf70d338da855ce7a7b41094ee362c342e0983fd8b04285795"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/results.jsonl",
+      "bytes": 356669,
+      "sha256": "15f71c046970583da42caaa5423a28104cd64729a7967c79a165c1054e482520"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/score_gate.py",
+      "bytes": 1600,
+      "sha256": "43a03d4e37a522c59c95245510a3416d087308779c154adf0a67a40a5c845f75"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/score_gate_trial.py",
+      "bytes": 10667,
+      "sha256": "bce45c43ac5781fabba01e1fef64d2c5f6cdd7ae4fbdf72741a863e67b63d310"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/status.json",
+      "bytes": 90,
+      "sha256": "5f98e6f576f33ef12c473efe6a0e446ee524f4d36f66584ee75233de78bf4e7f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/summary.json",
+      "bytes": 2815,
+      "sha256": "500671588b1efa37e362d368e5662b875ea39e5eef2c1c7533f443e8a6567dc9"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/test_score_gate.py",
+      "bytes": 1543,
+      "sha256": "afa44f821323f87c888f094c839e524eaf566a459085e86c17e35b02e8f08112"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-score-gate-20261104/run01/单因素评分衰减试验结果.txt",
+      "bytes": 5014,
+      "sha256": "3030c1c3c56777fbe5d0c6349e139a142b06bd9866f4b607919ee4f8bf691e3e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/manifest.json",
+      "bytes": 666,
+      "sha256": "6853e91e8f0067aefc7225e55cce5a83b70b1c9b1f73f0021468eb301b873521"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/protocol.json",
+      "bytes": 8594,
+      "sha256": "11a041fdbf4d6646ac5c1c81d94fcfcce52274a2f4c277f91cb5c861a963f1ef"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/readiness.json",
+      "bytes": 253,
+      "sha256": "2ad0892e9b31a3a1b36e4cb89237f8a1298575f2dbe7b1d8082edb2e01149eb1"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/results.jsonl",
+      "bytes": 74854,
+      "sha256": "7bc5e66e9d4c529e01a4c7e5ae52f8a2bc77d00374fb3583b7e8bfe15637ae62"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/status.json",
+      "bytes": 85,
+      "sha256": "14eac5ee483dc366c1786a1dc5344b11c9a9270ad779a67c5892e8236f32a885"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/summary.json",
+      "bytes": 764,
+      "sha256": "ffc72cbfb3f8ac114df20e23895e6c928a3dc34299c0ac7db6728e52459f0b87"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/window_adapter.py",
+      "bytes": 7332,
+      "sha256": "b9f7894442ce7b15f7e3265bdd838a1663f65efbae37d3ba92f8f7ff9abefeea"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-window-adapter-20261104/run01/单因素输入适配结果.txt",
+      "bytes": 3178,
+      "sha256": "2e2219fa759c8c73c527759bf0a986eacb7baa2586921ae389a0c8ffd528526b"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/calibration-statistics.json",
+      "bytes": 2013,
+      "sha256": "446b31f991ddc7273c6e42e09eebf673f383d4149a96fc6fe16d40248d42edec"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/checkpoint-lock.json",
+      "bytes": 2853,
+      "sha256": "eaf259352be1200cb6470cf818f633e02613d0cd878e419a66f3500ab04cb85f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/collection-results.json",
+      "bytes": 506209,
+      "sha256": "146bae06c76a3cdab186081801db2225dd26c9f5421c42a95fcb464ebe4d1399"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104601.json",
+      "bytes": 5341,
+      "sha256": "8f8c603fdd690a633a0df04e2255390e26f3faa0a7e561aa27b44ec491301d8c"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104602.json",
+      "bytes": 5324,
+      "sha256": "8831023a43e638639340426a1c8ceafa195203af6dbd22db83b436e4247224f7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104603.json",
+      "bytes": 5328,
+      "sha256": "d9e51d007842e5585362eed178f2f8073fd8a5652c60621106bfe8153814c877"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104604.json",
+      "bytes": 5314,
+      "sha256": "abe0018adc8ac6e21ded0b17c308d1dd2c750d7edb0c9563e8636b93ab8d3ff1"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104605.json",
+      "bytes": 5316,
+      "sha256": "b9e2688741ad91f3b221fb6f0cc9cda94f36c380c04ddadea13cbe1bd7c51097"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104606.json",
+      "bytes": 5321,
+      "sha256": "94444706509430f02854ee0d1525eeea39261ab25fbce5877659823b15579fb8"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104607.json",
+      "bytes": 5336,
+      "sha256": "430bac03b1a945d58d290a7fc607726ad17033ea4f0f95b06fbc56b2eb522ded"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/cal-1104608.json",
+      "bytes": 5335,
+      "sha256": "bf11a45ca3e4e7f24308b3ce3cdf61919bc283a92e1fbd7261364e91e09baf0f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104501.json",
+      "bytes": 5286,
+      "sha256": "4048bba39ef83436ba68ae2ee524118d5f21126d59f35427103942733adbfc58"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104502.json",
+      "bytes": 5315,
+      "sha256": "2c5eca6cef07b86a1f7ad0b0ef236648533ad49a63353d25e590cf1eb0a09803"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104503.json",
+      "bytes": 5353,
+      "sha256": "8acbcf07962a7e012695b5c44e318bf6920872d6cf7b2f1f84616e82bb10438a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104504.json",
+      "bytes": 5313,
+      "sha256": "5a7d473d0d4d79aaf3e1791e1d42314a6afca5c4317652f2d86336381d1c4e75"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104505.json",
+      "bytes": 5321,
+      "sha256": "e37bb92de3db5d16182ea9be4009c7da87ada0765d0ec8403de89caebe38f6d4"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104506.json",
+      "bytes": 5319,
+      "sha256": "bb2743a843a638ba68c1019051dc06349671dea85ebe9e8c6be7556fb4f8ab93"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104507.json",
+      "bytes": 5325,
+      "sha256": "71e78b983064f505d5c6e94039607e2c6424f1b38998550a822a263ec97146ec"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104508.json",
+      "bytes": 5318,
+      "sha256": "8e5a65cabf9d0a4107145370972759552806b1cc91b814f8b002c03a7d5f27e7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104509.json",
+      "bytes": 5326,
+      "sha256": "79959b47917f51a8e9e657c46bf7fd6d034ee6773fec7f7a8336bfad67e47442"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104510.json",
+      "bytes": 5320,
+      "sha256": "4c482602d9722187f1d2ba802e636bc8d539a2610b50162edee8766e891d3f91"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104511.json",
+      "bytes": 5320,
+      "sha256": "4d435b84d36fab693c1863792263db955e8971eb80ea5569890817ad644a8e1e"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/fields/fit-1104512.json",
+      "bytes": 5327,
+      "sha256": "019be9af661bbc81d8e3c90d52499608a234aec40eb80115eaa8b0673b8e79f6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/generation.log",
+      "bytes": 10802,
+      "sha256": "8e563de4615d30a16d5743e6023d82e52388176ba8825e74edd1a395cb9c7132"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/input-lock.json",
+      "bytes": 7433,
+      "sha256": "af62c2b22d38ef19cc3f7aff33328cf30fec4244a742742e22e2ba8c7be4cd82"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/leakage-audit.json",
+      "bytes": 2063,
+      "sha256": "21760bd5a8f5073b6eec7a4bc07aacb0a3edfe572869ba9c2b0976c8a4734fd2"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/normalization.json",
+      "bytes": 3194,
+      "sha256": "f998d2d3ab8d6b1e3f6cc5c44b34201149662fb9001a0f0e1429cf97cee3e2f0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/paired-contrasts.json",
+      "bytes": 711,
+      "sha256": "dcd3708aeb0a503bbefe77b09098e72f8935fede8bf00b2093d618169d0677ee"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/protocol.json",
+      "bytes": 8695,
+      "sha256": "b34fcc6cdaa609b3bed4e35686de6ac35e2f882ccb8637676103385bd1fd2626"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/raw-training-data-sha256.json",
+      "bytes": 7011,
+      "sha256": "48089b9318d15efa176dfc7cc17d6af0573f056b582079ecea71426cc125cefb"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/results.jsonl",
+      "bytes": 484170,
+      "sha256": "c5eea117aa6bc20bc491c67dccefa2ee14b06ce76f8dc953e24a601736b6dd6f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/sampling-diagnostic.json",
+      "bytes": 353,
+      "sha256": "010d11416544e066cbbecfb1fe9d503fc3195e6c64c7331ebecb5b8f116cb427"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/scenarios.json",
+      "bytes": 746843,
+      "sha256": "787902719d2b68e42dc36df839f582bfeba7bfea47ec03201e1ff53f18528c84"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/selection.json",
+      "bytes": 307,
+      "sha256": "dbd1a9ef641f5b14a5483b727bf63d9475dd3861de0e78c75dda79b5a98dedeb"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/status.json",
+      "bytes": 236,
+      "sha256": "e7e68610c2ca2c119bcc0e58058ef9481b0c3fad176f13e19d98f9068fd46ca7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/summary.json",
+      "bytes": 4470,
+      "sha256": "e56bcf5671c2409b88201e07cf688f5d6bd5b818526d25b8330999e23ff160b7"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/training-history.json",
+      "bytes": 17539,
+      "sha256": "4ec562466a41453cad85ca01335bbcd74a52a1001c27e7ac13fa592282c46bc1"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/决策结论.txt",
+      "bytes": 2348,
+      "sha256": "6d09fa1b6df8a931e177c38b7a378d49b151f08144e2825c80a05bab349dfa7f"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/evidence/uav-fine-memory-20261104/run01/结果与局限.txt",
+      "bytes": 6197,
+      "sha256": "781afa9f23da3977cee2a2af604680c2bddacb5dac7f39f9f8dbea2d120f50ec"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/model/fine-s202611142-e16.pt",
+      "bytes": 128140,
+      "sha256": "3bed74682c5d7b163814b1585d162b9b5485e040c8756c3bcfed93756ff6284a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/model/normalization.json",
+      "bytes": 3194,
+      "sha256": "f998d2d3ab8d6b1e3f6cc5c44b34201149662fb9001a0f0e1429cf97cee3e2f0"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/README.md",
+      "bytes": 3370,
+      "sha256": "eee7e43206c0c4a272e1cf71a1ea442bef2129ec44c634667d04614155422eb6"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/replay_frozen.py",
+      "bytes": 3555,
+      "sha256": "680cd1aba95675d10a6ec1069f437421aaab7ad7ffbba57f8d5c1c483dc8a904"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/portable-replay-check.json",
+      "bytes": 7214,
+      "sha256": "b646cce8309a5557b65ee0da50a1947cbb8b8533e4cb776544413df76851efcc"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/pr-verification.json",
+      "bytes": 317,
+      "sha256": "26b61db61cebfb6ff8a5b3e592c33fe0ab69e8bcde9522a32c7e4bfc2fb14d84"
+    }
+  ],
+  "local_only": [
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-0.npz",
+      "bytes": 1221398,
+      "sha256": "5495bf7e42c6f1eab03db842e9d5ae0959302226658cbd04195141c7b69e9661",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-1.npz",
+      "bytes": 1203406,
+      "sha256": "5ad82937bd9ea01044ad07f9301e7b652efbeb0b1ffdb6375094b84b03076c1d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-2.npz",
+      "bytes": 1214417,
+      "sha256": "133a8f94ba2a44b8fe8f3c7faca0e910e71f3ba27f6326667a3b3161a7a123fa",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-3.npz",
+      "bytes": 1173776,
+      "sha256": "c63be6c4721b396f11d1c45225609ba48a948c8f8734460e4decf4b5466574d6",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-4.npz",
+      "bytes": 1169256,
+      "sha256": "5e7336ced33105276f3611023607d274c0068049d3aae8bf8b5435632adf6522",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-5.npz",
+      "bytes": 1130797,
+      "sha256": "5e46e78488b36a1385c278e0a936bab58637e23979e272726085ba0c5c55fbe4",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-6.npz",
+      "bytes": 1211907,
+      "sha256": "26249e4736015861c51a15be1b4ff859ee08180719fa3771df40085d9c077f9c",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\cal-cal-7.npz",
+      "bytes": 1187040,
+      "sha256": "f5368aeb3c5b6e8e30a4f73945c703c2818fd77fbec9702cdf9824a8bc2f5c23",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\diagonal-1105605.npy",
+      "bytes": 57720128,
+      "sha256": "32375864044a8f7dccea8db5fda33920229e25c0b6f4873b0fd069601f973e2b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\diagonal-1105606.npy",
+      "bytes": 57720128,
+      "sha256": "ba73e9d8603321f0f03785b54cb519cb6eb26701819a73241ae3424b6415d142",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\diagonal-1105607.npy",
+      "bytes": 57720128,
+      "sha256": "9b7e7a9fc01254d4957d8dd20905beff9598fe85a7158e05f77886c18546e8b4",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\diagonal-1105608.npy",
+      "bytes": 57720128,
+      "sha256": "7b9a3954db6f980861b43d12ac05e438c7d715cdbd3999ff710685d7b43f8258",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\manufactured-rewet.npy",
+      "bytes": 57720128,
+      "sha256": "851d15a83dc3f0aa75c8c9d4649325edaa696333da9737fda4483d3ccaada116",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105501.npy",
+      "bytes": 57720128,
+      "sha256": "3607880a98d056900082460fa14e25e0b1fc9d6d6de3264f6f2ae5f0c8f130d4",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105502.npy",
+      "bytes": 57720128,
+      "sha256": "f635f25fed0e0ecc8f68e0745624910019f3bbf831eb6ecdc5f20e025f31dd01",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105503.npy",
+      "bytes": 57720128,
+      "sha256": "4948c6004488438f28e62dcebd82c17333286f22bcc5b1ea8fd1917d87cdeb8b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105504.npy",
+      "bytes": 57720128,
+      "sha256": "99d75a074ee1049fc24ea196f5218ec51ed8973b31ddbd3ed7ac92925a586ad3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105505.npy",
+      "bytes": 57720128,
+      "sha256": "b1d38cdd8bb12842332d7d7c84cf179f975e889eb2c140c9898530af7792f327",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105506.npy",
+      "bytes": 57720128,
+      "sha256": "0958a73980f996034a6feccd1e8ec14443ed5262cfc654669e6d00e7ee4a9706",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105507.npy",
+      "bytes": 57720128,
+      "sha256": "c5f12bb147a1f11470617c9525f527872f647448b317156350a34e438d251ef1",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105508.npy",
+      "bytes": 57720128,
+      "sha256": "b43b1cdbeaba05af4aecd4b5aa465fd23dff81b988d50e9d9b92549cfb044f53",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105509.npy",
+      "bytes": 57720128,
+      "sha256": "1f01b5c701032022c1c4ba4898ea90ac87555d3c5636b29f721a5741c20f39c2",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105510.npy",
+      "bytes": 57720128,
+      "sha256": "4409a7b85d68902642445454f610020ff29652e3848a9c789b70b2e75aa45267",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105511.npy",
+      "bytes": 57720128,
+      "sha256": "f380806a072dea733240a1bd71ceaa3046ebdf37528ba75db31938b99e775a59",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105512.npy",
+      "bytes": 57720128,
+      "sha256": "031c8f6e4e2384442f686b463d06c5e09ff643626247b2427e9f49d9ff474870",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105513.npy",
+      "bytes": 57720128,
+      "sha256": "f7e216b90c0503a17fb9112932918138d1e98d8b79bf67c0dec8cd80bfd51c79",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105514.npy",
+      "bytes": 57720128,
+      "sha256": "c1fb49ee27622cad689b9bf2e32a6c0c732653b2a361f93af3f242f5e31880fa",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105515.npy",
+      "bytes": 57720128,
+      "sha256": "694ea71c2f4e50b13c357d9a87f527a8f95143921c3a6d6d5323e166b24193d9",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105516.npy",
+      "bytes": 57720128,
+      "sha256": "be353fbbba9ec90fe156eb3c70ec2136c3db9c934c2dabd85921d95bcfc3fd7c",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105517.npy",
+      "bytes": 57720128,
+      "sha256": "1d80342a852eb2689afe489df3bbcafc39adfd29438fd037552e8854f2908272",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105518.npy",
+      "bytes": 57720128,
+      "sha256": "0d728f4c939cfa7dd9c77101740b668781d624c7e09f8410fcd17e1c66b4e475",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105519.npy",
+      "bytes": 57720128,
+      "sha256": "9376d8904b306df21013c83dd2bf3ae72b6f67049c1062fb01928ed53126151c",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105520.npy",
+      "bytes": 57720128,
+      "sha256": "2a4ed88c03c4fcc60625e3db2e622b0f67623d1e90f65fa73b74a6f63cea6a1d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105521.npy",
+      "bytes": 57720128,
+      "sha256": "6f93ffb3f97c44b04d2bb1dbd24444b43ee8a293dc8121354f9d5213bf8bac82",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105522.npy",
+      "bytes": 57720128,
+      "sha256": "5d2d17c37ab800ab7aa494f786340847a3de1a5d11403df60daeb173425106cd",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105523.npy",
+      "bytes": 57720128,
+      "sha256": "7540dc6fd21afad3ee27e8fab674bc66a7bf7042ff7f3ceec7af633686853851",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105524.npy",
+      "bytes": 57720128,
+      "sha256": "40aaf007a06c8c941db55536bf790c12b79f14e9b82c8c50d41b5f3c7e80a4a8",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105525.npy",
+      "bytes": 57720128,
+      "sha256": "5b6de803ef9c240859de94436d03f58cdebf342a28ff2ab3260bea4d03ab323a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105526.npy",
+      "bytes": 57720128,
+      "sha256": "4b61e1eb26198c61b8649c101e4e103058072e99dae3355a77264b8011be8274",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105527.npy",
+      "bytes": 57720128,
+      "sha256": "8dd3cc97e2ec4b40c019014bc135ca52e9c1886ce418226d4720db6cb5e800cf",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105528.npy",
+      "bytes": 57720128,
+      "sha256": "b72c4e14255aa0b1a7f40ef158bcf1d752555b1f6fa4adb8511c93119f1288ea",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105529.npy",
+      "bytes": 57720128,
+      "sha256": "b164ce26653331369336bb15f0b12c9bad1ecdf32cd1918ee08b8454b460d026",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105530.npy",
+      "bytes": 57720128,
+      "sha256": "8d69eb8607a49dfc2caf8ea0b94d2d74c9100d7808486ed7277651e54b56ad7f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105531.npy",
+      "bytes": 57720128,
+      "sha256": "0afe2b8a89ba6ce0393d4744c148117db53eff77ec42602c513eb5df576486f8",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105532.npy",
+      "bytes": 57720128,
+      "sha256": "d927800212f71a17deb890da34271ae8b938c6bd505122e43a8ae6440124039a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105533.npy",
+      "bytes": 57720128,
+      "sha256": "03dab0b49d6532087765cb5009ae8f1aaed4c362790e69ffbd6a6bfe31033725",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105534.npy",
+      "bytes": 57720128,
+      "sha256": "b2d7640e72a90859bb17d942d0f44a5446d18e02f64e1788bb916045a5a5c9b3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105535.npy",
+      "bytes": 57720128,
+      "sha256": "981870b476a617d99812f670d4c793ead72db5e121ad1057db32156f4f798dfc",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105536.npy",
+      "bytes": 57720128,
+      "sha256": "22179e710b4679b1fd1a5d20a339cec62256a3da212f3a050310acf138e1075e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105537.npy",
+      "bytes": 57720128,
+      "sha256": "14d8d749b28309733a3ce7f9aa6235285f0dbe0bc3826a1a22579cfa2fccf6d5",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105538.npy",
+      "bytes": 57720128,
+      "sha256": "6ea35e40e54d1e92f85644167b254df5dfee456339f4f39e1a2c19299e3114f1",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105539.npy",
+      "bytes": 57720128,
+      "sha256": "61666f0379ba3b962e1bdc3eb7c067e2888b6c1ca74c7904678248d794561d8c",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\original-1105540.npy",
+      "bytes": 57720128,
+      "sha256": "9971e5c66c3e078211f249b8d93a5981ef7cac45773bc17ce89ab107f78aa902",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\two_valleys-1105601.npy",
+      "bytes": 57720128,
+      "sha256": "d69a183656f56577a6715f0bfffacec5a980a08e68c20d389b6a104cfef08741",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\two_valleys-1105602.npy",
+      "bytes": 57720128,
+      "sha256": "99ad9d2cdbf799de9091fae53024d38dc300b7ac6c6822c7f6e90316188489c1",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\two_valleys-1105603.npy",
+      "bytes": 57720128,
+      "sha256": "2501837e2d7f2a1aa76009b75af7f953dcb6b4f0de75d4884398fa105109d7eb",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-frozen-rigor-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\two_valleys-1105604.npy",
+      "bytes": 57720128,
+      "sha256": "c6e4d81bec6b24a7f6a1793af548f8943ad509cd12d2c42508c3ce6c69c79e9e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105401.npy",
+      "bytes": 57720128,
+      "sha256": "61fa60edf61c535d6bfca91493088931c58fc545bd5d9e0b98ab7fe1d3586020",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105402.npy",
+      "bytes": 57720128,
+      "sha256": "af246b4bbd5e51cb4d57cfbe075d28e9d7ce1adf260fdc8fcf71eb4c3ca5f7d6",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105403.npy",
+      "bytes": 57720128,
+      "sha256": "b8202e1ea32d54d85a7650c936274f8069c4958bb161428aa3c59798c8f5f41c",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105404.npy",
+      "bytes": 57720128,
+      "sha256": "903958804f458c473bc725db7db942339a5e671b3f2cc926324012ee62c56b41",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105405.npy",
+      "bytes": 57720128,
+      "sha256": "5ad3528268f3367a96fd49436b878207f695c9a947692adab5df52da5a22df6f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105406.npy",
+      "bytes": 57720128,
+      "sha256": "a92c52e03ae5ceed038f2d988f5ec0108a7a20bba5932ca7fc498a90c1eeca05",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105407.npy",
+      "bytes": 57720128,
+      "sha256": "fd90706ab4c918697b1b2d0a11a7680e772037bbd632d302c9e1db598716406f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105408.npy",
+      "bytes": 57720128,
+      "sha256": "22e8b128675bd1415621038546e78e31157615e6f7b2cd1486dff850c454f116",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105409.npy",
+      "bytes": 57720128,
+      "sha256": "4120a222e0626d588606e06df5aee4de0f04d7d6f7d046204d046e37fc7a9e73",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105410.npy",
+      "bytes": 57720128,
+      "sha256": "8e7af4b0090fa933ffc35aa45c6c312756839a033b1ff5624d75dded5f3904ed",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105411.npy",
+      "bytes": 57720128,
+      "sha256": "21c76e34c464ac43bf5967bb1101c2bacdbeff70985ad7afecf82f587564ac0c",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105412.npy",
+      "bytes": 57720128,
+      "sha256": "3b30e3f64054c8e53ba19fc5096f80277b74baca8de1606e40b7cc53592e46e3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105413.npy",
+      "bytes": 57720128,
+      "sha256": "7483996ecb6b15b554755297dd3cf2d5c5c3527603afc96a6daa82c7a4dff4c0",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105414.npy",
+      "bytes": 57720128,
+      "sha256": "ab5aeec8bcb0d317dfc393ee8a5cc8fc58d35769c7fcdd353d4b858f81ba460b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105415.npy",
+      "bytes": 57720128,
+      "sha256": "ca7185730b05a20b223c5a39ca1ec5b43fd2327983f9da815b9d407aa54b7dc3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105416.npy",
+      "bytes": 57720128,
+      "sha256": "e18da9a509a07d6f9ed2a185701dc712fbb062662e9160d30e0e6fa78322ab0f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105417.npy",
+      "bytes": 57720128,
+      "sha256": "ac86378a9a79a8972d4db4c85204e4ce42bc37367d63c3788a1fbbbf99deec6b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105418.npy",
+      "bytes": 57720128,
+      "sha256": "25f8c785e01cedd79f93df3f6213efe1bbc058f7f52e597e7604378018a50841",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105419.npy",
+      "bytes": 57720128,
+      "sha256": "e23e026bef26f500f45bc2b44dfc243231ae6ca06a1e86f483c40794e58d905b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-count-confirmation-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-count-confirmation-20261104\\run01\\fields\\confirmation-1105420.npy",
+      "bytes": 57720128,
+      "sha256": "1da4ca6e7b55fb7175f724be2bd26c3b52271e0387bfe9fa9325eadff37ec0f7",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105301.npy",
+      "bytes": 57720128,
+      "sha256": "958fab5eea4a5a2d2dfc33fa234b607a39cd03ef3e3ff065fd63a1e25feafd1d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105302.npy",
+      "bytes": 57720128,
+      "sha256": "b45d03ef2619a248716b753cbdbe7d3e808c3188e986600bba8c5ebd8568e876",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105303.npy",
+      "bytes": 57720128,
+      "sha256": "1a44f5d75147ca295208a785b8b11d2a75b6f7fd67344a070d20fd5236e7e7b5",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105304.npy",
+      "bytes": 57720128,
+      "sha256": "813e33180fb369479ebb0a41a9c262cf9b3634bce76e5ea9fe028c1fdcedf726",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105305.npy",
+      "bytes": 57720128,
+      "sha256": "66fff7fb0f9d70336c48a01247b1e35ef53d4d0c86f6546b73510e83ece418ca",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105306.npy",
+      "bytes": 57720128,
+      "sha256": "04b647b6e7c37ce1e11d1af069a00e57adfa33be6bbe3d1371b735d5071dd7ab",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105307.npy",
+      "bytes": 57720128,
+      "sha256": "accf900f4c3587da5c43a6356ce3b99ef454a0b6881261153e4570953fb81fb4",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105308.npy",
+      "bytes": 57720128,
+      "sha256": "f87d2243ee8aa9654f2b9b9982572bcda69fc78bd535f8d44b1192424dcf4948",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105309.npy",
+      "bytes": 57720128,
+      "sha256": "2d470718f30619fdf6ffe1bc51f24cab225e992c40e3ab5081439782e8ee3664",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105310.npy",
+      "bytes": 57720128,
+      "sha256": "453d2c80385eb3f28d7de7d45192fa3d523a9025c85b2789ea55141430081eae",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105311.npy",
+      "bytes": 57720128,
+      "sha256": "0875e406696ef44b40b1bb7f12e29d0c82f0d63f8e6ccbe6e77513c44146eb96",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105312.npy",
+      "bytes": 57720128,
+      "sha256": "c42e418df28dfd2b103fa9ee6af6c17dab404a1850440b100ed449d953d1d415",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105313.npy",
+      "bytes": 57720128,
+      "sha256": "892f5953b06e76978965e9ac80f6b91eb4e850f2f1acaebc6e786725cc9a6f76",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105314.npy",
+      "bytes": 57720128,
+      "sha256": "9c850136aa417e788af45d7f09861ca72b12f4d92458046667a6359b2ffc950e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105315.npy",
+      "bytes": 57720128,
+      "sha256": "315eda0c49a3aee61afc15121c463e224c58c08214212287675b81fe003b759b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105316.npy",
+      "bytes": 57720128,
+      "sha256": "1a42b6a8eb78adc651643e435559980e1074ee47cce0978ea9212cc85ed62555",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105317.npy",
+      "bytes": 57720128,
+      "sha256": "36ff21425bd78ef870d5b0e75594018951a593711d7aac0d74a1452d99c0a197",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105318.npy",
+      "bytes": 57720128,
+      "sha256": "c6104ace5dd9d1df89b767b10652d9b1883ee695dc3581a3314975efbb2346e8",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105319.npy",
+      "bytes": 57720128,
+      "sha256": "8e156d4888523bd8025987ee489be2e9dc7fd8f4f667c5fe9ce58905f22127e2",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-joint-avoidance-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-joint-avoidance-20261104\\run01\\fields\\confirmation-1105320.npy",
+      "bytes": 57720128,
+      "sha256": "84efc96844fe211cc567e4468667cd5c7837b0315b19ff94b8a27df9fcfee982",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-0.npz",
+      "bytes": 1352982,
+      "sha256": "84e162286081a7c759fe0a93a595f7235a6acd53bb84915add8502c140fece3e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-1.npz",
+      "bytes": 1369299,
+      "sha256": "af0009805ffef45629258a2e7faaeac0ab97c33530b66b50175b6035e17e562f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-10.npz",
+      "bytes": 1369467,
+      "sha256": "e2055adf8e2b57c95fc945c970d6f875249bb7d8ab340c72a974fa7d0503724b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-11.npz",
+      "bytes": 1374063,
+      "sha256": "7c4667d7cb18271ea39de7b3078f9cec2030e86e8d3145750729145b2e77f220",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-2.npz",
+      "bytes": 1371022,
+      "sha256": "a0407a7323681a2dd519948d8c009c0b81e481c139861fc16983997b0dd25f70",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-3.npz",
+      "bytes": 1366734,
+      "sha256": "7fd8a8b02dd47e78ee108bc5b42a1f5e4dd2ef204e85a31eec362fe4602842a2",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-4.npz",
+      "bytes": 1402057,
+      "sha256": "b42f1d013f7918bf4a8ba66f3dabaf6d3a6470b02a46bd67249ae1aded730696",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-5.npz",
+      "bytes": 1375234,
+      "sha256": "04ece7c55e57d98ad763d4cd10578626f09e96d17b59667022dbc76ba0b48957",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-6.npz",
+      "bytes": 1229662,
+      "sha256": "5231bbbb898c5c08dbad5592e2087d0ada0cab6e9542fa3bff6ae0214f54288f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-7.npz",
+      "bytes": 1369370,
+      "sha256": "e2fb0796ec0f63543e3c34ddb4627388a82d30c3d830c8b0423f21f03a0a2c95",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-8.npz",
+      "bytes": 1371611,
+      "sha256": "39e885ec8e73c860e9b56edc03aa3b2d63ab3683f2cf34c96c18dfb32537b297",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\data-fit-9.npz",
+      "bytes": 1223541,
+      "sha256": "cbadfeb9b54b54f5b424a871f2b4e89e83119eeffcc23ec23f4ae5623fbbfc12",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\calibration-1105001.npy",
+      "bytes": 57720128,
+      "sha256": "83eadffb980e21e8df8b9d8239cf97757309e184e870322cc91e522419dd2cf5",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\calibration-1105002.npy",
+      "bytes": 57720128,
+      "sha256": "df3a039008238fc375ed53e1aedf7de93934e22dd29bbc9dcad4b492fbb25c93",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\calibration-1105003.npy",
+      "bytes": 57720128,
+      "sha256": "27cc44a60d8b57ac07a2e34528f7ecc708dc55fec96237e4485aa711f25aabe3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\calibration-1105004.npy",
+      "bytes": 57720128,
+      "sha256": "dd486cbaef62599ec6e90cde52c1e48998f841f8a0fbfb33948bd6e4217d6a0a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104501.npy",
+      "bytes": 57720128,
+      "sha256": "1fe24311925b67f73f25375c8f72b247c04c66f9d9e3125ca32eca28442dc913",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104502.npy",
+      "bytes": 57720128,
+      "sha256": "bfdb4f8b776bb0104bc39eb7a2bbc6384c8a6823a83948993230a539bf5925d7",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104503.npy",
+      "bytes": 57720128,
+      "sha256": "5a11fdafd7d4a8f9fd19ab99678ff21ea006131c82546fe73e5df68e2450f1df",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104504.npy",
+      "bytes": 57720128,
+      "sha256": "1de33602d5d7cd0d19379f959520b9bca66711b132e8acbd37216a4b19c192f5",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104505.npy",
+      "bytes": 57720128,
+      "sha256": "e0845ac0bfe2e12461eae5d4093d52bbf6b1a50857d3e038243423f6385075c6",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104506.npy",
+      "bytes": 57720128,
+      "sha256": "bf9005d07e56b68f6f0621d3f36c3c22176f305f25986800cb354a73e59e9fca",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104507.npy",
+      "bytes": 57720128,
+      "sha256": "cea23f92091bfcdb3dd269c358d8c6c177fde868331b6d3ac8606ae76b938cd1",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104508.npy",
+      "bytes": 57720128,
+      "sha256": "9fdc45fa794ba9c3ab8632ff4db87f0c8b31607270b8887f5263b2759fd040ae",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104509.npy",
+      "bytes": 57720128,
+      "sha256": "ee6cf1ef1749e9f9ab8dcae31ec2e44d854be54ec5cd057de2d019a381e8ba11",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104510.npy",
+      "bytes": 57720128,
+      "sha256": "5675a75555b73797466faba6bce64124f4f9a5d34b0748fbfee484bd5e866aa2",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104511.npy",
+      "bytes": 57720128,
+      "sha256": "25dde2d6363271591b88c9b6adc4857e9b96df27f4487757b510f982db026406",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\fit-1104512.npy",
+      "bytes": 57720128,
+      "sha256": "161480a0bbd669c75d8c49869e8b7edf990c11b92d0686adc01869a0fb49d7f9",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\test-1105101.npy",
+      "bytes": 57720128,
+      "sha256": "b5714c40dd2950e856c648b8b04017153fd8d731cdb0d800916a20dea4d79662",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\test-1105102.npy",
+      "bytes": 57720128,
+      "sha256": "76cc5a2d4f032f0afdfd462305d19b43af1cd0d9a223aaa0dc097840ab223a6b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\test-1105103.npy",
+      "bytes": 57720128,
+      "sha256": "c4e5365dd80b799197f26333bba4dbc5db08e035a7b122dc3edb5e7f9bffa4d1",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\test-1105104.npy",
+      "bytes": 57720128,
+      "sha256": "fe5189be8bbbe1e9086cb6356ce45ed4c5e5c383161dbfdfd820873aed527d9a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\test-1105105.npy",
+      "bytes": 57720128,
+      "sha256": "2dfc43f94328df0d49a0d1af84a3c245e50e1baf26b2235423fac544bab362cd",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-retrain660-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-retrain660-20261104\\run01\\fields\\test-1105106.npy",
+      "bytes": 57720128,
+      "sha256": "ed213d84f711b13d6be430a1b545f2e08fcf1a3eaf2b4b14c88f4858fda8e21b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104601.npy",
+      "bytes": 50520128,
+      "sha256": "9f911c97cd304ec1b680c73c59ac0c49e484524e5a06b80ab54bdaf13fe830c0",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104602.npy",
+      "bytes": 50520128,
+      "sha256": "94886131f103c0e547c4f5eff520083cd8cf28885561b1469ead5e0034d7ad6a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104603.npy",
+      "bytes": 50520128,
+      "sha256": "b24e0c129d901b85cbd1bab2dffbbb69354d5eb133e26b5c8e1ac25210548617",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104604.npy",
+      "bytes": 50520128,
+      "sha256": "64ec799b2fa2f854e3a59e0a28412aa0144ab8f3fba9f9feed2d19fab1fb6a78",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104605.npy",
+      "bytes": 50520128,
+      "sha256": "6c68fb980cec8790d8379a60438fea123f9a495f6011be05c8d1934e10229e21",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104606.npy",
+      "bytes": 50520128,
+      "sha256": "c6117c1e3624e911768bca510fab635553b6c13ffb53c822edf40946ba7c20a7",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104607.npy",
+      "bytes": 50520128,
+      "sha256": "d1201f882ae5d768423d5f814f05c13a168885a555ef6511d02f6386464950d6",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\cal-1104608.npy",
+      "bytes": 50520128,
+      "sha256": "cbfe98ff970af8b80c6d24461621af3289cb6df12e84542ad2c6fbb9faa12ba6",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104501.npy",
+      "bytes": 50520128,
+      "sha256": "02b9fedb916c63d0880d59be9eefbea58eacfa52554014c65e36bb7d3210492e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104502.npy",
+      "bytes": 50520128,
+      "sha256": "913416d80f8d8769234ae5dac044070df27c8d5bab997f5727561a28f617ce34",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104503.npy",
+      "bytes": 50520128,
+      "sha256": "db1cbdf0dcad216f72260a5b8537e9dae2f82be03a20fc70bac46fdb865ed852",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104504.npy",
+      "bytes": 50520128,
+      "sha256": "dff7d0656237a8e4ebd9033cd0f71acdfd4c5d4b7cfa02c39b45d5f18b2b6e98",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104505.npy",
+      "bytes": 50520128,
+      "sha256": "85619955cd1b7bb3ebfe166f3cb4de0514063de9334398bb4db693564336e1c8",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104506.npy",
+      "bytes": 50520128,
+      "sha256": "e69ff003267260e508af24421dc44d6ae0d993ed293cb56d06789325a6a6ef75",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104507.npy",
+      "bytes": 50520128,
+      "sha256": "203b71a4e73d516bb63281ddfe3ddf6f0b3818b704b47e3775f9c6ba9dbb73d3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104508.npy",
+      "bytes": 50520128,
+      "sha256": "7f747eb852e0082525d5452e3be4267580ccd46d320f9f3b43985c756692f9f7",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104509.npy",
+      "bytes": 50520128,
+      "sha256": "70887222c2efdb5f1eda4f03a327b910c55dd84e4eb1e6e666537be0b97ed0f1",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104510.npy",
+      "bytes": 50520128,
+      "sha256": "7d519931391ad39ea2cf2270c52b37db89dc3f7a446e7132cdba35ebc22b0f56",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104511.npy",
+      "bytes": 50520128,
+      "sha256": "cda9928c618947700bffa9baedcd44b0af102f2b2035f10e75961be0fc9f1431",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fields\\fit-1104512.npy",
+      "bytes": 50520128,
+      "sha256": "576f629c4a2f5f76d7d0d2a1b88d04fea3b42ee609bef3b0d6bbcf9a4ed6c113",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-00.npz",
+      "bytes": 1209918,
+      "sha256": "387e407066850f041c6662ba7fa5982abe5d4483adf0049371db388e4bfc899d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-01.npz",
+      "bytes": 1219013,
+      "sha256": "8370312372de11c8f8d4fdd4b89ea716faeb87cff1a82f80fe4d96f9c1107137",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-02.npz",
+      "bytes": 1199526,
+      "sha256": "c3142e6a7c45f83d5ec14b17354a3d2023516c18466513ec4aff87c1d80be500",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-03.npz",
+      "bytes": 1213235,
+      "sha256": "6461f83cea6c7368754618e7ee2f1bc7ebd6f92967feb7dd52bb88676dfc9d5a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-04.npz",
+      "bytes": 1210073,
+      "sha256": "5d6770c547ff47ec835e495577ed9eb0b0ec39c1e2e00cdbbe8e66bd3870a646",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-05.npz",
+      "bytes": 1195160,
+      "sha256": "4413c78ba7fe8259cb664133ba23f7e5805d10270d2f4da0188ff13114238412",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-06.npz",
+      "bytes": 1197873,
+      "sha256": "06d1562efa844efb729026b6b6156334a5611fbcd02c7234c54506903103bc55",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-07.npz",
+      "bytes": 1210397,
+      "sha256": "eda161c8c6f0c0064164d9a8db7d804dd4498b2ce7d8854fe18dbec97a0c7022",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-08.npz",
+      "bytes": 1183819,
+      "sha256": "0913199e5ddb995edbd1a62e26673b49b0a2743785a80129573f717d0d80f7d0",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-09.npz",
+      "bytes": 1191665,
+      "sha256": "d0630e7525a20aaa034ae3196b9fa7137cbbdf817ffe9383988aaf9070b8a73b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-10.npz",
+      "bytes": 1208633,
+      "sha256": "e9b3325ea488251152a0c36e686b9d04391d9d56267f72ca9c16c2fb66664e87",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-11.npz",
+      "bytes": 1215873,
+      "sha256": "71f7b9705f57ffce77c83940f00a620d455f46c7c5b79699c2461e561f91afeb",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-12.npz",
+      "bytes": 1216416,
+      "sha256": "d19e347c2c5505cfbcbae2cc0114b536bc5c667d96ce792bd3cfb073be3306a3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-13.npz",
+      "bytes": 1183012,
+      "sha256": "a94460d405c1863e798e0af2cc8f9e53fd2f95a6a3c7908d957c38855ae550cb",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-14.npz",
+      "bytes": 1176879,
+      "sha256": "44ae5ce451869a42390a439ee7b277d47c18a8318a331274ba8de8f347823cef",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-15.npz",
+      "bytes": 1214001,
+      "sha256": "4f3392f4deefd90bc902351d4c5458e803badc2e81605de7c514aec729ab10ab",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-16.npz",
+      "bytes": 1221504,
+      "sha256": "d4c73ce4fcf1066726f3efd0733cedb4c1f20e8765521cff9721c73be4ab2a4e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-17.npz",
+      "bytes": 1207942,
+      "sha256": "2f9360715a977c8dce7b520030061d7701f223972795161657c712b141bbf332",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-18.npz",
+      "bytes": 1144959,
+      "sha256": "d80dccd3b06a14b495445143e9b2c3a3922aea21e83ed8c2c1d59c9c7c1fbdd2",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-19.npz",
+      "bytes": 1190525,
+      "sha256": "f05ec49e5f524027df67a8c09ffbbe98cbd9040c86e2dca3a705d6980d859a32",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-20.npz",
+      "bytes": 1191193,
+      "sha256": "52c0d6b8d833e2d1ee3a1dd75aadd52c5b3ca49b8ada86599ed7ccbf23d01f69",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-21.npz",
+      "bytes": 1208472,
+      "sha256": "3f68d64352d754540e1af7ea2b9acae765a2d9596dc66d25a244a0ceab023f74",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-22.npz",
+      "bytes": 1188411,
+      "sha256": "18c2a7389a2c20bb9c7ca2952d61c5fc8e1931bd78476570b49191b8cb1f4780",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-base-23.npz",
+      "bytes": 1198250,
+      "sha256": "ccf1df9485e29743168d300f5c74a1f4cf0c50a47480a125b934809d3e3448e3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-00.npz",
+      "bytes": 1179056,
+      "sha256": "45ccc810a200a590bf34bdeabf99165df69734954165d932be8418786e37af7a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-01.npz",
+      "bytes": 1203438,
+      "sha256": "d31f5366e15e6fa8b1344baa25fc45a2be6ea937eab2ccba84475a1691ea8016",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-02.npz",
+      "bytes": 1198653,
+      "sha256": "6e6e6ba6bb96ecdc4efad7a3a206925e51e6d7014d33ab5dbfe6f39d5d43abcf",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-03.npz",
+      "bytes": 1194499,
+      "sha256": "86139d252dfeb1e745244458f2d8c06bfd53671ea0cddfeaeac4c22caec65ee1",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-04.npz",
+      "bytes": 1197114,
+      "sha256": "d36dc3fb070662caee4208617cdf6cbbe127addbb51466bde17b6d2779b7d2e0",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-05.npz",
+      "bytes": 1187965,
+      "sha256": "2d8eff014b0bde4fde98d3143477a6d080af2e3758657efa22bea96f1cccc1d0",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-06.npz",
+      "bytes": 1196450,
+      "sha256": "4a922ae14da700800d2075e2874283d0505464367ac50ad39c649b4a41aea45d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-07.npz",
+      "bytes": 1184006,
+      "sha256": "f07b576d1ccbb2255a53ce7ad7c8bd98e7693fa41d39c623f445a3914969e20e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-08.npz",
+      "bytes": 1142357,
+      "sha256": "3602c32996699835bdb17f47fc2e26261a6d59c17ce697e247a12106aabbbaab",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-09.npz",
+      "bytes": 1123899,
+      "sha256": "5d284b8f1db60dedcb42cdb93ae7d3eaceb3d763d2e1ef99078ac64c68d1bfdd",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-10.npz",
+      "bytes": 1195852,
+      "sha256": "150c264eb1c689dc836126642b486054a4629babe0a58768df03be34a9df8645",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-11.npz",
+      "bytes": 1184379,
+      "sha256": "8ac5f6dfddf201a9d95c47d0e12d37d5df3612ce1ddce4ae73d09eea6b1af487",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-12.npz",
+      "bytes": 1219833,
+      "sha256": "dbdf4148cfce8eabf27a7036d2df61b8cbc63b45409efbe5176cd121f73dd4dc",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-13.npz",
+      "bytes": 1163976,
+      "sha256": "da61097ff1ddc7377ae436f97e6628bdd1f183c1445dc68f72fe1049f62d9c17",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-14.npz",
+      "bytes": 1207033,
+      "sha256": "849a183be16cff1fbd3b090b259de62ee3834d3a95c852b9062317df283e935f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-15.npz",
+      "bytes": 1167339,
+      "sha256": "0db231dca6d28133de2691538d165351302f1089af6ac697ca1202288a71b6d9",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-16.npz",
+      "bytes": 1206610,
+      "sha256": "733230dba105e7b68860b90935607a22f8ab01579c39e3cead73109e9119c616",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-17.npz",
+      "bytes": 1212206,
+      "sha256": "46d423445615584c1ddeee88573a704764a4d2933102d6778757226ead70fb9a",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-18.npz",
+      "bytes": 1076235,
+      "sha256": "235a500404ea84b70686f9cb7b95860a93fb8e0aa768e2ab8bb8ea89029e1c2d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-19.npz",
+      "bytes": 1177853,
+      "sha256": "45414652b26bf01dd1549745575206e6e40e909041f509c7f12e498f918ddfe9",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-20.npz",
+      "bytes": 1164326,
+      "sha256": "aae7193237ef0605e63d1644f093bf71d28592b645684d375813b1f31e85948b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-21.npz",
+      "bytes": 1220055,
+      "sha256": "2df3faed99797b2afaca621f7e19357908ce00b752e6d86277e14b9f719596f7",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-22.npz",
+      "bytes": 1192049,
+      "sha256": "1be23b552dbb50c6b815cc3520f319cfe2c8c7908934128d778ec0fd3bded717",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611141-23.npz",
+      "bytes": 1053898,
+      "sha256": "a4b2d1745b2ce7dd2ec643b029e62125384287d92b7349cd76cd6d37ad46151f",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-00.npz",
+      "bytes": 1179526,
+      "sha256": "90f28f0a37e1c8e4e73d5bd49013ed7373f3632c3508f43b21d6e34d4e8dfff6",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-01.npz",
+      "bytes": 1234743,
+      "sha256": "01821d6af12559b428e2e309579c624e1f55ae4acbef0f723fb9d0dbb1839fc3",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-02.npz",
+      "bytes": 1190795,
+      "sha256": "907dbd09d2383f9294bd640a80835da9eb452b75f5f89d4e5f7dffe0a10cfbb0",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-03.npz",
+      "bytes": 1187113,
+      "sha256": "2129043a9178fcfa66ef4b9ad14ed1f18f43242bef36fa5a49fa9ea2e1694216",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-04.npz",
+      "bytes": 1195869,
+      "sha256": "bd7515542cc85077f6a72b064ed5f9fa4e5b342ef4b58923e3dea9be10499f30",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-05.npz",
+      "bytes": 1060425,
+      "sha256": "051ce389b530dcea74347f8bc6c1e1f06c4ede20d0d7948d2f8be16cdea857d6",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-06.npz",
+      "bytes": 1204818,
+      "sha256": "4bafaf81bf4f42a8863b43749465e9792265377d2a051af3f54776c7364daf8e",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-07.npz",
+      "bytes": 1177916,
+      "sha256": "84bb49be3b9a7e0faf5462fc40e50493ce5204ac75ec12edcff58f9f7078489d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-08.npz",
+      "bytes": 1169928,
+      "sha256": "c6cf2756ba67b6039e4b97a13c9057db3caa7e787dfc138c192ad7496a857302",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-09.npz",
+      "bytes": 1139500,
+      "sha256": "e2095b381b328d4c1fd18dffba32dccd1be14aac0585d26fc6dcd62d72e2768c",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-10.npz",
+      "bytes": 1138834,
+      "sha256": "bebefa83b2cbb1b8f2f9020c88a9ac75bd4c726e0c0f1066279df2edb68717bc",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-11.npz",
+      "bytes": 1171809,
+      "sha256": "2f5132e850eeae48e4efa726e471045aaaaacb98e188dcaecd0624950d7d7900",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-12.npz",
+      "bytes": 1168657,
+      "sha256": "968174f66fe2221cac97b7e3039ffea5bc2c1603a3f0edc4b1d6be3c1df3389d",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-13.npz",
+      "bytes": 1136225,
+      "sha256": "bd6b0e3e91e094a715018d9022b4e4fa8bf5569a9d547dfa61a5a2ef15979035",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-14.npz",
+      "bytes": 1163993,
+      "sha256": "feb7ffe9700f73714d3768a24fd6c00dd3c2b63b61f05649f0466fc58cc19686",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-15.npz",
+      "bytes": 1164360,
+      "sha256": "5ccfa0c80a89dcc7699a0ff446b08222c5e516c91f4972060e06d40afaa29ef8",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-16.npz",
+      "bytes": 1164970,
+      "sha256": "7fdbecc83a520dc1a1e6fff8923438b9302568c245df9309d20e5116f3e6afd4",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-17.npz",
+      "bytes": 1196911,
+      "sha256": "fbe26a8f697614f6cc7200256176446699dde5d35fb5e4ce69f9a16bb6921347",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-18.npz",
+      "bytes": 1176461,
+      "sha256": "ff23ec9e9573324c9554813ffa9104933f4330c6baa2f9526e5acd9b13f97a54",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-19.npz",
+      "bytes": 1203355,
+      "sha256": "dd41302a8e85490640e7bda447d66dc2bf3a4993c89c1d014d092716ba07cf64",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-20.npz",
+      "bytes": 1164147,
+      "sha256": "660d8c78553249c70b056f6e105a511c875c4ff158fd7861fe6a35e513df0fbb",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-21.npz",
+      "bytes": 1134904,
+      "sha256": "56c9d33549e7e56d72b9b64b84de344c141e9d43db4d68f80ed2c1e1e8b4a689",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-22.npz",
+      "bytes": 1173665,
+      "sha256": "f3fd31cd42b713c2e52ce77a7978322f8812fdeaec641bf68a28d29d2fe426b7",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    },
+    {
+      "archive": "uav-fine-memory-20261104",
+      "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-fine-memory-20261104\\run01\\fit-self-s202611142-23.npz",
+      "bytes": 1205166,
+      "sha256": "c3fee2923d7f857337c156882b82c3a603e7b9da780349c7c8bef384491f4d0b",
+      "reason": "Large local hydraulic field or training tensor; source metadata and outcomes included"
+    }
+  ]
+}
