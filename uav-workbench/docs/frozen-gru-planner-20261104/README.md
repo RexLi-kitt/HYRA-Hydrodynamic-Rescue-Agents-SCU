@@ -37,3 +37,9 @@ python uav-workbench/docs/frozen-gru-planner-20261104/replay_frozen.py --water P
 ## 后续与回退
 
 先保留当前版本，在新开发场隔离预测加权与探索不足，再考虑观测驱动的探索保底和多水情训练；不直接在旧分布堆轮次。后续调参不复用本批已查看TEST作独立验收。回退为停止使用此隔离研究入口，原生产入口保持原状。
+
+## 完整报告
+
+[11页完整Word报告](report/HYRA冻结GRU与规划完整报告-20261104.docx)包含任务参数、训练来源、评分接口改动、独立统计、反复干湿失败及52个场景布局的全量对照。
+
+[可直接阅读的报告文本与表格](report/报告文本与表格.txt)与Word正文顺序一致。`report/report-verification.json`记录报告和来源哈希及11页逐页排版检查。

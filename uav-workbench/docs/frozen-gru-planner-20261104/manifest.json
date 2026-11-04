@@ -1863,8 +1863,8 @@
     },
     {
       "path": "uav-workbench/docs/frozen-gru-planner-20261104/README.md",
-      "bytes": 3370,
-      "sha256": "eee7e43206c0c4a272e1cf71a1ea442bef2129ec44c634667d04614155422eb6"
+      "bytes": 3790,
+      "sha256": "1a754b8fe548666da6cfff101a73d410de55ac6c61a95a7fbe6430d45b99ff67"
     },
     {
       "path": "uav-workbench/docs/frozen-gru-planner-20261104/replay_frozen.py",
@@ -1880,6 +1880,21 @@
       "path": "uav-workbench/docs/frozen-gru-planner-20261104/pr-verification.json",
       "bytes": 317,
       "sha256": "26b61db61cebfb6ff8a5b3e592c33fe0ab69e8bcde9522a32c7e4bfc2fb14d84"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/report/HYRA冻结GRU与规划完整报告-20261104.docx",
+      "bytes": 54257,
+      "sha256": "52b61204c988c70a060ad295cc13cb74c2587786d6791ca91fac176426d21111"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/report/report-verification.json",
+      "bytes": 2289,
+      "sha256": "9929289a7ac1d7556b8f7d7e6407d50228e8342682126c73a5662362cc8f8e5a"
+    },
+    {
+      "path": "uav-workbench/docs/frozen-gru-planner-20261104/report/报告文本与表格.txt",
+      "bytes": 19287,
+      "sha256": "2b80c3f21dedbb3be4253d069a2eb981046248403a40cca4e06cb7519de6d6b6"
     }
   ],
   "local_only": [
