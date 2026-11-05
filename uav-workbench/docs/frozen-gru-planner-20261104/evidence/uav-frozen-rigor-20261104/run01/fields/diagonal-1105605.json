@@ -1,0 +1,86 @@
+{
+  "seed": 1105605,
+  "parent": "synthetic-diagonal-1105605",
+  "family": "diagonal",
+  "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\diagonal-1105605.npy",
+  "sha256": "32375864044a8f7dccea8db5fda33920229e25c0b6f4873b0fd069601f973e2b",
+  "scope": "Uncalibrated synthetic SWE structure shift, not field truth",
+  "finite_nonnegative": true,
+  "mass_residual_m3": 1.4551915228366852e-11,
+  "source_volume_m3": 9855.935574332223,
+  "initial_volume_m3": 694.2677063313475,
+  "final_volume_m3": 10550.203280663585,
+  "numerics": {
+    "schema": "hyra-swe-v2",
+    "flux_method": "rusanov",
+    "open_boundary_mode": "outflow_only",
+    "wall_flux_mode": "hydrostatic",
+    "structures": "none",
+    "compute_backend": "numpy",
+    "spatial_order": 1,
+    "time_integrator": "euler",
+    "low_froude": 0,
+    "cfl": 0.4,
+    "limiter": "generalised_minmod",
+    "limiter_theta": 1.5,
+    "dry_depth_m": 1e-08,
+    "velocity_depth_m": 1e-06,
+    "max_timestep_s": 2.5,
+    "max_steps": 500000,
+    "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+    "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+    "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+    "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+    "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+  },
+  "hydrograph": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      300.0,
+      13.934719369381074
+    ],
+    [
+      750.0,
+      6.967359684690537
+    ],
+    [
+      1200.0,
+      0.5
+    ],
+    [
+      1500.0,
+      0.0
+    ],
+    [
+      2400.0,
+      0.0
+    ]
+  ],
+  "source_cells": [
+    [
+      [
+        15,
+        13
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        15,
+        17
+      ]
+    ]
+  ]
+}

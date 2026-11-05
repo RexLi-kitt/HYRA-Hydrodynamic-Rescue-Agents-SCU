@@ -1,0 +1,164 @@
+{
+  "rows_verified": 165,
+  "no_intervention_person_records_exact": 38,
+  "interventions": [
+    {
+      "phase": "development_rotation",
+      "case": "test-1",
+      "method": "statistical-s202611171-e8",
+      "supplied": 37,
+      "avoidance_steps": 1,
+      "min_swept_separation": 5.695841128153469,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "development",
+      "case": "test-0",
+      "method": "old142-adapter",
+      "supplied": 39,
+      "avoidance_steps": 2,
+      "min_swept_separation": 10.412986909649653,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "development",
+      "case": "test-1",
+      "method": "statistical-s202611171-e8",
+      "supplied": 39,
+      "avoidance_steps": 1,
+      "min_swept_separation": 7.346980809065258,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "development",
+      "case": "test-4",
+      "method": "statistical-s202611171-e8",
+      "supplied": 37,
+      "avoidance_steps": 12,
+      "min_swept_separation": 5.516284941640321,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "development",
+      "case": "test-4",
+      "method": "statistical-s202611172-e16",
+      "supplied": 35,
+      "avoidance_steps": 2,
+      "min_swept_separation": 5.498089182995201,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "development_rotation",
+      "case": "test-2",
+      "method": "coverage100",
+      "supplied": 30,
+      "avoidance_steps": 15,
+      "min_swept_separation": 5.09440542799266,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "development_rotation",
+      "case": "test-2",
+      "method": "statistical-s202611172-e16",
+      "supplied": 35,
+      "avoidance_steps": 1,
+      "min_swept_separation": 6.329400247365926,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-0",
+      "method": "statistical-s202611171-e8",
+      "supplied": 35,
+      "avoidance_steps": 15,
+      "min_swept_separation": 8.905028608658661,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-8",
+      "method": "flow_coverage",
+      "supplied": 34,
+      "avoidance_steps": 1,
+      "min_swept_separation": 5.303457046016096,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "confirmation",
+      "case": "confirmation-8",
+      "method": "statistical-s202611171-e8",
+      "supplied": 33,
+      "avoidance_steps": 4,
+      "min_swept_separation": 7.298684144441412,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "confirmation_rotation",
+      "case": "confirmation-1",
+      "method": "flow_coverage",
+      "supplied": 33,
+      "avoidance_steps": 1,
+      "min_swept_separation": 7.0896063249567405,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    },
+    {
+      "phase": "confirmation_rotation",
+      "case": "confirmation-1",
+      "method": "statistical-s202611171-e8",
+      "supplied": 33,
+      "avoidance_steps": 11,
+      "min_swept_separation": 5.085519681632901,
+      "conflicts": 0,
+      "longest_patrol_stop": 0
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "min_swept_separation": 5.085519681632901,
+  "max_patrol_stop": 0,
+  "new_refloats": 0,
+  "paired_confirmation": {
+    "coverage100": {
+      "parents": 20,
+      "people_difference_pp": -0.375,
+      "p95_scene_difference_pp": 0.0,
+      "people_cluster_bootstrap95_pp": [
+        -2.625,
+        1.5
+      ],
+      "p95_scene_cluster_bootstrap95_pp": [
+        -15.0,
+        15.0
+      ],
+      "people_wins": 9,
+      "people_ties": 3,
+      "people_losses": 8
+    },
+    "flow_coverage": {
+      "parents": 20,
+      "people_difference_pp": 0.625,
+      "p95_scene_difference_pp": 10.0,
+      "people_cluster_bootstrap95_pp": [
+        -2.0,
+        2.75
+      ],
+      "p95_scene_cluster_bootstrap95_pp": [
+        0.0,
+        25.0
+      ],
+      "people_wins": 9,
+      "people_ties": 6,
+      "people_losses": 5
+    }
+  }
+}

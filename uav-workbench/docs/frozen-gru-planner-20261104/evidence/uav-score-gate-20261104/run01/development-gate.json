@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "per_model": {
+    "statistical-s202611171-e8": {
+      "original_noninferior": false,
+      "rotation_noninferior": true,
+      "rotation_planner": true
+    },
+    "statistical-s202611172-e16": {
+      "original_noninferior": false,
+      "rotation_noninferior": true,
+      "rotation_planner": true
+    }
+  },
+  "strict_total_improvement": false,
+  "before_confirmation": true
+}

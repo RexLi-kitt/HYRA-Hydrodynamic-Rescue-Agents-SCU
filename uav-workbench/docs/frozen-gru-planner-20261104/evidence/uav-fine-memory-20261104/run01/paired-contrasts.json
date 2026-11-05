@@ -1,0 +1,38 @@
+[
+  {
+    "left": "fine-s202611141-e32",
+    "right": "coarse-s202611141-e32",
+    "people_gap_pp": 2.8125,
+    "parent_ci95_pp": [
+      -1.25,
+      7.5
+    ]
+  },
+  {
+    "left": "mixed-s202611141-e32",
+    "right": "fine-s202611141-e32",
+    "people_gap_pp": -1.5625,
+    "parent_ci95_pp": [
+      -8.125,
+      4.375
+    ]
+  },
+  {
+    "left": "fine-s202611142-e32",
+    "right": "coarse-s202611142-e32",
+    "people_gap_pp": 2.5,
+    "parent_ci95_pp": [
+      -1.5625,
+      7.187499999999999
+    ]
+  },
+  {
+    "left": "mixed-s202611142-e32",
+    "right": "fine-s202611142-e32",
+    "people_gap_pp": 1.5625,
+    "parent_ci95_pp": [
+      -1.875,
+      5.0
+    ]
+  }
+]

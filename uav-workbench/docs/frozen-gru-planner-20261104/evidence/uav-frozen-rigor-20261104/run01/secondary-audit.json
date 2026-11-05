@@ -1,0 +1,232 @@
+{
+  "rows": 260,
+  "person_records": 10400,
+  "scenario_hash": true,
+  "same_events_for_all_methods": true,
+  "all_summary_cells_recomputed": true,
+  "bootstrap_intervals_recomputed": true,
+  "old_dataset_field_hashes": 32,
+  "new_independent_swe_field_hashes": 48,
+  "no_old_field_hash_overlap": true,
+  "paired_counts": {
+    "coverage100": {
+      "people_wins": 34,
+      "people_ties": 4,
+      "people_losses": 2,
+      "p95_gru_only": 23,
+      "p95_baseline_only": 1
+    },
+    "flow_coverage": {
+      "people_wins": 33,
+      "people_ties": 1,
+      "people_losses": 6,
+      "p95_gru_only": 23,
+      "p95_baseline_only": 2
+    },
+    "statistic": {
+      "people_wins": 27,
+      "people_ties": 5,
+      "people_losses": 8,
+      "p95_gru_only": 19,
+      "p95_baseline_only": 4
+    },
+    "linear": {
+      "people_wins": 31,
+      "people_ties": 1,
+      "people_losses": 8,
+      "p95_gru_only": 19,
+      "p95_baseline_only": 4
+    }
+  },
+  "failure_and_refloat": {
+    "original": {
+      "coverage100": {
+        "failed": 229,
+        "expired": 229,
+        "outside": 0,
+        "failed_never_seen": 91,
+        "failed_not_seen_by_deadline": 222,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "flow_coverage": {
+        "failed": 235,
+        "expired": 234,
+        "outside": 1,
+        "failed_never_seen": 99,
+        "failed_not_seen_by_deadline": 226,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "statistic": {
+        "failed": 165,
+        "expired": 164,
+        "outside": 1,
+        "failed_never_seen": 59,
+        "failed_not_seen_by_deadline": 155,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "linear": {
+        "failed": 205,
+        "expired": 205,
+        "outside": 0,
+        "failed_never_seen": 103,
+        "failed_not_seen_by_deadline": 200,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "gru-frozen": {
+        "failed": 90,
+        "expired": 90,
+        "outside": 0,
+        "failed_never_seen": 50,
+        "failed_not_seen_by_deadline": 88,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      }
+    },
+    "two_valleys": {
+      "coverage100": {
+        "failed": 28,
+        "expired": 28,
+        "outside": 0,
+        "failed_never_seen": 5,
+        "failed_not_seen_by_deadline": 27,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "flow_coverage": {
+        "failed": 22,
+        "expired": 22,
+        "outside": 0,
+        "failed_never_seen": 5,
+        "failed_not_seen_by_deadline": 22,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "statistic": {
+        "failed": 18,
+        "expired": 18,
+        "outside": 0,
+        "failed_never_seen": 10,
+        "failed_not_seen_by_deadline": 18,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "linear": {
+        "failed": 28,
+        "expired": 28,
+        "outside": 0,
+        "failed_never_seen": 17,
+        "failed_not_seen_by_deadline": 28,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "gru-frozen": {
+        "failed": 11,
+        "expired": 11,
+        "outside": 0,
+        "failed_never_seen": 5,
+        "failed_not_seen_by_deadline": 10,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      }
+    },
+    "diagonal": {
+      "coverage100": {
+        "failed": 23,
+        "expired": 23,
+        "outside": 0,
+        "failed_never_seen": 8,
+        "failed_not_seen_by_deadline": 22,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "flow_coverage": {
+        "failed": 29,
+        "expired": 29,
+        "outside": 0,
+        "failed_never_seen": 9,
+        "failed_not_seen_by_deadline": 27,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "statistic": {
+        "failed": 28,
+        "expired": 28,
+        "outside": 0,
+        "failed_never_seen": 9,
+        "failed_not_seen_by_deadline": 27,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "linear": {
+        "failed": 24,
+        "expired": 24,
+        "outside": 0,
+        "failed_never_seen": 8,
+        "failed_not_seen_by_deadline": 22,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      },
+      "gru-frozen": {
+        "failed": 12,
+        "expired": 12,
+        "outside": 0,
+        "failed_never_seen": 2,
+        "failed_not_seen_by_deadline": 12,
+        "people_refloated": 0,
+        "supplied_after_any_refloat": 0
+      }
+    },
+    "manufactured_rewet": {
+      "coverage100": {
+        "failed": 79,
+        "expired": 79,
+        "outside": 0,
+        "failed_never_seen": 45,
+        "failed_not_seen_by_deadline": 78,
+        "people_refloated": 123,
+        "supplied_after_any_refloat": 44
+      },
+      "flow_coverage": {
+        "failed": 97,
+        "expired": 97,
+        "outside": 0,
+        "failed_never_seen": 61,
+        "failed_not_seen_by_deadline": 97,
+        "people_refloated": 130,
+        "supplied_after_any_refloat": 34
+      },
+      "statistic": {
+        "failed": 143,
+        "expired": 143,
+        "outside": 0,
+        "failed_never_seen": 129,
+        "failed_not_seen_by_deadline": 142,
+        "people_refloated": 153,
+        "supplied_after_any_refloat": 12
+      },
+      "linear": {
+        "failed": 129,
+        "expired": 129,
+        "outside": 0,
+        "failed_never_seen": 119,
+        "failed_not_seen_by_deadline": 129,
+        "people_refloated": 148,
+        "supplied_after_any_refloat": 21
+      },
+      "gru-frozen": {
+        "failed": 144,
+        "expired": 144,
+        "outside": 0,
+        "failed_never_seen": 136,
+        "failed_not_seen_by_deadline": 144,
+        "people_refloated": 156,
+        "supplied_after_any_refloat": 14
+      }
+    }
+  },
+  "limitations": "Hashes and mutation probes are implementation checks, not proof of realism or exhaustive absence of information leaks. Bootstrap intervals are per comparison, not simultaneous multiple-comparison bounds. Frozen GRU is one selected training seed/checkpoint; training-seed variability remains unmeasured."
+}

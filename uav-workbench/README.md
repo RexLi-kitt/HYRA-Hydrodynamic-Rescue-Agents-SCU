@@ -90,3 +90,6 @@ python tools/check_workbench.py --integration
 `python run.py serve` 和 `static/` 属于历史单机四动作界面；日常使用现行入口 `console_app.py`。原 `run.py audit/demo/pilot/report/p3`、`learning.py` 和所有已有实验命令保留，复现时使用对应轮次的冻结源码与依赖，不混用当前应用整理后的源码快照。
 
 2026年10月29日的改动范围、兼容策略和核验记录见[代码整理记录](docs/CODE_CLEANUP_20261029.md)。
+
+
+[冻结GRU与规划验证快照](docs/frozen-gru-planner-20261104/README.md)：实际冻结权重、40张新图主检验、简单模型对照及未通过的反复干湿压力测试，生产默认未替换。

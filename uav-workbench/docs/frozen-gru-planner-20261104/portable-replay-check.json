@@ -1,0 +1,370 @@
+{
+  "case": "original-1105501",
+  "method": "gru-frozen",
+  "supplied": 38,
+  "people": 40,
+  "min_separation": 10.431859044013287,
+  "persons": [
+    {
+      "id": 0,
+      "fall": 1425,
+      "deadline": 2085,
+      "first_seen": 1945.0,
+      "supplied_at": 1957.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 1,
+      "fall": 810,
+      "deadline": 1470,
+      "first_seen": 877.0,
+      "supplied_at": 888.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 2,
+      "fall": 826,
+      "deadline": 1486,
+      "first_seen": 1397.0,
+      "supplied_at": 1408.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 3,
+      "fall": 861,
+      "deadline": 1521,
+      "first_seen": 887.0,
+      "supplied_at": 898.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 4,
+      "fall": 813,
+      "deadline": 1473,
+      "first_seen": 1066.0,
+      "supplied_at": 1077.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 5,
+      "fall": 298,
+      "deadline": 958,
+      "first_seen": 495.0,
+      "supplied_at": 506.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 6,
+      "fall": 258,
+      "deadline": 918,
+      "first_seen": 610.0,
+      "supplied_at": 621.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 7,
+      "fall": 852,
+      "deadline": 1512,
+      "first_seen": 873.0,
+      "supplied_at": 884.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 8,
+      "fall": 814,
+      "deadline": 1474,
+      "first_seen": 880.0,
+      "supplied_at": 891.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 9,
+      "fall": 253,
+      "deadline": 913,
+      "first_seen": 264.0,
+      "supplied_at": 275.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 10,
+      "fall": 833,
+      "deadline": 1493,
+      "first_seen": 1345.0,
+      "supplied_at": 1356.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 11,
+      "fall": 840,
+      "deadline": 1500,
+      "first_seen": 903.0,
+      "supplied_at": 915.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 12,
+      "fall": 1416,
+      "deadline": 2076,
+      "first_seen": 1416.0,
+      "supplied_at": 1427.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 13,
+      "fall": 283,
+      "deadline": 943,
+      "first_seen": 446.0,
+      "supplied_at": 457.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 14,
+      "fall": 840,
+      "deadline": 1500,
+      "first_seen": 859.0,
+      "supplied_at": 870.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 15,
+      "fall": 821,
+      "deadline": 1481,
+      "first_seen": 1684.0,
+      "supplied_at": -1.0,
+      "status": 3,
+      "refloats": 0
+    },
+    {
+      "id": 16,
+      "fall": 287,
+      "deadline": 947,
+      "first_seen": 291.0,
+      "supplied_at": 302.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 17,
+      "fall": 1386,
+      "deadline": 2046,
+      "first_seen": 1517.0,
+      "supplied_at": 1528.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 18,
+      "fall": 1403,
+      "deadline": 2063,
+      "first_seen": 1485.0,
+      "supplied_at": 1496.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 19,
+      "fall": 309,
+      "deadline": 969,
+      "first_seen": 752.0,
+      "supplied_at": 763.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 20,
+      "fall": 844,
+      "deadline": 1504,
+      "first_seen": 897.0,
+      "supplied_at": 908.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 21,
+      "fall": 823,
+      "deadline": 1483,
+      "first_seen": 1639.0,
+      "supplied_at": -1.0,
+      "status": 3,
+      "refloats": 0
+    },
+    {
+      "id": 22,
+      "fall": 302,
+      "deadline": 962,
+      "first_seen": 387.0,
+      "supplied_at": 399.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 23,
+      "fall": 861,
+      "deadline": 1521,
+      "first_seen": 867.0,
+      "supplied_at": 878.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 24,
+      "fall": 309,
+      "deadline": 969,
+      "first_seen": 390.0,
+      "supplied_at": 401.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 25,
+      "fall": 295,
+      "deadline": 955,
+      "first_seen": 314.0,
+      "supplied_at": 325.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 26,
+      "fall": 1375,
+      "deadline": 2035,
+      "first_seen": 1448.0,
+      "supplied_at": 1459.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 27,
+      "fall": 256,
+      "deadline": 916,
+      "first_seen": 516.0,
+      "supplied_at": 527.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 28,
+      "fall": 254,
+      "deadline": 914,
+      "first_seen": 473.0,
+      "supplied_at": 484.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 29,
+      "fall": 851,
+      "deadline": 1511,
+      "first_seen": 1228.0,
+      "supplied_at": 1239.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 30,
+      "fall": 816,
+      "deadline": 1476,
+      "first_seen": 1146.0,
+      "supplied_at": 1157.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 31,
+      "fall": 1381,
+      "deadline": 2041,
+      "first_seen": 1391.0,
+      "supplied_at": 1402.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 32,
+      "fall": 831,
+      "deadline": 1491,
+      "first_seen": 1011.0,
+      "supplied_at": 1022.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 33,
+      "fall": 1419,
+      "deadline": 2079,
+      "first_seen": 1620.0,
+      "supplied_at": 1631.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 34,
+      "fall": 287,
+      "deadline": 947,
+      "first_seen": 338.0,
+      "supplied_at": 349.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 35,
+      "fall": 1407,
+      "deadline": 2067,
+      "first_seen": 1657.0,
+      "supplied_at": 1668.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 36,
+      "fall": 814,
+      "deadline": 1474,
+      "first_seen": 858.0,
+      "supplied_at": 870.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 37,
+      "fall": 823,
+      "deadline": 1483,
+      "first_seen": 824.0,
+      "supplied_at": 835.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 38,
+      "fall": 300,
+      "deadline": 960,
+      "first_seen": 518.0,
+      "supplied_at": 529.0,
+      "status": 2,
+      "refloats": 0
+    },
+    {
+      "id": 39,
+      "fall": 864,
+      "deadline": 1524,
+      "first_seen": 963.0,
+      "supplied_at": 974.0,
+      "status": 2,
+      "refloats": 0
+    }
+  ],
+  "exact_archived_person_records": true
+}

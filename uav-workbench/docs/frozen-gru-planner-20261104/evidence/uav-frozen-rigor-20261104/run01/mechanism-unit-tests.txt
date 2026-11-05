@@ -1,0 +1,14 @@
+test_depth_boundary_and_deadline (refloat_contracts.TestRefloat.test_depth_boundary_and_deadline) ... ok
+test_dry_stays_even_with_invalid_dry_velocity (refloat_contracts.TestRefloat.test_dry_stays_even_with_invalid_dry_velocity) ... ok
+test_full_step_expiry_does_not_restart (refloat_contracts.TestRefloat.test_full_step_expiry_does_not_restart) ... ok
+test_obstacle_remains_captured (refloat_contracts.TestRefloat.test_obstacle_remains_captured) ... ok
+test_random_call_order_and_public_id_invariance (refloat_contracts.TestRefloat.test_random_call_order_and_public_id_invariance) ... ok
+test_random_per_minute_conversion (refloat_contracts.TestRefloat.test_random_per_minute_conversion) ... ok
+test_resolved_people_do_not_refloat (refloat_contracts.TestRefloat.test_resolved_people_do_not_refloat) ... ok
+test_resticking_and_second_refloat (refloat_contracts.TestRefloat.test_resticking_and_second_refloat) ... ok
+test_speed_magnitude_boundary (refloat_contracts.TestRefloat.test_speed_magnitude_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.052s
+
+OK

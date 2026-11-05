@@ -1,0 +1,23 @@
+{
+  "raw_rows_verified": true,
+  "reused_people_exact": true,
+  "FIT_reference_recomputed": true,
+  "source_weights_unchanged": true,
+  "gate_statistics": {
+    "statistical-s202611171-e8": {
+      "predictions": 602,
+      "attenuated": 212,
+      "mean_strength": 0.9041322886677693,
+      "failed": 46,
+      "unseen_by_deadline": 46
+    },
+    "statistical-s202611172-e16": {
+      "predictions": 600,
+      "attenuated": 306,
+      "mean_strength": 0.893052389981097,
+      "failed": 45,
+      "unseen_by_deadline": 43
+    }
+  },
+  "refloats": 0
+}

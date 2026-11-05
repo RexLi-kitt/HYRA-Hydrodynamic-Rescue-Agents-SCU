@@ -1,0 +1,92 @@
+{
+  "coarse-s202611141-e16": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 235,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 82,
+    "refloats": 0
+  },
+  "coarse-s202611141-e32": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 219,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 98,
+    "refloats": 0
+  },
+  "fine-s202611141-e16": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 235,
+    "all_scenes": 0,
+    "p95_scenes": 1,
+    "failed_not_seen_before_deadline": 83,
+    "refloats": 0
+  },
+  "fine-s202611141-e32": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 228,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 85,
+    "refloats": 0
+  },
+  "mixed-s202611141-e32": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 223,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 94,
+    "refloats": 0
+  },
+  "coarse-s202611142-e16": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 238,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 80,
+    "refloats": 0
+  },
+  "coarse-s202611142-e32": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 230,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 89,
+    "refloats": 0
+  },
+  "fine-s202611142-e16": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 255,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 63,
+    "refloats": 0
+  },
+  "fine-s202611142-e32": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 238,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 79,
+    "refloats": 0
+  },
+  "mixed-s202611142-e32": {
+    "cases": 8,
+    "people": 320,
+    "supplied": 243,
+    "all_scenes": 0,
+    "p95_scenes": 0,
+    "failed_not_seen_before_deadline": 72,
+    "refloats": 0
+  }
+}

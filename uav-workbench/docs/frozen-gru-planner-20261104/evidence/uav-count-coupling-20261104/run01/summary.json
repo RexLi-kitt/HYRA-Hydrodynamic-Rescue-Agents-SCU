@@ -1,0 +1,112 @@
+{
+  "results": {
+    "confirmation": {
+      "coverage100": {
+        "scenes": 6,
+        "supplied": 213,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 6,
+        "supplied": 205,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-adapter": {
+        "scenes": 6,
+        "supplied": 226,
+        "people": 240,
+        "all_scenes": 1,
+        "p95_scenes": 3
+      },
+      "oracle-coupled": {
+        "scenes": 6,
+        "supplied": 240,
+        "people": 240,
+        "all_scenes": 6,
+        "p95_scenes": 6
+      },
+      "residual-statistical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 207,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 6,
+        "supplied": 214,
+        "people": 240,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 6,
+        "supplied": 226,
+        "people": 240,
+        "all_scenes": 2,
+        "p95_scenes": 2
+      }
+    },
+    "confirmation_rotation": {
+      "coverage100": {
+        "scenes": 3,
+        "supplied": 100,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 3,
+        "supplied": 102,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-adapter": {
+        "scenes": 3,
+        "supplied": 114,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 2
+      },
+      "oracle-coupled": {
+        "scenes": 3,
+        "supplied": 120,
+        "people": 120,
+        "all_scenes": 3,
+        "p95_scenes": 3
+      },
+      "residual-statistical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 99,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611171-e8": {
+        "scenes": 3,
+        "supplied": 94,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "statistical-s202611172-e16": {
+        "scenes": 3,
+        "supplied": 99,
+        "people": 120,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      }
+    }
+  },
+  "chosen": "old142-adapter",
+  "development_gate": true,
+  "elapsed_s": 338.0779999999977,
+  "new_rollouts": 36,
+  "reused_rollouts": 27,
+  "source_inputs_unchanged": true
+}

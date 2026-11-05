@@ -1,0 +1,108 @@
+{
+  "seed": 1105602,
+  "parent": "synthetic-two_valleys-1105602",
+  "family": "two_valleys",
+  "path": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\fields\\two_valleys-1105602.npy",
+  "sha256": "99ad9d2cdbf799de9091fae53024d38dc300b7ac6c6822c7f6e90316188489c1",
+  "scope": "Uncalibrated synthetic SWE structure shift, not field truth",
+  "finite_nonnegative": true,
+  "mass_residual_m3": -2.000888343900442e-11,
+  "source_volume_m3": 12005.341537854185,
+  "initial_volume_m3": 2445.1070019772706,
+  "final_volume_m3": 14450.448539831435,
+  "numerics": {
+    "schema": "hyra-swe-v2",
+    "flux_method": "rusanov",
+    "open_boundary_mode": "outflow_only",
+    "wall_flux_mode": "hydrostatic",
+    "structures": "none",
+    "compute_backend": "numpy",
+    "spatial_order": 1,
+    "time_integrator": "euler",
+    "low_froude": 0,
+    "cfl": 0.4,
+    "limiter": "generalised_minmod",
+    "limiter_theta": 1.5,
+    "dry_depth_m": 1e-08,
+    "velocity_depth_m": 1e-06,
+    "max_timestep_s": 2.5,
+    "max_steps": 500000,
+    "source_integration": "RK-weighted_water_sources; Strang_Manning; piecewise_constant_events",
+    "dry_sink_completion": "unused_per_cell_capacity_after_RK_average",
+    "positivity_limiter": "shared_donor_factor_on_mass_and_advective_momentum",
+    "bed_source": "hydrostatic_reconstruction_and_within_cell_bed_gradient",
+    "face_flux_sampling": "RK-weighted mean over last accepted transport step"
+  },
+  "hydrograph": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      300.0,
+      17.11902450052468
+    ],
+    [
+      750.0,
+      8.55951225026234
+    ],
+    [
+      1200.0,
+      0.5
+    ],
+    [
+      1500.0,
+      0.0
+    ],
+    [
+      2400.0,
+      0.0
+    ]
+  ],
+  "source_cells": [
+    [
+      [
+        15,
+        26
+      ],
+      [
+        15,
+        27
+      ],
+      [
+        15,
+        28
+      ],
+      [
+        15,
+        29
+      ],
+      [
+        15,
+        30
+      ]
+    ],
+    [
+      [
+        15,
+        75
+      ],
+      [
+        15,
+        76
+      ],
+      [
+        15,
+        77
+      ],
+      [
+        15,
+        78
+      ],
+      [
+        15,
+        79
+      ]
+    ]
+  ]
+}

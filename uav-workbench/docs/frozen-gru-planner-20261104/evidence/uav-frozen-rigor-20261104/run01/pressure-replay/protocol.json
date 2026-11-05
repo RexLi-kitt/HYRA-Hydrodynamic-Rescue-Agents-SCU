@@ -1,0 +1,29 @@
+{
+  "scope": "Post-test exploratory diagnostic, not new independent confirmation",
+  "case": "manufactured-0",
+  "methods": [
+    "coverage100",
+    "statistic",
+    "gru-frozen"
+  ],
+  "change": "None. Exact replay and trajectory logging only.",
+  "question": "Does restricted exploration appear before the first dry/refloat episode? Separate lack of exploration from an unsupported claim that refloating alone caused failure.",
+  "first_dry_start": 480,
+  "snapshots": [
+    0,
+    30,
+    120,
+    240,
+    479,
+    600,
+    900,
+    1200,
+    1500,
+    1800,
+    2100,
+    2399
+  ],
+  "source_sha256": "9d2e52163734221e98604774750c5690f4f914aa7c53076eefe873d4ad818fbf",
+  "source_inputs_locked_by": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\23\\01a16912-ff90-73e3-a2db-13d580b278d3\\uav-frozen-rigor-20261104\\run01\\protocol.json",
+  "no_training": true
+}

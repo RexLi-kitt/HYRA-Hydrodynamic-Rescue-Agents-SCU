@@ -1,0 +1,79 @@
+{
+  "chosen": "statistical-s202611171-e8",
+  "development_passed": true,
+  "development": {
+    "coverage100": {
+      "scenes": 6,
+      "supplied": 200,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "flow_coverage": {
+      "scenes": 6,
+      "supplied": 207,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 1
+    },
+    "old142-adapter": {
+      "scenes": 6,
+      "supplied": 213,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 2
+    },
+    "statistical-s202611171-e8": {
+      "scenes": 6,
+      "supplied": 218,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 1
+    },
+    "statistical-s202611172-e16": {
+      "scenes": 6,
+      "supplied": 220,
+      "people": 240,
+      "all_scenes": 0,
+      "p95_scenes": 2
+    }
+  },
+  "rotation": {
+    "coverage100": {
+      "scenes": 3,
+      "supplied": 101,
+      "people": 120,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "flow_coverage": {
+      "scenes": 3,
+      "supplied": 96,
+      "people": 120,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "old142-adapter": {
+      "scenes": 3,
+      "supplied": 107,
+      "people": 120,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    },
+    "statistical-s202611171-e8": {
+      "scenes": 3,
+      "supplied": 109,
+      "people": 120,
+      "all_scenes": 0,
+      "p95_scenes": 1
+    },
+    "statistical-s202611172-e16": {
+      "scenes": 3,
+      "supplied": 106,
+      "people": 120,
+      "all_scenes": 0,
+      "p95_scenes": 0
+    }
+  },
+  "before_confirmation": true
+}

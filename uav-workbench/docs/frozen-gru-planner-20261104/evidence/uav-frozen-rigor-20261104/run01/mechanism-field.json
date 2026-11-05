@@ -1,0 +1,20 @@
+{
+  "scope": "Prescribed uniform drying/rewetting with .25m/s drift. Not a SWE validation case; volume change is externally prescribed, no momentum-accuracy claim.",
+  "dry_intervals": [
+    [
+      480,
+      520
+    ],
+    [
+      1080,
+      1120
+    ],
+    [
+      1680,
+      1720
+    ]
+  ],
+  "maximum_depth": 2.2,
+  "speed": 0.25,
+  "sha256": "851d15a83dc3f0aa75c8c9d4649325edaa696333da9737fda4483d3ccaada116"
+}

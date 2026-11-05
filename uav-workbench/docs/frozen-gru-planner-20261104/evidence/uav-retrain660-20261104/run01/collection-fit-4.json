@@ -1,0 +1,333 @@
+{
+  "phase": "fit",
+  "case": "fit-4",
+  "parent": "synthetic-swe-1104505",
+  "method": "flow_coverage",
+  "supplied": 35,
+  "people": 40,
+  "all_scene": false,
+  "p95_scene": false,
+  "refloats": 0,
+  "persons": [
+    {
+      "id": 0,
+      "fall": 1411,
+      "deadline": 2071,
+      "first_seen": 1489.0,
+      "supplied_at": 1501.0,
+      "status": 2
+    },
+    {
+      "id": 1,
+      "fall": 290,
+      "deadline": 950,
+      "first_seen": 738.0,
+      "supplied_at": 749.0,
+      "status": 2
+    },
+    {
+      "id": 2,
+      "fall": 300,
+      "deadline": 960,
+      "first_seen": 783.0,
+      "supplied_at": 794.0,
+      "status": 2
+    },
+    {
+      "id": 3,
+      "fall": 1382,
+      "deadline": 2042,
+      "first_seen": 1683.0,
+      "supplied_at": 1694.0,
+      "status": 2
+    },
+    {
+      "id": 4,
+      "fall": 1401,
+      "deadline": 2061,
+      "first_seen": 1591.0,
+      "supplied_at": 1603.0,
+      "status": 2
+    },
+    {
+      "id": 5,
+      "fall": 1403,
+      "deadline": 2063,
+      "first_seen": 1425.0,
+      "supplied_at": 1436.0,
+      "status": 2
+    },
+    {
+      "id": 6,
+      "fall": 1413,
+      "deadline": 2073,
+      "first_seen": -1.0,
+      "supplied_at": -1.0,
+      "status": 3
+    },
+    {
+      "id": 7,
+      "fall": 306,
+      "deadline": 966,
+      "first_seen": 330.0,
+      "supplied_at": 341.0,
+      "status": 2
+    },
+    {
+      "id": 8,
+      "fall": 1370,
+      "deadline": 2030,
+      "first_seen": 1371.0,
+      "supplied_at": 1382.0,
+      "status": 2
+    },
+    {
+      "id": 9,
+      "fall": 1399,
+      "deadline": 2059,
+      "first_seen": 1506.0,
+      "supplied_at": 1517.0,
+      "status": 2
+    },
+    {
+      "id": 10,
+      "fall": 848,
+      "deadline": 1508,
+      "first_seen": 1090.0,
+      "supplied_at": 1101.0,
+      "status": 2
+    },
+    {
+      "id": 11,
+      "fall": 288,
+      "deadline": 948,
+      "first_seen": 447.0,
+      "supplied_at": 458.0,
+      "status": 2
+    },
+    {
+      "id": 12,
+      "fall": 820,
+      "deadline": 1480,
+      "first_seen": 1390.0,
+      "supplied_at": 1401.0,
+      "status": 2
+    },
+    {
+      "id": 13,
+      "fall": 286,
+      "deadline": 946,
+      "first_seen": 345.0,
+      "supplied_at": 356.0,
+      "status": 2
+    },
+    {
+      "id": 14,
+      "fall": 1420,
+      "deadline": 2080,
+      "first_seen": 1841.0,
+      "supplied_at": 1852.0,
+      "status": 2
+    },
+    {
+      "id": 15,
+      "fall": 1424,
+      "deadline": 2084,
+      "first_seen": 1820.0,
+      "supplied_at": 1831.0,
+      "status": 2
+    },
+    {
+      "id": 16,
+      "fall": 1398,
+      "deadline": 2058,
+      "first_seen": 1462.0,
+      "supplied_at": 1474.0,
+      "status": 2
+    },
+    {
+      "id": 17,
+      "fall": 1373,
+      "deadline": 2033,
+      "first_seen": 1463.0,
+      "supplied_at": 1485.0,
+      "status": 2
+    },
+    {
+      "id": 18,
+      "fall": 279,
+      "deadline": 939,
+      "first_seen": 1103.0,
+      "supplied_at": -1.0,
+      "status": 3
+    },
+    {
+      "id": 19,
+      "fall": 281,
+      "deadline": 941,
+      "first_seen": 1385.0,
+      "supplied_at": -1.0,
+      "status": 3
+    },
+    {
+      "id": 20,
+      "fall": 255,
+      "deadline": 915,
+      "first_seen": 372.0,
+      "supplied_at": 383.0,
+      "status": 2
+    },
+    {
+      "id": 21,
+      "fall": 281,
+      "deadline": 941,
+      "first_seen": 674.0,
+      "supplied_at": 685.0,
+      "status": 2
+    },
+    {
+      "id": 22,
+      "fall": 262,
+      "deadline": 922,
+      "first_seen": 330.0,
+      "supplied_at": 341.0,
+      "status": 2
+    },
+    {
+      "id": 23,
+      "fall": 1405,
+      "deadline": 2065,
+      "first_seen": 1636.0,
+      "supplied_at": 1647.0,
+      "status": 2
+    },
+    {
+      "id": 24,
+      "fall": 1410,
+      "deadline": 2070,
+      "first_seen": 1701.0,
+      "supplied_at": 1712.0,
+      "status": 2
+    },
+    {
+      "id": 25,
+      "fall": 1413,
+      "deadline": 2073,
+      "first_seen": 1451.0,
+      "supplied_at": 1462.0,
+      "status": 2
+    },
+    {
+      "id": 26,
+      "fall": 1389,
+      "deadline": 2049,
+      "first_seen": 1915.0,
+      "supplied_at": 1926.0,
+      "status": 2
+    },
+    {
+      "id": 27,
+      "fall": 858,
+      "deadline": 1518,
+      "first_seen": 980.0,
+      "supplied_at": 991.0,
+      "status": 2
+    },
+    {
+      "id": 28,
+      "fall": 855,
+      "deadline": 1515,
+      "first_seen": 1126.0,
+      "supplied_at": 1137.0,
+      "status": 2
+    },
+    {
+      "id": 29,
+      "fall": 288,
+      "deadline": 948,
+      "first_seen": 344.0,
+      "supplied_at": 356.0,
+      "status": 2
+    },
+    {
+      "id": 30,
+      "fall": 829,
+      "deadline": 1489,
+      "first_seen": 845.0,
+      "supplied_at": 856.0,
+      "status": 2
+    },
+    {
+      "id": 31,
+      "fall": 837,
+      "deadline": 1497,
+      "first_seen": 1106.0,
+      "supplied_at": 1117.0,
+      "status": 2
+    },
+    {
+      "id": 32,
+      "fall": 844,
+      "deadline": 1504,
+      "first_seen": 1701.0,
+      "supplied_at": -1.0,
+      "status": 3
+    },
+    {
+      "id": 33,
+      "fall": 840,
+      "deadline": 1500,
+      "first_seen": 858.0,
+      "supplied_at": 869.0,
+      "status": 2
+    },
+    {
+      "id": 34,
+      "fall": 309,
+      "deadline": 969,
+      "first_seen": 670.0,
+      "supplied_at": 681.0,
+      "status": 2
+    },
+    {
+      "id": 35,
+      "fall": 866,
+      "deadline": 1526,
+      "first_seen": 1108.0,
+      "supplied_at": 1119.0,
+      "status": 2
+    },
+    {
+      "id": 36,
+      "fall": 842,
+      "deadline": 1502,
+      "first_seen": 1041.0,
+      "supplied_at": 1052.0,
+      "status": 2
+    },
+    {
+      "id": 37,
+      "fall": 850,
+      "deadline": 1510,
+      "first_seen": 1247.0,
+      "supplied_at": 1258.0,
+      "status": 2
+    },
+    {
+      "id": 38,
+      "fall": 810,
+      "deadline": 1470,
+      "first_seen": 921.0,
+      "supplied_at": 932.0,
+      "status": 2
+    },
+    {
+      "id": 39,
+      "fall": 851,
+      "deadline": 1511,
+      "first_seen": 1893.0,
+      "supplied_at": -1.0,
+      "status": 3
+    }
+  ]
+}

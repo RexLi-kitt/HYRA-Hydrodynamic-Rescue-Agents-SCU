@@ -1,0 +1,39 @@
+{
+  "results": {
+    "confirmation": {
+      "old_interface": {
+        "scenes": 20,
+        "supplied": 674,
+        "people": 800,
+        "all_scenes": 0,
+        "p95_scenes": 3
+      },
+      "new_interface": {
+        "scenes": 20,
+        "supplied": 745,
+        "people": 800,
+        "all_scenes": 3,
+        "p95_scenes": 9
+      }
+    },
+    "rotation": {
+      "old_interface": {
+        "scenes": 5,
+        "supplied": 178,
+        "people": 200,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "new_interface": {
+        "scenes": 5,
+        "supplied": 185,
+        "people": 200,
+        "all_scenes": 2,
+        "p95_scenes": 3
+      }
+    }
+  },
+  "elapsed_s": 266.45400000000154,
+  "new_rollouts": 25,
+  "source_inputs_unchanged": true
+}

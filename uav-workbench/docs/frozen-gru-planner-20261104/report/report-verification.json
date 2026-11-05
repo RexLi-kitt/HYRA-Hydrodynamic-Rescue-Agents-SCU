@@ -1,0 +1,35 @@
+{
+  "docx": "HYRA冻结GRU与规划完整报告-20261104.docx",
+  "docx_sha256": "52b61204c988c70a060ad295cc13cb74c2587786d6791ca91fac176426d21111",
+  "pages": 11,
+  "tables": 11,
+  "visual_review_all_pages": "passed",
+  "renderer": "Microsoft Word local isolated hidden COM instance; bundled Poppler PNG rendering",
+  "canonical_render_attempt": "render_docx.py unavailable: bundled LibreOffice not present on Windows",
+  "qa_pdf_sha256": "0356bde5c6999a041b9a4989ffe9054bb294fbcc863638fd932a6ae556adc99b",
+  "rendered_page_hashes": {
+    "page-01.png": "2ac06c81098e38ee960ee6b81c60530d5e6505584c4c213c5b393057f4eec89e",
+    "page-02.png": "4128cb37fd44ec3145d03f2172d445137d991acfc0d7455d07e55437cce81b04",
+    "page-03.png": "df51d53a3f7a486b9c47724fb04b6228e539c5569871617550a438eb8ae91312",
+    "page-04.png": "9eb1930c419452af3906ba57c6cbb23caa89dae527804c46ded833505f2141d6",
+    "page-05.png": "ba296f6adffb13f30f0bf644d9adff6ec764d0e5a01997b7261416126f06b825",
+    "page-06.png": "bb402782876dc9029d1c60aef867c370483dadc37750d9a4037b9e92207dc3cf",
+    "page-07.png": "390ce33931a5e9292d79e9be2c69af760c0b1e6601e704a188115eb9729fa5ca",
+    "page-08.png": "5bce98ac6e19ce86f6be19f0e732eb557314172038324b02345e496af8b4008f",
+    "page-09.png": "83e7a2ce58c15cab3ad188f7ef875bfbf20716cca892ba7e949b4692bf786dbe",
+    "page-10.png": "dc9d7b449a759b68c840270439d24206a4e372cb1669afdc19878501f5842718",
+    "page-11.png": "d566533a9fa789fd8f4f56a19556171fe247a9a2d00ee52ff0df500ea04404e3"
+  },
+  "source_code_snapshot": "735868477670e867b615dd8ac528c32fc639f778",
+  "study_inputs": {
+    "summary.json": "12354336bf81a49a0bfaf49d2a6bf80cfec0ca8ee87742f44d755869e6bcf5e7",
+    "results.jsonl": "a10d397afdb0b4ddee94e1576f192a4774ecbea57f05007236c7491da6bdfb0b",
+    "protocol.json": "4de32070cbb50c3a5cfa1dd5596da1c6877b2a730fef8e2fbf037f0f91907732",
+    "secondary-audit.json": "acaddde801c41c35a595609c576eca095248373471930c7f527eb7564ad26157",
+    "scenarios.json": "5a8898048a88be74d1b39234d5a75ca9a2e71ecc52e5b8377040edac4e141f43",
+    "pressure-replay/result.json": "5578b3f7a53a700426a2a85a51e3a4809fedd2d7ca6aef2f4bdb6bf8fee63804"
+  },
+  "new_training": false,
+  "algorithm_changed_for_report": false,
+  "note": "PDF and PNGs are local QA intermediates and are not published."
+}

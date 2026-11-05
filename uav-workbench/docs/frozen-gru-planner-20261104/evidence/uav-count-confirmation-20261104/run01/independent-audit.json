@@ -1,0 +1,67 @@
+{
+  "rows": 75,
+  "independent_parents": 20,
+  "rotations_are_same_parent_stress": true,
+  "old_model_fit_cal_parent_disjoint": true,
+  "source_inputs_unchanged": true,
+  "min_swept_separation": 5.044771614966702,
+  "refloats": 0,
+  "paired_confirmation": {
+    "coverage100": {
+      "people_difference_pp": 7.375,
+      "p95_scene_difference_pp": 30.0,
+      "full_scene_difference_pp": 15.0,
+      "people_bootstrap95_pp": [
+        4.0,
+        10.75
+      ],
+      "p95_scene_bootstrap95_pp": [
+        0.0,
+        55.0
+      ],
+      "people_wins": 16,
+      "people_ties": 0,
+      "people_losses": 4
+    },
+    "flow_coverage": {
+      "people_difference_pp": 7.875,
+      "p95_scene_difference_pp": 40.0,
+      "full_scene_difference_pp": 15.0,
+      "people_bootstrap95_pp": [
+        4.75,
+        10.75
+      ],
+      "p95_scene_bootstrap95_pp": [
+        15.0,
+        65.0
+      ],
+      "people_wins": 18,
+      "people_ties": 0,
+      "people_losses": 2
+    }
+  },
+  "fall_triggers": {
+    "threshold": 0,
+    "random": 800
+  },
+  "failure_modes": {
+    "coverage100": {
+      "failed": 114,
+      "left_domain": 0,
+      "expired_unseen": 108,
+      "expired_seen": 6
+    },
+    "flow_coverage": {
+      "failed": 118,
+      "left_domain": 0,
+      "expired_unseen": 114,
+      "expired_seen": 4
+    },
+    "old142-adapter": {
+      "failed": 55,
+      "left_domain": 0,
+      "expired_unseen": 53,
+      "expired_seen": 2
+    }
+  }
+}

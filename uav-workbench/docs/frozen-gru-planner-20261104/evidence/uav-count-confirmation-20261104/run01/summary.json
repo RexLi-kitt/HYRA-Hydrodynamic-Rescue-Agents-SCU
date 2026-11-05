@@ -1,0 +1,55 @@
+{
+  "results": {
+    "confirmation": {
+      "coverage100": {
+        "scenes": 20,
+        "supplied": 686,
+        "people": 800,
+        "all_scenes": 0,
+        "p95_scenes": 3
+      },
+      "flow_coverage": {
+        "scenes": 20,
+        "supplied": 682,
+        "people": 800,
+        "all_scenes": 0,
+        "p95_scenes": 1
+      },
+      "old142-adapter": {
+        "scenes": 20,
+        "supplied": 745,
+        "people": 800,
+        "all_scenes": 3,
+        "p95_scenes": 9
+      }
+    },
+    "rotation": {
+      "coverage100": {
+        "scenes": 5,
+        "supplied": 164,
+        "people": 200,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "flow_coverage": {
+        "scenes": 5,
+        "supplied": 168,
+        "people": 200,
+        "all_scenes": 0,
+        "p95_scenes": 0
+      },
+      "old142-adapter": {
+        "scenes": 5,
+        "supplied": 185,
+        "people": 200,
+        "all_scenes": 2,
+        "p95_scenes": 3
+      }
+    }
+  },
+  "chosen": "old142-adapter",
+  "target_point_estimates_passed": true,
+  "elapsed_s": 909.5939999999973,
+  "new_rollouts": 75,
+  "source_inputs_unchanged": true
+}

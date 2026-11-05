@@ -1,0 +1,36 @@
+{
+  "case": "confirmation-0",
+  "checks": [
+    {
+      "time": 0,
+      "all_choices_features_and_control_exact": true
+    },
+    {
+      "time": 300,
+      "all_choices_features_and_control_exact": true
+    },
+    {
+      "time": 600,
+      "all_choices_features_and_control_exact": true
+    },
+    {
+      "time": 900,
+      "all_choices_features_and_control_exact": true
+    },
+    {
+      "time": 1200,
+      "all_choices_features_and_control_exact": true
+    },
+    {
+      "time": 1500,
+      "all_choices_features_and_control_exact": true
+    },
+    {
+      "time": 1800,
+      "all_choices_features_and_control_exact": true
+    }
+  ],
+  "hidden_sector_count_calls": 0,
+  "original_person_records_exact": true,
+  "full_replay_count": 1
+}
