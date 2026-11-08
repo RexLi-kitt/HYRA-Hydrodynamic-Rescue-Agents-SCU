@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+runtime/**/hydraulics/ord-*/
+runtime/**/ord-*/mission.npy
+runtime/**/ord-*/water.json
+runtime/**/population/*-*-*.npz
+runtime/**/scenes/*/input.json

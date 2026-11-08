@@ -1,0 +1,73 @@
+{
+  "version": "20261106.1",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "platform": "Windows",
+  "arch": "AMD64",
+  "mission": {
+    "people": 64,
+    "window_s": 720,
+    "duration_s": 2400,
+    "radius_m": 1,
+    "sensor_m": 20,
+    "fov_deg": 180,
+    "tick_s": 5,
+    "handoff_s": 10,
+    "uavs": 4,
+    "speed_m_s": 10,
+    "separation_m": 5
+  },
+  "protocol_sha256": "86fdefd9be9fdc00d478afe381107a17a068d7487cfe1d51df2a8c260b3a4cd8",
+  "provenance": {
+    "supply.py": {
+      "path": "hyra-uav-pr-20261101/uav-workbench/experiments/flood-drop-sector5-v1/unified_supply/supply.py",
+      "sha256": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63",
+      "copy": "verbatim"
+    },
+    "mission_env.py": {
+      "path": "hyra-uav-pr-20261101/uav-workbench/experiments/flood-drop-sector5-v1/unified_supply/mission85/mission_env.py",
+      "sha256": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c",
+      "copy": "verbatim"
+    },
+    "delivery.py": {
+      "path": "uav-pressure-search-v8/delivery.py",
+      "sha256": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc",
+      "copy": "verbatim"
+    },
+    "judge.py": {
+      "path": "uav-pressure-search-v8/judge.py",
+      "sha256": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27",
+      "copy": "verbatim"
+    },
+    "fall_risk.py": {
+      "path": "hyra-uav-pr-20261101/uav-workbench/experiments/flood-drop-sector5-v1/speed_first/fall_risk.py",
+      "sha256": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822",
+      "copy": "verbatim"
+    },
+    "long_environment.py": {
+      "path": "hyra-uav-pr-20261101/uav-workbench/experiments/flood-drop-convlstm20-v1/long_environment.py",
+      "sha256": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe",
+      "copy": "verbatim"
+    },
+    "origin/hyra-uav-pr-20261101/uav-workbench/experiments/flood-drop-sector5-v1/unified_supply/population.py": {
+      "sha256": "3fcea2931589a9b196579ee76a931ec60a3b9263d42b2335b52915575552c5ff",
+      "copy": "selected definitions or archive I/O adapter"
+    },
+    "origin/hyra-uav-pr-20261101/uav-workbench/experiments/flood1km-six-20261101/flood1km/env.py": {
+      "sha256": "24f1a5526b9a1d3c6b6882b13d79c1e11502d053c3d369a52e562fd0d3efffa6",
+      "copy": "selected definitions or archive I/O adapter"
+    },
+    "origin/uav-priority-confirm-v10/scenario10.py": {
+      "sha256": "2190eb19e2a2d51c7943684ee1d147a8ef9d652e7901b8dd89158f4023f893e5",
+      "copy": "selected definitions or archive I/O adapter"
+    },
+    "origin/uav-pressure-search-v8/scenes.py": {
+      "sha256": "06cdea113e4427a20ac457bc465b6f297ad5cc969afe69fbabf928da5f3bc64d",
+      "copy": "selected definitions or archive I/O adapter"
+    },
+    "origin/uav-protocol-audit-paired-20261105/paired.py": {
+      "sha256": "24d4e933b6edb541fe058615c3502ad501ddac0bb6a489100707ec31fe3f888e",
+      "copy": "selected definitions or archive I/O adapter"
+    }
+  }
+}
