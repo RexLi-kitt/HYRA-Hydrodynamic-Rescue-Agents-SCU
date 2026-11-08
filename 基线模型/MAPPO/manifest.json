@@ -1,0 +1,149 @@
+{
+  "model": "MAPPO",
+  "format": "portable inference weight release; not a resumable training checkpoint",
+  "fixed_default_seed": 77126,
+  "default_mode": "sampled",
+  "selection": "fixed seed, not selected for performance",
+  "seeds": {
+    "77126": {
+      "source_checkpoint": "output/mappo-rescue-v1-20261107/continuation_32768/frozen/seed_77126/checkpoint-032768.pt",
+      "source_sha256": "ecc50dfe26b316f0280d595923981a83d05be90e566c774c34e50def7a1c3573",
+      "export_checkpoint": "weights/77126.pt",
+      "export_sha256": "55ca2e844f9431e29f91be3a559b6261ead792ab7acae5644fd8f0925521905d",
+      "export_fields": [
+        "actor",
+        "critic",
+        "value_norm"
+      ],
+      "tensor_count_exact": 43,
+      "main_result_source": "output/mappo-rescue-v1-20261107/continuation_32768/frozen/seed_77126/eval_032768.json",
+      "main_result_sha256": "44bf7ada66b329f99e34362bf7cb677199724b4e15ca11f8e83dc5829028e61d",
+      "main": {
+        "sampled": {
+          "episodes": 12,
+          "delivered": 164,
+          "total": 768,
+          "rcr": 0.21354166666666666,
+          "coverage_mean": 0.5571833333333333,
+          "conflicts": 321,
+          "delivered_after_fall": 3
+        },
+        "greedy": {
+          "episodes": 12,
+          "delivered": 120,
+          "total": 768,
+          "rcr": 0.15625,
+          "coverage_mean": 0.369,
+          "conflicts": 3753,
+          "delivered_after_fall": 1
+        }
+      }
+    },
+    "77127": {
+      "source_checkpoint": "output/mappo-rescue-v1-20261107/continuation_32768/frozen/seed_77127/checkpoint-032768.pt",
+      "source_sha256": "7061197f002da2e792cbe9989d9113849f3727ae378d0fd0f41c4f027938392b",
+      "export_checkpoint": "weights/77127.pt",
+      "export_sha256": "c7c14fa9a518b1b84bb3febffba1a576f7e4a05a5660648496c1a19630446b1f",
+      "export_fields": [
+        "actor",
+        "critic",
+        "value_norm"
+      ],
+      "tensor_count_exact": 43,
+      "main_result_source": "output/mappo-rescue-v1-20261107/continuation_32768/frozen/seed_77127/eval_032768.json",
+      "main_result_sha256": "c31760256c64ed2413910b2902807f5efd0c5c6ead62607e39ab554dd83d45b1",
+      "main": {
+        "sampled": {
+          "episodes": 12,
+          "delivered": 99,
+          "total": 768,
+          "rcr": 0.12890625,
+          "coverage_mean": 0.49275,
+          "conflicts": 67,
+          "delivered_after_fall": 1
+        },
+        "greedy": {
+          "episodes": 12,
+          "delivered": 59,
+          "total": 768,
+          "rcr": 0.07682291666666667,
+          "coverage_mean": 0.26875,
+          "conflicts": 3518,
+          "delivered_after_fall": 1
+        }
+      }
+    },
+    "77128": {
+      "source_checkpoint": "output/mappo-rescue-v1-20261107/continuation_32768/frozen/seed_77128/checkpoint-032768.pt",
+      "source_sha256": "ba2ec4cbd2b429fde7b98175e0c9e04097599a21872b5dec673d3ecc22b54440",
+      "export_checkpoint": "weights/77128.pt",
+      "export_sha256": "434f17a8b57f7282d403b5daf2316f3617046673c9abd0830a033aa59a3c71fd",
+      "export_fields": [
+        "actor",
+        "critic",
+        "value_norm"
+      ],
+      "tensor_count_exact": 43,
+      "main_result_source": "output/mappo-rescue-v1-20261107/continuation_32768/frozen/seed_77128/eval_032768.json",
+      "main_result_sha256": "1460630f7e23315f9eb6a312c802761c4b04bd3bb0c09c4e546c98df1846d8a6",
+      "main": {
+        "sampled": {
+          "episodes": 12,
+          "delivered": 225,
+          "total": 768,
+          "rcr": 0.29296875,
+          "coverage_mean": 0.528975,
+          "conflicts": 654,
+          "delivered_after_fall": 7
+        },
+        "greedy": {
+          "episodes": 12,
+          "delivered": 84,
+          "total": 768,
+          "rcr": 0.109375,
+          "coverage_mean": 0.24603333333333333,
+          "conflicts": 9578,
+          "delivered_after_fall": 0
+        }
+      }
+    }
+  },
+  "inference_source": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/boundary.py": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d",
+    "src/public_model.py": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025",
+    "src/rescue.py": "3676fd731bd5dc63f3624956ab86cb03291b590d9fbc3ad729607d9ca278fbf7",
+    "src/search.py": "c447afe7ffa168b6a704eb9357fe53a5d7626be3e7c4826cf1497f9409c9e845",
+    "policy.py": "926e2b7ee3994825866e24ef8710dbdabae6d66650c38197eb48c54b4ae18032"
+  },
+  "training_source": {
+    "training_source/continue_train.py": "edff4ce02a08253aa305be459c720975a3f5ee908cef77c57d8fd812013f9d06",
+    "training_source/rescue_core.py": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b",
+    "training_source/search_core.py": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265",
+    "training_source/train.py": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128"
+  },
+  "evaluation_scope": "12 public development maps x 3 seeds; extra 12 public cases fixed first seed; not blind",
+  "extra_seed": 77126,
+  "extra_source_sha256": "6e0fc04b06a2822aaae3e0f3a97dfff3b523dd49819b9708c145887c8faf8bdd",
+  "extra": {
+    "sampled": {
+      "episodes": 12,
+      "delivered": 98,
+      "total": 768,
+      "rcr": 0.12760416666666666,
+      "coverage_mean": 0.604175,
+      "conflicts": 27,
+      "delivered_after_fall": 10
+    },
+    "greedy": {
+      "episodes": 12,
+      "delivered": 63,
+      "total": 768,
+      "rcr": 0.08203125,
+      "coverage_mean": 0.34769999999999995,
+      "conflicts": 5645,
+      "delivered_after_fall": 4
+    }
+  },
+  "notice_sha256": "5973f2728730cdfca862dbd77dda378b26aadccc15f31febd2e39ddd1fd93882"
+}

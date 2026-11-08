@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "sdk_sha256": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d",
+  "validation_script_sha256": "4c85cd2e283fdc1dba26df3a9c8dd35470649e2de57aae58ea3d6ee608113f08",
+  "records": [
+    {
+      "model": "QPLEX",
+      "seed": 88126,
+      "mode": "greedy",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "c2fbac1f146597888da4c0ca68f2abffcb65eb513b9ca6d7cafc89f93791fcf0",
+      "source_result_sha256": "4ffe2c825f6c8193c8e941d45efd13b15058bdbe316dae258e9cdcc1e45d1c3f",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88126,
+      "mode": "epsilon_0.05",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "c2fbac1f146597888da4c0ca68f2abffcb65eb513b9ca6d7cafc89f93791fcf0",
+      "source_result_sha256": "4ffe2c825f6c8193c8e941d45efd13b15058bdbe316dae258e9cdcc1e45d1c3f",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88127,
+      "mode": "greedy",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "54dcdf895e3b77e346f774a096d247deca3c3a4a745b56117bdda6ef2e9d15ee",
+      "source_result_sha256": "3170e95cc60f704f481822486cfdca29d78fcebf0a4dd4b966bf1aa4d0c3c9f8",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88127,
+      "mode": "epsilon_0.05",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "54dcdf895e3b77e346f774a096d247deca3c3a4a745b56117bdda6ef2e9d15ee",
+      "source_result_sha256": "3170e95cc60f704f481822486cfdca29d78fcebf0a4dd4b966bf1aa4d0c3c9f8",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88128,
+      "mode": "greedy",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "c2f802b2ccd18cd21d2d019276e2680ccb622d4ef232e2803e7e7e02e7488ae0",
+      "source_result_sha256": "3ecbf26ba6d446d68fd4ac69d08c7cf9f5a9df75c8369fe9b1f0c30d239a35a9",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88128,
+      "mode": "epsilon_0.05",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "c2f802b2ccd18cd21d2d019276e2680ccb622d4ef232e2803e7e7e02e7488ae0",
+      "source_result_sha256": "3ecbf26ba6d446d68fd4ac69d08c7cf9f5a9df75c8369fe9b1f0c30d239a35a9",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "sdk_sha256": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d",
+  "validation_script_sha256": "4c85cd2e283fdc1dba26df3a9c8dd35470649e2de57aae58ea3d6ee608113f08",
+  "records": [
+    {
+      "model": "MAPPO",
+      "seed": 77126,
+      "mode": "sampled",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "55ca2e844f9431e29f91be3a559b6261ead792ab7acae5644fd8f0925521905d",
+      "source_result_sha256": "44bf7ada66b329f99e34362bf7cb677199724b4e15ca11f8e83dc5829028e61d",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "MAPPO",
+      "seed": 77126,
+      "mode": "greedy",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "55ca2e844f9431e29f91be3a559b6261ead792ab7acae5644fd8f0925521905d",
+      "source_result_sha256": "44bf7ada66b329f99e34362bf7cb677199724b4e15ca11f8e83dc5829028e61d",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "MAPPO",
+      "seed": 77127,
+      "mode": "sampled",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "c7c14fa9a518b1b84bb3febffba1a576f7e4a05a5660648496c1a19630446b1f",
+      "source_result_sha256": "c31760256c64ed2413910b2902807f5efd0c5c6ead62607e39ab554dd83d45b1",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "MAPPO",
+      "seed": 77127,
+      "mode": "greedy",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "c7c14fa9a518b1b84bb3febffba1a576f7e4a05a5660648496c1a19630446b1f",
+      "source_result_sha256": "c31760256c64ed2413910b2902807f5efd0c5c6ead62607e39ab554dd83d45b1",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "MAPPO",
+      "seed": 77128,
+      "mode": "sampled",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "434f17a8b57f7282d403b5daf2316f3617046673c9abd0830a033aa59a3c71fd",
+      "source_result_sha256": "1460630f7e23315f9eb6a312c802761c4b04bd3bb0c09c4e546c98df1846d8a6",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    },
+    {
+      "model": "MAPPO",
+      "seed": 77128,
+      "mode": "greedy",
+      "steps": 480,
+      "evaluation_seed": 622004,
+      "device": "cuda:0",
+      "checkpoint_sha256": "434f17a8b57f7282d403b5daf2316f3617046673c9abd0830a033aa59a3c71fd",
+      "source_result_sha256": "1460630f7e23315f9eb6a312c802761c4b04bd3bb0c09c4e546c98df1846d8a6",
+      "actions_exact": true,
+      "metrics_exact": true,
+      "package_paths_isolated": true
+    }
+  ]
+}

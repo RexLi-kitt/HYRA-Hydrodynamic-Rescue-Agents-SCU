@@ -1,0 +1,148 @@
+{
+  "model": "QMIX",
+  "format": "portable inference weight release; not a resumable training checkpoint",
+  "fixed_default_seed": 88126,
+  "default_mode": "epsilon_0.05",
+  "selection": "fixed seed, not selected for performance",
+  "seeds": {
+    "88126": {
+      "source_checkpoint": "output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/plain_88126/checkpoint-008192.pt",
+      "source_sha256": "69b44ed03f5abe5531bf5ed8e1f95c99c77a5e8034f5cb8e4fa0ea721f8b63eb",
+      "export_checkpoint": "weights/88126.pt",
+      "export_sha256": "8349c88f1431d3190512b81f32c68830f5534bd106ed8d9a5e366efca77de710",
+      "export_fields": [
+        "online",
+        "mixer"
+      ],
+      "tensor_count_exact": 34,
+      "main_result_source": "output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/eval_plain_88126.json",
+      "main_result_sha256": "b4e1e647cf6c2d6f1af41e9829b6c9de47bcdc4451dd59cc96a367840b5a7f8c",
+      "main": {
+        "epsilon_0.05": {
+          "episodes": 12,
+          "delivered": 139,
+          "total": 768,
+          "rcr": 0.18098958333333334,
+          "coverage_mean": 0.7474083333333333,
+          "conflicts": 123,
+          "delivered_after_fall": 1
+        },
+        "greedy": {
+          "episodes": 12,
+          "delivered": 142,
+          "total": 768,
+          "rcr": 0.18489583333333334,
+          "coverage_mean": 0.6605249999999999,
+          "conflicts": 827,
+          "delivered_after_fall": 2
+        }
+      }
+    },
+    "88127": {
+      "source_checkpoint": "output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/plain_88127/checkpoint-008192.pt",
+      "source_sha256": "b77100f04d57c009e03734f2fc70a64461915db1fb6adb0f164e5c93805a4773",
+      "export_checkpoint": "weights/88127.pt",
+      "export_sha256": "d705bdc09c35a71de448a41598d618d74fb2e8835851312b9d04e3bec734829a",
+      "export_fields": [
+        "online",
+        "mixer"
+      ],
+      "tensor_count_exact": 34,
+      "main_result_source": "output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/eval_plain_88127.json",
+      "main_result_sha256": "14dce6c6fd276ba4a5d7d426748dbbf68ba929fd6074c3c8d37768220743d989",
+      "main": {
+        "epsilon_0.05": {
+          "episodes": 12,
+          "delivered": 204,
+          "total": 768,
+          "rcr": 0.265625,
+          "coverage_mean": 0.7523666666666666,
+          "conflicts": 272,
+          "delivered_after_fall": 0
+        },
+        "greedy": {
+          "episodes": 12,
+          "delivered": 204,
+          "total": 768,
+          "rcr": 0.265625,
+          "coverage_mean": 0.5887583333333334,
+          "conflicts": 2424,
+          "delivered_after_fall": 2
+        }
+      }
+    },
+    "88128": {
+      "source_checkpoint": "output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/plain_88128/checkpoint-008192.pt",
+      "source_sha256": "6a96098843aa0f966b5c6c40b08bd821ffe886d0672b75cd1f7bf98ec63b0c5e",
+      "export_checkpoint": "weights/88128.pt",
+      "export_sha256": "fff6e74336b07daa7367617639c33ab6b4b7b28011bceb80c7c3fb3881bbd936",
+      "export_fields": [
+        "online",
+        "mixer"
+      ],
+      "tensor_count_exact": 34,
+      "main_result_source": "output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/eval_plain_88128.json",
+      "main_result_sha256": "aaf159f19a79addb38854647210b430b887eb7a1ba921d6d4c52849df50de0e7",
+      "main": {
+        "epsilon_0.05": {
+          "episodes": 12,
+          "delivered": 125,
+          "total": 768,
+          "rcr": 0.16276041666666666,
+          "coverage_mean": 0.7915416666666667,
+          "conflicts": 87,
+          "delivered_after_fall": 2
+        },
+        "greedy": {
+          "episodes": 12,
+          "delivered": 145,
+          "total": 768,
+          "rcr": 0.18880208333333334,
+          "coverage_mean": 0.6351416666666666,
+          "conflicts": 2716,
+          "delivered_after_fall": 2
+        }
+      }
+    }
+  },
+  "inference_source": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/boundary.py": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d",
+    "src/dqn_core.py": "bc4dcc12779234f003f701b7e1c37f98496d09df636a6abfb4d952d79bd70a2f",
+    "src/public_model.py": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025",
+    "src/replay.py": "eb882964c0f104713955a96b5495755317b8029a8b33fe81dc7b374e7e178c29",
+    "src/rescue.py": "3676fd731bd5dc63f3624956ab86cb03291b590d9fbc3ad729607d9ca278fbf7",
+    "src/rnn_agent.py": "c14fc450038da2446642cb0575b480f21b5c53faca72f7640faff788a6b80ec9",
+    "src/search.py": "c447afe7ffa168b6a704eb9357fe53a5d7626be3e7c4826cf1497f9409c9e845",
+    "policy.py": "fae7896bf79632e89f0658234ff6a9fc334161f12b62520d5dacf58065d32a26"
+  },
+  "training_source": {
+    "training_source/qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "training_source/team_td.py": "6a505eb8272a6d394c262a74cd0a32ff8fb70899489e2a8cf4d4010ecae01317",
+    "training_source/train_qmix.py": "dfe673c9c60e1f2c1772fd229b956f53cd0717d4dde95889408ca362d823e9ee"
+  },
+  "evaluation_scope": "12 public development maps x 3 seeds; extra 12 public cases fixed first seed; not blind",
+  "extra_seed": 88126,
+  "extra_source_sha256": "0fdeb2f35dbb8a9e001a86e5031ef3eadd59a901f55b0e9d77b837df7d31147d",
+  "extra": {
+    "epsilon_0.05": {
+      "episodes": 12,
+      "delivered": 55,
+      "total": 768,
+      "rcr": 0.07161458333333333,
+      "coverage_mean": 0.7349416666666667,
+      "conflicts": 105,
+      "delivered_after_fall": 1
+    },
+    "greedy": {
+      "episodes": 12,
+      "delivered": 97,
+      "total": 768,
+      "rcr": 0.12630208333333334,
+      "coverage_mean": 0.6833166666666667,
+      "conflicts": 979,
+      "delivered_after_fall": 5
+    }
+  },
+  "notice_sha256": "5469f1b6b5e0258eef6c5280f48fa6b3964f9438122ff5719db8deef04200d4a"
+}
