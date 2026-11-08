@@ -25,3 +25,9 @@ terrain-workbench/terrain-lab/exports/
 !/uav-workbench/runtime-assets/**
 /uav-workbench/runtime-assets/**/__pycache__/
 /uav-workbench/runtime-assets/**/*.pyc
+
+# Local package-manager scratch directories; never experiment evidence.
+/pip-build-tracker-*/
+/pip-ephem-wheel-cache-*/
+/pip-install-*/
+/.python_cache/

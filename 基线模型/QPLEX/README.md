@@ -4,7 +4,7 @@ GRU64 个体价值与 QPLEX DMAQ mixer；推理由单机个体网络选择动作
 
 本目录有三个固定种子的权重，默认 88126、模式 `epsilon_0.05`。默认分支事先固定，未按评测成绩挑选。逐种子主面板、额外面板、源 checkpoint 与导出权重 SHA-256、逐 tensor 核验见 [manifest.json](manifest.json)。
 
-这是**权重发布包**，不包含优化器、环境快照或 replay，不能原样断点续训。`training_source/` 是历史源码归档，包含原机器路径；训练数据及完整训练依赖没有打包，不能直接复现实验。独立推理只使用本目录的 `src/` 和 `weights/`。
+`weights/` 是独立推理的轻量权重，不含优化器、环境快照或 replay；本模型目录可单独复制进行推理。完整原始训练检查点通过 Release 下载到 `training/checkpoints/`，续训还需共享 `training_runtime/` 和训练输入资产。见 [训练与续训说明](training/README.md)。`training_source/` 为早期历史源码归档，并非可移植训练入口。
 
 验证环境：Python 3.12.9、PyTorch 2.8.0+cu128、NumPy 2.2.6。PyTorch 安装应根据 CUDA 环境选择对应官方版本。另需 HYRA 官方 SDK 和评测面板，均不在本包中。
 

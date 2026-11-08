@@ -1,0 +1,1386 @@
+{
+  "schema": "HYRA_TRAINING_INPUTS_V1",
+  "legacy_path_sha256_mapping": {
+    "be92bce028e59e7a3c225e02a5d33f46b8b8834727b728f45c7718a31c2e187d": {
+      "path": "project/output/mappo-search-v1-20261107/core.py",
+      "sha256": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265"
+    },
+    "0b0c82ab06a807c54e5eeaed22564b3dee3b031b792d9356aaf894e06673f6da": {
+      "path": "project/output/mappo-search-v1-20261107/carpet.py",
+      "sha256": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506"
+    },
+    "06c45cd54253e8fba529966ae1509c4ba2e98ddc075caf197df3ff7662ca0fda": {
+      "path": "project/output/mappo-search-v1-20261107/train_round.py",
+      "sha256": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644"
+    },
+    "5868f7c00560a6c2011de6b644bd106775627a006999d56014284ce955e31311": {
+      "path": "project/output/mappo-search-v1-20261107/validate.py",
+      "sha256": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd"
+    },
+    "df257425d5d3c6f3620ea57a96e38e568de9ba272e1dc0643b08ec97dee60361": {
+      "path": "alignment/mappo_short_seed2_v1/model.py",
+      "sha256": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025"
+    },
+    "2faea340ba989333c878d0fe0f79752ae2d889ee169d4f39324b5fc52daf8448": {
+      "path": "alignment/mappo_short_seed2_v1/trainer.py",
+      "sha256": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1"
+    },
+    "16d7ea5e134647a05be7c8025dce7382083b986eb12008bd6c63f151c1facd50": {
+      "path": "alignment/referee_bridge.py",
+      "sha256": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1"
+    },
+    "e5e1f60d9c51329e8b2bb6f908207751541ea1b6e0e7ad989c0d1e6b3a595fc0": {
+      "path": "alignment/dqn_boundary_mask_v1/boundary_geometry.py",
+      "sha256": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d"
+    },
+    "bda070bb36ffbb5aa86963b06ec8fe7047eb3d94e947147479208f2138b91f94": {
+      "path": "rule/policy.py",
+      "sha256": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf"
+    },
+    "aad2b27eb2034c03b52dfdf19df76eeaac0e8732b4059fc61919756358d94e26": {
+      "path": "sdk/run.py",
+      "sha256": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d"
+    },
+    "afd448596a94216cfa7606ecaa5af6daa514f1af7721032281324309d843dd3d": {
+      "path": "sdk/SHA256.json",
+      "sha256": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98"
+    },
+    "c08ef9821b8e8b76d6861dffbcdf7d4ea5eefc51086dbe83fdef5a1824e247b4": {
+      "path": "alignment/local_training_candidate_panel_0_2400/panel.json",
+      "sha256": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a"
+    },
+    "9125ce4a4a0ac971d53480ee1c7624e4d4e2486c71b84b4525c9af39ae31d1ba": {
+      "path": "alignment/local_training_candidate_panel_0_2400/SHA256.json",
+      "sha256": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7"
+    },
+    "5d1233f1b38b97c74d0d3874b3d5eb1de583caa97ac23a5d802b35e6bffe8819": {
+      "path": "sdk/engine/contract_checks.py",
+      "sha256": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871"
+    },
+    "00ea8ecff12fbcf6638955ec3aed4f0b2012d6f3513c1a1b0e2bb83aa524b980": {
+      "path": "sdk/engine/delivery.py",
+      "sha256": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc"
+    },
+    "d0c669cee966c210f4ddbeaf9e3795d40272519ac25d00eb8640866ac42c1007": {
+      "path": "sdk/engine/fall_risk.py",
+      "sha256": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822"
+    },
+    "c0f24f788586add1b84b0271b3e26e070d3f3cfad9f2397ff8ad09ad21284cd6": {
+      "path": "sdk/engine/judge.py",
+      "sha256": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27"
+    },
+    "bb75d6e5e39e42832e8e5ecb96137c48b3781905dd8666adf39d2f674cf7a08b": {
+      "path": "sdk/engine/long_environment.py",
+      "sha256": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe"
+    },
+    "e6dbf228d438d03317c91048ad1218c97263a9bd14ff1f14757c406a5440fd8f": {
+      "path": "sdk/engine/mission_env.py",
+      "sha256": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c"
+    },
+    "7a9779d224af3424c81f655b0ca92c570baa05e6b7b569d706573df5c24bf27a": {
+      "path": "sdk/engine/motion.py",
+      "sha256": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8"
+    },
+    "4f128087a4af8ce31cc84f44f53ec3af6ea34ae053f0e7990a888ba7f42532c3": {
+      "path": "sdk/engine/population.py",
+      "sha256": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8"
+    },
+    "50f81e08c009dbab38acb53864806d9ee588c4baa9e10cb394a2f20b16806d22": {
+      "path": "sdk/engine/scenario_io.py",
+      "sha256": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef"
+    },
+    "334268f6a483f5f0b2e5efe9ab23a52ce902a545f1151cf16d8764dd0d008609": {
+      "path": "sdk/engine/supply.py",
+      "sha256": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63"
+    },
+    "20e468960ea6831284ca0a3f8e6bffd42e438f87b3320687534e94477d2e0971": {
+      "path": "upstream/on-policy/onpolicy/algorithms/r_mappo/r_mappo.py",
+      "sha256": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4"
+    },
+    "90b7d3bb82ad1313d819861fe2ad053f747e2db9e4d17198c233d839e98d0134": {
+      "path": "upstream/on-policy/onpolicy/utils/valuenorm.py",
+      "sha256": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836"
+    },
+    "64918bfa09c0ff8decb3a602e1a9b77380ed183b54826f020833aa6e7d5751d9": {
+      "path": "upstream/on-policy/onpolicy/config.py",
+      "sha256": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a"
+    },
+    "c602c966ca51f89738356f599eb40746d95713a7ff32779f54b7deb7e79d4ba6": {
+      "path": "project/output/mappo-rescue-v1-20261107/core.py",
+      "sha256": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b"
+    },
+    "3f24347fe452860f084d88a99904763cb9fdcd043f57059f1294340c67c8bf2f": {
+      "path": "project/output/mappo-rescue-v1-20261107/train.py",
+      "sha256": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128"
+    },
+    "a8d67d6be2f017d3b9429b6cc654fe356fdd55bfe7a6a6c1db102930721aeb90": {
+      "path": "project/output/mappo-rescue-v1-20261107/demo.py",
+      "sha256": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439"
+    },
+    "c15984be91028f62088ed16a66312d9ab76cf22d9a189722937c154438607d76": {
+      "path": "project/output/mappo-rescue-v1-20261107/micro.py",
+      "sha256": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84"
+    },
+    "0304381437bbac780ff9cb5a31587d46c08fc50cef3ab09e9420f2e08e7e9cca": {
+      "path": "project/output/mappo-rescue-v1-20261107/teacher_multistep.py",
+      "sha256": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213"
+    },
+    "102f7061102af36aace60a1b70d2c86153c126289b6fc48c131371246a2dcefb": {
+      "path": "project/output/mappo-rescue-v1-20261107/evaluate.py",
+      "sha256": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65"
+    },
+    "4360f5d9c0731b5de3753e37300601fa744de224afab389480aaf38a30f1f817": {
+      "path": "project/output/mappo-rescue-v1-20261107/policy_adapter.py",
+      "sha256": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff"
+    },
+    "02676d158833a09a688fafb3dcff2e13a49b3e3e40546c78429fd04da1831b32": {
+      "path": "project/output/mappo-rescue-v1-20261107/provenance.py",
+      "sha256": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b"
+    },
+    "2aaae1813e922306e171caa26ed990f6dde7ae1f3de8393ea99b1d4c9fd3c7a1": {
+      "path": "project/output/mappo-search-v1-20261107/local_mask_77126/checkpoint-new-025600.pt",
+      "sha256": "cf33fb525e196b905c7542c3471b6cf1849f883663e24e370044f00a36dfc27f"
+    },
+    "233b8e4c245149c0615ea0370e91e245bdc6524e602d15a25667631b8e613500": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/000_core.py",
+      "sha256": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265"
+    },
+    "2e4988612c468f6f70e5039fb9a4d9474fb4134eab3bc83ba7ba79793b0a172d": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/001_carpet.py",
+      "sha256": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506"
+    },
+    "89c310a2743408b0799e947adcc8df2dc013e417cfe1e6008514a81be9a10f16": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/002_train_round.py",
+      "sha256": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644"
+    },
+    "8507430f82542188074f1a1af1b825c56599d02de55427b5c59f81e73f03a40a": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/003_validate.py",
+      "sha256": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd"
+    },
+    "2b7b9d5563b523c017c053d82c5bde7359df4cf5a420e559b13a77469179e905": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/004_model.py",
+      "sha256": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025"
+    },
+    "019742724e999b7dc2053f01c5cfffffe76ffb54a782e8029791635b5bdf44ba": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/005_trainer.py",
+      "sha256": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1"
+    },
+    "716df24bdac9d4db09ac8c0841e2f4da875a7651f42ba7392f50c4cb40585c32": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/006_referee_bridge.py",
+      "sha256": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1"
+    },
+    "a98f7afd8c072d81ff446c5e13f75d45773f73dac51bf9874bea8e2816e721c2": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/007_boundary_geometry.py",
+      "sha256": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d"
+    },
+    "c2001dd3cd2b5b6237a669477b6fdcb51d64f2fed783e0484babcf504910e549": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/008_policy.py",
+      "sha256": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf"
+    },
+    "d0e4e3148047fc0174df4698d52bfbf69fd1f96e0bee09a4f73b27c706a7d675": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/009_run.py",
+      "sha256": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d"
+    },
+    "0feb985d79b4b5d413bc9d3e05d0455a97f8114a6ba9abfcf970bc3f1c3ced24": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/010_SHA256.json",
+      "sha256": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98"
+    },
+    "6126c0ac3911234edde20ebe24aa45cb7cbe149fdb39e66548ff33bdc2b8c156": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/011_panel.json",
+      "sha256": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a"
+    },
+    "0d26c4799ec8b10e00aa722265a219456346affd901e62652839cf43b04d1043": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/012_SHA256.json",
+      "sha256": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7"
+    },
+    "4c43e5250095143b56ec875fc0578daebb0ac9d27077333d0093477c79ffd6ad": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/013_contract_checks.py",
+      "sha256": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871"
+    },
+    "3c59ad245bba8e4066a445d145a6ea2f5efc87023394bae01dc0899825afebff": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/014_delivery.py",
+      "sha256": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc"
+    },
+    "2accdc13f093be3fd81a1a0fac30534fb38de9a08767b3aa905d9fa22e3f0b3f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/015_fall_risk.py",
+      "sha256": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822"
+    },
+    "4b97b59f7a7a0d3db5f0b027b4f8c0008acdf1ab4b2b0f9fb3e2cff225d4ce84": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/016_judge.py",
+      "sha256": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27"
+    },
+    "abcd821e117521202ee4743eb3e63ed2bd69eb4b739d95e0b5c34988dcd5f5c9": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/017_long_environment.py",
+      "sha256": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe"
+    },
+    "941bc007278b9c98d76ba2c1c44dcd6ff5a7c1b85f59212ee32c74ef9a7d261d": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/018_mission_env.py",
+      "sha256": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c"
+    },
+    "fcf8583148732cbbeb1e0f6e54030bfa6e09eb0ae569fbc86945a743d3ddff55": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/019_motion.py",
+      "sha256": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8"
+    },
+    "e44f30273940f800563c197be5a98679e6ca4383acc62e8c8c611facc8a43e20": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/020_population.py",
+      "sha256": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8"
+    },
+    "c4ce60929606ed2510cc5b5700444e192fe705ccd936635f19adb64573e362f6": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/021_scenario_io.py",
+      "sha256": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef"
+    },
+    "d87e8c219de08101dd51a330ff466ff764d2f28756089e934826d32c8b4f0016": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/022_supply.py",
+      "sha256": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63"
+    },
+    "41e1a002bdd9cda1c8fc69fa05611b92def7f6eff4f6bbf304171087a20ad2ff": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/023_r_mappo.py",
+      "sha256": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4"
+    },
+    "daf3ff186583c2e8b9be3c825b2c42e43a3deb8debd9748258bc77be286ed03d": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/024_valuenorm.py",
+      "sha256": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836"
+    },
+    "e9ce3955ee83da68dce1be12f3461757baf6e2c95bec915d3f39365ab807b50a": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/025_config.py",
+      "sha256": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a"
+    },
+    "61eb60ac60c51fbf64facd6ddc05f0f8a1118ae04f50016b9eabd589e274902c": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/026_core.py",
+      "sha256": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b"
+    },
+    "b7afcd64021cc8d32a21208d207e4ad6118fad5498a6d00b13614158080f4b02": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/027_train.py",
+      "sha256": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128"
+    },
+    "2d7983586bf1fcf66ee25c33e82213c43faafc269c6a9858817517f65418fee0": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/028_demo.py",
+      "sha256": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439"
+    },
+    "f7233aadddaa604852572bf5cd8a1092a90df6e5ae2900ddd72d39732d7a1131": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/029_micro.py",
+      "sha256": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84"
+    },
+    "d9028f7e8e9728a128865541626cc1403e42b6bb7036e2911aec27b0d3a83296": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/030_teacher_multistep.py",
+      "sha256": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213"
+    },
+    "54d5629f681103a24b22f45ac1920143f12f3a952a2972da3f6c8fab01c0d0c8": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/031_evaluate.py",
+      "sha256": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65"
+    },
+    "183472a3eb2b68f17e75137e7f5bf52548c951bf630a4dcf83d236136ba7846b": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/032_policy_adapter.py",
+      "sha256": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff"
+    },
+    "c53308031a9044c9172b8f36bf4bcdcbd426949c3de49f682c130ba17343033e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/033_provenance.py",
+      "sha256": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b"
+    },
+    "eae8aca055e051dbe9c72046eb5a2c2483bdbb35f89faaa9b4173ab5dcc7d876": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/034_checkpoint-new-025600.pt",
+      "sha256": "cf33fb525e196b905c7542c3471b6cf1849f883663e24e370044f00a36dfc27f"
+    },
+    "0b994483cd1239e0586de2f9da4940579fa7aee4a280ddab29340976404cc02c": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/train_v2.py",
+      "sha256": "7e1be7e476b6b8c6fc2bd17a4ba9a55f5e89b1fbdec408a6ff1f11bbb5f97ec5"
+    },
+    "3b8aa910f3ae42a6292cbddff0662c0212096b70c7db11d6e9cb3a41b86086d3": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/protocol_v2.json",
+      "sha256": "bf06e14289d436f992e7fccc59af7ab23b985d5363566f7036d516930952f027"
+    },
+    "02c85a4390877db59f377b1b4955c02521d3e2ed34eb63265171eebcb808b8dc": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/validate_v2.py",
+      "sha256": "7cda44af67bf84e9d68f5326fe0e6b1fa9642bd20073d61c80926fd88c6c87ce"
+    },
+    "f0f7d321ba8d1afd9010360b6e54afb3dfe0894d29086168ed3550319afa8d9b": {
+      "path": "project/output/mappo-rescue-v1-20261107/orchestrate.py",
+      "sha256": "fffd978ac8ec2751882ccf4c484e2f855d6cb23d119ad6c84b473bd8226eeeb3"
+    },
+    "0fd46f84502688e4d00b21199988c4d407c853aaa3d843633218333b1b8967e3": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/checkpoint.pt",
+      "sha256": "45ed54796e306178a5d4afb152889f83f46f172e88925fedb21464a23571ffcc"
+    },
+    "b0afa04ed39596ec97c5d0d37478ad707d9d7101825e985101a7d7e4a680489c": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_manifest.json",
+      "sha256": "8298bc75d89ab96993ade8385bc2908eb8050187675e47bc080022fb9b7c11dd"
+    },
+    "ef1a3b446db14deead14606803f522f38181dc398f1758b89d8bc47e43049177": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/demo_log.json",
+      "sha256": "b9c32268cd4cd2a66d9c1805ccb0ec46d6b89e9cdfcd76721369168deffeefb8"
+    },
+    "e391effda5c41ed750f19a1c06ca806a3d398d88b7a73c959cb544aedf2954c5": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77126/checkpoint-008192.pt",
+      "sha256": "bc476d0fde7533db51c9c4e9e91a19db92ce87e0a845abbfabdfe2d9767764a5"
+    },
+    "962d781d79d865ebf06c723a40e5417071a75e5fd2e72139bb6009cef852026e": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77126/source_manifest.json",
+      "sha256": "2607f206a98fefefa1f317d046a82510d828653a29f708401f93174c32c6af5c"
+    },
+    "445104c67f33634149bd3473e4952922c744470ee3b57888afe015c68c5b9a98": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/eval_77126_dev.json",
+      "sha256": "a83a687cb72fa24e5b866b2a2830d52ce783f150d451af37f6e415809321a515"
+    },
+    "a77352d38eb62d1e11a314afd3e881ddaa7e85102da6198a72833f1a21d6dff5": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/audit_77126.json",
+      "sha256": "fd2f78a7d511bf132b9d30ebfcbd9b747e061d43d180000bb119817a9fa9dd3a"
+    },
+    "ebc6c4491bf2eeb4d057330fd801e9c499856a43dd913838078eccd3198aff47": {
+      "path": "project/output/mappo-search-v1-20261107/local_mask_77127/checkpoint-new-025600.pt",
+      "sha256": "e814e3c8bf6525c9ec16195e55df7ae83841912824cc0059983b9e08c77a893d"
+    },
+    "4dd7443d5bc9b531eaaf1ca70f16a2479ac022c652c6e0ce88a96cc15ccdc210": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/000_core.py",
+      "sha256": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265"
+    },
+    "29e8de730d5a26331a68483eb1b1601a03a9a2a454b57f1b8f51ba166070054f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/001_carpet.py",
+      "sha256": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506"
+    },
+    "b00cc08ec8ffc966a72d568a98974938292910abbe48299fa34c29ea335f41ef": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/002_train_round.py",
+      "sha256": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644"
+    },
+    "e04441e92aa9322c637270c55cfe2b5957c87b47a15e3ca7bd4d186e53be575c": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/003_validate.py",
+      "sha256": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd"
+    },
+    "1c47f60eb4a11b41f2663902bf52861b6a4bfa2e7ab8d173e82dd079cd851966": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/004_model.py",
+      "sha256": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025"
+    },
+    "cef2f2de52395bd7c4e1acde1e46380729b9513b478c4c3a21fdb6a01bcda939": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/005_trainer.py",
+      "sha256": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1"
+    },
+    "403706e1deea949501a18e13ff9e8f6c56754b54b7b24fd1724950c8732ee15f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/006_referee_bridge.py",
+      "sha256": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1"
+    },
+    "7b0545e9ddec75c23403d9383f049ef7becc9484ff74cb73400e0215fb08a8e9": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/007_boundary_geometry.py",
+      "sha256": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d"
+    },
+    "e23b66135de500285005ababe0a46517a1fce1ad6a846d297f23e8ed0227e2be": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/008_policy.py",
+      "sha256": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf"
+    },
+    "189efa8e71dd4953c252c41a44a06680389cb207bb63609ff054c3884555e45e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/009_run.py",
+      "sha256": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d"
+    },
+    "f70a8f17abfa98ab5ae6fe3b83eb2b5db78d593f90003c78caab3fda873f1ca6": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/010_SHA256.json",
+      "sha256": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98"
+    },
+    "5215c8f696464bde2cc87bf66c45eea365e715649e47d6b9364b5bb96bbf4221": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/011_panel.json",
+      "sha256": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a"
+    },
+    "ed68030c41feabef0e6c0f2c7db8c1f49dd9a3748529fd5e9019d43abf620943": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/012_SHA256.json",
+      "sha256": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7"
+    },
+    "9b9b3101ab871074f211783f69a5002f74a7cd2bf8f56eb8a4c3afac329a4b19": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/013_contract_checks.py",
+      "sha256": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871"
+    },
+    "6d470bd1d31cf6afd6be3c6f5fba45f7ca08dc3c3fc21f1443fb7cb8fa6b9333": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/014_delivery.py",
+      "sha256": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc"
+    },
+    "050b0606e5efda643ac574f90ea2a866740e5829f652a8252379d121737f4e1b": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/015_fall_risk.py",
+      "sha256": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822"
+    },
+    "b61b03c9fcd2848dc725f83c2618c1ec6430a0895862ac852f9ca231f95362ec": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/016_judge.py",
+      "sha256": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27"
+    },
+    "cc21595189061ef5baac78e8a438afbfe39cc4d472bfba4e77abf6c8bf8ead27": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/017_long_environment.py",
+      "sha256": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe"
+    },
+    "3cb3176eda1b6e2b5bba4818ebf371bd62168842b8653e90cf1a01878040a272": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/018_mission_env.py",
+      "sha256": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c"
+    },
+    "7576cf16769155c94a436efaab911cfcae1c1124e3fd03e180a6b2eb68e7a84e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/019_motion.py",
+      "sha256": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8"
+    },
+    "1c81c9fc1f1f86afe85c3cdd07d391a86c551491bb527a38673870ef475ffc45": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/020_population.py",
+      "sha256": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8"
+    },
+    "175dc4b0716133bb498d715f5a47fd380c3fe3679afc47d0ef8faf76d6ff1d7d": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/021_scenario_io.py",
+      "sha256": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef"
+    },
+    "1566e653a6918727a93d95223d7d9ec234f9dd1eec5422b4feadc90a1474871c": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/022_supply.py",
+      "sha256": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63"
+    },
+    "1ba8d1e49f0dd9b2dc349bf209818fdf124845f686800df2629576a391c96029": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/023_r_mappo.py",
+      "sha256": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4"
+    },
+    "748395a5a5942c371bfed5d0baa3ccfe9b3d8090aa0e34e0bb8f179f0c1b6fe5": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/024_valuenorm.py",
+      "sha256": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836"
+    },
+    "5a4405b9a504e5cbabca738b8c56cf4970f4b99faa969c4b815414a3cee60a8b": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/025_config.py",
+      "sha256": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a"
+    },
+    "94b97f70175aea5e4557580b23a730942c05c87f4fb5e6bf11c76ed0cf1330d4": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/026_core.py",
+      "sha256": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b"
+    },
+    "983d0aacde76996310f16742e74cf67d0f54e34775cbc86c66fa59f505c437ec": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/027_train.py",
+      "sha256": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128"
+    },
+    "47e85473a3d30d2f099f59ab3cf0dbeda3f8f3fc32878c7a7008d6f6d504731e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/028_demo.py",
+      "sha256": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439"
+    },
+    "3f7f9141119f4efd3221e8d9f5b508280c25bb5352bde3170576092a45611721": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/029_micro.py",
+      "sha256": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84"
+    },
+    "c79a4718ebe097232fc8512a26f0efd126b48e287555878f5ca7d19cb8366bf3": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/030_teacher_multistep.py",
+      "sha256": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213"
+    },
+    "2f150125ea69387018af4abd7732f7853986dcea6b2d84023d3a48a9bde64b5a": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/031_evaluate.py",
+      "sha256": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65"
+    },
+    "1abced4ea427e3f7e3753af67b9fb49d9bf4c9a10d7bf5894c8ddd21d03d525f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/032_policy_adapter.py",
+      "sha256": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff"
+    },
+    "e39d7ca0a8258bf0fa3a4ef2257400255dc4d9856cf6a4d2225078539326cf3e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/033_provenance.py",
+      "sha256": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b"
+    },
+    "9fdaecc07ea40e64319943a51bde55cb6f1d1457eaa940ff7bdefb9fb5b919d3": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/034_checkpoint-new-025600.pt",
+      "sha256": "e814e3c8bf6525c9ec16195e55df7ae83841912824cc0059983b9e08c77a893d"
+    },
+    "268491a908115bb431080b2854ba3e18dc69fc626fece953e1a302c6769c0bbb": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/checkpoint.pt",
+      "sha256": "46109a90518a51c6ebe655afdd26ee361178625ae83af32886db0171ec3c499a"
+    },
+    "22c2e48ab6f5d18db814afee39806392108fbf977ec6c86b39ac0cdd1d384f67": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_manifest.json",
+      "sha256": "83088496d01eaf7926b25fefef2e36e0eb392a882cb709e0d3ea7aaf86737023"
+    },
+    "53fdf8cccfe69d635b8a46ea7916fc2d665c343bf6f56a85002bd5cee1515ed3": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/demo_log.json",
+      "sha256": "59b5038a3b27bf866e466a9f946e443190212e9cca0e9438b255e94a3fc3a4fe"
+    },
+    "3bd8c91f85e1d0ebd77258e4b982a343f34a36bf271971189db3be4e578b2b41": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77127/checkpoint-008192.pt",
+      "sha256": "32f8f8e3fb7ee5d87e2677e5fdd331aec2e6175cf2cf853ce11cfd288d10319a"
+    },
+    "5bb8dbda57ebc2c2e35765ca09bf13121d48d0d2034e38dd65a66675f8f5c6cf": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77127/source_manifest.json",
+      "sha256": "c2a1d4091f399f87e5b4ce122d3dceb50c9c461808759b9def1ca52d51ef66fb"
+    },
+    "23fd85f1f368dff93fd15c726798ee087a0c5c93cd56c13cfce71134fa5639b5": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/eval_77127_dev.json",
+      "sha256": "37198f78750971144acce1201294e8e373f38b1bace7b3def04ad61a6e7573c6"
+    },
+    "3d7bdd41a8c2fecf1ba177db55c367881ba2239964860225e02edf36046ad1b8": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/audit_77127.json",
+      "sha256": "afc607f7be8eeff7a9fc8f7b9b712ed257e793767bb1d4fe9de2518d493e0c38"
+    },
+    "5c78d5328ba607ef0391d04a1bb29ff32bd7abaeea174aa4ee6b485b696ade30": {
+      "path": "project/output/mappo-search-v1-20261107/local_mask_77128/checkpoint-new-025600.pt",
+      "sha256": "2d0c0929c4fcbce902e25d27ae6996fd4141bf0aaf8fcae975753151c733859f"
+    },
+    "dff45483f94fa72433327ca4387cd82723823cc90742b9a445206ad1fc6106be": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/000_core.py",
+      "sha256": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265"
+    },
+    "bde5d728e755994b5661ffa9329d704d3f7a9dcecde15d886e91aceb3c9e1832": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/001_carpet.py",
+      "sha256": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506"
+    },
+    "30e0a236a92a6b0e6934e83dba7cff838882c282a16ba369ed809de3f2d9739f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/002_train_round.py",
+      "sha256": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644"
+    },
+    "b0da0d2017ccc47224a2cdf783e1017492e403f47c6bda69e99cffd71ec7cbc5": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/003_validate.py",
+      "sha256": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd"
+    },
+    "521f66381da88dd6c1aa34cdb1557edeece9189d03054eef199e24b535b71962": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/004_model.py",
+      "sha256": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025"
+    },
+    "95305319620ecd585fb8e1005744bcb226df94b16ea1145c3dff024b5a0da41f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/005_trainer.py",
+      "sha256": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1"
+    },
+    "8f820363df71dd0bcb621be8090da4081fe11705feb864b341127e2524abf5c7": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/006_referee_bridge.py",
+      "sha256": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1"
+    },
+    "a2d7c8baefa4d2d1af13114ad8aa143591402f0be98ae5cc67406b6912570a12": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/007_boundary_geometry.py",
+      "sha256": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d"
+    },
+    "cbf6c422ec7f68ce5da2164344ab31d2d6b653c3b48516b98677c3b8fa9718cb": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/008_policy.py",
+      "sha256": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf"
+    },
+    "fc2989cbff7905b5307a37e977ffed5dd9e19d7742f9ad12d889458eddbeecd6": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/009_run.py",
+      "sha256": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d"
+    },
+    "4ff98eeb7c04b0d1ca26fbf97acd229bcd60db672791ad1e6860bfd100bfa030": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/010_SHA256.json",
+      "sha256": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98"
+    },
+    "4713cd4ed4eea9396549ed1d79ce7c6d583536b4cd171b2d8a766fc9b36e5f4a": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/011_panel.json",
+      "sha256": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a"
+    },
+    "3ff2fa3eb87b8fe7b8f9527917fdd772d988ed6e35c4de01f466fc70da419d51": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/012_SHA256.json",
+      "sha256": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7"
+    },
+    "9cc578650bacf336792ff69d56aa1e1d2a2c090f8b1b727375fb398b0d11940a": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/013_contract_checks.py",
+      "sha256": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871"
+    },
+    "e391deee0cc9b67f06389f042059b399de916c163e3e7cb1a5de3dc3e3f55ee2": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/014_delivery.py",
+      "sha256": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc"
+    },
+    "84a5d26e44dbdc4840033e2b28153a4c507fd99f5c77caf6d8822a2fb3297c5f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/015_fall_risk.py",
+      "sha256": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822"
+    },
+    "573be2e87ae1db905edee7cc63fa32bbf998ee91fd8d907e0293c580f3b167c9": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/016_judge.py",
+      "sha256": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27"
+    },
+    "288f1fd2af0585918e6fa21d5f73b2498fc3c404baed6fc07c141362ca7d6e6a": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/017_long_environment.py",
+      "sha256": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe"
+    },
+    "8efb9fb008a22964ca621a2569dab79c20229f838673dbbde67f532025df413d": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/018_mission_env.py",
+      "sha256": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c"
+    },
+    "4b88d05b0c5b195a7053af9ef2214105bd66a9bd21c00eeec36cbc14360d0290": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/019_motion.py",
+      "sha256": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8"
+    },
+    "d4d8388af9e2cf16de6d29be606e4773da01e4008c40441c5c8a508c6e5bfbef": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/020_population.py",
+      "sha256": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8"
+    },
+    "bef8dae4af76215913d6b2c43537af5edb0ed3d7eb0607e211cb8f045fcaa519": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/021_scenario_io.py",
+      "sha256": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef"
+    },
+    "e70152400eea3364842685a5fa76e1d25f6f446dee3b4ae5ad194cd40da61469": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/022_supply.py",
+      "sha256": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63"
+    },
+    "671700298cbc6d2ecdff1a27dcdfa13677a7e1a062c0e5758c723c59bd1bf943": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/023_r_mappo.py",
+      "sha256": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4"
+    },
+    "b7347e25417e9aced5071c84c34064bb4ba3f7291b2729d339b8ca4654170ab3": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/024_valuenorm.py",
+      "sha256": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836"
+    },
+    "44d7bc626c061cab77c6ac53beadd695b47cbca7f3bef049cd7c3d229bc0362e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/025_config.py",
+      "sha256": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a"
+    },
+    "553f362c3caf900172e49d4e50f8910eda6a662aa141c986609d2ee3073ecf13": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/026_core.py",
+      "sha256": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b"
+    },
+    "b540b89a248f7d562592cc4be07ab5eacc66a9acabf63347a578e210c9c9b917": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/027_train.py",
+      "sha256": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128"
+    },
+    "c8f777f7a1103a6e781921b710caa6573177e9f270f091e0a503625d9ca9f3a3": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/028_demo.py",
+      "sha256": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439"
+    },
+    "01c39bf70521e4365f0747cdb9fd882e144ca0b31c3e96d9c7b57b5f4675317e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/029_micro.py",
+      "sha256": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84"
+    },
+    "98878040e8426e4e0e5828a714ed1144b77770c6b123f30c7d6cf4df93dc0df4": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/030_teacher_multistep.py",
+      "sha256": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213"
+    },
+    "f00793878939fc7b739bf093cd4c2f9d5ac96873dc69b4db692ea094cf276c65": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/031_evaluate.py",
+      "sha256": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65"
+    },
+    "0cd21bd874a8464489f0fb29402c0c839d9c9519353103dbda245529d6b028c6": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/032_policy_adapter.py",
+      "sha256": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff"
+    },
+    "24963dcaa34a224dec7cfdfa3f6bffcdb7b75be5877a3c8ed1e6f6e24c002a3f": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/033_provenance.py",
+      "sha256": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b"
+    },
+    "c153a84f7f712bcffa1d882d6426c09a6069e30c9a92e52dacdd85ca0c9ce1f2": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/034_checkpoint-new-025600.pt",
+      "sha256": "2d0c0929c4fcbce902e25d27ae6996fd4141bf0aaf8fcae975753151c733859f"
+    },
+    "0ae7cd6bcfe9ab6692fc90bc2c227b13cc21dc3be9107bf170e5ed2d84c341b5": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/checkpoint.pt",
+      "sha256": "ffd11850b2b3d08464bad3ff0e0cfd46f8d2c1b4dab1d6dde9ba71d0995af71a"
+    },
+    "4e39ae96ded25fa3d03d919cc723be8d5a537a1c9836e899967943c42dfe1372": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_manifest.json",
+      "sha256": "417a67cc7a8c221f7a89ffde18455508ff970674a578ecea3ec0564e20f4862a"
+    },
+    "6a7d10c4ee44cac56219cd8b0d825cec261d6b60b8d5a34153304d3b020c011e": {
+      "path": "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/demo_log.json",
+      "sha256": "f9f8ceb8cafccec098803a2b663de82012b208be25dbae45c448d7f88ea97891"
+    },
+    "53efb2708b6df8b42b9ae41cebd7e9174ea553b6f99bbe917878539bfdf6f0cf": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77128/checkpoint-008192.pt",
+      "sha256": "54ee8b5e5291af22a6345f300c630efb3d898cd55aa6bed1f9d14e04eebf60c0"
+    },
+    "6f384cf8643801e38432039b17b02d719e3ce14d02e2ee91260ae853ab30563c": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77128/source_manifest.json",
+      "sha256": "e7df3d9ca253e62f1bc54b1255ba7a74490cfdf5921de61aecc86a961372d295"
+    },
+    "bb462eef3460a8a2a4062338cba1d67667dc8a9da5e8b9fe4c4ae6487147e627": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/eval_77128_dev.json",
+      "sha256": "fec22c05a8ddcb47a1f1a9ddd9256724fb2d347afc238d8495cea83323b02089"
+    },
+    "2ca72aeaf902e9c90664379f64111ec227b4d5deba1dca2e8fff270b48247361": {
+      "path": "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/audit_77128.json",
+      "sha256": "b4fa62db20128e04ae5b71ead1a25a7a55a43e3555590b6c25f2e80597974bc5"
+    },
+    "db7009032a73912c04d6df2a2efdbc66fbeac354bde8e694d03e306d9a4f7179": {
+      "path": "project/output/mappo-rescue-v1-20261107/eval_extra.py",
+      "sha256": "4783a8c5d5e2fd667c4338c92f61ef8ceb218f3d09acee32f8a93903e6d34845"
+    },
+    "434fdfde7874d3314c48f1d87056f81d65d6a8920b9b605f7df555a26c81f46b": {
+      "path": "project/output/mappo-rescue-v1-20261107/audit_results.py",
+      "sha256": "746061961d4c47b95853571c32cbabbcc78b3ab5969fb5af9e6baa57ba5cd67f"
+    },
+    "380c75c89450f55eff5eaa9660ab89c094d359fc0d8b5b7de9567169b885ecce": {
+      "path": "project/output/mappo-rescue-v1-20261107/continuation_32768/continue_train.py",
+      "sha256": "edff4ce02a08253aa305be459c720975a3f5ee908cef77c57d8fd812013f9d06"
+    },
+    "9c699284cb5836f5075dd093e1a0cd000446a410bc84d312bdc416a0fa315021": {
+      "path": "project/output/mappo-rescue-v1-20261107/continuation_32768/validate.py",
+      "sha256": "85f800711400c845e4b43e2b765898861f57b54e8e28646f8a8777010c084092"
+    },
+    "db1fcaee6e1971eb65ec28c60439d658075c707c28406236762273aa5921999a": {
+      "path": "project/output/mappo-rescue-v1-20261107/continuation_32768/run_experiment.py",
+      "sha256": "76f991db13053d64e0da122abb43dd82d39b8b715fa8393f5ff1242b371ebfbe"
+    },
+    "a7eb73823e85a0c74a7b8ad191891532d03b21dc09894361c5e3dbf59416cad3": {
+      "path": "project/output/mappo-rescue-v1-20261107/continuation_32768/protocol.json",
+      "sha256": "d6225a7c71a0184808e937ba3b2af96d1a3ad4122217bf531fad6108efe32906"
+    },
+    "522951e54887e0ae1c0cdd12c68713199cb9dc2f0d9614d37dae8d047b5ec7bb": {
+      "path": "project/output/mappo-rescue-v1-20261107/continuation_32768/validation.json",
+      "sha256": "796257635b45583a734544bd002c9a60791fd2f454898e57da5c30288f5fdd61"
+    },
+    "72f2f4cf62d641b3cb06ca0c0a079eae3c6c4aa6f820478ab07e2f7c8156c624": {
+      "path": "dev80/panel.json",
+      "sha256": "03055673601f6fc09532fba0dbe76e54c45477ae21afade24a809b051e0ed9fd"
+    },
+    "6b21548e9bd6d17b24ceeecd342a92ee89ca0c0868aeb157f040102c4a2c65d0": {
+      "path": "dev80/SHA256.json",
+      "sha256": "c9af6d9530183b661b14a185810a103b54285075f3d3fc8a72a69d487861abad"
+    },
+    "a724e87260bfb90c94d5e5da8279b518067ab27ff7cb9967b9e3ee1df483d79b": {
+      "path": "alignment/dqn_long_original_v1/seed88126_total_0204480/checkpoint-0204480-completed.pt",
+      "sha256": "5850f2e2cdb46e6016ae8a3321bb02fa621c4290fe9155df6254ef2e06da5296"
+    },
+    "1f87e9f061b49524cc788b4ad987324d1d0327f94224a2ce4a0f5659fb5f8614": {
+      "path": "upstream/pymarl/src/modules/agents/rnn_agent.py",
+      "sha256": "c14fc450038da2446642cb0575b480f21b5c53faca72f7640faff788a6b80ec9"
+    },
+    "ad597b2ab62dca955b986c46c8ef8d100f4003e2b6809bedd25bedbc732551af": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/policy_core.py",
+      "sha256": "dbd77628db578ab3543b10c2ea9bbb410bd9105d741fc7dd79fbaea90487323d"
+    },
+    "f0248b7de0a1c5b7d2af3d582ac0b81aec836db33c8b9f460ab4f9c0ae5d2970": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/replay.py",
+      "sha256": "8d2399f6b3cf9acd077d11318a3e0bd3424ce08d4211e7549221ad62a88a12c6"
+    },
+    "1e8421faa7da7f9bc60f1f5c08743c5f0de213c9239871957009b6d081e46718": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/teachers.py",
+      "sha256": "4e745ba5ad520e9fe4cdc0e0666df1e1312e3d10841deaec186d2d090a0456eb"
+    },
+    "78e35285b6459d4276f4adf9cff125f89eed16d8581f1ad1b8d6f4c6b80fe7ad": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/demo.py",
+      "sha256": "3be8ce7953c23c12d9432a5ef1f5fc7a7493032d967acd25d94e72b09d871ea1"
+    },
+    "a74ea51fcf962a28587e812a82c8941e5625262d48a1fa90890100d57e85c723": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/train.py",
+      "sha256": "fe9f96105ad7d8e296931187e77afd7b333719be6cf8c34797bfab7772686c1e"
+    },
+    "0c4db3a456e20ac3181f60d06e7edde79e731a773e7d4f0de9ff1c21919704d5": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/pilot_rescue_1000_88126/checkpoint.pt",
+      "sha256": "25d6a8fe88d9875d71d3faa12727055bfd9e5423f944454287d1843b9634365f"
+    },
+    "b42632518472af4f5647b9e9f12bb90c24d39bcd59cda9dcd183aa6c10851c37": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/train_v4.py",
+      "sha256": "d7e8088a0ea6b625de48f6252a2e356539081bfa3f98aa8305de08d4dca55bb5"
+    },
+    "fc1d72c97dc464307727610cfee33e7563ffac805f14d18fa3b844a0380018c5": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/data.py",
+      "sha256": "ffd4b4b9e47b965a49025b39e43f0c18498dc5f9b0639595abd3b7e53f1b53e0"
+    },
+    "dff93875d5b85b2f9ff1240ba48be1c189f63b4edffafe55480121ca4ae6839c": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/protocol.json",
+      "sha256": "70e944d133c44eb5b697c06824d96592af79cf7dd6f5ffa65ef80da171e138e7"
+    },
+    "a1828193a41c73726e36b076ce9ff412eef000f44c77ef664b108a385c23d2fb": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/demonstrations.pt",
+      "sha256": "aa837a048197ba7dc80a62bf6b3ce1733abd13b569aa827b9f6cdd1f05795287"
+    },
+    "4a44f9d09903ef30285b65dd13a7b297f845a1527c4328bf2adcaa11f4add539": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/data_manifest.json",
+      "sha256": "dfabdc65676d48d4080b165c19e3ad111e66c03966307e486b23efb58f70cbf5"
+    },
+    "b027ef473cf4955fe4f709ebc860a6f6ce2a9d00cc9f91313358c9273a0a7071": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/pilot_search_1000_88126/checkpoint.pt",
+      "sha256": "2b62ea76d9ec8c857d2f3b12895ef4d080c5d4ef12c8c91ad865e11634afd1f4"
+    },
+    "189904efa50bc74ad8ff71348a48c999570bd1712b23df4e0af29fc66a69ac3b": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/rescue_88127/checkpoint.pt",
+      "sha256": "855f36a372224966b7d2ee102560551bc1c8c9a5b59b841c33e4fddd7b8a3f56"
+    },
+    "e70d5677be6ccd88346941c6149ba46c708a7a45cc66c46ecb053350a7bf28b4": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/search_88127/checkpoint.pt",
+      "sha256": "6ef416965d491dc643716599e2a25292312f31a53dc1c4693cbd926183d58843"
+    },
+    "d6212a74008c52f5494944a2e4a7b4229f8fac417de7734df4e3ab43fd3db780": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/rescue_88128/checkpoint.pt",
+      "sha256": "41bcf469be165848fead016a9221a6f19458bad737c633c1bfe3ea80b01d4ccc"
+    },
+    "5151b4f89520c3995f6d3e219885fb74d495c055d036547f6ef6d37ad497fe9b": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/search_88128/checkpoint.pt",
+      "sha256": "57e614b633f59145e934d5b9d25d0e180d93a88aa348f8fbcb5ab71c674e4c77"
+    },
+    "78d59a46d5c325cd657d36a11c9a84208dfeb8c41acc801f93f1b9f640bf62ca": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/vdn_v1_20261108/train_vdn.py",
+      "sha256": "7a77ace5e111ab89d03bfd694676f1280eebaa2090ed86f94082e578b6f68aa4"
+    },
+    "5e3ad1a4e1f6cb064d12fda6c39f275ccea0360255a6cf3529267072c28fc033": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/vdn_v1_20261108/team_td.py",
+      "sha256": "e6269dba988493ed2555866ddb4c90a03f7156b0a9a355c675ed20c711598232"
+    },
+    "80e6641c4477b4ae684392fe3117b8d41f172dd6b008685cda09486012104727": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/vdn_v1_20261108/protocol.json",
+      "sha256": "245de39a530ae33b8dbedc5318acfc495218bd7763bf9b68e955a74ef7127b9a"
+    },
+    "2319b108050e7a493bb01a10f8e1c0d0a11aab89cb2adcb089af6c52d530242f": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/train_qmix.py",
+      "sha256": "dfe673c9c60e1f2c1772fd229b956f53cd0717d4dde95889408ca362d823e9ee"
+    },
+    "aa1023e8c68bc9b02fc603be5e6b43aeb8907dbbc208e731f34666fca8e45f98": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/team_td.py",
+      "sha256": "6a505eb8272a6d394c262a74cd0a32ff8fb70899489e2a8cf4d4010ecae01317"
+    },
+    "0f1d90797e6ff6ef58000e5354818a5a83442e0022e89580f260a9088d3679b2": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/qmix.py",
+      "sha256": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18"
+    },
+    "f176dc5e5c0e1f6d8fb848f2fb997540d359d5f548ed5b9599a3c66c0718fbc3": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/protocol.json",
+      "sha256": "949dd41be5938f639c640d22a373b44687608748472fa11830d33e3cfcd38cd6"
+    },
+    "19e225cea12f70a6434952097269b86d95f6b614d9b98de2f74dbc422ae4a097": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/train_qplex.py",
+      "sha256": "b41c128c035c803c270da00f8441b8f2037cf6bbf368d782aa2ca5adc9a06ff9"
+    },
+    "fbfa2b62159ce50a6a6dcbe119abbc579cb1d50d8d3f3ebcdcef20ae162707ae": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/team_td.py",
+      "sha256": "635a1c273010b2a2f60b3ca1e2614f8036e0b837390147a1e0b660d2c0033614"
+    },
+    "a0338cc7f15d23494176d27311b95b61232697478c3e6eedfb8aeb46d9254dae": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/protocol.json",
+      "sha256": "229a908d7d947333488b6bf763c22acb052799e351ca7af530ffb8d44dcd3a66"
+    },
+    "19808ae327c19d3871b13357f39e55dda8e0523f0a553168fca5a3b269576962": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "8d4c1be1385abacec4650e55bc14037afb89551491d5b7701455ddd47e898264": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/dmaq_general.py",
+      "sha256": "3da1df55ba66c33ba2e583c6cb7a37daa5027d2c1a0f487361bc026f05b7d4f0"
+    },
+    "44f45080e0d90c0efb7f36d5de87236ce068319e377feb0f3d73c544d07efea4": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/dmaq_si_weight.py",
+      "sha256": "d067335198549a2aef173394cf87d90752b719fd0db615715a904fecfadc05a5"
+    },
+    "a0bd7721b13399e572cb94193abf344aa1b3329f36c6340c8eb73c150fd76643": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/qplex.yaml",
+      "sha256": "3c70d14381617022118ea443b07c8438bf5c92c6af4a2bd3b37b9454105ccc7a"
+    },
+    "554fa45f123fef3a9cb64a8fb9bf405e792f0da7213e2e83daf55e414987b269": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/dmaq_qatten_learner.py",
+      "sha256": "a7869f444b4ad069412ea448d58448f1aa50e3e7ec2c62d9cfd1af5d4e68b9b5"
+    },
+    "8e7068d66b85a824adce205a87193b86a9f307fa17454bff39781ce5388e25ae": {
+      "path": "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/provenance.json",
+      "sha256": "c2efc6978bff1ba7425742e91542dd3829fe97d66676b71f8d5f2ba933b2d8e7"
+    }
+  },
+  "all_files_sha256": {
+    "alignment/dqn_boundary_mask_v1/boundary_geometry.py": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d",
+    "alignment/dqn_long_original_v1/seed88126_total_0204480/checkpoint-0204480-completed.pt": "5850f2e2cdb46e6016ae8a3321bb02fa621c4290fe9155df6254ef2e06da5296",
+    "alignment/local_training_candidate_panel_0_2400/panel.json": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a",
+    "alignment/local_training_candidate_panel_0_2400/SHA256.json": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7",
+    "alignment/mappo_short_seed2_v1/model.py": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025",
+    "alignment/mappo_short_seed2_v1/trainer.py": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1",
+    "alignment/pool_0_2400_v2/parent-41001/water.npz": "dd0ce30704f1aee2a73c2857ff750e51693604f87d4c10b3960e161e48f7575e",
+    "alignment/pool_0_2400_v2/parent-41002/water.npz": "6976d8765443c7c25e98897201b19b8051747fd0d3cfbf7510c2f59f93a62879",
+    "alignment/pool_0_2400_v2/parent-42002/water.npz": "5e59df48e48566b17ec9e9a0777e97ac0fd71b6b48a92a91c539c53c23786829",
+    "alignment/pool_0_2400_v2/parent-42004/water.npz": "0a6dea671eaeb81868d9ed1d72cf457b0a7d891b1dd101ccb4a5f06baf89aac7",
+    "alignment/population_0_2400_v1/parent-41001/roster-0/origin.npz": "800cd69c1cfc9ea1ef3c28c38e79e2a2d4cfde863e7e7dd382223d4075a6ae74",
+    "alignment/population_0_2400_v1/parent-41001/roster-0/population.npz": "e42a8301d7714ad6d023bf33965287328179f321558a5cccaa067c9294783157",
+    "alignment/population_0_2400_v1/parent-41002/roster-0/origin.npz": "0505fb5142e940c72bb2046f705f331f9a8d76b8a8f749e9c3fb705dd9f19513",
+    "alignment/population_0_2400_v1/parent-41002/roster-0/population.npz": "c701597b5af10ab5205ee04d32df2de5048c2709f550bb83d13d4b6256d0b0bf",
+    "alignment/population_0_2400_v1/parent-42002/roster-0/origin.npz": "4ac540721bbb2560a2ea0a873ed6a9d1be08e00bd351b6c9b124d84d7cf876b5",
+    "alignment/population_0_2400_v1/parent-42002/roster-0/population.npz": "51bbe2e71f541b2afa516a3944bb27aab8ccc71545a5baf18891bd55832c3475",
+    "alignment/population_0_2400_v1/parent-42004/roster-0/origin.npz": "a71f838baf6525e9f19ed094ad7b36f7523ad8f4dd0e59448eafdef165aa89b6",
+    "alignment/population_0_2400_v1/parent-42004/roster-0/population.npz": "3bf950f658235aabb98e995103b0acc53b6e3725b651c9445057eee7243cb5b9",
+    "alignment/referee_bridge.py": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1",
+    "dev80/panel.json": "03055673601f6fc09532fba0dbe76e54c45477ae21afade24a809b051e0ed9fd",
+    "dev80/SHA256.json": "c9af6d9530183b661b14a185810a103b54285075f3d3fc8a72a69d487861abad",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/demo.py": "3be8ce7953c23c12d9432a5ef1f5fc7a7493032d967acd25d94e72b09d871ea1",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/rescue_88127/checkpoint.pt": "855f36a372224966b7d2ee102560551bc1c8c9a5b59b841c33e4fddd7b8a3f56",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/rescue_88128/checkpoint.pt": "41bcf469be165848fead016a9221a6f19458bad737c633c1bfe3ea80b01d4ccc",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/search_88127/checkpoint.pt": "6ef416965d491dc643716599e2a25292312f31a53dc1c4693cbd926183d58843",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/formal/search_88128/checkpoint.pt": "57e614b633f59145e934d5b9d25d0e180d93a88aa348f8fbcb5ab71c674e4c77",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/pilot_rescue_1000_88126/checkpoint.pt": "25d6a8fe88d9875d71d3faa12727055bfd9e5423f944454287d1843b9634365f",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/pilot_search_1000_88126/checkpoint.pt": "2b62ea76d9ec8c857d2f3b12895ef4d080c5d4ef12c8c91ad865e11634afd1f4",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/policy_core.py": "dbd77628db578ab3543b10c2ea9bbb410bd9105d741fc7dd79fbaea90487323d",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/protocol.json": "949dd41be5938f639c640d22a373b44687608748472fa11830d33e3cfcd38cd6",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/qmix.py": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/team_td.py": "6a505eb8272a6d394c262a74cd0a32ff8fb70899489e2a8cf4d4010ecae01317",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/train_qmix.py": "dfe673c9c60e1f2c1772fd229b956f53cd0717d4dde95889408ca362d823e9ee",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/protocol.json": "229a908d7d947333488b6bf763c22acb052799e351ca7af530ffb8d44dcd3a66",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/team_td.py": "635a1c273010b2a2f60b3ca1e2614f8036e0b837390147a1e0b660d2c0033614",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/train_qplex.py": "b41c128c035c803c270da00f8441b8f2037cf6bbf368d782aa2ca5adc9a06ff9",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/dmaq_general.py": "3da1df55ba66c33ba2e583c6cb7a37daa5027d2c1a0f487361bc026f05b7d4f0",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/dmaq_qatten_learner.py": "a7869f444b4ad069412ea448d58448f1aa50e3e7ec2c62d9cfd1af5d4e68b9b5",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/dmaq_si_weight.py": "d067335198549a2aef173394cf87d90752b719fd0db615715a904fecfadc05a5",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/provenance.json": "c2efc6978bff1ba7425742e91542dd3829fe97d66676b71f8d5f2ba933b2d8e7",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/upstream/qplex.yaml": "3c70d14381617022118ea443b07c8438bf5c92c6af4a2bd3b37b9454105ccc7a",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/replay.py": "8d2399f6b3cf9acd077d11318a3e0bd3424ce08d4211e7549221ad62a88a12c6",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/data.py": "ffd4b4b9e47b965a49025b39e43f0c18498dc5f9b0639595abd3b7e53f1b53e0",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/data_manifest.json": "dfabdc65676d48d4080b165c19e3ad111e66c03966307e486b23efb58f70cbf5",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/demonstrations.pt": "aa837a048197ba7dc80a62bf6b3ce1733abd13b569aa827b9f6cdd1f05795287",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/protocol.json": "70e944d133c44eb5b697c06824d96592af79cf7dd6f5ffa65ef80da171e138e7",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/train_v4.py": "d7e8088a0ea6b625de48f6252a2e356539081bfa3f98aa8305de08d4dca55bb5",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/teachers.py": "4e745ba5ad520e9fe4cdc0e0666df1e1312e3d10841deaec186d2d090a0456eb",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/train.py": "fe9f96105ad7d8e296931187e77afd7b333719be6cf8c34797bfab7772686c1e",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/vdn_v1_20261108/protocol.json": "245de39a530ae33b8dbedc5318acfc495218bd7763bf9b68e955a74ef7127b9a",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/vdn_v1_20261108/team_td.py": "e6269dba988493ed2555866ddb4c90a03f7156b0a9a355c675ed20c711598232",
+    "project/output/dqn-rescue-v1-20261107/frontier_v2/vdn_v1_20261108/train_vdn.py": "7a77ace5e111ab89d03bfd694676f1280eebaa2090ed86f94082e578b6f68aa4",
+    "project/output/mappo-rescue-v1-20261107/audit_results.py": "746061961d4c47b95853571c32cbabbcc78b3ab5969fb5af9e6baa57ba5cd67f",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/checkpoint.pt": "45ed54796e306178a5d4afb152889f83f46f172e88925fedb21464a23571ffcc",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/demo_log.json": "b9c32268cd4cd2a66d9c1805ccb0ec46d6b89e9cdfcd76721369168deffeefb8",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_manifest.json": "8298bc75d89ab96993ade8385bc2908eb8050187675e47bc080022fb9b7c11dd",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/000_core.py": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/001_carpet.py": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/002_train_round.py": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/003_validate.py": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/004_model.py": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/005_trainer.py": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/006_referee_bridge.py": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/007_boundary_geometry.py": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/008_policy.py": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/009_run.py": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/010_SHA256.json": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/011_panel.json": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/012_SHA256.json": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/013_contract_checks.py": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/014_delivery.py": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/015_fall_risk.py": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/016_judge.py": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/017_long_environment.py": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/018_mission_env.py": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/019_motion.py": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/020_population.py": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/021_scenario_io.py": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/022_supply.py": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/023_r_mappo.py": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/024_valuenorm.py": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/025_config.py": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/026_core.py": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/027_train.py": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/028_demo.py": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/029_micro.py": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/030_teacher_multistep.py": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/031_evaluate.py": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/032_policy_adapter.py": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/033_provenance.py": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77126/source_snapshot/034_checkpoint-new-025600.pt": "cf33fb525e196b905c7542c3471b6cf1849f883663e24e370044f00a36dfc27f",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/checkpoint.pt": "46109a90518a51c6ebe655afdd26ee361178625ae83af32886db0171ec3c499a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/demo_log.json": "59b5038a3b27bf866e466a9f946e443190212e9cca0e9438b255e94a3fc3a4fe",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_manifest.json": "83088496d01eaf7926b25fefef2e36e0eb392a882cb709e0d3ea7aaf86737023",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/000_core.py": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/001_carpet.py": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/002_train_round.py": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/003_validate.py": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/004_model.py": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/005_trainer.py": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/006_referee_bridge.py": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/007_boundary_geometry.py": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/008_policy.py": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/009_run.py": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/010_SHA256.json": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/011_panel.json": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/012_SHA256.json": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/013_contract_checks.py": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/014_delivery.py": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/015_fall_risk.py": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/016_judge.py": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/017_long_environment.py": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/018_mission_env.py": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/019_motion.py": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/020_population.py": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/021_scenario_io.py": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/022_supply.py": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/023_r_mappo.py": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/024_valuenorm.py": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/025_config.py": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/026_core.py": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/027_train.py": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/028_demo.py": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/029_micro.py": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/030_teacher_multistep.py": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/031_evaluate.py": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/032_policy_adapter.py": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/033_provenance.py": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77127/source_snapshot/034_checkpoint-new-025600.pt": "e814e3c8bf6525c9ec16195e55df7ae83841912824cc0059983b9e08c77a893d",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/checkpoint.pt": "ffd11850b2b3d08464bad3ff0e0cfd46f8d2c1b4dab1d6dde9ba71d0995af71a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/demo_log.json": "f9f8ceb8cafccec098803a2b663de82012b208be25dbae45c448d7f88ea97891",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_manifest.json": "417a67cc7a8c221f7a89ffde18455508ff970674a578ecea3ec0564e20f4862a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/000_core.py": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/001_carpet.py": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/002_train_round.py": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/003_validate.py": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/004_model.py": "2afcbe7d2cddaa4f3f9ccced7a075500e2322bde61207bf235d446da5f88b025",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/005_trainer.py": "addeb8467a915d2fba563fd976fea4f121c1bb29adbbcb12a31a5e4e4302b4d1",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/006_referee_bridge.py": "77ce6907ce11fc7e36cc78b6dcebf1f555f6b8d46ded146c2257871a82deabf1",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/007_boundary_geometry.py": "96852b6ef6f096be02305fbd0f88c815c85f7f62f97ed74fa44a34a6540a608d",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/008_policy.py": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/009_run.py": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/010_SHA256.json": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/011_panel.json": "2dc5d68ede62c57f77f7b1975200f74cf5e5d0bc259da208d7c8e3885311c76a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/012_SHA256.json": "0bd1439cbd8a5d582bccfd66a3b8acd5fb2d60ca109e20948e844b7bf385a7e7",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/013_contract_checks.py": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/014_delivery.py": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/015_fall_risk.py": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/016_judge.py": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/017_long_environment.py": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/018_mission_env.py": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/019_motion.py": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/020_population.py": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/021_scenario_io.py": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/022_supply.py": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/023_r_mappo.py": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/024_valuenorm.py": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/025_config.py": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/026_core.py": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/027_train.py": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/028_demo.py": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/029_micro.py": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/030_teacher_multistep.py": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/031_evaluate.py": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/032_policy_adapter.py": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/033_provenance.py": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b",
+    "project/output/mappo-rescue-v1-20261107/candidate_demo_77128/source_snapshot/034_checkpoint-new-025600.pt": "2d0c0929c4fcbce902e25d27ae6996fd4141bf0aaf8fcae975753151c733859f",
+    "project/output/mappo-rescue-v1-20261107/continuation_32768/continue_train.py": "edff4ce02a08253aa305be459c720975a3f5ee908cef77c57d8fd812013f9d06",
+    "project/output/mappo-rescue-v1-20261107/continuation_32768/protocol.json": "d6225a7c71a0184808e937ba3b2af96d1a3ad4122217bf531fad6108efe32906",
+    "project/output/mappo-rescue-v1-20261107/continuation_32768/run_experiment.py": "76f991db13053d64e0da122abb43dd82d39b8b715fa8393f5ff1242b371ebfbe",
+    "project/output/mappo-rescue-v1-20261107/continuation_32768/validate.py": "85f800711400c845e4b43e2b765898861f57b54e8e28646f8a8777010c084092",
+    "project/output/mappo-rescue-v1-20261107/continuation_32768/validation.json": "796257635b45583a734544bd002c9a60791fd2f454898e57da5c30288f5fdd61",
+    "project/output/mappo-rescue-v1-20261107/core.py": "f1817ec7208b2a8bb6654194549d4803dbbcf18838954fcbb132f89d379b8b7b",
+    "project/output/mappo-rescue-v1-20261107/demo.py": "9da2d93a28a0bc5dba06569e91d309d86b472047c7e2f7fc1f6cfc9008939439",
+    "project/output/mappo-rescue-v1-20261107/eval_extra.py": "4783a8c5d5e2fd667c4338c92f61ef8ceb218f3d09acee32f8a93903e6d34845",
+    "project/output/mappo-rescue-v1-20261107/evaluate.py": "65fa466eb445af6b409a35b77e981fdba3069659ac37034e2fbd26b98aa30e65",
+    "project/output/mappo-rescue-v1-20261107/micro.py": "a223b7a278522db099669de0cf9fe4b5c3cd98b86b1fb5536e171c01b1a95b84",
+    "project/output/mappo-rescue-v1-20261107/orchestrate.py": "fffd978ac8ec2751882ccf4c484e2f855d6cb23d119ad6c84b473bd8226eeeb3",
+    "project/output/mappo-rescue-v1-20261107/policy_adapter.py": "3d4ff4a2919eb31d6c282c66482b7fc998694e075cc0d54816c12aabafa382ff",
+    "project/output/mappo-rescue-v1-20261107/provenance.py": "2d3fb67765126b38f67b9b4c4e211bd0b3e85b646910c0f52abee47b1f558b0b",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/audit_77126.json": "fd2f78a7d511bf132b9d30ebfcbd9b747e061d43d180000bb119817a9fa9dd3a",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/audit_77127.json": "afc607f7be8eeff7a9fc8f7b9b712ed257e793767bb1d4fe9de2518d493e0c38",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/audit_77128.json": "b4fa62db20128e04ae5b71ead1a25a7a55a43e3555590b6c25f2e80597974bc5",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/eval_77126_dev.json": "a83a687cb72fa24e5b866b2a2830d52ce783f150d451af37f6e415809321a515",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/eval_77127_dev.json": "37198f78750971144acce1201294e8e373f38b1bace7b3def04ad61a6e7573c6",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/eval_77128_dev.json": "fec22c05a8ddcb47a1f1a9ddd9256724fb2d347afc238d8495cea83323b02089",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/protocol_v2.json": "bf06e14289d436f992e7fccc59af7ab23b985d5363566f7036d516930952f027",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77126/checkpoint-008192.pt": "bc476d0fde7533db51c9c4e9e91a19db92ce87e0a845abbfabdfe2d9767764a5",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77126/source_manifest.json": "2607f206a98fefefa1f317d046a82510d828653a29f708401f93174c32c6af5c",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77127/checkpoint-008192.pt": "32f8f8e3fb7ee5d87e2677e5fdd331aec2e6175cf2cf853ce11cfd288d10319a",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77127/source_manifest.json": "c2a1d4091f399f87e5b4ce122d3dceb50c9c461808759b9def1ca52d51ef66fb",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77128/checkpoint-008192.pt": "54ee8b5e5291af22a6345f300c630efb3d898cd55aa6bed1f9d14e04eebf60c0",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/seed_77128/source_manifest.json": "e7df3d9ca253e62f1bc54b1255ba7a74490cfdf5921de61aecc86a961372d295",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/train_v2.py": "7e1be7e476b6b8c6fc2bd17a4ba9a55f5e89b1fbdec408a6ff1f11bbb5f97ec5",
+    "project/output/mappo-rescue-v1-20261107/stable_ppo_v2/validate_v2.py": "7cda44af67bf84e9d68f5326fe0e6b1fa9642bd20073d61c80926fd88c6c87ce",
+    "project/output/mappo-rescue-v1-20261107/teacher_multistep.py": "bcf492bc27e2ed1cc95cff276743719b99f9f1757c191fd302abb13fb63cd213",
+    "project/output/mappo-rescue-v1-20261107/train.py": "362be3fef035ab9ae4f4b0e9cb9707e6d90847fa172628e2917b8dda6d7c7128",
+    "project/output/mappo-search-v1-20261107/carpet.py": "2ff6f94b80cbf4d97afd5f977443792a04aebec73dcabd5dc524fac73182a506",
+    "project/output/mappo-search-v1-20261107/core.py": "c3e3450cd5150ae127799d10242469b90c7ab350a97a38f247e7b68c3a83d265",
+    "project/output/mappo-search-v1-20261107/local_mask_77126/checkpoint-new-025600.pt": "cf33fb525e196b905c7542c3471b6cf1849f883663e24e370044f00a36dfc27f",
+    "project/output/mappo-search-v1-20261107/local_mask_77127/checkpoint-new-025600.pt": "e814e3c8bf6525c9ec16195e55df7ae83841912824cc0059983b9e08c77a893d",
+    "project/output/mappo-search-v1-20261107/local_mask_77128/checkpoint-new-025600.pt": "2d0c0929c4fcbce902e25d27ae6996fd4141bf0aaf8fcae975753151c733859f",
+    "project/output/mappo-search-v1-20261107/train_round.py": "aa8ecceb726ce0be1a5cf3dcdcb5a95976490df97c9af80a2067443a820ac644",
+    "project/output/mappo-search-v1-20261107/validate.py": "15f11b0e852df113c1919b561dc06908e49c68dfe6ba56814a9812bda20798cd",
+    "rule/policy.py": "52f47cab90424f829784f7f6ee1de4e71f5a857c0261647cb004bbde9b3268cf",
+    "sdk/engine/contract_checks.py": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871",
+    "sdk/engine/delivery.py": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc",
+    "sdk/engine/fall_risk.py": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822",
+    "sdk/engine/judge.py": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27",
+    "sdk/engine/long_environment.py": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe",
+    "sdk/engine/mission_env.py": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c",
+    "sdk/engine/motion.py": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8",
+    "sdk/engine/population.py": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8",
+    "sdk/engine/scenario_io.py": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef",
+    "sdk/engine/supply.py": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63",
+    "sdk/requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "sdk/run.py": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d",
+    "sdk/SHA256.json": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98",
+    "sdk/VERSION.json": "2101b3b5f7e162dc605c4247b57fd33f863d4edbd2c1eb77ba2b055ae378b33a",
+    "upstream/on-policy/LICENSE": "e0971517b1a2683cf36b2e551c9698f34d7e49f3153a0dc4864ea88fd51dbd35",
+    "upstream/on-policy/onpolicy/__init__.py": "c8384a5428741e71aec3efe0247252f756f6b523b21088663ddc839104796aa6",
+    "upstream/on-policy/onpolicy/algorithms/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/on-policy/onpolicy/algorithms/happo/happo_trainer.py": "8931f2b205340d5f0739a6944c3a035c63d38e058d031a2fc0f6c02db74ba931",
+    "upstream/on-policy/onpolicy/algorithms/happo/policy.py": "6621d86f5c407b5d4c1c355f046b9bffff9aa41c2a3b7e86382addb1ea0ba368",
+    "upstream/on-policy/onpolicy/algorithms/hatrpo/hatrpo_trainer.py": "41485cbdf44cd9fe7d69a9fb8b8919fe2221e4b58d378760169fd10495e1980b",
+    "upstream/on-policy/onpolicy/algorithms/hatrpo/policy.py": "db7b067e5f65644c179bdb61dfbd3ac49223da91de87eff2e8d1ceab8688820a",
+    "upstream/on-policy/onpolicy/algorithms/mat/algorithm/ma_transformer.py": "a56c8321aafdf783f5ff428f3f4335daf5a7a43a4c01444cb8ac32c62ba7bbea",
+    "upstream/on-policy/onpolicy/algorithms/mat/algorithm/transformer_policy.py": "79deb8495f0120c016537bbe4c7bf14b158fed6d054cc0b2ef0eadc8f9e85d36",
+    "upstream/on-policy/onpolicy/algorithms/mat/mat_trainer.py": "d21737ab4e837a63e084c5ead2da9937938ca7a35a8adeb5629401578f5fcfd0",
+    "upstream/on-policy/onpolicy/algorithms/r_mappo/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/on-policy/onpolicy/algorithms/r_mappo/algorithm/r_actor_critic.py": "698445b8f59980ff8408d501c57d001aab15d64a7d21d1a275f6db5aeaa4a405",
+    "upstream/on-policy/onpolicy/algorithms/r_mappo/algorithm/rMAPPOPolicy.py": "73edf1cc0ddd666c925da660c56084811286cf656ce7e501c28e6417b8db065a",
+    "upstream/on-policy/onpolicy/algorithms/r_mappo/r_mappo.py": "2f6f48756b2b1747f09383bf8203cf5954294c9595c200117871e56af49d2dd4",
+    "upstream/on-policy/onpolicy/algorithms/utils/act.py": "86d49dca683781f191b499c088d315464b3d5e4a6280d4d765b5b56c5183420f",
+    "upstream/on-policy/onpolicy/algorithms/utils/cnn.py": "958c59f4828ec874934490249877b7b82d6d218ef12db2428dac7f6b325ce067",
+    "upstream/on-policy/onpolicy/algorithms/utils/distributions.py": "4e7c2ea7c80d4ce1ed2f0d783e45d52e79da115becda11606de11dee944697dc",
+    "upstream/on-policy/onpolicy/algorithms/utils/mlp.py": "04e0ae4da416ac5352cd5d228688577903b4d0242386e19f63a0b3361af03b49",
+    "upstream/on-policy/onpolicy/algorithms/utils/popart.py": "a8939e480e921f0935538a9e3be324253295b63fee3e54cc1d35e44e909af631",
+    "upstream/on-policy/onpolicy/algorithms/utils/popart_hatrpo.py": "8c1352cb4f4e1d29a5c3472ef368aea67fd5e6bbe56ab39beea1d7095bdf85e2",
+    "upstream/on-policy/onpolicy/algorithms/utils/rnn.py": "bb6ca30a91503f012df3c45d9be9011642f9895fb9804b05530bcb49db47fe50",
+    "upstream/on-policy/onpolicy/algorithms/utils/transformer_act.py": "4bee05275275effc63c2d5d80b8156fe1bb27e011ab9cd8aaae4ce7c94b5f554",
+    "upstream/on-policy/onpolicy/algorithms/utils/util.py": "08b85e4c968d1facc567aa0b0712dfe9b41d0121c6e8de74108f3fe38377d0a2",
+    "upstream/on-policy/onpolicy/config.py": "de59d2023ac290eb0064ce752cb9518597b9b993cea917062cbf08c09c3ac71a",
+    "upstream/on-policy/onpolicy/envs/__init__.py": "15c2ffe5d6790738d28363cf7101f64d7b6370a182b805284fbbbd304e6b42a1",
+    "upstream/on-policy/onpolicy/envs/env_wrappers.py": "28b7a1d539f82bc61c70ba0851de04c1e7e3f3982847ca1115f396fc300586c8",
+    "upstream/on-policy/onpolicy/envs/football/Football_Env.py": "42fb41b90469fa7e57fa2f0b53db8d84eef1506087a6391714cf34cf38463cc6",
+    "upstream/on-policy/onpolicy/envs/hanabi/__init__.py": "6d1b6671b68f9e1de9c86bd77d31166fe2ab77c36c958d4b4d57f499587900ee",
+    "upstream/on-policy/onpolicy/envs/hanabi/Hanabi_Env.py": "da6b612327a9f5d6c245c66b21bbbeb52653901fb1e37f802fe6b42645930f79",
+    "upstream/on-policy/onpolicy/envs/hanabi/pyhanabi.py": "890d49ff152c0164282f6360f4958062cc56d1267b1976d4adaab00464a889c2",
+    "upstream/on-policy/onpolicy/envs/mpe/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "upstream/on-policy/onpolicy/envs/mpe/core.py": "951a33b432c5c228ae2bfc424527a5ed5c3b59dbe42e418f4db33b3609c3f1a9",
+    "upstream/on-policy/onpolicy/envs/mpe/environment.py": "14c46320e79cdfc461c33e61d964112032943e3c09c668738d591033411933f0",
+    "upstream/on-policy/onpolicy/envs/mpe/MPE_env.py": "68c59eded7bdc2873c8476d08aa4a5e0bde23b1c7a1de4a491f2e20d2af72ce7",
+    "upstream/on-policy/onpolicy/envs/mpe/multi_discrete.py": "712afc64d21c3ca937996cf8033884990bed756db74a31e4923cfd2856dfcbef",
+    "upstream/on-policy/onpolicy/envs/mpe/rendering.py": "7921f17b34ba438b1d2e306e4dc88bad8a80d341c97566d397a674d5f7aeee24",
+    "upstream/on-policy/onpolicy/envs/mpe/scenario.py": "47b116db8c0f1b223fd8b46b44f962bf1554491d6dd44f69176c9af86dfde504",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/__init__.py": "575db8dd0076605c067460dc47d9952af9c4e8412ba8a65cdeb93cac4ad1785f",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_adversary.py": "6e051fd0ad6fec3f726c2e9006d1aebc8f6e071fa22957b2e31c37a6abd7f1e9",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_attack.py": "4e56907fd68b448762ed3a47266e9bf65ace199f4656c823c7e6faa0b9b4490c",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_crypto.py": "613bcac44ea1046d11d1402cc721c043ef6d9e886e0176c1a685637a8860ad3f",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_crypto_display.py": "a53ae1f45072adfd4b14e3df841f14ba9c42dd71c0c8fbe962a33e7c32c7b5d2",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_push.py": "d5f496713f5971765a8016d6c2925f88837145c22d6313ca3732de02cbf8ef73",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_reference.py": "0124ea25c9309cfa4000f0cbe60db0150c9eaa6a37c89ef67915e8830d94de70",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_speaker_listener.py": "2862e1a171efc6a9a2c5226b78839ceba6ff41308ced0cb0ad1314cfa0245926",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_spread.py": "39a638cebf99294b18317c332ba050b10096a311d3c9c234804853ebf21727be",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_tag.py": "8ebe8c4680e480033ed1d5c34532912028ce60cfe3f3b3a6051a57bb5d353245",
+    "upstream/on-policy/onpolicy/envs/mpe/scenarios/simple_world_comm.py": "2bc664d144e4fc84064a0a991c45f92aee98d1ccbc87f4c87081ff6538337a2a",
+    "upstream/on-policy/onpolicy/envs/starcraft2/multiagentenv.py": "c3e6040749b188b16605c6f05306b543148b196be993896270e05fc8db778566",
+    "upstream/on-policy/onpolicy/envs/starcraft2/smac_maps.py": "d90d5d5e37efe1d9b42cd571efbaef8577f97d76b58dc36dceb1e2eadc56ad57",
+    "upstream/on-policy/onpolicy/envs/starcraft2/SMACv2.py": "658094cb0ed2c57262e0f4a4b41184e708bb5f31c9c39966ec3a32c530962d32",
+    "upstream/on-policy/onpolicy/envs/starcraft2/SMACv2_modified.py": "adcfff76158877f91f4585ea3b4bc9cd18278be252bd73e66100c32454d8b47e",
+    "upstream/on-policy/onpolicy/envs/starcraft2/StarCraft2_Env.py": "5e10d0bc60f451a4e97e8f28ced6d7562fde78ebb32d3b4e4c579cee68f67dcf",
+    "upstream/on-policy/onpolicy/envs/starcraft2/StarCraft2v2/distributions.py": "5d11a386626cefe25cc0ae9fb403e252ac5f81939b49d246bcd536e0ab10ded8",
+    "upstream/on-policy/onpolicy/envs/starcraft2/StarCraft2v2/starcraft2.py": "ad6264fffe6296a02dfc125c6c888e0a2c8141f6fbca85914c5794e69e818579",
+    "upstream/on-policy/onpolicy/envs/starcraft2/StarCraft2v2/wrapper.py": "28107a341c497d047e56096d3faf913b91393345d3e1ebbfc9d3f7b9697333f3",
+    "upstream/on-policy/onpolicy/runner/separated/base_runner.py": "798b57cee21573ed87e23f6b4be002e69fe7124d9ed124d74131cc6a802081c6",
+    "upstream/on-policy/onpolicy/runner/separated/mpe_runner.py": "591ea9b57c63b5f2f4ce273e29299d10e399b1a90c681febca01f6f8da5812a4",
+    "upstream/on-policy/onpolicy/runner/separated/smac_runner.py": "eed7ad80299fe1bbd1b3e751a6c72fe657191435229d58dec1360a013e866de6",
+    "upstream/on-policy/onpolicy/runner/shared/base_runner.py": "ad09c128e3ca587f649a8b3d1151cfef5293d0c53d8bbbbdfee5f90be40ce9c7",
+    "upstream/on-policy/onpolicy/runner/shared/football_runner.py": "27657660abcd36ba7f5ebd369836afbaa71a48d72431e4d01cfe99b57155b0bd",
+    "upstream/on-policy/onpolicy/runner/shared/hanabi_runner_forward.py": "a0afd66b58cf99e43b29ae68d56e82d32cb0c48f1071502e5d32417d614fee1a",
+    "upstream/on-policy/onpolicy/runner/shared/mpe_runner.py": "d8b8f163297197f6bfd5ac86e8ff1270327a8107a11e939c1251d989c8b58d29",
+    "upstream/on-policy/onpolicy/runner/shared/smac_runner.py": "9b57704d91385ca9ca4eb8df8b1b2db3b6e9ee682b068bf1c25ba6bd541a66ee",
+    "upstream/on-policy/onpolicy/scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/on-policy/onpolicy/scripts/eval/eval_hanabi.py": "8b7739576604519a85f3f5c8bac48d048555ab22f076ce9a63ab48d04c58959b",
+    "upstream/on-policy/onpolicy/scripts/render/render_football.py": "bd8aa3f5cd712095a9e0fb3c127543e905d04b899b1303445599941be8ba0241",
+    "upstream/on-policy/onpolicy/scripts/render/render_mpe.py": "27b6aa450bb2ff99735bf7f2b1dc177d1ebbe8a28e8ce0c5be71da2da9d64d7e",
+    "upstream/on-policy/onpolicy/scripts/train/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/on-policy/onpolicy/scripts/train/train_football.py": "2718f85b58752900ecb877258e52c46fc4fe7b319dc23d896f62ff9cc3ce3273",
+    "upstream/on-policy/onpolicy/scripts/train/train_hanabi_forward.py": "00eafe243ab2c7248da8a1c636474a5ec498d7bcf4d5cf1e9666a3bd490e3ec4",
+    "upstream/on-policy/onpolicy/scripts/train/train_mpe.py": "60e282f6e32f1fe78e5e52cf0b111f09c09e8990b71b1b7a046f94ecbe1ef769",
+    "upstream/on-policy/onpolicy/scripts/train/train_smac.py": "43de9f41c49393cda208c2c625e992545eea021fc711486db2439f8bfa84366f",
+    "upstream/on-policy/onpolicy/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream/on-policy/onpolicy/utils/multi_discrete.py": "7bca00aa5f47039ebe1fa1cb26e46682046cda57cf05d963f7c3ac699fa5a7a6",
+    "upstream/on-policy/onpolicy/utils/separated_buffer.py": "fdc4f06ff7647fe43ee7512368b4fc4638946c36ca295fd089afc79cb1810f2a",
+    "upstream/on-policy/onpolicy/utils/shared_buffer.py": "84b99bcb6018cbb78b64cab7b2619fec77a2c51a7eb7366d4297a781c730d47e",
+    "upstream/on-policy/onpolicy/utils/util.py": "eaeb3072134a2d663bcfe7ab4679882e5f854947c554776e958b602c648cc635",
+    "upstream/on-policy/onpolicy/utils/valuenorm.py": "8cd48bb7e3a3d8295baec57a2cde23ca60a973d047f358f408709ef53c6a1836",
+    "upstream/pymarl/LICENSE": "a1e4522979cd422b42d0b464072eb7d0d218651659f56bf09f8c147384e3f105",
+    "upstream/pymarl/src/modules/agents/rnn_agent.py": "c14fc450038da2446642cb0575b480f21b5c53faca72f7640faff788a6b80ec9"
+  },
+  "cases": [
+    {
+      "parent": 41001,
+      "roster": 0,
+      "files": {
+        "water": {
+          "path": "alignment/pool_0_2400_v2/parent-41001/water.npz",
+          "sha256": "dd0ce30704f1aee2a73c2857ff750e51693604f87d4c10b3960e161e48f7575e"
+        },
+        "population": {
+          "path": "alignment/population_0_2400_v1/parent-41001/roster-0/population.npz",
+          "sha256": "e42a8301d7714ad6d023bf33965287328179f321558a5cccaa067c9294783157"
+        },
+        "origin": {
+          "path": "alignment/population_0_2400_v1/parent-41001/roster-0/origin.npz",
+          "sha256": "800cd69c1cfc9ea1ef3c28c38e79e2a2d4cfde863e7e7dd382223d4075a6ae74"
+        }
+      }
+    },
+    {
+      "parent": 41002,
+      "roster": 0,
+      "files": {
+        "water": {
+          "path": "alignment/pool_0_2400_v2/parent-41002/water.npz",
+          "sha256": "6976d8765443c7c25e98897201b19b8051747fd0d3cfbf7510c2f59f93a62879"
+        },
+        "population": {
+          "path": "alignment/population_0_2400_v1/parent-41002/roster-0/population.npz",
+          "sha256": "c701597b5af10ab5205ee04d32df2de5048c2709f550bb83d13d4b6256d0b0bf"
+        },
+        "origin": {
+          "path": "alignment/population_0_2400_v1/parent-41002/roster-0/origin.npz",
+          "sha256": "0505fb5142e940c72bb2046f705f331f9a8d76b8a8f749e9c3fb705dd9f19513"
+        }
+      }
+    },
+    {
+      "parent": 42002,
+      "roster": 0,
+      "files": {
+        "water": {
+          "path": "alignment/pool_0_2400_v2/parent-42002/water.npz",
+          "sha256": "5e59df48e48566b17ec9e9a0777e97ac0fd71b6b48a92a91c539c53c23786829"
+        },
+        "population": {
+          "path": "alignment/population_0_2400_v1/parent-42002/roster-0/population.npz",
+          "sha256": "51bbe2e71f541b2afa516a3944bb27aab8ccc71545a5baf18891bd55832c3475"
+        },
+        "origin": {
+          "path": "alignment/population_0_2400_v1/parent-42002/roster-0/origin.npz",
+          "sha256": "4ac540721bbb2560a2ea0a873ed6a9d1be08e00bd351b6c9b124d84d7cf876b5"
+        }
+      }
+    },
+    {
+      "parent": 42004,
+      "roster": 0,
+      "files": {
+        "water": {
+          "path": "alignment/pool_0_2400_v2/parent-42004/water.npz",
+          "sha256": "0a6dea671eaeb81868d9ed1d72cf457b0a7d891b1dd101ccb4a5f06baf89aac7"
+        },
+        "population": {
+          "path": "alignment/population_0_2400_v1/parent-42004/roster-0/population.npz",
+          "sha256": "3bf950f658235aabb98e995103b0acc53b6e3725b651c9445057eee7243cb5b9"
+        },
+        "origin": {
+          "path": "alignment/population_0_2400_v1/parent-42004/roster-0/origin.npz",
+          "sha256": "a71f838baf6525e9f19ed094ad7b36f7523ad8f4dd0e59448eafdef165aa89b6"
+        }
+      }
+    }
+  ],
+  "checkpoint_metadata": {
+    "MAPPO/77126": {
+      "joint": 32768,
+      "schema": "MAPPO_RESCUE_V1",
+      "runtime": null,
+      "source_lock_entries": 176
+    },
+    "MAPPO/77127": {
+      "joint": 32768,
+      "schema": "MAPPO_RESCUE_V1",
+      "runtime": null,
+      "source_lock_entries": 176
+    },
+    "MAPPO/77128": {
+      "joint": 32768,
+      "schema": "MAPPO_RESCUE_V1",
+      "runtime": null,
+      "source_lock_entries": 176
+    },
+    "DQN/88126": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 42
+    },
+    "DQN/88127": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 42
+    },
+    "DQN/88128": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 42
+    },
+    "VDN/88126": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 45
+    },
+    "VDN/88127": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 45
+    },
+    "VDN/88128": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 45
+    },
+    "QMIX/88126": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 46
+    },
+    "QMIX/88127": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 46
+    },
+    "QMIX/88128": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 46
+    },
+    "QPLEX/88126": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 51
+    },
+    "QPLEX/88127": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 51
+    },
+    "QPLEX/88128": {
+      "joint": 8192,
+      "schema": "DQN_RESCUE_RL_V1",
+      "runtime": {
+        "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "torch": "2.8.0+cu128",
+        "numpy": "2.2.6",
+        "cuda": "12.8",
+        "cudnn": 91002
+      },
+      "source_lock_entries": 51
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "status": "PASS",
+  "inventory_sha256": "a2a814dfd4fc874b5b4e80b00471c56abd12810a9fee04c2c5688a0174dc8ede",
+  "records": [
+    {
+      "model": "MAPPO",
+      "seed": 77126,
+      "checkpoint_sha256": "ecc50dfe26b316f0280d595923981a83d05be90e566c774c34e50def7a1c3573",
+      "joint": 32768,
+      "required_fields": [
+        "actor",
+        "critic",
+        "actor_optimizer",
+        "critic_optimizer",
+        "value_norm",
+        "env",
+        "rng",
+        "paired_continuation",
+        "source_sha256",
+        "code_sha256"
+      ],
+      "source_lock_entries": 176,
+      "status": "PASS"
+    },
+    {
+      "model": "MAPPO",
+      "seed": 77127,
+      "checkpoint_sha256": "7061197f002da2e792cbe9989d9113849f3727ae378d0fd0f41c4f027938392b",
+      "joint": 32768,
+      "required_fields": [
+        "actor",
+        "critic",
+        "actor_optimizer",
+        "critic_optimizer",
+        "value_norm",
+        "env",
+        "rng",
+        "paired_continuation",
+        "source_sha256",
+        "code_sha256"
+      ],
+      "source_lock_entries": 176,
+      "status": "PASS"
+    },
+    {
+      "model": "MAPPO",
+      "seed": 77128,
+      "checkpoint_sha256": "ba2ec4cbd2b429fde7b98175e0c9e04097599a21872b5dec673d3ecc22b54440",
+      "joint": 32768,
+      "required_fields": [
+        "actor",
+        "critic",
+        "actor_optimizer",
+        "critic_optimizer",
+        "value_norm",
+        "env",
+        "rng",
+        "paired_continuation",
+        "source_sha256",
+        "code_sha256"
+      ],
+      "source_lock_entries": 176,
+      "status": "PASS"
+    },
+    {
+      "model": "DQN",
+      "seed": 88126,
+      "checkpoint_sha256": "84bb29d91a14fd31aa35319b6c78d263cf2b330e2ad989aa9f7b173017ed92fe",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ],
+      "source_lock_entries": 42,
+      "status": "PASS"
+    },
+    {
+      "model": "DQN",
+      "seed": 88127,
+      "checkpoint_sha256": "a02f751ef09039d0840e2669c59ad689e9d295dc9afbe66c5a574766b1e7dec6",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ],
+      "source_lock_entries": 42,
+      "status": "PASS"
+    },
+    {
+      "model": "DQN",
+      "seed": 88128,
+      "checkpoint_sha256": "d97ea8fcc06dcbac35f8fad9e7883ad10ea14e589dc2e3b33d45473d66a65011",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ],
+      "source_lock_entries": 42,
+      "status": "PASS"
+    },
+    {
+      "model": "VDN",
+      "seed": 88126,
+      "checkpoint_sha256": "63638c5216fa980e3b41fa363df1f72b65616e145916a7f5fd77d70730061180",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ],
+      "source_lock_entries": 45,
+      "status": "PASS"
+    },
+    {
+      "model": "VDN",
+      "seed": 88127,
+      "checkpoint_sha256": "10a2bb0a9eb96452468ee01c8c653f2de70f1f0ad01d85109e69141b74a5316c",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ],
+      "source_lock_entries": 45,
+      "status": "PASS"
+    },
+    {
+      "model": "VDN",
+      "seed": 88128,
+      "checkpoint_sha256": "89bef05b491c95b3d746a42cc41439d1da9fbee2cd5c01dd78e8c92da3accac5",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ],
+      "source_lock_entries": 45,
+      "status": "PASS"
+    },
+    {
+      "model": "QMIX",
+      "seed": 88126,
+      "checkpoint_sha256": "69b44ed03f5abe5531bf5ed8e1f95c99c77a5e8034f5cb8e4fa0ea721f8b63eb",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ],
+      "source_lock_entries": 46,
+      "status": "PASS"
+    },
+    {
+      "model": "QMIX",
+      "seed": 88127,
+      "checkpoint_sha256": "b77100f04d57c009e03734f2fc70a64461915db1fb6adb0f164e5c93805a4773",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ],
+      "source_lock_entries": 46,
+      "status": "PASS"
+    },
+    {
+      "model": "QMIX",
+      "seed": 88128,
+      "checkpoint_sha256": "6a96098843aa0f966b5c6c40b08bd821ffe886d0672b75cd1f7bf98ec63b0c5e",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ],
+      "source_lock_entries": 46,
+      "status": "PASS"
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88126,
+      "checkpoint_sha256": "ae78d0a7462e1a5c161acb38bcd6e0d7d9b16fef949d001920e62f0cd5209471",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ],
+      "source_lock_entries": 51,
+      "status": "PASS"
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88127,
+      "checkpoint_sha256": "68f6cbafa3d0a1edf0a272aa6c2c4d05b637ee35acefa80e22eb4a07ba393fb3",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ],
+      "source_lock_entries": 51,
+      "status": "PASS"
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88128,
+      "checkpoint_sha256": "e3a540683c43ca70503e1b94b526977971ff75a8fc8158c699ae310f12ce499a",
+      "joint": 8192,
+      "required_fields": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ],
+      "source_lock_entries": 51,
+      "status": "PASS"
+    }
+  ]
+}

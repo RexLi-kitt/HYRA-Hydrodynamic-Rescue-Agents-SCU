@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "model": "MAPPO",
+      "status": "PASS",
+      "resumed_steps": 128,
+      "trajectory_exact": true,
+      "state_fields_exact": [
+        "actor",
+        "critic",
+        "actor_optimizer",
+        "critic_optimizer",
+        "value_norm",
+        "env",
+        "rng",
+        "joint",
+        "updates",
+        "parent",
+        "next_index",
+        "bridge_done"
+      ]
+    },
+    {
+      "model": "DQN",
+      "status": "PASS",
+      "resumed_steps": 32,
+      "trajectory_exact": true,
+      "state_fields_exact": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "joint",
+        "updates",
+        "parent_map",
+        "next_index",
+        "bridge_done",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ]
+    },
+    {
+      "model": "VDN",
+      "status": "PASS",
+      "resumed_steps": 32,
+      "trajectory_exact": true,
+      "state_fields_exact": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "joint",
+        "updates",
+        "parent_map",
+        "next_index",
+        "bridge_done",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo"
+      ]
+    },
+    {
+      "model": "QMIX",
+      "status": "PASS",
+      "resumed_steps": 32,
+      "trajectory_exact": true,
+      "state_fields_exact": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "joint",
+        "updates",
+        "parent_map",
+        "next_index",
+        "bridge_done",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ]
+    },
+    {
+      "model": "QPLEX",
+      "status": "PASS",
+      "resumed_steps": 32,
+      "trajectory_exact": true,
+      "state_fields_exact": [
+        "online",
+        "target",
+        "optimizer",
+        "replay",
+        "env",
+        "rng",
+        "joint",
+        "updates",
+        "parent_map",
+        "next_index",
+        "bridge_done",
+        "previous",
+        "hidden",
+        "context",
+        "retained_demo",
+        "mixer",
+        "target_mixer"
+      ]
+    }
+  ]
+}

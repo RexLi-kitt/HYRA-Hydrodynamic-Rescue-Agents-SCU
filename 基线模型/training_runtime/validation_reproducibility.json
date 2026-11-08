@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "environment": "Windows Python 3.12.9, PyTorch 2.8.0+cu128, NumPy 2.2.6, CUDA device 0",
+  "scope": "Representative original parent and terminal compared against original implementations; same environment. Old paths blocked during parent tests.",
+  "source_input_manifest_sha256": "a2a814dfd4fc874b5b4e80b00471c56abd12810a9fee04c2c5688a0174dc8ede",
+  "original_inputs_post_runs_verified": true,
+  "all_15_state_validation_sha256": "cc3b8fb15ac15023c10339aa97da7dec90ce395f4e913efddf1c7f0c6dca5f3c",
+  "roundtrip_validation_sha256": "09b0796ad736f90423aa00da6ee5abc434dbe36b92e37c0f8b8bd0bbada2f336",
+  "representative_models": [
+    {
+      "model": "MAPPO",
+      "seed": 77126,
+      "parent": {
+        "steps": 128,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "old_source_open_attempts": 0,
+        "unique_open_events": 2390,
+        "checkpoint_sha256": "b122374fa70754a8606eb157b428b1e6f74597e9492240a2eef135b9f1e65c7c",
+        "trajectory_sha256": "a5d1b9769ead31d133b0f6c5cd42b4536c4d3eb9ad04ae6fa33838f9a706b2c5"
+      },
+      "terminal": {
+        "steps": 128,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "checkpoint_sha256": "2cb7974e7b8d51c9cf0d775b7379e5fd886894f3d633f9be07afaa35fa87ffad",
+        "trajectory_sha256": "bcdfb70e67c485aad2dbaf5f034dabb79a810cecbe637c2244da7f1d1642033b"
+      }
+    },
+    {
+      "model": "DQN",
+      "seed": 88126,
+      "parent": {
+        "steps": 64,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "old_source_open_attempts": 0,
+        "unique_open_events": 2398,
+        "checkpoint_sha256": "23dc83ab1eb2811952d4038f5a0bd902402aecd21aa5fdee1a6dfebf252c8399",
+        "trajectory_sha256": "c428a35d317b270cd42890c2eacd3b54c0ef907e3c9f5ac0eecc1dcd281cb7f0"
+      },
+      "terminal": {
+        "steps": 32,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "checkpoint_sha256": "2fe8f623584e017a01664f39024a9b7aeae6fe367da391db0328871fe8c26b92",
+        "trajectory_sha256": "f89df1da19f42c271a0d160945b409c641c6bc44d009374b92b2e4d8efed3323"
+      }
+    },
+    {
+      "model": "VDN",
+      "seed": 88126,
+      "parent": {
+        "steps": 64,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "old_source_open_attempts": 0,
+        "unique_open_events": 2399,
+        "checkpoint_sha256": "edfb0553278292e964c11bb243236914b9405c661cc406aa228799aab4ba132b",
+        "trajectory_sha256": "c428a35d317b270cd42890c2eacd3b54c0ef907e3c9f5ac0eecc1dcd281cb7f0"
+      },
+      "terminal": {
+        "steps": 32,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "checkpoint_sha256": "a9d6038dd52a38066ef386f70058038faf1b1a0a86aa4b901e884da80c428b3d",
+        "trajectory_sha256": "dbd2f5a022ac1d7e0c1edb6d4f4275b880f4d0dd74bfe88c3e0601bbdded4ad7"
+      }
+    },
+    {
+      "model": "QMIX",
+      "seed": 88126,
+      "parent": {
+        "steps": 64,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "old_source_open_attempts": 0,
+        "unique_open_events": 2400,
+        "checkpoint_sha256": "28083cbae4cfab4d8dff97a824a8231f4d7dabbdc8ff15cdb258c3b0936a91cd",
+        "trajectory_sha256": "c428a35d317b270cd42890c2eacd3b54c0ef907e3c9f5ac0eecc1dcd281cb7f0"
+      },
+      "terminal": {
+        "steps": 32,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "checkpoint_sha256": "356eaa1f736bfb544b31381bfe23172e8d6a4524b85a24bdcc4edf896997caac",
+        "trajectory_sha256": "079514fffe94da989e03e71c40f62557da43a64d3111c7a890bb6110baee8913"
+      }
+    },
+    {
+      "model": "QPLEX",
+      "seed": 88126,
+      "parent": {
+        "steps": 64,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "old_source_open_attempts": 0,
+        "unique_open_events": 2402,
+        "checkpoint_sha256": "90e17806539c008d43a9bc65dbdb0b14fac328d7d32f2d65026ac1709849f378",
+        "trajectory_sha256": "c428a35d317b270cd42890c2eacd3b54c0ef907e3c9f5ac0eecc1dcd281cb7f0"
+      },
+      "terminal": {
+        "steps": 32,
+        "optimizations": 1,
+        "original_implementation_trajectory_exact": true,
+        "original_implementation_state_exact": true,
+        "checkpoint_sha256": "456431234dc827cc273b877588f40733e4021f1c786063927360d94ee6a0e82c",
+        "trajectory_sha256": "b5e1857c02f02041c3ae2780c53bb7afc3d62db826168609e49f990ffccd479f"
+      }
+    }
+  ],
+  "runtime_change_simulation": {
+    "status": "PASS",
+    "strict_different_runtime_rejected": true,
+    "explicit_migration_succeeded": true,
+    "source_metadata_retained": true,
+    "online_weights_unchanged_without_update": true,
+    "no_bitwise_claim": true
+  },
+  "asset_fetch": {
+    "local_checkpoint_zip_extraction_and_original_sha": "PASS",
+    "fresh_inputs_zip_extraction_and_all_files_sha": "PASS",
+    "all_16_existing_assets_verified": "PASS"
+  }
+}

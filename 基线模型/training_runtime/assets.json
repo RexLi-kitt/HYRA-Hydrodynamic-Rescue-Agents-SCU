@@ -1,0 +1,182 @@
+{
+  "schema": "HYRA_TRAINING_RELEASE_ASSETS_V1",
+  "release_tag": "baseline-training-20261108-v1",
+  "assets": [
+    {
+      "name": "MAPPO-frozen-seed77126-step032768.pt",
+      "path": "MAPPO/training/checkpoints/77126.pt",
+      "bytes": 3344821,
+      "sha256": "ecc50dfe26b316f0280d595923981a83d05be90e566c774c34e50def7a1c3573",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/MAPPO-frozen-seed77126-step032768.pt",
+      "kind": "checkpoint"
+    },
+    {
+      "name": "MAPPO-frozen-seed77127-step032768.pt",
+      "path": "MAPPO/training/checkpoints/77127.pt",
+      "bytes": 3344245,
+      "sha256": "7061197f002da2e792cbe9989d9113849f3727ae378d0fd0f41c4f027938392b",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/MAPPO-frozen-seed77127-step032768.pt",
+      "kind": "checkpoint"
+    },
+    {
+      "name": "MAPPO-frozen-seed77128-step032768.pt",
+      "path": "MAPPO/training/checkpoints/77128.pt",
+      "bytes": 3343413,
+      "sha256": "ba2ec4cbd2b429fde7b98175e0c9e04097599a21872b5dec673d3ecc22b54440",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/MAPPO-frozen-seed77128-step032768.pt",
+      "kind": "checkpoint"
+    },
+    {
+      "name": "DQN-hard-seed88126-step008192.pt.zip",
+      "path": "training_runtime/assets/DQN-hard-seed88126-step008192.pt.zip",
+      "bytes": 96716983,
+      "sha256": "a240e264fde3fe9f691e1c4c5cf40abb5b732118cf76bab84bdce3fb7132fe97",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/DQN-hard-seed88126-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "DQN/training/checkpoints/88126.pt",
+      "extracted_bytes": 316640126,
+      "extracted_sha256": "84bb29d91a14fd31aa35319b6c78d263cf2b330e2ad989aa9f7b173017ed92fe",
+      "member": "88126.pt"
+    },
+    {
+      "name": "DQN-hard-seed88127-step008192.pt.zip",
+      "path": "training_runtime/assets/DQN-hard-seed88127-step008192.pt.zip",
+      "bytes": 100008886,
+      "sha256": "e5ba42c60ca323c4b69fc5b8b97233e30b133894c1706fc36d7b10299d59c84f",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/DQN-hard-seed88127-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "DQN/training/checkpoints/88127.pt",
+      "extracted_bytes": 328404542,
+      "extracted_sha256": "a02f751ef09039d0840e2669c59ad689e9d295dc9afbe66c5a574766b1e7dec6",
+      "member": "88127.pt"
+    },
+    {
+      "name": "DQN-hard-seed88128-step008192.pt.zip",
+      "path": "training_runtime/assets/DQN-hard-seed88128-step008192.pt.zip",
+      "bytes": 98791040,
+      "sha256": "16a3f24e7b07eb7604e96ae02bdec2d5ac6685cf46b137658d4ee046b28cc461",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/DQN-hard-seed88128-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "DQN/training/checkpoints/88128.pt",
+      "extracted_bytes": 324043582,
+      "extracted_sha256": "d97ea8fcc06dcbac35f8fad9e7883ad10ea14e589dc2e3b33d45473d66a65011",
+      "member": "88128.pt"
+    },
+    {
+      "name": "VDN-hard-seed88126-step008192.pt.zip",
+      "path": "training_runtime/assets/VDN-hard-seed88126-step008192.pt.zip",
+      "bytes": 97128623,
+      "sha256": "dd7d98a4b3f390b76a21d2d8ffe00cb52dff9626ed8d6ecb17dcf5d9157e2924",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/VDN-hard-seed88126-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "VDN/training/checkpoints/88126.pt",
+      "extracted_bytes": 317972798,
+      "extracted_sha256": "63638c5216fa980e3b41fa363df1f72b65616e145916a7f5fd77d70730061180",
+      "member": "88126.pt"
+    },
+    {
+      "name": "VDN-hard-seed88127-step008192.pt.zip",
+      "path": "training_runtime/assets/VDN-hard-seed88127-step008192.pt.zip",
+      "bytes": 99248005,
+      "sha256": "38c454e793e0ad20edb79d7e849425e41cb8c85ae52156817d8238e53f50be23",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/VDN-hard-seed88127-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "VDN/training/checkpoints/88127.pt",
+      "extracted_bytes": 326067838,
+      "extracted_sha256": "10a2bb0a9eb96452468ee01c8c653f2de70f1f0ad01d85109e69141b74a5316c",
+      "member": "88127.pt"
+    },
+    {
+      "name": "VDN-hard-seed88128-step008192.pt.zip",
+      "path": "training_runtime/assets/VDN-hard-seed88128-step008192.pt.zip",
+      "bytes": 99011555,
+      "sha256": "9327d4c5f0b1cfcb7bb8d56146ed3042fe08946677a12eefb3fb55446271c7ef",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/VDN-hard-seed88128-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "VDN/training/checkpoints/88128.pt",
+      "extracted_bytes": 325706302,
+      "extracted_sha256": "89bef05b491c95b3d746a42cc41439d1da9fbee2cd5c01dd78e8c92da3accac5",
+      "member": "88128.pt"
+    },
+    {
+      "name": "QMIX-plain-seed88126-step008192.pt.zip",
+      "path": "training_runtime/assets/QMIX-plain-seed88126-step008192.pt.zip",
+      "bytes": 94105779,
+      "sha256": "506b2c8b1feab2e8357edaa3df0e21c034dac3430a2a78eed12627cd6c463922",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/QMIX-plain-seed88126-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "QMIX/training/checkpoints/88126.pt",
+      "extracted_bytes": 295743073,
+      "extracted_sha256": "69b44ed03f5abe5531bf5ed8e1f95c99c77a5e8034f5cb8e4fa0ea721f8b63eb",
+      "member": "88126.pt"
+    },
+    {
+      "name": "QMIX-plain-seed88127-step008192.pt.zip",
+      "path": "training_runtime/assets/QMIX-plain-seed88127-step008192.pt.zip",
+      "bytes": 94684293,
+      "sha256": "adbc5ced5ce324d0a841f479c297c0b8f995ac4adfe2fbf7403c71ad0f5f6de5",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/QMIX-plain-seed88127-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "QMIX/training/checkpoints/88127.pt",
+      "extracted_bytes": 298207649,
+      "extracted_sha256": "b77100f04d57c009e03734f2fc70a64461915db1fb6adb0f164e5c93805a4773",
+      "member": "88127.pt"
+    },
+    {
+      "name": "QMIX-plain-seed88128-step008192.pt.zip",
+      "path": "training_runtime/assets/QMIX-plain-seed88128-step008192.pt.zip",
+      "bytes": 94424790,
+      "sha256": "16ee767d31f51b43c13cd81c5a165ab049ce5ecc9371da0f775ee06b3b7eca41",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/QMIX-plain-seed88128-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "QMIX/training/checkpoints/88128.pt",
+      "extracted_bytes": 298532833,
+      "extracted_sha256": "6a96098843aa0f966b5c6c40b08bd821ffe886d0672b75cd1f7bf98ec63b0c5e",
+      "member": "88128.pt"
+    },
+    {
+      "name": "QPLEX-hard-seed88126-step008192.pt.zip",
+      "path": "training_runtime/assets/QPLEX-hard-seed88126-step008192.pt.zip",
+      "bytes": 180451247,
+      "sha256": "d488b8652b71695e7d8758fa08b97d9deaa33577a66bdb44ed7310a77be7dfe7",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/QPLEX-hard-seed88126-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "QPLEX/training/checkpoints/88126.pt",
+      "extracted_bytes": 436259761,
+      "extracted_sha256": "ae78d0a7462e1a5c161acb38bcd6e0d7d9b16fef949d001920e62f0cd5209471",
+      "member": "88126.pt"
+    },
+    {
+      "name": "QPLEX-hard-seed88127-step008192.pt.zip",
+      "path": "training_runtime/assets/QPLEX-hard-seed88127-step008192.pt.zip",
+      "bytes": 183261318,
+      "sha256": "2c308a9af2d2a0bd8532c9905851319591fc538ca98f9f230ab0a9da49a9fe3b",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/QPLEX-hard-seed88127-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "QPLEX/training/checkpoints/88127.pt",
+      "extracted_bytes": 447881841,
+      "extracted_sha256": "68f6cbafa3d0a1edf0a272aa6c2c4d05b637ee35acefa80e22eb4a07ba393fb3",
+      "member": "88127.pt"
+    },
+    {
+      "name": "QPLEX-hard-seed88128-step008192.pt.zip",
+      "path": "training_runtime/assets/QPLEX-hard-seed88128-step008192.pt.zip",
+      "bytes": 182444648,
+      "sha256": "c42504fb2391c3be6303a87c367ea69fe7fcdcef367dca48c8868687ac9f0d4e",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/QPLEX-hard-seed88128-step008192.pt.zip",
+      "kind": "checkpoint_zip",
+      "extracted_path": "QPLEX/training/checkpoints/88128.pt",
+      "extracted_bytes": 445265841,
+      "extracted_sha256": "e3a540683c43ca70503e1b94b526977971ff75a8fc8158c699ae310f12ce499a",
+      "member": "88128.pt"
+    },
+    {
+      "name": "training-inputs-20261108-v1.zip",
+      "path": "training_runtime/assets/training-inputs-20261108-v1.zip",
+      "bytes": 306321579,
+      "sha256": "a1648b574c2bdcf79d578874002cb74b7d1ad4f418bdcf77db3a9a6c676cb14a",
+      "url": "https://github.com/RexLi-kitt/HYRA-Hydrodynamic-Rescue-Agents-SCU/releases/download/baseline-training-20261108-v1/training-inputs-20261108-v1.zip",
+      "kind": "inputs"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "original-full-training-checkpoints",
+  "seeds": {
+    "88126": {
+      "path": "checkpoints/88126.pt",
+      "sha256": "63638c5216fa980e3b41fa363df1f72b65616e145916a7f5fd77d70730061180",
+      "bytes": 317972798
+    },
+    "88127": {
+      "path": "checkpoints/88127.pt",
+      "sha256": "10a2bb0a9eb96452468ee01c8c653f2de70f1f0ad01d85109e69141b74a5316c",
+      "bytes": 326067838
+    },
+    "88128": {
+      "path": "checkpoints/88128.pt",
+      "sha256": "89bef05b491c95b3d746a42cc41439d1da9fbee2cd5c01dd78e8c92da3accac5",
+      "bytes": 325706302
+    }
+  }
+}
