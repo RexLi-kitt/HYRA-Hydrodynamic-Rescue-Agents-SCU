@@ -1,0 +1,41 @@
+[
+  {
+    "id": "72110001-ordinary-r0",
+    "map": "72110001-ordinary",
+    "family": "ordinary",
+    "parent": 72110001,
+    "roster": 0,
+    "panel": "a",
+    "water": "water/72110001-ordinary.npz",
+    "origin": "origins/72110001-ordinary.npz",
+    "population": "people/72110001-ordinary-r0.npz",
+    "source_water_sha256": "e284e240be1db6ff6095568722324e9720fa5da033febc8ff1d16dfe1cd7c175",
+    "source_full80_population_sha256": "1bfca9f73f3f82e3ecd2dff50e4b0fddc2e73e02c3ed1426c7ba264c1f9e2084"
+  },
+  {
+    "id": "88520001-continuous-r0",
+    "map": "88520001-continuous",
+    "family": "continuous",
+    "parent": 88520001,
+    "roster": 0,
+    "panel": "a",
+    "water": "water/88520001-continuous.npz",
+    "origin": "origins/88520001-continuous.npz",
+    "population": "people/88520001-continuous-r0.npz",
+    "source_water_sha256": "c46287a780e68f17a0d182ebc200c01e9e955abe6b90df1b9f3d0dcb524ca5b9",
+    "source_full80_population_sha256": "3a380ac5777c05d0e288373c7fa1d2e85cd48340671d0961cc8cc19b67ba60af"
+  },
+  {
+    "id": "88520001-rewet-r0",
+    "map": "88520001-rewet",
+    "family": "rewet",
+    "parent": 88520001,
+    "roster": 0,
+    "panel": "a",
+    "water": "water/88520001-rewet.npz",
+    "origin": "origins/88520001-rewet.npz",
+    "population": "people/88520001-rewet-r0.npz",
+    "source_water_sha256": "8f722af012e21dcd0212ac916a033b1caa829426b1dec2b6145520553378375a",
+    "source_full80_population_sha256": "70837cc33b50db9699e0343bb6bbe41241476321c98670bed4a822bded88c848"
+  }
+]

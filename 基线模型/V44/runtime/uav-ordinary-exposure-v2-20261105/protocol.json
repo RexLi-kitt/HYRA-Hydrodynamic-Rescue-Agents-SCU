@@ -1,0 +1,45 @@
+{
+  "study": "v2 ordinary-flood exposure, prospective development, independent of rescue outcome",
+  "task": [
+    48,
+    1320,
+    2400
+  ],
+  "hardware": "frozen incl 20m 180deg, 5s/10s",
+  "hazard": "unchanged unified_supply/protocol.json",
+  "endpoint": "Natural first fall by 2400s without rescue; primary expected >=0.30 per map, target typical 0.50; descriptive near 0.40-0.60 (median). Separately report realized >=15/48 on each of 3 seeded rosters per map, no re-draw; aspirational, cannot guarantee new draws. Mean standing >=0.05 retained; earlier near 0.10 standing and near 0.50 falling cannot both hold on same ordinary maps.",
+  "splits": {
+    "fit": [
+      1104001,
+      1104002,
+      1104003,
+      1104004,
+      1104005,
+      1104006
+    ],
+    "check": [
+      1104801,
+      1104802,
+      1104803,
+      1104804,
+      1104805,
+      1104806
+    ],
+    "fresh": [
+      56110001,
+      56110002,
+      56110003,
+      56110004,
+      56110005,
+      56110006,
+      56110007,
+      56110008,
+      56110009,
+      56110010
+    ]
+  },
+  "diagnostic": "On six fit fields use original 2400s exposure for old wet sites vs all grid cells, and site pools visible at t0, 300 and 600s. All-site top-48 is a retrospective ceiling only, not used to assign people. Compare initial positions and source geometry.",
+  "physical": "One event already underway at mission start: same bed, source cells, initial lake, closed boundaries, Manning .035 and 3x peak sampled by legacy solver; ramp from 3 at physical t0 to original 3x peak at physical 300s; mission begins at physical 600s. Maintain peak until mission +900s, then half until +1500s, then baseline 1.5 until +1800s, then 0. Piecewise-constant source matches source solver. 2400s post-start actual model integration; no temporal recycling, speed rescaling or changed risk constant. Freeze common definition before independent tests. In a closed basin this is a prolonged inflow test, not a field reconstruction.",
+  "design": "Compare unchanged wet-site sampling at mission start; if needed compare mixtures f=0.25,0.5,0.75,1.0 of start-time wet sites moving >=0.15 or >=0.25m/s and complementary wet sites, uniform within strata, no future water/clock conditioning. Exclude corner starts and injection cells for all new candidates. Record both strata sizes. Round f*48 to persons, capacity failure invalidates candidate (no replacements). Unstratified sampled uniformly over all allowed wet sites. Choose simplest rule among FIT designs passing all expected floors and median in 40-60%, then fewest actual failures, closest mean to 50%; keep baseline if equally feasible. If neither requirement jointly possible report closest evidence; no silent tuning on holdout. If physical candidate cannot meet floor across FIT consider explicit revised protocol, not release. Persist fit selection before check. Allow site-only arm based on original t0 hydraulic speed if support (zero t0 speeds initially).",
+  "validation": "Each map has 3 fixed 48-person draws: independent position and latent Exp(1) streams from SeedSequence([73418,seed,rep]); compute analytic expectation on all eligible starts in each stratum. Compare old pre-event sampling on same map. Full independent mass audit, finite nonnegative, wet speed p99<=2, max<=4. Test old published blind fields untouched; fresh seeds distinct from previous formal set by range. Preserve all failed cases. No policy selection or rescue evaluation in this experiment."
+}

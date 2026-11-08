@@ -1,0 +1,142 @@
+{
+  "new-ordinary-0": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/1104001-q3.npy",
+    "sha256": "51eff4b9a0656401d8bd0d0e54f74468fe63ca28819742cbaefa919d42c63a50",
+    "original": "764ca2ac5068ebb43a52126f90aceced400a58dd69f7bca65969584445dc75f7",
+    "parent": "synthetic-swe-1104001"
+  },
+  "new-ordinary-1": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/1104002-q3.npy",
+    "sha256": "9d40f483d405e316445d07eb976c005865adcc56e22899d0c9130e0f664d2d56",
+    "original": "b564371b0bd1e7e88bb49ea6d7e9309c3e19883c19980222839e3d6a3ccfe6dd",
+    "parent": "synthetic-swe-1104002"
+  },
+  "new-ordinary-2": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/1104003-q3.npy",
+    "sha256": "1560a75d62ade3c844023345c4b75581943ce217565c3f777901ab8f0d3a218e",
+    "original": "34551c3e0d53555c92f5359c72320b58dd899c5f19f49188601e8ca3e3ae6aba",
+    "parent": "synthetic-swe-1104003"
+  },
+  "new-ordinary-3": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/1104004-q3.npy",
+    "sha256": "054e50fe553370de19a0d0128b0260b64fb380d71745946944f1823e70f0c2c6",
+    "original": "1b817adfcc76648826bec22a746d08ce09c06b22855862b49b3ca06c59da8774",
+    "parent": "synthetic-swe-1104004"
+  },
+  "new-ordinary-4": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/1104005-q3.npy",
+    "sha256": "31124df49ca8fb3fec597e8afeebbe5cf11018a31978916dbe4b163f3d0de3ed",
+    "original": "e8e6de0860fab084c4bff6fcc215eafc1d3883e8163f944279699297ea72a97c",
+    "parent": "synthetic-swe-1104005"
+  },
+  "new-ordinary-5": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/1104006-q3.npy",
+    "sha256": "374ebf46a78ae125c003ba89322e2228db7d55e70017bf48a6a5bc085bf1fe98",
+    "original": "0e64952edc7ff5059a6651174bec45925747d0840f6d7c761ac66995d4c334b6",
+    "parent": "synthetic-swe-1104006"
+  },
+  "fit-deep-0": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/fit-2026115100.npy",
+    "sha256": "7e07f8e263f0f8ad26d98c0c0a0a70e15068d303cdecbbe239ac41854542a3a0",
+    "original": "7e07f8e263f0f8ad26d98c0c0a0a70e15068d303cdecbbe239ac41854542a3a0",
+    "parent": "prescribed-2026115100"
+  },
+  "fit-deep-1": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/fit-2026115101.npy",
+    "sha256": "7a4d56c3f0e03c5fd05f503d9ebf7c0152f3b18aa487da37d2ea53d2defced0e",
+    "original": "7a4d56c3f0e03c5fd05f503d9ebf7c0152f3b18aa487da37d2ea53d2defced0e",
+    "parent": "prescribed-2026115101"
+  },
+  "fit-deep-2": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/fit-2026115102.npy",
+    "sha256": "10a5e6dd5a624438c245104763b6635fdbef60b71f780f276bb20395b5db2bab",
+    "original": "10a5e6dd5a624438c245104763b6635fdbef60b71f780f276bb20395b5db2bab",
+    "parent": "prescribed-2026115102"
+  },
+  "fit-deep-3": {
+    "split": "fit",
+    "path": "uav-task85-20261105/fields/fit-2026115103.npy",
+    "sha256": "b69d4dc26cd7e1ca784bf9195022d2baf2bd0bd915de1dc829413f87fbe7d26e",
+    "original": "b69d4dc26cd7e1ca784bf9195022d2baf2bd0bd915de1dc829413f87fbe7d26e",
+    "parent": "prescribed-2026115103"
+  },
+  "dev-1104801": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/1104801-q3.npy",
+    "sha256": "24bc3dce099508a91285bd690bf0f69faacb529871dccaf2aa3e085b2e80d519",
+    "original": "ea954920b7799bc58ffe7eb46040a7c3d3b09b3327bd7f602401f513321f2061",
+    "parent": "synthetic-swe-1104801"
+  },
+  "dev-1104802": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/1104802-q3.npy",
+    "sha256": "17e60ac9a4d05a1a6ed027ceea192e84e3d6f40f092603bf1165cfcc36a77c20",
+    "original": "725fe9e80b52aa3607bd042ac3a9a7e2a26f9ea163c4bc6a885e04cfd813fcde",
+    "parent": "synthetic-swe-1104802"
+  },
+  "dev-1104803": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/1104803-q3.npy",
+    "sha256": "8d0355b8c8840db55719ea316914ba4a5dbb0de8464cf9d9aada04e6d13273a3",
+    "original": "7e2c99ce2a261e90021132e166a5093abe86f31cc7898c107387118c3b3750b3",
+    "parent": "synthetic-swe-1104803"
+  },
+  "dev-1104804": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/1104804-q3.npy",
+    "sha256": "9719b6afac5ea243b8f75174a77070f5e8b64a6ca58c7fedcd1135d19dbad7c5",
+    "original": "9202705484f760f194686701a86e55e1bf5e2263b93ed005d30b1cae62bfc2fa",
+    "parent": "synthetic-swe-1104804"
+  },
+  "dev-1104805": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/1104805-q3.npy",
+    "sha256": "df27b72a1dea12eed44aeba722c0305bc0386f15c72c8a44286663b14c9c9547",
+    "original": "f3246d42c4f6d348c438b602471928651fce4078bf464bdd5cc65448c9328fba",
+    "parent": "synthetic-swe-1104805"
+  },
+  "dev-1104806": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/1104806-q3.npy",
+    "sha256": "d80ad8f6c64d75567e8b28f9be5c884dacf33f099fdaff6245b9788f3b1593f5",
+    "original": "88e361eb0be6afd767bcdb5fcf4d82c63d6ce737ca8334976879caf1cf83a2f1",
+    "parent": "synthetic-swe-1104806"
+  },
+  "cal-deep-0": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/cal-2026115200.npy",
+    "sha256": "160a613aedd9939d8427c136c19a9cb3e48dc617281b685e992443cc2251de3b",
+    "original": "160a613aedd9939d8427c136c19a9cb3e48dc617281b685e992443cc2251de3b",
+    "parent": "prescribed-2026115200"
+  },
+  "cal-deep-1": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/cal-2026115201.npy",
+    "sha256": "df5a072dd1f087e78fc4e7067b4ddf7688317eafcd71727b2987e710627d4b27",
+    "original": "df5a072dd1f087e78fc4e7067b4ddf7688317eafcd71727b2987e710627d4b27",
+    "parent": "prescribed-2026115201"
+  },
+  "cal-deep-2": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/cal-2026115202.npy",
+    "sha256": "8c18d423692697cf809bc4da9c60dc88a8f6264accf0a80b480d7d148f5e0eb9",
+    "original": "8c18d423692697cf809bc4da9c60dc88a8f6264accf0a80b480d7d148f5e0eb9",
+    "parent": "prescribed-2026115202"
+  },
+  "cal-deep-3": {
+    "split": "check",
+    "path": "uav-task85-20261105/fields/cal-2026115203.npy",
+    "sha256": "122934b1e1a2eceabae4ab1f1b0fc4b2308f9e4de2e3c51f03a049d3b3cb371e",
+    "original": "122934b1e1a2eceabae4ab1f1b0fc4b2308f9e4de2e3c51f03a049d3b3cb371e",
+    "parent": "prescribed-2026115203"
+  }
+}

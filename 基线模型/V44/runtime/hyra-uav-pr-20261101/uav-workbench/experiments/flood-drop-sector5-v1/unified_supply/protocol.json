@@ -1,0 +1,23 @@
+{
+  "version": "supply-firstfall-20261105-v1",
+  "scope": "Development pilot on paired synthetic water fields. Reference fall risk is conditional on exposure; no guaranteed roster fall quota.",
+  "side": 1000,
+  "grid": 100,
+  "people": 80,
+  "vehicles": 4,
+  "mission_s": 1800,
+  "personal_window_after_fall_s": 660,
+  "arrival": "All enter at t=0. Standing is visible and serviceable. Sample without replacement in initially wet original cells at least 0.01 m, excluding starts. No fall quota or substitution. Deadline=min(fall+660,1800); count late falls with truncated follow-up.",
+  "hazard_k": 0.004895507372110726,
+  "fall": "Integrated 1-second midpoint hazard at standing position; unit exponential clock per person; no positive depth cutoff. After fall reuse shore refloat and obstacle interception of the previous dynamic environment. Supplied person is terminal.",
+  "actions": "Original 8 compass moves (50 m in 5s), 8 hover; initial heading points inward, 20 m forward 180 degree incl edges; samples only at 5s boundaries. Visible known target can shorten collinear move, no lateral snap. Relative hover commands only the last observed velocity, capped at 10 m/s. No truth controller. Ideal shared observations; same permissions during training.",
+  "strict_radius_m": 0,
+  "fallback_radius_m": 10,
+  "roundoff_m": 1e-7,
+  "drop": "Same UAV, same target, two complete consecutive 5s hover actions; relative displacement fixed at every 1s physical knot, reset if invalid. Both profiles use strict relative motion. Terminal at success. No h/v delivery limits.",
+  "collision": "5 m separation; all simultaneous piecewise-linear intentions including stopped short steps; count raw pairs once per decision, stop conflicting UAVs, no passive service.",
+  "pilot": "Before any outcome: four FIT sentinel scenes ordinary indices 0,1 and stress 1,3, same four paired. If strict planner supplies under 50% in aggregate, run 10m on same sentinels. Select 10m only if its total is greater; otherwise strict. 50% is a feasibility screen, not the performance goal.",
+  "training": "Use all 14 historic FIT water parents. Two distinct deterministic rosters on each plus four additional on first two ordinary and first two stress =32 planner rollouts. Fit one small MLP on only actually sensed first-visit cell records and visible serviceable persons. Select fixed regularized parameters via FIT only. Compare with water-guided and endpoint-only pure planners on all 10 historic CAL cases, one unseen roster each. No formal blind-test access. Parent sources, RNG, hashes recorded.",
+  "selection": "Primary count/80, per scene equally weighted. Report scene >=76 and all 80, plus five original metrics. Evaluate level 85-95%, at least +15pp on >=76 vs best pure in ordinary scenes; report stress separately. Do not change parameters on CAL. Record candidate even if it loses.",
+  "seed": 26110521
+}
