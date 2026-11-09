@@ -1,25 +1,31 @@
 # 基线模型
 
-## MAT
+本目录统一按 **64人、4机、2400秒、首次落水后720秒、1米连续10秒投放、人员出界失效** 的现行规则整理。先读 [完整实验报告](实验报告.md)，细则见 [地图与任务协议](HYRA无人机洪水搜救与物资投放实验协议-定稿-20261105.md)。
 
-[MAT 近距 PPO 1024](MAT/README.md) 发布种子 99131 的最终推理权重。主、额外面板固定种子分别送达 407/768、236/768 人，六场留出组送达 100/384 人。使用方法、各场种子和官方复核记录见模型目录。[MAT 改进记录](MAT/IMPROVEMENTS.md)
+## 当前发布模型
 
-## 既有五种基线
+均为固定发布版本，每面板12场、768人次。五基线的三训练种子结果另列于完整报告，避免混用分母。这些是开发数据，尚不是协议要求的180场独立确认。
 
-五个模型目录可独立复制用于推理；训练和续训需共享 `training_runtime/`。默认使用固定代表种子 MAPPO 77126、其他模型 88126，并非按表现选择。主面板是公开开发集而非盲测。
+| 模型 | 主面板送达 | 额外面板送达 | 定位 |
+|---|---:|---:|---|
+| [MAPPO](MAPPO/README.md) | 164/768 | 98/768 | 策略梯度基线 |
+| [DQN](DQN/README.md) | 131/768 | 61/768 | 个体价值基线 |
+| [VDN](VDN/README.md) | 139/768 | 75/768 | 求和价值基线 |
+| [QMIX](QMIX/README.md) | 139/768 | 55/768 | 单调混合基线 |
+| [QPLEX](QPLEX/README.md) | 151/768 | 68/768 | 价值／优势混合基线 |
+| [MAT 近距 PPO 1024](MAT/README.md) | 407/768 | 236/768 | 当前选定学习策略 |
+| [V44 default](V44/README.md) | 735/768 | 484/768 | 当前工程方案 |
+| V44 pure | 717/768 | 490/768 | 强纯规划参照 |
 
-| 模型 | 固定版本 | 主面板模式 | 送达 / 总人数 | 救援率 | 覆盖率 | 额外面板固定种子送达 / 总数 |
-|---|---|---|---:|---:|---:|---:|
-| [MAPPO](MAPPO/README.md) | 冻结搜索续训至 32768 联合步 | sampled | 488/2304 | 21.18% | 52.63% | 98/768 |
-| [DQN](DQN/README.md) | hard 8192 联合步 | epsilon_0.05 | 423/2304 | 18.36% | 76.88% | 61/768 |
-| [VDN](VDN/README.md) | hard 8192 联合步 | epsilon_0.05 | 446/2304 | 19.36% | 77.18% | 75/768 |
-| [QMIX](QMIX/README.md) | plain、冻结搜索、8192 联合步 | epsilon_0.05 | 468/2304 | 20.31% | 76.38% | 55/768 |
-| [QPLEX](QPLEX/README.md) | hard 8192 联合步 | epsilon_0.05 | 483/2304 | 20.96% | 75.23% | 68/768 |
+![发布模型对比](figures/model-comparison.png)
 
-主面板为 12 图 × 3 种子，每模式 2304 人；额外面板为固定首种子的 12 场、768 人。MAPPO sampled 是策略采样，Q 系列 epsilon_0.05 是 ε-greedy，随机动作机制不同。MAPPO 累计 32768 步，Q 系列本轮各 8192 步；DQN/VDN/QPLEX hard 额外使用困难示范与成功经验，不能将结果视为等训练成本的纯算法对比。
+## 内容索引
 
-各模型的 `weights/` 是轻量推理权重，不含 optimizer、replay 或环境快照；不能直接用它恢复训练。原始完整检查点与训练数据通过 Release 下载，续训需共享运行时。独立复制后的官方 SDK 推理轨迹对照见 `validation_*.json`。
+- [完整实验报告](实验报告.md)：地图协定、训练／验证／开发数据构成、最终结构、训练链、超参数及选择依据、指标与复现边界。
+- 框架图：[MAPPO](figures/mappo-framework.png)、[DQN／VDN／QMIX／QPLEX](figures/q-family-framework.png)、[MAT](figures/mat-framework.png)、[V44](figures/v44-framework.png)。
+- [MAT 改进记录](MAT/IMPROVEMENTS.md)：各轮收益、选模与未晋级尝试。
+- [逐场证据](evidence/case-results.json)、[指标 CSV](evidence/comparison.csv)、[数据集划分](evidence/datasets.json)、[训练配置](evidence/training-configs.json)、[版本登记](evidence/model-registry.json)。
+- [训练运行时](training_runtime/README.md)：完整检查点获取和续训；轻量推理权重不含完整训练状态。
+- [图表说明与重建](figures/README.md)、[清理登记](evidence/cleanup.json)：旧报告移除原因与历史追溯。
 
-## 原始训练与续训
-
-完整恢复点通过 Release 资产按 SHA 校验获取；训练运行时、来源映射及复现边界见 [训练运行时说明](training_runtime/README.md)，每个模型的 `training/README.md` 含具体入口。
+DQN、VDN 的11月9日公开目标评分候选单列于报告第8节，未替换默认权重。V44原研究回放包含碰边停留变体，不能用其成绩代替上表。各方法训练预算、数据与设备不完全相同，本表不声称同预算算法排名。

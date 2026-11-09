@@ -1,0 +1,62 @@
+{
+  "base_commit": "2fcd86d4212306e06cdb803f4b104572006bde27",
+  "replacement": "基线模型/实验报告.md",
+  "deleted_reports": [
+    {
+      "path": "基线模型/MAPPO_QMIX_阶段性实验报告.docx",
+      "blob_sha": "b606fabbc29495ec7809036cf5a8c71ac7fd9b17",
+      "reason": "旧人数、视野或投放规则，见报告第9节"
+    },
+    {
+      "path": "基线模型/VDN阶段性实验报告.docx",
+      "blob_sha": "72ea9219041c7afe22e1f4f05fa5af52d2ec9f19",
+      "reason": "旧人数、视野或投放规则，见报告第9节"
+    },
+    {
+      "path": "基线模型/六算法与覆盖规划实验报告.docx",
+      "blob_sha": "1848772ff9d919b3a5f91d6c38b15f815c854e84",
+      "reason": "旧人数、视野或投放规则，见报告第9节"
+    },
+    {
+      "path": "基线模型/动态洪水投放与GRU融合实验报告.docx",
+      "blob_sha": "0b8983437994080586244572523db422d7b51dc1",
+      "reason": "旧人数、视野或投放规则，见报告第9节"
+    },
+    {
+      "path": "基线模型/V44/runtime/uav-downstream-meet-v44/V44十二分钟边缘搜索效率复核.md",
+      "blob_sha": "e4471f9c2fca030f74aa97b6a2619d58ffd38b4f",
+      "reason": "碰边停留或900秒窗口，不符合现行出界失效与720秒规则"
+    },
+    {
+      "path": "基线模型/V44/runtime/uav-downstream-meet-v44/V44十五分钟与边缘停留试验.md",
+      "blob_sha": "3a437dcd9d865b2e6ac7c37748dbade8b352f99f",
+      "reason": "碰边停留或900秒窗口，不符合现行出界失效与720秒规则"
+    },
+    {
+      "path": "基线模型/V44/runtime/uav-downstream-meet-v44/V44换目标终局训练与新图复核.md",
+      "blob_sha": "6e75cb3779738408e8d03f836e3479825acb7d82",
+      "reason": "碰边停留或900秒窗口，不符合现行出界失效与720秒规则"
+    },
+    {
+      "path": "基线模型/V44/runtime/uav-downstream-meet-v44/V44提前送达训练与同场复核.md",
+      "blob_sha": "903d8f962aca9a94635dbec9d4c2076441fac3e2",
+      "reason": "碰边停留或900秒窗口，不符合现行出界失效与720秒规则"
+    },
+    {
+      "path": "基线模型/V44/runtime/uav-downstream-meet-v44/V44改道收益与漏搜空间.md",
+      "blob_sha": "606cd705e6e2edbda06a69bc3b1f5e72a1cb44bd",
+      "reason": "碰边停留或900秒窗口，不符合现行出界失效与720秒规则"
+    },
+    {
+      "path": "基线模型/V44/runtime/uav-downstream-meet-v44/V44未发现人员位置预测与新图复核.md",
+      "blob_sha": "2cb0a7ed311488932c5262ceeb92a115365d9452",
+      "reason": "碰边停留或900秒窗口，不符合现行出界失效与720秒规则"
+    },
+    {
+      "path": "基线模型/V44/runtime/uav-downstream-meet-v44/V44机队搜索与已知轨迹复核.md",
+      "blob_sha": "dd46f44ed0944300bcc52dfb2471ac143ae9bf6a",
+      "reason": "碰边停留或900秒窗口，不符合现行出界失效与720秒规则"
+    }
+  ],
+  "retained": "代码、权重、JSON结果、原始输入、预登记协议保留；历史正文可在base_commit按path读取"
+}

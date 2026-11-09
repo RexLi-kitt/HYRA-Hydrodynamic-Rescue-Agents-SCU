@@ -1,0 +1,312 @@
+{
+  "MAPPO": {
+    "77126": {
+      "sampled": {
+        "episodes": 12,
+        "delivered": 164,
+        "total": 768,
+        "rcr": 0.21354166666666666,
+        "coverage_mean": 0.5571833333333333,
+        "conflicts": 321,
+        "delivered_after_fall": 3
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 120,
+        "total": 768,
+        "rcr": 0.15625,
+        "coverage_mean": 0.369,
+        "conflicts": 3753,
+        "delivered_after_fall": 1
+      }
+    },
+    "77127": {
+      "sampled": {
+        "episodes": 12,
+        "delivered": 99,
+        "total": 768,
+        "rcr": 0.12890625,
+        "coverage_mean": 0.49275,
+        "conflicts": 67,
+        "delivered_after_fall": 1
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 59,
+        "total": 768,
+        "rcr": 0.07682291666666667,
+        "coverage_mean": 0.26875,
+        "conflicts": 3518,
+        "delivered_after_fall": 1
+      }
+    },
+    "77128": {
+      "sampled": {
+        "episodes": 12,
+        "delivered": 225,
+        "total": 768,
+        "rcr": 0.29296875,
+        "coverage_mean": 0.528975,
+        "conflicts": 654,
+        "delivered_after_fall": 7
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 84,
+        "total": 768,
+        "rcr": 0.109375,
+        "coverage_mean": 0.24603333333333333,
+        "conflicts": 9578,
+        "delivered_after_fall": 0
+      }
+    }
+  },
+  "DQN": {
+    "88126": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 131,
+        "total": 768,
+        "rcr": 0.17057291666666666,
+        "coverage_mean": 0.7400833333333333,
+        "conflicts": 148,
+        "delivered_after_fall": 0
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 132,
+        "total": 768,
+        "rcr": 0.171875,
+        "coverage_mean": 0.674875,
+        "conflicts": 1429,
+        "delivered_after_fall": 0
+      }
+    },
+    "88127": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 165,
+        "total": 768,
+        "rcr": 0.21484375,
+        "coverage_mean": 0.7788499999999999,
+        "conflicts": 268,
+        "delivered_after_fall": 1
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 212,
+        "total": 768,
+        "rcr": 0.2760416666666667,
+        "coverage_mean": 0.68355,
+        "conflicts": 2630,
+        "delivered_after_fall": 1
+      }
+    },
+    "88128": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 127,
+        "total": 768,
+        "rcr": 0.16536458333333334,
+        "coverage_mean": 0.787575,
+        "conflicts": 320,
+        "delivered_after_fall": 3
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 113,
+        "total": 768,
+        "rcr": 0.14713541666666666,
+        "coverage_mean": 0.6203333333333333,
+        "conflicts": 3031,
+        "delivered_after_fall": 2
+      }
+    }
+  },
+  "VDN": {
+    "88126": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 139,
+        "total": 768,
+        "rcr": 0.18098958333333334,
+        "coverage_mean": 0.7657583333333333,
+        "conflicts": 62,
+        "delivered_after_fall": 2
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 145,
+        "total": 768,
+        "rcr": 0.18880208333333334,
+        "coverage_mean": 0.7174,
+        "conflicts": 630,
+        "delivered_after_fall": 1
+      }
+    },
+    "88127": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 170,
+        "total": 768,
+        "rcr": 0.22135416666666666,
+        "coverage_mean": 0.7629083333333333,
+        "conflicts": 261,
+        "delivered_after_fall": 1
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 173,
+        "total": 768,
+        "rcr": 0.22526041666666666,
+        "coverage_mean": 0.6698916666666667,
+        "conflicts": 2330,
+        "delivered_after_fall": 2
+      }
+    },
+    "88128": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 137,
+        "total": 768,
+        "rcr": 0.17838541666666666,
+        "coverage_mean": 0.7867333333333333,
+        "conflicts": 235,
+        "delivered_after_fall": 1
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 137,
+        "total": 768,
+        "rcr": 0.17838541666666666,
+        "coverage_mean": 0.6650666666666666,
+        "conflicts": 2228,
+        "delivered_after_fall": 1
+      }
+    }
+  },
+  "QMIX": {
+    "88126": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 139,
+        "total": 768,
+        "rcr": 0.18098958333333334,
+        "coverage_mean": 0.7474083333333333,
+        "conflicts": 123,
+        "delivered_after_fall": 1
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 142,
+        "total": 768,
+        "rcr": 0.18489583333333334,
+        "coverage_mean": 0.6605249999999999,
+        "conflicts": 827,
+        "delivered_after_fall": 2
+      }
+    },
+    "88127": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 204,
+        "total": 768,
+        "rcr": 0.265625,
+        "coverage_mean": 0.7523666666666666,
+        "conflicts": 272,
+        "delivered_after_fall": 0
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 204,
+        "total": 768,
+        "rcr": 0.265625,
+        "coverage_mean": 0.5887583333333334,
+        "conflicts": 2424,
+        "delivered_after_fall": 2
+      }
+    },
+    "88128": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 125,
+        "total": 768,
+        "rcr": 0.16276041666666666,
+        "coverage_mean": 0.7915416666666667,
+        "conflicts": 87,
+        "delivered_after_fall": 2
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 145,
+        "total": 768,
+        "rcr": 0.18880208333333334,
+        "coverage_mean": 0.6351416666666666,
+        "conflicts": 2716,
+        "delivered_after_fall": 2
+      }
+    }
+  },
+  "QPLEX": {
+    "88126": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 151,
+        "total": 768,
+        "rcr": 0.19661458333333334,
+        "coverage_mean": 0.73095,
+        "conflicts": 174,
+        "delivered_after_fall": 0
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 137,
+        "total": 768,
+        "rcr": 0.17838541666666666,
+        "coverage_mean": 0.6890083333333333,
+        "conflicts": 831,
+        "delivered_after_fall": 0
+      }
+    },
+    "88127": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 187,
+        "total": 768,
+        "rcr": 0.24348958333333334,
+        "coverage_mean": 0.7495083333333333,
+        "conflicts": 368,
+        "delivered_after_fall": 1
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 206,
+        "total": 768,
+        "rcr": 0.2682291666666667,
+        "coverage_mean": 0.6608166666666667,
+        "conflicts": 2335,
+        "delivered_after_fall": 3
+      }
+    },
+    "88128": {
+      "epsilon_0.05": {
+        "episodes": 12,
+        "delivered": 145,
+        "total": 768,
+        "rcr": 0.18880208333333334,
+        "coverage_mean": 0.7764666666666667,
+        "conflicts": 346,
+        "delivered_after_fall": 0
+      },
+      "greedy": {
+        "episodes": 12,
+        "delivered": 139,
+        "total": 768,
+        "rcr": 0.18098958333333334,
+        "coverage_mean": 0.6680666666666667,
+        "conflicts": 2242,
+        "delivered_after_fall": 2
+      }
+    }
+  }
+}

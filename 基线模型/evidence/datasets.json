@@ -1,0 +1,538 @@
+{
+  "MAT_fullscene": [
+    {
+      "id": "41001-r0",
+      "parent": 41001,
+      "roster": 0,
+      "map": "local-parent-41001",
+      "family": "local_overbank",
+      "split": "train"
+    },
+    {
+      "id": "42002-r0",
+      "parent": 42002,
+      "roster": 0,
+      "map": "local-parent-42002",
+      "family": "local_rain_river",
+      "split": "train"
+    },
+    {
+      "id": "41002-r0",
+      "parent": 41002,
+      "roster": 0,
+      "map": "local-parent-41002",
+      "family": "local_overbank",
+      "split": "train"
+    },
+    {
+      "id": "42004-r0",
+      "parent": 42004,
+      "roster": 0,
+      "map": "local-parent-42004",
+      "family": "local_rain_river",
+      "split": "train"
+    },
+    {
+      "id": "72110003-ordinary-r0",
+      "parent": 72110003,
+      "roster": 0,
+      "map": "72110003-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "2b75a4a349bed821f74ccf360ec7088f2c50875f6e0f4a918fa304fad707c99e",
+      "source_full80_population_sha256": "05403a8cca645a3b7c78aab0236c046a99a6997fed347f3728390fbec898b3b9"
+    },
+    {
+      "id": "72110004-ordinary-r0",
+      "parent": 72110004,
+      "roster": 0,
+      "map": "72110004-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "b307313dd90e04612e03534316b9be1601428e91c85ca08a057fdfd1c93b1291",
+      "source_full80_population_sha256": "4beca5defcbd98e9537a603680b9efe6ad0a70ecff70fff964886b907ee0ab84"
+    },
+    {
+      "id": "72110005-ordinary-r0",
+      "parent": 72110005,
+      "roster": 0,
+      "map": "72110005-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "c37afd1b0b8ce14d60be156d96a2509e297323c41719a0c99dff0d72c683c736",
+      "source_full80_population_sha256": "79ef3f694c040d0d2cb012c31321e14b3f5329ef99d62e9cad3c09823a48c003"
+    },
+    {
+      "id": "72110006-ordinary-r0",
+      "parent": 72110006,
+      "roster": 0,
+      "map": "72110006-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "a943da79b8d210a756946054e6c977a75f05a7af1b26fa64ddadc6c5400cce13",
+      "source_full80_population_sha256": "88ca2fa7f1dcb17cc01aba1a5f5c0bb254b3e2da92c261f99818297510a7258a"
+    },
+    {
+      "id": "95851003-ordinary-r0",
+      "parent": 95851003,
+      "roster": 0,
+      "map": "95851003-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "37e44a2dde1511271bba0327b879fb883304da8f87dc248a3fce8f7f57867881",
+      "source_full80_population_sha256": "7066026ca25eb6fed0083e27d3e92a72e76ed837550a43fde412bd87322bad80"
+    },
+    {
+      "id": "95851004-ordinary-r0",
+      "parent": 95851004,
+      "roster": 0,
+      "map": "95851004-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "292b2f64065dc154c3f2618a7b82d2934ee587f33dab2eac5eda0ae67eb35791",
+      "source_full80_population_sha256": "3afd7b96504118a5d2d102e713910b18362de199551414d5cf8ebfcef05a5735"
+    },
+    {
+      "id": "95851005-ordinary-r0",
+      "parent": 95851005,
+      "roster": 0,
+      "map": "95851005-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "13157b6ccf2e35b017064bd4a0e4916178bae877ee330840733a50344c08d79a",
+      "source_full80_population_sha256": "2f895e34a29ec193bdc3938c584b45f410ccede6e85e087a7823bb1efcc15351"
+    },
+    {
+      "id": "95851006-ordinary-r0",
+      "parent": 95851006,
+      "roster": 0,
+      "map": "95851006-ordinary",
+      "family": "ordinary",
+      "split": "train",
+      "source_water_sha256": "540ce8f78c0096d4ab22a80913c99f0d559fd740d679904a4f5b7a0c90d76ae7",
+      "source_full80_population_sha256": "ec386308bc46eea97e8b68da0ca67676ceb127a1dd566a29364abfe07ffb99e2"
+    },
+    {
+      "id": "88520002-continuous-r0",
+      "parent": 88520002,
+      "roster": 0,
+      "map": "88520002-continuous",
+      "family": "continuous",
+      "split": "train",
+      "source_water_sha256": "d4a33c709d28d9153a156386637da3210e00f791a501165a9e9ae7d32e68689c",
+      "source_full80_population_sha256": "f1369b954b698d0b391a64d9ec564c17b058f42f7ad9a9b28087d9421fff4d01"
+    },
+    {
+      "id": "88520002-rewet-r0",
+      "parent": 88520002,
+      "roster": 0,
+      "map": "88520002-rewet",
+      "family": "rewet",
+      "split": "train",
+      "source_water_sha256": "800814721878158f71d8d994758b455900ff3c604b7f05b86c4aa127924423f4",
+      "source_full80_population_sha256": "88c400262c18d762648ad43c4baf114259df5b6d641d4c838b0c2d7c0c00d0b0"
+    },
+    {
+      "id": "88520003-continuous-r0",
+      "parent": 88520003,
+      "roster": 0,
+      "map": "88520003-continuous",
+      "family": "continuous",
+      "split": "train",
+      "source_water_sha256": "9ad1b0aa9ddb221c2533e5cfe79a44bb6e26b7bef3b3ebcbe901eb631fe95045",
+      "source_full80_population_sha256": "7d3cec63faaeed480a2a5ad6bdce45773d6879c8cd36583ce64ae57aa436f2da"
+    },
+    {
+      "id": "88520003-rewet-r0",
+      "parent": 88520003,
+      "roster": 0,
+      "map": "88520003-rewet",
+      "family": "rewet",
+      "split": "train",
+      "source_water_sha256": "665381c2c557cbe6decce761a79c5ac836032ab0732e65b2092bc7b627db26c5",
+      "source_full80_population_sha256": "46d931ceaefdbd4d678c05744150f0fc08b214fd9310e56f05b115ad9d4f6d86"
+    },
+    {
+      "id": "95861002-continuous-r0",
+      "parent": 95861002,
+      "roster": 0,
+      "map": "95861002-continuous",
+      "family": "continuous",
+      "split": "train",
+      "source_water_sha256": "682d5b8fd9327ea675fce632e0b0f1573e74e643613e66724cc498c0bb5dfc79",
+      "source_full80_population_sha256": "9ddb8425071a75f73e313e5f63eadcd359f3bd105cebcfca327f71eae48858c1"
+    },
+    {
+      "id": "95861002-rewet-r0",
+      "parent": 95861002,
+      "roster": 0,
+      "map": "95861002-rewet",
+      "family": "rewet",
+      "split": "train",
+      "source_water_sha256": "3319e0db191477f8466779f4b11466f0ae9ebcbe3a77c6c64b242cb1dfdf4f73",
+      "source_full80_population_sha256": "d235ffae80d1f4ee6fb0aae1c047af81f3eb85bfabef30ace862d125e8a6bf73"
+    },
+    {
+      "id": "95861003-continuous-r0",
+      "parent": 95861003,
+      "roster": 0,
+      "map": "95861003-continuous",
+      "family": "continuous",
+      "split": "train",
+      "source_water_sha256": "06b337aaf66b03c1f3b906fc49cecda25bc27b20f040cc5156ce0e8463091e74",
+      "source_full80_population_sha256": "1f1258fdd5eb4c1caee2c37ab80a390babd3977f170073f07ec67794539f2370"
+    },
+    {
+      "id": "95861003-rewet-r0",
+      "parent": 95861003,
+      "roster": 0,
+      "map": "95861003-rewet",
+      "family": "rewet",
+      "split": "train",
+      "source_water_sha256": "ee9289ddc23054499512352fa64563ea48a202027f901b4eecdfd49d898b17de",
+      "source_full80_population_sha256": "137c0333c508eab1f1cb48525416530fc1cc339011fa18a8f2bc410cbac04fbe"
+    },
+    {
+      "id": "72110007-ordinary-r0",
+      "parent": 72110007,
+      "roster": 0,
+      "map": "72110007-ordinary",
+      "family": "ordinary",
+      "split": "valid",
+      "source_water_sha256": "b2e47dc29508c9f9f0cb06262013ec75b6c8bd85fad2f96282fc412584492634",
+      "source_full80_population_sha256": "3a82debffe145dcf609646e559bdb0f879a93375fc3384b760be806a7ba1816e"
+    },
+    {
+      "id": "95851007-ordinary-r0",
+      "parent": 95851007,
+      "roster": 0,
+      "map": "95851007-ordinary",
+      "family": "ordinary",
+      "split": "valid",
+      "source_water_sha256": "78366501c06a0e77a4f860739ef90469ef14e9af17875394c81c7fae5f2206e9",
+      "source_full80_population_sha256": "e453772bf7b8b6a871d1351739246aada2bb639b0700a0efb9f11eaaf546496c"
+    },
+    {
+      "id": "88520004-continuous-r0",
+      "parent": 88520004,
+      "roster": 0,
+      "map": "88520004-continuous",
+      "family": "continuous",
+      "split": "valid",
+      "source_water_sha256": "d46b0571bd289597d424f782e0d70ce839930396ef225f4422cebbe2a61a8c2f",
+      "source_full80_population_sha256": "7dd5e5ef8d7d52558ada019c98a9d26b4aa639b044637f779695bd2254d78ca8"
+    },
+    {
+      "id": "88520004-rewet-r0",
+      "parent": 88520004,
+      "roster": 0,
+      "map": "88520004-rewet",
+      "family": "rewet",
+      "split": "valid",
+      "source_water_sha256": "d362d189b367cfb75dde2f97b63a3913604235ead65b3c655d57248212745c71",
+      "source_full80_population_sha256": "5aec3b1a84f2477df8b433ff5b64e16692dce45d13dd8d278d4bdea20916deb5"
+    },
+    {
+      "id": "95861004-continuous-r0",
+      "parent": 95861004,
+      "roster": 0,
+      "map": "95861004-continuous",
+      "family": "continuous",
+      "split": "valid",
+      "source_water_sha256": "4a0a85c87b882b54f644df503860d3b10e369b8fbaed99fde3da0315379d3427",
+      "source_full80_population_sha256": "46c57d042684a1eb1c895d1ed855d52dcf775e3f9d077683e27948fb22dc48e9"
+    },
+    {
+      "id": "95861004-rewet-r0",
+      "parent": 95861004,
+      "roster": 0,
+      "map": "95861004-rewet",
+      "family": "rewet",
+      "split": "valid",
+      "source_water_sha256": "f35c8cfd8853973bc3369252243970935c8456821b180880147812c656d703ed",
+      "source_full80_population_sha256": "80fc91bb9c5018e947bbaf8c73b20d444477e8c359cd931e29f90ad15fde2693"
+    }
+  ],
+  "legacy_training_parents": [
+    41001,
+    42002,
+    41002,
+    42004
+  ],
+  "main12": [
+    {
+      "id": "41004-r0",
+      "parent": 41004,
+      "roster": 0,
+      "map": "local-parent-41004",
+      "family": "local_overbank"
+    },
+    {
+      "id": "41005-r0",
+      "parent": 41005,
+      "roster": 0,
+      "map": "local-parent-41005",
+      "family": "local_overbank"
+    },
+    {
+      "id": "42012-r0",
+      "parent": 42012,
+      "roster": 0,
+      "map": "local-parent-42012",
+      "family": "local_rain_river"
+    },
+    {
+      "id": "42015-r0",
+      "parent": 42015,
+      "roster": 0,
+      "map": "local-parent-42015",
+      "family": "local_rain_river"
+    },
+    {
+      "id": "51001-r0",
+      "parent": 51001,
+      "roster": 0,
+      "map": "local-parent-51001",
+      "family": "local_overbank"
+    },
+    {
+      "id": "51002-r0",
+      "parent": 51002,
+      "roster": 0,
+      "map": "local-parent-51002",
+      "family": "local_overbank"
+    },
+    {
+      "id": "41006-r0",
+      "parent": 41006,
+      "roster": 0,
+      "map": "local-parent-41006",
+      "family": "local_overbank"
+    },
+    {
+      "id": "41007-r0",
+      "parent": 41007,
+      "roster": 0,
+      "map": "local-parent-41007",
+      "family": "local_overbank"
+    },
+    {
+      "id": "42017-r0",
+      "parent": 42017,
+      "roster": 0,
+      "map": "local-parent-42017",
+      "family": "local_rain_river"
+    },
+    {
+      "id": "42018-r0",
+      "parent": 42018,
+      "roster": 0,
+      "map": "local-parent-42018",
+      "family": "local_rain_river"
+    },
+    {
+      "id": "51003-r0",
+      "parent": 51003,
+      "roster": 0,
+      "map": "local-parent-51003",
+      "family": "local_overbank"
+    },
+    {
+      "id": "51004-r0",
+      "parent": 51004,
+      "roster": 0,
+      "map": "local-parent-51004",
+      "family": "local_overbank"
+    }
+  ],
+  "extra12": [
+    {
+      "id": "72110001-ordinary-r0",
+      "parent": 72110001,
+      "roster": 0,
+      "map": "72110001-ordinary",
+      "family": "ordinary",
+      "source_water_sha256": "e284e240be1db6ff6095568722324e9720fa5da033febc8ff1d16dfe1cd7c175",
+      "source_full80_population_sha256": "1bfca9f73f3f82e3ecd2dff50e4b0fddc2e73e02c3ed1426c7ba264c1f9e2084"
+    },
+    {
+      "id": "72110001-ordinary-r1",
+      "parent": 72110001,
+      "roster": 1,
+      "map": "72110001-ordinary",
+      "family": "ordinary",
+      "source_water_sha256": "e284e240be1db6ff6095568722324e9720fa5da033febc8ff1d16dfe1cd7c175",
+      "source_full80_population_sha256": "139964625989b554b348ff4ca10ec9a9e93a896ae5b246a8fde64edc624b694f"
+    },
+    {
+      "id": "95851001-ordinary-r0",
+      "parent": 95851001,
+      "roster": 0,
+      "map": "95851001-ordinary",
+      "family": "ordinary",
+      "source_water_sha256": "0c1960d31045ebe0e0abb12738599929bc820e6595e05eb09fa7a9e2af01d6ca",
+      "source_full80_population_sha256": "83064cbec13f1831d1d0cc853882736170ebc5f7e603b8a1d6523666e61ef34b"
+    },
+    {
+      "id": "95851001-ordinary-r1",
+      "parent": 95851001,
+      "roster": 1,
+      "map": "95851001-ordinary",
+      "family": "ordinary",
+      "source_water_sha256": "0c1960d31045ebe0e0abb12738599929bc820e6595e05eb09fa7a9e2af01d6ca",
+      "source_full80_population_sha256": "e22dc0804487852acd6d8494e98e17cf4f816df50ee0db29762337ee8c25c87b"
+    },
+    {
+      "id": "88520001-continuous-r0",
+      "parent": 88520001,
+      "roster": 0,
+      "map": "88520001-continuous",
+      "family": "continuous",
+      "source_water_sha256": "c46287a780e68f17a0d182ebc200c01e9e955abe6b90df1b9f3d0dcb524ca5b9",
+      "source_full80_population_sha256": "3a380ac5777c05d0e288373c7fa1d2e85cd48340671d0961cc8cc19b67ba60af"
+    },
+    {
+      "id": "88520001-continuous-r1",
+      "parent": 88520001,
+      "roster": 1,
+      "map": "88520001-continuous",
+      "family": "continuous",
+      "source_water_sha256": "c46287a780e68f17a0d182ebc200c01e9e955abe6b90df1b9f3d0dcb524ca5b9",
+      "source_full80_population_sha256": "f440a4134256e7c06dbd7dca3bb58b975a42d5cb54f45372eb694f1179af14c9"
+    },
+    {
+      "id": "88520001-rewet-r0",
+      "parent": 88520001,
+      "roster": 0,
+      "map": "88520001-rewet",
+      "family": "rewet",
+      "source_water_sha256": "8f722af012e21dcd0212ac916a033b1caa829426b1dec2b6145520553378375a",
+      "source_full80_population_sha256": "70837cc33b50db9699e0343bb6bbe41241476321c98670bed4a822bded88c848"
+    },
+    {
+      "id": "88520001-rewet-r1",
+      "parent": 88520001,
+      "roster": 1,
+      "map": "88520001-rewet",
+      "family": "rewet",
+      "source_water_sha256": "8f722af012e21dcd0212ac916a033b1caa829426b1dec2b6145520553378375a",
+      "source_full80_population_sha256": "0e0a7ab305a99b039ca3d475e9c635219b08ddcad9ee6f1b21f08e2982d354a1"
+    },
+    {
+      "id": "95861001-continuous-r0",
+      "parent": 95861001,
+      "roster": 0,
+      "map": "95861001-continuous",
+      "family": "continuous",
+      "source_water_sha256": "b9f6a274fa83aafcbe4ca944d3959c9548ce4a385c5616427a901785b54e7688",
+      "source_full80_population_sha256": "48c7fb7b3f24cf47d801d6e64f377751a58b032aef75326cebb76f7fbc3b4768"
+    },
+    {
+      "id": "95861001-continuous-r1",
+      "parent": 95861001,
+      "roster": 1,
+      "map": "95861001-continuous",
+      "family": "continuous",
+      "source_water_sha256": "b9f6a274fa83aafcbe4ca944d3959c9548ce4a385c5616427a901785b54e7688",
+      "source_full80_population_sha256": "3a6abf8bba7047e299b54b07eb9ad192813f49e59c9e4e997e260e2ddc09da0e"
+    },
+    {
+      "id": "95861001-rewet-r0",
+      "parent": 95861001,
+      "roster": 0,
+      "map": "95861001-rewet",
+      "family": "rewet",
+      "source_water_sha256": "d8045628edf5e69523dd488e219c6ae765ba6825c48e36a2a98639ba0eec5f2a",
+      "source_full80_population_sha256": "664d38fb928b076b049f90422bd1fa4bc901d36407cab105dc96dc72799a5d27"
+    },
+    {
+      "id": "95861001-rewet-r1",
+      "parent": 95861001,
+      "roster": 1,
+      "map": "95861001-rewet",
+      "family": "rewet",
+      "source_water_sha256": "d8045628edf5e69523dd488e219c6ae765ba6825c48e36a2a98639ba0eec5f2a",
+      "source_full80_population_sha256": "1adbc21fc393759f5b09e326e9da31449d17af222887d61b4d23b0fdedfb9978"
+    }
+  ],
+  "MAT_source_hashes": {
+    "external:hyra_20261106_alignment/pool_0_2400_v2/parent-41001/water.npz": "dd0ce30704f1aee2a73c2857ff750e51693604f87d4c10b3960e161e48f7575e",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-41001/roster-0/origin.npz": "800cd69c1cfc9ea1ef3c28c38e79e2a2d4cfde863e7e7dd382223d4075a6ae74",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-41001/roster-0/population.npz": "e42a8301d7714ad6d023bf33965287328179f321558a5cccaa067c9294783157",
+    "external:hyra_20261106_alignment/pool_0_2400_v2/parent-42002/water.npz": "5e59df48e48566b17ec9e9a0777e97ac0fd71b6b48a92a91c539c53c23786829",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-42002/roster-0/origin.npz": "4ac540721bbb2560a2ea0a873ed6a9d1be08e00bd351b6c9b124d84d7cf876b5",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-42002/roster-0/population.npz": "51bbe2e71f541b2afa516a3944bb27aab8ccc71545a5baf18891bd55832c3475",
+    "external:hyra_20261106_alignment/pool_0_2400_v2/parent-41002/water.npz": "6976d8765443c7c25e98897201b19b8051747fd0d3cfbf7510c2f59f93a62879",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-41002/roster-0/origin.npz": "0505fb5142e940c72bb2046f705f331f9a8d76b8a8f749e9c3fb705dd9f19513",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-41002/roster-0/population.npz": "c701597b5af10ab5205ee04d32df2de5048c2709f550bb83d13d4b6256d0b0bf",
+    "external:hyra_20261106_alignment/pool_0_2400_v2/parent-42004/water.npz": "0a6dea671eaeb81868d9ed1d72cf457b0a7d891b1dd101ccb4a5f06baf89aac7",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-42004/roster-0/origin.npz": "a71f838baf6525e9f19ed094ad7b36f7523ad8f4dd0e59448eafdef165aa89b6",
+    "external:hyra_20261106_alignment/population_0_2400_v1/parent-42004/roster-0/population.npz": "3bf950f658235aabb98e995103b0acc53b6e3725b651c9445057eee7243cb5b9",
+    "external:HYRA-dev80-20261106.1/water/72110003-ordinary.npz": "3e93a936c548dbf905e8e184798d7bfc4e9bd76f5563bb4961a3b49bea8b8293",
+    "external:HYRA-dev80-20261106.1/origins/72110003-ordinary.npz": "b0a6f790e652e75a704302fad89933ab108331e2bdc9d1ae529d5c438acfff24",
+    "external:HYRA-dev80-20261106.1/people/72110003-ordinary-r0.npz": "fabf2ae7679e2850e80e332c634d5b3f100c3de0283e2a74f2e91b8792d4f91a",
+    "external:HYRA-dev80-20261106.1/water/72110004-ordinary.npz": "b12e8152977da2b69be37d4a424fb1b047856ccb5621ab2c4677158c5ee93e1a",
+    "external:HYRA-dev80-20261106.1/origins/72110004-ordinary.npz": "88bf35d5dfc02d1a0cf689aeae21761ce7d6b23a82763212aa37b1c1efdfbbdf",
+    "external:HYRA-dev80-20261106.1/people/72110004-ordinary-r0.npz": "05307bedb3376a5aa01f5a01eb97449fc120e8668ea4bd32ccc65563a3fcafc4",
+    "external:HYRA-dev80-20261106.1/water/72110005-ordinary.npz": "8739cac6febf450bad71b4d4ec7bd6dcc09a2f62e8071ae1c851489182367254",
+    "external:HYRA-dev80-20261106.1/origins/72110005-ordinary.npz": "5812fee21dc5fd04b4ced3ec7b8ac0e8538bfe3a0049330307735e5d6055f0ad",
+    "external:HYRA-dev80-20261106.1/people/72110005-ordinary-r0.npz": "49b6861c3432de4272b21717d4bf47b0e3608a1f2be7473af66ec756382c8da8",
+    "external:HYRA-dev80-20261106.1/water/72110006-ordinary.npz": "9dae71be10cf3aa3818b7cab1c7020c463cd99fe64b9dcd5d320c76bdcb1dfdf",
+    "external:HYRA-dev80-20261106.1/origins/72110006-ordinary.npz": "ed23c74c150ba755e6e7ea9b986025538d0022a49e405bf6f4c55883e67a93ed",
+    "external:HYRA-dev80-20261106.1/people/72110006-ordinary-r0.npz": "6206d366dc03a63cc48a27089e8e03292f665861c53cbed2e554beaad6695909",
+    "external:HYRA-dev80-20261106.1/water/95851003-ordinary.npz": "b56fbc654677062054ee07116df6fa05d13e701c1c56164113f5e8fe5c16e3c4",
+    "external:HYRA-dev80-20261106.1/origins/95851003-ordinary.npz": "3b136b637df46582fdd9b334c3f0aa4dd05bd78e00e04e73901202f0504058c7",
+    "external:HYRA-dev80-20261106.1/people/95851003-ordinary-r0.npz": "5aa82a7377c3f9d44ae567431c7b1e76eba1dee0c33d97826bf448b5f971c965",
+    "external:HYRA-dev80-20261106.1/water/95851004-ordinary.npz": "8e859febbccef2fbf2303af571f4920f027153497eea574d453ced8fd4744ef9",
+    "external:HYRA-dev80-20261106.1/origins/95851004-ordinary.npz": "ad6a70a58dc9c41c43c5b25b77047be290a32e417395a5794309ce6c5d9b006d",
+    "external:HYRA-dev80-20261106.1/people/95851004-ordinary-r0.npz": "65ef0b3eb6b5718e8663f30aa8375a64372d4c45a503d9abd84d22e0faa7bddc",
+    "external:HYRA-dev80-20261106.1/water/95851005-ordinary.npz": "7fc066667811559efa5432b4913e09102de7c89647bcd040ad96ccf35e4e7a25",
+    "external:HYRA-dev80-20261106.1/origins/95851005-ordinary.npz": "e0714e09edfa0f37d198c7d2f8ad2b2813428199ad684f680c1301f22f44d98c",
+    "external:HYRA-dev80-20261106.1/people/95851005-ordinary-r0.npz": "894f3a9f451fd798bd9fa399a39237be851030a0f0223af4388d6c954d7fc887",
+    "external:HYRA-dev80-20261106.1/water/95851006-ordinary.npz": "6d773d476245281eec8e9e26bd86cd37746ce254498e08c179472649d7b2c78e",
+    "external:HYRA-dev80-20261106.1/origins/95851006-ordinary.npz": "f11b6f6a38cb9a17767a74fe62629815f1a5864fcbc87ef28c6a060ae614ab37",
+    "external:HYRA-dev80-20261106.1/people/95851006-ordinary-r0.npz": "3315e19353cc1ad626aec8aac1d8d8146026cd3d06be8b94816f0da4f9d4c4ea",
+    "external:HYRA-dev80-20261106.1/water/88520002-continuous.npz": "a0a0094f0f0cfe53b02a628aebb2f605ae1792fe62421398209c1d7d669bff81",
+    "external:HYRA-dev80-20261106.1/origins/88520002-continuous.npz": "bacc6b5285d80b04303b3f87c0b2449937c19207c1400b9f8386d067d8adb08f",
+    "external:HYRA-dev80-20261106.1/people/88520002-continuous-r0.npz": "c4de0ef0382a63e8b9d634e927243bb20bc24a64dc779fd468ced9d4c592445f",
+    "external:HYRA-dev80-20261106.1/water/88520002-rewet.npz": "8ba25173caaa1db616a24a030fd7e8002a62a01f9a3a1f855a0493401b9786ff",
+    "external:HYRA-dev80-20261106.1/origins/88520002-rewet.npz": "bacc6b5285d80b04303b3f87c0b2449937c19207c1400b9f8386d067d8adb08f",
+    "external:HYRA-dev80-20261106.1/people/88520002-rewet-r0.npz": "13dc0574338a3cfa28eae4cf6009a343afaae85ecde954898fdfe6e3c4810f54",
+    "external:HYRA-dev80-20261106.1/water/88520003-continuous.npz": "7a33e5cee2dc01e93c7ed8853b5594309010c9b6e0862d66e39f430ea51ff94e",
+    "external:HYRA-dev80-20261106.1/origins/88520003-continuous.npz": "54236e641728a3963be4f7a9674ebedb08697024ff0ca1f59578fa965f9fb8ff",
+    "external:HYRA-dev80-20261106.1/people/88520003-continuous-r0.npz": "8406668d41ee7057caa43e35fbfefcbc6a21a93a258be24c8df7d5ae1ccb6707",
+    "external:HYRA-dev80-20261106.1/water/88520003-rewet.npz": "c8947c1461522f84b4dd72f8d01070588d0ad36713952152fb50fcefde4dab0c",
+    "external:HYRA-dev80-20261106.1/origins/88520003-rewet.npz": "54236e641728a3963be4f7a9674ebedb08697024ff0ca1f59578fa965f9fb8ff",
+    "external:HYRA-dev80-20261106.1/people/88520003-rewet-r0.npz": "7f14d875d7db15f9739b7e419151fcf57e19ac95ae980d34c40cfb160423df0d",
+    "external:HYRA-dev80-20261106.1/water/95861002-continuous.npz": "d686ca3c373c6b9d6bba056b42fb159a2a93f58573be60452f63c89765043cfe",
+    "external:HYRA-dev80-20261106.1/origins/95861002-continuous.npz": "5655c1111db0564eaab7a367c1d854937e85a1e8574511b0db26e9ac9939a812",
+    "external:HYRA-dev80-20261106.1/people/95861002-continuous-r0.npz": "9a7d8119a8a55d0baaa4ef37397b9271c3388bf37120cb1068b5e452b99f9f3e",
+    "external:HYRA-dev80-20261106.1/water/95861002-rewet.npz": "547f16c79992668cb1572a2b65ca308503ec1635044020aaa8b7857f7b117028",
+    "external:HYRA-dev80-20261106.1/origins/95861002-rewet.npz": "5655c1111db0564eaab7a367c1d854937e85a1e8574511b0db26e9ac9939a812",
+    "external:HYRA-dev80-20261106.1/people/95861002-rewet-r0.npz": "2356042290c4f3026124b7d453ccad3faf239fd57a5e8e2fe62381ea404a17d4",
+    "external:HYRA-dev80-20261106.1/water/95861003-continuous.npz": "faeddf826b92d691a4cce3a72aa1cfdb8bf5310457bc3ddf48ec9ee497259417",
+    "external:HYRA-dev80-20261106.1/origins/95861003-continuous.npz": "8f898e52d771734b48dc9a77627957574d4b3ad100a2e1babcc273ce694fd8e3",
+    "external:HYRA-dev80-20261106.1/people/95861003-continuous-r0.npz": "2ee8e8fe9697faa80264be4521ddb26061a3c69eceba2c1248429cc8738d74bd",
+    "external:HYRA-dev80-20261106.1/water/95861003-rewet.npz": "df89e5455075c3c80a890bc69292eec67f13d8dfe3451b7001d51c63346b6fb3",
+    "external:HYRA-dev80-20261106.1/origins/95861003-rewet.npz": "8f898e52d771734b48dc9a77627957574d4b3ad100a2e1babcc273ce694fd8e3",
+    "external:HYRA-dev80-20261106.1/people/95861003-rewet-r0.npz": "0437fe3b0a7d278ffceb7ef427e8b80e8f587b53121a3e7fc99445f5a56c0789",
+    "external:HYRA-dev80-20261106.1/water/72110007-ordinary.npz": "edc14dac81cfcca5c28b40866261f4243ff0948e93d208b4bbff8dcb908850a3",
+    "external:HYRA-dev80-20261106.1/origins/72110007-ordinary.npz": "67b9c1016a3a536cb458690d43bc56389d127e0af98b05abd89408a21f91a863",
+    "external:HYRA-dev80-20261106.1/people/72110007-ordinary-r0.npz": "587dc8d608bf0da83540961d3afbd48123d88af09880dd8213d651785b66056c",
+    "external:HYRA-dev80-20261106.1/water/95851007-ordinary.npz": "eea18197879e89bfb75146f2d0b877f95de664b644e9b5b3c61fe7a2eaaa5f99",
+    "external:HYRA-dev80-20261106.1/origins/95851007-ordinary.npz": "a67fbb6084a63dbafd66471720f26b5f576a558a00618b52235e1c79f50e11d0",
+    "external:HYRA-dev80-20261106.1/people/95851007-ordinary-r0.npz": "d3eca7639a6f525c922831b7ab4121119605daa05c04181f142350b60ab83c7f",
+    "external:HYRA-dev80-20261106.1/water/88520004-continuous.npz": "5a2195d574148e1dd07c3954830ca2a7b1fb4e8f03d226f19c2fc1d7bcbb5e75",
+    "external:HYRA-dev80-20261106.1/origins/88520004-continuous.npz": "b63a505fdd83d13884eaba778f4ef5325055c0c2786839629e3e052cb424da14",
+    "external:HYRA-dev80-20261106.1/people/88520004-continuous-r0.npz": "b4da4311fa867ddf313a2a7447056981922b4a3993fdf3e64def316de2207c5e",
+    "external:HYRA-dev80-20261106.1/water/88520004-rewet.npz": "8bbba2696271fed7c8b2454a3a12b22d68951fdf235e8304572a123081607da6",
+    "external:HYRA-dev80-20261106.1/origins/88520004-rewet.npz": "b63a505fdd83d13884eaba778f4ef5325055c0c2786839629e3e052cb424da14",
+    "external:HYRA-dev80-20261106.1/people/88520004-rewet-r0.npz": "158cf6571fd532c6cf95f4a210b15b4fd6da52b874cd834ded60795655875749",
+    "external:HYRA-dev80-20261106.1/water/95861004-continuous.npz": "2b5ef7463fa791436495adfa5e4505140a196daba755315c2d0c3f65e945006d",
+    "external:HYRA-dev80-20261106.1/origins/95861004-continuous.npz": "dbbba03987e5fe68a698127ae8df3666307ea0fcbf84ba46fea6c93c16035710",
+    "external:HYRA-dev80-20261106.1/people/95861004-continuous-r0.npz": "6cee28c827eb64d33172a45699931fefdd3c67d392b6913220d050d94bb54991",
+    "external:HYRA-dev80-20261106.1/water/95861004-rewet.npz": "94b25a97ff4d55e9347ce996bce8ed2f5305c859775b042c8e8686c0f6990334",
+    "external:HYRA-dev80-20261106.1/origins/95861004-rewet.npz": "dbbba03987e5fe68a698127ae8df3666307ea0fcbf84ba46fea6c93c16035710",
+    "external:HYRA-dev80-20261106.1/people/95861004-rewet-r0.npz": "663d822e09dd153d148654d998bc826391715fe0515d3cc9badc1b3bcca3b5cc"
+  }
+}

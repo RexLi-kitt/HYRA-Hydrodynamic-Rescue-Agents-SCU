@@ -1,0 +1,494 @@
+{
+  "output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/protocol.json": {
+    "version": "DQN_RETAINED_DEMO_V4",
+    "objective": "Improve rescue and retain coverage using continued demonstrations and difficult public-state rescue examples",
+    "seeds": [
+      88126,
+      88127,
+      88128
+    ],
+    "arms": [
+      "retain",
+      "hard"
+    ],
+    "parent": "Each branch starts from its existing 1000-update rescue BC checkpoint",
+    "joint_steps_per_arm_seed": 8192,
+    "train_maps": [
+      41001,
+      42002,
+      41002,
+      42004
+    ],
+    "frozen": [
+      "base",
+      "search"
+    ],
+    "trainable": [
+      "rescue"
+    ],
+    "online_update": "Original masked Double DQN MSE, RMSprop 1e-4, gamma .99, batch 32 joint transitions, every 32 steps after 64, target copy every 32 effective updates",
+    "epsilon": [
+      0.2,
+      0.05,
+      8192
+    ],
+    "success_replay": {
+      "capacity": 1024,
+      "history": 8,
+      "quota": 8,
+      "uniform_quota": 24,
+      "fallback": "32 uniform if no successes",
+      "sampling_rng": "separate saved numpy Generator"
+    },
+    "demo": {
+      "batch": 32,
+      "weight": 5.0,
+      "retain": "16 original positive + 16 original abstention examples",
+      "hard": "8 original positive + 8 hard positive + 16 original abstention examples",
+      "loss": "positive action cross entropy; abstention KL to frozen BC parent; equal batch count in both arms"
+    },
+    "old_demo": {
+      "cases": 512,
+      "seed_start": 100000,
+      "horizon": 9,
+      "dataset_sha256": "a3811c003e9f099781d749c13578221fc5caf0ea85e2f126805ceb13252e7c32"
+    },
+    "hard_demo": {
+      "cases": 512,
+      "seed_start": 300000,
+      "kind": "unaligned",
+      "horizon": 16,
+      "teacher": "Existing public-state multistep teacher; same official transitions, additional unaligned fixtures and longer rollouts"
+    },
+    "evaluation": {
+      "main": "All existing 12 development maps, both greedy and epsilon=.05, all three seeds",
+      "micro": "Existing held-out seeds 200000..200063, near/aligned/unaligned, both modes, horizon 8",
+      "extra": "Existing fixed 12 public dev80 cases, seed 88126, both arms and both modes",
+      "checkpoint": "Fixed 8192 endpoint, no intermediate checkpoint selection",
+      "primary": "epsilon=.05 rescue rate",
+      "guardrails": "coverage, conflicts, per-seed regression and micro skill retention"
+    },
+    "comparison": "Reuse hash-verified original BC and ordinary DQN 8192 results; report added teacher generation, supervised draws and replay sampling as extra training resources",
+    "deployment": "Unchanged recurrent Q network and public action mask; no teacher or rule controller in inference",
+    "scope": "Development optimization, not blind testing; branches share historical training; frozen backbone residual training, not full-network end-to-end training"
+  },
+  "output/dqn-rescue-v1-20261107/frontier_v2/vdn_v1_20261108/protocol.json": {
+    "algorithm": "VDN",
+    "method": "示范初始化、冻结搜索骨干的 VDN 微调",
+    "arms": {
+      "plain": "uniform replay; no retained supervision",
+      "hard": "8 success + 24 uniform if available; 8 old positive + 8 hard positive + 16 old abstention; weight 5"
+    },
+    "seeds": [
+      88126,
+      88127,
+      88128
+    ],
+    "joint_steps": 8192,
+    "team_value": "sum of four utilities",
+    "reward": "once per joint transition",
+    "double_q": "masked online argmax, target evaluation",
+    "terminal": "terminated blocks bootstrap; truncated does not",
+    "evaluation": "fixed endpoint; 12 development maps and 64 micro cases per kind and mode; extra 12 public cases seed 88126",
+    "limitations": "BC-initialized utility scales may not match native VDN; not from scratch or full-network VDN; hard has extra supervision cost"
+  },
+  "output/dqn-rescue-v1-20261107/frontier_v2/qmix_v1_20261108/protocol.json": {
+    "algorithm": "QMIX",
+    "method": "示范初始化、冻结搜索骨干的 QMIX 微调",
+    "arms": {
+      "plain": "uniform replay; no retained supervision",
+      "hard": "8 success + 24 uniform if available; 8 old positive + 8 hard positive + 16 old abstention; weight 5"
+    },
+    "seeds": [
+      88126,
+      88127,
+      88128
+    ],
+    "joint_steps": 8192,
+    "team_value": "PyMARL QMixer, abs nonnegative weights, ELU and state V; embed 32, hypernet layers 2, embed 64",
+    "reward": "once per joint transition",
+    "double_q": "masked online argmax, target evaluation",
+    "terminal": "terminated blocks bootstrap; truncated does not",
+    "evaluation": "fixed endpoint; 12 development maps and 64 micro cases per kind and mode; extra 12 public cases seed 88126",
+    "limitations": "BC initialized; not from scratch or full-network QMIX; hard has extra supervision cost",
+    "state": "CTDE fixed-order concatenated public observations (4,998), no hidden or future data; deployment uses agent utilities only"
+  },
+  "output/dqn-rescue-v1-20261107/frontier_v2/qplex_v1_20261108/protocol.json": {
+    "algorithm": "QPLEX",
+    "method": "示范初始化、冻结搜索骨干的 QPLEX 微调",
+    "arms": {
+      "plain": "uniform replay; no retained supervision",
+      "hard": "8 success + 24 uniform if available; 8 old positive + 8 hard positive + 16 old abstention; weight 5"
+    },
+    "seeds": [
+      88126,
+      88127,
+      88128
+    ],
+    "joint_steps": 8192,
+    "team_value": "Official DMAQer weighted dueling head plus detached advantage correction with action- and state-dependent nonnegative SI attention; 10 kernels, 3 layers 64, minus_one, weighted_head",
+    "reward": "once per joint transition",
+    "double_q": "masked online argmax, target evaluation",
+    "terminal": "terminated blocks bootstrap; truncated does not",
+    "evaluation": "fixed endpoint; 12 development maps and 64 micro cases per kind and mode; extra 12 public cases seed 88126",
+    "limitations": "BC initialized, frozen agent search backbone, not from scratch; hard has extra supervision; public development only",
+    "state": "fixed order public (4,998); actions one-hot 4x585; CTDE only",
+    "source": "external:src",
+    "source_reconstruction": "web raw text line reconstruction; local SHA256 only, byte identity not independently verified"
+  },
+  "output/mat-rescue-v2-20261108/main/protocol.json": {
+    "method": "Geometry-conditioned MAT (official encoder and causal autoregressive decoder plus public per-target/per-move shared geometry residual)",
+    "architecture": {
+      "agents": 4,
+      "actions": 585,
+      "blocks": 2,
+      "embedding": 128,
+      "heads": 4,
+      "state_encoder": false,
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "observations": "public 998 plus 452 local coverage; 19-dimensional person and 12-dimensional action geometry; original action mask; no teacher state at inference",
+    "fixed_seed": 99127,
+    "bc": {
+      "updates_candidate": 1000,
+      "lr": 0.0003,
+      "batch_joint_states": 32,
+      "sampling": "equal focused agent-group 0/1/2/3; half service-group draws use public local counterfactual training set",
+      "heldout": "source 20-step blocks index mod 5 = 4; local counterfactual holdout separate",
+      "selection": "first fixed 1000-update checkpoint meeting >=90% both fullscene and local heldout service-start and continuation; demonstrated on three public tuning maps before PPO"
+    },
+    "ppo": {
+      "joint_steps_first_stage": 8192,
+      "rollout": 128,
+      "epochs": 5,
+      "minibatches": 1,
+      "optimizer": "Adam initialized from BC moments, lr changed to 0.0001, eps 1e-5",
+      "retained_bc": "same class-balanced demonstrations; CE coefficient 1.0 each PPO epoch",
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "clip": 0.2,
+      "entropy_coef": 0.01,
+      "value_norm": true,
+      "clipped_value": true,
+      "huber": true,
+      "huber_delta": 10,
+      "max_grad_norm": 10,
+      "reward": "10 delivery + .25 discovery + .002 new cells - .1 conflicts - .005"
+    },
+    "training_maps": [
+      41001,
+      42002,
+      41002,
+      42004
+    ],
+    "tuning_maps": [
+      41004,
+      42012,
+      51001
+    ],
+    "evaluation": "BC1000 fixed candidate: all 12 public development maps and 12 additional public cases; both sampled/greedy, official action-tape replay; no blind-test claim",
+    "limitations": [
+      "single seed 99127 until independent repeat",
+      "source-block holdout shares four training maps",
+      "local counterfactual includes repositioned vehicle and is not full-episode data",
+      "model-level target-ID permutation equivariance is not guaranteed",
+      "sampled vs greedy are different deployment modes",
+      "BC and retention use demonstrations, not pure PPO"
+    ]
+  },
+  "output/mat-rescue-v2-20261108/temporal_fullscene/boundary_v2_99131/bc/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "batch": 8,
+    "burn": 0,
+    "window": 16,
+    "lr": 0.0003,
+    "parent": "repo:output/mat-rescue-v2-20261108/main/ppo_continue_99127/checkpoint-032768.pt",
+    "stage_counts": [
+      66029,
+      6961,
+      1910,
+      1900
+    ],
+    "stage_weights": [
+      0.6988252401351929,
+      2.1522867679595947,
+      4.108840465545654,
+      4.119638919830322
+    ],
+    "initialization": "full episode prefix recomputed without gradient",
+    "sampling": "uniform family then teacher/source then episode, uniform valid window",
+    "data_episodes": 40
+  },
+  "output/mat-rescue-v2-20261108/temporal_fullscene/boundary_v2_99131/dagger1/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "batch": 8,
+    "burn": 0,
+    "window": 16,
+    "lr": 0.0003,
+    "parent": "repo:output/mat-rescue-v2-20261108/main/ppo_continue_99127/checkpoint-032768.pt",
+    "stage_counts": [
+      94775,
+      16001,
+      2284,
+      2140
+    ],
+    "stage_weights": [
+      0.7081760168075562,
+      1.7235130071640015,
+      4.561840057373047,
+      4.712823867797852
+    ],
+    "initialization": "full episode prefix recomputed without gradient",
+    "sampling": "uniform family then teacher/source then episode, uniform valid window",
+    "episode_cache": "all episodes, lazily loaded, immutable",
+    "data_episodes": 60
+  },
+  "output/mat-rescue-v2-20261108/temporal_fullscene/boundary_v2_99131/dagger2/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "batch": 8,
+    "burn": 0,
+    "window": 16,
+    "lr": 0.0003,
+    "parent": "repo:output/mat-rescue-v2-20261108/main/ppo_continue_99127/checkpoint-032768.pt",
+    "stage_counts": [
+      123281,
+      24907,
+      2848,
+      2564
+    ],
+    "stage_weights": [
+      0.7137201428413391,
+      1.5878714323043823,
+      4.695761680603027,
+      4.948995113372803
+    ],
+    "initialization": "full episode prefix recomputed without gradient",
+    "sampling": "uniform family then teacher/source then episode, uniform valid window",
+    "episode_cache": "all episodes, lazily loaded, immutable",
+    "data_episodes": 80
+  },
+  "output/mat-rescue-v2-20261108/coordination_approach_v3/pilot_99131/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "batch": 8,
+    "window": 16,
+    "lr": 0.0003,
+    "parent_lr": 3e-05,
+    "duplicate_weight": 0.2,
+    "approach_weight": 0.2,
+    "approach_margin": 0.1,
+    "yield_weight": 0.2,
+    "yield_margin": 0.1,
+    "residual_only": false,
+    "parent": "repo:output/mat-rescue-v2-20261108/temporal_fullscene/boundary_v2_99131/ppo/checkpoint-032768.pt",
+    "stage_counts": [
+      123281,
+      24907,
+      2848,
+      2564
+    ],
+    "stage_weights": [
+      0.7137201428413391,
+      1.5878714323043823,
+      4.695761680603027,
+      4.948995113372803
+    ],
+    "history": "executed previous action, entire episode prefix without gradient; teacher actions in same-step causal prefix",
+    "data_episodes": 80
+  },
+  "output/mat-rescue-v2-20261108/coordination_approach_v3/ppo4096_99131/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "batch": 8,
+    "window": 16,
+    "lr": 0.0003,
+    "parent_lr": 3e-05,
+    "duplicate_weight": 0.2,
+    "approach_weight": 0.2,
+    "approach_margin": 0.1,
+    "yield_weight": 0.2,
+    "yield_margin": 0.1,
+    "residual_only": false,
+    "parent": "repo:output/mat-rescue-v2-20261108/temporal_fullscene/boundary_v2_99131/ppo/checkpoint-032768.pt",
+    "stage_counts": [
+      123281,
+      24907,
+      2848,
+      2564
+    ],
+    "stage_weights": [
+      0.7137201428413391,
+      1.5878714323043823,
+      4.695761680603027,
+      4.948995113372803
+    ],
+    "history": "executed previous action, entire episode prefix without gradient; teacher actions in same-step causal prefix",
+    "ppo_cache_size": 80,
+    "ppo_rollout": 128,
+    "ppo_lr": 1e-05,
+    "ppo_epochs": 5,
+    "ppo_window": 16,
+    "ppo_gamma": 0.99,
+    "ppo_lambda": 0.95,
+    "ppo_retention": 1.0,
+    "ppo_collision_cost": 0.5,
+    "ppo_progress_bonus": 0.5,
+    "ppo_reward": "10 deliveries + .25 discoveries + .002 new cells - collision_cost*conflicts - .005 + progress_bonus*first adjudicated five-second service per person per episode; training reward from referee events, not an environment return",
+    "ppo_sha256": {
+      "repo:output/mat-rescue-v2-20261108/coordination_approach_v3/pilot_99131/checkpoint-bc-000400.pt": "122ed04b955982ced121ef753c9f71fe077c0ae7b71e5f6d46cf17aff9d21f6a",
+      "repo:output/mat-rescue-v2-20261108/coordination_approach_v3/train_ppo.py": "f4f80e759615b4cefc7dcabb0ef1c2bf43a8752a17d951b360af6f814b6eaeb6",
+      "repo:output/mat-rescue-v2-20261108/temporal_fullscene/ppo_sequence.py": "704d950e9f2eac20e14b646673e42d3ae8a7914b2e5d50a7f26d8d8704c7a2fa",
+      "repo:output/mat-rescue-v2-20261108/temporal_fullscene/train_bc_sequence.py": "f0801ec3075526f959ac9e4165007ae76be2f9100f13fce35fff9884686990c5",
+      "repo:output/mat-rescue-v2-20261108/temporal_fullscene/teacher_bridge.py": "153970c38f001bc8ec4638d4a5089b5e1f74d02872ce428cbc13a1b83274b47c",
+      "repo:output/mat-rescue-v2-20261108/temporal_fullscene/features.py": "8710a68a57aa01927407d81544225c8345e8218c8e58aa2456080a8d033b3c18",
+      "repo:output/mat-rescue-v2-20261108/temporal_fullscene/scene_split.json": "3e357ce704d597232d1a0c09966e7c1e6f9b3ded2943d269ff1063a073aa7b57",
+      "external:HYRA-referee-20261106.1/run.py": "1de93e60979100d3276aee6cd4c182e2ee4b6d7368f19ef224f212b8ac81297d",
+      "external:HYRA-referee-20261106.1/engine/contract_checks.py": "c576f86bd5e68e64ee6910de0e2f2faaef6212a566d8b36190d16043d89eb871",
+      "external:HYRA-referee-20261106.1/engine/delivery.py": "c5e80a6d4cf62c2ceea7faecd50183699dbad2bc40f64678524ace30ca9a01fc",
+      "external:HYRA-referee-20261106.1/engine/fall_risk.py": "248b4eaaa86ef7ce52d8bfc294dc505d65a0a2f6910dd8c690874f9f892c9822",
+      "external:HYRA-referee-20261106.1/engine/judge.py": "60ce46f0f2952e42421b5de7a1fe7d97907f5116be2dad7767b9c3787b4c0c27",
+      "external:HYRA-referee-20261106.1/engine/long_environment.py": "41990721a9b97f19c0ca38cfb63650cd649ee9369fb0e45f5857f4017c31afbe",
+      "external:HYRA-referee-20261106.1/engine/mission_env.py": "e64ee8f28801542fce82f97c628cdff28c52080e5a532b2239544d38e9c2324c",
+      "external:HYRA-referee-20261106.1/engine/motion.py": "879aa0e003b9c6b2c4d449d77e2ce28e135c9da12c7555d50134227cd2871fd8",
+      "external:HYRA-referee-20261106.1/engine/population.py": "dc707a5804b613caf97d2894ca82f00e6a30545f5ce38dc408e6c99fed127da8",
+      "external:HYRA-referee-20261106.1/engine/scenario_io.py": "4a0056d48bc21428cd123d04928bd252d43fa7894562b91850017a1739b3baef",
+      "external:HYRA-referee-20261106.1/engine/supply.py": "f3c2d4c15f2f9c3e36baeba7ef85eed800a954ad640e5dd2f6056fc455673f63"
+    },
+    "data_episodes": 80
+  },
+  "output/mat-rescue-v2-20261108/coordination_approach_v3/relational_99131/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "parent": "repo:output/mat-rescue-v2-20261108/coordination_approach_v3/ppo4096_99131/checkpoint-ppo-004096.pt",
+    "batch": 4,
+    "window": 4,
+    "anchor_batch": 4,
+    "anchor_window": 4,
+    "lr": 0.01,
+    "teammate_kl": 1.0,
+    "ordinary_kl": 1.0,
+    "far_m": 10.0,
+    "near_m": 2.0,
+    "sampling": "uniform eligible train scene, then episode, then target-agent-step; ordinary family/source/episode",
+    "history": "recorded executed action; full episode prefix without gradient; teacher-forced same-step prefix",
+    "data_episodes": 80
+  },
+  "output/mat-rescue-v2-20261108/coordination_approach_v3/reacquisition_99131/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "parent": "repo:output/mat-rescue-v2-20261108/coordination_approach_v3/relational_99131/checkpoint-relational-000200.pt",
+    "parent_schema": "HYRA_RELATIONAL_MAT_V1",
+    "updates": 200,
+    "batch": 128,
+    "lr": 0.003,
+    "score_l2": 0.05,
+    "selection": "actual executed target assignments, hidden target, age 5–30 s, next recorded observation only",
+    "label": "team-visible at next observation and consistent with assigning UAV public 20m forward semicircle; observational only",
+    "sampling": "balanced classes, uniform eligible train scene within class, then uniform assignment",
+    "data_episodes": 80
+  },
+  "output/mat-rescue-v2-20261108/coordination_approach_v3/contact_ppo_99131/config.json": {
+    "seed": 99131,
+    "memory": true,
+    "parent": "repo:output/mat-rescue-v2-20261108/coordination_approach_v3/relational_99131/checkpoint-relational-000200.pt",
+    "parent_schema": "HYRA_RELATIONAL_MAT_V1",
+    "updates": 200,
+    "batch": 128,
+    "lr": 0.003,
+    "score_l2": 0.05,
+    "selection": "actual executed target assignments, hidden target, age 5–30 s, next recorded observation only",
+    "label": "team-visible at next observation and consistent with assigning UAV public 20m forward semicircle; observational only",
+    "sampling": "balanced classes, uniform eligible train scene within class, then uniform assignment",
+    "contact_ppo": {
+      "parent": "repo:output/mat-rescue-v2-20261108/coordination_approach_v3/reacquisition_99131/checkpoint-reacquisition-000200.pt",
+      "rollout": 128,
+      "lr": 1e-05,
+      "cache_size": 80,
+      "collision_cost": 0.5,
+      "contact_bonus": 1.0,
+      "service_bonus": 0.0,
+      "epochs": 5,
+      "window": 16,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "bc_retention": 1.0,
+      "reward": "10 delivery + .25 discovery + .002 new cells - collision cost - .005 + first valid designated within-1m contact + optional first service start; once per person per episode",
+      "privileged": "truth positions and validity used exclusively for training reward; public observations only for policy"
+    },
+    "data_episodes": 80
+  },
+  "output/q-contact-v1-20261109/dqn_public_r02/config.json": {
+    "seed": 88126,
+    "method": "DQN",
+    "parent": "repo:output/dqn-rescue-v1-20261107/frontier_v2/retained_demo_v4/hard_88126/checkpoint-008192.pt",
+    "parent_sha256": "84bb29d91a14fd31aa35319b6c78d263cf2b330e2ad989aa9f7b173017ed92fe",
+    "cache": "repo:output/q-contact-v1-20261109/fullscene_cache",
+    "cache_size": 80,
+    "allow_partial_cache": false,
+    "lr": 0.0003,
+    "batch": 8,
+    "abstention_weight": 0.2,
+    "risk_weight": 0.2,
+    "kl_weight": 1.0,
+    "margin_m": 5.0,
+    "stale_seconds": 30.0,
+    "counts": {
+      "rescue": 30069,
+      "abstain": 97862,
+      "risk": 122491,
+      "risk_stale": 117442,
+      "risk_contested": 53889
+    },
+    "sampling": "balanced rescue, abstention, risk; each uniform scene then source then sample",
+    "objective": "teacher CE + weighted no-target marginal NLL + weighted stale/contested non-risk marginal NLL + reference KL; no TD"
+  },
+  "output/q-contact-v1-20261109/vdn_public_r02/config.json": {
+    "seed": 88126,
+    "method": "VDN",
+    "parent": "repo:output/q-contact-v1-20261109/fullscene_vdn_88126/weights-bc-000100.pt",
+    "parent_sha256": "eea8da052a329212e3c18658febcee21ae4057e9df62d8df6a3421148dc384c1",
+    "cache": "repo:output/q-contact-v1-20261109/fullscene_cache",
+    "cache_size": 80,
+    "allow_partial_cache": false,
+    "lr": 0.0003,
+    "batch": 8,
+    "abstention_weight": 0.2,
+    "risk_weight": 0.2,
+    "kl_weight": 1.0,
+    "margin_m": 5.0,
+    "stale_seconds": 30.0,
+    "counts": {
+      "rescue": 30069,
+      "abstain": 97862,
+      "risk": 122491,
+      "risk_stale": 117442,
+      "risk_contested": 53889
+    },
+    "sampling": "balanced rescue, abstention, risk; each uniform scene then source then sample",
+    "objective": "teacher CE + weighted no-target marginal NLL + weighted stale/contested non-risk marginal NLL + reference KL; no TD"
+  },
+  "Q_demonstration_counts": {
+    "schema": "DQN_RETAINED_DEMO_DATA_V4",
+    "base_sha256": "0f38fcf0b01c3d225a745a7047296d8caf8718f721194913c29e078149a5bbb1",
+    "old_sha256": "a3811c003e9f099781d749c13578221fc5caf0ea85e2f126805ceb13252e7c32",
+    "hard_sha256": "314946ab6f8add1f4ea811241afe44fc2e4faf00f28f17d47e31081186bb4e3b",
+    "old_positive": 1569,
+    "old_abstention": 97,
+    "hard_positive": 2229,
+    "hard_abstention": 269,
+    "artifact_sha256": "aa837a048197ba7dc80a62bf6b3ce1733abd13b569aa827b9f6cdd1f05795287"
+  },
+  "MAT_demonstration_totals": {
+    "episodes": 52,
+    "steps": 24960,
+    "mask_conflicts": 0
+  }
+}
