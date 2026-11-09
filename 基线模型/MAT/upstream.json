@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/PKU-MARL/Multi-Agent-Transformer",
+  "commit": "be3ff49c8264d454c1fe2c41582aa2bfc98498c8",
+  "license": "No LICENSE at repository root in pinned revision (GitHub contents API returned 404); no license terms asserted.",
+  "files": {
+    "ma_transformer.py": {
+      "source": "mat/algorithms/mat/algorithm/ma_transformer.py",
+      "bytes": 13156,
+      "sha256": "490b7b4045113b5fae3ae0d186b61d7b00ea6ddb9f945dfc30cc62fecfd54c42",
+      "git_blob_sha1": "a185a2b5cc065c1de3611585af6a9090b9e3edfd"
+    },
+    "transformer_act.py": {
+      "source": "mat/algorithms/utils/transformer_act.py",
+      "bytes": 3656,
+      "sha256": "bc99b5f350751287cbc9932267674c37b8d5d6d358be0f1913d0be5b4aa3ee26",
+      "git_blob_sha1": "9364b696a0a42f3750259c5fc5dfa86c751c22e7"
+    },
+    "algorithm_util.py": {
+      "source": "mat/algorithms/utils/util.py",
+      "bytes": 461,
+      "sha256": "390fc541abc72231b864e6017b2a8e75b58a1bc593e87fc3bc27b80b9effa2c6",
+      "git_blob_sha1": "de231cf29c22f1d6a30183f4ae2ab54054eab303"
+    }
+  }
+}

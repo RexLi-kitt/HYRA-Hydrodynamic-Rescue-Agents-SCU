@@ -1,0 +1,451 @@
+{
+  "schema": "HYRA_MAT_BASELINE_RELEASE_V1",
+  "model": "MAT",
+  "variant": "contact-ppo-1024",
+  "training_seed": 99131,
+  "model_schema": "HYRA_REACQUISITION_MAT_V1",
+  "weights": "weights/mat-contact1024-99131.pt",
+  "weights_sha256": "f0724df09a19dcfd45b3ce4f1614ef4cc0286920cb983dbb3bbba4fc8d46b81e",
+  "parameter_count": 1331776,
+  "source_checkpoint": {
+    "filename": "checkpoint-contact-001024.pt",
+    "sha256": "edb8843f414a7f5a5137eb2dafdbe8e0b3583adba55bf9afb059dbd5bdfe52d6",
+    "config_sha256_canonical_json": "bca3f2fbbb5852715b5ae8bce9c42466c0b5bd778cca4aa37699360e609fa328",
+    "stage": "contact_ppo",
+    "new_joint_steps": 1024,
+    "ppo_updates": 8
+  },
+  "upstream": "upstream.json",
+  "verification": {
+    "method": "Official SDK factory from isolated package; compare every action to the frozen source checkpoint results and replay the complete action tape independently.",
+    "sdk_version": "20261106.1",
+    "sdk_manifest_sha256": "46916ce20bd658ffe9ccc8940b10b8bb517376585750c0697776e40e38b3dc98",
+    "python": "3.12.9",
+    "torch": "2.8.0+cu128",
+    "numpy": "2.2.6",
+    "device": "cpu",
+    "mode": "sampled",
+    "cases": 31,
+    "tensor_count": 150,
+    "weights_tensors_exact": true,
+    "actions_exact": true,
+    "metrics_exact": true,
+    "official_tape_replay_exact": true,
+    "actions_sha256_format": "SHA-256 of row-major signed little-endian int16 rows [4 moves, 4 targets].",
+    "groups": {
+      "main12": {
+        "reference_record_sha256": "2b0ddb8e6e192dfc49e8e501a52f0527184bd07a71476dcd182a79c8b8633efe",
+        "cases": [
+          {
+            "id": "41004-r0",
+            "evaluation_seed": 622004,
+            "steps": 480,
+            "actions_sha256": "bdd8049b8fc9347f3eada1978843ecce71944e396dc132c4542546864e38e21a",
+            "delivered": 44,
+            "total": 64,
+            "discovered": 62,
+            "validly_assigned": 62,
+            "within_1m": 46,
+            "conflicts": 16
+          },
+          {
+            "id": "41005-r0",
+            "evaluation_seed": 622005,
+            "steps": 480,
+            "actions_sha256": "673735a838e4614d64f23105841fc9183bef13f1134dea7ccb1923e5716b0c9f",
+            "delivered": 38,
+            "total": 64,
+            "discovered": 54,
+            "validly_assigned": 54,
+            "within_1m": 41,
+            "conflicts": 20
+          },
+          {
+            "id": "42012-r0",
+            "evaluation_seed": 623012,
+            "steps": 480,
+            "actions_sha256": "ac5daa10cc1a34063ce3cabb153afce93de00b495b188dc86ba7accba7e0d4c6",
+            "delivered": 33,
+            "total": 64,
+            "discovered": 36,
+            "validly_assigned": 36,
+            "within_1m": 34,
+            "conflicts": 19
+          },
+          {
+            "id": "42015-r0",
+            "evaluation_seed": 623015,
+            "steps": 480,
+            "actions_sha256": "917fb55b7dbc2675eeea5628a58e330991b5fba9f35809838d7736be27b75377",
+            "delivered": 37,
+            "total": 64,
+            "discovered": 50,
+            "validly_assigned": 50,
+            "within_1m": 40,
+            "conflicts": 23
+          },
+          {
+            "id": "51001-r0",
+            "evaluation_seed": 632001,
+            "steps": 480,
+            "actions_sha256": "4e016709379e9e52eb0b5dcfb0ab425a532ab23fcfc753997b79fe748fc31a29",
+            "delivered": 38,
+            "total": 64,
+            "discovered": 56,
+            "validly_assigned": 56,
+            "within_1m": 43,
+            "conflicts": 14
+          },
+          {
+            "id": "51002-r0",
+            "evaluation_seed": 632002,
+            "steps": 480,
+            "actions_sha256": "e8b3ba4823f8c4178ee677bf6fb0afb722f0727b508d60ee9294526f8833ec67",
+            "delivered": 20,
+            "total": 64,
+            "discovered": 28,
+            "validly_assigned": 28,
+            "within_1m": 20,
+            "conflicts": 21
+          },
+          {
+            "id": "41006-r0",
+            "evaluation_seed": 622006,
+            "steps": 480,
+            "actions_sha256": "e198570e541ebabd0d158b1eabb179abb35bc3a9fc8d6d5c8d8299b2d572a413",
+            "delivered": 26,
+            "total": 64,
+            "discovered": 35,
+            "validly_assigned": 35,
+            "within_1m": 28,
+            "conflicts": 25
+          },
+          {
+            "id": "41007-r0",
+            "evaluation_seed": 622007,
+            "steps": 480,
+            "actions_sha256": "ae63550f1e45a0c8cf0cf4815f03d0ada493f6def09edf26d2958db0efa171d6",
+            "delivered": 17,
+            "total": 64,
+            "discovered": 29,
+            "validly_assigned": 29,
+            "within_1m": 19,
+            "conflicts": 22
+          },
+          {
+            "id": "42017-r0",
+            "evaluation_seed": 623017,
+            "steps": 480,
+            "actions_sha256": "cce315caa27067d54e644a9959369a0ff22460c95d6061d8a652832f23ad8c04",
+            "delivered": 49,
+            "total": 64,
+            "discovered": 61,
+            "validly_assigned": 61,
+            "within_1m": 54,
+            "conflicts": 24
+          },
+          {
+            "id": "42018-r0",
+            "evaluation_seed": 623018,
+            "steps": 480,
+            "actions_sha256": "2be0f707688ff43f592b1bbee42113b87b3912cc492b523293cb50d2948714d2",
+            "delivered": 40,
+            "total": 64,
+            "discovered": 52,
+            "validly_assigned": 52,
+            "within_1m": 44,
+            "conflicts": 25
+          },
+          {
+            "id": "51003-r0",
+            "evaluation_seed": 632003,
+            "steps": 480,
+            "actions_sha256": "91eb190ae08739ef78961da28c48aece964cdb06d4df317c4de746deeb14117f",
+            "delivered": 18,
+            "total": 64,
+            "discovered": 35,
+            "validly_assigned": 35,
+            "within_1m": 19,
+            "conflicts": 16
+          },
+          {
+            "id": "51004-r0",
+            "evaluation_seed": 632004,
+            "steps": 480,
+            "actions_sha256": "70cea109fc3cb6a94354ff7d204bb6eba000d624052b91b97405039233d2adbb",
+            "delivered": 47,
+            "total": 64,
+            "discovered": 63,
+            "validly_assigned": 63,
+            "within_1m": 52,
+            "conflicts": 12
+          }
+        ]
+      },
+      "extra12": {
+        "reference_record_sha256": "d82924fb978077bb16c7aba45aa5dcfee1389907179177f5ae83c2640ea2b85d",
+        "cases": [
+          {
+            "id": "72110001-ordinary-r0",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "808ffdbcce0872b7a6aa1a7d3c652c7c0356f8aa511be2cdb9454a80373448d6",
+            "delivered": 55,
+            "total": 64,
+            "discovered": 58,
+            "validly_assigned": 58,
+            "within_1m": 55,
+            "conflicts": 47
+          },
+          {
+            "id": "72110001-ordinary-r1",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "fb0d02443824aea3a440f5b5129c558ab5f56bd987c70cd79043d3937c59790a",
+            "delivered": 44,
+            "total": 64,
+            "discovered": 58,
+            "validly_assigned": 58,
+            "within_1m": 47,
+            "conflicts": 13
+          },
+          {
+            "id": "95851001-ordinary-r0",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "6ed1d85fee03e20ff73ce2b21c8efc9d3053ccea42b7388ba418ac7eb5f63ba6",
+            "delivered": 50,
+            "total": 64,
+            "discovered": 60,
+            "validly_assigned": 60,
+            "within_1m": 52,
+            "conflicts": 14
+          },
+          {
+            "id": "95851001-ordinary-r1",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "1101ac8294950a38fb87e03bd473e66a7c199cc70f93573e8ca4b346f2302b46",
+            "delivered": 40,
+            "total": 64,
+            "discovered": 60,
+            "validly_assigned": 58,
+            "within_1m": 44,
+            "conflicts": 85
+          },
+          {
+            "id": "88520001-continuous-r0",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "201f747486891f811d76cec84b262bdde4f4a0b2aabd85d3341e65ce118b54bf",
+            "delivered": 7,
+            "total": 64,
+            "discovered": 23,
+            "validly_assigned": 23,
+            "within_1m": 7,
+            "conflicts": 1
+          },
+          {
+            "id": "88520001-continuous-r1",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "bb0120a2218ddf12fa5b29b7d8328bcf9eced2f1c4247d0bc53431eb9cd3bfdc",
+            "delivered": 6,
+            "total": 64,
+            "discovered": 19,
+            "validly_assigned": 19,
+            "within_1m": 9,
+            "conflicts": 6
+          },
+          {
+            "id": "88520001-rewet-r0",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "6785743443f52a8dad90c4c3807fdadce1b6ca134c9468e024705b8757d88355",
+            "delivered": 6,
+            "total": 64,
+            "discovered": 18,
+            "validly_assigned": 18,
+            "within_1m": 6,
+            "conflicts": 2
+          },
+          {
+            "id": "88520001-rewet-r1",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "8f1fe041faa83b14d77c371ff3578025ebb73704371b620801ec805b2b2e98c5",
+            "delivered": 9,
+            "total": 64,
+            "discovered": 18,
+            "validly_assigned": 18,
+            "within_1m": 10,
+            "conflicts": 5
+          },
+          {
+            "id": "95861001-continuous-r0",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "17a30ad4ee402858d9e65badce3b3eb6253a895a2d2569e3a944624ff878dde2",
+            "delivered": 6,
+            "total": 64,
+            "discovered": 21,
+            "validly_assigned": 21,
+            "within_1m": 7,
+            "conflicts": 22
+          },
+          {
+            "id": "95861001-continuous-r1",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "951a0f98ecc4dea0838e964232bce465a03b0a45f0f12bae3b71f023b8548949",
+            "delivered": 2,
+            "total": 64,
+            "discovered": 12,
+            "validly_assigned": 12,
+            "within_1m": 4,
+            "conflicts": 11
+          },
+          {
+            "id": "95861001-rewet-r0",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "edb1195182557cf2910c55269189013e0603d01bfed5a8772e4b7decf9e46991",
+            "delivered": 7,
+            "total": 64,
+            "discovered": 17,
+            "validly_assigned": 17,
+            "within_1m": 8,
+            "conflicts": 17
+          },
+          {
+            "id": "95861001-rewet-r1",
+            "evaluation_seed": 581000,
+            "steps": 480,
+            "actions_sha256": "c3f2c9a85b80312b9ec7bd859207139a5df3be1fdca2c46cae5647573cb245a5",
+            "delivered": 4,
+            "total": 64,
+            "discovered": 13,
+            "validly_assigned": 13,
+            "within_1m": 5,
+            "conflicts": 10
+          }
+        ]
+      },
+      "valid6": {
+        "reference_record_sha256": "7d0fb304e87116c68d0afcf43add590b2b436e8389b97891e520d7b7d751eead",
+        "cases": [
+          {
+            "id": "72110007-ordinary-r0",
+            "evaluation_seed": 72691007,
+            "steps": 480,
+            "actions_sha256": "d8240be199f4a3b345cba980cb10748433d140d804fe2f5e68c1e7bcbb108a8b",
+            "delivered": 30,
+            "total": 64,
+            "discovered": 52,
+            "validly_assigned": 52,
+            "within_1m": 31,
+            "conflicts": 32
+          },
+          {
+            "id": "95851007-ordinary-r0",
+            "evaluation_seed": 96432007,
+            "steps": 480,
+            "actions_sha256": "60e6bea6f79a32e153d47341570a942441548ebb8dee073f1f6079c4ef7482ea",
+            "delivered": 50,
+            "total": 64,
+            "discovered": 60,
+            "validly_assigned": 60,
+            "within_1m": 54,
+            "conflicts": 45
+          },
+          {
+            "id": "88520004-continuous-r0",
+            "evaluation_seed": 89101004,
+            "steps": 480,
+            "actions_sha256": "2e370aab481ab62baa4967a6b37dee135a836c136282cbdc670e043c1bebff49",
+            "delivered": 4,
+            "total": 64,
+            "discovered": 16,
+            "validly_assigned": 16,
+            "within_1m": 8,
+            "conflicts": 9
+          },
+          {
+            "id": "88520004-rewet-r0",
+            "evaluation_seed": 89101004,
+            "steps": 480,
+            "actions_sha256": "ea4b03b9bc61a77b478a6204f0c37ffabb1c2f2d5a61bdc4348c3ad99535d892",
+            "delivered": 6,
+            "total": 64,
+            "discovered": 13,
+            "validly_assigned": 13,
+            "within_1m": 8,
+            "conflicts": 9
+          },
+          {
+            "id": "95861004-continuous-r0",
+            "evaluation_seed": 96442004,
+            "steps": 480,
+            "actions_sha256": "01417b7b7c9a3e2de4c230f96aeaa08955fffc946344a4431ca36c468406a8f3",
+            "delivered": 5,
+            "total": 64,
+            "discovered": 22,
+            "validly_assigned": 22,
+            "within_1m": 8,
+            "conflicts": 11
+          },
+          {
+            "id": "95861004-rewet-r0",
+            "evaluation_seed": 96442004,
+            "steps": 480,
+            "actions_sha256": "91e3b7a9ac393ac3bfb04543bab763e3a85c22b138364e196a0ad818098d653f",
+            "delivered": 5,
+            "total": 64,
+            "discovered": 22,
+            "validly_assigned": 22,
+            "within_1m": 9,
+            "conflicts": 10
+          }
+        ]
+      },
+      "single": {
+        "reference_record_sha256": "b1639cf1cb9f2d33c8a7a839f606cc1f3c7608a46b0a85d2bd6f1072004e9b52",
+        "cases": [
+          {
+            "id": "72110002-ordinary-r0",
+            "evaluation_seed": 20261108,
+            "steps": 480,
+            "actions_sha256": "3e0af15792dd285f6eb448d2181b0ba375a8aa42371d7182bea3d7b04adabf2d",
+            "delivered": 21,
+            "total": 64,
+            "discovered": 54,
+            "validly_assigned": 48,
+            "within_1m": 26,
+            "conflicts": 18
+          }
+        ]
+      }
+    }
+  },
+  "artifact_sha256": {
+    ".gitignore": "d3645e0a1a3371991b9d12fa8a4381981b2d16402206c44f9e8b04c2292d1dd7",
+    "IMPROVEMENTS.md": "a6afcf2ed88677aca9e02e01514f7ce0bf8afc96e8c820e029eecc1104ed2664",
+    "NOTICES.md": "951f46f7105c8cce9b3bc6a2360b7c6dcd9b478d1c035796198b6e1fbaf37984",
+    "policy.py": "679794021e1037a9788d362a649f5843277c4572067ed7127c8a58ee819a6e9c",
+    "README.md": "243eca37e7fa5b0f8a895ac3a26ef180264ecfd2f754e8b037236b0987a53cf9",
+    "requirements.txt": "0209cf926f6e7d9c183fa54e5d831359329013d2ce814df64a56e0a6fa3a03f8",
+    "src/__init__.py": "7d5630551ca5049d1e578291d365f6500cfe28dad59f0a39b82dc225a70a1904",
+    "src/boundary_geometry.py": "f9f61d62f5270a3c5e08d27d8c7e3d84bb3d5265f86201a08d427e6abdf79e48",
+    "src/coordinated_model.py": "0dfa50cf5d9ade29a0de48fda11fd8453f9def8e083f080525584430b45b035e",
+    "src/features.py": "6cc68939bf4a2a61a03c4d7c67740ed3628acaac35801e7cf2ac74ac7a83d235",
+    "src/geometry_mat.py": "064721be8e975dc78209a8556333508adf1c02831c5bcb0516963ee47349a3f9",
+    "src/public_model.py": "dd406bd2d8472398f89521219e585ffff334a99c9f35636ee87d6229fd71001d",
+    "src/reacquisition_model.py": "29095b1ecddf031c79019726cc1ff336bc2b875eb063ca946df5482f2f669887",
+    "src/relational_model.py": "d291cb4c11962c62de75d22a5e5a1c781946e604797825c9e7d20846a0ebc2fb",
+    "src/safe_temporal.py": "9f8f66c050da3cd704e1da0f5d8c5d147ca89c95d89422e26273d24ed11a830c",
+    "src/temporal_model.py": "17e255402f74515b35ee694d6a2359336b9c0d4241ee6cc782e4c75d05faf338",
+    "src/upstream.py": "0ab8612f0025c0a433e06d350a13f0ea97db9e3c5ed502393a9850244112fc9b",
+    "upstream.json": "a6becc7de4abce6a22c25820b802642a2b778492fb2980b895f2f0e10bc221f0",
+    "weights/mat-contact1024-99131.pt": "f0724df09a19dcfd45b3ce4f1614ef4cc0286920cb983dbb3bbba4fc8d46b81e"
+  }
+}
